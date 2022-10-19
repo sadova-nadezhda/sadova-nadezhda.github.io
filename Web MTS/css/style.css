@@ -933,7 +933,7 @@ button:hover {
 }
 
 /*table*/
-.purchases__table, .requisites__table, .members__table{
+.purchases__table, .requisites__table, .members__table, .deals__table {
   background: #1A2738;
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -946,6 +946,21 @@ button:hover {
 .app-chart__canvas {
   min-width: 720px;
   max-height: 380px;
+}
+.deals__table tr:first-child {
+  border-bottom: none;
+}
+.deals__page .deals__table {
+  margin-bottom: 50px;
+}
+/* .deals__table td:last-child {
+  text-align: end;
+} */
+.deals__table a {
+  transition: all 0.3s linear;
+}
+.deals__table a:hover {
+  color: #40FFB5;
 }
  table {
   width: 100%;
@@ -1040,7 +1055,7 @@ tr:first-child {
 
 
 /*table btn*/
-.auctions__table{
+.auctions__table {
   position: relative;
   overflow: hidden;
 }
