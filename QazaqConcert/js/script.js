@@ -1,15 +1,28 @@
 //burger menu
 var link = document.querySelector('.nav_icon');
 var menu = document.querySelector('.header__nav');
-var cls = document.querySelector('main');
-link.addEventListener('click', function () {
-  link.classList.toggle('active');
-  menu.classList.toggle('opened');
-}, false);
-cls.addEventListener('click', function () {
-  link.classList.remove('active');
-  menu.classList.remove('opened');
-}, false);
+var page = document.querySelector('main');
+let clsBtn = document.querySelector('.header__close');
+if(menu) {
+  link.addEventListener('click', function () {
+    menu.classList.add('opened');
+  }, false);
+  clsBtn.addEventListener('click', function () {
+    menu.classList.remove('opened');
+  });
+  window.addEventListener('scroll', () => {
+    if (menu.classList.contains('opened')) {
+      menu.classList.remove('opened');
+    }
+  });
+  page.addEventListener('click', e => {
+    let target = e.target;
+    if (!(target.classList.contains('page__header')) && !(target.classList.contains('nav_icon'))) {
+        menu.classList.remove('opened');
+    }
+  });
+}
+
 
 
 /*menu dropdown*/
@@ -18,7 +31,6 @@ let listMenu = document.querySelector('.header__list');
 if (listMenu) {
   listMenu.addEventListener('click', e => {
     let target = e.target;
-    console.log(target)
     if (target.classList.contains('dropdown__link')) {
       let itemDrop = target.closest('.header__dropdown');
       let linkDrop = itemDrop.querySelector('.dropdown__link');
@@ -62,6 +74,8 @@ $(function() {
   //   });
 
   /*swiper*/
+let swiperArtist = document.querySelector('.artist__sliders');
+if(swiperArtist){
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 6,
@@ -78,6 +92,7 @@ $(function() {
       swiper: swiper,
     },
   });
+}
 
 
 /*Fancybox*/
