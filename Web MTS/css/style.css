@@ -726,6 +726,10 @@ button:hover {
   max-width: max-content;
   font-weight: 400;
   font-size: 14px;
+  transition: all 0.2s linear;
+}
+.deals__caption:hover {
+  color: #40FFB5;
 }
 .deals__sale {
   display: flex;
