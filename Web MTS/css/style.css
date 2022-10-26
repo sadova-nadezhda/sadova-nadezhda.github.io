@@ -936,6 +936,80 @@ button:hover {
   height: 100%;
   object-fit: contain;
 }
+/*tabulator*/
+.tabulator {
+  background: #1A2738;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 50px;
+}
+.tabulator .tabulator-header {
+  background: #1A2738;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+}
+.tabulator .tabulator-header .tabulator-col {
+  background-color: transparent;
+  border: none;
+  /* min-width: 150px !important; */
+}
+.tabulator-row.tabulator-row-odd {
+  background: #172331;
+  color: #fff;
+  padding: 15px 20px;
+}
+.tabulator-row.tabulator-row-even {
+  background: #1A2738;
+  color: #fff;
+  padding: 15px 20px;
+}
+.tabulator-row .tabulator-cell {
+  border: none;
+  /* min-width: 150px !important; */
+}
+.tabulator .tabulator-footer {
+  background: #1A2738;
+  color: #fff;
+  padding: 15px 20px;
+}
+.tabulator .tabulator-footer label {
+  color: #fff;
+}
+.tabulator .tabulator-footer .tabulator-page {
+  color: #40FFB5;
+  background: transparent;
+  opacity: 1;
+  padding: 6px 12px;
+  min-width: 35px;
+  border: 1px solid #40FFB5;
+}
+.tabulator .tabulator-footer .tabulator-page-size {
+  padding: 6px 12px;
+  border: 1px solid #40FFB5;
+}
+.tabulator .tabulator-footer .tabulator-page.active {
+  background-color: #40FFB5;
+  color: #fff;
+}
+.tabulator .tabulator-footer .tabulator-page:not(.disabled):hover {
+  cursor: pointer;
+  background-color: #40FFB5;
+  color: #fff;
+}
+.tabulator-row.tabulator-selectable:hover {
+
+}
+.tabulator .tabulator-footer .tabulator-page-counter {
+  display: none;
+}
+.tabulator .tabulator-footer .tabulator-paginator {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /*table*/
 .purchases__table, .requisites__table, .members__table, .deals__table {
@@ -1283,6 +1357,8 @@ tr:first-child {
 }
 
 
+
+
 /*Responsive*/
 @media (max-width: 1780px) {
   body {
@@ -1474,6 +1550,9 @@ tr:first-child {
   .table__btn-left, .table__btn-right {
     width: 23%;
     height: 25%;
+  }
+  .tabulator .tabulator-footer .tabulator-paginator {
+    justify-content: flex-start;
   }
 }
 @media (max-width: 568px) {
