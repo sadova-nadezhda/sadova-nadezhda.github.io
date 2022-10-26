@@ -722,6 +722,7 @@ button:hover {
   color: #FFFFFF;
 }
 .deals__caption {
+  display: inline-block;
   margin-bottom: 15px;
   max-width: max-content;
   font-weight: 400;
