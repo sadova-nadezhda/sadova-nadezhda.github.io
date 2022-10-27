@@ -1,0 +1,103 @@
+/* 
+
+--- Default Class---
+caption //заголовки
+text //текст
+button //кнопки
+list //списки
+image //картинки
+
+--- Image  ---
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+--- Section ---
+padding: 150px 0;
+min-height: 100vh; //если необходимо
+
+--- Media  ---
+
+1920x1080 -- 1600x900 -- 1366x768 //десктоп
+1024x768 -- 768x1024 //планшет
+480x320 -- 367x667 -- 320x480 //телефон
+
+@media (max-width: 1650px) {}
+@media (max-width: 1450px) {}
+@media (max-width: 1250px) {}
+@media (max-width: 1100px) {}
+@media (max-width: 980px) {}
+@media (max-width: 767px) {}
+@media (max-width: 568px) {}
+@media (max-width: 480px) {}
+
+*/
+
+/* -----  Start Header  -----*/
+.header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: all 0.2s ease-in-out;
+}
+.header__container {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 343px;
+  height: 53px;
+}
+.header__logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+.header__list__item a {
+  transition: all 0.3s ease;
+}
+.header__list__item a:hover {
+  text-decoration: underline;
+}
+.header__icon {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+.header__icon span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
+  transform-origin: left center;
+}
+.header__icon span:nth-child(1) {
+  top: 0px;
+}
+.header__icon span:nth-child(2) {
+  top: 7px;
+}
+.header__icon span:nth-child(3) {
+  top: 14px;
+}

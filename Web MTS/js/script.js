@@ -1,7 +1,7 @@
 //burger menu
-var link = document.querySelector('.nav_icon');
-var menu = document.querySelector('.page__header');
-var page = document.querySelector('.page__container');
+let link = document.querySelector('.nav_icon');
+let menu = document.querySelector('.page__header');
+let page = document.querySelector('.page__container');
 let clsBtn = document.querySelector('.header__close');
 if(menu) {
   link.addEventListener('click', function () {
@@ -449,41 +449,100 @@ if(product){
   });
 }
 
+// let token = $('meta[name="csrfToken"]').attr('content');
+// let sended = false;
+
+// let tabulator = querySelector('#example-table');
+// if(tabulator) {
+//   window.addEventListener('load', e => {
+//       let vak_id = 1;
+//       let btn = 2;
+//       if( vak_id && !sended ){
+//         sended = true;
+//         $.ajax({
+//           method: "POST",
+//           url: '/users/prompts/' + vak_id,
+//           data: { v_id: vak_id },
+//           dataType: "json",
+//           headers:{
+//             'X-CSRF-Token': token,
+//           }
+//         })
+//         .done(function( data ) {
+//           sended = false;
+//           if(data.status==0) {
+//             alert(data.result)
+//           }
+//           else if (data.status==1) {
+
+//           }
+//         })
+//         .fail(function( data ){
+//           sended = false;
+//           alert(data.responseText);
+//         });
+//       }
+//   });
+// }
 
 
 
-
-var tabledata = [
-  {id:1, name:"Billy Bob", age:12, gender:"male", height:95, col:"red", dob:"14/05/2010"},
-  {id:2, name:"Jenny Jane", age:42, gender:"female", height:142, col:"blue", dob:"30/07/1954"},
-  {id:3, name:"Steve McAlistaire", age:35, gender:"male", height:176, col:"green", dob:"04/11/1982"},
+var tabledata1 = [
+  {id:1, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ",  dob:"07.10.2022"},
+  {id:2, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ", dob:"07.10.2022"},
+  {id:3, name:"ТОО «Mirai Qazaqstan» в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г.", dob:"07.10.2022"},
+];
+var tabledata2 = [
+  {id:1, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
+  {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
+  {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
 ];
 
-var tableColumns = [
+var tableColumns1 = [
   {title:"Name", field:"name"},
-  {title:"Gender", field:"gender"},
-  {title:"Favourite Color", field:"col"},
-  {title:"Date Of Birth", field:"dob"},
-  {title:"Driver", field:"car"},
-  // {title:"Date Of Birth", field:"dob", hozAlign:"center", sorter:"date"},
-  // {title:"Driver", field:"car", hozAlign:"center", formatter:"tickCross"},
+  {title:"Date", field:"dob", maxWidth: 200},
+];
+var tableColumns2 = [
+  {title:"# Аукциона", field:"standart"},
+  {title:"Режим Аукциона", field:"rezim"},
+  {title:"Актуальный статус", field:"stat"},
+  {title:"Наименование лота аукциона", field:"lot"},
+  {title:"Инициатор аукциона", field:"init"},
+  {title:"Фактический адрес и банковские реквизиты", field:"add"},
+  {title:"Документы к аукциону (ТЗ, шаблон договора, прочее)", field:"doc"},
+  {title:"Стартовая цена лота", field:"price" },
+  {title:"Date", field:"dob", maxWidth: 200 },
 ];
 
 
 //Build Tabulator
 var table = new Tabulator("#example-table", {
-  data: tabledata,
-  columns: tableColumns,
+  data: tabledata1,
+  columns: tableColumns1,
   columnDefaults:{
-    width:200,
-    resizable:false
+    minWidth: 200,
+    resizable: false,
+    tooltip:true,
   },
   pagination:"local",
-  paginationSize: 1,
-  paginationSizeSelector:[1, 3, 6],
+  paginationSize: 3,
+  paginationSizeSelector:[1, 3, 6, 9],
   paginationCounter:"rows",
   layout:"fitColumns",
-  movableColumns:false,
-  resizable:false
+  movableColumns: true,
+});
 
+var table2 = new Tabulator("#auctions__table", {
+  data: tabledata2,
+  columns: tableColumns2,
+  columnDefaults:{
+    minWidth: 200,
+    resizable: false
+  },
+  pagination:"local",
+  paginationSize: 3,
+  paginationSizeSelector:[1, 3, 6, 9],
+  paginationCounter:"rows",
+  layout:"fitColumns",
+  movableColumns: true,
 });
