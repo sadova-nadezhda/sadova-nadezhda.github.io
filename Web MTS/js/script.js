@@ -136,7 +136,7 @@ $('.marquee').marquee({
 document.addEventListener('DOMContentLoaded', function () {
   let btnRgt = document.querySelector('.table__btn-right');
   let btnLft = document.querySelector('.table__btn-left');
-  let tableCnt = document.querySelector('.auctions__table__content');
+  let tableCnt = document.querySelector('.tabulator-tableholder');
   if (tableCnt) {
     btnRgt.onmouseover = function () {
       let start = Date.now();
@@ -452,11 +452,10 @@ if(product){
 // let token = $('meta[name="csrfToken"]').attr('content');
 // let sended = false;
 
-// let tabulator = querySelector('#example-table');
+// let tabulator = querySelector('#example-table').getAttribute('data-type');
 // if(tabulator) {
 //   window.addEventListener('load', e => {
-//       let vak_id = 1;
-//       let btn = 2;
+//       let vak_id = document.querySelector('#');
 //       if( vak_id && !sended ){
 //         sended = true;
 //         $.ajax({
@@ -470,12 +469,7 @@ if(product){
 //         })
 //         .done(function( data ) {
 //           sended = false;
-//           if(data.status==0) {
-//             alert(data.result)
-//           }
-//           else if (data.status==1) {
 
-//           }
 //         })
 //         .fail(function( data ){
 //           sended = false;
@@ -532,7 +526,7 @@ var table = new Tabulator("#example-table", {
   movableColumns: true,
 });
 
-var table2 = new Tabulator("#auctions__table", {
+var table2 = new Tabulator("#auctions__table__content", {
   data: tabledata2,
   columns: tableColumns2,
   columnDefaults:{
