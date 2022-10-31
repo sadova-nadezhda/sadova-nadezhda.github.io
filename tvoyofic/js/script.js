@@ -40,3 +40,25 @@ $('.slider__container').slick({
   prevArrow: '<button type="button" class="slick_arrow slick_prev"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 0L-4.64873e-07 15L26 30L26 0Z" fill="white"/></svg></button>',
   dots: true,
 });
+
+/*swiper*/
+let swiperArtist = document.querySelector('.furniture__sliders');
+if(swiperArtist){
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 20,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    centerInsufficientSlides: true,
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+}
