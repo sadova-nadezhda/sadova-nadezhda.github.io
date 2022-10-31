@@ -99,9 +99,6 @@ ul[class],
 ol[class] {
   list-style: none;
 }
-li[class] {
-  margin: 0;
-}
 ol, ul {
   list-style-position: inside;
 }

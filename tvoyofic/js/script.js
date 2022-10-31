@@ -1,34 +1,48 @@
 //burger menu
 /*---------- Start menu ------------- */
-let header = document.querySelector('.header')
-document.addEventListener('scroll', function() {
-    let scroll = window.scrollY
-    if(scroll > 0) {
-         header.classList.add('scroll')
-    } else{
-        header.classList.remove('scroll')
-    }
-});
+// let header = document.querySelector('.header')
+// document.addEventListener('scroll', function() {
+//     let scroll = window.scrollY
+//     if(scroll > 0) {
+//          header.classList.add('scroll')
+//     } else{
+//         header.classList.remove('scroll')
+//     }
+// });
 
 let body = document.querySelector('body');
 let link = document.querySelector('.header__btn');
 let menu = document.querySelector('.header__nav');
-if(menu){
+let menuOpen = document.querySelector('nav.opened');
+let listMenu = document.querySelector('.header__list');
+let menuHg = listMenu.clientHeight + 40;
+if(link){
   link.addEventListener('click', function () {
     menu.classList.toggle('opened');
+    console.log(menuOpen)
+    menu.style.height = menuHg + 'px';
+    menu.style.width = '200px';
+    menu.style.opacity = '1';
   }, false);
   window.addEventListener('scroll', () => {
     if (menu.classList.contains('opened')) {
       menu.classList.remove('opened');
+      menu.style.height = '0px';
+      menu.style.width = '0px';
+      menu.style.opacity = '0';
     }
   })
   document.addEventListener('click', e => {
     let target = e.target;
-    if (!(target.classList.contains('header__nav')) && !(target.classList.contains('header__icon'))) {
-      menu.classList.remove('opened');
+    if (!(target.classList.contains('header__nav')) && !(target.classList.contains('header__btn'))) {
+      menu.style.height = '0px';
+      menu.style.width = '0px';
+      menu.style.opacity = '0';
     }
   })
 }
+
+
 /*---------- End menu ------------- */
 
 /*slider*/
