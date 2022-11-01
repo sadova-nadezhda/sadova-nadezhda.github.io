@@ -629,7 +629,7 @@ img {
     margin-bottom: 60px;
     font-size: 40px;
   }
-  .furniture__caption {
+  .furniture__caption h4 {
     font-size: 24px;
   }
   .slider__item {
@@ -681,7 +681,7 @@ img {
   .furniture__container {
     max-width: 800px;
   }
-  .furniture__caption {
+  .furniture__caption h4 {
     font-size: 20px;
   }
   .price {
@@ -831,7 +831,7 @@ img {
     margin-bottom: 30px;
     font-size: 30px;
   }
-  .furniture__caption {
+  .furniture__caption h4 {
     font-size: 16px;
     margin-bottom: 10px;
   }
@@ -921,7 +921,7 @@ img {
   .furniture__container {
     max-width: 400px;
   }
-  .footer__connection a, .furniture__caption {
+  .footer__connection a, .furniture__caption h4 {
     font-size: 14px;
   }
   .footer__connection svg {
