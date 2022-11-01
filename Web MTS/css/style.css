@@ -1037,6 +1037,9 @@ button:hover {
   font-weight: 500;
   font-size: 12px;
 }
+.tabulator-page-size, .tabulator-page {
+  margin-bottom: 8px;
+}
 
 /*table*/
 .purchases__table, .requisites__table, .members__table, .deals__table {

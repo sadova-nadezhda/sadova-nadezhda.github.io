@@ -133,7 +133,14 @@ $('.marquee').marquee({
 
 
 /*table*/
+function numberWithSpaces(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+
+
+
   let btnRgt = document.querySelector('.table__btn-right');
   let btnLft = document.querySelector('.table__btn-left');
   let tableCnt = document.querySelector('.tabulator-tableholder');
@@ -170,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 20);
     };
   }
+  
 // /*Chart*/
   const canvas = document.querySelector('.chart');
   if(canvas) {
@@ -180,9 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // let labelsArray = ['01.04.2022', '01.05.2022', '01.06.2022', '01.07.2022', '01.08.2022'];
     // let DataArray = [3, 6, 2, 7, 4];
 
-    function numberWithSpaces(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    }
+
 
     let obj = {
       labels: ['01.04.2022', '01.05.2022', '01.06.2022', '01.07.2022', '01.08.2022', '01.09.2022'],
@@ -456,9 +462,16 @@ if(product){
 // ];
 var tabledata2 = [
   {id:1, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
-  {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
-  {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
+  {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2711043.00	",  dob:"07.10.2022"},
+  {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2001533.00	",  dob:"07.10.2022"},
 ];
+
+  tabledata2.forEach(function(elem) {
+    let price = elem.price;
+    price = numberWithSpaces(price);
+    console.log(price)
+    elem.price = price;
+  });
 
 // var tableColumns1 = [
 //   {title:"Name", field:"name", formatter:"link",formatterParams:{ urlField: 'alias'} },
@@ -477,14 +490,15 @@ var tableColumns2 = [
   {title:"Date", field:"dob", maxWidth: 200 },
 ];
 
-
-
 // let sended = false;
 
 // let tabulator = document.querySelector('#example-table');
 // let tableType = document.querySelector('#example-table').getAttribute('data-type');
 // if(tabulator && tableType) {
 //   window.addEventListener('load', e => {
+// let preloader = document.getElementById('preloader');
+// preloader.classList.add('hide-preloader');
+// preloader.classList.add('preloader-hidden');
 //       if(!sended ){
 //         sended = true;
 //         $.ajax({
