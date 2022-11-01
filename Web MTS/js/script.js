@@ -449,54 +449,23 @@ if(product){
   });
 }
 
-// let token = $('meta[name="csrfToken"]').attr('content');
-// let sended = false;
-
-// let tabulator = querySelector('#example-table').getAttribute('data-type');
-// if(tabulator) {
-//   window.addEventListener('load', e => {
-//       let vak_id = document.querySelector('#');
-//       if( vak_id && !sended ){
-//         sended = true;
-//         $.ajax({
-//           method: "POST",
-//           url: '/users/prompts/' + vak_id,
-//           data: { v_id: vak_id },
-//           dataType: "json",
-//           headers:{
-//             'X-CSRF-Token': token,
-//           }
-//         })
-//         .done(function( data ) {
-//           sended = false;
-
-//         })
-//         .fail(function( data ){
-//           sended = false;
-//           alert(data.responseText);
-//         });
-//       }
-//   });
-// }
-
-
-
-var tabledata1 = [
-  {id:1, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ",  dob:"07.10.2022"},
-  {id:2, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ", dob:"07.10.2022"},
-  {id:3, name:"ТОО «Mirai Qazaqstan» в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г.", dob:"07.10.2022"},
-];
+// var tabledata1 = [
+//   {id:1,alias:'https://tabulator.info/docs/5.4/format#formatter-link', name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ",  dob:"07.10.2022"},
+//   {id:2, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ", dob:"07.10.2022"},
+//   {id:3, name:"ТОО «Mirai Qazaqstan» в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г.", dob:"07.10.2022"},
+// ];
 var tabledata2 = [
   {id:1, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
   {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
   {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
 ];
 
-var tableColumns1 = [
-  {title:"Name", field:"name"},
-  {title:"Date", field:"dob", maxWidth: 200},
-];
+// var tableColumns1 = [
+//   {title:"Name", field:"name", formatter:"link",formatterParams:{ urlField: 'alias'} },
+//   {title:"Date", field:"dob", maxWidth: 200},
+// ];
 var tableColumns2 = [
+  {formatter:"rownum", hozAlign:"center", maxWidth:40, minWidth:40},
   {title:"# Аукциона", field:"standart"},
   {title:"Режим Аукциона", field:"rezim"},
   {title:"Актуальный статус", field:"stat"},
@@ -509,14 +478,93 @@ var tableColumns2 = [
 ];
 
 
-//Build Tabulator
-var table = new Tabulator("#example-table", {
-  data: tabledata1,
-  columns: tableColumns1,
+
+// let sended = false;
+
+// let tabulator = document.querySelector('#example-table');
+// let tableType = document.querySelector('#example-table').getAttribute('data-type');
+// if(tabulator && tableType) {
+//   window.addEventListener('load', e => {
+//       if(!sended ){
+//         sended = true;
+//         $.ajax({
+//           method: "POST",
+//           url: '/api/v1/get_tables_data' ,
+//           data: { type: tableType },
+//           dataType: "json",
+//         })
+//         .done(function( data ) {
+//           sended = false;
+//         })
+//         .fail(function( data ){
+//           sended = false;
+//           alert(data.responseText);
+//         });
+//       }
+//   });
+
+//   function tableDataFormat(data){
+//     if( data.status == 1){
+//       var table = new Tabulator("#example-table", {
+//         data: data.data,
+//         columns: data.columns,
+//         columnDefaults:{
+//           minWidth: 200,
+//           resizable: false,
+//           tooltip:true,
+//         },
+//         pagination:"local",
+//         paginationSize: 10,
+//         paginationSizeSelector:[10, 20, 50, 100],
+//         paginationCounter:"rows",
+//         layout:"fitColumns",
+//         movableColumns: true,
+//       });
+//     }else {
+//       alert(data.status_text)
+//     }
+//   }  
+// }
+
+
+
+
+
+
+var table2 = new Tabulator("#example-table", {
+  data: tabledata2,
+  columns: tableColumns2,
   columnDefaults:{
     minWidth: 200,
-    resizable: false,
-    tooltip:true,
+    resizable: false
+  },
+  locale:true,
+  langs:{
+    "ru":{
+        "data":{
+            "loading":"Загрузка", 
+            "error":"Ошибка", 
+        },
+        "pagination":{
+          "page_size":"Кол-во строк", 
+            "page_title":"Показать страницу",
+            "first":"Первая", 
+            "first_title":"Первая страница", 
+            "last":"Последняя",
+            "last_title":"Последняя страница",
+            "prev":"Пред",
+            "prev_title":"Предыдущая страница",
+            "next":"След",
+            "next_title":"Следующая Страница",
+            "all":"Все",
+            "counter":{
+                "showing": "Показаны",
+                "of": "из",
+                "rows": "ряды",
+                "pages": "страницы",
+            }
+        },
+    }
   },
   pagination:"local",
   paginationSize: 3,
@@ -526,17 +574,3 @@ var table = new Tabulator("#example-table", {
   movableColumns: true,
 });
 
-var table2 = new Tabulator("#auctions__table__content", {
-  data: tabledata2,
-  columns: tableColumns2,
-  columnDefaults:{
-    minWidth: 200,
-    resizable: false
-  },
-  pagination:"local",
-  paginationSize: 3,
-  paginationSizeSelector:[1, 3, 6, 9],
-  paginationCounter:"rows",
-  layout:"fitColumns",
-  movableColumns: true,
-});
