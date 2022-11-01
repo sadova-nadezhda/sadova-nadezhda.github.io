@@ -19,10 +19,15 @@ let menuHg = listMenu.clientHeight + 40;
 if(link){
   link.addEventListener('click', function () {
     menu.classList.toggle('opened');
-    console.log(menuOpen)
+    if (menu.classList.contains('opened')) {
     menu.style.height = menuHg + 'px';
     menu.style.width = '200px';
     menu.style.opacity = '1';
+    }else {
+      menu.style.height = '0px';
+      menu.style.width = '0px';
+      menu.style.opacity = '0';
+    }
   }, false);
   window.addEventListener('scroll', () => {
     if (menu.classList.contains('opened')) {
