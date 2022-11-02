@@ -138,44 +138,55 @@ function numberWithSpaces(x) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-
-
-
   let btnRgt = document.querySelector('.table__btn-right');
   let btnLft = document.querySelector('.table__btn-left');
   let tableCnt = document.querySelector('.tabulator-tableholder');
+  let tbl = document.querySelector('.tabulator-table');
+  let tableWh = tbl.offsetWidth - tableCnt.offsetWidth;
+
   if (tableCnt) {
+    window.addEventListener('resize', ()=> {
+      tableWh = tableCnt.offsetWidth;
+    });
+    function ScrollRg() {
+      if (tableCnt.scrollLeft >= 20) {
+        btnLft.classList.add('show');
+      }
+      if (tableCnt.scrollLeft >= tableWh) {
+        btnRgt.classList.remove('show');
+      }
+    }
+    function ScrollLf() {
+      if (tableCnt.scrollLeft <= tableWh) {
+        btnRgt.classList.add('show');
+      }
+      if (tableCnt.scrollLeft <= 20 ) {
+        btnLft.classList.remove('show');
+      }
+    }
     btnRgt.onmouseover = function () {
       let start = Date.now();
       let timer = setInterval(function() {
       let timePassed = Date.now() - start;
-      // tableCnt.scrollLeft += tableCnt.clientWidth;
       tableCnt.scrollLeft += 10;
       if (timePassed > 1000) clearInterval(timer);
-      if (tableCnt.scrollLeft > 20) {
-        btnLft.classList.add('show');
-      }
-      if (tableCnt.scrollLeft > 1320) {
-        btnRgt.classList.remove('show');
-      }
-      // console.log(tableCnt.scrollLeft)
+      ScrollRg();
       }, 20);
     };
     btnLft.onmouseover = function () {
       let start = Date.now();
       let timer = setInterval(function() {
       let timePassed = Date.now() - start;
-      // tableCnt.scrollLeft -= tableCnt.clientWidth;
       tableCnt.scrollLeft -= 10;
       if (timePassed > 1000) clearInterval(timer);
-      if (tableCnt.scrollLeft < 1320) {
-        btnRgt.classList.add('show');
-      }
-      if (tableCnt.scrollLeft < 20) {
-        btnLft.classList.remove('show');
-      }
+      ScrollLf();
       }, 20);
+
     };
+    tableCnt.addEventListener('scroll', () => {
+      ScrollLf();
+      ScrollRg();
+    })
   }
   
 // /*Chart*/
@@ -455,21 +466,20 @@ if(product){
   });
 }
 
-// var tabledata1 = [
+// var tableData1 = [
 //   {id:1,alias:'https://tabulator.info/docs/5.4/format#formatter-link', name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ",  dob:"07.10.2022"},
 //   {id:2, name:"ТОО SAADAT Group в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г. ", dob:"07.10.2022"},
 //   {id:3, name:"ТОО «Mirai Qazaqstan» в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г.", dob:"07.10.2022"},
 // ];
-var tabledata2 = [
+var tableData2 = [
   {id:1, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
   {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2711043.00	",  dob:"07.10.2022"},
   {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2001533.00	",  dob:"07.10.2022"},
 ];
 
-  tabledata2.forEach(function(elem) {
+  tableData2.forEach(function(elem) {
     let price = elem.price;
     price = numberWithSpaces(price);
-    console.log(price)
     elem.price = price;
   });
 
@@ -546,7 +556,7 @@ var tableColumns2 = [
 
 
 var table2 = new Tabulator("#example-table", {
-  data: tabledata2,
+  data: tableData2,
   columns: tableColumns2,
   columnDefaults:{
     minWidth: 200,
