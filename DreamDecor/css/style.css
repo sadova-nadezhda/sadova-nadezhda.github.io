@@ -513,14 +513,16 @@ h4 {
 .post_decor::before {
   /* content: url(../img/header-inst.png); */
   content: '';
-  background: url(../img/header-inst.png);
+  background: url(../img/header-inst.png) no-repeat;
+  background-size: contain;
   display: block;
   height: 70px;
 }
 .post_decor::after {
   /* content: url(../img/footer-inst.png); */
   content: '';
-  background: url(../img/footer-inst.png);
+  background: url(../img/footer-inst.png) no-repeat;
+  background-size: contain;
   display: block;
   height: 70px;
 }
@@ -940,6 +942,9 @@ h4 {
   .footer__map, .footer__catalog {
     gap: 30px;
   }
+  .post_decor::before, .post_decor::after {
+    height: 60px;
+  }
 }
 @media (max-width: 568px) {
   h1, h2 {
@@ -963,4 +968,8 @@ h4 {
     color: #848383;
   }
 }
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .post_decor::before, .post_decor::after {
+    height: 40px;
+  }
+}
