@@ -1525,6 +1525,12 @@ h4 {
   .contact__caption, .form__label {
     font-size: 16px;
   }
+  .sticky__icon {
+    bottom: 10px;
+  }
+  .sticky__whatsapp {
+    bottom: 70px;
+  }
 }
 @media (max-width: 568px) {
   h1, h2 {
