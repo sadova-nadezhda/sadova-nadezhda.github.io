@@ -14,8 +14,7 @@ if(header) {
 let link = document.querySelector(".header__btn");
 let closeMenu = document.querySelector(".header__close");
 let menu = document.querySelector(".header_opened");
-if (menu) {
-  console.log('1')
+if (link) {
   link.addEventListener("click", function () {
     menu.classList.add("active");
   },false);
@@ -43,7 +42,36 @@ if(contactBtn) {
     $(contactPop).removeClass('active');
     $(contactPop).hide();
   });
+  contactPop.addEventListener("click", clsPopupContact);
+  function clsPopupContact(e) {
+    const target = e.target;
+    if (
+      target.classList.contains("popup_contact__close") ||
+      target.classList.contains("popup_contact")
+    ) {
+      contactPop.style.display = "none";
+    }
+  }
+}
 
+let popup = document.querySelector("#popup");
+if (popup) {
+  let popupBtn = document.querySelectorAll(".popup__btn");
+  popupBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+    popup.addEventListener("click", closePopup);
+  });
+}
+function closePopup(e) {
+  const target = e.target;
+  if (
+    target.classList.contains("popup-close") ||
+    target.classList.contains("popup")
+  ) {
+    popup.style.display = "none";
+  }
 }
 
 

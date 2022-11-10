@@ -173,6 +173,34 @@
     </div>
   </div>
 
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close">
+        <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-1" x2="39.5979" y2="-1" transform="matrix(0.707106 -0.707108 0.707106 0.707108 2 30)" stroke="#010101" stroke-width="2"/>
+          <line y1="-1" x2="39.5979" y2="-1" transform="matrix(0.707106 0.707108 -0.707106 0.707108 2 2)" stroke="#010101" stroke-width="2"/>
+        </svg>          
+      </button>
+      <h3 class="popup__title caption">Оставьте заявку</h3>
+      <div class="popup__txt">Наши специалисты свяжутся с вами в ближайшее время</div>
+      <form action="" class="popup__form">
+        <div class="form__name">
+          <label for="name" class="form__label">Введите имя</label>
+          <input type="text" id="name" class="form__input" placeholder="Имя">
+        </div>
+        <div class=" form__phone">
+          <label for="phone" class="form__label">Введите телефон</label>
+          <input type="tel" id="phone" class="form__input" placeholder="+7 (111) 111-11-11">
+        </div>
+        <div class="comment__box">
+          <label for="comment" class="form__label">Комментарий</label>
+          <textarea id="comment" class="form__comment"></textarea>
+        </div>
+        <button class="form__button button">оставить заявку</button>
+      </form>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>
