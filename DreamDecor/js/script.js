@@ -67,7 +67,7 @@ if (popup) {
 function closePopup(e) {
   const target = e.target;
   if (
-    target.classList.contains("popup-close") ||
+    target.classList.contains("popup__close") ||
     target.classList.contains("popup")
   ) {
     popup.style.display = "none";
