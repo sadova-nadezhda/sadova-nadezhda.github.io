@@ -1245,6 +1245,9 @@ h4 {
   .furniture__description, .about__description, .steps__txt {
     font-size: 18px;
   }
+  .furniture .container {
+    margin: auto;
+  }
   .about__container, .steps__container, .insta__container {
     grid-template-columns: 1fr;
   }
