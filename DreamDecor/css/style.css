@@ -4,8 +4,11 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 11;
   transition: all 0.3s linear;
+}
+.header_dark {
+  background-color: #010101;
 }
 .header.scroll {
   background-color: #010101;
@@ -17,6 +20,10 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s linear;
+}
+.scroll .header__container {
+  border: none;
 }
 .header__logo {
   width: 191px;
@@ -35,7 +42,7 @@
   gap: 100px;
   position: fixed;
   top: 0;
-  left: -200vh;
+  right: 100%;
   height: 100%;
   background-color: #010101;
   color: #fff;
@@ -43,7 +50,7 @@
   transition: all 0.3s ease-in-out;
 }
 .header_opened.active {
-  left: 0;
+  right: 0;
   width: 100%;
 }
 .header__main {
@@ -205,6 +212,9 @@
   border: none;
   padding: 0;
   vertical-align: middle;
+}
+.phone__btn:hover {
+  cursor: pointer;
 }
 .header__social {
   margin-right: 35px;
@@ -606,8 +616,101 @@ h4 {
   color: #D69E57;
 }
 
+.popup_contact {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  z-index: 12;
+}
+.popup_contact.active {
+  display: flex;
+}
+.popup_contact__container {
+  position: relative;
+  padding: 100px;
+  width: max-content;
+  background-color: #fff;
+}
+.popup_contact__close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.popup_contact__close:hover {
+  cursor: pointer;
+}
+.popup_contact__title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.popup_contact__list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 100px;
+  row-gap: 35px;
+  padding-bottom: 100px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #D9D9D9;
+}
+.popup_contact__list a {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.popup_contact__list a:hover {
+  color: #D69E57;
+}
+.popup_contact__list svg {
+  margin-right: 20px;
+}
 
-
+.breadcrumb {
+  margin-top: 156px;
+  padding: 22px 0;
+  border-bottom: 1px solid #D9D9D9;
+}
+.breadcrumb__list {
+  display: flex;
+  color: #848383;
+  font-size: 20px;
+  line-height: 180%;
+}
+.breadcrumb__list li {
+  margin-right: 5px;
+}
+.breadcrumb__list li::after {
+  content: '/';
+  margin-left: 5px;
+}
+.breadcrumb__list li:last-child {
+  margin-right: 0px;
+  color: #010101;
+}
+.breadcrumb__list li:last-child::after {
+  content: '';
+}
+.category {
+  padding: 150px 0;
+}
+.category__title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.category__cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
 
 
 @media (max-width: 1640px) {
@@ -673,6 +776,16 @@ h4 {
   }
   .footer .catalog__column:last-child {
     grid-column: span 2;
+  }
+  .popup_contact__container {
+    padding: 80px;
+  }
+  .popup_contact__title {
+    margin-bottom: 50px;
+  }
+  .popup_contact__list {
+    padding-bottom: 50px;
+    column-gap: 50px;
   }
 }
 @media (max-width: 1200px) {
@@ -810,6 +923,28 @@ h4 {
   .gallery__item {
     height: 300px;
   }
+  .popup_contact__container {
+    padding: 60px;
+  }
+  .popup_contact__title {
+    margin-bottom: 30px;
+  }
+  .popup_contact__list {
+    padding-bottom: 30px;
+    gap: 20px;
+  }
+  .popup_contact__list svg {
+    width: 16px;
+    height: 16px;
+  }
+  .popup_contact__close {
+    top: 20px;
+    right: 20px;
+  }
+  .popup_contact__close svg {
+    width: 35px;
+    height: 20px;
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -927,7 +1062,7 @@ h4 {
     font-size: 14px;
   }
   .gallery__item {
-    height: 250px;
+    height: 200px;
   }
   .post__img_small {
     height: 200px;
@@ -966,6 +1101,19 @@ h4 {
     flex-direction: column;
     align-items: center;
     color: #848383;
+  }
+  .popup_contact__title {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .popup_contact__list {
+    grid-template-columns: 1fr;
+  }
+  .popup_contact__container {
+    padding: 20px;
+  }
+  .popup_contact__txt {
+    max-width: 250px;
   }
 }
 @media (max-width: 480px) {

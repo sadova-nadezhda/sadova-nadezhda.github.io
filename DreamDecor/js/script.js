@@ -25,8 +25,31 @@ if (menu) {
 }
 // ---------- End menu -------------
 
+let contactBtn = document.querySelector('.phone__btn');
+let contactPop = document.querySelector('.popup_contact');
+let contactCls = document.querySelector('.popup_contact__close');
+if(contactBtn) {
+  // contactBtn.addEventListener('click', () => {
+  //   contactPop.classList.add('active');
+  // });
+  // contactCls.addEventListener('click', () => {
+  //   contactPop.classList.remove('active');
+  // });
+  $(contactBtn).click(function () {
+    $(contactPop).addClass('active');
+    $(contactPop).show()
+  });
+  $(contactCls).click(function () {
+    $(contactPop).removeClass('active');
+    $(contactPop).hide();
+  });
+
+}
+
+
 /*slider*/
 $('.gallery__container').slick({
+  infinite: false,
   dots: false,
   slidesToShow: 4,
   slidesToScroll: 1,
