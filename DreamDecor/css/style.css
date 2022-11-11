@@ -1145,13 +1145,14 @@ h4 {
     padding-bottom: 60px;
   }
   .popup__container {
-    padding: 60px;
+    padding: 50px;
   }
   .form__comment {
     height: 110px;
   }
   .popup__txt, .form__label, .ctg-inner__list span {
     font-size: 18px;
+    line-height: 1em;
   }
   .form__button {
     line-height: 1.2em;
