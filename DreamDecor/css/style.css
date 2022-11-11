@@ -470,6 +470,9 @@ h4 {
   left: 50%;
   transform: translateX(-50%);
 }
+.steps__item:last-child .steps__img::after {
+  content: '';
+}
 .steps__item:last-child {
   margin-bottom: 0px;
 }
@@ -477,13 +480,13 @@ h4 {
   content: '';
 }
 .steps__img {
+  position: relative;
   width: 100px;
   height: 100px;
   margin-right: 48px;
   padding: 25px 32px;
   border-radius: 100%;
   background-color: rgba(217, 217, 217, 0.5);
-  overflow: hidden;
 }
 .steps__img img {
   object-fit: contain;
@@ -1281,7 +1284,7 @@ h4 {
     padding: 20px;
   }
   .steps__item {
-    margin-bottom: 45px;
+    margin-bottom: 32px;
   }
   .steps__img::after {
     content: url(../img/Arrow-small.svg);
