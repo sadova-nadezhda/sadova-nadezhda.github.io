@@ -703,6 +703,11 @@ h4 {
 .popup_contact__list svg {
   margin-right: 20px;
 }
+.popup_contact__txt {
+  max-width: 600px;
+  text-align: center;
+  color: #848383;
+}
 .popup__btn:hover {
   cursor: pointer;
 }
@@ -1213,6 +1218,9 @@ h4 {
   .post__img_small {
     height: 230px;
   }
+  .popup_contact__container {
+    max-width: 800px;
+  }
 }
 @media (max-width: 1440px) {
   .header_opened {
@@ -1298,6 +1306,10 @@ h4 {
   .popup_contact__list {
     padding-bottom: 50px;
     column-gap: 50px;
+  }
+  .popup_contact__list svg {
+    width: 20px;
+    height: 20px;
   }
   .category__card {
     height: 300px;
@@ -1515,6 +1527,9 @@ h4 {
   }
   .card__title {
     font-size: 16px;
+  }
+  .popup_contact__container {
+    max-width: 600px;
   }
 }
 @media (max-width: 1100px) {
