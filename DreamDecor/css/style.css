@@ -1362,6 +1362,13 @@ h4 {
   .popup__container {
     width: 500px;
   }
+  .sticky__icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  .sticky__whatsapp {
+    bottom: 90px;
+  }
 }
 @media (max-width: 1200px) {
   .furniture, .about, .steps, .insta, .category, .request, .ctg-inner, .contact {
@@ -1380,7 +1387,11 @@ h4 {
   .header__btn span, .lang__list {
     font-size: 16px;
   }
-  .social__item svg, .phone__btn svg {
+  .social__item svg {
+    width: 22px;
+    height: 22px;
+  }
+  .phone__btn svg {
     width: 18px;
     height: 18px;
   }
@@ -1487,8 +1498,8 @@ h4 {
     height: 300px;
   }
   .share__social svg {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
   .about__title, .steps__title, .insta__title {
     margin-bottom: 40px;
@@ -1748,11 +1759,12 @@ h4 {
     padding: 8px;
   }
   .header_opened__logo {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     order: -1;
   }
   .header__close {
     margin: 0;
+    margin-bottom: 30px;
   }
   .header__nav {
     width: 100%;
@@ -1760,10 +1772,6 @@ h4 {
   .header__contact {
     max-height: 150px;
     margin-top: auto;
-  }
-  .social__item svg {
-    width: 16px;
-    height: 16px;
   }
   .header__connection {
     font-size: 16px;
@@ -1788,12 +1796,16 @@ h4 {
   .slick-arrow {
     top: -50px;
   }
-  .slick-arrow svg, .header__close svg {
+  .header__close svg {
     width: 25px;
     height: 25px;
   }
+  .slick-arrow svg {
+    width: 35px;
+    height: 35px;
+  }
   .slick_prev {
-    right: 50px;
+    right: 60px;
   }
   .slick_next {
     right: 16px;
@@ -1837,7 +1849,7 @@ h4 {
     font-size: 18px;
   }
   .breadcrumb {
-    margin-top: 104px;
+    margin-top: 74px;
     padding: 10px 0;
   }
   .request::after {
