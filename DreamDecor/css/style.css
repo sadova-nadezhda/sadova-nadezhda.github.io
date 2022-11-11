@@ -463,11 +463,12 @@ h4 {
   align-items: center;
   margin-bottom: 75px;
 }
-.steps__item::after {
+.steps__img::after {
   content: url(../img/Arrow.png);
   position: absolute;
   top: 100%;
-  left: 43px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .steps__item:last-child {
   margin-bottom: 0px;
@@ -1167,9 +1168,6 @@ h4 {
   .steps__img {
     padding: 10px 30px;
   }
-  .steps__item::after {
-    left: 40px;
-  }
   .insta__title {
     margin-bottom: 60px;
   }
@@ -1285,9 +1283,8 @@ h4 {
   .steps__item {
     margin-bottom: 45px;
   }
-  .steps__item::after {
+  .steps__img::after {
     content: url(../img/Arrow-small.svg);
-    left: 36px;
   }
   .insta__button {
     margin: 0;
@@ -1484,9 +1481,6 @@ h4 {
     height: 50px;
     margin-right: 20px;
     padding: 12px 16px;
-  }
-  .steps__item::after {
-    left: 20px;
   }
   .steps__txt {
     font-size: 14px;
