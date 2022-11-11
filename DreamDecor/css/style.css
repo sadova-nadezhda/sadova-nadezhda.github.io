@@ -1678,7 +1678,7 @@ h4 {
   }
   .footer__catalog {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
   }
   .footer__title, .footer .catalog__column:last-child {
     grid-column: unset;
