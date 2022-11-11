@@ -1985,8 +1985,8 @@ h4 {
     right: 15px;
   }
   .popup__close svg, .header__close svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
   .form__input {
     padding-left: 40px;
@@ -2029,6 +2029,14 @@ h4 {
     grid-template-columns: 1fr;
   }
   .footer__title {
+    grid-column: unset;
+  }
+}
+@media (max-width: 420px) {
+  .header__catalog {
+    grid-template-columns: 1fr;
+  }
+  .catalog__title {
     grid-column: unset;
   }
 }
