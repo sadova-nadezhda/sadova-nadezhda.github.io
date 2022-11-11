@@ -467,7 +467,7 @@ h4 {
   content: url(../img/Arrow.png);
   position: absolute;
   top: 100%;
-  left: 45px;
+  left: 43px;
 }
 .steps__item:last-child {
   margin-bottom: 0px;
@@ -1286,8 +1286,8 @@ h4 {
     margin-bottom: 45px;
   }
   .steps__item::after {
-    content: url(../img/Arrow-small.png);
-    left: 35px;
+    content: url(../img/Arrow-small.svg);
+    left: 36px;
   }
   .insta__button {
     margin: 0;
@@ -1480,13 +1480,13 @@ h4 {
     right: 16px;
   }
   .steps__img {
-    width: 50px;
+    width: 55px;
     height: 50px;
     margin-right: 20px;
     padding: 12px 16px;
   }
   .steps__item::after {
-    left: 15px;
+    left: 20px;
   }
   .steps__txt {
     font-size: 14px;
