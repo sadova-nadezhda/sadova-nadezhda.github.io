@@ -285,6 +285,7 @@ h4 {
 
 /* --- Section --- */
 .furniture {
+  position: relative;
   display: flex;
   min-height: 100vh;
   padding: 150px 0;
