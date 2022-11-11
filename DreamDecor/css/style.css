@@ -1661,11 +1661,16 @@ h4 {
     height: 16px;
   }
   .form__input {
-    padding-left: 50px;
+    padding-left: 40px;
   }
   .form__name::before, .form__phone::before {
     left: 15px;
-    bottom: 5px;
+  }
+  .form__name::before {
+    content: url(../img/user-mob.svg);
+  }
+  .form__phone::before {
+    content: url(../img/tel-mob.svg);
   }
   .form__label {
     font-size: 14px;
