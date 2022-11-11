@@ -1649,7 +1649,7 @@ h4 {
     top: 15px;
     right: 15px;
   }
-  .popup__close svg {
+  .popup__close svg, .header__close svg {
     width: 16px;
     height: 16px;
   }
