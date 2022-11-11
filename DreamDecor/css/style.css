@@ -1408,7 +1408,7 @@ h4 {
   .lang__list {
     padding: 8px;
   }
-  .header__logo {
+  .header__logo, .header_opened__logo {
     width: 116px;
     height: 64px;
   }
@@ -1421,6 +1421,10 @@ h4 {
   }
   .header__nav {
     width: 100%;
+  }
+  .header__contact {
+    max-height: 150px;
+    margin-top: auto;
   }
   .social__item svg {
     width: 16px;
@@ -1449,7 +1453,7 @@ h4 {
   .slick-arrow {
     top: -50px;
   }
-  .slick-arrow svg {
+  .slick-arrow svg, .header__close svg {
     width: 25px;
     height: 25px;
   }
@@ -1508,7 +1512,7 @@ h4 {
     content: url(../img/elem-6.png);
     bottom: 20%;
   }
-  .contact__description svg {
+  .contact__description svg, .catalog__connect svg {
     width: 16px;
     height: 16px;
     margin-right: 10px;
@@ -1531,6 +1535,9 @@ h4 {
   .sticky__whatsapp {
     bottom: 70px;
   }
+  .furniture {
+    padding-top: 150px;
+  }
 }
 @media (max-width: 568px) {
   h1, h2 {
@@ -1542,9 +1549,6 @@ h4 {
   .button {
     padding: 10px 15px;
     font-size: 16px;
-  }
-  .navigation {
-    font-size: 14px;
   }
   .header_opened__lang {
     display: none;
@@ -1560,7 +1564,6 @@ h4 {
   }
   .footer__bottom {
     flex-direction: column;
-    align-items: center;
     color: #848383;
   }
   .popup_contact__title {
@@ -1583,7 +1586,8 @@ h4 {
     height: 150px;
     padding: 10px;
   }
-  .card__title, .category__pagination, .breadcrumb__list {
+  .card__title, .category__pagination, .breadcrumb__list,
+   .navigation, .catalog__column li {
     font-size: 14px;
   }
   .category__pagination {
@@ -1643,6 +1647,16 @@ h4 {
   .form__label {
     font-size: 14px;
     margin-bottom: 4px;
+  }
+  .footer__catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer__title, .footer .catalog__column:last-child {
+    grid-column: unset;
+  }
+  .catalog__column h4 {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 480px) {
