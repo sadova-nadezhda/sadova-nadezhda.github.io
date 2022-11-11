@@ -1343,6 +1343,24 @@ h4 {
   .card__title {
     font-size: 20px;
   }
+  .form__name::before, .form__phone::before {
+    bottom: 0;
+  }
+  .form__input {
+    padding: 5px 25px 5px 60px;
+  }
+  .popup__container {
+    padding: 40px;
+  }
+  .popup__title, .popup__txt {
+    margin-bottom: 10px;
+  }
+  .form__comment {
+    height: 90px;
+  }
+  .popup__container {
+    width: 500px;
+  }
 }
 @media (max-width: 1200px) {
   .furniture, .about, .steps, .insta, .category, .request, .ctg-inner, .contact {
