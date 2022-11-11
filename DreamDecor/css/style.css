@@ -1284,7 +1284,7 @@ h4 {
     padding: 20px;
   }
   .steps__item {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   .steps__img::after {
     content: url(../img/Arrow-small.svg);
