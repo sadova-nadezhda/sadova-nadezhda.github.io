@@ -400,7 +400,11 @@ h4 {
 }
 /*--------------- Start Slider --------------*/
 /*arrow*/
-.slick_next, .slick_prev {
+.slick_arrow {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
   border-radius: 100%;
