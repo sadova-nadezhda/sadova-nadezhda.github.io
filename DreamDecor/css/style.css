@@ -264,6 +264,7 @@ h4 {
   max-width: max-content;
   padding: 10px 35px;
   background-color: #010101;
+  border: 1px solid #010101;
   color: #fff;
   line-height: 1.8em;
   font-weight: 500;
@@ -272,8 +273,12 @@ h4 {
 }
 .button:hover {
   background-color: #D69E57;
+  border: 1px solid #D69E57;
   color: #010101;
   cursor: pointer;
+}
+button:focus {
+  outline: none;
 }
 
 
@@ -758,6 +763,7 @@ h4 {
   height: 145px;
   width: 100%;
   resize: none;
+  padding: 10px 25px;
 }
 .form__button {
   width: 100%;
@@ -1362,7 +1368,10 @@ h4 {
     bottom: 0;
   }
   .form__input {
-    padding: 5px 25px 5px 60px;
+    padding: 5px 20px 5px 60px;
+  }
+  .form__comment {
+    padding: 5px 20px;
   }
   .popup__container {
     padding: 40px;
