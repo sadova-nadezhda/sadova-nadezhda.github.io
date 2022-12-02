@@ -78,6 +78,22 @@ function closePopup(e) {
   }
 }
 
+// /*marquee*/
+// $('.marquee').marquee({
+//   direction: 'left',
+//   speed: 100,
+//   duplicated: true
+// })
+
+
+
+
+
+
+
+
+
+
 
 // Form
 function submitForm() {

@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main page</title>
-  <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css?v=0">
 </head>
@@ -87,51 +86,104 @@
   </div>
 
   <header class="header">
-    <div class="container">
-      <div class="header__container">
-        <a href="#" class="header__logo">
-          <img src="">
-        </a>   
+      <div class="header__container"> 
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__list__item">Главная</li>
-            <li class="header__list__item">Новости</li>
-            <li class="header__list__item">О нас</li>
-            <li class="header__list__item">Контакт</li>
+            <li class="header__list__item"><a href="#about">About me</a></li>
+            <li class="header__list__item"><a href="#portfolio">Portfolio</a></li>
+            <li class="header__list__item"><a href="#">Skills</a></li>
+            <li class="header__list__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        <div class="header__social">
+          <a href="#" target="_blank" class="social__item whatsapp">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2_26)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3156 3.63333C18.976 1.29167 15.8656 0.00104167 12.552 0C5.72391 0 0.166618 5.55625 0.163493 12.3875C0.162451 14.5708 0.733284 16.7021 1.81766 18.5812L0.0593262 25L6.62599 23.2771C8.43537 24.2646 10.4729 24.7844 12.5458 24.7854H12.551C19.3781 24.7854 24.9364 19.2281 24.9395 12.3969C24.9416 9.0875 23.6541 5.97396 21.3156 3.63333ZM12.552 22.6927H12.5479C10.7 22.6927 8.88849 22.1958 7.30724 21.2573L6.9312 21.0344L3.03433 22.0562L4.07495 18.2562L3.83016 17.8667C2.79891 16.2271 2.25516 14.3323 2.2562 12.3875C2.25828 6.71042 6.87808 2.09167 12.5572 2.09167C15.3072 2.09167 17.8927 3.16458 19.8364 5.11042C21.7802 7.05729 22.85 9.64375 22.8489 12.3948C22.8458 18.074 18.227 22.6927 12.552 22.6927ZM18.2 14.9812C17.8906 14.826 16.3687 14.0771 16.0843 13.974C15.801 13.8708 15.5947 13.8187 15.3875 14.1281C15.1802 14.4375 14.5885 15.1354 14.4072 15.3427C14.227 15.549 14.0458 15.575 13.7364 15.4198C13.427 15.2646 12.4291 14.9385 11.2468 13.8833C10.327 13.0625 9.70516 12.049 9.52495 11.7385C9.34474 11.4281 9.5062 11.2615 9.66037 11.1073C9.79995 10.9688 9.96974 10.7458 10.125 10.5646C10.2812 10.3854 10.3322 10.2563 10.4364 10.049C10.5395 9.84271 10.4885 9.66146 10.4104 9.50625C10.3322 9.35208 9.71349 7.82812 9.4562 7.20833C9.20516 6.60417 8.94995 6.68646 8.75933 6.67708C8.57912 6.66771 8.37287 6.66667 8.16558 6.66667C7.95933 6.66667 7.62391 6.74375 7.34058 7.05417C7.05724 7.36458 6.25724 8.11354 6.25724 9.63646C6.25724 11.1604 7.36662 12.6323 7.52078 12.8385C7.67495 13.0448 9.70308 16.1719 12.8083 17.5125C13.5468 17.8312 14.1239 18.0219 14.5729 18.1646C15.3145 18.4 15.9895 18.3667 16.5229 18.2875C17.1177 18.199 18.3541 17.5385 18.6125 16.8156C18.8708 16.0927 18.8708 15.4719 18.7927 15.3437C18.7156 15.2135 18.5093 15.1365 18.2 14.9812Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2_26">
+              <rect width="25" height="25" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>              
+          </a>
+          <a href="#" target="_blank" class="social__item telegram">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_24)">
+            <path d="M24.0795 0.918129C23.706 0.540137 23.2414 0.264853 22.7305 0.118875C22.2196 -0.027103 21.6796 -0.0388409 21.1628 0.0847954L4.49617 3.59521C3.53636 3.72684 2.63235 4.12383 1.88597 4.74148C1.13958 5.35912 0.580456 6.17288 0.271562 7.09111C-0.0373318 8.00935 -0.0837272 8.99559 0.137601 9.93877C0.358929 10.882 0.839189 11.7446 1.5243 12.4296L3.31388 14.2181C3.41074 14.315 3.48755 14.4299 3.53992 14.5565C3.59229 14.683 3.6192 14.8187 3.61909 14.9556V18.2556C3.62139 18.7196 3.7282 19.1771 3.93159 19.5942L3.92326 19.6015L3.95034 19.6285C4.25556 20.2422 4.75407 20.7385 5.36909 21.041L5.39617 21.0681L5.40346 21.0598C5.82051 21.2632 6.27802 21.37 6.74201 21.3723H10.042C10.3181 21.3721 10.583 21.4815 10.7785 21.6765L12.567 23.465C13.0467 23.95 13.6177 24.3353 14.247 24.5987C14.8763 24.862 15.5515 24.9982 16.2337 24.9994C16.8022 24.9987 17.3668 24.9058 17.9055 24.7244C18.8154 24.4256 19.6236 23.8786 20.2391 23.1449C20.8546 22.4113 21.2528 21.5202 21.3889 20.5723L24.9045 3.86917C25.0346 3.34796 25.0269 2.8019 24.8823 2.28455C24.7376 1.7672 24.461 1.29633 24.0795 0.918129ZM4.78888 12.7473L2.99826 10.9588C2.5813 10.5518 2.28906 10.0344 2.15584 9.46725C2.02263 8.90007 2.05396 8.30666 2.24617 7.75667C2.43252 7.19242 2.77701 6.69357 3.23867 6.31944C3.70033 5.94532 4.25973 5.71166 4.85034 5.64625L21.3514 2.1723L5.70034 17.8254V14.9556C5.70192 14.5456 5.62217 14.1393 5.46573 13.7602C5.30928 13.3811 5.07923 13.0369 4.78888 12.7473ZM19.342 20.216C19.262 20.7914 19.0233 21.3331 18.6525 21.7803C18.2818 22.2274 17.7937 22.5624 17.2432 22.7477C16.6926 22.9329 16.1013 22.961 15.5357 22.8288C14.97 22.6966 14.4524 22.4094 14.041 21.9994L12.2493 20.2077C11.9601 19.9169 11.6161 19.6864 11.2372 19.5294C10.8584 19.3724 10.4521 19.2921 10.042 19.2931H7.17221L22.8253 3.64521L19.342 20.216Z" fill="black"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2_24">
+            <rect width="25" height="25" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="social__item google">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_25)">
+            <path d="M12.9989 14.8594V11.4437H24.5083C24.6208 12.0385 24.6791 12.7427 24.6791 13.5052C24.6791 16.0677 23.9791 19.2365 21.7208 21.4937C19.525 23.7802 16.7198 25 13.0031 25C6.11351 25 0.320801 19.3885 0.320801 12.5C0.320801 5.61146 6.11351 0 13.0031 0C16.8146 0 19.5291 1.49583 21.5687 3.44479L19.1583 5.85417C17.6958 4.48229 15.7135 3.41562 12.9989 3.41562C7.96872 3.41562 4.03434 7.46979 4.03434 12.5C4.03434 17.5302 7.96872 21.5844 12.9989 21.5844C16.2614 21.5844 18.1198 20.274 19.3104 19.0833C20.276 18.1177 20.9114 16.7385 21.1614 14.8552L12.9989 14.8594Z" fill="black"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2_25">
+            <rect width="25" height="25" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>              
+          </a>
+        </div>
         <div class="header__icon">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="container"></div>
+    <section id="developer" class="section developer">
+      <div class="container">
+        <div class="developer__container">
+          <div class="developer__description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+          <h1 class="developer__title caption">I am Front-end</h1>
+          <marquee class="developer__ticker">Developer Developer Developer</marquee>
+        </div>
+      </div>
     </section>
-    <section>
-      <div class="container"></div>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about__container">
+
+        </div>
+      </div>
     </section>
-    <section>
-      <div class="container"></div>
+
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <div class="portfolio__container">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact__container">
+
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__container"></div>
-    </div>
-  </footer>
-
-
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.marquee.min.js"></script>
   <script src="js/script.js?v=0"></script>
 
 </body>

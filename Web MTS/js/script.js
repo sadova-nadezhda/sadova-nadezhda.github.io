@@ -472,9 +472,11 @@ if(product){
 //   {id:3, name:"ТОО «Mirai Qazaqstan» в интересах своих клиентов государственных организаций объявляет о закупе ГСМ - с 24 октября 2022 г.", dob:"07.10.2022"},
 // ];
 var tableData2 = [
-  {id:1, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"07.10.2022"},
-  {id:2, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2711043.00	",  dob:"07.10.2022"},
-  {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2001533.00	",  dob:"07.10.2022"},
+  {id:1, standart:"СТАНД001016", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"-", price:"2 711 043.00	",  dob:"01.11.2022 16:00",  dod:"01.11.2022 16:00"},
+  {id:2, standart:"СТАНД001017", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"", price:"2711043.00	",  dob:"07.11.2022 12:30",  dod:"07.11.2022 12:30"},
+  {id:5, standart:"СТАНД001018", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"", price:"2711043.00	",  dob:"07.01.2022 12:00",  dod:"07.01.2022 12:00"},
+  {id:3, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"", price:"2001533.00	",  dob:"01.12.2022 11:00",  dod:"01.12.2022 12:00"},
+  {id:4, standart:"СТАНД001019", rezim:"На понижение	", stat:"Завершен", lot:"Запасные части	", init:"AO AltynEx Company", add:"РК, 030713, Актюбинская область, Мугалжарский район, село Алтынды ИИК: KZ5884904KZ002286848 БИК: NURSKZKX Банк: Актюбинский филиал АО НУРБАНК", doc:"../img/facebook.svg", price:"2001533.00	",  dob:"01.12.2022 12:10",  dod:"01.12.2022 12:10"},
 ];
 
   tableData2.forEach(function(elem) {
@@ -495,11 +497,45 @@ var tableColumns2 = [
   {title:"Наименование лота аукциона", field:"lot"},
   {title:"Инициатор аукциона", field:"init"},
   {title:"Фактический адрес и банковские реквизиты", field:"add"},
-  {title:"Документы к аукциону (ТЗ, шаблон договора, прочее)", field:"doc"},
+  // {title:"Документы к аукциону (ТЗ, шаблон договора, прочее)", field:"doc", formatter : "link" , 
+  // formatterParams : { 
+  //   label: "файл" , 
+  //   urlPrefix : "mailto://" , 
+  //   urlField : 'doc',
+  //   target : "_blank" 
+  // }
+  // },
+  {title:"Документы к аукциону (ТЗ, шаблон договора, прочее)", field:"doc", formatter : "LinksFormat" , formatterParams : { 
+    urlField : 'doc'
+  }
+  },
   {title:"Стартовая цена лота", field:"price" },
-  {title:"Date", field:"dob", maxWidth: 200 },
+  {title:"Date", field:"dob", maxWidth: 200, sorter:"datetime", sorterParams:{
+    format:"dd.MM.yyyy HH:mm",
+    alignEmptyValues:"top",
+  } },
+  {title:"Date2", field:"dod", maxWidth: 200, sorter:"datetime", sorterParams:{
+    format:"dd.MM.yyyy HH:mm",
+    alignEmptyValues:"top",
+  }  },
 ];
 
+Tabulator.extendModule("format", "formatters", {
+  LinksFormat:function(cell, formatterParams){
+      let link = cell.getValue();
+      if(link == '' || link == 'null') {
+        return '-';
+      } else {
+        return '<a href="'+link+'" target="_blank">' + 'файл' + '</a>';
+      }
+  },
+
+}); 
+
+// {title:"Date", field:"dob", maxWidth: 200 , sorter:"datetime", sorterParams:{
+//   format:"yyyy-MM-dd HH:mm",
+//   alignEmptyValues:"top",
+// } },
 // let sended = false;
 
 // let tabulator = document.querySelector('#example-table');
@@ -556,6 +592,7 @@ var tableColumns2 = [
 
 
 var table2 = new Tabulator("#example-table", {
+  addRowPos : "top" ,
   data: tableData2,
   columns: tableColumns2,
   columnDefaults:{
@@ -596,5 +633,6 @@ var table2 = new Tabulator("#example-table", {
   paginationCounter:"rows",
   layout:"fitColumns",
   movableColumns: true,
+  tooltip : true ,
 });
 
