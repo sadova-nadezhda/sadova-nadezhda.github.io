@@ -274,14 +274,19 @@ h2  {
 .about__list::after{
   position: absolute;
   top: 100%;
-  left: 50%;
-  content: url(../img/stars-1.svg);
+  left: 45%;
+  content: '';
   display: block;
+  width: 140px;
+  height: 112px;
+  background: url(../img/stars-1.svg) center no-repeat;
+  background-size: contain;
   transform: translateX(-50%);
-
 }
 .list__item {
   position: absolute;
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: max-content;
   padding: 20px 40px;
@@ -305,6 +310,9 @@ h2  {
   background-color: #96E1D6;
   transform: rotate(3deg);
 }
+.list__item svg {
+  margin-right: 20px;
+}
 /*----- end section About -----*/
 
 /*----- start section Levels -----*/
@@ -315,7 +323,7 @@ h2  {
   gap: 40px;
   padding: 100px 50px;
   border-radius: 50px;
-  background: #DDD6FD;
+  background: url(../img/back-2.png) #DDD6FD center no-repeat;
   background-size: cover;
 }
 .levels__title {
@@ -341,14 +349,19 @@ h2  {
 .levels__list li {
   position: relative;
   padding-left: 60px;
+  line-height: 1.4em;
 }
 .levels__list li::before {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
-  content: url(../img/start-list.png);
+  content: '';
+  width: 40px;
+  height: 40px;
   vertical-align: middle;
+  background: url(../img/star-list.svg) center no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
 }
 .levels__img {
   position: relative;
@@ -410,6 +423,9 @@ h2  {
   h1 {
     font-size: 80px;
   }
+  h2  {
+    font-size: 40px;
+  }
   .school__title span {
     font-size: 36px;
     line-height: 1.1em;
@@ -425,6 +441,35 @@ h2  {
     width: 560px;
     height: 600px;
   }
+  .about__text, .levels__list {
+    font-size: 22px;
+  }
+  .about__img {
+    width: 590px;
+    height: 580px;
+  }
+  .about__list, .levels__text {
+    font-size: 24px;
+  }
+  .about__container, .levels__container {
+    padding: 80px 40px;
+  }
+  .about__list::after{
+    top: 90%;
+    width: 100px;
+    height: 80px;
+  }
+  .list__item  {
+    padding: 16px 30px;
+  }
+  .levels__list {
+    gap: 15px 100px;
+  }
+  .levels__list li::before {
+    width: 35px;
+    height: 35px;
+  }
+
 }
 @media (max-width: 1440px) {
   .header__logo {
@@ -446,8 +491,12 @@ h2  {
   h1 {
     font-size: 70px;
   }
+  h2  {
+    font-size: 32px;
+  }
   .school {
     padding-top: 180px;
+    padding-bottom: 300px;
   }
   .school__title {
     margin-bottom: 30px;
@@ -459,8 +508,57 @@ h2  {
     margin-bottom: 40px;
     font-size: 22px;
   }
-  .school__social {
+  .school__social, .about__text {
     font-size: 20px;
+  }
+  .about__container {
+    margin-top: -200px;
+  }
+  .about__img {
+    width: 490px;
+    height: 480px;
+  }
+  .about__text {
+    margin-bottom: 60px;
+  }
+  .about__list {
+    height: 150px;
+    max-width: unset;
+  }
+  .about__list::after{
+    top: 100%;
+    width: 80px;
+    height: 60px;
+  }
+  .list__item  {
+    padding: 12px 24px;
+  }
+  .exams {
+    transform: translateX(-50%) rotate(3deg);
+  }
+  .works {
+    transform: rotate(-4deg);
+  }
+  .travels {
+    transform: rotate(1deg);
+  }
+  .levels__img {
+    width: 312px;
+    height: 337px;
+  }
+  .levels__text {
+    font-size: 22px;
+  }
+  .levels__list {
+    font-size: 18px;
+    gap: 15px 50px;
+  }
+  .levels__list li {
+    padding-left: 45px;
+  }
+  .levels__list li::before {
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 1350px) {
@@ -502,6 +600,7 @@ h2  {
   }
   .school {
     padding-top: 140px;
+    padding-bottom: 180px;
   }
   .school__images::before, .school__images::after {
     width: 90px;
@@ -514,6 +613,43 @@ h2  {
     width: 28px;
     height: 28px;
   }
+  .school__social, .about__text, .levels__text {
+    font-size: 18px;
+  }
+  .about__list {
+    height: unset;
+  }
+  .list__item {
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: translateX(0) rotate(0);
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .list__item:last-of-type {
+    margin-bottom: 0;
+  }
+  .list__item svg {
+    width: 25px;
+    height: 25px;
+  }
+  .about__container {
+    margin-top: -100px;
+  }
+  .about__list::after {
+    left: 90%;
+  }
+  .about__img {
+    width: 100%;
+    height: unset;
+  }
+  .about__title, .levels__title {
+    margin-bottom: 30px;
+  }
+  .about__text {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 1100px) {
   .header__lang-switch {
@@ -524,6 +660,9 @@ h2  {
   }
   h1 {
     font-size: 50px;
+  }
+  h2 {
+    font-size: 28px;
   }
   .school__title span {
     font-size: 22px;
@@ -558,6 +697,9 @@ h2  {
   h1 {
     font-size: 40px;
   }
+  h2 {
+    font-size: 24px;
+  }
   .button {
     padding: 12px 20px;
     font-size: 14px;
@@ -568,6 +710,29 @@ h2  {
   .school__text {
     font-size: 16px;
   }
+  .about__container, .levels__container {
+    grid-template-columns: 1fr;
+  }
+  .levels__content {
+    order: 1;
+  }
+  .about__container, .levels__container {
+    padding: 40px;
+  }
+  .about__list::after {
+    top: unset;
+    bottom: 0;
+  }
+  .levels__img {
+    width: 80%;
+    height: 320px;
+  }
+  .about__img {
+    height: 320px;
+  }
+  .about__img img {
+    object-fit: contain;
+  }
 }
 @media (max-width: 810px) {
   .header__button {
@@ -575,6 +740,9 @@ h2  {
   }
 }
 @media (max-width: 768px) {
+  .school {
+    padding-bottom: 150px;
+  }
   .school__text {
     max-width: 400px;
   }
@@ -592,6 +760,24 @@ h2  {
   .image__girl {
     width: 220px;
     height: 250px;
+  }
+  .school__title, .about__title, .levels__title {
+    margin-bottom: 20px;
+  }
+  .school__text, .about__text, .levels__list {
+    margin-bottom: 30px;
+  }
+  .about__list::after {
+    content: none;
+  }
+  .about__container, .levels__container {
+    padding: 30px;
+  }
+  .school__social, .about__text, .levels__text, .levels__list {
+    font-size: 16px;
+  }
+  .list__item {
+    border-radius: 10px;
   }
 }
 @media (max-width: 640px) {
@@ -630,6 +816,9 @@ h2  {
   h1 {
     font-size: 30px;
   }
+  h2 {
+    font-size: 22px;
+  }
   .school__title span {
     font-size: 16px;
   }
@@ -646,6 +835,17 @@ h2  {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .list__item {
+    width: 100%;
+    max-width: unset;
+  }
+  .levels__list {
+    gap: 15px;
+  }
+  .about__container, .levels__container {
+    padding: 20px;
+    border-radius: 30px;
+  }
 }
 @media (max-width: 480px) {
   .nav__list {
@@ -653,6 +853,9 @@ h2  {
   }
   .nav__list li {
     margin-right: 15px;
+  }
+  .levels__list {
+    grid-template-columns: 1fr;
   }
 }
 /*------ end Responsive ------*/
