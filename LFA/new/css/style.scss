@@ -1,0 +1,836 @@
+html {
+  font-size: 24px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  transition: all 0.3s linear;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7px);
+  border-radius: 0px 0px 2rem 2rem;
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.6rem 0;
+    transition: all 0.3s ease;
+  }
+  &__logo {
+    width: 5%;
+    height: 5%;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__items {
+    display: flex;
+    align-items: center;  
+  }
+  &__lang-switch {
+    display: flex;  
+    font-size: 0.92em;
+    li {
+      margin-right: 3px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      padding: 0.6rem;
+      border-radius: 100%;
+      transition: all 0.3s ease;
+      &.active {
+        background-color: #FFDF5C;
+        pointer-events: none;
+      }
+      &:hover {
+        color: #7FD856;
+      }
+    }
+  }
+  &__button {
+    margin-right: 1.25rem;
+  }
+  &__burger {
+    position: relative;
+    display: none;
+    width: 1.75%;
+    height: 1.5%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    span {
+      position: absolute;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: #000;
+      border-radius: 0.4rem;
+      opacity: 1;
+      transition: all 0.3s ease;
+      transform-origin: left center;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 0.3rem;
+      }
+      &:nth-child(3) {
+        top: 0.6rem;
+      }
+    }
+  }
+}
+.nav__list {
+  display: flex;
+  font: 0.92em/1 'Nunito';
+  li {
+    margin-right: 3rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    transition: all 0.3s ease;
+    &:hover {
+      color: #FFDF5C;
+    }
+  }
+}
+.button {
+  display: block;
+  width: max-content;
+  padding: 0.8rem 1.25rem;
+  background-color: #7FD856;
+  border: none;
+  border-radius: 1.25rem;
+  font: 0.92em/1 'Nunito';
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #FFDF5C;
+  }
+}
+h1 {
+  font: 800 4.5em/1.1 'Nunito';
+}
+h2 {
+  font: 700 2em/1.1 'Nunito';
+  text-transform: uppercase;
+}
+
+/*----- start section School -----*/
+.school {
+  padding-top: 9.1rem;
+  padding-bottom: 16.6rem;
+  background: url('../img/bg-home-desktop.png') #fff center no-repeat;
+  background-size: cover;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+  &__title {
+    margin-bottom: 1.6rem;
+    span {
+      display: block;
+      max-width: 70%;
+      font: bold 0.4em/1 'Nunito';
+      text-transform: uppercase;
+    }
+  }
+  &__text {
+    max-width: 80%;
+    margin-bottom: 2.5rem;
+    font-size: 1.25em;
+    line-height: 1.3em;
+  }
+  &__images {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: -5%;
+      left: 10%;
+      content: '';
+      width: 140px;
+      height: 120px;
+      background: url(../img/stars-1.svg) center no-repeat;
+      background-size: contain;
+    }
+    &::after {
+      position: absolute;
+      bottom: -5%;
+      right: -5%;
+      content: '';
+      width: 140px;
+      height: 120px;
+      background: url(../img/stars-2.svg) center no-repeat;
+      background-size: contain;
+    }
+    .icon {
+      position: absolute;
+      width: 18%;
+      height: 13%;
+      padding: 0.75rem 0.875rem;
+      border-radius: 0.8rem;
+      box-shadow: 0px 0px 20px rgba(36, 65, 100, 0.1);
+      background-color: #fff;
+      z-index: 2;
+      &_ielts {
+        top: 20%;
+        left: 5%;
+        transform: rotate(9deg);
+      }
+      &_en {
+        top: 60%;
+        left: 0;
+        transform: translateY(-50%) rotate(-16deg);
+      }
+      &_ch {
+        top: 20%;
+        right: 5%;
+        transform: rotate(-24deg);
+      }
+      &_tr {
+        bottom: 0;
+        left: 15%;
+        transform: rotate(-9deg);
+      }
+      &_kz {
+        top: 60%;
+        right: 0;
+        transform: translateY(-50%) rotate(10deg);
+      }
+      &_ko {
+        bottom: 0;
+        right: 15%;
+        transform: rotate(20deg);
+      }
+      img {
+        object-fit: contain;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%; 
+      bottom: 0;
+      transform: translateX(-50%);
+      display: block;
+      width: 630px;
+      height: 630px;
+      background-color: #FFDF5C;
+      border-radius: 100%;
+    }
+    &_girl {
+      position: relative;
+      width: 660px;
+      height: 700px;
+      margin: 0 auto;
+      z-index: 2;
+      img {
+        object-fit: contain;
+        border-radius: 0 0 100% 100%;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    font-size: 0.92em;
+    a {
+      margin-right: 0.8rem;
+      line-height: 1;
+    }
+    svg {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+/*----- end section School -----*/
+
+/*----- start section About -----*/
+.about {
+  padding-bottom: 2rem;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.6rem;
+    padding: 4rem 2rem;
+    margin-top: -12.5rem;
+    border-radius: 2rem;
+    background: url(../img/back-1.png) #fff center no-repeat;
+    background-size: cover;
+  }
+  &__img {
+    width: 790px;
+    height: 780px;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__title {
+    margin-bottom: 1.6rem;
+
+  }
+  &__text {
+    margin-bottom: 3.3rem;
+    p {
+      margin-bottom: 0.8rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__list {
+    position: relative;
+    height: 220px;
+    max-width: 90%;
+    font-size: 1.25em;
+    &::after{
+      position: absolute;
+      top: 100%;
+      left: 45%;
+      content: '';
+      display: block;
+      width: 140px;
+      height: 112px;
+      background: url(../img/stars-1.svg) center no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+    }
+
+  }
+}
+.list__item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: max-content;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  svg {
+    margin-right: 0.8rem;
+  }
+}
+.exams {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+  background-color: #FFDF5C;
+}
+.works {
+  left: 0;
+  bottom: 0;
+  background-color: #DDD6FD;
+  transform: rotate(-7deg);
+
+}
+.travels {
+  right: 0;
+  bottom: 0;
+  background-color: #96E1D6;
+  transform: rotate(3deg);
+}
+/*----- end section About -----*/
+
+/*----- start section Levels -----*/
+.levels {
+  padding-bottom: 50px;
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.6rem;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    background: url(../img/back-2.png) #DDD6FD center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      top: -3%;
+      right: -8%;
+      content: "";
+      width: 50%;
+      height: 130%;
+      background: url(../img/back-3.png) center no-repeat;
+      background-size: contain;
+      z-index: 1;
+    }
+  }
+  &__title {
+    margin-bottom: 1.6rem;
+  }
+  &__text {
+    margin-bottom: 1rem;
+    font-size: 1.25em;
+    p {
+      margin-bottom: 0.8rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    gap: 0.6rem 6.25rem;
+    margin-bottom: 1.8rem;
+    li {
+      position: relative;
+      padding-left: 2.5rem;
+      line-height: 1.4em;
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        content: '';
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        background: url(../img/star-list.svg) center no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    width: 412px;
+    height: 437px;
+    margin-left: auto;
+    margin-right: 100px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #FFDF5C;
+      border-radius: 0.8rem;
+    }
+    img {
+      position: relative;
+      border-radius: 0.8rem;
+      z-index: 1;
+    }
+  }
+  &__button {
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 105%;
+      content: url(../img/back-4.png);
+    }
+  }
+}
+/*----- end section Levels -----*/
+
+/*------ start Responsive ------*/
+@media (max-width: 1800px) {
+
+}
+@media (max-width: 1600px) {
+  h1, h2 {
+    font-size: 1.6em;
+  }
+  .school{
+    &__text {
+      font-size: 1em;
+    }
+    &__img {
+      &_girl {
+        width: 560px;
+        height: 600px;
+      }
+      &::before {
+        width: 530px;
+        height: 530px;
+      }
+    }
+  }
+  .about {
+    &__img {
+      width: 590px;
+      height: 580px;
+    }
+    &__list{
+      max-width: unset;
+      &::after {
+        top: 90%;
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
+  .levels {
+    &__list {
+      gap: 0.6rem 4rem;
+      li::before {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  .school {
+    padding-top: 8rem;
+    padding-bottom: 13.6rem;
+  }
+  .about {
+    &__container {
+      margin-top: -9rem;
+    }
+    &__img {
+      width: 490px;
+      height: 480px;
+    }
+    &__text {
+      margin-bottom: 2.7rem;
+    }
+    &__list {
+      height: 150px;
+      &::after {
+        top: 100%;
+        width: 80px;
+        height: 60px;
+      }
+    }
+  }
+  .list__item {
+    padding: 0.5rem 1.1rem;
+  }
+  .exams {
+    transform: translateX(-50%) rotate(3deg);
+  }
+  .works {
+    transform: rotate(-4deg);
+  }
+  .travels {
+    transform: rotate(1deg);
+  }
+  .levels {
+    &__img {
+      width: 312px;
+      height: 337px;
+    }
+    &__text {
+      font-size: 1em;
+    }
+    &__list {
+      gap: 0.7rem 4.5rem;
+      li {
+        padding-left: 2rem;
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1350px) {
+  html {
+    font-size: 20px;
+  }
+  .header {
+    &__button {
+      display: none;
+    }
+  }
+  .school {
+    &__title  {
+      span {
+      }
+    }
+    &__text {
+      font-size: 1em;
+    }
+    &__images {
+      &::before {
+        width: 100px;
+        height: 90px;
+      }
+      &::after{
+        width: 100px;
+        height: 90px;
+      }
+    }
+    &__img {
+      &_girl {
+        width: 460px;
+        height: 500px;
+      }
+      &::before {
+        width: 430px;
+        height: 430px;
+      }
+    }
+    &__social {
+      font-size:0.9em;
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .nav {
+    &__list {
+      li {
+        margin-right: 1rem;
+      }
+    }
+  }
+  .button {
+    padding: 0.7rem 1rem;
+  }
+  .school {
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    &__images {
+      &::before {
+        width: 90px;
+        height: 80px;
+      }
+      &::after{
+        width: 90px;
+        height: 80px;
+      }
+    }
+    &__social {
+      font-size: 0.9em;
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+  .about {
+    &__container {
+      margin-top: -5rem;
+    }
+    &__img {
+      width: 100%;
+      height: unset;
+    }
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+    &__text {
+      margin-bottom: 2rem;
+    }
+    &__list{
+      height: unset;
+      &::after {
+        left: 90%;
+      }
+    }
+  }
+  .list__item {
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: translateX(0) rotate(0);
+    margin-bottom: 1rem;
+    font-size: 1em;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .header {
+    &__lang-switch {
+      font-size: 0.8em;
+    }
+  }
+  .button {
+    font-size: 0.8em;
+  }
+  .school {
+    &__title {
+      span {
+        max-width: 320px;
+      }
+    }
+    &__text {
+      font-size: 0.9em;
+    }
+    &__img {
+      _girl {
+        width: 360px;
+        height: 400px;
+      }
+      &::before {
+        width: 330px;
+        height: 330px;
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 18px;
+  }
+  .header {
+    &__lang-switch {
+      font-size: 0.7em;
+      a {
+        padding: 0.5rem 0.6rem;
+      }
+    }
+  }
+  .button {
+    font-size: 0.7em;
+    padding: 0.6rem 1.1rem;
+  }
+  .school {
+    &__title {
+      span {
+
+      }
+    }
+    &__text {
+      font-size: 0.8em;
+    }
+  }
+  .about {
+    &__container {
+      grid-template-columns: 1fr;
+      padding: 2.2rem;
+    }
+    &__list::after {
+      top: unset;
+      bottom: 0;
+    }
+    &__img {
+      height: 320px;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  .levels {
+    &__container {
+      grid-template-columns: 1fr;
+      padding: 2.2rem;
+    }
+    &__content {
+      order: 1;
+    }
+    &__img {
+      width: 80%;
+      height: 320px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  .school {
+    padding-bottom: 9.4rem;
+    &__title {
+      margin-bottom: 1.25rem;
+    }
+    &__text {
+      max-width: 400px;
+      margin-bottom: 1.8rem;
+    }
+    &__images {
+      &::before {
+        left: 0;
+        width: 60px;
+        height: 40px;
+      }
+      &::after {
+        width: 60px;
+        height: 40px;
+      }
+    }
+    &__img {
+      &_girl {
+        width: 220px;
+        height: 250px;
+      }
+      &::before {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &__social {
+      font-size: 1em;
+    }
+  }
+  .about {
+    &__container {
+      padding: 1.8rem;
+    }
+    &__title {
+      margin-bottom: 1.25rem;
+    }
+    &__text {
+      margin-bottom: 1.8rem;
+      font-size: 1em;
+    }
+    &__list {
+      ::after {
+        content: none;
+      }
+    }
+  }
+  .levels {
+    &__container {
+      padding: 1.8rem;
+    }
+    &__title {
+      margin-bottom: 1.25rem;
+    }
+    &__text {
+      margin-bottom: 1.8rem;
+      font-size: 1em;
+    }
+    &__list {
+      font-size: 1em;
+    }
+  }
+  .list__item {
+    border-radius: 10px;
+  }
+}
+/*------ end Responsive ------*/
