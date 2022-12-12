@@ -2,6 +2,11 @@ html {
   font-size: 24px;
 }
 
+body {
+  background: url(../img/bg-home.png) top center no-repeat;
+  background-size: cover;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -132,8 +137,6 @@ h2 {
 .school {
   padding-top: 9.1rem;
   padding-bottom: 16.6rem;
-  background: url("../img/bg-home-desktop.png") #fff center no-repeat;
-  background-size: cover;
 }
 .school__content {
   display: grid;
@@ -162,8 +165,8 @@ h2 {
 }
 .school__images::before {
   position: absolute;
-  top: -5%;
-  left: 10%;
+  top: -10%;
+  left: 13%;
   content: "";
   width: 140px;
   height: 120px;
@@ -182,9 +185,9 @@ h2 {
 }
 .school__images .icon {
   position: absolute;
-  width: 18%;
+  width: 17%;
   height: 13%;
-  padding: 0.75rem 0.875rem;
+  padding: 0.7rem 0.8rem;
   border-radius: 0.8rem;
   box-shadow: 0px 0px 20px rgba(36, 65, 100, 0.1);
   background-color: #fff;
@@ -359,9 +362,6 @@ h2 {
 
 /*----- end section About -----*/
 /*----- start section Levels -----*/
-.levels {
-  padding-bottom: 50px;
-}
 .levels__container {
   position: relative;
   display: grid;
@@ -454,6 +454,199 @@ h2 {
 }
 
 /*----- end section Levels -----*/
+/*----- start section Services -----*/
+.services {
+  padding: 3rem 0;
+}
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.services__title {
+  margin-bottom: 1.6rem;
+}
+.services__text {
+  margin-bottom: 3.75rem;
+}
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.6rem;
+  column-gap: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+.services__list li {
+  display: flex;
+  align-items: center;
+}
+.services__list img {
+  width: 80px;
+  height: 52px;
+  margin-right: 1.25rem;
+}
+.services__reviews {
+  display: grid;
+  gap: 1rem;
+}
+.services__reviews a {
+  display: flex;
+  align-items: center;
+}
+.services__reviews svg {
+  margin-right: 1.25rem;
+}
+.services__images {
+  align-self: center;
+  width: 100%;
+  height: 80%;
+}
+.services__images img {
+  object-fit: contain;
+}
+
+/*----- end section Services -----*/
+/*----- start section Teams -----*/
+.team {
+  padding: 3rem 0;
+  padding-top: 13rem;
+}
+.team__container {
+  padding: 4rem;
+  margin-bottom: 4rem;
+  background: linear-gradient(90deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 86.75%);
+  border-radius: 2rem;
+}
+.team__title {
+  margin-bottom: 2rem;
+}
+.team__text {
+  max-width: 50%;
+  margin-bottom: 3.75rem;
+}
+.team__slider {
+  width: 94vw;
+}
+.team__card {
+  padding: 1.3rem;
+  margin-right: 0.8rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+.team__card .card__img {
+  width: 323px;
+  height: 323px;
+  margin-bottom: 1.6rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.team__card .card__title {
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.team__card .card__text {
+  font-size: 0.8em;
+  text-align: center;
+}
+.team__workout {
+  display: grid;
+  justify-items: center;
+  gap: 1.4rem;
+}
+.team .slick-slide {
+  width: 20vw !important;
+}
+
+/*----- end section Teams -----*/
+/*----- start section Partners -----*/
+.partners {
+  padding-top: 3rem;
+  padding-bottom: 6.25rem;
+}
+.partners__title {
+  margin-bottom: 1.6rem;
+}
+.partners__text {
+  max-width: 50%;
+  margin-bottom: 2.2rem;
+  font-size: 1.25em;
+}
+.partners__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.8rem;
+}
+.partners__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 268px;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+.partners__card img {
+  max-height: 160px;
+  object-fit: contain;
+}
+
+/*----- end section Partners -----*/
+/*----- start section Footer -----*/
+.footer__container {
+  display: grid;
+  gap: 4rem;
+  padding: 4rem;
+  border-radius: 2rem 2rem 0px 0px;
+  background: url(../img/back-7.png) center no-repeat;
+  background-size: cover;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 3rem;
+}
+.footer__contact {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 2rem;
+}
+.footer__column {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.75em;
+  line-height: 1;
+}
+.footer__column a {
+  display: flex;
+  align-items: center;
+}
+.footer__column svg {
+  width: 41px;
+  height: 41px;
+  margin-right: 0.8rem;
+}
+.footer__column .tel svg {
+  width: 20px;
+  height: 20px;
+}
+.footer__column .address span {
+  max-width: 310px;
+}
+.footer__logo {
+  width: 84px;
+  height: 84px;
+}
+.footer__logo img {
+  object-fit: contain;
+}
+.footer__copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/*----- end section Footer -----*/
 /*------ start Responsive ------*/
 @media (max-width: 1600px) {
   h1, h2 {
