@@ -1,4 +1,5 @@
 html {
+  scroll-padding-top: 120px;
   font-size: 24px;
 }
 
@@ -121,15 +122,22 @@ body {
   transition: all 0.3s ease;
 }
 .button:hover {
+  cursor: pointer;
   background-color: #FFDF5C;
 }
 
 h1 {
   font: 800 4.5em/1.1 "Nunito";
+  text-transform: uppercase;
 }
 
 h2 {
   font: 700 2em/1.1 "Nunito";
+  text-transform: uppercase;
+}
+
+h3 {
+  font: 700 1.25em/1.1 "Nunito";
   text-transform: uppercase;
 }
 
@@ -263,6 +271,8 @@ h2 {
   line-height: 1;
 }
 .school__social svg {
+  width: 1.7rem;
+  height: 1.7rem;
   transition: all 0.3s ease-in-out;
 }
 .school__social svg:hover {
@@ -362,6 +372,9 @@ h2 {
 
 /*----- end section About -----*/
 /*----- start section Levels -----*/
+.levels {
+  padding-bottom: 10rem;
+}
 .levels__container {
   position: relative;
   display: grid;
@@ -456,24 +469,27 @@ h2 {
 /*----- end section Levels -----*/
 /*----- start section Services -----*/
 .services {
-  padding: 3rem 0;
+  padding-bottom: 10rem;
 }
 .services__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
 }
 .services__title {
   margin-bottom: 1.6rem;
 }
 .services__text {
+  max-width: 840px;
   margin-bottom: 3.75rem;
+  font-size: 1.25em;
 }
 .services__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   row-gap: 1.6rem;
   column-gap: 4.5rem;
   margin-bottom: 4.5rem;
+  font-size: 1.25em;
 }
 .services__list li {
   display: flex;
@@ -487,10 +503,19 @@ h2 {
 .services__reviews {
   display: grid;
   gap: 1rem;
+  font-size: 1.25em;
 }
 .services__reviews a {
   display: flex;
   align-items: center;
+  max-width: max-content;
+  transition: all 0.3s ease-in-out;
+}
+.services__reviews a:hover {
+  color: #7FD856;
+}
+.services__reviews a span {
+  border-bottom: 2px solid;
 }
 .services__reviews svg {
   margin-right: 1.25rem;
@@ -507,13 +532,12 @@ h2 {
 /*----- end section Services -----*/
 /*----- start section Teams -----*/
 .team {
-  padding: 3rem 0;
-  padding-top: 13rem;
+  padding-bottom: 3rem;
 }
 .team__container {
   padding: 4rem;
   margin-bottom: 4rem;
-  background: linear-gradient(90deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 86.75%);
+  background: linear-gradient(130deg, #FFFFFF 5%, rgba(255, 255, 255, 0) 100%, #FFFFFF 0%);
   border-radius: 2rem;
 }
 .team__title {
@@ -524,16 +548,16 @@ h2 {
   margin-bottom: 3.75rem;
 }
 .team__slider {
-  width: 94vw;
+  width: 89vw;
 }
 .team__card {
+  position: relative;
   padding: 1.3rem;
   margin-right: 0.8rem;
   border-radius: 2rem;
   background-color: #fff;
 }
 .team__card .card__img {
-  width: 323px;
   height: 323px;
   margin-bottom: 1.6rem;
   border-radius: 1rem;
@@ -545,8 +569,20 @@ h2 {
   text-align: center;
 }
 .team__card .card__text {
-  font-size: 0.8em;
+  font-size: 0.84em;
   text-align: center;
+}
+.team__card:nth-child(odd)::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  content: url(../img/star-4.svg);
+}
+.team__card:nth-child(even)::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  content: url(../img/star-3.svg);
 }
 .team__workout {
   display: grid;
@@ -588,6 +624,10 @@ h2 {
 .partners__card img {
   max-height: 160px;
   object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+.partners__card:hover img {
+  transform: scale(1.1);
 }
 
 /*----- end section Partners -----*/
@@ -620,6 +660,10 @@ h2 {
 .footer__column a {
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.footer__column a:hover {
+  color: #7FD856;
 }
 .footer__column svg {
   width: 41px;
@@ -640,16 +684,209 @@ h2 {
 .footer__logo img {
   object-fit: contain;
 }
+.footer__social {
+  display: flex;
+  align-items: center;
+  font-size: 0.92em;
+}
+.footer__social a {
+  margin-right: 0.8rem;
+  line-height: 1;
+}
+.footer__social svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+.footer__social svg:hover {
+  transform: scale(1.1);
+}
 .footer__copy {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+  font-size: 0.75em;
+}
+.footer__copy a {
+  transition: all 0.3s ease-in-out;
+}
+.footer__copy a:hover {
+  color: #7FD856;
 }
 
 /*----- end section Footer -----*/
+/*----- start section Popup -----*/
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+.popup__peoples {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  width: max-content;
+  border-radius: 4rem;
+  background-color: #fff;
+}
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.popup__close:hover {
+  cursor: pointer;
+}
+.popup__title {
+  max-width: 465px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.popup__btn {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.popup__btn:last-of-type {
+  margin-bottom: 0;
+}
+.popup__btn:hover {
+  cursor: pointer;
+  background-color: #70BF4C;
+}
+.popup .button_ylw {
+  background-color: #FFDF5C;
+}
+.popup .button_ylw:hover {
+  background-color: #E5C953;
+}
+.popup__test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 71% 29%;
+  width: 100%;
+  max-width: 1720px;
+  border-radius: 2rem;
+  background: url(../img/back-8.png) center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.popup .test__title {
+  margin-bottom: 1.4rem;
+}
+.popup .test__text {
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+.popup .test__span {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.popup .test__link a {
+  display: flex;
+  align-items: center;
+  font-size: 0.75em;
+}
+.popup .test__link svg {
+  width: 41px;
+  height: 41px;
+  margin-right: 0.8rem;
+}
+.popup .test__tel {
+  display: grid;
+  gap: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+.popup .test__tel svg {
+  width: 20px;
+  height: 20px;
+}
+.popup .test__connect {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-right: 2.5rem;
+  background: #F7F7F7;
+}
+.popup .test__connect .address {
+  margin-bottom: 2rem;
+}
+.popup .test__connect .address svg {
+  width: 18%;
+}
+.popup .test__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popup .test__header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #fff;
+}
+.popup .test__main {
+  padding: 4rem;
+  padding-left: 2rem;
+}
+.popup .test__footer {
+  padding: 1rem 2rem;
+  border-top: 1px solid #fff;
+}
+.popup .test__slider {
+  width: 100%;
+}
+.popup .test__item {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+.popup .test__question {
+  margin-bottom: 2.4rem;
+}
+.popup .test__answer {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  padding: 0.8rem 1.3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #E6E6E6;
+  background-color: #fff;
+}
+.popup .test__answer:last-of-type {
+  margin-bottom: 0;
+}
+.popup .test__answer label {
+  margin-left: 1rem;
+}
+.popup .test__img {
+  height: 300px;
+  padding: 2rem;
+  border: 2px solid #fff;
+}
+.popup .test__img img {
+  object-fit: contain;
+}
+
+/*----- end section Popup -----*/
 /*------ start Responsive ------*/
 @media (max-width: 1600px) {
   h1, h2 {
+    font-size: 3em;
+  }
+  h2 {
     font-size: 1.6em;
   }
   .school__text {
@@ -669,11 +906,15 @@ h2 {
   }
   .about__list {
     max-width: unset;
+    font-size: 1em;
   }
   .about__list::after {
     top: 90%;
     width: 100px;
     height: 80px;
+  }
+  .levels__text {
+    font-size: 1em;
   }
   .levels__list {
     gap: 0.6rem 4rem;
@@ -681,6 +922,43 @@ h2 {
   .levels__list li::before {
     width: 35px;
     height: 35px;
+  }
+  .services__text {
+    font-size: 1em;
+  }
+  .services__list {
+    font-size: 1em;
+  }
+  .services__reviews {
+    font-size: 1em;
+  }
+  .team__container {
+    padding: 2.5rem;
+  }
+  .team__card {
+    padding: 1rem;
+  }
+  .team__card .card__title {
+    margin-bottom: 0.8rem;
+  }
+  .team__card .team__card .card__img {
+    height: 300px;
+    margin-bottom: 1.2rem;
+  }
+  .team.team__slider {
+    width: 91vw;
+  }
+  .partners__text {
+    margin-bottom: 2rem;
+    font-size: 1em;
+  }
+  .footer__container {
+    gap: 3rem;
+    padding: 3rem;
+  }
+  .footer__contact {
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
   }
 }
 @media (max-width: 1440px) {
@@ -778,8 +1056,20 @@ h2 {
     width: 35px;
     height: 35px;
   }
+  .team .slick-slide {
+    width: 25vw !important;
+  }
+  .team__slider {
+    width: 91vw;
+  }
 }
 @media (max-width: 1200px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
   .nav__list li {
     margin-right: 1rem;
   }
@@ -798,6 +1088,9 @@ h2 {
     width: 90px;
     height: 80px;
   }
+  .school__img_girl {
+    height: 400px;
+  }
   .school__social {
     font-size: 0.9em;
   }
@@ -807,6 +1100,7 @@ h2 {
   }
   .about__container {
     margin-top: -5rem;
+    padding: 3rem 2rem;
   }
   .about__img {
     width: 100%;
@@ -835,6 +1129,79 @@ h2 {
   .list__item svg {
     width: 25px;
     height: 25px;
+  }
+  .levels {
+    padding-bottom: 5rem;
+  }
+  .levels__container {
+    padding: 3rem 2rem;
+  }
+  .levels__title {
+    margin-bottom: 1rem;
+  }
+  .levels__img {
+    margin: 0 auto;
+  }
+  .levels__list {
+    gap: 0.7rem 2rem;
+  }
+  .levels__list li {
+    font-size: 0.8em;
+  }
+  .levels__list li::before {
+    width: 25px;
+    height: 25px;
+  }
+  .services {
+    padding-bottom: 5rem;
+  }
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .services__text {
+    margin-bottom: 2rem;
+  }
+  .services__list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .services__list img {
+    width: 60px;
+    height: 35px;
+    margin-right: 1rem;
+  }
+  .services__reviews svg {
+    width: 60px;
+    height: 60px;
+  }
+  .team__text {
+    margin-bottom: 2rem;
+  }
+  .team__slider svg {
+    width: 40px;
+    height: 40px;
+  }
+  .team__card .card__img {
+    height: 250px;
+  }
+  .slick_arrow {
+    top: -60px;
+  }
+  .slick_next {
+    right: 50px;
+  }
+  .slick_prev {
+    right: 100px;
+  }
+  .partners__card {
+    height: 150px;
+    padding: 1rem;
+  }
+  .popup__peoples {
+    padding: 3rem;
+    padding-top: 4rem;
   }
 }
 @media (max-width: 1100px) {
