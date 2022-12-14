@@ -448,6 +448,7 @@ h3 {
       position: relative;
       border-radius: 0.8rem;
       z-index: 1;
+      object-fit: contain;
     }
   }
   &__button {
@@ -641,7 +642,7 @@ h3 {
     gap: 4rem;
     padding: 4rem;
     border-radius: 2rem 2rem 0px 0px;
-    background: url(../img/back-7.png) center no-repeat;
+    background: url(../img/back-7.png) top left no-repeat;
     background-size: cover;
   }
   &__content {
@@ -1270,9 +1271,6 @@ h3 {
       height: 200px;
     }
   }
-  .team {
-
-  }
   .services {
     padding-bottom: 8rem;
     &__list {
@@ -1480,10 +1478,8 @@ h3 {
     }
   }
   .team {
-    &__container {
-      padding: 2rem;
-    }
     &__wrap {
+      padding: 2rem;
       margin-bottom: 2rem;
     }
     &__slider {
@@ -1495,6 +1491,14 @@ h3 {
     &__card {
       .card__img {
         height: 250px;
+      }
+    }
+    .slick {
+      &_next {
+        right: 50px;
+      }
+      &_prev {
+        right: 100px;
       }
     }
   }
@@ -1605,7 +1609,23 @@ h3 {
   }
   .team {
     &__wrap {
+      width: 98%;
       padding: 1.5rem;
+    }
+    &__slider {
+      width: 104%;
+    }
+    &__card{
+      &:nth-child(odd){
+        &::after {
+          content: none;
+        }
+      }
+      &:nth-child(even){
+        &::after {
+          content: none;
+        }
+      }
     }
   }
   .partners{
@@ -1719,6 +1739,9 @@ h3 {
   .partners {
     &__cards {
       grid-template-columns: repeat(2, 1fr);
+    }
+    &__text {
+      max-width: unset;
     }
   }
   .footer {
