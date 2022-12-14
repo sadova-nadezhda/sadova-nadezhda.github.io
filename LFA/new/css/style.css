@@ -387,6 +387,18 @@ h3 {
   background-size: cover;
   overflow: hidden;
 }
+.levels__container::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  width: 40%;
+  height: 100%;
+  background: url(../img/back-12.png) center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
 .levels__title {
   margin-bottom: 1.6rem;
 }
@@ -454,6 +466,44 @@ h3 {
   position: absolute;
   left: 105%;
   content: url(../img/back-4.png);
+}
+.levels__steps {
+  position: relative;
+  max-width: 70%;
+  margin-left: auto;
+}
+.levels .step {
+  position: absolute;
+  padding: 1.3rem 1.1rem;
+  font: 700 1.45em/1 "Nunito";
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+.levels__a1 {
+  top: -12%;
+  left: 20%;
+}
+.levels__a2 {
+  top: 12%;
+  left: -10%;
+}
+.levels__b1 {
+  bottom: 5%;
+  left: -10%;
+}
+.levels__b2 {
+  bottom: -10%;
+  left: 40%;
+  transform: translateX(-50%);
+}
+.levels__c1 {
+  bottom: 8%;
+  right: 8%;
+}
+.levels__c2 {
+  top: 5%;
+  right: 9%;
 }
 
 /*----- end section Levels -----*/
@@ -742,8 +792,8 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 38%;
   padding: 4rem;
-  width: max-content;
   border-radius: 4rem;
   background-color: #fff;
 }
@@ -788,7 +838,7 @@ h3 {
   display: grid;
   grid-template-columns: 71% 29%;
   width: 100%;
-  max-width: 1720px;
+  max-width: 85%;
   border-radius: 2rem;
   background: url(../img/back-8.png) center no-repeat;
   background-size: cover;
@@ -977,7 +1027,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 1720px;
+  max-width: 85%;
   border-radius: 2rem;
   background: url(../img/back-8.png) center no-repeat;
   background-size: cover;
@@ -1000,7 +1050,7 @@ h3 {
   content: "";
   width: 90%;
   height: 50%;
-  background: url(../img/back-10.png) center no-repeat;
+  background: url(../img/back-11.png) center no-repeat;
   background-size: contain;
 }
 .popup .result__main {
@@ -1082,6 +1132,17 @@ h3 {
     bottom: -10%;
     right: -1%;
   }
+  .popup .test__main {
+    padding: 3rem;
+    padding-left: 2rem;
+  }
+  .popup .result__main {
+    padding: 3rem;
+  }
+  .popup .result__footer {
+    padding: 3rem;
+    padding-top: 0;
+  }
 }
 @media (max-width: 1600px) {
   h1, h2 {
@@ -1124,6 +1185,9 @@ h3 {
     width: 35px;
     height: 35px;
   }
+  .levels__steps {
+    max-width: 80%;
+  }
   .services__text {
     font-size: 1em;
   }
@@ -1157,6 +1221,16 @@ h3 {
   .footer__contact {
     grid-template-columns: repeat(2, auto);
     gap: 1rem;
+  }
+  .popup__title {
+    font-size: 1.5em;
+  }
+  .popup .result__main {
+    padding: 2rem;
+  }
+  .popup .result__footer {
+    padding: 2rem;
+    padding-top: 0;
   }
 }
 @media (max-width: 1440px) {
@@ -1236,6 +1310,23 @@ h3 {
     width: 60px;
     height: 60px;
   }
+  .popup .result__img {
+    height: 300px;
+  }
+  .popup .result__text {
+    padding: 0.6rem 3rem;
+    font-size: 1em;
+  }
+  .popup .result__test {
+    padding: 0.6rem 1rem;
+    font-size: 0.8em;
+  }
+  .popup .result__button {
+    font-size: 1em;
+  }
+  .popup .result__btn span {
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 1360px) {
   html {
@@ -1279,6 +1370,9 @@ h3 {
   }
   .team .slick-slide {
     width: 25vw !important;
+  }
+  .levels__container::before {
+    content: none;
   }
 }
 @media (max-width: 1200px) {
@@ -1370,6 +1464,18 @@ h3 {
     width: 25px;
     height: 25px;
   }
+  .levels__steps {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .levels__c1 {
+    bottom: 8%;
+    right: -8%;
+  }
+  .levels__c2 {
+    top: 5%;
+    right: -9%;
+  }
   .services {
     padding-bottom: 5rem;
   }
@@ -1416,9 +1522,15 @@ h3 {
     height: 150px;
     padding: 1rem;
   }
+  .popup__title {
+    font-size: 1.2em;
+  }
   .popup__peoples {
     padding: 3rem;
     padding-top: 4rem;
+  }
+  .popup .result__img {
+    height: 250px;
   }
 }
 @media (max-width: 1100px) {
@@ -1516,8 +1628,19 @@ h3 {
   .slick_next {
     right: 2%;
   }
+  .popup__peoples {
+    width: 50%;
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+  .popup .result__img {
+    display: none;
+  }
+  .popup .result__main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -1565,7 +1688,7 @@ h3 {
     content: none;
   }
   .levels__container {
-    padding: 1.8rem;
+    padding: 3rem 1.8rem;
   }
   .levels__title {
     margin-bottom: 1.25rem;
@@ -1589,6 +1712,9 @@ h3 {
   .school__description {
     order: 1;
   }
+  .school__images {
+    margin: 0 auto;
+  }
   .about__container {
     grid-template-columns: 1fr;
     padding: 2.2rem;
@@ -1596,6 +1722,7 @@ h3 {
   .levels__container {
     grid-template-columns: 1fr;
     padding: 2rem;
+    padding-top: 3rem;
   }
   .levels__content {
     order: 1;
@@ -1603,6 +1730,11 @@ h3 {
   .levels__img {
     height: 320px;
     width: auto;
+  }
+  .levels__steps {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
   }
   .services__container {
     grid-template-columns: 1fr;
@@ -1647,6 +1779,13 @@ h3 {
   .slick_prev {
     right: 16%;
   }
+  .popup__peoples {
+    width: 80%;
+  }
+  .popup .result__main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 @media (max-width: 420px) {
   .header__nav {
@@ -1661,8 +1800,14 @@ h3 {
     justify-content: center;
     margin-top: 1rem;
   }
+  .school__images {
+    margin: 0;
+  }
   .team .slick-slide {
     width: 70vw !important;
+  }
+  .levels__steps {
+    max-width: 100%;
   }
 }
 /*------ end Responsive ------*/

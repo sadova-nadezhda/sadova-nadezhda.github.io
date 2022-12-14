@@ -379,17 +379,18 @@ h3 {
     background: url(../img/back-2.png) #DDD6FD top left no-repeat;
     background-size: cover;
     overflow: hidden;
-    // &::after {
-    //   position: absolute;
-    //   top: -3%;
-    //   right: -8%;
-    //   content: "";
-    //   width: 50%;
-    //   height: 130%;
-    //   background: url(../img/back-3.png) center no-repeat;
-    //   background-size: contain;
-    //   z-index: 1;
-    // }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      width: 40%;
+      height: 100%;
+      background: url(../img/back-12.png) center no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
   }
   &__title {
     margin-bottom: 1.6rem;
@@ -458,6 +459,44 @@ h3 {
       left: 105%;
       content: url(../img/back-4.png);
     }
+  }
+  &__steps {
+    position: relative;
+    max-width: 70%;
+    margin-left: auto;
+  }
+  .step {
+    position: absolute;
+    padding: 1.3rem 1.1rem;
+    font: 700 1.45em/1 'Nunito';
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: 2;
+  }
+  &__a1 {
+    top: -12%;
+    left: 20%;
+  }
+  &__a2 {
+    top: 12%;
+    left: -10%;
+  }
+  &__b1 {
+    bottom: 5%;
+    left: -10%;
+  }
+  &__b2 {
+    bottom: -10%;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+  &__c1 {
+    bottom: 8%;
+    right: 8%;
+  }
+  &__c2 {
+    top: 5%;
+    right: 9%;
   }
 }
 /*----- end section Levels -----*/
@@ -757,8 +796,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 38%;
     padding: 4rem;
-    width: max-content;
     border-radius: 4rem;
     background-color: #fff;
   }
@@ -803,7 +842,7 @@ h3 {
     display: grid;
     grid-template-columns: 71% 29%;
     width: 100%;
-    max-width: 1720px;
+    max-width: 85%;
     border-radius: 2rem;
     background: url(../img/back-8.png) center no-repeat;
     background-size: cover;
@@ -1002,7 +1041,7 @@ h3 {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    max-width: 1720px;
+    max-width: 85%;
     border-radius: 2rem;
     background: url(../img/back-8.png) center no-repeat;
     background-size: cover;
@@ -1024,7 +1063,7 @@ h3 {
       content: '';
       width: 90%;
       height: 50%;
-      background: url(../img/back-10.png) center no-repeat;
+      background: url(../img/back-11.png) center no-repeat;
       background-size: contain;
     }
   }
@@ -1114,6 +1153,23 @@ h3 {
       }
     }
   }
+  .popup {
+    .test {
+      &__main {
+        padding: 3rem;
+        padding-left: 2rem;
+      }  
+    }
+    .result {
+      &__main {
+        padding: 3rem;
+      }
+      &__footer {
+        padding: 3rem;
+        padding-top: 0;
+      }
+    }
+  }
 }
 @media (max-width: 1600px) {
   h1, h2 {
@@ -1163,6 +1219,9 @@ h3 {
         height: 35px;
       }
     }
+    &__steps {
+      max-width: 80%;
+    }
   }
   .services {
     &__text {
@@ -1204,6 +1263,20 @@ h3 {
     &__contact {
       grid-template-columns: repeat(2, auto);
       gap: 1rem;
+    }
+  }
+  .popup {
+    &__title {
+      font-size: 1.5em;
+    }
+    .result {
+      &__main {
+        padding: 2rem;
+      }
+      &__footer {
+        padding: 2rem;
+        padding-top: 0;
+      }
     }
   }
 }
@@ -1292,6 +1365,29 @@ h3 {
       }
     }
   }
+  .popup {
+    .result {
+      &__img {
+        height: 300px;
+      }
+      &__text {
+        padding: 0.6rem 3rem;
+        font-size: 1em;
+      }
+      &__test {
+        padding: 0.6rem 1rem;
+        font-size: 0.8em;
+      }
+      &__button {
+        font-size: 1em;
+      }
+      &__btn {
+        span {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1360px) {
   html {
@@ -1350,7 +1446,13 @@ h3 {
       width: 25vw !important;
     }
   }
-
+  .levels {
+    &__container {
+      &::before {
+        content: none;
+      }
+    }
+  }
 }
 @media (max-width: 1200px) {
   h1 {
@@ -1450,6 +1552,18 @@ h3 {
         }
       }
     }
+    &__steps {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    &__c1 {
+      bottom: 8%;
+      right: -8%;
+    }
+    &__c2 {
+      top: 5%;
+      right: -9%;
+    }
   }
   .services {
     padding-bottom: 5rem;
@@ -1508,9 +1622,17 @@ h3 {
     }
   }
   .popup {
+    &__title {
+      font-size: 1.2em;
+    }
     &__peoples {
       padding: 3rem;
       padding-top: 4rem;
+    }
+    .result {
+      &__img {
+        height: 250px;
+      }
     }
   }
 }
@@ -1646,8 +1768,23 @@ h3 {
       right: 2%;
     }
   }
+  .popup {
+    &__peoples {
+      width: 50%;
+      padding: 2rem;
+      padding-top: 4rem;
+    }
+    .result {
+      &__img {
+        display: none;
+      }
+      &__main {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -1704,7 +1841,7 @@ h3 {
   }
   .levels {
     &__container {
-      padding: 1.8rem;
+      padding: 3rem 1.8rem;
     }
     &__title {
       margin-bottom: 1.25rem;
@@ -1730,6 +1867,9 @@ h3 {
     &__description{ 
       order: 1;
     }
+    &__images {
+      margin: 0 auto;
+    }
   }
   .about {
     &__container {
@@ -1741,6 +1881,7 @@ h3 {
     &__container {
       grid-template-columns: 1fr;
       padding: 2rem;
+      padding-top: 3rem;
     }
     &__content {
       order: 1;
@@ -1748,6 +1889,11 @@ h3 {
     &__img {
       height: 320px;
       width: auto;
+    }
+    &__steps {
+      max-width: 60%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
     }
   }
   .services {
@@ -1801,6 +1947,17 @@ h3 {
       right: 16%;
     }
   }
+  .popup {
+    &__peoples {
+      width: 80%;
+    }
+    .result {
+      &__main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  }
 }
 @media (max-width: 420px) {
   .header {
@@ -1817,9 +1974,19 @@ h3 {
     justify-content: center;
     margin-top: 1rem;
   }
+  .school {
+    &__images {
+      margin: 0;
+    }
+  }
   .team {
     .slick-slide {
       width: 70vw !important;
+    }
+  }
+  .levels {
+    &__steps {
+      max-width: 100%;
     }
   }
 }
