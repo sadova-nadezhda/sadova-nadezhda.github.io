@@ -22,10 +22,10 @@
   background-color: transparent;
 }
 .slick_prev {
-  right: 200px;
+  right: 300px;
 }
 .slick_next {
-  right: 100px;
+  right: 200px;
 }
 .slick_next:hover, .slick_prev:hover {
   cursor: pointer;
