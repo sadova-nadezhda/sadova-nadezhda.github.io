@@ -292,7 +292,7 @@ h3 {
   padding: 4rem 2rem;
   margin-top: -12.5rem;
   border-radius: 2rem;
-  background: url(../img/back-1.png) #fff center no-repeat;
+  background: url(../img/back-1.png) #fff center left no-repeat;
   background-size: cover;
 }
 .about__img {
@@ -383,7 +383,7 @@ h3 {
   gap: 1.6rem;
   padding: 4rem 2rem;
   border-radius: 2rem;
-  background: url(../img/back-2.png) #DDD6FD center no-repeat;
+  background: url(../img/back-2.png) #DDD6FD top left no-repeat;
   background-size: cover;
   overflow: hidden;
 }
@@ -525,6 +525,9 @@ h3 {
 .team {
   padding-bottom: 3rem;
 }
+.team__container {
+  margin-bottom: 3.75rem;
+}
 .team__wrap {
   width: 95%;
   margin-left: auto;
@@ -581,6 +584,7 @@ h3 {
   display: grid;
   justify-items: center;
   gap: 1.4rem;
+  text-align: center;
 }
 .team .slick-slide {
   width: 20vw !important;
@@ -1131,12 +1135,6 @@ h3 {
   .team__slider {
     width: 107%;
   }
-  .team .slick_next {
-    right: 150px;
-  }
-  .team .slick_prev {
-    right: 250px;
-  }
   .partners__text {
     margin-bottom: 2rem;
     font-size: 1em;
@@ -1226,12 +1224,6 @@ h3 {
   .slick_arrow svg {
     width: 60px;
     height: 60px;
-  }
-  .slick_prev {
-    right: 120px;
-  }
-  .slick_next {
-    right: 50px;
   }
 }
 @media (max-width: 1360px) {
@@ -1396,6 +1388,9 @@ h3 {
     padding: 2rem;
     margin-bottom: 2rem;
   }
+  .team__slider {
+    width: 105%;
+  }
   .team__slider svg {
     width: 40px;
     height: 40px;
@@ -1403,20 +1398,8 @@ h3 {
   .team__card .card__img {
     height: 250px;
   }
-  .team .slick_next {
-    right: 50px;
-  }
-  .team .slick_prev {
-    right: 100px;
-  }
   .slick_arrow {
     top: -80px;
-  }
-  .slick_next {
-    right: 50px;
-  }
-  .slick_prev {
-    right: 100px;
   }
   .partners__card {
     height: 150px;
@@ -1476,17 +1459,6 @@ h3 {
   .about__img img {
     object-fit: contain;
   }
-  .levels__container {
-    grid-template-columns: 1fr;
-    padding: 2.2rem;
-  }
-  .levels__content {
-    order: 1;
-  }
-  .levels__img {
-    width: 80%;
-    height: 320px;
-  }
   .team__wrap {
     width: 98%;
     padding: 1.5rem;
@@ -1505,9 +1477,30 @@ h3 {
   }
 }
 @media (max-width: 800px) {
+  body {
+    background: url(../img/bg-mobile.png) top center no-repeat;
+  }
+  .team .slick-slide {
+    width: 35vw !important;
+  }
+  .team__slider {
+    width: 103%;
+  }
+  .team__text {
+    max-width: 80%;
+  }
+  .team__card {
+    box-shadow: 0px 0px 20px rgba(36, 65, 100, 0.06);
+  }
   .footer__social {
     grid-column: span 3;
     justify-content: flex-end;
+  }
+  .slick_prev {
+    right: 10%;
+  }
+  .slick_next {
+    right: 2%;
   }
 }
 @media (max-width: 767px) {
@@ -1534,12 +1527,12 @@ h3 {
     height: 40px;
   }
   .school__img_girl {
-    width: 220px;
-    height: 250px;
+    width: 260px;
+    height: 280px;
   }
   .school__img::before {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
   .school__social {
     font-size: 1em;
@@ -1570,16 +1563,32 @@ h3 {
   .levels__list {
     font-size: 1em;
   }
-  .levels__img {
-    width: 100%;
-  }
   .list__item {
     border-radius: 10px;
   }
 }
 @media (max-width: 625px) {
+  .school__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .school__description {
+    order: 1;
+  }
   .about__container {
     grid-template-columns: 1fr;
+    padding: 2.2rem;
+  }
+  .levels__container {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .levels__content {
+    order: 1;
+  }
+  .levels__img {
+    height: 320px;
+    width: auto;
   }
   .services__container {
     grid-template-columns: 1fr;
@@ -1590,11 +1599,20 @@ h3 {
   .services__images {
     height: 350px;
   }
+  .partners {
+    padding-bottom: 4rem;
+  }
   .partners__cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .partners__text {
     max-width: unset;
+  }
+  .team__text {
+    max-width: unset;
+  }
+  .team .slick-slide {
+    width: 40vw !important;
   }
   .footer__content {
     grid-template-columns: 1fr;
@@ -1609,27 +1627,28 @@ h3 {
   .footer__copy {
     display: block;
   }
+  .slick_arrow {
+    top: -70px;
+  }
+  .slick_prev {
+    right: 16%;
+  }
 }
-@media (max-width: 520px) {
-  .school__content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .school__description {
+@media (max-width: 420px) {
+  .header__nav {
+    width: 100%;
     order: 1;
   }
-  .about__container {
-    grid-template-columns: 1fr;
-    padding: 2.2rem;
+  .header__logo {
+    width: 15%;
+    height: 15%;
   }
-  .services__container {
-    grid-template-columns: 1fr;
+  .nav__list {
+    justify-content: center;
+    margin-top: 1rem;
   }
-  .services__content {
-    order: 1;
-  }
-  .services__images {
-    height: 400px;
+  .team .slick-slide {
+    width: 70vw !important;
   }
 }
 /*------ end Responsive ------*/

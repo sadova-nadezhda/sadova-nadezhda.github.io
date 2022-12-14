@@ -286,7 +286,7 @@ h3 {
     padding: 4rem 2rem;
     margin-top: -12.5rem;
     border-radius: 2rem;
-    background: url(../img/back-1.png) #fff center no-repeat;
+    background: url(../img/back-1.png) #fff center left no-repeat;
     background-size: cover;
   }
   &__img {
@@ -376,7 +376,7 @@ h3 {
     gap: 1.6rem;
     padding: 4rem 2rem;
     border-radius: 2rem;
-    background: url(../img/back-2.png) #DDD6FD center no-repeat;
+    background: url(../img/back-2.png) #DDD6FD top left no-repeat;
     background-size: cover;
     overflow: hidden;
     // &::after {
@@ -534,6 +534,9 @@ h3 {
   padding-bottom: 3rem;
   // background: url(../img/back-6.png) center no-repeat;
   // background-size: cover;
+  &__container {
+    margin-bottom: 3.75rem;
+  }
   &__wrap {
     width: 95%;
     margin-left: auto;
@@ -590,6 +593,7 @@ h3 {
     display: grid;
     justify-items: center;
     gap: 1.4rem;
+    text-align: center;
   }
   .slick-slide {
     width: 20vw !important;
@@ -1174,14 +1178,14 @@ h3 {
     &__slider {
       width: 107%;
     }
-    .slick {
-      &_next {
-        right: 150px;
-      }
-      &_prev {
-        right: 250px;
-      }
-    }
+    // .slick {
+    //   &_next {
+    //     right: 150px;
+    //   }
+    //   &_prev {
+    //     right: 250px;
+    //   }
+    // }
   }
   .partners {
     &__text {
@@ -1283,12 +1287,6 @@ h3 {
         width: 60px;
         height: 60px;
       }
-    }
-    &_prev {
-      right: 120px;
-    }
-    &_next {
-      right: 50px;
     }
   }
 }
@@ -1483,6 +1481,7 @@ h3 {
       margin-bottom: 2rem;
     }
     &__slider {
+      width: 105%;
       svg {
         width: 40px;
         height: 40px;
@@ -1493,24 +1492,10 @@ h3 {
         height: 250px;
       }
     }
-    .slick {
-      &_next {
-        right: 50px;
-      }
-      &_prev {
-        right: 100px;
-      }
-    }
   }
   .slick {
     &_arrow {
       top: -80px;
-    }
-    &_next {
-      right: 50px;
-    }
-    &_prev {
-      right: 100px;
     }
   }
   .partners {
@@ -1594,19 +1579,6 @@ h3 {
       }
     }
   }
-  .levels {
-    &__container {
-      grid-template-columns: 1fr;
-      padding: 2.2rem;
-    }
-    &__content {
-      order: 1;
-    }
-    &__img {
-      width: 80%;
-      height: 320px;
-    }
-  }
   .team {
     &__wrap {
       width: 98%;
@@ -1635,10 +1607,35 @@ h3 {
   }
 }
 @media (max-width: 800px) {
+  body {
+    background: url(../img/bg-mobile.png) top center no-repeat;
+  }
+  .team {
+    .slick-slide {
+      width: 35vw !important;
+    }
+    &__slider {
+      width: 103%;
+    }
+    &__text {
+      max-width: 80%;
+    }
+    &__card {
+      box-shadow: 0px 0px 20px rgb(36 65 100 / 6%);
+    }
+  }
   .footer {
     &__social {
       grid-column: span 3;
       justify-content: flex-end;
+    }
+  }
+  .slick {
+    &_prev {
+      right: 10%;
+    }
+    &_next {
+      right: 2%;
     }
   }
 }
@@ -1668,12 +1665,12 @@ h3 {
     }
     &__img {
       &_girl {
-        width: 220px;
-        height: 250px;
+        width: 260px;
+        height: 280px;
       }
       &::before {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
       }
     }
     &__social {
@@ -1711,18 +1708,38 @@ h3 {
     &__list {
       font-size: 1em;
     }
-    &__img {
-      width: 100%;
-    }
   }
   .list__item {
     border-radius: 10px;
   }
 }
 @media (max-width: 625px) {
+  .school {
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    &__description{ 
+      order: 1;
+    }
+  }
   .about {
     &__container {
       grid-template-columns: 1fr;
+      padding: 2.2rem;
+    }
+  }
+  .levels {
+    &__container {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+    &__content {
+      order: 1;
+    }
+    &__img {
+      height: 320px;
+      width: auto;
     }
   }
   .services {
@@ -1737,11 +1754,20 @@ h3 {
     }
   }
   .partners {
+    padding-bottom: 4rem;
     &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
     &__text {
       max-width: unset;
+    }
+  }
+  .team {
+    &__text {
+      max-width: unset;
+    }
+    .slick-slide {
+      width: 40vw !important;
     }
   }
   .footer {
@@ -1759,32 +1785,33 @@ h3 {
       display: block;
     }
   }
+  .slick{
+    &_arrow {
+      top: -70px;
+    }
+     &_prev {
+      right: 16%;
+    }
+  }
 }
-@media (max-width: 520px) {
-  .school {
-    &__content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    &__description{ 
+@media (max-width: 420px) {
+  .header {
+    &__nav {
+      width: 100%;
       order: 1;
     }
-  }
-  .about {
-    &__container {
-      grid-template-columns: 1fr;
-      padding: 2.2rem;
+    &__logo {
+      width: 15%;
+      height: 15%;
     }
   }
-  .services {
-    &__container {
-      grid-template-columns: 1fr;
-    }
-    &__content {
-      order: 1;
-    }
-    &__images{
-      height: 400px;
+  .nav__list {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .team {
+    .slick-slide {
+      width: 70vw !important;
     }
   }
 }
