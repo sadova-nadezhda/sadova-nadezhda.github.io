@@ -1555,6 +1555,9 @@ h3 {
   .levels__list {
     font-size: 1em;
   }
+  .levels__img {
+    width: 100%;
+  }
   .list__item {
     border-radius: 10px;
   }
