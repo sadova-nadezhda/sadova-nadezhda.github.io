@@ -1903,6 +1903,9 @@ h3 {
   .popup .test__text {
     max-width: 80%;
   }
+  .popup__result::after {
+    content: none;
+  }
 }
 @media (max-width: 625px) {
   .school__content {

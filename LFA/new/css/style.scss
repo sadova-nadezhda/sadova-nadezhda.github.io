@@ -2102,6 +2102,11 @@ h3 {
         max-width: 80%;
       }
     }
+    &__result {
+      &::after {
+        content: none;
+      }
+    }
   }
 }
 @media (max-width: 625px) {
