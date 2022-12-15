@@ -1,5 +1,8 @@
 let total = document.querySelector('.test__result span');
 let bar = document.querySelector('.test__bar .bar');
+let resultBtn = document.querySelector('.test__res');
+let totalInt = document.querySelectorAll('.test__answer input');
+let allSlide = $('.test__slider').find('.test__item').length;
 
 window.addEventListener('load', () => {
   /*team slider*/
@@ -76,7 +79,6 @@ window.addEventListener('load', () => {
     let popResult = document.querySelector('.popup__result');
     let levelsBtn = document.querySelector(".levels__button");
     let popupBtn = document.querySelectorAll(".popup__btn");
-    let resultBtn = document.querySelector(".test__res");
     $(levelsBtn).on('click', () => {
         $(popup).fadeIn();
         $(popPeople).fadeIn();
@@ -108,7 +110,6 @@ window.addEventListener('load', () => {
         $(popup).fadeOut();
       }
     });
-
   }
 
   $('.test__slider').each(function(){
@@ -118,13 +119,23 @@ window.addEventListener('load', () => {
     });
   });
 
+  if(totalInt){
+    totalInt.forEach( elem => {
+      elem.addEventListener('change', ()=>{
+        let totalCheck = document.querySelectorAll('.test__answer input:checked');
+        if(totalCheck.length == allSlide) {
+          resultBtn.removeAttribute('disabled');
+        } else {
+          resultBtn.setAttribute('disabled','disabled');
+        }
+      });
+    });
+  }
 
-  
 });
 
 function progressBarUpdate(currentSlide) {
   let indexSlide = (currentSlide ? currentSlide : 0) + 1;			   
-  let allSlide = $('.test__slider').find('.test__item').length;
   let progress = Math.ceil((indexSlide*100)/allSlide);
 
   total.textContent = progress + '%';
@@ -136,6 +147,7 @@ function progressBarUpdate(currentSlide) {
       },1000
     );
   });
+
 }
 
 /*tween js*/

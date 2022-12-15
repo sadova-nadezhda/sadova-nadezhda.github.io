@@ -121,7 +121,7 @@ body {
   font: 0.92em/1 "Nunito";
   transition: all 0.3s ease;
 }
-.button:hover {
+.button:hover:not(:disabled) {
   cursor: pointer;
   background-color: #FFDF5C;
 }
@@ -961,6 +961,10 @@ h3 {
 }
 .popup .test__res {
   color: #283071;
+}
+.popup .test__res:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 .popup .test__slider {
   width: 100%;
