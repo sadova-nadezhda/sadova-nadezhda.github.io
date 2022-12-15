@@ -728,6 +728,7 @@ h3 {
 }
 .footer__column svg {
   width: 41px;
+  min-width: 41px;
   margin-right: 0.8rem;
 }
 .footer__column .tel svg {
@@ -1515,6 +1516,10 @@ h3 {
     width: 35px;
     height: 35px;
   }
+  .footer__column svg {
+    width: 30px;
+    min-width: 30px;
+  }
 }
 @media (max-width: 1200px) {
   h1 {
@@ -1673,6 +1678,10 @@ h3 {
   .popup .result__img {
     height: 250px;
   }
+  .footer__container {
+    gap: 2rem;
+    padding: 2rem;
+  }
 }
 @media (max-width: 1100px) {
   .header__lang-switch {
@@ -1745,7 +1754,7 @@ h3 {
     padding: 0.5rem 0.6rem;
   }
   .button {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 0.6rem 1.1rem;
   }
   .school__text {
@@ -1776,6 +1785,10 @@ h3 {
   }
   .partners__cards {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .services__reviews svg {
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 800px) {
@@ -1887,6 +1900,9 @@ h3 {
     overflow-y: auto;
     grid-template-columns: 100%;
   }
+  .popup .test__text {
+    max-width: 80%;
+  }
 }
 @media (max-width: 625px) {
   .school__content {
@@ -1919,6 +1935,9 @@ h3 {
     max-width: 60%;
     margin: 0 auto;
     margin-bottom: 2rem;
+  }
+  .levels__button::after {
+    content: none;
   }
   .services__container {
     grid-template-columns: 1fr;
@@ -1964,11 +1983,36 @@ h3 {
     right: 16%;
   }
   .popup__peoples {
-    width: 80%;
+    width: 70%;
   }
   .popup .result__main {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+@media (max-width: 520px) {
+  .popup .test__item {
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+  .popup .test__wrap {
+    order: 1;
+  }
+  .popup .test__img {
+    max-width: 150px;
+    height: 150px;
+    padding: 1rem;
+  }
+  .popup .test__footer {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+  .popup .test__result {
+    order: 1;
+  }
+  .popup .test__arrows {
+    justify-content: flex-end;
   }
 }
 @media (max-width: 420px) {
@@ -1987,11 +2031,26 @@ h3 {
   .school__images {
     margin: 0;
   }
+  .about__list li {
+    width: 100%;
+    max-width: unset;
+  }
+  .about__list::after {
+    content: none;
+  }
   .team .slick-slide {
     width: 70vw !important;
   }
   .levels__steps {
     max-width: 100%;
+  }
+  .levels__list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .levels__button {
+    width: 100%;
+    text-align: center;
   }
 }
 /*------ end Responsive ------*/

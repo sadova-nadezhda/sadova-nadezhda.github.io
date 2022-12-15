@@ -727,6 +727,7 @@ h3 {
     }
     svg {
       width: 41px;
+      min-width: 41px;
       margin-right: 0.8rem;
     }
     .tel {
@@ -1620,6 +1621,14 @@ h3 {
       }
     }
   }
+  .footer {
+    &__column {
+      svg {
+        width: 30px;
+        min-width: 30px;
+      }
+    }
+  }
 }
 @media (max-width: 1200px) {
   h1 {
@@ -1802,6 +1811,12 @@ h3 {
       }
     }
   }
+  .footer {
+    &__container {
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
 }
 @media (max-width: 1100px) {
   .header {
@@ -1892,7 +1907,7 @@ h3 {
     }
   }
   .button {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 0.6rem 1.1rem;
   }
   .school {
@@ -1941,6 +1956,12 @@ h3 {
   .partners{
     &__cards {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .services {
+    &__reviews svg {
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -2076,6 +2097,11 @@ h3 {
       overflow-y: auto;
       grid-template-columns: 100%;
     }
+    .test {
+      &__text {
+        max-width: 80%;
+      }
+    }
   }
 }
 @media (max-width: 625px) {
@@ -2114,6 +2140,11 @@ h3 {
       max-width: 60%;
       margin: 0 auto;
       margin-bottom: 2rem;
+    }
+    &__button {
+      &::after {
+        content: none;
+      }
     }
   }
   .services {
@@ -2169,12 +2200,41 @@ h3 {
   }
   .popup {
     &__peoples {
-      width: 80%;
+      width: 70%;
     }
     .result {
       &__main {
         grid-template-columns: 1fr;
         gap: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .popup {
+    .test {
+      &__item {
+        grid-template-columns: 100%;
+        gap: 1rem;
+      }
+      &__wrap {
+        order: 1;
+      }
+      &__img {
+        max-width: 150px;
+        height: 150px;
+        padding: 1rem;
+      }
+      &__footer {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 1rem;
+      }
+      &__result {
+        order: 1;
+      }
+      &__arrows {
+        justify-content: flex-end;
       }
     }
   }
@@ -2199,6 +2259,17 @@ h3 {
       margin: 0;
     }
   }
+  .about {
+    &__list {
+      li {
+        width: 100%;
+        max-width: unset;
+      }
+      &::after {
+        content: none;
+      }
+    }
+  }
   .team {
     .slick-slide {
       width: 70vw !important;
@@ -2207,6 +2278,14 @@ h3 {
   .levels {
     &__steps {
       max-width: 100%;
+    }
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    &__button {
+      width: 100%;
+      text-align: center;
     }
   }
 }
