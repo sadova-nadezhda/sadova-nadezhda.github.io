@@ -862,7 +862,7 @@ h3 {
 }
 .popup .test__link svg {
   width: 41px;
-  height: 41px;
+  min-width: 41px;
   margin-right: 0.8rem;
 }
 .popup .test__tel {
@@ -889,9 +889,6 @@ h3 {
 }
 .popup .test__connect .address {
   margin-bottom: 2rem;
-}
-.popup .test__connect .address svg {
-  width: 18%;
 }
 .popup .test__content {
   display: flex;
@@ -1145,11 +1142,17 @@ h3 {
   }
 }
 @media (max-width: 1600px) {
-  h1, h2 {
+  h1 {
     font-size: 3em;
   }
   h2 {
     font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .button {
+    padding: 0.6rem 1rem;
   }
   .school__text {
     font-size: 1em;
@@ -1222,8 +1225,62 @@ h3 {
     grid-template-columns: repeat(2, auto);
     gap: 1rem;
   }
+  .popup__close svg {
+    width: 22px;
+    height: 22px;
+  }
   .popup__title {
     font-size: 1.5em;
+  }
+  .popup .test__header span {
+    font-size: 0.9em;
+  }
+  .popup .test__title {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+  }
+  .popup .test__text {
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+  .popup .test__span {
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+  }
+  .popup .test__tel {
+    margin-bottom: 1rem;
+    font-size: 1em;
+    line-height: 1;
+  }
+  .popup .test__link a {
+    font-size: 0.7em;
+  }
+  .popup .test__link svg {
+    width: 30px;
+    min-width: 30px;
+    margin-right: 0.6rem;
+  }
+  .popup .test__connect .address {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .popup .test__wrap {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+  }
+  .popup .test__main {
+    padding: 2rem;
+  }
+  .popup .test__question {
+    margin-bottom: 2rem;
+  }
+  .popup .test__answer {
+    padding: 0.6rem 1rem;
+  }
+  .popup .test__answer label {
+    font-size: 0.8em;
+    margin-left: 0.8rem;
   }
   .popup .result__main {
     padding: 2rem;
@@ -1231,6 +1288,10 @@ h3 {
   .popup .result__footer {
     padding: 2rem;
     padding-top: 0;
+  }
+  .test_prev svg {
+    width: 45px;
+    height: 45px;
   }
 }
 @media (max-width: 1440px) {
@@ -1373,6 +1434,68 @@ h3 {
   }
   .levels__container::before {
     content: none;
+  }
+  .popup__close svg {
+    width: 18px;
+    height: 18px;
+  }
+  .popup .test__header span {
+    font-size: 0.8em;
+  }
+  .popup .test__text {
+    font-size: 0.7em;
+    line-height: 1.3em;
+  }
+  .popup .test__span {
+    font-size: 0.7em;
+    line-height: 1;
+  }
+  .popup .test__link a {
+    font-size: 0.6em;
+  }
+  .popup .test__link svg {
+    width: 25px;
+    height: 25px;
+  }
+  .popup .test__tel svg {
+    width: 18px;
+    height: 18px;
+  }
+  .popup .test__item {
+    grid-template-columns: 1fr 200px;
+  }
+  .popup .test__img {
+    height: 200px;
+    padding: 1rem;
+  }
+  .popup .test__connect {
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+  }
+  .popup .test__main {
+    padding-bottom: 1rem;
+  }
+  .popup .test__wrap {
+    font-size: 0.8em;
+  }
+  .popup .test__answer {
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .popup .test_next {
+    font-size: 0.8em;
+  }
+  .popup .test__arrows svg {
+    width: 15px;
+    height: 11px;
+  }
+  .popup .test_prev {
+    margin-right: 1rem;
+  }
+  .popup .test_prev svg {
+    width: 35px;
+    height: 35px;
   }
 }
 @media (max-width: 1200px) {
@@ -1553,6 +1676,44 @@ h3 {
   .school__img::before {
     width: 330px;
     height: 330px;
+  }
+  .popup .test__title {
+    font-size: 0.8em;
+    line-height: 1.1em;
+  }
+  .popup .test__text {
+    font-size: 0.6em;
+  }
+  .popup .test__item {
+    grid-template-columns: 1fr 150px;
+  }
+  .popup .test__img {
+    height: 150px;
+    padding: 1rem;
+  }
+  .popup .test__header {
+    padding: 1rem;
+  }
+  .popup .test__main {
+    padding: 1rem;
+  }
+  .popup .test__answer label {
+    margin-left: 0.4rem;
+  }
+  .popup .test__wrap {
+    margin-bottom: 0.6rem;
+  }
+  .popup .test__bar {
+    height: 6px;
+  }
+  .popup .test__bar .bar {
+    height: 6px;
+  }
+  .popup .test__link svg {
+    margin-right: 0.4rem;
+  }
+  .popup .test__footer {
+    padding: 1rem;
   }
 }
 @media (max-width: 980px) {

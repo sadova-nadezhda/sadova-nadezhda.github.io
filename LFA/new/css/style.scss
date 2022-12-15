@@ -868,7 +868,7 @@ h3 {
       }
       svg {
         width: 41px;
-        height: 41px;
+        min-width: 41px;
         margin-right: 0.8rem;
       }
     }
@@ -895,9 +895,6 @@ h3 {
       }
       .address {
         margin-bottom: 2rem;
-        svg {
-          width: 18%;
-        }
       }
     }
     &__content {
@@ -1172,11 +1169,17 @@ h3 {
   }
 }
 @media (max-width: 1600px) {
-  h1, h2 {
+  h1 {
     font-size: 3em;
   }
   h2 {
     font-size: 1.6em;
+  }
+  h3 { 
+    font-size: 1em;
+  }
+  .button {
+    padding: 0.6rem 1rem;
   }
   .school{
     &__text {
@@ -1266,8 +1269,72 @@ h3 {
     }
   }
   .popup {
+    &__close {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
     &__title {
       font-size: 1.5em;
+    }
+    .test {
+      &__header {
+        span {
+          font-size: 0.9em;
+        }
+      }
+      &__title {
+        margin-bottom: 1rem;
+        font-size: 0.9em;
+      }
+      &__text {
+        margin-bottom: 1rem;
+        font-size: 0.8em;
+        line-height: 1.3em;
+      }
+      &__span {
+        margin-bottom: 1rem;
+        font-size: 0.8em;
+      }
+      &__tel {
+        margin-bottom: 1rem;
+        font-size: 1em;
+        line-height: 1;
+      }
+      &__link {
+        a {
+          font-size: 0.7em;
+        }
+        svg {
+          width: 30px;
+          min-width: 30px;
+          margin-right: 0.6rem;
+        }
+      }
+      &__connect {
+        .address {
+          line-height: 1;
+          margin-bottom: 1rem;
+        }
+      }
+      &__wrap {
+        margin-bottom: 1rem;
+        font-size: 0.9em;
+      }
+      &__main {
+        padding: 2rem;
+      }
+      &__question {
+        margin-bottom: 2rem;
+      }
+      &__answer {
+        padding: 0.6rem 1rem;
+        label {
+          font-size: 0.8em;
+          margin-left: 0.8rem;
+        }
+      }
     }
     .result {
       &__main {
@@ -1277,6 +1344,12 @@ h3 {
         padding: 2rem;
         padding-top: 0;
       }
+    }
+  }
+  .test_prev  {
+    svg {
+      width: 45px;
+      height: 45px;
     }
   }
 }
@@ -1450,6 +1523,82 @@ h3 {
     &__container {
       &::before {
         content: none;
+      }
+    }
+  }
+  .popup {
+    &__close {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .test {
+      &__header {
+        span {
+          font-size: 0.8em;
+        }
+      }
+      &__text {
+        font-size: 0.7em;
+        line-height: 1.3em;
+      }
+      &__span {
+        font-size: 0.7em;
+        line-height: 1;
+      }
+      &__link {
+        a {
+          font-size: 0.6em;
+        }
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      &__tel {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      &__item {
+        grid-template-columns: 1fr 200px;
+      }
+      &__img {
+        height: 200px;
+        padding: 1rem;
+      }
+      &__connect {
+        padding: 1rem;
+        padding-top: 2rem;
+        padding-right: 2rem;
+      }
+      &__main {
+        padding-bottom: 1rem;
+      }
+      &__wrap {
+        font-size: 0.8em;
+      }
+      &__answer {
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 1rem;
+      }
+      &_next {
+        font-size: 0.8em;
+      }
+      &__arrows {
+        svg {
+          width: 15px;
+          height: 11px;
+        }
+      }
+      &_prev {
+        margin-right: 1rem;
+        svg {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
   }
@@ -1662,6 +1811,52 @@ h3 {
       &::before {
         width: 330px;
         height: 330px;
+      }
+    }
+  }
+  .popup {
+    .test {
+      &__title {
+        font-size: 0.8em;
+        line-height: 1.1em;
+      }
+      &__text {
+        font-size: 0.6em;
+      }
+      &__item {
+        grid-template-columns: 1fr 150px;
+      }
+      &__img {
+        height: 150px;
+        padding: 1rem;
+      }
+      &__header {
+        padding: 1rem;
+      }
+      &__main {
+        padding: 1rem;
+      }
+      &__answer {
+        label {
+          margin-left: 0.4rem;
+        }
+      }
+      &__wrap {
+        margin-bottom: 0.6rem;
+      }
+      &__bar {
+        height: 6px;
+        .bar {
+          height: 6px;
+        }
+      }
+      &__link {
+        svg {
+          margin-right: 0.4rem;
+        }
+      }
+      &__footer {
+        padding: 1rem;
       }
     }
   }
