@@ -77,7 +77,6 @@ window.addEventListener('load', () => {
     let levelsBtn = document.querySelector(".levels__button");
     let popupBtn = document.querySelectorAll(".popup__btn");
     let resultBtn = document.querySelector(".test__res");
-    let q_id = $('.test__slider').slick('slickCurrentSlide') + 1;
     $(levelsBtn).on('click', () => {
         $(popup).fadeIn();
         $(popPeople).fadeIn();
@@ -110,21 +109,12 @@ window.addEventListener('load', () => {
       }
     });
 
-
-    let testForm = document.forms.test;
-    let answer = testForm.elements[`radio_${q_id}`];
-    
-    if(testForm) {
-      console.log(answer)
-    }
   }
 
   $('.test__slider').each(function(){
     let $slickElement = $(this);
     $slickElement.on('afterChange', function(event, slick, currentSlide, nextSlide){
-      q_id = $('.test__slider').slick('slickCurrentSlide') + 1;
       progressBarUpdate(currentSlide);
-      console.log(answer)
     });
   });
 

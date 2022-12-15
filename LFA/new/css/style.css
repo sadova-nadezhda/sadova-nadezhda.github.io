@@ -1137,6 +1137,12 @@ h3 {
     bottom: -10%;
     right: -1%;
   }
+  .popup__result {
+    max-width: 85%;
+  }
+  .popup__test {
+    max-width: 85%;
+  }
   .popup .test__main {
     padding: 3rem;
     padding-left: 2rem;
@@ -1871,6 +1877,11 @@ h3 {
   }
   .list__item {
     border-radius: 10px;
+  }
+  .popup__test {
+    height: 90%;
+    overflow-y: auto;
+    grid-template-columns: 100%;
   }
 }
 @media (max-width: 625px) {
