@@ -2027,7 +2027,7 @@ h3 {
     justify-content: flex-end;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .school__images {
     margin: 0;
   }
