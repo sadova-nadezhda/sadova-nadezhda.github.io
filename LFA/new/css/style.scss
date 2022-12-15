@@ -2211,6 +2211,20 @@ h3 {
   }
 }
 @media (max-width: 520px) {
+  .header {
+    &__nav {
+      width: 100%;
+      order: 1;
+    }
+    &__logo {
+      width: 15%;
+      height: 15%;
+    }
+  }
+  .nav__list {
+    justify-content: center;
+    margin-top: 1rem;
+  }
   .popup {
     .test {
       &__item {
@@ -2240,20 +2254,6 @@ h3 {
   }
 }
 @media (max-width: 420px) {
-  .header {
-    &__nav {
-      width: 100%;
-      order: 1;
-    }
-    &__logo {
-      width: 15%;
-      height: 15%;
-    }
-  }
-  .nav__list {
-    justify-content: center;
-    margin-top: 1rem;
-  }
   .school {
     &__images {
       margin: 0;
