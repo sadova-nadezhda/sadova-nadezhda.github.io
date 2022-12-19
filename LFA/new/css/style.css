@@ -1588,9 +1588,6 @@ h6 {
   .levels__list {
     gap: 0.7rem 2rem;
   }
-  .levels__list li {
-    font-size: 0.8em;
-  }
   .levels__list li::before {
     width: 25px;
     height: 25px;
@@ -1758,12 +1755,18 @@ h6 {
   .team__card:nth-child(even)::after {
     content: none;
   }
+  .team__card .card__text {
+    font-size: 1em;
+  }
   .partners__cards {
     grid-template-columns: repeat(4, 1fr);
   }
   .services__reviews svg {
     width: 40px;
     height: 40px;
+  }
+  .footer__column, .footer__copy {
+    font-size: 1em;
   }
 }
 @media (max-width: 800px) {
@@ -1947,7 +1950,7 @@ h6 {
     grid-template-columns: 1fr;
   }
   .footer__copy {
-    display: block;
+    display: grid;
   }
   .slick_arrow {
     top: -70px;
