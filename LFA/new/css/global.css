@@ -42,11 +42,8 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.3em;
   color: #283071;
-  font-size: 24px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
+  font: 400 1em/1.3 'Nunito Sans';
 }
 
 ul[class],
@@ -93,7 +90,7 @@ input[type="radio"] {
 
 /*container*/
 .container {
-  max-width: 1740px;
+  max-width: 1732px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;

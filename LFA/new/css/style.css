@@ -118,7 +118,7 @@ body {
   background-color: #7FD856;
   border: none;
   border-radius: 1.25rem;
-  font: 0.92em/1 "Nunito";
+  font: 500 0.92em/1 "Nunito";
   color: #283071;
   transition: all 0.3s ease;
 }
@@ -140,6 +140,19 @@ h2 {
 h3 {
   font: 700 1.25em/1.1 "Nunito";
   text-transform: uppercase;
+}
+
+h4 {
+  font: 700 1em/1.1 "Nunito";
+  text-transform: uppercase;
+}
+
+h5 {
+  font: 700 0.8em/1.1 "Nunito";
+}
+
+h6 {
+  font: 700 0.75em/1.1 "Nunito";
 }
 
 /*----- start section School -----*/
@@ -606,7 +619,7 @@ h3 {
   max-width: 50%;
 }
 .team__slider {
-  width: 105.5%;
+  width: 105%;
   margin-left: auto;
 }
 .team__card {
@@ -820,7 +833,6 @@ h3 {
   pointer-events: none;
 }
 .popup__title {
-  max-width: 465px;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -1161,12 +1173,12 @@ h3 {
     padding-top: 0;
   }
 }
-@media (max-width: 1600px) {
+@media (max-width: 1650px) {
   h1 {
-    font-size: 3em;
+    font-size: 4em;
   }
   h2 {
-    font-size: 1.6em;
+    font-size: 1.75em;
   }
   h3 {
     font-size: 1em;
@@ -1198,6 +1210,9 @@ h3 {
     width: 100px;
     height: 80px;
   }
+  .levels__container::before {
+    width: 48%;
+  }
   .levels__text {
     font-size: 1em;
   }
@@ -1222,6 +1237,7 @@ h3 {
   }
   .team__wrap {
     padding: 3rem;
+    width: 96%;
   }
   .team__card {
     padding: 1rem;
@@ -1252,12 +1268,12 @@ h3 {
   .popup__title {
     font-size: 1.5em;
   }
-  .popup .test__header span {
-    font-size: 0.9em;
+  .popup__peoples {
+    width: 40%;
   }
   .popup .test__title {
     margin-bottom: 1rem;
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
   }
   .popup .test__text {
     margin-bottom: 1rem;
@@ -1272,9 +1288,6 @@ h3 {
     margin-bottom: 1rem;
     font-size: 1em;
     line-height: 1;
-  }
-  .popup .test__link a {
-    font-size: 0.7em;
   }
   .popup .test__link svg {
     width: 30px;
@@ -1299,8 +1312,10 @@ h3 {
     padding: 0.6rem 1rem;
   }
   .popup .test__answer label {
-    font-size: 0.8em;
     margin-left: 0.8rem;
+  }
+  .popup .test__link a {
+    font-size: 0.7em;
   }
   .popup .result__main {
     padding: 2rem;
@@ -1322,7 +1337,7 @@ h3 {
     font-size: 3em;
   }
   h2 {
-    font-size: 1.4em;
+    font-size: 1.45em;
   }
   .school {
     padding-top: 8rem;
@@ -1365,9 +1380,6 @@ h3 {
     width: 312px;
     height: 337px;
   }
-  .levels__text {
-    font-size: 1em;
-  }
   .levels__list {
     gap: 0.7rem 4.5rem;
   }
@@ -1396,7 +1408,6 @@ h3 {
   }
   .popup .result__text {
     padding: 0.6rem 3rem;
-    font-size: 1em;
   }
   .popup .result__test {
     padding: 0.6rem 1rem;
@@ -1410,14 +1421,8 @@ h3 {
   }
 }
 @media (max-width: 1360px) {
-  html {
-    font-size: 20px;
-  }
   .header__button {
     display: none;
-  }
-  .school__text {
-    font-size: 1em;
   }
   .school__images::before {
     width: 100px;
@@ -1438,9 +1443,6 @@ h3 {
     width: 430px;
     height: 430px;
   }
-  .school__social {
-    font-size: 0.9em;
-  }
   .school__social svg {
     width: 35px;
     height: 35px;
@@ -1459,20 +1461,6 @@ h3 {
     width: 18px;
     height: 18px;
   }
-  .popup .test__header span {
-    font-size: 0.8em;
-  }
-  .popup .test__text {
-    font-size: 0.7em;
-    line-height: 1.3em;
-  }
-  .popup .test__span {
-    font-size: 0.7em;
-    line-height: 1;
-  }
-  .popup .test__link a {
-    font-size: 0.6em;
-  }
   .popup .test__link svg {
     width: 25px;
     height: 25px;
@@ -1490,7 +1478,6 @@ h3 {
   }
   .popup .test__connect {
     padding: 1rem;
-    padding-top: 2rem;
     padding-right: 2rem;
   }
   .popup .test__main {
@@ -1523,17 +1510,17 @@ h3 {
   }
 }
 @media (max-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
   h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   .nav__list li {
     margin-right: 1rem;
-  }
-  .button {
-    padding: 0.7rem 1rem;
   }
   .school {
     padding-top: 7rem;
@@ -1549,9 +1536,6 @@ h3 {
   }
   .school__img_girl {
     height: 400px;
-  }
-  .school__social {
-    font-size: 0.9em;
   }
   .school__social svg {
     width: 28px;
@@ -1653,7 +1637,7 @@ h3 {
     margin-bottom: 2rem;
   }
   .team__slider {
-    width: 105%;
+    width: 104%;
   }
   .team__slider svg {
     width: 40px;
@@ -1671,6 +1655,7 @@ h3 {
   }
   .popup__title {
     font-size: 1.2em;
+    max-width: 80%;
   }
   .popup__peoples {
     padding: 3rem;
@@ -1688,14 +1673,8 @@ h3 {
   .header__lang-switch {
     font-size: 0.8em;
   }
-  .button {
-    font-size: 0.8em;
-  }
   .school__title span {
     max-width: 320px;
-  }
-  .school__text {
-    font-size: 0.9em;
   }
   .school__img _girl {
     width: 360px;
@@ -1705,12 +1684,8 @@ h3 {
     width: 330px;
     height: 330px;
   }
-  .popup .test__title {
-    font-size: 0.8em;
-    line-height: 1.1em;
-  }
-  .popup .test__text {
-    font-size: 0.6em;
+  .team__wrap {
+    width: 93.5%;
   }
   .popup .test__item {
     grid-template-columns: 1fr 150px;
@@ -1748,6 +1723,9 @@ h3 {
   html {
     font-size: 18px;
   }
+  h1 {
+    font-size: 2em;
+  }
   .header__lang-switch {
     font-size: 0.7em;
   }
@@ -1755,11 +1733,7 @@ h3 {
     padding: 0.5rem 0.6rem;
   }
   .button {
-    font-size: 0.8em;
-    padding: 0.6rem 1.1rem;
-  }
-  .school__text {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .about__list::after {
     top: unset;
@@ -1776,7 +1750,7 @@ h3 {
     padding: 1.5rem;
   }
   .team__slider {
-    width: 104%;
+    width: 103%;
   }
   .team__card:nth-child(odd)::after {
     content: none;
@@ -1864,9 +1838,6 @@ h3 {
     width: 250px;
     height: 250px;
   }
-  .school__social {
-    font-size: 1em;
-  }
   .about__container {
     padding: 1.8rem;
   }
@@ -1875,7 +1846,6 @@ h3 {
   }
   .about__text {
     margin-bottom: 1.8rem;
-    font-size: 1em;
   }
   .about__list ::after {
     content: none;
@@ -1888,10 +1858,6 @@ h3 {
   }
   .levels__text {
     margin-bottom: 1.8rem;
-    font-size: 1em;
-  }
-  .levels__list {
-    font-size: 1em;
   }
   .list__item {
     border-radius: 10px;
@@ -1906,6 +1872,9 @@ h3 {
   }
   .popup__result::after {
     content: none;
+  }
+  .popup .address span {
+    max-width: 200px;
   }
 }
 @media (max-width: 625px) {
