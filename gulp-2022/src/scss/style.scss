@@ -1,0 +1,24 @@
+@import "fonts";
+@import "vars.scss";
+@import "global.scss";
+@import "mixins.scss";
+
+.info {
+  min-height: 100vh;
+  padding: 5rem 0;
+  color: $white;
+  background: $black;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    margin-bottom: 2rem;
+  }
+  &__img {
+    width: 400px;
+    height: 400px;
+    img {
+      @include full-img-cover;
+    }
+  }
+}
