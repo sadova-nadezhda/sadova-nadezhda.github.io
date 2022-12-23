@@ -3,22 +3,37 @@
 @import "global.scss";
 @import "mixins.scss";
 
-.info {
-  min-height: 100vh;
-  padding: 5rem 0;
-  color: $white;
-  background: $black;
-  &__title {
-    margin-bottom: 1.5rem;
+.cabinet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 66% 34%;
+    min-height: 100vh;
   }
-  &__text {
-    margin-bottom: 2rem;
+  &__images {
+    padding: 2rem;
+    background: linear-gradient(206.57deg, #679CF6 16.67%, #4072EE 100%);
   }
   &__img {
-    width: 400px;
-    height: 400px;
+    @include position-abs;
     img {
-      @include full-img-cover;
+      height: 100vh;
+      object-fit: contain;
     }
+  }
+  &__logo {
+    display: block;
+    width: 9%;
+    height: 2.2%;
+  }
+  &__content {
+    padding: 2rem;
+  }
+  &__title {
+    margin-bottom: 1.5rem;
   }
 }

@@ -5,35 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20221219165839">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221223161352">
 </head>
 <body>
-  <header class="header">
-  <div class="container">
-    <div class="header__container">
-      
-    </div>
-  </div>
-</header>
+
   <main>
-    <section class="info">
-      <div class="container">
-        <div class="info__container">
-          <h1 class="info__title title">Lorem Ipsum</h1>
-          <div class="info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-          <div class="info__img"><picture><source srcset="img/avatar.webp" type="image/webp"><img src="img/avatar.jpg" alt=""></picture></div>
+    <section class="cabinet">
+      <div class="cabinet__container">
+        <div class="cabinet__images">
+          <span class="cabinet__logo"><img src="img/logo.svg" alt=""></span>
+          <div class="cabinet__img"><img src="img/Illustration.png" alt=""></div> 
+        </div>
+        <div class="cabinet__content">
+          <h1 class="cabinet__title title">База знаний</h1>
+          <div class="cabinet__subtitle">добро пожаловать в <span>Astana Creative</span></div>
+          <form action="" class="cabinet__form form">
+            <div class="cabinet__input">
+              <label for="form__name">Введи свое имя</label>
+              <input type="text" id="form__name">
+            </div>
+            <div class="cabinet__input">
+              <label for="form__password">Пароль</label>
+              <input type="password" id="form__password">
+              <span>
+                <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1C1 1 3.91667 4.33333 9.33333 4.33333C14.75 4.33333 17.6667 1 17.6667 1M2.66667 2.37083L1 4.33333M17.6667 4.33333L16.0033 2.37333M6.76167 4.06667L6 6.41667M11.8858 4.07333L12.6667 6.41667" stroke="#949494" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+              </span>
+            </div>
+            <button class="cabinet__button button">Войти в систему</button>
+            <div class="cabinet__forget">Забыл пароль? <a href="#">Нажми сюда</a></div>
+          </form>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
-  <div class="container">
-    <div class="footer__container">
-      
-    </div>
-  </div>
-</footer>
 
-  <script src="js/app.min.js?_v=20221219165839"></script>
+
+  <script src="js/app.min.js?_v=20221223161352"></script>
 </body>
 </html>

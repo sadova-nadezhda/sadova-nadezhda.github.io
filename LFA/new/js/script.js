@@ -1,10 +1,174 @@
 let total = document.querySelector('.test__result span');
 let bar = document.querySelector('.test__bar .bar');
 let resultBtn = document.querySelector('.test__res');
-let totalInt = document.querySelectorAll('.test__answer input');
-let allSlide = $('.test__slider').find('.test__item').length;
+
+/*test*/
+let sended = false;
+let popup = document.querySelector("#popup");
+let popupBtn = document.querySelectorAll('.popup__btn');
+let testPopup = document.querySelector('.popup__test');
+
+let data = {
+  "child_test": { 
+    "questions": 
+    [
+     {
+       "question" : "1. Question Text Example",
+       "answers": {
+        "45" : 'Курица',
+        "12" : 'Яйцо',
+      },
+       "img": "../img/back-3.png"
+     },
+     {
+      "question" : "2. Question Text Example",
+      "answers": [
+        {
+          "answer": 'Курица', 
+          "right": false
+        },
+        {
+          "answer": 'Яйцо', 
+          "right": true
+        }
+       ],
+      "img": ""
+     },
+    ],
+    "name":"Тест для детей",
+    "levels": {}
+  },
+  "adults_test": {
+    "questions" :
+    [
+      {
+        "question" : "3. Question Text Example",
+        "answers": {
+          "85" : 'Курица',
+          "05" : 'Яйцо',
+        },
+          "img": ""
+      },
+      {
+        "question" : "4. Question Text Example",
+        "answers": [
+          {
+            "answer": 'Курица', 
+            "right": false
+          },
+          {
+            "answer": 'Яйцо', 
+            "right": true
+          }
+          ],
+          "img": ""
+      }
+    ],
+    "name":"Тест для взрослых",
+    "levels": {}
+  }
+};
+
+
+let testHtml = '';
+let sliderTest = document.querySelector('.test__slider');
+// let itemTest = document.createElement('div');
+// itemTest.classList.add('test__item');
+
 
 window.addEventListener('load', () => {
+  /*test*/
+  function createItem(item,qInd) {
+    let imgTest = '';
+    if(item.img) {
+      imgTest = `<div class="test__img"><img src="${item.img}" alt></div>`;
+    }
+    let answerTest = '';
+    item.answers.forEach((ans, ind) => {
+      console.log(ans)
+      answerTest+= `<div class="test__answer"><input value="${ind}" type="radio" name="radio_${qInd}" id="answer-${qInd+"-"+ind}"><label for="answer-${qInd+"-"+ind}">${ans}</label></div>`;
+    })
+    let itemHtml = `
+    <div class="test__item">
+      <div class="test__wrap">
+        <h3 class="test__question caption">${item.question}</h3>
+          ${answerTest}
+      </div>
+      <div class="test__image">
+          ${imgTest}
+      </div>
+    </div>`;
+    testHtml += itemHtml;
+  }
+  function testSlider() {
+    /*form question*/
+    $('.test__slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      swipe: false,
+      fade: true,
+      arrows: true,
+      nextArrow: '.test_next',
+      prevArrow: '.test_prev', 
+      dots: false,
+    });
+  }
+  
+  function setTest(data) {
+    popupBtn.forEach(Tbtn => {
+      Tbtn.addEventListener('click', e => {
+        const target = e.target;
+        let titleTest = testPopup.querySelector('.test__header span');
+        console.log(target.classList)
+        if(target.classList.contains('child_test')){ 
+          //data.child_test
+          console.log(data.child_test)
+          titleTest.innerHTML = data.child_test.name;
+          data.child_test.questions.forEach((qElem, i) => {
+            createItem(qElem,i);
+          });
+          sliderTest.innerHTML = testHtml;
+          testSlider();
+        }
+        else if(target.classList.contains('adults_test')) {
+          //data.adults_test
+          console.log(data.adults_test)
+          titleTest.innerHTML = data.adults_test.name;
+          data.adults_test.questions.forEach((aElem, i) => {
+            createItem(aElem,i);
+          });
+          sliderTest.innerHTML = testHtml;
+          testSlider();
+        }
+        /*form button*/
+        let slide = document.querySelectorAll('.test__item');
+        let btnPrev = document.querySelector('.test_prev');
+        let btnNext = document.querySelector('.test_next');
+        let btnResut = document.querySelector('.test__res');
+        let slideLast = slide[slide.length - 1] ;
+        if(slideLast) {
+          slideLast.classList.add('slide_last');
+        }
+        if (btnPrev && btnNext) {
+          $('.test__slider').on('afterChange', function() {
+            if (!(slideLast.classList.contains('slick-active'))) {
+              btnNext.style.display = 'flex';
+              btnResut.style.display = 'none';
+            } else {
+              btnNext.style.display = 'none';
+              btnResut.style.display = 'block';
+            }
+            $('.test__slider').slick('setPosition');
+          });
+        }
+      });
+    })
+  }
+  
+  console.log('setTest')
+  setTest(data);
+
   /*team slider*/
   $('.team__slider').slick({
     slidesToShow: 4,
@@ -36,49 +200,14 @@ window.addEventListener('load', () => {
     ] 
   });
 
-  /*form question*/
-  $('.test__slider').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipe: false,
-    fade: true,
-    arrows: true,
-    nextArrow: '.test_next',
-    prevArrow: '.test_prev', 
-    dots: false,
-  });
-
-  /*form button*/
-  let slide = document.querySelectorAll('.test__item');
-  let btnPrev = document.querySelector('.test_prev');
-  let btnNext = document.querySelector('.test_next');
-  let btnResut = document.querySelector('.test__res');
-  let slideLast = slide[slide.length - 1] ;
-  if(slideLast) {
-    slideLast.classList.add('slide_last');
-  }
-  if (btnPrev && btnNext) {
-    $('.test__slider').on('afterChange', function() {
-      if (!(slideLast.classList.contains('slick-active'))) {
-        btnNext.style.display = 'flex';
-        btnResut.style.display = 'none';
-      } else {
-        btnNext.style.display = 'none';
-        btnResut.style.display = 'block';
-      }
-      $('.test__slider').slick('setPosition');
-    });
-  }
+  
 
   /*popup*/
-  let popup = document.querySelector("#popup");
   if (popup) {
     let popPeople = document.querySelector('.popup__peoples');
     let popTest = document.querySelector('.popup__test');
     let popResult = document.querySelector('.popup__result');
     let levelsBtn = document.querySelector(".levels__button");
-    let popupBtn = document.querySelectorAll(".popup__btn");
     $(levelsBtn).on('click', () => {
         $(popup).fadeIn();
         $(popPeople).fadeIn();
@@ -87,13 +216,26 @@ window.addEventListener('load', () => {
     });
     $(popupBtn).each( function() {
       $(this).on('click', () => {
+        let totalInt = document.querySelectorAll('.test__answer input');
+        let allSlide = $('.test__slider').find('.test__item').length;
         $(popTest).fadeIn();
-        $('.test__slider').slick('setPosition');
-        $('.test__slider').slick('slickGoTo', 0);
+        // $('.test__slider').slick('setPosition');
+        // $('.test__slider').slick('slickGoTo', 0);
         $(popPeople).hide();
         $(popResult).hide();
         progressBarUpdate(0);
-        
+        if(totalInt){
+          totalInt.forEach( elem => {
+            elem.addEventListener('change', ()=>{
+              let totalCheck = document.querySelectorAll('.test__answer input:checked');
+              if(totalCheck.length == allSlide) {
+                resultBtn.removeAttribute('disabled');
+              } else {
+                resultBtn.setAttribute('disabled','disabled');
+              }
+            });
+          });
+        }
       })
     });
     $(resultBtn).on('click', () => {
@@ -111,6 +253,28 @@ window.addEventListener('load', () => {
       }
     });
   }
+  if(testPopup) {
+    if( !sended ){
+      sended = true;
+      $.ajax({
+        method: "GET",
+        url: '/exams',
+      })
+      .done(function( data ) {
+        sended = false;
+        if(data.status==0) {
+          alert(data.result) //нет сообщений о ошибке
+        }
+        else if (data.status==1) {
+          setTest(data);
+        }
+      })
+      .fail(function( data ){
+        sended = false;
+        alert(data.responseText); //тоже нет 
+      });
+    }
+  }
 
   $('.test__slider').each(function(){
     let $slickElement = $(this);
@@ -119,22 +283,10 @@ window.addEventListener('load', () => {
     });
   });
 
-  if(totalInt){
-    totalInt.forEach( elem => {
-      elem.addEventListener('change', ()=>{
-        let totalCheck = document.querySelectorAll('.test__answer input:checked');
-        if(totalCheck.length == allSlide) {
-          resultBtn.removeAttribute('disabled');
-        } else {
-          resultBtn.setAttribute('disabled','disabled');
-        }
-      });
-    });
-  }
-
 });
 
 function progressBarUpdate(currentSlide) {
+  let allSlide = $('.test__slider').find('.test__item').length;
   let indexSlide = (currentSlide ? currentSlide : 0) + 1;			   
   let progress = Math.ceil((indexSlide*100)/allSlide);
 

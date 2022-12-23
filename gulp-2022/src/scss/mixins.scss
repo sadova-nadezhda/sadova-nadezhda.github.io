@@ -9,3 +9,9 @@
   height: 100%;
   object-fit: contain;
 }
+
+@mixin position-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
