@@ -31,9 +31,78 @@
     height: 2.2%;
   }
   &__content {
-    padding: 2rem;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    padding: 2rem 7.2rem;
   }
   &__title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.625rem;
+    font: 500 3.125em/1 futura ;
+  }
+  &__subtitle {
+    margin-bottom: 3.125rem;
+    color: $gray;
+    font-size: 1.5em;
+    span {
+      border-bottom: 1px solid $gray;
+    }
+  }
+  &__input {
+    position: relative;
+    display: grid;
+    label {
+      font-size: 1.25em;
+      color: $gray;
+    }
+    input {
+      width: 100%;
+      padding: 0.875rem 0;
+      margin-bottom: 1.25rem;
+      border: none;
+      border-bottom: 1px solid #B5D4F5;
+      background-color: transparent;
+      font: 500 1.5em/1 futura;
+    }
+  }
+  &__pass {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    svg {
+      pointer-events: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__button {
+    width: 100%;
+    padding: 1.125rem 3.125rem;
+    margin-bottom: 1.875rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #6095F5;
+    color: $light;
+    font: 500 1.5em/1 futura;
+    &:hover {
+      background-color: $main;
+    }
+  }
+  &__forget {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    a {
+      border-bottom: 1px solid $gray;
+      @include transition;
+      &:hover {
+        color: $main;
+        border-color: $main;
+      }
+    }
   }
 }
