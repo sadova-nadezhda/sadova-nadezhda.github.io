@@ -108,8 +108,27 @@ select {
   padding: 0.625rem 3.125rem;
   border: none;
   border-radius: 0.5rem;
+  background-color: $btn;
+  color: $light;
   @include transition;
+  &__txt {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #5A5A5A;
+    background-color: transparent;
+    color: #5A5A5A;
+    line-height: 1.2em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &:hover {
     cursor: pointer;
+    background-color: #81BECE;
   }
+}
+
+h4 {
+  font: 500 1.5em/1 futura;
 }
