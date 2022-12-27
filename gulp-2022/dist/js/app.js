@@ -14,8 +14,12 @@ window.addEventListener('load', function() {
       inpPass.classList.toggle('view');
       if(inpPass.classList.contains('view')){
         inpPass.type = 'text';
+        eyeOpn.style.display = 'block';
+        eyeCLs.style.display = 'none';
       } else {
         inpPass.type = 'password';
+        eyeOpn.style.display = 'none';
+        eyeCLs.style.display = 'block';
       }
     });
   }
