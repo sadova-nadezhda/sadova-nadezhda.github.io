@@ -7,6 +7,7 @@ window.addEventListener('load', function() {
   let eyeCLs = password.querySelector('.icon ');
   let eyeOpn = password.querySelector('.icon-view');
   let inpPass = password.closest('.cabinet__input').querySelector('input');
+  let btn = document.querySelector('.cabinet__button');
 
   if(password){
     password.addEventListener('click', () =>{
