@@ -22,6 +22,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul,
 ol,
@@ -103,13 +105,42 @@ select {
   }
 }
 
+label {
+  font-size: 1.25em;
+  color: $gray;
+  @media (max-width: 767px) {
+    font-size: 1em;
+  }
+}
+input {
+  width: 100%;
+  padding: 0.875rem 0;
+  margin-bottom: 1.25rem;
+  border: none;
+  border-bottom: 1px solid $blueLight;
+  background-color: transparent;
+  font: 500 1.5em/1 futura;
+  @media (max-width: 1440px) {
+    padding: 0.8rem 0;
+    font-size: 1.25em;
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.8rem;
+    font-size: 1em;
+  }
+}
 
 .button {
+  display: block;
+  width: max-content;
   padding: 0.625rem 3.125rem;
   border: none;
   border-radius: 0.5rem;
   background-color: $btn;
   color: $light;
+  text-align: center;
   @include transition;
   &__txt {
     padding: 0;
@@ -123,12 +154,61 @@ select {
       cursor: pointer;
     }
   }
-  &:hover {
+  &_test {
+    background-color: $main;
+  }
+  &_result {
+    background-color: $blue;
+  }
+  &_fail {
+    background-color: $err;
+  }
+  &_disabled {
+    background-color: $darkGray;
+  }
+  &_progress {
+    background-color: $btn;
+  }
+  &:hover:not(:disabled) {
     cursor: pointer;
     background-color: #81BECE;
   }
+  &:disabled {
+    opacity: 0.5;
+  }
 }
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  position: relative;
+}
+
+ol > li:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  counter-increment: item;
+  content: counters(item, ".") " ";
+  padding-right: 1em; 
+}
+
+ol ol > li {
+  margin: 0;
+  margin-left: 1rem;
+  padding-left: 2rem;
+}
+
 
 h4 {
   font: 500 1.5em/1 futura;
+}
+h5 {
+  font: 500 1.25em/1 futura;
 }
