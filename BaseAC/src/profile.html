@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Профиль" })
+<body>
+  <div class="page">
+    @@include('html/header.html')
+    <div class="page__content">
+      @@include('html/wrapper.html', { "title": "Профиль" })
+      <main>
+        <article class="profile">
+          <div class="container">
+            <div class="profile__container">
+              <div class="profile__card">
+                <div class="profile__img"><img src="@img/profile.png" alt=""></div>
+                <a href="password.html" class="profile__button button">Сменить пароль</a>
+                <a class="profile__button button">Выйти из системы</a>
+              </div>
+              <div class="profile__wrap">
+                <div class="profile__header">
+                  <h4 class="">Контактная информация</h4>
+                  <button class="button__txt">Изменить</button>
+                </div>
+                <div class="profile__content">
+                  <div class="profile__inner">
+                    <span>Имя</span>
+                    <div class="profile__name">Индира</div>
+                  </div>
+                  <div class="profile__inner">
+                    <span>Фамилия</span>
+                    <div class="profile__lastname">Шынова</div>
+                  </div>
+                  <div class="profile__inner">
+                    <span>Должность</span>
+                    <div class="profile__post">UX/UI Дизайнер</div>
+                  </div>
+                  <div class="profile__inner">
+                    <span>Контактный e-mail</span>
+                    <div class="profile__mail">indirash@gmail.com</div>
+                  </div>
+                  <div class="profile__inner">
+                    <span>Подразделение</span>
+                    <div class="profile__subdivision">Разработка</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+      @@include('html/footer.html')
+    </div>
+  </div>
+  @@include('html/foot.html')
