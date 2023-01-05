@@ -1,6 +1,27 @@
 // import * as flsFunctions from "./modules/functions.js";
 // flsFunctions.isWebp();
 
+let data = {
+  "name": { 
+    "questions": 
+    [
+     {
+       "question" : "1. Знаешь как выглядит “Птица”?",
+       "answers": {
+        "45" : {
+          "answer": 'Вот она птица здесь',
+          'img': ''
+        },
+        "12" : {
+          "answer": 'Вот она птица здесь',
+          'img': ''
+        },
+      }
+     },
+    ]
+  }
+};
+
 window.addEventListener('load', function() {
 
   let body = document.querySelector('body');

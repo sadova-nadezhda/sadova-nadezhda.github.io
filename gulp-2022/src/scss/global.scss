@@ -169,6 +169,12 @@ input {
   &_progress {
     background-color: $btn;
   }
+  &_doc {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: $darkGray;
+  }
   &:hover:not(:disabled) {
     cursor: pointer;
     background-color: #81BECE;

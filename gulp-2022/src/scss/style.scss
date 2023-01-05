@@ -273,7 +273,7 @@
   padding: 1rem 0;
   margin-bottom: 3.75rem;
   background-color: #EFEFEF;
-  border-bottom: 1px solid $blueLight;
+  @include border-bottom;
   @media (max-width: 1440px) {
     margin-bottom: 3rem;
   }
@@ -363,8 +363,7 @@ main {
     height: 70%;
     padding: 1.5rem 2.25rem;
     margin-bottom: 1rem;
-    border-radius: 0.3rem;
-    border: 1px solid $blueLight;
+    @include border;
     @media (max-width: 1440px) {
       padding: 1.5rem 2rem;
     }
@@ -391,8 +390,7 @@ main {
   }
   &__wrap {
     padding: 1.5rem;
-    border-radius: 0.3rem;
-    border: 1px solid $blueLight;
+    @include border;
   }
   &__header {
     display: flex;
@@ -400,7 +398,7 @@ main {
     align-items: center;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid $blueLight;
+    @include border-bottom;
   }
   &__inner {
     margin-bottom: 2rem;
@@ -445,8 +443,7 @@ main {
   }
   &__container {
     padding: 3rem 1.5rem;
-    border: 1px solid $blueLight;
-    border-radius: 0.3rem;
+    @include border;
   }
   &__button {
     min-width: 150px;
@@ -461,7 +458,9 @@ main {
     border-top: 1px solid $blueLight;
     border-radius: 0.3rem;
     &:last-of-type {
-      border-bottom: 1px solid $blueLight;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      @include border-bottom;
     }
     &::before  {
       top: 2.9rem;
@@ -492,5 +491,46 @@ main {
         color: $btn;
       }
     }
+  }
+}
+.inner {
+  &__head {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include border-bottom;
+  }
+  &__title {
+    &_sm {
+      margin-bottom: 1.25rem;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  &__content {
+    margin-bottom: 1.5rem;
+    p {
+      margin-bottom: 1rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+  &__button {
+    margin: 0 auto;
+    margin-top: 4.375rem;
+  }
+}
+.test {
+  &__container {
+    padding: 1.5rem;
+    @include border;
+  }
+  &__head {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include border-bottom;
   }
 }

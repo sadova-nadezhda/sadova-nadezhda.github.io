@@ -265,6 +265,13 @@ input {
   background-color: #48A9A6;
 }
 
+.button_doc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #929292;
+}
+
 .button:hover:not(:disabled) {
   cursor: pointer;
   background-color: #81BECE;
@@ -499,6 +506,8 @@ h5 {
   padding: 1rem 0;
   margin-bottom: 3.75rem;
   background-color: #EFEFEF;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid #B5D4F5;
 }
 
@@ -602,6 +611,8 @@ main {
   align-items: center;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid #B5D4F5;
 }
 
@@ -651,8 +662,8 @@ main {
 
 .theory__container {
   padding: 3rem 1.5rem;
-  border: 1px solid #B5D4F5;
   border-radius: 0.3rem;
+  border: 1px solid #B5D4F5;
 }
 
 .theory__button {
@@ -669,6 +680,8 @@ main {
 }
 
 .accordion__item:last-of-type {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid #B5D4F5;
 }
 
@@ -706,6 +719,53 @@ main {
 
 .accordion__content a:hover {
   color: #48A9A6;
+}
+
+.inner__head {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #B5D4F5;
+}
+
+.inner__title_sm {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.inner__content {
+  margin-bottom: 1.5rem;
+}
+
+.inner__content p {
+  margin-bottom: 1rem;
+}
+
+.inner__content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.inner__content img {
+  margin-bottom: 1rem;
+}
+
+.inner__button {
+  margin: 0 auto;
+  margin-top: 4.375rem;
+}
+
+.test__container {
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #B5D4F5;
+}
+
+.test__head {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #B5D4F5;
 }
 
 @media (max-width: 1600px) {
