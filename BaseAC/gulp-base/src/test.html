@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Тестирование" })
+<body>
+  <div class="page">
+    @@include('html/header.html')
+    <div class="page__content">
+      @@include('html/wrapper.html', { "title": "Тестирование" })
+      <main>
+        <article class="test">
+          <div class="container">
+            <div class="test__container">
+              <div class="test__head">
+                <h4 class="test__title">Тест "Проектный менеджер"</h4>
+                <div class="test__time">
+                  <span>Время:</span>
+                  <span class="time">00:00</span>
+                </div>
+              </div>
+              <div class="test__content">
+                <form action="" class="test__form">
+                  <div class="test__questions test__slider">
+                    <div class="test__slide">
+                      <h5 class="test__question">
+                        1. Откуда можно получить доступ к файлам сайта? 
+                        <span>*</span>
+                      </h5>
+                      <div class="test__answers">
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-1" name="radio-1">
+                          <label for="answer-1"><span>FTP (ФТП)</span></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-2" name="radio-1">
+                          <label for="answer-2"><span>Панель Plesk</span></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-3" name="radio-1">
+                          <label for="answer-3"><span>Админка</span></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-4" name="radio-1">
+                          <label for="answer-4">
+                            <input type="text" name="variant" placeholder="Введите свой вариант">
+                            <!-- <textarea name="variant" placeholder="Введите свой вариант"></textarea> -->
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="test__slide">
+                      <h5 class="test__question">
+                        2. Откуда можно получить доступ к файлам сайта? 
+                        <span>*</span>
+                      </h5>
+                      <div class="test__answers">
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-5" name="radio-2">
+                          <label for="answer-5"><img src="@img/test-1.png" alt=""></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-6" name="radio-2">
+                          <label for="answer-6"><img src="@img/test-2.png" alt=""></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-7" name="radio-2">
+                          <label for="answer-7"><img src="@img/test-3.png" alt=""></label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-8" name="radio-2">
+                          <label for="answer-8"><img src="@img/test-4.png" alt=""></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="test__slide">
+                      <h5 class="test__question">
+                        3. Откуда можно получить доступ к файлам сайта? 
+                        <span>*</span>
+                      </h5>
+                      <div class="test__answers">
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-9" name="radio-3">
+                          <label for="answer-9">
+                            <img src="@img/test-1.png" alt="">
+                            <span>Вот она птица здесь</span> 
+                          </label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-10" name="radio-3">
+                          <label for="answer-10">
+                            <img src="@img/test-2.png" alt="">
+                            <span>Вот она птица здесь</span> 
+                          </label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-11" name="radio-3">
+                          <label for="answer-11">
+                            <img src="@img/test-3.png" alt="">
+                            <span>Вот она птица здесь Вот она птица здесь</span> 
+                          </label>
+                        </div>
+                        <div class="test__answer">
+                          <input type="checkbox" class="test__checkbox" id="answer-12" name="radio-3">
+                          <label for="answer-12">
+                            <img src="@img/test-4.png" alt="">
+                            <span>Вот она птица здесь Вот она птица здесь Вот она птица здесь</span> 
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test__footer">
+                    <div class="test__result">
+                      <div class="test__bar">
+                        <div class="bar">
+                          <div class="test__percent">0%</div>
+                        </div>
+                      </div>
+                      <div class="test__passed">
+                        Пройдено <span>16 из 47</span>
+                      </div>
+                    </div>
+                    <div class="test__arrows test__button">
+                      <a class="test__arrow test_prev">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" y="0.5" width="39" height="39" rx="4.5" stroke="#B4C6D0"/>
+                          <path d="M19.3333 27.6327L20.525 26.5903L14.2083 20.898L31 20.898L31 19.4014L14.2083 19.4014L20.525 13.7345L19.3333 12.6667L11 20.1497L19.3333 27.6327Z" fill="#B4C6D0"/>
+                        </svg>
+                      </a>
+                      <a class="test__arrow test_next button">
+                        <span>Далее</span>
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.5 15.5L9.4275 14.4552L15.1125 8.75L-5.90104e-07 8.75L-7.21238e-07 7.25L15.1125 7.25L9.4275 1.57025L10.5 0.499999L18 8L10.5 15.5Z" fill="#F9F8FE"/>
+                        </svg>                        
+                      </a>
+                      <button class="test__res button" style="display:none" disabled="disabled">
+                        Результаты             
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+      @@include('html/footer.html')
+    </div>
+  </div>
+  @@include('html/foot.html')

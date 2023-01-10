@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Тестирование" })
+<body>
+  <div class="page">
+    @@include('html/header.html')
+    <div class="page__content">
+      @@include('html/wrapper.html', { "title": "Тестирование" })
+      <main>
+        <article class="result">
+          <div class="container">
+            <div class="result__container">
+              <div class="result__head">
+                <h4 class="result__title">Тест "Проектный менеджер"</h4>
+              </div>
+              <div class="result__content">
+                <div class="result__processing result__box" style="display: none;">
+                  <h4 class="result__title">Вы прошли тестирование, ожидайте резальтатов. Спасибо!</h4>
+                  <div class="result__percent"></div>
+                  <div class="resuly__status">Статус: <span>В обработке</span></div>
+                </div>
+                <div class="result__done result__box" style="display: none;">
+                  <h4 class="result__title">Ваш результат тестирования</h4>
+                  <div class="result__percent percent">98%</div>
+                  <div class="resuly__status"> <span></span></div>
+                </div>
+                <div class="result__fail result__box">
+                  <h4 class="result__title">Ваш результат тестирования</h4>
+                  <div class="result__percent">41%</div>
+                  <div class="resuly__status">Статус: <span>Не пройдено</span></div>
+                  <button class="result__button button">Пройти еще раз</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+      @@include('html/footer.html')
+    </div>
+  </div>
+  @@include('html/foot.html')
