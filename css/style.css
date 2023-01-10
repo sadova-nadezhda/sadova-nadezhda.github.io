@@ -1102,10 +1102,6 @@ main {
   padding: 3rem;
 }
 
-.result__title {
-  text-align: center;
-}
-
 .result__box {
   display: flex;
   flex-direction: column;
@@ -1115,6 +1111,7 @@ main {
 
 .result__box .result__title {
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .result__percent {
