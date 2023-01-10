@@ -1,5 +1,4 @@
-// import * as flsFunctions from "./modules/functions.js";
-// flsFunctions.isWebp();
+
 let percent = document.querySelector('.test__percent');
 let bar = document.querySelector('.test__bar .bar');
 let resultBtn = document.querySelector('.test__res');
@@ -195,7 +194,7 @@ function progressBarUpdate(currentSlide) {
 }
 
 function countdownTimer() {
-  let deadlineTime = new Date( new Date().getTime() + (timeMinut * 60 * 1000) ); //установить таймер на 20 минут
+  let deadlineTime = new Date( new Date().getTime() + (timeMinut * 60 * 1000) ); //установить таймер на минуты
   let Timer = setInterval(function() {
     let nowDate = new Date().getTime();
     var residue = deadlineTime - nowDate;
