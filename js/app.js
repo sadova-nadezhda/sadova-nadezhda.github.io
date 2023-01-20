@@ -1,216 +1,150 @@
 
-let percent = document.querySelector('.test__percent');
-let bar = document.querySelector('.test__bar .bar');
-let resultBtn = document.querySelector('.test__res');
-let total = document.querySelector('.test__passed span');
-let slide = document.querySelectorAll('.test__slide');
-let btnPrev = document.querySelector('.test_prev');
-let btnNext = document.querySelector('.test_next');
-
-let time = document.querySelector('.time');
-let timeMinut = 20;
-
 window.addEventListener('load', function() {
-
-  let burger = document.querySelector('.wrapper__burger');
-  let menu = document.querySelector('.header');
-
+  let link = document.querySelector('.header__burger');
+  let menu = document.querySelector('.header__nav');
   if(menu){
-    burger.addEventListener('click', function () {
-      burger.classList.toggle('active');
+    link.addEventListener('click', function () {
+      link.classList.toggle('active');
       menu.classList.toggle('open');
     }, false);
     window.addEventListener('scroll', () => {
       if (menu.classList.contains('open')) {
-        burger.classList.remove('active');
+        link.classList.remove('active');
           menu.classList.remove('open');
       }
     })
     document.addEventListener('click', e => {
       let target = e.target;
-      if (!(target.classList.contains('header')) && !(target.classList.contains('wrapper__burger'))) {
-          burger.classList.remove('active');
+      if (!(target.classList.contains('header__nav')) && !(target.classList.contains('header__burger')) && !(target.classList.contains('header__item'))) {
+          link.classList.remove('active');
           menu.classList.remove('open');
       }
     })
   }
 
-  let password = document.querySelectorAll('.pass__icons');
-  password.forEach( pass => {
-    let eyeCLs = pass.querySelector('.icon ');
-    let eyeOpn = pass.querySelector('.icon-view');
-    let inpPass = pass.closest('.input__box').querySelector('input');
-    if(pass){
-      pass.addEventListener('click', () =>{
-        inpPass.classList.toggle('view');
-        if(inpPass.classList.contains('view')){
-          inpPass.type = 'text';
-          eyeOpn.style.display = 'block';
-          eyeCLs.style.display = 'none';
-        } else {
-          inpPass.type = 'password';
-          eyeOpn.style.display = 'none';
-          eyeCLs.style.display = 'block';
-        }
-      });
-    }
-  });
-
-  let profileForm = document.querySelector('.profile__form');
-  let intPass = document.querySelectorAll("input[type='password']"); 
-  
-  if(profileForm) {
-    let newPass = profileForm.querySelector('#new__password');
-    let repeatPass = profileForm.querySelector('#repeat__password');
-    let updateBtn = profileForm.querySelector('.profile__button');
-    intPass.forEach( elem => {
-      elem.addEventListener('change', () => {
-        if(newPass.value == repeatPass.value) {
-          updateBtn.removeAttribute('disabled');
-        }
-      })
-    })
-  };
-
-  let accordion = this.document.querySelectorAll('.accordion__header');
-  accordion.forEach( acc => {
-    let titleAcc = acc.querySelector('h5');
-    titleAcc.addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = acc.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  });
-
-  $('.inner__slider_main').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: '<button type="button" class="slick_arrow slick_next"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-0.5" y="0.5" width="39" height="39" rx="4.5" transform="matrix(-1 0 0 1 39 0)" fill="#48A9A6" stroke="#B4C6D0"/><path d="M20.6667 27.6327L19.475 26.5903L25.7917 20.898L9 20.898L9 19.4014L25.7917 19.4014L19.475 13.7345L20.6667 12.6667L29 20.1497L20.6667 27.6327Z" fill="#F9F8FE"/></svg></button>',
-    prevArrow: '<button type="button" class="slick_arrow slick_prev"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="39" height="39" rx="4.5" fill="#48A9A6" stroke="#B4C6D0"/><path d="M19.3333 27.6327L20.525 26.5903L14.2083 20.898L31 20.898L31 19.4014L14.2083 19.4014L20.525 13.7345L19.3333 12.6667L11 20.1497L19.3333 27.6327Z" fill="#F9F8FE"/></svg></button>',
-    dots: false,
-    fade: true,
-    asNavFor: '.inner__slider',
-    responsive: [
-      {
-          breakpoint: 600,
-          settings: {
-            arrows: false
+  /*menu*/
+  const menuItm = document.querySelectorAll('.header__item');
+  if (menuItm){
+    menuItm.forEach(function(item, index) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('active');
+        this.parentNode.classList.toggle('open');
+        menuItm.forEach(function(item2, index2) {
+          if ( index !== index2 ) {
+            item2.parentNode.classList.remove('open');
+            item2.classList.remove('active');
           }
-      },
-  ]
-  });
-  $('.inner__slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.inner__slider_main',
-    arrows: false,
-    dots: false,
-    focusOnSelect: true,
-    // centerMode: true,
-    responsive: [
-      {
-          breakpoint: 1100,
-          settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1
-          }
-      },
-      {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: false,
-          }
-      },
-  ]
-  });
-  /*form question*/
-  $('.test__slider').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipe: false,
-    fade: true,
-    arrows: true,
-    nextArrow: '.test_next',
-    prevArrow: '.test_prev', 
-    dots: false,
-    adaptiveHeight: true
-  });
-  progressBarUpdate(0);
-  $('.test__slider').each(function(){
-    let $slickElement = $(this);
-    $slickElement.on('afterChange', function(event, slick, currentSlide, nextSlide){
-      progressBarUpdate(currentSlide);
-      let slideLast = slide[slide.length - 1] ;
-      if(slideLast) {
-        slideLast.classList.add('slide_last');
-      }
-      if (btnPrev && btnNext) {
-        $('.test__slider').on('afterChange', function() {
-          if (!(slideLast.classList.contains('slick-active'))) {
-            btnNext.style.display = 'flex';
-            resultBtn.style.display = 'none';
-          } else {
-            btnNext.style.display = 'none';
-            resultBtn.style.display = 'block';
-          }
-          $('.test__slider').slick('setPosition');
+          document.addEventListener('click', e => {
+            let target = e.target;
+            if (!(target.classList.contains('header__item')) && !(target.classList.contains('sub__menu')) && !(target.classList.contains('nav__menu'))) {
+              item2.parentNode.classList.remove('open');
+              item2.classList.remove('active');
+            }
+          });
+          window.addEventListener('scroll', () => {
+            if(item2.parentNode.classList.contains('open')){
+              item2.parentNode.classList.remove('open');
+              item2.classList.remove('active');
+            }
+          });
         });
-      }
+      });
     });
-  });
-  countdownTimer();
-});
-
-function progressBarUpdate(currentSlide) {
-  let allSlide = $('.test__slider').find('.test__slide').length;
-  let indexSlide = (currentSlide ? currentSlide : 0) + 1;			   
-  let progress = Math.ceil((indexSlide*100)/allSlide);
-
-  percent.textContent = progress + '%';
-  total.textContent = indexSlide + ' из ' + allSlide;
-
-  if(allSlide) {
-    resultBtn.removeAttribute('disabled');
-  } else {
-    resultBtn.setAttribute('disabled','disabled');
   }
 
-  $(bar).each(function () {
-    $(this).animate(
+  //sliders
+  $('.benefits__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    adaptiveHeight: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+		appendArrows: $(".benefits__arrows"),
+		prevArrow: '<div class="benefits__arrow benefits_prev"><svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.8591 5.00659L3.72125 5.00659L7.30675 1.72486C8.33679 0.782077 6.78994 -0.631859 5.76194 0.310921L2.49664 3.30239L0.31705 5.3006C0.113972 5.48735 -3.56924e-05 5.74011 -3.57154e-05 6.00359C-3.57384e-05 6.26708 0.113972 6.51984 0.317049 6.70659L5.76194 11.6981C5.86444 11.7947 5.98723 11.8712 6.12293 11.9231C6.25862 11.975 6.40439 12.0012 6.55145 12.0001C7.53196 12.0001 8.01558 10.9068 7.30675 10.2842L3.71308 7.00246L22.9147 7.00247C24.4248 6.93422 24.3119 4.93742 22.858 5.00613L22.8591 5.00659Z" fill="#F6F5EC"/></svg></div>',
+		nextArrow: '<div class="benefits__arrow benefits_next"><svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.13851 5.00659L21.2763 5.00659L17.6908 1.72486C16.6608 0.782077 18.2076 -0.631859 19.2356 0.310921L22.5009 3.30239L24.6805 5.3006C24.8836 5.48735 24.9976 5.74011 24.9976 6.00359C24.9976 6.26708 24.8836 6.51984 24.6805 6.70659L19.2356 11.6981C19.1331 11.7947 19.0103 11.8712 18.8746 11.9231C18.7389 11.975 18.5932 12.0012 18.4461 12.0001C17.4656 12.0001 16.982 10.9068 17.6908 10.2842L21.2845 7.00246L2.08284 7.00247C0.572757 6.93422 0.685618 4.93742 2.13953 5.00613L2.13851 5.00659Z" fill="#F6F5EC"/></svg></div>',
+		dots: true,
+		appendDots: $('.benefits__dots'),
+		dotsClass: 'slider-dots',
+    responsive: [
       {
-        width: progress + "%",
-      },1000
-    );
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
-}
+  /*mobile Slider*/
+  let flag = true;
 
-function countdownTimer() {
-  let deadlineTime = new Date( new Date().getTime() + (timeMinut * 60 * 1000) ); //установить таймер на минуты
-  let Timer = setInterval(function() {
-    let nowDate = new Date().getTime();
-    var residue = deadlineTime - nowDate;
-    let hour   = Math.floor( (residue % (1000 * 60 **3)) / (1000 * 60**2) ); 
-    let minutes = Math.floor( (residue % (1000 * 60**2)) / (1000 * 60) );
-    let seconds = Math.floor( (residue % (1000 * 60)) / 1000 );
-    hour = hour < 10 ? "0" + hour : hour;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    console.log(hour)
-    console.log(minutes)
-    console.log(seconds)
-    time.innerHTML = hour + ':' + minutes + ':' + seconds;
-    if (residue < 0) {
-      clearInterval(Timer);
-      alert("Время истекло!");
-     }
-  }, 1000);
+  $(window).on('resize', function(){
+    if ($(this).width() < 601 && flag) {
+      flag = false;
+      $('.js-slick-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        swipe: false,
+        dots: true
+      });
+    }
+    else if ($(this).width() > 600 && !flag) {
+      flag = true;
+      $('.js-slick-slider').slick('unslick');
+    }
+  }).resize();
+});
+
+// Form
+function submitForm() {
+  $("#form_loader").show();
+}
+// input mask tel
+$.fn.setCursorPosition = function (pos) {
+  if ($(this).get(0).setSelectionRange) {
+    $(this).get(0).setSelectionRange(pos, pos);
+  } else if ($(this).get(0).createTextRange) {
+    var range = $(this).get(0).createTextRange();
+    range.collapse(true);
+    range.moveEnd("character", pos);
+    range.moveStart("character", pos);
+    range.select();
+  }
+};
+$('input[type="tel"]')
+  .click(function () {
+    $(this).setCursorPosition(3);
+  })
+  .mask("+7 (999) 999 99 99");
+
+
+// alert
+let alertt = document.querySelector(".alert--fixed");
+let alertClose = document.querySelectorAll(".alert--close");
+for (let item of alertClose) {
+  item.addEventListener("click", function (event) {
+    alertt.classList.remove("alert--active");
+    alertt.classList.remove("alert--warning");
+    alertt.classList.remove("alert--error");
+  });
 }
