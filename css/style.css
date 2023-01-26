@@ -1228,62 +1228,6 @@ h6 {
   width: 45%;
 }
 
-.section {
-  padding: 100px 0;
-}
-
-.section_blue .box {
-  position: relative;
-}
-
-.section_blue .box__img::before {
-  background: linear-gradient(145.84deg, #4FBCD5 10.55%, #3BABC5 90.17%);
-}
-
-.section_blue .box__img::after {
-  background: linear-gradient(145.84deg, #4FBCD5 10.55%, #3BABC5 90.17%);
-}
-
-.section_blue .list ul li::before {
-  background: url("../img/marker-bl.svg") center no-repeat;
-}
-
-.section_blue .line::before {
-  background-color: #46B4CD;
-}
-
-.section_green .box__img::before {
-  background: linear-gradient(180deg, #3FBA73 0%, #34AC67 100%);
-}
-
-.section_green .box__img::after {
-  background: linear-gradient(180deg, #3FBA73 0%, #34AC67 100%);
-}
-
-.section_green .list ul li::before {
-  background: url("../img/marker-gr.svg") center no-repeat;
-}
-
-.section_green .line::before {
-  background-color: #3FBA73;
-}
-
-.section_orange .box__img::before {
-  background-color: #EFA75B;
-}
-
-.section_orange .box__img::after {
-  background-color: #EFA75B;
-}
-
-.section_orange .list ul li::before {
-  background: url("../img/marker-or.svg") center no-repeat;
-}
-
-.section_orange .line::before {
-  background-color: #EFA75B;
-}
-
 .col-2 .box {
   display: grid;
   align-items: center;
@@ -1384,6 +1328,62 @@ h6 {
   width: 79%;
   border: 3px dashed #EDCC1F;
   transform: rotate(-4deg);
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section_blue .box {
+  position: relative;
+}
+
+.section_blue .box__img::before {
+  background: linear-gradient(145.84deg, #4FBCD5 10.55%, #3BABC5 90.17%);
+}
+
+.section_blue .box__img::after {
+  background: linear-gradient(145.84deg, #4FBCD5 10.55%, #3BABC5 90.17%);
+}
+
+.section_blue .list ul li::before {
+  background: url("../img/marker-bl.svg") center no-repeat;
+}
+
+.section_blue .line::before {
+  background-color: #46B4CD;
+}
+
+.section_green .box__img::before {
+  background: linear-gradient(180deg, #3FBA73 0%, #34AC67 100%);
+}
+
+.section_green .box__img::after {
+  background: linear-gradient(180deg, #3FBA73 0%, #34AC67 100%);
+}
+
+.section_green .list ul li::before {
+  background: url("../img/marker-gr.svg") center no-repeat;
+}
+
+.section_green .line::before {
+  background-color: #3FBA73;
+}
+
+.section_orange .box__img::before {
+  background-color: #EFA75B;
+}
+
+.section_orange .box__img::after {
+  background-color: #EFA75B;
+}
+
+.section_orange .list ul li::before {
+  background: url("../img/marker-or.svg") center no-repeat;
+}
+
+.section_orange .line::before {
+  background-color: #EFA75B;
 }
 
 .documents__cards {
