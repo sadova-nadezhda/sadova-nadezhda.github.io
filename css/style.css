@@ -1060,7 +1060,7 @@ h6 {
 
 .anim__bl:nth-child(1) {
   left: 4%;
-  top: 0;
+  top: 5%;
   transform: rotate(6deg);
 }
 
