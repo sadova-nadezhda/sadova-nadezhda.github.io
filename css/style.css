@@ -1127,8 +1127,8 @@ h6 {
 .anim__bl_lf {
   -webkit-animation-name: left-table;
   animation-name: left-table;
--webkit-animation-duration: 6s;
-  animation-duration: 6s;
+-webkit-animation-duration: 4s;
+  animation-duration: 4s;
 -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 -webkit-animation-iteration-count: infinite;
