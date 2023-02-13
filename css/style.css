@@ -254,6 +254,10 @@ h6 {
   font: 400 1em/1.2 Roboto;
 }
 
+section {
+  overflow: hidden;
+}
+
 /*formLoader*/
 
 .form_loader {
@@ -1174,6 +1178,19 @@ h6 {
   }
 }
 
+/*canvas*/
+canvas {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(99.18deg, rgba(255, 255, 255, 0.2) 20.18%, rgba(255, 255, 255, 0) 80.99%), #CED1D6;
+}
 
 /*popup*/
 
@@ -1247,8 +1264,8 @@ h6 {
 /*Sections*/
 
 .accounting {
-  background: linear-gradient(99.18deg, rgba(255, 255, 255, 0.2) 20.18%, rgba(255, 255, 255, 0) 80.99%), #CED1D6;
-  background-image: url(../img/elements.png);
+  /* background: linear-gradient(99.18deg, rgba(255, 255, 255, 0.2) 20.18%, rgba(255, 255, 255, 0) 80.99%), #CED1D6; */
+  background-image: url(../img/elements.png) ;
   background-size: contain;
   background-position: 0 100%;
   background-repeat: no-repeat;
