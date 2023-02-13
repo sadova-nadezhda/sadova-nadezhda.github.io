@@ -1124,6 +1124,57 @@ h6 {
   transform: scale(1.1);
 }
 
+.anim__bl_lf {
+  -webkit-animation-name: left-table;
+  animation-name: left-table;
+-webkit-animation-duration: 6s;
+  animation-duration: 6s;
+-webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.anim__bl_rg {
+-webkit-animation-name: right-table;
+  animation-name: right-table;
+-webkit-animation-duration: 4s;
+  animation-duration: 4s;
+-webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@keyframes right-table {
+  0% {
+    transform: rotate3d(1, 1, 1, -5deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 1, -30deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, -5deg);
+  }
+}
+
+@keyframes left-table {
+  0% {
+    transform: rotate3d(1, 1, 1, 5deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 1, 30deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 5deg);
+  }
+}
+
+
 /*popup*/
 
 .popup {
