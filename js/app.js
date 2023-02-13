@@ -251,9 +251,9 @@ function render() {
         }
       }
     });
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = '#DCBB63';
     ctx.beginPath();
-    ctx.arc(particle.x, particle.y, particle.size / 2, 0, Math.PI * 2, true);
+    ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2, true);
     ctx.fill();
   });
 }
