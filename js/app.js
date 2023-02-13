@@ -200,8 +200,8 @@ class Particle {
   constructor() {
     this.x = random(0, c.width);
     this.y = random(0, c.height);
-    this.vx = random(-0.5, 0.5);
-    this.vy = random(-0.5, 0.5);
+    this.vx = random(-1, 2);
+    this.vy = random(-1, 2);
     this.size = random(1, 5);
   }
   update() {
@@ -253,7 +253,7 @@ function render() {
     });
     ctx.fillStyle = '#DCBB63';
     ctx.beginPath();
-    ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2, true);
+    ctx.arc(particle.x, particle.y, particle.size/2, 0, Math.PI * 4, true);
     ctx.fill();
   });
 }
@@ -266,8 +266,8 @@ function loop() {
 }
 
 function init() {
-  mouse.x = c.width / 2;
-  mouse.y = c.height / 2;
+  mouse.x = c.width /2;
+  mouse.y = c.height /2;
   loop();
 }
 
