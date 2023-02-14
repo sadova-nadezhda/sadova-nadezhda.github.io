@@ -261,13 +261,13 @@ function render() {
         ctx2.strokeStyle = '#DCBB63';
         const d2 = distance(mouse, particle);
         if (d2 < 300) {
-          ctx.globalAlpha = 1000 / d2 / 100;
+          ctx.globalAlpha = (1000 / d2) / 100;
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(particle2.x, particle2.y);
           ctx.stroke();
 
-          ctx2.globalAlpha = 1000 / d2 / 100;
+          ctx2.globalAlpha = (1000 / d2) / 100;
           ctx2.beginPath();
           ctx2.moveTo(particle.x, particle.y);
           ctx2.lineTo(particle2.x, particle2.y);
@@ -275,7 +275,7 @@ function render() {
         }
       }
     });
-    ctx.fillStyle = '#DCBB63';
+    ctx.fillStyle = '#000';
     ctx.beginPath();
     ctx.arc(particle.x, particle.y, particle.size/2 , 0, Math.PI * 2, true);
     ctx.fill();
