@@ -290,7 +290,7 @@ function render() {
 function loop() {
   requestAnimationFrame(loop);
   ctx.clearRect(0, 0, c.width, c.height);
-  ctx2.clearRect(0, 0, c.width, c.height);
+  ctx2.clearRect(0, 0, c2.width, c2.height);
   update();
   render();
 }
