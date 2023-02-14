@@ -186,7 +186,8 @@ const MAX_PARTICLES2 = 200;
 
 const mouse = {
   x: 0,
-  y: 0 };
+  y: 0 
+};
 
 
 c.width = window.innerWidth;
@@ -209,8 +210,6 @@ class Particle {
   constructor() {
     this.x = random(0, c.width);
     this.y = random(0, c.height);
-    this.x = random(0, c2.width);
-    this.y = random(0, c2.height);
     this.vx = random(-0.5, 0.5);
     this.vy = random(-0.5, 0.5);
     this.size = random(1, 3);
