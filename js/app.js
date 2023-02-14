@@ -43,10 +43,6 @@ if(menu){
   })
 }
 
-document.addEventListener('load', function() {
-
-})
-
 /*Show card services text*/
 let cardMore = document.querySelectorAll('.card__more');
 if(cardMore) {
@@ -242,8 +238,8 @@ function render() {
     particles.forEach((particle2) => {
       const d = distance(particle, particle2)
       if (d < 100) {
-        ctx.fillStyle = '#fff';
-        ctx.strokeStyle = '#fff';
+        ctx.fillStyle = '#DCBB63';
+        ctx.strokeStyle = '#DCBB63';
         const d2 = distance(mouse, particle);
         if (d2 < 300) {
           ctx.globalAlpha = (1000 / d2) / 100 ;
@@ -254,7 +250,7 @@ function render() {
         }
       }
     });
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = '#CED1D6';
     ctx.beginPath();
     ctx.arc(particle.x, particle.y, particle.size / 2, 0, Math.PI*2, true);
     ctx.fill();
