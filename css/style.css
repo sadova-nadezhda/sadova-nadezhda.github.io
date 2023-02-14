@@ -1186,7 +1186,6 @@ canvas {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0.9;
   overflow: hidden;
   width: 100%;
   background: linear-gradient(99.18deg, rgba(255, 255, 255, 0.2) 20.18%, rgba(255, 255, 255, 0) 80.99%), #CED1D6;
