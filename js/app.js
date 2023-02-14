@@ -180,6 +180,10 @@ const c = document.getElementById('canvas');
 const ctx = c.getContext('2d');
 const MAX_PARTICLES = 200;
 
+const c2 = document.getElementById('canvas-2');
+const ctx2 = c2.getContext('2d');
+const MAX_PARTICLES2 = 200;
+
 const mouse = {
   x: 0,
   y: 0 };
@@ -187,6 +191,11 @@ const mouse = {
 
 c.width = window.innerWidth;
 c.height = window.innerHeight;
+
+
+
+c2.width = document.querySelector('.offer__container').offsetWidth;
+c2.height = document.querySelector('.offer__container').offsetHeight;
 
 function random(min, max) {
   return Math.random() * (max - min) + min;
@@ -200,23 +209,27 @@ class Particle {
   constructor() {
     this.x = random(0, c.width);
     this.y = random(0, c.height);
+    this.x = random(0, c2.width);
+    this.y = random(0, c2.height);
     this.vx = random(-0.5, 0.5);
     this.vy = random(-0.5, 0.5);
-    this.size = random(1, 5);
+    this.size = random(1, 3);
   }
   update() {
     this.x += this.vx;
     this.y += this.vy;
     if (this.x < 0) {
       this.x = c.width;
+      this.x = c2.width;
     }
-    if (this.x > c.width) {
+    if (this.x > c.width || this.x > c2.width) {
       this.x = 0;
     }
     if (this.y < 0) {
       this.y = c.height;
+      this.y = c2.height;
     }
-    if (this.y > c.height) {
+    if (this.y > c.height || this.y > c2.height) {
       this.y = 0;
     }
   }}
@@ -225,6 +238,9 @@ class Particle {
 const particles = [];
 
 for (let i = 0; i < MAX_PARTICLES; i++) {
+  particles.push(new Particle());
+}
+for (let i = 0; i < MAX_PARTICLES2; i++) {
   particles.push(new Particle());
 }
 
@@ -241,6 +257,8 @@ function render() {
       if (d < 100) {
         ctx.fillStyle = '#DCBB63';
         ctx.strokeStyle = '#DCBB63';
+        ctx2.fillStyle = '#DCBB63';
+        ctx2.strokeStyle = '#DCBB63';
         const d2 = distance(mouse, particle);
         if (d2 < 300) {
           ctx.globalAlpha = 1000 / d2 / 100;
@@ -248,6 +266,12 @@ function render() {
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(particle2.x, particle2.y);
           ctx.stroke();
+
+          ctx2.globalAlpha = 1000 / d2 / 100;
+          ctx2.beginPath();
+          ctx2.moveTo(particle.x, particle.y);
+          ctx2.lineTo(particle2.x, particle2.y);
+          ctx2.stroke();
         }
       }
     });
@@ -255,12 +279,18 @@ function render() {
     ctx.beginPath();
     ctx.arc(particle.x, particle.y, particle.size , 0, Math.PI * 2, true);
     ctx.fill();
+
+    ctx2.fillStyle = '#000';
+    ctx2.beginPath();
+    ctx2.arc(particle.x, particle.y, particle.size , 0, Math.PI * 2, true);
+    ctx2.fill();
   });
 }
 
 function loop() {
   requestAnimationFrame(loop);
   ctx.clearRect(0, 0, c.width, c.height);
+  ctx2.clearRect(0, 0, c.width, c.height);
   update();
   render();
 }
@@ -268,6 +298,8 @@ function loop() {
 function init() {
   mouse.x = c.width / 1;
   mouse.y = c.height / 3;
+  mouse.x = c2.width / 1;
+  mouse.y = c2.height / 3;
   loop();
 }
 
@@ -278,6 +310,7 @@ window.addEventListener('mousemove', e => {
 
 window.addEventListener('resize', e => {
   c.width = window.innerWidth;
+  c2.width = window.innerWidth;
 });
 
 init();

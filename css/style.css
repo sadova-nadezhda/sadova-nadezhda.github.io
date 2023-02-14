@@ -1458,14 +1458,16 @@ canvas {
 }
 
 .offer__container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   gap: 30px;
   padding: 80px 180px;
   padding-bottom: 0;
-  background: #CED1D6;
+  /* background: #CED1D6; */
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .offer__img {
