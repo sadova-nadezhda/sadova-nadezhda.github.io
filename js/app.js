@@ -250,7 +250,7 @@ function render() {
         }
       }
     });
-    ctx.fillStyle = '#CED1D6';
+    ctx.fillStyle = '#DCBB63';
     ctx.beginPath();
     ctx.arc(particle.x, particle.y, particle.size / 2, 0, Math.PI*2, true);
     ctx.fill();
