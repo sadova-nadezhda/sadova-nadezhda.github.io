@@ -281,7 +281,6 @@ canvas.forEach( c => {
   init();
 })
 
-
 window.addEventListener('mousemove', (e) => {
   mouse.x = e.x;
   mouse.y = e.y;
