@@ -277,12 +277,12 @@ function render() {
     });
     ctx.fillStyle = '#DCBB63';
     ctx.beginPath();
-    ctx.arc(particle.x, particle.y, particle.size*2 , 0, Math.PI * 2, true);
+    ctx.arc(particle.x, particle.y, particle.size/2 , 0, Math.PI * 2, true);
     ctx.fill();
 
     ctx2.fillStyle = '#DCBB63';
     ctx2.beginPath();
-    ctx2.arc(particle.x, particle.y, particle.size*2 , 0, Math.PI * 2, true);
+    ctx2.arc(particle.x, particle.y, particle.size/2 , 0, Math.PI * 2, true);
     ctx2.fill();
   });
 }
@@ -296,10 +296,10 @@ function loop() {
 }
 
 function init() {
-  mouse.x = c.width / 1;
-  mouse.y = c.height / 3;
-  mouse.x = c2.width / 1;
-  mouse.y = c2.height / 3;
+  mouse.x = c.width / 2;
+  mouse.y = c.height / 2;
+  mouse.x = c2.width / 2;
+  mouse.y = c2.height / 2;
   loop();
 }
 
