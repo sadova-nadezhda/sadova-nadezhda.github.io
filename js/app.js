@@ -186,23 +186,23 @@ c.height = window.innerHeight;
 c2.width = document.querySelector('.offer__container').offsetWidth;
 c2.height = document.querySelector('.offer__container').offsetHeight;
 
+const MAX_PARTICLES = 200;
+
+const mouse = {
+  x: 0,
+  y: 0,
+};
+
+function random(min, max) {
+  return (Math.random() * (max - min) + min);
+}
+
+function distance(p1, p2) {
+  return Math.sqrt((p2.x - p1.x) ** 2 + (p2.y - p1.y) ** 2);
+}
+
 canvas.forEach( c => {
   const ctx = c.getContext('2d');
-  const MAX_PARTICLES = 200;
-
-  const mouse = {
-    x: 0,
-    y: 0,
-  };
-
-  function random(min, max) {
-    return (Math.random() * (max - min) + min);
-  }
-
-  function distance(p1, p2) {
-    return Math.sqrt((p2.x - p1.x) ** 2 + (p2.y - p1.y) ** 2);
-  }
-
   class Particle {
     constructor() {
       this.x = random(0, c.width);
@@ -278,17 +278,16 @@ canvas.forEach( c => {
     loop();
   }
 
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
-  });
-
-  window.addEventListener('resize', (e) => {
-    c.width = window.innerWidth;
-  });
-
   init();
 })
 
 
+window.addEventListener('mousemove', (e) => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
 
+window.addEventListener('resize', (e) => {
+  c.width = window.innerWidth;
+  c2.width = document.querySelector('.offer__container').offsetWidth;
+});
