@@ -1239,9 +1239,12 @@ h6 {
   .description {
     gap: 40px;
   }
+  .tab__caption li {
+    font: 500 18px/1 Montserrat;
+  }
 
   .tab__caption .active {
-    font: 500 26px/1 Montserrat;
+    font: 500 20px/1 Montserrat;
   }
 
   .tab__content {
