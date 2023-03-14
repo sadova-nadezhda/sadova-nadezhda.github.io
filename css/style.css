@@ -1158,10 +1158,13 @@ h6 {
     gap: 60px;
   }
 
-  .tab__caption .active {
-    font: 500 28px/1 Montserrat;
+  .tab__caption li {
+    font: 500 20px/1 Montserrat;
   }
 
+  .tab__caption .active {
+    font: 500 24px/1 Montserrat;
+  }
   .card__txt {
     font-size: 14px;
   }
