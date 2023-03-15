@@ -1566,6 +1566,10 @@ h6 {
     display: none;
   }
 
+  .star::before {
+    content: none;
+  }
+
   .description {
     grid-template-columns: 1fr;
     gap: 20px;
