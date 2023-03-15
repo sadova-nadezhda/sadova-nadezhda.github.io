@@ -93,6 +93,7 @@ window.addEventListener("load", function () {
     slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
+    effect: 'slide',
     loop: true,
     breakpoints: {
       640: {
