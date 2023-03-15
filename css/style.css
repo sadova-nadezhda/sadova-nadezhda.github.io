@@ -1342,6 +1342,9 @@ h6 {
   .footer {
     font-size: 14px;
   }
+  .footer__container {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 1400px) {
