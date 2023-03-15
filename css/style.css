@@ -895,8 +895,8 @@ h6 {
 
 .about__arrows {
   display: flex;
-  align-items: center;
-  background-color: #fff;
+  align-items: stretch;
+  /* background-color: #fff; */
 }
 
 .about__btn {
