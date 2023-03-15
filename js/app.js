@@ -91,7 +91,7 @@ window.addEventListener("load", function () {
   let swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     slidesPerView: 1,
-    freeMode: true,
+    // freeMode: true,
     watchSlidesProgress: true,
     effect: 'slide',
     loop: true,
