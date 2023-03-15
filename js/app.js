@@ -1,14 +1,30 @@
 let header = document.querySelector(".header");
-if(header) {
-  document.addEventListener("scroll", function () {
+
+document.addEventListener("scroll", function () {
+  if(header) {
     let scroll = window.scrollY;
     if (scroll > 50 ) {
       header.classList.add("scroll");
     } else {
       header.classList.remove("scroll");
     }
-  });
-}
+  }
+  let count = document.querySelector('.count');
+  if(count) {
+    $('.about__num').each(function () {
+      $(this).prop('Counter',0).animate({
+      Counter: $(this).data("num")
+      }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function (now) {
+          $(this).find('span').text(Math.ceil(now));
+        }
+      });
+    });
+  }
+});
+
 window.addEventListener("load", function () {
   let scroll = window.scrollY;
   if (scroll > 50 ) {
@@ -46,7 +62,7 @@ window.addEventListener("load", function () {
     },
   });
   let projectSwiper  = new Swiper('.projectsSwiper', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
@@ -60,16 +76,24 @@ window.addEventListener("load", function () {
     watchSlidesVisibility: true,
     parallax: false,
     loop: true,
-    speed: 600,
+    speed: 900,
     height: 'auto',
+    slideToClickedSlide: true,
     paginationClickable: true,
-    effect: 'slide'
+    effect: 'slide',
+    breakpoints: {
+      600: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+    },
   });
   let swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
+    loop: true,
     breakpoints: {
       640: {
         slidesPerView: 2,
@@ -84,6 +108,7 @@ window.addEventListener("load", function () {
   let swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 20,
     effect: "fade",
+    loop: true,
     thumbs: {
       swiper: swiper,
     },
@@ -99,30 +124,22 @@ window.addEventListener("load", function () {
     delayBeforeStart: 0,
     direction: 'left',
     duplicated: true,
+      startVisible: true,
     gap: 100,
   })
   //анимированные цифры
-  $('.about').waypoint({
+  $('.about__cards').waypoint({
     handler: function() {
       $(this.element).addClass('count')
     },
     offset: '80%',
   });
-
-  let count = document.querySelector('.count');
-  if(count) {
-    $('.about__num').each(function () {
-      $(this).prop('Counter',0).animate({
-      Counter: $(this).data("num")
-      }, {
-        duration: 5000,
-        easing: 'swing',
-        step: function (now) {
-          $(this).find('span').text(Math.ceil(now));
-        }
-      });
-  });
-  }
+  $('.way').waypoint({
+    handler: function() {
+        $(this.element).addClass("way--active");
+    },
+    offset: '88%'
+  })
 });
 
 $(function() {
@@ -136,3 +153,5 @@ $(function() {
 function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
+
+new WOW().init();

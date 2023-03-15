@@ -219,6 +219,7 @@ h1,
 h2 {
   font: 500 50px/1 Montserrat;
   color: #0D3A3E;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -378,13 +379,13 @@ h6 {
 }
 
 .footer {
-  background-color: #019CA5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #019CA5;
   font-size: 16px;
   color: #FFFFFF;
 }
 
 .footer__wrap:last-child {
-  border-top: 2px solid #06A0A8;
+  border-top: 1px solid #06A0A8;
 }
 
 .footer__container {
@@ -511,6 +512,7 @@ h6 {
 
 .section {
   padding: 130px 0;
+  overflow: hidden;
 }
 
 .link {
@@ -550,9 +552,21 @@ h6 {
   gap: 25px;
 }
 
+.star {
+  position: relative;
+}
+
+.star::before {
+  position: absolute;
+  left: -100px;
+  top: 70%;
+  transform: translateY(-50%);
+  content: url(../img/star-1.png);
+}
+
 .line {
   flex-grow: 1;
-  height: 2px;
+  height: 1px;
   background-color: #019CA5;
 }
 
@@ -690,6 +704,10 @@ h6 {
 .mySwiper .swiper-slide {
   align-items: stretch;
   height: auto;
+}
+
+.mySwiper .swiper-slide:hover {
+  box-shadow: 0px 0px 30px rgba(13, 58, 62, 0.05);
 }
 
 .mySwiper .swiper-slide-thumb-active .card {
@@ -842,11 +860,6 @@ h6 {
   background-color: #019CA5;
 }
 
-.about {
-  background: url(../img/star-1.png) no-repeat;
-  background-position: 2% 7%;
-}
-
 .about .title {
   margin-bottom: 80px;
 }
@@ -945,6 +958,7 @@ h6 {
 
 .projects .swiper {
   margin-bottom: 40px;
+  padding-left: 60px;
 }
 
 .projects .swiper-wrapper {
@@ -956,10 +970,20 @@ h6 {
   position: relative;
   width: 60%;
   height: 80%;
+  transition: all 0.4s ease-in-out;
+}
+
+.projects .swiper-slide a {
+  pointer-events: none;
 }
 
 .projects .swiper-slide-active {
   height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.projects .swiper-slide-active a {
+  pointer-events: all;
 }
 
 .projects__card {
@@ -1032,7 +1056,7 @@ h6 {
 }
 
 .projects .swiper__pagin {
-  max-width: 60%;
+  max-width: 58%;
   margin: 0 auto;
 }
 
@@ -1040,20 +1064,26 @@ h6 {
   position: relative;
   flex-grow: 1;
   width: auto;
+  height: 2px;
   background-color: #B0DFE2;
 }
 
 .projects .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: #019CA5;
+  height: 3px;
 }
 
 .image {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)), linear-gradient(0deg, rgba(1, 156, 165, 0.09), rgba(1, 156, 165, 0.09));
+  height: 80vh;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)), linear-gradient(0deg, rgba(1, 156, 165, 0.09), rgba(1, 156, 165, 0.09)), url(../img/back-2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .image__container {
   position: relative;
-  height: 80vh;
 }
 
 .image__container img {
@@ -1091,11 +1121,6 @@ h6 {
   width: max-content;
 }
 
-.benefits {
-  background: url(../img/star-1.png) no-repeat;
-  background-position: 2% 18%;
-}
-
 .benefits .title {
   margin-bottom: 100px;
 }
@@ -1118,6 +1143,37 @@ h6 {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+/*animate*/
+
+.way.way-element-100vy {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.way.way--active.way-element-100vy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.way.way-element-100vw {
+  transform: translateX(-100vw);
+  transition: 0.8s ease-in-out;
+}
+
+.way.way--active.way-element-100vw {
+  transform: translateX(0);
+}
+
+.way.way-element-0vw {
+  transform: translateX(100vw);
+  transition: 0.8s ease-in-out;
+}
+
+.way.way--active.way-element-0vw {
+  transform: translateX(0);
 }
 
 @media (min-width: 1920px) {
@@ -1159,12 +1215,13 @@ h6 {
   }
 
   .tab__caption li {
-    font: 500 18px/1 Montserrat;
+    font: 500 18px/1.2 Hibana;
   }
 
   .tab__caption .active {
-    font: 500 22px/1 Montserrat;
+    font: 500 20px/1 Montserrat;
   }
+
   .card__txt {
     font-size: 14px;
   }
@@ -1242,13 +1299,7 @@ h6 {
   .description {
     gap: 40px;
   }
-  .tab__caption li {
-    font: 500 18px/1 Montserrat;
-  }
 
-  .tab__caption .active {
-    font: 500 20px/1 Montserrat;
-  }
   .tab__content {
     grid-template-columns: 40% 1fr;
     gap: 30px;
@@ -1362,6 +1413,10 @@ h6 {
   .header__menu {
     gap: 30px;
   }
+
+  .tab__caption {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1450,6 +1505,10 @@ h6 {
     max-width: none;
   }
 
+  .tab__caption {
+    margin-bottom: 30px;
+  }
+
   .mySwiper2 {
     width: 60%;
   }
@@ -1466,14 +1525,6 @@ h6 {
     position: relative;
     max-width: 60%;
     padding-left: 20px;
-  }
-
-  .about {
-    background-position: 2% 2%;
-  }
-
-  .benefits {
-    background-position: 2% 0%;
   }
 }
 
@@ -1532,6 +1583,20 @@ h6 {
 @media (max-width: 520px) {
   .section {
     padding: 40px 0;
+  }
+
+  .about__buttons {
+    width: 100%;
+  }
+
+  .about__btn {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  .about .swiper-button-next,
+  .about .swiper-button-prev {
+    width: 60px;
   }
 }
 
