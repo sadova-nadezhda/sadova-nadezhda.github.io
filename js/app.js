@@ -134,12 +134,12 @@ window.addEventListener("load", function () {
     },
     offset: '80%',
   });
-  $('.way').waypoint({
-    handler: function() {
-        $(this.element).addClass("way--active");
-    },
-    offset: '88%'
-  })
+  // $('.way').waypoint({
+  //   handler: function() {
+  //       $(this.element).addClass("way--active");
+  //   },
+  //   offset: '88%'
+  // })
 });
 
 $(function() {
