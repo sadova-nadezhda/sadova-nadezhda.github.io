@@ -1548,6 +1548,14 @@ h6 {
   .projects .title {
     margin-bottom: 30px;
   }
+  .image {
+    height: 70vh;
+  }
+
+  .tab__img {
+    height: 50vh;
+}
+
 }
 
 @media (max-width: 767px) {
