@@ -1468,6 +1468,10 @@ h6 {
   .benefits__cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .image {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 980px) {
