@@ -1621,12 +1621,8 @@ h6 {
     width: 80%;
   }
 
-  .factory {
-    padding-bottom: 120px;
-  }
-
   .factory__container {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .factory__title {
