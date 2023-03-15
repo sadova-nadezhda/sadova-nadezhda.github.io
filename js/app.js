@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
   });
   let projectSwiper  = new Swiper('.projectsSwiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
