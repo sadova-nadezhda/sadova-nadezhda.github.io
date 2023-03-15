@@ -1338,12 +1338,17 @@ h6 {
   .technology__slider .swiper__pagin {
     top: 8%;
   }
+
+  .footer {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1400px) {
   .benefits__cards {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
 
 @media (max-width: 1280px) {
@@ -1621,6 +1626,10 @@ h6 {
 
   .factory__txt {
     font-size: 12px;
+  }
+
+  .footer {
+    font-size: 16px;
   }
 }
 
