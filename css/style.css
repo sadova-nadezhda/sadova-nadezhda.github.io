@@ -1629,6 +1629,10 @@ h6 {
   .projects .swiper {
     padding: 0 40px;
   }
+  
+  .projects .projectsSwiper {
+    height: 50vh;
+  }
 
   .technology__slider {
     height: 70vh;
