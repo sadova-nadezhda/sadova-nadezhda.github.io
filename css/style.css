@@ -1580,6 +1580,10 @@ h6 {
     width: 80%;
   }
 
+  .factory__container {
+    height: 70vh;
+  }
+
   .factory__title {
     font: 500 40px/1 Montserrat;
   }
