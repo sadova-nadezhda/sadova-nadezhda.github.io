@@ -1590,6 +1590,13 @@ h6 {
   .technology__slider .swiper__pagin {
     top: 0%;
   }
+  .factory__title {
+    font: 500 26px/1 Montserrat;
+  }
+
+  .factory__txt {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 520px) {
