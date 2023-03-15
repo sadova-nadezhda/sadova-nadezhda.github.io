@@ -78,7 +78,7 @@ window.addEventListener("load", function () {
     loop: true,
     speed: 900,
     height: 'auto',
-    slideToClickedSlide: true,
+    // slideToClickedSlide: true,
     paginationClickable: true,
     effect: 'slide',
     breakpoints: {
