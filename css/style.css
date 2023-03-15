@@ -1553,6 +1553,10 @@ h6 {
   .projects .swiper {
     padding: 0 40px;
   }
+
+  .technology__slider .swiper__pagin {
+    top: 0%;
+  }
 }
 
 @media (max-width: 520px) {
