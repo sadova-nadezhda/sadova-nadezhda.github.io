@@ -1369,6 +1369,16 @@ h6 {
     max-width: 95%;
   }
 
+  h1,
+  h2 {
+    font: 500 30px/1 Montserrat;
+  }
+
+  h3 {
+    font: 500 26px/1 Montserrat;
+  }
+
+
   h4 {
     font: 500 24px/1 Montserrat;
   }
@@ -1480,6 +1490,19 @@ h6 {
     max-width: none;
   }
 
+  h1,
+  h2 {
+    font: 500 28px/1 Montserrat;
+  }
+
+  h3 {
+    font: 500 24px/1 Montserrat;
+  }
+
+  h4 {
+    font: 500 22px/1 Montserrat;
+  }
+
   .tab__caption {
     margin-bottom: 30px;
   }
@@ -1533,6 +1556,12 @@ h6 {
 }
 
 @media (max-width: 600px) {
+
+  h1,
+  h2 {
+    font: 500 26px/1 Montserrat;
+  }
+
   .line {
     display: none;
   }
