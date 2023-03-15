@@ -74,7 +74,7 @@ window.addEventListener("load", function () {
     },
     centeredSlides: true,
     watchSlidesVisibility: true,
-    parallax: false,
+    // parallax: false,
     loop: true,
     speed: 900,
     height: 'auto',
