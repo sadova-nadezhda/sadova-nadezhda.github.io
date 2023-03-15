@@ -1591,6 +1591,14 @@ h6 {
     padding: 0 40px;
   }
 
+  .technology__slider {
+    height: 70vh;
+  }
+  
+  .mySwiper {
+    height: auto;
+  }
+
   .technology__slider .swiper__pagin {
     top: 0%;
   }
