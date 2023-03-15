@@ -275,6 +275,7 @@ h6 {
 }
 
 .header__logo {
+  display: block;
   width: 160px;
   height: 90px;
 }
@@ -1551,6 +1552,11 @@ h6 {
 }
 
 @media (max-width: 800px) {
+  .header__logo {
+    width: 160px;
+    height: 60px;
+  }
+
   .tab__content {
     grid-template-columns: 1fr;
   }
