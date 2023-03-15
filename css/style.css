@@ -1468,6 +1468,10 @@ h6 {
     padding: 80px 0;
   }
 
+  .projects__box, .technology__slider {
+    margin-bottom: 80px;
+  }
+
   .description {
     gap: 30px;
   }
@@ -1571,6 +1575,9 @@ h6 {
   .section {
     padding: 60px 0;
   }
+  .projects__box, .technology__slider {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1640,6 +1647,9 @@ h6 {
 @media (max-width: 520px) {
   .section {
     padding: 40px 0;
+  }
+  .technology__slider, .projects__box {
+    margin-bottom: 40px;
   }
 
   .about__buttons {
