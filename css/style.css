@@ -603,6 +603,16 @@ h6 {
   overflow-x: auto;
 }
 
+.tab__caption::-webkit-scrollbar {
+  height: 3px;
+}
+.tab__caption::-webkit-scrollbar-track {
+  background-color: #2A2A2A;
+}
+.tab__caption::-webkit-scrollbar-thumb {
+  background-color: #B0DFE2;
+}
+
 .tab__caption li {
   width: -moz-max-content;
   width: max-content;
