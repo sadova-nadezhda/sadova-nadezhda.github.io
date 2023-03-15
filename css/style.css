@@ -1549,6 +1549,10 @@ h6 {
   .benefits__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .projects .swiper {
+    padding: 0 40px;
+  }
 }
 
 @media (max-width: 520px) {
