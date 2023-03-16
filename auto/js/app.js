@@ -52,3 +52,24 @@ window.addEventListener("load", function () {
     },
   });
 });
+
+// let header = document.querySelector(".header");
+// let flag = true;
+
+// $(window).on('resize', function(){
+//   if ($(this).width() <= 1200 && flag) {
+//     flag = false;
+//     document.addEventListener("scroll", function () {
+//       let scroll = window.scrollY;
+//       if (scroll > 230) {
+//         header.classList.add("scroll");
+//       } else {
+//         header.classList.remove("scroll");
+//       }
+//     });
+//   }
+//   // else if ($(this).width() > 1200 && !flag) {
+//   //   flag = true;
+//   //   header.classList.remove("scroll");
+//   // }
+// }).resize();
