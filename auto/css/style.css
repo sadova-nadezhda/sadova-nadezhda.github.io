@@ -1478,12 +1478,22 @@ td {
 }
 
 .rubric-inner__btn {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
   border-radius: 6px;
   color: #fff;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+}
+
+.rubric-inner__btn:hover {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .rubric-inner__cards {
@@ -1515,6 +1525,16 @@ td {
 .cards_cl-3 .card:last-child {
   padding-bottom: 20px;
   border-bottom: 1px solid #EBEBEB;
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
 }
 
 @media (min-width: 1920px) {
