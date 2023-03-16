@@ -884,6 +884,7 @@ td {
 }
 
 .card__img {
+  max-height: 75px;
   height: 8vh;
   border-radius: 10px;
   overflow: hidden;
@@ -941,6 +942,7 @@ td {
 
 .card_lg .card__img {
   height: 30vh;
+  max-height: 290px;
 }
 
 .card:last-child {
@@ -1412,6 +1414,7 @@ td {
 }
 
 .rubric-inner__img {
+  max-height: 700px;
   height: 70vh;
   border-radius: 10px;
   overflow: hidden;
