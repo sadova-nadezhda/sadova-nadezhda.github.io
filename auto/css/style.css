@@ -534,8 +534,8 @@ h6 {
 
 .logo {
   display: block;
-  width: 378px;
-  height: 50px;
+  width: 19vw;
+  height: 5.5vh;
 }
 
 .logo img {
@@ -552,15 +552,37 @@ h6 {
 }
 
 .footer {
-  border-top: 1px solid #EBEBEB;
+  background: #3F42EA;
+  color: #FFFFFF;
+}
+
+.footer .link.active {
+  color: #fff;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.footer .link::after {
+  background-color: #fff;
 }
 
 .footer__info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 11%;
   padding: 70px 0;
   font: 600 18px/1.5 Montserrat;
+}
+
+.footer__box:first-child {
+  display: grid;
+  gap: 30px;
+  max-width: 500px;
+}
+
+.footer__txt {
+  font: 500 16px/1.8 Montserrat;
 }
 
 .footer__caption {
@@ -577,6 +599,7 @@ h6 {
 
 .footer__links {
   display: grid;
+  align-items: center;
   gap: 15px;
 }
 
@@ -587,8 +610,7 @@ h6 {
 }
 
 .footer__copy {
-  padding: 50px 0;
-  background-color: #FBFBFB;
+  padding: 30px 0;
 }
 
 .footer__wrap {
@@ -908,6 +930,31 @@ h6 {
   color: #3F42EA;
 }
 
+.link {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.link.active {
+  pointer-events: none;
+}
+
+.link::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  height: 1px;
+  width: 0;
+  background-color: #393939;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
 /* ----- start swiper ----- */
 
 .swiper {
@@ -1165,10 +1212,6 @@ h6 {
   gap: 30px;
 }
 
-.aside .title h2 {
-  line-height: 1;
-}
-
 .aside .title h2::after {
   background-color: #393939;
 }
@@ -1256,6 +1299,10 @@ h6 {
     font: 600 16px/1.5 Montserrat;
   }
 
+  .footer__info {
+    font: 600 16px/1.5 Montserrat;
+  }
+
   .card_lg .card__caption {
     font-size: 22px;
   }
@@ -1288,8 +1335,13 @@ h6 {
 }
 
 @media (max-width: 1440px) {
+  .main-menu__nav {
+    font: 600 14px/1.5 Montserrat;
+  }
+
   .footer__info {
     padding: 50px 0;
+    font: 600 14px/1.5 Montserrat;
   }
 
   .footer__logo {
@@ -1301,15 +1353,25 @@ h6 {
   }
 
   .footer__copy {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   .secondary-menu__container {
     gap: 30px;
   }
 
+  .pagination a {
+    padding: 8px 16px;
+    width: 37px;
+    height: 37px;
+  }
+
   .card__caption {
     font: 600 16px/1.5 Montserrat;
+  }
+
+  .card_lg .card__description {
+    gap: 15px;
   }
 }
 
@@ -1356,6 +1418,7 @@ h6 {
     height: 100vh;
     padding: 40px;
     background-color: #fff;
+    font: 600 18px/1.5 Montserrat;
   }
 
   .main-menu__list {
@@ -1364,10 +1427,6 @@ h6 {
 
   .main-menu__burger {
     display: block;
-  }
-
-  .logo {
-    width: 250px;
   }
 
   .wrapper__container {
@@ -1546,6 +1605,16 @@ h6 {
 @media (max-width: 375px) {
   .secondary-menu__inst {
     display: none;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1440px) {
+  html {
+    font: 500 14px/1.8 Montserrat;
+  }
+
+  .footer__txt {
+    font: 500 14px/1.8 Montserrat;
   }
 }
 
