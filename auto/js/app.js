@@ -51,6 +51,25 @@ window.addEventListener("load", function () {
       disableOnInteraction: false,
     },
   });
+
+  let popup = document.querySelector("#popup");
+  if (popup) {
+    let popupBtn = document.querySelectorAll(".popup__btn");
+    $(popupBtn).each( function() {
+      $(this).on('click', () => {
+        $(popup).fadeIn(400);
+      })
+    });
+    $(popup).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup")
+      ) {
+        $(popup).fadeOut(400);
+      }
+    });
+  }
 });
 
 // let header = document.querySelector(".header");
