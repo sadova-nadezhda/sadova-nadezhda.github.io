@@ -1015,14 +1015,18 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 60px;
+  height: 60px;
   border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 
 .social__link svg {
-  width: 60px;
-  height: 60px;
+  width: 33%;
+  height: 33%;
 }
 
 .social__link:hover {
@@ -1552,12 +1556,17 @@ td {
   position: absolute;
   top: 30px;
   right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   background: transparent;
   border: none;
-  padding: 0;
 }
 
 .popup__close svg {
+  width: 42px;
+  height: 42px;
   pointer-events: none;
 }
 
@@ -1570,6 +1579,7 @@ td {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 62vw;
   padding: 50px;
   background: #FBFBFB;
   border-radius: 16px;
@@ -1591,8 +1601,17 @@ td {
 }
 
 .popup__img {
+  height: 123px;
+  width: 123px;
   border-radius: 100%;
   overflow: hidden;
+}
+
+.popup__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popup__info {
@@ -1600,18 +1619,31 @@ td {
   align-items: center;
   align-content: center;
   gap: 10px;
+  line-height: 1.2em;
+}
+
+.popup__info h5 {
+  line-height: 1.2em;
+}
+
+.popup__info span {
+  color: #999999;
 }
 
 .popup__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-height: 400px;
+  max-height: 43vh;
   overflow-y: auto;
 }
 
 .popup__cards .card__type {
   display: none;
+}
+
+.popup__cards .card__date {
+  line-height: 1;
 }
 
 @media (min-width: 1920px) {
@@ -1665,7 +1697,7 @@ td {
     font-size: 22px;
   }
 
-  .social__link svg {
+  .social__link {
     width: 50px;
     height: 50px;
   }
@@ -1693,6 +1725,38 @@ td {
   .rubric__wrap:first-child {
     grid-template-columns: 50px 1fr;
     gap: 50px;
+  }
+
+  .popup__container {
+    padding: 40px;
+  }
+
+  .popup__caption {
+    margin-bottom: 20px;
+  }
+
+  .popup__head {
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .popup__img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .popup__info span {
+    font-size: 14px;
+  }
+
+  .popup__cards .card__caption {
+    font-size: 16px;
+  }
+
+  .popup__cards .card__date {
+    font-size: 14px;
   }
 }
 
@@ -1756,7 +1820,7 @@ td {
     gap: 15px;
   }
 
-  .social__link svg {
+  .social__link {
     width: 40px;
     height: 40px;
   }
@@ -1764,6 +1828,39 @@ td {
   .rubric__wrap:first-child {
     grid-template-columns: 40px 1fr;
     gap: 40px;
+  }
+
+  .popup__close svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .popup__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .popup__head {
+    grid-template-columns: 80px 1fr;
+    margin-bottom: 20px;
+  }
+
+  .popup__img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .popup__info span {
+    font-size: 12px;
+  }
+
+  .popup__cards .card__caption {
+    font-size: 14px;
+  }
+
+  .popup__cards .card__date {
+    gap: 10px;
+    font-size: 12px;
   }
 }
 
@@ -1835,8 +1932,8 @@ td {
   }
 
   .social__link svg {
-    width: 30px;
-    height: 30px;
+    width: 50%;
+    height: 50%;
   }
 
   .popularSwiper {
@@ -1934,6 +2031,14 @@ td {
 
   .aside__container {
     grid-template-columns: 1fr;
+  }
+
+  .rubric__wrap:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .rubric__social_bl {
+    order: 1;
   }
 }
 
