@@ -1371,6 +1371,7 @@ td {
 
 .rubric-inner__elements {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 40px;
 }
@@ -1529,16 +1530,6 @@ td {
 .cards_cl-3 .card:last-child {
   padding-bottom: 20px;
   border-bottom: 1px solid #EBEBEB;
-}
-
-@keyframes hvr-ripple-out {
-  100% {
-    top: -12px;
-    right: -12px;
-    bottom: -12px;
-    left: -12px;
-    opacity: 0;
-  }
 }
 
 .popup {
@@ -1979,6 +1970,11 @@ td {
   .feedback__card .card__caption {
     font-size: 24px;
   }
+
+  .popup__container {
+    width: 80vw;
+    padding: 30px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -2040,6 +2036,10 @@ td {
   .rubric__social_bl {
     order: 1;
   }
+
+  .popup__cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2055,6 +2055,21 @@ td {
 
   .cards_cl-3 {
     grid-template-columns: 1fr;
+  }
+
+  .popup__container {
+    width: 90vw;
+  }
+
+  .popup__head {
+    grid-template-columns: 60px 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .popup__img {
+    height: 60px;
+    width: 60px;
   }
 }
 
