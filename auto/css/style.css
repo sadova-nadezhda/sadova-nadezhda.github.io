@@ -932,7 +932,7 @@ td {
 }
 
 .card_md .card__img {
-  height: 14vh;
+  height: 15vh;
   max-height: 165px;
 }
 
@@ -997,6 +997,10 @@ td {
   max-height: 100%;
 }
 
+.block .card_lg .card__txt {
+  font-weight: 600;
+}
+
 .block .card__elements {
   display: none;
 }
@@ -1005,7 +1009,7 @@ td {
   display: -moz-box;
   display: -webkit-box;
   font-style: italic;
-  color: #999999;
+  color: #393939;
 }
 
 .block .card__description {
