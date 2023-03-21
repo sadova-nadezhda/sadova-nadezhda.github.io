@@ -492,7 +492,7 @@ input {
 }
 
 .logo {
-  height: 50px;
+  height: 50%;
 }
 
 .logo img {
@@ -503,11 +503,11 @@ input {
 }
 
 .logo1 {
-  width: 225px;
+  width: 13%;
 }
 
 .logo2 {
-  width: 204px;
+  width: 12%;
 }
 
 .footer {
