@@ -143,16 +143,68 @@ window.addEventListener("load", function () {
   // })
 });
 
-$(function() {
-  $('ul.tab__caption').on('click', 'li:not(.active)', function() {
-    $(this)
-      .addClass('active').siblings().removeClass('active')
-      .closest('div.tab').find('div.tab__content').removeClass('active').eq($(this).index()).addClass('active');
+  $(function() {
+    $('ul.tab__caption').on('click', 'li:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.tab').find('div.tab__content').removeClass('active').eq($(this).index()).addClass('active');
   });
+
+  const zoom = document.querySelector('.zoom');
+  const zoomImg = zoom.querySelector('.zoom__img');
+  let scrollPos = 0;
+  let isZoomImgStretched = false;
+  let initialZoomImgWidth, initialZoomImgHeight;
+
+  const moveZoomImgDown = (numPixels, maxShift) => {
+    const coord = zoom.getBoundingClientRect();
+    const maxShiftDown = coord.height/2;
+    if (zoomImg.offsetTop >= maxShiftDown) {
+      return;
+    }
+    const shift = Math.min(numPixels, maxShiftDown, maxShift);
+    zoomImg.style.top = `${zoomImg.offsetTop + shift}px`;
+  };
+
+  const moveZoomImgToInitial = () => {
+    zoomImg.style = '';
+    zoomImg.style.width = `${initialZoomImgWidth}px`;
+    zoomImg.style.height = `${initialZoomImgHeight}px`;
+  };
+
+  const handleScroll = () => {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const coord = zoom.getBoundingClientRect();
+    const coordImg = zoomImg.getBoundingClientRect();
+
+    if (st > scrollPos && coord.top < 0 && (!isZoomImgStretched || zoomImg.offsetWidth < window.innerWidth) && coordImg.height < window.innerHeight) {
+      zoomImg.style.width = `${zoomImg.offsetWidth + (window.scrollY / 5)}px`;
+      if (coordImg.left < coord.width / 3) {
+        zoomImg.style.right = 0;
+      }
+      moveZoomImgDown(100, window.innerHeight);
+      isZoomImgStretched = true;
+    } else if (coord.top < coord.height) {
+      moveZoomImgToInitial();
+      isZoomImgStretched = false;
+    } else {
+      zoomImg.style = '';
+      isZoomImgStretched = false;
+    }
+
+    scrollPos = st;
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  new WOW().init();
+
 });
 
-function numberWithSpaces(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
 
-new WOW().init();
+
+
