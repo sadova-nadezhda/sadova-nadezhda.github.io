@@ -839,12 +839,18 @@ h6 {
 }
 
 .company__container {
+  justify-content: center;
+  align-items: center;
   min-height: 47vh;
 }
 
 .factory__title {
   display: grid;
   gap: 18px;
+  font: 500 106px/1 Montserrat;
+  color: #FFFFFF;
+}
+.company__title {
   font: 500 106px/1 Montserrat;
   color: #FFFFFF;
 }
