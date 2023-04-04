@@ -918,7 +918,6 @@ h6 {
   align-items: flex-end;
   width: 100%;
   height: 100%;
-  padding: 40px;
   color: #FFFFFF;
   background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 86.31%);
   overflow: hidden;
@@ -942,13 +941,13 @@ h6 {
 .projects__card:hover img {
   transform: scale(1.05);
 }
-.projects__card:hover .projects__link {
-  background-color: #07B5BF;
-}
 .projects__wrap {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  height: 100%;
+  padding: 40px;
+  transition: all 0.2s ease-in-out;
 }
 .projects__desc {
   flex-grow: 1;
@@ -1286,6 +1285,28 @@ h6 {
 }
 .complexes__card {
   height: 600px;
+}
+
+.complexes .projects__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
+}
+.complexes__row, .complexes__txt {
+  max-width: 360px;
+  font-size: 16px;
+}
+.complexes .projects__card:hover .projects__link {
+  background-color: #07B5BF;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.complexes .projects__card:hover .projects__wrap {
+  width: max-content;
+  background: rgba(0, 157, 166, 0.9);
 }
 
 /*жк inner page*/
