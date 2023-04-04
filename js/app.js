@@ -88,6 +88,33 @@ window.addEventListener("load", function () {
       },
     },
   });
+  let characteristicSwiper  = new Swiper('.characteristicSwiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    watchSlidesVisibility: true,
+    parallax: false,
+    loop: true,
+    speed: 900,
+    effect: 'slide',
+    breakpoints: {
+      600: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+    }
+  });
   let swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     slidesPerView: 1,
@@ -199,7 +226,10 @@ window.addEventListener("load", function () {
     scrollPos = st;
   };
 
-  window.addEventListener('scroll', handleScroll);
+  if(zoom) {
+    window.addEventListener('scroll', handleScroll);
+  }
+
 
   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -209,30 +239,37 @@ window.addEventListener("load", function () {
 
   const grids = document.querySelectorAll('.card__grid');
 
-  grids.forEach(grid => {
-    const cards = grid.querySelectorAll('.complexes__card');
-    cards[0].addEventListener('mouseover', function() {
-      grid.style.gridTemplateColumns = '6fr 2fr';
-    });
-    cards[0].addEventListener('mouseout', function() {
-      grid.style.gridTemplateColumns = '4fr 4fr';
-    });
-    cards[1].addEventListener('mouseover', function() {
-      grid.style.gridTemplateColumns = '2fr 6fr';
-    });
-    cards[1].addEventListener('mouseout', function() {
-      grid.style.gridTemplateColumns = '4fr 4fr';
-    });
-  })
+  if(grids) {
+    grids.forEach(grid => {
+      const cards = grid.querySelectorAll('.complexes__card');
+      cards[0].addEventListener('mouseover', function() {
+        grid.style.gridTemplateColumns = '6fr 2fr';
+      });
+      cards[0].addEventListener('mouseout', function() {
+        grid.style.gridTemplateColumns = '4fr 4fr';
+      });
+      cards[1].addEventListener('mouseover', function() {
+        grid.style.gridTemplateColumns = '2fr 6fr';
+      });
+      cards[1].addEventListener('mouseout', function() {
+        grid.style.gridTemplateColumns = '4fr 4fr';
+      });
+    })
+  }
 
-  const paths = document.querySelectorAll('.contacts__card path');
-
-  anime({
-    targets: paths,
-    duration: 2000,
-    delay: 200,
-    easing: 'easeInOutExpo',
-    strokeDashoffset: [anime.setDashoffset, 0]
+  $('.anim__card').waypoint({
+    handler: function() {
+      $(this.element).addClass('amin_svg ');
+      const paths = document.querySelectorAll('.amin_svg path');
+      anime({
+        targets: paths,
+        duration: 2000,
+        delay: 200,
+        easing: 'easeInOutExpo',
+        strokeDashoffset: [anime.setDashoffset, 0]
+      });
+    },
+    offset: '80%',
   });
 
 });
