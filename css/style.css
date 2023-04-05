@@ -1284,28 +1284,49 @@ h6 {
   transition: all linear 0.3s;
 }
 .complexes__card {
-  height: 600px;
+  height: 65vh;
 }
-
+.complexes .projects__wrap {
+  position: absolute;
+  top: 77%;
+  padding: 0;
+}
 .complexes .projects__desc {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding: 40px;
   flex-grow: 1;
 }
 .complexes__row, .complexes__txt {
   max-width: 360px;
   font-size: 16px;
 }
-.complexes .projects__card:hover .projects__link {
+.complexes__row {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 10px;
+}
+.complexes__row span:last-child {
+  font-weight: 600;
+}
+.complexes__info {
+  margin-bottom: 50px;
+}
+.complexes .projects__card .projects__link {
   background-color: #07B5BF;
   position: absolute;
   top: 40px;
   right: 40px;
 }
 .complexes .projects__card:hover .projects__wrap {
-  width: max-content;
+  top: 0;
+
+}
+.complexes .projects__card:hover .projects__desc {
+  max-width: max-content;
   background: rgba(0, 157, 166, 0.9);
 }
 
