@@ -89,7 +89,7 @@ window.addEventListener("load", function () {
     },
   });
   let characteristicSwiper  = new Swiper('.characteristicSwiper', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
@@ -237,26 +237,6 @@ window.addEventListener("load", function () {
 
   new WOW().init();
 
-  const grids = document.querySelectorAll('.card__grid');
-
-  if(grids) {
-    grids.forEach(grid => {
-      const cards = grid.querySelectorAll('.complexes__card');
-      cards[0].addEventListener('mouseover', function() {
-        grid.style.gridTemplateColumns = '6fr 2fr';
-      });
-      cards[0].addEventListener('mouseout', function() {
-        grid.style.gridTemplateColumns = '4fr 4fr';
-      });
-      cards[1].addEventListener('mouseover', function() {
-        grid.style.gridTemplateColumns = '2fr 6fr';
-      });
-      cards[1].addEventListener('mouseout', function() {
-        grid.style.gridTemplateColumns = '4fr 4fr';
-      });
-    })
-  }
-
   $('.anim__card').waypoint({
     handler: function() {
       $(this.element).addClass('amin_svg ');
@@ -297,5 +277,29 @@ $(document).ready(function() {
 });
 
 
+let flag = true;
+const grids = document.querySelectorAll('.card__grid');
 
+$(window).on('resize', function(){
+  if ($(this).width() > 980 && flag) {
+    flag = false;
+    if(grids) {
+      grids.forEach(grid => {
+        const cards = grid.querySelectorAll('.complexes__card');
+        cards[0].addEventListener('mouseover', function() {
+          grid.style.gridTemplateColumns = '6fr 2fr';
+        });
+        cards[0].addEventListener('mouseout', function() {
+          grid.style.gridTemplateColumns = '4fr 4fr';
+        });
+        cards[1].addEventListener('mouseover', function() {
+          grid.style.gridTemplateColumns = '2fr 6fr';
+        });
+        cards[1].addEventListener('mouseout', function() {
+          grid.style.gridTemplateColumns = '4fr 4fr';
+        });
+      })
+    }
+  }
+}).resize();
 
