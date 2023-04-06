@@ -1064,6 +1064,8 @@ h6 {
   padding: 120px 0;
   padding-top: 280px;
   transition: all 1s linear;
+  background: url(../img/elem-5.svg) no-repeat;
+  background-position: 0% 55%;
   /* overflow: hidden; */
 }
 .zoom__container {
