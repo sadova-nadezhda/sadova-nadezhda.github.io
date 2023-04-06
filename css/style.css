@@ -1623,11 +1623,17 @@ h6 {
   background: #019CA5;
   color: #fff;
 }
+.aside__head svg {
+  width: 34px;
+  height: 34px;
+}
 .aside__body {
   display: grid;
   gap: 35px;
   padding: 30px 40px;
-  background: #EDF3F2;
+  background: url(../img/logo_vacanc.png) #EDF3F2 no-repeat;
+  background-position: 85% 55%;
+  background-size: 55%;
 }
 .aside__link {
   display: grid;
