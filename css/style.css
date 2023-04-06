@@ -1581,6 +1581,10 @@ h6 {
   font-size: 16px;
   line-height: 1;
 }
+.vacancies .accordion__title.active {
+  border: none;
+  padding-bottom: 0;
+}
 .vacancies .wp {
   background: #24B359;
 }
