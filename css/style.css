@@ -1013,7 +1013,7 @@ h6 {
   z-index: -1;
 }
 /*technology*/
-.technology {
+.technology_back {
   background: url(../img/elem-2.svg) no-repeat;
   background-size: 55%;
   background-position: 0% 93%;
@@ -1062,13 +1062,13 @@ h6 {
 .zoom {
   position: relative;
   padding: 120px 0;
+  padding-top: 280px;
   transition: all 1s linear;
   /* overflow: hidden; */
 }
 .zoom__container {
   display: grid;
   align-items: center;
-  min-height: 550px;
   transition: all 1s linear;
 }
 .zoom__desc {
@@ -1079,10 +1079,26 @@ h6 {
 .zoom__title {
   margin-bottom: 30px;
 }
-.zoom__img {
+/* .zoom__img {
   position: absolute;
   right: 7%;
-  /* transform: translateY(-50%); */
+  width: 810px;
+  height: 550px;
+  transition: all 1s linear;
+}
+.zoom__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+.zoom__wrap {
+  width: 100%;
+  height: 100vh;
+}
+.zoom__img {
+  position: absolute;
+  bottom: 50%;
+  right: 7%;
   width: 810px;
   height: 550px;
   transition: all 1s linear;
