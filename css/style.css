@@ -1242,6 +1242,12 @@ h6 {
 .accordion__title.active {
   pointer-events: none;
 }
+.accordion__title svg {
+  transition: all linear 0.3s;
+}
+.accordion__title.active svg {
+  transform: rotate(180deg);
+}
 .accordion__content {
   display: none;
   padding-top: 20px;
