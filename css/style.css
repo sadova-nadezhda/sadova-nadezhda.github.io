@@ -1065,7 +1065,8 @@ h6 {
   padding-top: 280px;
   transition: all 1s linear;
   background: url(../img/elem-5.svg) no-repeat;
-  background-position: 0% 55%;
+  background-position: 0% 57%;
+  background-size: 60%;
   /* overflow: hidden; */
 }
 .zoom__container {
@@ -1075,24 +1076,13 @@ h6 {
 }
 .zoom__desc {
   position: relative;
-  max-width: 760px;
+  max-width: 40%;
   z-index: 3;
 }
 .zoom__title {
   margin-bottom: 30px;
+  color: #019CA5;
 }
-/* .zoom__img {
-  position: absolute;
-  right: 7%;
-  width: 810px;
-  height: 550px;
-  transition: all 1s linear;
-}
-.zoom__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 .zoom__wrap {
   width: 100%;
   height: 100vh;
@@ -1101,8 +1091,8 @@ h6 {
   position: absolute;
   bottom: 50%;
   right: 7%;
-  width: 810px;
-  height: 550px;
+  width: 42vw;
+  height: 60vh;
   transition: all 1s linear;
 }
 .zoom__img img {
@@ -1878,6 +1868,9 @@ h6 {
   .contacts__map {
     height: 60vh;
   }
+  .zoom {
+    padding-top: 250px;
+  }
 }
 
 @media (max-width: 1540px) {
@@ -2081,6 +2074,9 @@ h6 {
   }
   .connect .title {
     margin-bottom: 50px;
+  }
+  .zoom {
+    padding-top: 200px;
   }
 }
 

@@ -32,59 +32,55 @@ document.addEventListener("DOMContentLoaded", function () {
     zoom.style.height = `calc( 80vh + ${zoom.offsetHeight}px)`
     const zoomImg = document.querySelector('.zoom__img');
     const zoomDesc = document.querySelector('.zoom__desc');
-    let scrollPos = 0;
 
     document.addEventListener('scroll', handleScroll)
 
-    function handleScroll(e) {
+    function handleScroll() {
       const coord = zoom.getBoundingClientRect();
-      console.log(coord.top)
       switch(coord.top < 0) {
         case (coord.top > -50) : {
           zoomImg.style.bottom = '50%';
           zoomImg.style.right = '7%';
-          zoomImg.style.width = '810px';
-          zoomImg.style.height = '550px';
+          zoomImg.style.width = '42vw';
+          zoomImg.style.height = '60vh';
           break;
         }
         case (coord.top > -100) : {
-          console.log('100')
           zoomImg.style.bottom = '40%';
           zoomImg.style.right = '7%';
-          zoomImg.style.width = '910px';
-          zoomImg.style.height = '600px';
+          zoomImg.style.width = '52vw';
+          zoomImg.style.height = '65vh';
           break;
         }
         case (coord.top > -150) : {
-          console.log('200')
           zoomImg.style.bottom = '30%';
           zoomImg.style.right = '7%';
-          zoomImg.style.width = '1010px';
-          zoomImg.style.height = '650px';
+          zoomImg.style.width = '62vw';
+          zoomImg.style.height = '70vh';
           break;
         }
         case (coord.top > -200) : {
-          console.log('300')
           zoomImg.style.bottom = '20%';
           zoomImg.style.right = '5%';
-          zoomImg.style.width = '1210px';
-          zoomImg.style.height = '700px';
+          zoomImg.style.width = '72vw';
+          zoomImg.style.height = '75vh';
           break;
         }
         case (coord.top > -250) : {
-          console.log('400')
           zoomImg.style.bottom = '10%';
           zoomImg.style.right = '3%';
-          zoomImg.style.width = '1410px';
-          zoomImg.style.height = '750px';
+          zoomImg.style.width = '85vw';
+          zoomImg.style.height = '80vh';
           break;
         }
         case (coord.top > -300) : {
-          console.log('500')
           zoomImg.style.bottom = '0';
           zoomImg.style.right = '0';
-          zoomImg.style.width = '100%';
-          zoomImg.style.height = '800px';
+          zoomImg.style.width = '100vw';
+          zoomImg.style.height = '90vh';
+          break;
+        }
+        default : {
           break;
         }
       }
