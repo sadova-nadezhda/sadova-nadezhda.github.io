@@ -1109,8 +1109,8 @@ h6 {
 }
 .product__gallery {
   display: grid;
-  grid-template-columns: repeat(12, 110px);
-  grid-template-rows: repeat(12, 53px);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 5vh);
   gap: 30px;
 }
 .product__item:nth-child(1) {
@@ -2050,9 +2050,9 @@ h6 {
   .vacancies .accordion {
     max-width: 95%;
   }
-  .accordion__title {
+  /* .accordion__title {
     padding: 20px 0;
-  }
+  } */
   .aside__head {
     padding: 18px 30px;
   }
