@@ -162,20 +162,16 @@ window.addEventListener("load", function () {
     },
     offset: '80%',
   });
-  // $('.way').waypoint({
-  //   handler: function() {
-  //       $(this.element).addClass("way--active");
-  //   },
-  //   offset: '88%'
-  // })
-});
+
 
   $(function() {
     $('ul.tab__caption').on('click', 'li:not(.active)', function() {
       $(this)
         .addClass('active').siblings().removeClass('active')
         .closest('div.tab').find('div.tab__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
   });
+
 
   const zoom = document.querySelector('.zoom');
   const zoomImg = document.querySelector('.zoom__img');
@@ -229,7 +225,6 @@ window.addEventListener("load", function () {
   if(zoom) {
     window.addEventListener('scroll', handleScroll);
   }
-
 
   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
