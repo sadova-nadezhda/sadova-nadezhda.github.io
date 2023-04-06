@@ -253,6 +253,7 @@ $(document).ready(function() {
   var currentAttrValue = $('.accordion__title').attr('href');
   function close_accordion_section() {
       $('.accordion__title').removeClass('active');
+      $('.accordion__title').parent().removeClass('active');
       $('.accordion__content').slideUp(300).removeClass('open');
   }
   if($('.accordion__content').hasClass('open')) {
@@ -265,6 +266,7 @@ $(document).ready(function() {
       }else {
           close_accordion_section();
           $(this).addClass('active');
+          $(this).parent().addClass('active');
           $('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
       }
       e.preventDefault();
