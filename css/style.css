@@ -1402,17 +1402,31 @@ h6 {
   color: #0D3A3E;
 }
 .characteristic__slider {
+  position: relative;
   margin-bottom: 100px;
 }
 .characteristicSwiper {
-  margin-bottom: 30px;
+  height: 70vh;
+  max-height: 600px;
+}
+.characteristic .swiper {
+  margin-bottom: 40px;
+}
+.characteristic .swiper-wrapper {
+  align-items: center;
+}
+.characteristic .swiper-slide {
+  float: left;
+  position: relative;
+  width: 30%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
 }
 .characteristic__img {
   float: left;
   position: relative;
-  width: 30%;
-  max-height: 600px;
-  height: 70vh;
+  width: 100%;
+  height: 100%;
 }
 .characteristic .swiper__pagin {
   max-width: 58%;
@@ -1550,6 +1564,7 @@ h6 {
   overflow: unset;
   background: url(../img/elem-4.svg) no-repeat;
   background-position: 100% 100%;
+  background-size: 40%;
 }
 .vacancies__tab {
   display: grid;
@@ -2442,6 +2457,9 @@ h6 {
   }
   .quote__info {
     max-width: 100%;
+  }
+  .characteristic .swiper-slide {
+    width: 40%;
   }
 }
 

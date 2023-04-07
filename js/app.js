@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   let characteristicSwiper  = new Swiper('.characteristicSwiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
@@ -100,21 +100,20 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    watchSlidesVisibility: true,
-    parallax: false,
-    loop: true,
+    // centeredSlides: true,
+    // watchSlidesVisibility: true,
+    // parallax: false,
     speed: 900,
-    effect: 'slide',
+    // height: 'auto',
+    // slideToClickedSlide: true,
+    // paginationClickable: true,
+    // effect: 'slide',
     breakpoints: {
       600: {
         slidesPerView: 'auto',
         spaceBetween: 20,
       },
-    }
+    },
   });
   let swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
@@ -217,64 +216,64 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         })
       }
-    }
-    if(zoom) {
-      zoom.style.height = `calc( 80vh + ${zoom.offsetHeight}px)`
-      const zoomImg = document.querySelector('.zoom__img');
-      const zoomDesc = document.querySelector('.zoom__desc');
-  
-      document.addEventListener('scroll', handleScroll)
-  
-      function handleScroll() {
-        const coord = zoom.getBoundingClientRect();
-        switch(coord.top < 0) {
-          case (coord.top > -80) : {
-            zoomImg.style.bottom = '50%';
-            zoomImg.style.right = '7%';
-            zoomImg.style.width = '42vw';
-            zoomImg.style.height = '60vh';
-            break;
+      if(zoom) {
+        zoom.style.height = `calc( 80vh + ${zoom.offsetHeight}px)`
+        const zoomImg = document.querySelector('.zoom__img');
+        const zoomDesc = document.querySelector('.zoom__desc');
+    
+        document.addEventListener('scroll', handleScroll)
+    
+        function handleScroll() {
+          const coord = zoom.getBoundingClientRect();
+          switch(coord.top < 0) {
+            case (coord.top > -80) : {
+              zoomImg.style.bottom = '50%';
+              zoomImg.style.right = '7%';
+              zoomImg.style.width = '42vw';
+              zoomImg.style.height = '60vh';
+              break;
+            }
+            case (coord.top > -100) : {
+              zoomImg.style.bottom = '40%';
+              zoomImg.style.right = '7%';
+              zoomImg.style.width = '52vw';
+              zoomImg.style.height = '65vh';
+              break;
+            }
+            case (coord.top > -150) : {
+              zoomImg.style.bottom = '30%';
+              zoomImg.style.right = '7%';
+              zoomImg.style.width = '62vw';
+              zoomImg.style.height = '70vh';
+              break;
+            }
+            case (coord.top > -200) : {
+              zoomImg.style.bottom = '20%';
+              zoomImg.style.right = '5%';
+              zoomImg.style.width = '72vw';
+              zoomImg.style.height = '75vh';
+              break;
+            }
+            case (coord.top > -250) : {
+              zoomImg.style.bottom = '10%';
+              zoomImg.style.right = '3%';
+              zoomImg.style.width = '85vw';
+              zoomImg.style.height = '80vh';
+              break;
+            }
+            case (coord.top > -300) : {
+              zoomImg.style.bottom = '0';
+              zoomImg.style.right = '0';
+              zoomImg.style.width = '100vw';
+              zoomImg.style.height = '90vh';
+              break;
+            }
+            default : {
+              break;
+            }
           }
-          case (coord.top > -100) : {
-            zoomImg.style.bottom = '40%';
-            zoomImg.style.right = '7%';
-            zoomImg.style.width = '52vw';
-            zoomImg.style.height = '65vh';
-            break;
-          }
-          case (coord.top > -150) : {
-            zoomImg.style.bottom = '30%';
-            zoomImg.style.right = '7%';
-            zoomImg.style.width = '62vw';
-            zoomImg.style.height = '70vh';
-            break;
-          }
-          case (coord.top > -200) : {
-            zoomImg.style.bottom = '20%';
-            zoomImg.style.right = '5%';
-            zoomImg.style.width = '72vw';
-            zoomImg.style.height = '75vh';
-            break;
-          }
-          case (coord.top > -250) : {
-            zoomImg.style.bottom = '10%';
-            zoomImg.style.right = '3%';
-            zoomImg.style.width = '85vw';
-            zoomImg.style.height = '80vh';
-            break;
-          }
-          case (coord.top > -300) : {
-            zoomImg.style.bottom = '0';
-            zoomImg.style.right = '0';
-            zoomImg.style.width = '100vw';
-            zoomImg.style.height = '90vh';
-            break;
-          }
-          default : {
-            break;
-          }
+    
         }
-  
       }
     }
   }).resize();
