@@ -81,6 +81,7 @@ window.addEventListener("load", function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    dots: true,
     prevArrow:"<button type='button' class='slick-arrow slick-prev'></button>",
     nextArrow:"<button type='button' class='slick-arrow slick-next'></button>",
     fade: true,
