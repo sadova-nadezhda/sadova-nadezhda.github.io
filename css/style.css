@@ -1403,6 +1403,9 @@ h6 {
   h4 {
     font-size: 22px;
   }
+  .about__title, .power__title, .finance__title, .technique__title, .geography__title, .partners__title, .certificate__title, service__title {
+    margin-bottom: 30px;
+  }
 
   .power__card h4 {
     font-size: 30px;
