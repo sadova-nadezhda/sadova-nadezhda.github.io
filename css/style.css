@@ -939,6 +939,7 @@ h6 {
 .advantage {
   background: url(../img/back-2.png) no-repeat;
   background-position: 100%;
+  background-size: cover;
   background-color: #383C3B;
   color: #fff;
 }
