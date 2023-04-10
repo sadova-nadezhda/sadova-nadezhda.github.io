@@ -305,7 +305,7 @@ h6 {
 .header__nav {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: -100%;
   display: block;
   min-height: 100vh;
   min-width: 405px;
