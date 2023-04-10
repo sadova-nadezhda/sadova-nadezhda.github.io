@@ -313,6 +313,7 @@ h6 {
   background-color: #1B1A1B;
   color: #fff;
   transition: all 0.2s ease-in-out;
+  z-index: 2;
 }
 
 .header__nav.open {
@@ -378,6 +379,10 @@ h6 {
 
 .nav__logo {
   margin-bottom: 60px;
+}
+.nav__menu {
+  display: grid;
+  gap: 15px;
 }
 
 .footer {
