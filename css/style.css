@@ -1252,7 +1252,13 @@ h6 {
   position: relative;
   display: flex;
   align-items: flex-start;
+  width: 4vw;
+  border-right: 1px solid #807F7F;
   overflow: visible;
+  transition: all 1s ease;
+}
+.service__item:last-child {
+  border-right: none;
 }
 .service__caption {
   display: flex;
@@ -1263,25 +1269,18 @@ h6 {
   padding: 40px 25px;
   writing-mode: vertical-rl;
   transform: scale(-1);
-  border-left: 1px solid #807F7F;
 }
 .service__caption:hover {
   cursor: pointer;
 }
-.service__caption.active:hover {
-  pointer-events: none;
-}
 .service__caption h5 {
   text-transform: uppercase;
 }
-.service__item:last-child .service__caption {
-  border-left: none;
-}
 .service__item .wrapper {
   position: relative;
-  width: 0;
+  width: 100%;
   height: 100%;
-  transition: all 3s linear;
+  transition: all 0.3s linear;
   overflow-x: hidden;
 }
 .service__item .inner {
@@ -1289,6 +1288,7 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   width: 100%;
+  min-width: 56.5vw;
   height: 100%;
   padding: 50px;
 }
@@ -1304,14 +1304,11 @@ h6 {
      object-fit: cover;
 }
 .service__item.active {
+  width: 70vw;
   background-color: #fff;
 }
 .service__item.active .wrapper {
-  width: 100%;
-  border-right: 1px solid #807F7F;
-}
-.service__item:last-child .wrapper {
-  border-right: none;
+  border-left: 1px solid #807F7F;
 }
 .service__num {
   writing-mode: initial;
@@ -1437,39 +1434,34 @@ h6 {
 
   .service__item {
     display: grid;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #807F7F;
   }
-
+  .service__item:last-child {
+    border-bottom: none;
+  }
+  .service__item.active {
+    width: 100%;
+  }
   .service__caption {
     padding: 25px;
     writing-mode: initial;
     transform: unset;
     border-left: unset;
-    border-bottom: 1px solid #807F7F;
   }
-
-  .service__item:last-child .service__caption {
-    border-bottom: none;
-  }
-
   .service__item .wrapper {
     width: 100%;
     height: 0;
   }
-
   .service__item .inner {
     padding: 30px;
   }
-
   .service__item.active .wrapper {
-    border-right: none;
-    border-bottom: 1px solid #807F7F;
+    border: none;
     height: 100%;
+    border-top: 1px solid #807F7F;
   }
-
-  .service__item:last-child .wrapper {
-    border-bottom: none;
-  }
-
   .service__num {
     transform: unset;
   }
