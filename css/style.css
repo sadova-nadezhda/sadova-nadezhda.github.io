@@ -1567,6 +1567,11 @@ h6 {
     height: 20px;
   }
 
+  .advantage {
+    background: #383C3B;
+    color: #fff;
+  }
+
   .about__wrap {
     grid-template-columns: 1fr;
   }
