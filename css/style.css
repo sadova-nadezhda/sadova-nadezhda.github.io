@@ -1554,6 +1554,10 @@ h6 {
 }
 
 @media (max-width: 600px) {
+  .header__nav {
+    min-width: unset;
+    width: 100vw;
+  }
   .footer__box {
     grid-template-columns: 1fr;
   }
