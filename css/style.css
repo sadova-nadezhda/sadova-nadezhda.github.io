@@ -383,6 +383,16 @@ h6 {
   display: grid;
   gap: 15px;
 }
+.nav__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+}
+.nav__close:hover {
+  cursor: pointer;
+}
 
 .footer {
   padding-top: 100px;
