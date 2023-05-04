@@ -223,19 +223,19 @@ window.addEventListener("DOMContentLoaded", function () {
 
 });
 
-function RemoveFancy() {
-  let activeSlides = document.querySelectorAll('.reviews__img');
-  activeSlides.forEach(elem => {
-    if(elem.closest('.reviews__item').classList.contains('slick-cloned')){
-      elem.setAttribute('data-fancybox', '');
-    }else{
-      elem.setAttribute('data-fancybox', 'reviews');
-    }
-  });
-}
+// function RemoveFancy() {
+//   let activeSlides = document.querySelectorAll('.reviews__img');
+//   activeSlides.forEach(elem => {
+//     if(elem.closest('.reviews__item').classList.contains('slick-cloned')){
+//       elem.setAttribute('data-fancybox', '');
+//     }else{
+//       elem.setAttribute('data-fancybox', 'reviews');
+//     }
+//   });
+// }
 
-$('.reviews__slider').on('afterChange', RemoveFancy);
+// $('.reviews__slider').on('afterChange', RemoveFancy);
 
-window.addEventListener('load', () => {
-  RemoveFancy();
-});
+// window.addEventListener('load', () => {
+//   RemoveFancy();
+// });
