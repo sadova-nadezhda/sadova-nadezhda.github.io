@@ -98,50 +98,106 @@ window.addEventListener("load", function () {
   }
 
   //cabinet User
-  let editBtn = document.querySelector('.cabinet__edit');
-  let saveBtn = document.querySelector('.cabinet__save');
-  let inpList = document.querySelectorAll('.cabinet__field input');
-  let passInp = document.querySelector('.cabinet__field__pass');
+  let isValid = true;
+  let cabinetEdit = document.querySelector('.cabinet__edit');
+  let cabinetSave = document.querySelector('.cabinet__save');
+  let cabinetFields = document.querySelectorAll('.cabinet__field input');
+  let FieldPass = document.querySelector('.field__pass input');
+  let cabinetFieldPass = document.querySelector('.field__pass');
+  let cabinetFieldPassEdit = document.querySelector('.field__pass_edit');
+  let password = document.querySelector('.password');
+  let password_confirm = document.querySelector('.password_confirm');
+  let cabinetForm = document.forms.cabinetForm;
 
-  if (editBtn) {
-    editBtn.addEventListener('click', function() {
-      inpList.forEach( field => {
-        field.removeAttribute('readonly')
+  if (cabinetEdit) {
+    cabinetEdit.addEventListener('click', function(e) {
+      cabinetFields.forEach(field => {
+        field.removeAttribute('readonly');
         field.classList.add('edit');
-        editBtn.classList.add('hidden');
-        saveBtn.classList.remove('hidden');
-        passInp.classList.remove('hidden');
-      })
-    })
-  
-    saveBtn.addEventListener('click', function() {
-      inpList.forEach( field => {
-        field.setAttribute('readonly', 'readonly')
-        field.classList.remove('edit');
-        editBtn.classList.remove('hidden');
-        saveBtn.classList.add('hidden');
-        passInp.classList.add('hidden');
-      })
-    })
+      });
+      cabinetEdit.classList.add('hidden');
+      cabinetSave.classList.remove('hidden');
+      cabinetFieldPassEdit.classList.remove('hidden');
+      cabinetFieldPass.classList.add('hidden');
+    });
+  }
+
+  if (cabinetSave) {
+    cabinetSave.addEventListener('click', function(e) {
+      e.preventDefault();
+      Validate();
+      if(isValid) {
+        cabinetFields.forEach(field => {
+          field.setAttribute('readonly', 'readonly');
+          field.classList.remove('edit');
+        });
+        cabinetEdit.classList.remove('hidden');
+        cabinetSave.classList.add('hidden');
+        cabinetFieldPassEdit.classList.add('hidden');
+        cabinetFieldPass.classList.remove('hidden');
+        // cabinetForm.submit();
+      }
+    });
+  }
+
+  function Validate() {
+    console.log(password.value.length)
+    // Проверка пароля
+    if (password.value === "") {
+      password.style.border = "1px solid #e74c3c";
+      password.focus();
+      isValid = false;
+    } 
+    // Проверка соответствия паролей 
+    else if (password.value !== password_confirm.value && password.value.length < 6 && password.value.length>16) {
+      password.style.border = "1px solid #e74c3c";
+      password_confirm.style.border = "1px solid #e74c3c";
+      password.focus();
+      isValid = false;
+    } 
+    else {
+      FieldPass.value = password.value;
+      password_confirm.style.border = "";
+      isValid = true;
+    }
+
+    return isValid;
   }
 
 
   //popup
-  let popup = document.querySelector("#popup");
-  if (popup) {
+  let popupLog = document.querySelector("#popup_log");
+  let popupSing = document.querySelector("#popup_sing");
+  if (popupLog || popupSing) {
     let popupBtn = document.querySelectorAll(".popup__btn");
     $(popupBtn).each( function() {
       $(this).on('click', () => {
-        $(popup).fadeIn(400);
+        if($(this).hasClass('popup_log')) {
+          $(popupLog).fadeIn(400);
+        }
+        else if($(this).hasClass('popup_sing')) {
+          $(popupSing).fadeIn(400);
+        }
       })
     });
-    $(popup).click(function(e) {
+    $(popupLog).click(function(e) {
       const target = e.target;
       if (
         $(target).hasClass("popup__close") ||
-        $(target).hasClass("popup")
+        $(target).hasClass("popup")||
+        $(target).hasClass("popup__sing")
       ) {
-        $(popup).fadeOut(400);
+        $(popupLog).fadeOut(400);
+      }
+    });
+    $(popupSing).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup") ||
+        $(target).hasClass("popup__sing")
+      ) {
+        $(popupSing).fadeOut(400);
       }
     });
   }
@@ -169,16 +225,24 @@ window.addEventListener("load", function () {
     })
     .mask("+7 (999) 999 99 99");
 
-  // alert
-  let alertt = document.querySelector(".alert--fixed");
-  let alertClose = document.querySelectorAll(".alert--close");
-  for (let item of alertClose) {
-    item.addEventListener("click", function (event) {
-      alertt.classList.remove("alert--active");
-      alertt.classList.remove("alert--warning");
-      alertt.classList.remove("alert--error");
+  //alert
+  let alertBox = document.querySelector('.alert__wrap');
+  if(alertBox) {
+    if(alertBox.classList.contains('active')) {
+      $(alertBox).fadeIn(400);
+    }
+    $(alertBox).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("alert__close") ||
+        $(target).hasClass("alert__wrap") ||
+        $(target).hasClass("alert__btn")
+      ) {
+        $(alertBox).fadeOut(400);
+      }
     });
   }
+
 });
 
 
