@@ -233,7 +233,6 @@ window.addEventListener("load", function () {
   };
   
   let testHtml = '';
-  let objResult = {};
   let sliderTest = document.querySelector('.test__slider');
   let total = document.querySelector('.test__result span');
   let bar = document.querySelector('.test__bar .bar');
@@ -321,8 +320,6 @@ window.addEventListener("load", function () {
   function updateProgress(){
     let totalInt = document.querySelectorAll('.test__answer input');
     let allSlide = $('.test__slider').find('.test__item').length;
-    // $('.test__slider').slick('setPosition');
-    // $('.test__slider').slick('slickGoTo', 0);
     progressBarUpdate(0);
     if(totalInt){
       totalInt.forEach( elem => {
@@ -352,37 +349,16 @@ window.addEventListener("load", function () {
     initSlider();
   }
 
-  // let sendPost = false;
-  // let token = $('meta[name="csrfToken"]').attr('content');
-  // if( !sendPost ){
-  //   sendPost = true;
-  //   $.ajax({
-  //     method: "POST",
-  //     url: '/requests/send',
-  //     data: objResult,
-  //     dataType: "json",
-  //     headers:{
-  //       'X-CSRF-Token': token,
-  //     }
-  //   })
-  //   .done(function(data) {
-  //     sendPost = false;
-  //     console.log(data)
-  //     txtAlert.innerHTML = data;
-  //   })
-  //   .fail(function(data){
-  //     console.log(data)
-  //     sendPost = false;
-  //     alert(data.responseText); //тоже нет 
-  //   });
-  // }
-
-  $('.test__slider').each(function(){
-    let $slickElement = $(this);
-    $slickElement.on('afterChange', function(event, slick, currentSlide, nextSlide){
-      progressBarUpdate(currentSlide);
+  if(sliderTest) {
+    $('.test__slider').each(function(){
+      let $slickElement = $(this);
+      $slickElement.on('afterChange', function(event, slick, currentSlide, nextSlide){
+        progressBarUpdate(currentSlide);
+      });
     });
-  });
+    setTest(data);
+  }
+
 
   function getResultTest(){
     // numResult.innerHTML = num;
@@ -420,7 +396,7 @@ window.addEventListener("load", function () {
     });
   }
 
-  setTest(data)
+
 
 
   //popup
