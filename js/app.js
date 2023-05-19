@@ -108,6 +108,11 @@ window.addEventListener("load", function () {
   let password = document.querySelector('.password');
   let password_confirm = document.querySelector('.password_confirm');
   let cabinetForm = document.forms.cabinetForm;
+  let errorPass = document.querySelectorAll('.error_pass');
+
+  errorPass.forEach( err => {
+    $(err).fadeOut(400);
+  })
 
   if (cabinetEdit) {
     cabinetEdit.addEventListener('click', function(e) {
@@ -125,8 +130,16 @@ window.addEventListener("load", function () {
   if (cabinetSave) {
     cabinetSave.addEventListener('click', function(e) {
       e.preventDefault();
-      Validate();
-      if(isValid) {
+      Validate()
+      if(!isValid) {
+        password.style.border = "1px solid #e74c3c";
+        password_confirm.style.border = "1px solid #e74c3c";
+        password.focus();
+      }
+      else {
+        FieldPass.value = password.value;
+        password.style.border = "";
+        password_confirm.style.border = "";
         cabinetFields.forEach(field => {
           field.setAttribute('readonly', 'readonly');
           field.classList.remove('edit');
@@ -135,34 +148,279 @@ window.addEventListener("load", function () {
         cabinetSave.classList.add('hidden');
         cabinetFieldPassEdit.classList.add('hidden');
         cabinetFieldPass.classList.remove('hidden');
-        // cabinetForm.submit();
+        cabinetForm.submit();
       }
     });
   }
 
   function Validate() {
-    console.log(password.value.length)
     // Проверка пароля
-    if (password.value === "") {
-      password.style.border = "1px solid #e74c3c";
-      password.focus();
+    // if (password.value === "" || password_confirm.value === "") {
+    //   isValid = false;
+    //   errorPass.forEach( err => {
+    //     if($(err).hasClass('error_passFill')) {
+    //       $(err).fadeIn(400);
+    //     } else {
+    //       $(err).fadeOut(400);
+    //     }
+    //   })
+    // } 
+    // Проверка длины
+    if (password.value !== '' && (password.value.length < 6 || password.value.length > 16)) {
       isValid = false;
-    } 
+      errorPass.forEach( err => {
+        if($(err).hasClass('error_passLeng')) {
+          $(err).fadeIn(400);
+        } else {
+          $(err).fadeOut(400);
+        }
+      })
+    }
     // Проверка соответствия паролей 
-    else if (password.value !== password_confirm.value && password.value.length < 6 && password.value.length>16) {
-      password.style.border = "1px solid #e74c3c";
-      password_confirm.style.border = "1px solid #e74c3c";
-      password.focus();
+    else if (password.value !== password_confirm.value) {
       isValid = false;
+      errorPass.forEach( err => {
+        if($(err).hasClass('error_passMatch')) {
+          $(err).fadeIn(400);
+        } else {
+          $(err).fadeOut(400);
+        }
+      })
     } 
+    // Пароль прошел все проверки
     else {
-      FieldPass.value = password.value;
-      password_confirm.style.border = "";
       isValid = true;
     }
-
     return isValid;
   }
+
+  let data = {
+    "questions": 
+    [
+     {
+       "question" : "1. Question Text Example",
+       "answers": {
+        "answer1" : 'ДА',
+        "answer2" : 'НЕТ',
+      },
+       "txt": "Келесі әлеуметтік санаттардың біріне жату:"
+     },
+     {
+      "question" : "2. Question Text Example",
+      "answers": {
+        "answer1" : 'ДА',
+        "answer2" : 'НЕТ',
+      },
+      "txt": ""
+     },
+     {
+        "question" : "3. Question Text Example",
+        "answers": {
+          "answer1" : 'ДА',
+          "answer2" : 'НЕТ',
+        },
+          "txt": ""
+     },
+    {
+        "question" : "4. Question Text Example",
+        "answers": {
+          "answer1" : 'ДА',
+          "answer2" : 'НЕТ',
+        },
+          "txt": ""
+    }
+    ]
+  };
+  
+  let testHtml = '';
+  let objResult = {};
+  let sliderTest = document.querySelector('.test__slider');
+  let total = document.querySelector('.test__result span');
+  let bar = document.querySelector('.test__bar .bar');
+  let resultBtn = document.querySelector('.test__res');
+
+   /*test*/
+   function createItem(item,qInd) {
+    console.log(item.txt)
+    let txtTest = '';
+    if(item.txt) {
+      txtTest = `<div class="test__txt">${item.txt}</div>`;
+    }
+    let answerTest = '';
+    let answerData = item.answers;
+    for (key in answerData) {
+      answerTest+= `<label for="answer-${qInd+"-"+key}" class="test__answer"><input value="${key}" type="radio" name="radio_${qInd}" id="answer-${qInd+"-"+key}"><span>${answerData[key]}</span></label>`;
+    }
+
+    let itemHtml = `
+    <div class="test__item">
+      <div class="test__wrap">
+        <h3 class="test__question caption">${item.question}</h3>
+          ${answerTest}
+      </div>
+      <div class="test__box">
+          ${txtTest}
+      </div>
+    </div>`;
+    testHtml += itemHtml;
+  }
+
+  function testSlider() {
+    /*form question*/
+    $('.test__slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      swipe: false,
+      fade: true,
+      arrows: true,
+      // adaptiveHeight: true,
+      nextArrow: '.test_next',
+      prevArrow: '.test_prev', 
+      dots: false,
+    });
+  }
+
+  function initSlider() {
+    if(sliderTest.classList.contains('slick-initialized')) {
+      $('.test__slider').slick('unslick');
+    }
+    // resultTest.innerHTML = resultHtml;
+    sliderTest.innerHTML = testHtml;
+    testSlider();
+    updateBtn();
+    updateProgress();
+  }
+
+  function updateBtn() {
+    /*form button*/
+    let slide = document.querySelectorAll('.test__item');
+    let btnPrev = document.querySelector('.test_prev');
+    let btnNext = document.querySelector('.test_next');
+    let btnResut = document.querySelector('.test__res');
+    let slideLast = slide[slide.length - 1] ;
+    if(slideLast) {
+      slideLast.classList.add('slide_last');
+    }
+    if (btnPrev && btnNext) {
+      btnNext.style.display = 'flex';
+      btnResut.style.display = 'none';
+      $('.test__slider').on('afterChange', function() {
+        if (slideLast.classList.contains('slick-active')) {
+          btnNext.style.display = 'none';
+          btnResut.style.display = 'block';
+        } else {
+          btnNext.style.display = 'flex';
+          btnResut.style.display = 'none';
+        }
+        $('.test__slider').slick('setPosition');
+      });
+    }
+  }
+
+  function updateProgress(){
+    let totalInt = document.querySelectorAll('.test__answer input');
+    let allSlide = $('.test__slider').find('.test__item').length;
+    // $('.test__slider').slick('setPosition');
+    // $('.test__slider').slick('slickGoTo', 0);
+    progressBarUpdate(0);
+    if(totalInt){
+      totalInt.forEach( elem => {
+        elem.addEventListener('change', ()=>{
+          let totalCheck = document.querySelectorAll('.test__answer input:checked');
+          let ids = [];
+          totalCheck.forEach( check => {
+            let valCheck = check.getAttribute('value');
+            ids.push(valCheck)
+          });
+          if(totalCheck.length == allSlide) {
+            resultBtn.removeAttribute('disabled');
+          } else {
+            resultBtn.setAttribute('disabled','disabled');
+          }
+        });
+      });
+    }
+  }
+
+  function setTest(data) {
+    testHtml = '';
+    resultHtml = '';
+    data.questions.forEach((qElem, i) => {
+      createItem(qElem,i);
+    });
+    initSlider();
+  }
+
+  // let sendPost = false;
+  // let token = $('meta[name="csrfToken"]').attr('content');
+  // if( !sendPost ){
+  //   sendPost = true;
+  //   $.ajax({
+  //     method: "POST",
+  //     url: '/requests/send',
+  //     data: objResult,
+  //     dataType: "json",
+  //     headers:{
+  //       'X-CSRF-Token': token,
+  //     }
+  //   })
+  //   .done(function(data) {
+  //     sendPost = false;
+  //     console.log(data)
+  //     txtAlert.innerHTML = data;
+  //   })
+  //   .fail(function(data){
+  //     console.log(data)
+  //     sendPost = false;
+  //     alert(data.responseText); //тоже нет 
+  //   });
+  // }
+
+  $('.test__slider').each(function(){
+    let $slickElement = $(this);
+    $slickElement.on('afterChange', function(event, slick, currentSlide, nextSlide){
+      progressBarUpdate(currentSlide);
+    });
+  });
+
+  function getResultTest(){
+    // numResult.innerHTML = num;
+    // for (level in levelsTest) {
+    //   if(levelsTest[level].min<=num && levelsTest[level].max>=num) {
+    //     let actLevel = document.querySelector('.result__test[data-id="' + level + '"]')
+    //     actLevel.classList.add('active');
+    //   }
+    // }
+    let totalCheck = document.querySelectorAll('.test__answer input:checked');
+    totalCheck.forEach(check => {
+      check.checked = false;
+    });
+    $('.test__slider').slick('setPosition');
+    $('.test__slider').slick('slickGoTo', 0);
+  }
+
+  if(resultBtn){
+    resultBtn.addEventListener('click', () => {
+      getResultTest();
+    });
+  };
+
+  function progressBarUpdate(currentSlide) {
+    let allSlide = $('.test__slider').find('.test__item').length;
+    let indexSlide = (currentSlide ? currentSlide : 0) + 1;			   
+    let progress = Math.ceil((indexSlide*100)/allSlide);
+    total.textContent = progress + '%';
+    $(bar).each(function () {
+      $(this).animate(
+        {
+          width: progress + "%",
+        },1000
+      );
+    });
+  }
+
+  setTest(data)
 
 
   //popup
