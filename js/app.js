@@ -122,7 +122,9 @@ window.addEventListener("load", function () {
         itemImg = parentBox.getAttribute('data-src'),
         itemPath = window.location.href;
 
-    cartData = getProductData();
+    cartData = getProductData() || {};
+
+    console.log(cartData)
 
     cartData[itemId] = { 'title': itemTitle, 'img': itemImg, 'path': itemPath};
 
@@ -184,7 +186,7 @@ window.addEventListener("load", function () {
   }
   // Проверка кол-ва товаров
   function checkCount(data) {
-    count = Object.keys(cartData).length;
+    count = Object.keys(cartData || {}).length;
     countProduct.textContent = count;
   }
   // "Добавить в корзину"
