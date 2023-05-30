@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+
+  //menu
   let link = document.querySelector(".header__burger");
   let menu = document.querySelector(".primery__menu");
   if (menu) {
@@ -66,32 +68,28 @@ window.addEventListener("load", function () {
   });
   //END slider
 
-    //popup
-    let popupCart = document.querySelector("#popup-cart");
-    let popupFeedback = document.querySelector("#popup-feedback");
-    let popupForm = document.querySelector("#popup-form");
-    let feedback = document.querySelector(".feedback");
-    let formBtn = document.querySelector(".popup-feedback_form");
-    if(popupCart){
-      hidePopup(popupCart)
-    }
-    if(popupFeedback){
-      hidePopup(popupFeedback)
-    }
-    if(popupForm){
-      hidePopup(popupForm)
-    }
-    if(feedback) {
-      feedback.addEventListener('click', function() {
-        showPopup(popupFeedback)
-      });
-    }
-    if(formBtn) {
-      formBtn.addEventListener('click', function() {
-        $(popupFeedback).fadeOut(400);
-        showPopup(popupForm)
-      });
-    }
+  //popup
+  let popupCart = document.querySelector("#popup-cart");
+  let popupFeedback = document.querySelector("#popup-feedback");
+  let popupForm = document.querySelector("#popup-form");
+  let feedback = document.querySelector(".feedback");
+  let formBtn = document.querySelector(".popup-feedback_form");
+  if(popupCart || popupFeedback || popupForm){
+    hidePopup(popupCart)
+    hidePopup(popupFeedback)
+    hidePopup(popupForm)
+  }
+  if(feedback) {
+    feedback.addEventListener('click', function() {
+      showPopup(popupFeedback)
+    });
+  }
+  if(formBtn) {
+    formBtn.addEventListener('click', function() {
+      $(popupFeedback).fadeOut(400);
+      showPopup(popupForm)
+    });
+  }
 
 
   //START Basket
@@ -103,7 +101,6 @@ window.addEventListener("load", function () {
       popupCard = document.querySelector('.popup-cart__card'),
       cartData = getProductData() || {},
       count = 0;
-
   // Получить данные 
   function getProductData() {
     return JSON.parse(localStorage.getItem('cart'));
@@ -121,19 +118,12 @@ window.addEventListener("load", function () {
         itemTitle = parentBox.querySelector('.js-product-title').innerHTML,
         itemImg = parentBox.getAttribute('data-src'),
         itemPath = window.location.href;
-
     cartData = getProductData() || {};
-
-    console.log(cartData)
-
     cartData[itemId] = { 'title': itemTitle, 'img': itemImg, 'path': itemPath};
-
     checkCount(cartData);
-
     if(!setProductData(cartData)){ 
       this.disabled = false; 
     }
-
     return false;
   }
   // Добавляем  товаров в корзину 
@@ -221,23 +211,42 @@ window.addEventListener("load", function () {
   //START Map
   let map = document.querySelector('#map');
   if(map) {
-    ymaps.ready(function () {
-      let myMap = new ymaps.Map('map', {
-              center: [51.143974, 71.435806],
-              zoom: 9
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
-  
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    ymaps.ready(init);
+    function init() {
+        let myMap = new ymaps.Map("map", {
+                center: [51.143974, 71.435806],
+                zoom: 9
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            blueCollection = new ymaps.GeoObjectCollection(null, {
+                preset: 'islands#blueIcon'
+            }),
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
               '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
-  
-          myPlacemarkWithContent = new ymaps.Placemark([51.148789, 71.467781], {
-              hintContent: 'БЦ "Алтай"',
-              balloonContent: `<span>БЦ "Алтай"</span> <img src="../img/1000м2.png">`,
-          }, {
+            ),
+            data = [
+              {
+                x: 51.148789,
+                y: 71.467781,
+                title: 'БЦ "Алтай"',
+                alias: '../img/1000м2.png'
+              },
+              {
+                x: 51.123103,
+                y: 71.434283,
+                title: 'БЦ "Eurocenter"',
+                alias: '../img/1000м2.png'
+              },
+            ];
+
+        data.forEach( element => {
+          console.log(element)
+          blueCollection.add(
+            new ymaps.Placemark([element['x'],element['y'] ], {
+              hintContent: element['title'],
+              balloonContent: `<div class="map__info"><span>${element['title']}</span> <img src="${element['alias']}"></div>`,
+            } , {
               // Необходимо указать данный тип макета.
               iconLayout: 'default#imageWithContent',
               // Размеры метки.
@@ -249,13 +258,144 @@ window.addEventListener("load", function () {
               iconContentOffset: [15, 15],
               // Макет содержимого.
               iconContentLayout: MyIconContentLayout
-          });
-  
-      myMap.geoObjects
-          .add(myPlacemarkWithContent);
-    });
+            })
+          );
+        });
+        myMap.geoObjects.add(blueCollection);
+    }
   }
   //END Map
+
+  
+  //START Brick Hover Rotate
+  (function($){
+    $.fn.image360 = function(options) {
+      
+      // настройки
+      var settings = $.extend( {
+        'count_loop': 10, // количество оборотов на ширину блока
+      }, options);
+      
+      var $main_div = this, // блок с картинками
+        div_width, // ширирна блока
+        count_imgs = 0, // количество картинок
+        start_drag = false, // старт анимации
+        position_X = 0, // положение курсора над картинкой
+        index_img = 0, // индекс отображаемой картинки
+        last_perc = 0, // предыдущее положение курсора относительно блока в процентах
+        direction = true; // напавление движения мыши true - влево, false -  вправо
+              
+      var methods = {
+        
+        init: function(settings) {  
+          // ширина блока
+          div_width = $main_div.width();
+          // console.log("div_width = " + div_width);
+          // подготовка картинок
+          $main_div.find("img").each(function(num){
+            if(num != 0){
+              $(this).hide();
+            }
+          });
+          count_imgs = $main_div.find("img").length;
+        },
+        
+        move_imgs: function(positionX){
+          if(positionX > div_width) positionX = div_width;
+          var percent_div = (positionX / div_width) * 100;
+          var percent_img = 100 / (settings.count_loop * count_imgs);  
+
+          if( Math.abs(percent_div - last_perc) > percent_img){
+            last_perc = percent_div;  
+            if(direction){
+              index_img--;
+            }else{
+              index_img++;
+            }
+            if(index_img < 0) index_img = (count_imgs - 1);
+            if(index_img > (count_imgs - 1)) index_img = 0;
+            $main_div.find("img").hide();
+            $main_div.find("img").eq(index_img).show();
+          }     
+        },
+        
+        resize: function(){
+          div_width = $main_div.width();
+        },
+        
+      };
+
+      $main_div.bind('mousedown touchstart touchmove touchend mousemove click', function (e) {        
+        e.preventDefault();
+        if(e.type === 'mousedown' || e.type === 'touchstart'){
+          // клик или тач
+          // старт
+          start_drag = true;
+          position_X = e.pageX;
+          
+        }else if(e.type === 'touchmove'){
+          // движение тач
+          if(start_drag){
+            var touch = e.originalEvent.touches[0];
+            // движение влево
+            if(position_X > touch.pageX){
+              direction = true;
+            }
+            // движение вправо
+            if(position_X < touch.pageX){
+              direction = false;
+            }
+            position_X = touch.pageX;
+            var offset_div = $main_div.offset();
+            var positionX = (touch.pageX - offset_div.left);
+            // анимация
+            methods.move_imgs(positionX);         
+          }
+        } else if (e.type === 'touchend') {
+          // отпустили тач
+          start_drag = false;
+        }
+      });
+      
+      // движение мышки
+      $main_div.bind('mousemove', function (e) {
+        e.preventDefault();
+        // start_drag = true;
+
+        if(start_drag){       
+          // движение влево
+          if(position_X > e.pageX){
+            direction = true;
+          }
+          // движение вправо
+          if(position_X < e.pageX){
+            direction = false;
+          }
+          position_X = e.pageX;
+          var offset_div = $main_div.offset();
+          var positionX = (e.pageX - offset_div.left);
+          // анимация
+          methods.move_imgs(positionX);         
+        }
+      });
+
+      // остановка, если отпустили конпку мышки
+      $(document).bind('mouseup', function (e) {
+        start_drag = false;
+      }); 
+      
+      $(window).resize(function() {
+        methods.resize();
+      });
+        
+      methods.init(settings);
+    };
+  })( jQuery );
+  let img_blocks = $('.gallery');
+  for( i=0; i<img_blocks.length; i++ ){
+    $(img_blocks[i]).image360();
+  }
+  //END Brick Hover Rotate
 
 
   // Form
