@@ -3451,6 +3451,10 @@ h6 {
   content: url(../img/arrow-2.svg);
 }
 
+.steps__item:last-child {
+  padding-bottom: 0;
+}
+
 .steps__item:last-child::after {
   content: none;
 }
@@ -3514,7 +3518,7 @@ h6 {
 }
 
 .process__container {
-  padding: 50px;
+  padding: 50px 0;
   background: #F5F5F1;
 }
 
@@ -3825,6 +3829,11 @@ h6 {
   margin-top: auto;
   border-radius: 10px;
   background: #F5F5F1;
+}
+
+.teachers__tel svg {
+  width: 40px;
+  height: 40px;
 }
 
 .teachers__tel span {
@@ -4160,6 +4169,9 @@ th {
     height: 540px;
   }
   .palace__box {
+    gap: 90px;
+  }
+  .enroll__box {
     gap: 90px;
   }
   .palace__slider {
@@ -4622,6 +4634,11 @@ th {
 
   .palace__box {
     gap: 60px;
+    margin-bottom: 60px;
+  }
+  .enroll__box {
+    gap: 60px;
+    margin-bottom: 60px;
   }
   .facts__desc {
     height: 400px;
@@ -4630,9 +4647,6 @@ th {
     height: 500px;
   }
   .palace__title {
-    margin-bottom: 60px;
-  }
-  .palace__box {
     margin-bottom: 60px;
   }
   .administration__info .info {
@@ -4673,6 +4687,9 @@ th {
     width: max-content;
     margin: 0 auto;
     margin-bottom: 12px;
+  }
+  .steps__item_finish .steps__caption {
+    font-size: 40px;
   }
 }
 
@@ -4773,10 +4790,16 @@ th {
   .palace__desc {
     width: 100%;
   }
+  .enroll__desc {
+    max-width: unset;
+    width: 100%;
+  }
   .palace__box {
     margin-bottom: 40px;
   }
-
+  .enroll__box {
+    margin-bottom: 40px;
+  }
   .regulations__title {
     margin-bottom: 60px;
   }
@@ -5034,6 +5057,16 @@ th {
   .band-inner__heading {
     font-size: 30px;
   }
+  .steps__title {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  .steps__item_finish .steps__caption {
+    font-size: 35px;
+  }
+  .steps__info {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -5128,6 +5161,13 @@ th {
   .palace__box {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .enroll__box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .enroll__mindal {
+    padding: 0;
   }
   .palace__wrap {
     order: 1;
@@ -5382,7 +5422,9 @@ th {
   .palace__box {
     margin-bottom: 30px;
   }
-
+  .enroll__box {
+    margin-bottom: 30px;
+  }
   .regulations__title {
     margin-bottom: 40px;
   }
@@ -5628,6 +5670,39 @@ th {
     gap: 10px;
     padding: 10px;
   }
+  .steps__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .steps__heading span {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .process__title {
+    font-size: 30px;
+  }
+  .steps__item_finish .steps__caption {
+    font-size: 30px;
+  }
+  .steps__caption {
+    font-size: 18px;
+  }
+  .steps__info {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .enroll {
+    padding-top: 0;
+  }
+  .teachers__img {
+    height: 300px;
+  }
+  .teachers__tel svg {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5832,6 +5907,10 @@ th {
 
   .band__caption {
     margin-bottom: 10px;  
+  }
+
+  .steps__title {
+    font-size: 25px;
   }
 }
 
