@@ -5752,6 +5752,10 @@ th {
   .advert__card {
     padding: 10px;
   }
+  .breadcrumbs__list li {
+    padding-right: 15px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 540px) {
