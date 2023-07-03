@@ -5551,6 +5551,9 @@ th {
   .vacancies-inner__aside {
     grid-template-columns: 1fr;
   }
+  .budget__title {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 540px) {
