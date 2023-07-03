@@ -116,8 +116,8 @@ window.addEventListener("load", function () {
   $('.services__slider').slick({
       slidesToScroll: 1,
       slidesToShow: 3,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
+      autoplay: true,
+      autoplaySpeed: 2000,
       infinite: true,
       dots: false,
       arrows: false,
@@ -125,20 +125,25 @@ window.addEventListener("load", function () {
         {
           breakpoint: 981,
           settings: {
-              slidesToShow: 2
+              slidesToShow: 2,
+              slidesToScroll: 1,
           }
         },
         {
-          breakpoint: 541,
+          breakpoint: 601,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            focusOnSelect: true,
+            swipeToSlide: true
           }
         }
       ]
   });
 
   $('.members__slider').slick({
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     centerMode: true,
@@ -155,13 +160,15 @@ window.addEventListener("load", function () {
       {
         breakpoint: 981,
         settings: {
-            slidesToShow: 2
+            slidesToShow: 2,
+            slidesToScroll: 1,
         }
       },
       {
         breakpoint: 541,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
         }
       }
