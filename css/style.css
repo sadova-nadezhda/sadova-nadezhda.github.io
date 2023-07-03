@@ -2600,6 +2600,9 @@ h6 {
   background-size: contain;
   background-position: center;
 }
+.debate-event .event-coming__title::before {
+  content: none;
+}
 
 .event-coming__box {
   position: relative;
@@ -2632,6 +2635,10 @@ h6 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.debate-event .event-coming__box::before, .debate-event .event-coming__box::after {
+  content: none;
 }
 
 .event-coming__video {
@@ -4625,6 +4632,9 @@ th {
   .camp-inner__top {
     margin-bottom: 40px;
   }
+  .debate__box:last-child {
+    grid-template-columns: 1fr 45%;
+  }
 }
 
 @media (max-width: 980px) {
@@ -4959,6 +4969,9 @@ th {
   .accordion {
     margin-bottom: 40px;
   }
+  .debate__box:last-child {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -5090,6 +5103,10 @@ th {
   }
   .event-coming__title::before {
     content: none;
+  }
+  .debate__box:last-child {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -5653,6 +5670,9 @@ th {
     font-size: 30px;
   }
   .camp-inner__title {
+    font-size: 30px;
+  }
+  .debate__caption {
     font-size: 30px;
   }
   .accordion__heading span {
