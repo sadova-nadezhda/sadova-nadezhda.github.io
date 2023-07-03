@@ -5354,6 +5354,10 @@ th {
   .facts__video {
     height: 350px;
   }
+
+  .regulations__title {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 600px) {
