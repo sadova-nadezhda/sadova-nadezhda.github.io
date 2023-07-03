@@ -3858,6 +3858,11 @@ h6 {
   overflow: auto;
 }
 
+.timetable__box {
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
 /*breadcrumbs*/
 
 .breadcrumbs {
@@ -4091,7 +4096,8 @@ table {
 
 td,
 th {
-  padding: 15px;
+  min-width: 150px;
+  padding: 10px;
   text-align: center;
   font-size: 14px;
   border: 1px solid #E7E7DD;
@@ -5067,6 +5073,9 @@ th {
   .steps__info {
     font-size: 18px;
   }
+  .timetable__title {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -5135,8 +5144,8 @@ th {
     grid-template-columns: 1fr;
   }
 
-  .gallery__box_right .gallery__desc {
-    order: unset;
+  .gallery__box_left .gallery__desc {
+    order: 1;
   }
 
   .gallery__box {
@@ -5703,6 +5712,9 @@ th {
     width: 35px;
     height: 35px;
   }
+  .timetable__title {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5889,6 +5901,9 @@ th {
   }
   .band-inner__time .info {
     flex-grow: 1;
+  }
+  .gallery__btn {
+    width: auto;
   }
 }
 
