@@ -2818,6 +2818,7 @@ h6 {
 
 .magazine__row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -2831,6 +2832,7 @@ h6 {
 }
 
 .magazine__issue {
+  white-space: nowrap;
   font-size: 20px;
   color: #00A0E3;
 }
@@ -4635,6 +4637,18 @@ th {
   .debate__box:last-child {
     grid-template-columns: 1fr 45%;
   }
+  .magazine__img {
+    height: 450px;
+  }
+  .magazine__card .card__img {
+    height: 450px;
+  }
+  .magazine__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .magazine__title {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -4972,11 +4986,38 @@ th {
   .debate__box:last-child {
     gap: 40px;
   }
+  .magazine__card .card__img {
+    height: 400px;
+  }
+  .magazine__title {
+    margin-bottom: 30px;
+  }
+  .magazine__wrap {
+    gap: 40px;
+  }
+  .magazine__img {
+    height: 400px;
+  }
+  .magazine__pagination {
+    margin-top: 70px;
+  }
+  .magazine__issue {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 900px) {
   .about__container {
     grid-template-columns: 1fr;
+  }
+  .magazine__card .card__img {
+    height: 350px;
+  }
+  .magazine__card .card__caption {
+    font-size: 20px;
+  }
+  .magazine__img {
+    height: 350px;
   }
 }
 
@@ -5020,10 +5061,6 @@ th {
   }
 
   .contest__cards {
-    grid-template-columns: 1fr;
-  }
-
-  .magazine__wrap {
     grid-template-columns: 1fr;
   }
 
@@ -5107,6 +5144,19 @@ th {
   .debate__box:last-child {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .magazine__pagination {
+    margin-top: 50px;
+  }
+  .magazine__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .magazine__card .card__btn {
+    height: auto;
+    padding: 10px 15px;
+  }
+  .magazine__caption {
+    font-size: 30px;
   }
 }
 
@@ -5525,6 +5575,9 @@ th {
   .accordion {
     margin-bottom: 30px;
   }
+  .magazine__issue {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5686,6 +5739,12 @@ th {
   .accordion__heading h5 {
     width: 70%;
     font-size: 16px;
+  }
+  .magazine__wrap {
+    grid-template-columns: 1fr;
+  }
+  .magazine__wrap {
+    margin-bottom: 30px;
   }
 }
 
