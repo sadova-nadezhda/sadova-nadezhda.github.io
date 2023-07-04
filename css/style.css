@@ -5905,6 +5905,10 @@ th {
   .gallery__btn {
     width: auto;
   }
+  .sticky__icon {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 @media (max-width: 540px) {
