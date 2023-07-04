@@ -325,6 +325,17 @@ select:focus {
   outline: 2px solid #FF9F50;
 }
 
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ACACAC;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -4160,6 +4171,169 @@ th {
   }
 }
 
+/*popups*/
+.popup-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+.popup-schedule__container {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  background: #FFF;
+
+}
+.popup-schedule__close {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popup-schedule__close svg {
+  width: 40px;
+  height: 40px;
+}
+.popup-schedule__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #00A0E3;
+}
+.popup-schedule__heading h4 {
+  color: #FFFFFF;
+}
+.popup-schedule__cards {
+  display: grid;
+  gap: 30px;
+  max-height: 60vh;
+  padding-right: 10px;
+  overflow: auto;
+}
+.popup-schedule__card {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E7E7DD;
+}
+.popup-schedule__card:last-child {
+  padding-bottom:0;
+  border-bottom: none;
+}
+.popup-schedule__table {
+  font-size: 14px;
+  color: #000;
+}
+.popup-schedule__table th {
+  font-weight: 400;
+}
+.popup-schedule__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.popup-schedule__teacher {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.popup-schedule__img {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.popup-schedule__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-schedule__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.popup-schedule__name span {
+  color: #58595C;
+  font-size: 14px;
+}
+.popup-schedule__contact, .popup-schedule__cabinet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #F5F5F1;
+  color: #000;
+  font-size: 14px;
+}
+
+/*popup teacher*/
+.popup-teacher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.popup-teacher__container {
+  position: relative;
+  max-width: 530px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 20px 0px rgba(126, 126, 114, 0.20);
+}
+.popup-teacher__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.popup-teacher__close svg {
+  width: 20px;
+  height: 20px;
+}
+.popup-teacher__card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: flex-start;
+  gap: 20px;
+}
+.popup-teacher__img {
+  height: 185px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.popup-teacher__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-teacher__info {
+  display: grid;
+  gap: 15px;
+}
+.popup-teacher__caption {
+  width: 80%;
+}
+
+
 @media (max-width: 1440px) {
   .afos__container {
     margin: 0 auto;
@@ -5093,6 +5267,9 @@ th {
   .magazine__img {
     height: 350px;
   }
+  .popup-teacher__container {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -5911,6 +6088,9 @@ th {
     bottom: 30px;
     right: 30px;
   }
+  .popup-teacher__info {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -5932,6 +6112,17 @@ th {
 
   .steps__title {
     font-size: 25px;
+  }
+
+  .popup-schedule__contact, .popup-schedule__cabinet {
+    flex-grow: 1;
+  }
+  .popup-teacher__card {
+    grid-template-columns: 1fr;
+  }
+  .popup-teacher__close {
+    top: -30px;
+    right: 0;
   }
 }
 
