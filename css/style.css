@@ -3156,6 +3156,7 @@ h6 {
   background: #FFF;
   color: #181817;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .band__plan:nth-child(9n+1) path,

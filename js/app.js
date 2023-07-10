@@ -314,6 +314,76 @@ window.addEventListener("load", function () {
     });
   }
 
+  //schedule
+  let data = []
+
+  cardSchedule = ''
+
+  function createSchedule(data) {
+    cardSchedule = `
+    <div class="popup-schedule__card">
+    <div class="timetable__box">
+      <table class="popup-schedule__table schedule__table">
+        <thead>
+          <tr>
+            <th>Группа / Язык</th>
+            <th>Понедельник</th>
+            <th>Вторник</th>
+            <th>Среда</th>
+            <th>Четверг</th>
+            <th>Пятница</th>
+            <th>Суббота</th>
+            <th>Воскресенье</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        ${ data[schedule][week_json].forEach( item => {
+            `<tr>
+              <td>${item[group]}</td>
+              <td>${item[day-1]}</td>
+              <td>${item[day-2]}</td>
+              <td>${item[day-3]}</td>
+              <td>${item[day-4]}</td>
+              <td>${item[day-5]}</td>
+              <td>${item[day-6]}</td>
+              <td>${item[day-7]}</td>
+            </tr>`
+          })
+        }
+        </tbody>
+      </table>
+    </div>
+    <div class="popup-schedule__bottom">
+      <div class="popup-schedule__teacher">
+        <div class="popup-schedule__img"><img src="${data[teacher][img]}" alt=""></div>
+        <div class="popup-schedule__name">
+          <span>${data[teacher][position]}:</span>
+          <h5>${data[teacher][title]}</h5>
+        </div>
+      </div>
+      <div class="popup-schedule__info">
+        <div class="popup-schedule__contact">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_590_5503)">
+            <path d="M18.3312 14.1V16.6C18.3322 16.8321 18.2846 17.0618 18.1917 17.2745C18.0987 17.4871 17.9623 17.678 17.7913 17.8349C17.6203 17.9918 17.4184 18.1113 17.1985 18.1856C16.9787 18.26 16.7457 18.2876 16.5146 18.2667C13.9503 17.9881 11.4871 17.1118 9.32291 15.7084C7.30943 14.4289 5.60236 12.7219 4.32291 10.7084C2.91456 8.53438 2.03811 6.0592 1.76458 3.48337C1.74375 3.25293 1.77114 3.02067 1.84499 2.80139C1.91885 2.58211 2.03755 2.38061 2.19355 2.20972C2.34954 2.03883 2.53941 1.9023 2.75107 1.80881C2.96272 1.71532 3.19153 1.66692 3.42291 1.66671H5.92291C6.32733 1.66273 6.7194 1.80594 7.02604 2.06965C7.33269 2.33336 7.53297 2.69958 7.58958 3.10004C7.6951 3.9001 7.89078 4.68565 8.17291 5.44171C8.28503 5.73998 8.30929 6.06414 8.24283 6.37577C8.17637 6.68741 8.02196 6.97347 7.79791 7.20004L6.73958 8.25837C7.92587 10.3447 9.65329 12.0721 11.7396 13.2584L12.7979 12.2C13.0245 11.976 13.3105 11.8216 13.6222 11.7551C13.9338 11.6887 14.258 11.7129 14.5562 11.825C15.3123 12.1072 16.0979 12.3029 16.8979 12.4084C17.3027 12.4655 17.6724 12.6694 17.9367 12.9813C18.201 13.2932 18.3414 13.6914 18.3312 14.1Z" stroke="#181817" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_590_5503">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>                      
+          <span>Контактный номер:</span>
+          <a href="tel:${data[teacher][phone]}">${data[teacher][phone]}</a>
+        </div>
+        <div class="popup-schedule__cabinet"><span>Кабинет:</span> ${data[teacher][cabinet]}</div>
+      </div>
+    </div>
+  </div>
+    `
+  }
+
 });
 
 
