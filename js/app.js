@@ -289,6 +289,7 @@ window.addEventListener("load", function () {
   let popupForm = document.querySelector("#popup-form");
   let popupTeacher = document.querySelector("#popup-teacher");
   let popupSchedule = document.querySelector('#popup-schedule');
+  let feedback = document.querySelector('#feedback');
 
   if(popupTeacher || popupSchedule || popupForm ){
     hidePopup(popupTeacher)
@@ -296,6 +297,11 @@ window.addEventListener("load", function () {
     hidePopup(popupForm)
   }
 
+  if(feedback) {
+    feedback.addEventListener('click', function() {
+      showPopup(popupForm)
+    });
+  }
 });
 
 
