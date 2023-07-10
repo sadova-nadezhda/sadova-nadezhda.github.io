@@ -356,7 +356,7 @@ textarea:focus {
   width: -moz-max-content;
   width: max-content;
   height: 50px;
-  padding: 0 15px;
+  padding: 15px;
   background: #44D19D;
   color: #164030;
   border: 1px solid #44D19D;
@@ -725,7 +725,7 @@ h6 {
 
 .header__main {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .header__logo {
@@ -1020,6 +1020,7 @@ h6 {
   display: grid;
   gap: 10px;
   justify-content: unset;
+  padding: 0;
   margin-top: -320px;
 }
 
@@ -4411,13 +4412,62 @@ th {
   width: 80%;
 }
 
+@media (max-width: 1650px) {
+  h1 {
+    font: 700 60px/1 NotoSans;
+  }
+  h2 {
+    font: 600 40px/1.2 NotoSans;
+  }
+  h4 {
+    font: 500 22px/1.2 Inter;
+  }
+  .button {
+    height: auto;
+    font-size: 14px;
+  }
+  .afos .slick_arrow svg {
+    width: 4vw;
+  }
+  .services__caption h4 {
+    width: 60%;
+  }
+  .number {
+    font-size: 80px;
+  }
+  .benefits__top {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+  .members__img {
+    height: 340px;
+  }
+  .instagram__card {
+    height: 280px;
+  }
+}
 
 @media (max-width: 1440px) {
+  .header__container {
+    font-size: 14px;
+  }
+  .header__info {
+    gap: 50px;
+  }
+  .header__menu {
+    gap: 20px;
+  }
+  .header__connect {
+    gap: 30px;
+  }
+  .footer__container {
+    font-size: 14px;
+  }
   .afos__container {
     margin: 0 auto;
   }
-  .afos .slick_arrow svg {
-    width: 4.5vw;
+  .benefits__top span {
+    font-size: 18px;
   }
   .about__desc {
     width: 80%;
@@ -4448,24 +4498,42 @@ th {
   }
 }
 
-@media (max-width: 1360px) {
-  .header__info {
-    gap: 50px;
+
+@media (max-width: 1300px) {
+  h1 {
+    font: 700 50px/1 NotoSans;
+  }
+  h2 {
+    font: 600 35px/1.2 NotoSans;
+  }
+  h4 {
+    font: 500 20px/1.2 Inter;
   }
 
-  .header__menu {
-    gap: 20px;
+  .container {
+    max-width: 1132px;
+  }
+
+  .header__info {
+    gap: 30px;
   }
 
   .header__connect {
     gap: 30px;
   }
-}
 
-@media (max-width: 1300px) {
+  .header__nav {
+    padding: 11px 15px;
+  }
+
+  .header__menu {
+    gap: 10px;
+  }
+
   .section {
     padding: 80px 0;
   }
+
   .facts__cards{
     margin-bottom: 80px;
   }
@@ -4477,14 +4545,15 @@ th {
 
   .afos__desc {
     margin-bottom: 30px;
+    font-size: 18px;
   }
 
   .afos__button {
     margin: 0 auto;
   }
 
-  .afos .slick_arrow svg {
-    width: 6vw;
+  .services__img {
+    height: 160px;
   }
 
   .about__desc {
@@ -4496,8 +4565,8 @@ th {
   }
 
   .benefits__top {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   .benefits__cards {
@@ -5004,16 +5073,16 @@ th {
   }
 
   .afos__desc {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .benefits__top span {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .benefits__top {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 
   .benefits__cards {
@@ -5235,11 +5304,6 @@ th {
 
   .page-inner {
     padding-bottom: 60px;
-  }
-
-  .sticky__icon svg {
-    width: 50px;
-    height: 50px;
   }
 
   .palace__txt {
@@ -5616,10 +5680,6 @@ th {
     max-width: 100%;
   }
 
-  .afos__desc {
-    font-size: 16px;
-  }
-
   .services__caption h4 {
     width: 60%;
   }
@@ -5630,10 +5690,6 @@ th {
 
   .services {
     margin-top: -70px;
-  }
-
-  .benefits__top span {
-    font-size: 16px;
   }
 
   .benefits__card {
