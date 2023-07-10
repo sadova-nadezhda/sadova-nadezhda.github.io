@@ -270,6 +270,32 @@ window.addEventListener("load", function () {
     });
   }
 
+  function hidePopup(popup) {
+    $(popup).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup")
+      ) {
+        $(this).fadeOut(400);
+      }
+    });
+  }
+  
+  function showPopup(popup) {
+    $(popup).fadeIn(400);
+  }
+
+  let popupForm = document.querySelector("#popup-form");
+  let popupTeacher = document.querySelector("#popup-teacher");
+  let popupSchedule = document.querySelector('#popup-schedule');
+
+  if(popupTeacher || popupSchedule || popupForm ){
+    hidePopup(popupTeacher)
+    hidePopup(popupSchedule)
+    hidePopup(popupForm)
+  }
+
 });
 
 

@@ -4202,13 +4202,17 @@ th {
 
 /*popups*/
 .popup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 100vh;
   padding: 16px;
   background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 12;
 }
 .popup__container {
   position: relative;
