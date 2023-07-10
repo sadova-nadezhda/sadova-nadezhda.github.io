@@ -39,6 +39,12 @@ window.addEventListener("load", function () {
       }
     })
   }
+  //breadcrumbs
+  let headerHeight = document.querySelector(".header").clientHeight;
+  let breadcrumbs = document.querySelector('.breadcrumbs');
+  if(breadcrumbs) {
+    breadcrumbs.style.marginTop = `${headerHeight}px`;
+  }
 
   /*menu*/
   const menuItm = document.querySelectorAll('.header__item');
@@ -330,6 +336,11 @@ $(window).on('resize', function(){
   else if ($(this).width() > 600 && !flag) {
     flag = true;
     $('.js-slick-slider').slick('unslick');
+  }
+  let headerHeight = document.querySelector(".header").clientHeight;
+  let breadcrumbs = document.querySelector('.breadcrumbs');
+  if(breadcrumbs) {
+    breadcrumbs.style.marginTop = `${headerHeight}px`;
   }
 }).resize();
 
