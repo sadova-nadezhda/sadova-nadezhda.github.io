@@ -302,25 +302,32 @@ select {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 8px;
   background: #FFF;
 }
+textarea {
+  resize: none;
+  height: 90px;
+}
 
-input::-moz-placeholder, select::-moz-placeholder {
+input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: #58595C;
 }
 
 input::placeholder,
-select::placeholder {
+select::placeholder,
+textarea::placeholder {
   color: #58595C;
 }
 
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
   color: #181817;
   outline: 2px solid #FF9F50;
 }
@@ -4147,14 +4154,36 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
+  gap: 20px;
+  height: 70px;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: rgba(0, 160, 227, 1);
   animation: pulse 2.5s linear infinite;
+  cursor: pointer;
 }
 
 .sticky__icon svg {
   pointer-events: none;
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  min-width: 30px;
+}
+
+.sticky__icon span {
+  position: absolute;
+  display: none;
+  white-space: nowrap;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  transition: opacity 200ms, display 200ms;
+  opacity: 0;
+}
+
+.sticky__icon:hover span {
+  position: unset;
+  display: block;
+  opacity: 1;
 }
 
 @keyframes pulse {
@@ -4172,6 +4201,37 @@ th {
 }
 
 /*popups*/
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.popup__container {
+  position: relative;
+}
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.popup__close svg {
+  width: 20px;
+  height: 20px;
+}
+.popup__form {
+  max-width: 420px;
+}
+
+
+/*popup-schedule*/
 .popup-schedule {
   display: flex;
   align-items: center;
@@ -4185,7 +4245,6 @@ th {
   padding: 30px;
   border-radius: 20px;
   background: #FFF;
-
 }
 .popup-schedule__close {
   position: absolute;
