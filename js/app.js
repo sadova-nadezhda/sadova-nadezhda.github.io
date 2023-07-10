@@ -71,6 +71,8 @@ window.addEventListener("load", function () {
     });
   }
 
+  //sliders
+
   $('.afos__slider').slick({
     slidesToScroll: 1,
     slidesToShow: 1,
@@ -207,6 +209,7 @@ window.addEventListener("load", function () {
     nextArrow: '<button type="button" class="slick_next slick_arrow"><svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-3.55234e-07 8.1268C0.601066 5.86207 1.87666 5.95183 3.01201 5.93802C8.15447 5.86207 13.2969 5.83445 18.4394 5.79992C20.443 5.79992 22.4999 5.79992 24.7306 5.79992C24.3165 4.50875 23.1144 4.41899 22.3129 3.85971C21.5115 3.30043 20.443 2.76187 19.6415 2.0714C19.4899 1.88208 19.3861 1.65679 19.3395 1.41577C19.2929 1.17474 19.3049 0.925518 19.3744 0.690466C19.523 0.4785 19.7176 0.305582 19.9426 0.185649C20.1677 0.0657165 20.4168 0.00212477 20.67 -6.26383e-07C21.3037 0.0966632 21.9162 0.306961 22.4799 0.62142C26.093 2.29235 29.6994 3.9909 33.3192 5.66183C34.2408 6.08992 35.2225 6.60087 34.9554 7.77466C34.7155 8.58843 34.2075 9.2896 33.5195 9.7563C32.5829 10.2942 31.5933 10.7271 30.5676 11.0475C27.8962 12.1177 25.1647 13.1672 22.4732 14.2443C21.2978 14.7139 19.8619 15.7081 19.0471 14.1891C18.1255 12.4284 19.8152 11.7379 20.9438 10.937C21.4715 10.5711 22.0258 10.2465 23.0877 9.55607C15.1936 8.33394 7.67362 9.14869 -3.55234e-07 8.1268Z" fill="#181817"/></svg></button>',
 });
 
+  //accordion camp
   $(function() {
     $('.accordion__heading').on('click', function(e) {
       e.preventDefault();
@@ -224,6 +227,7 @@ window.addEventListener("load", function () {
     });
   });
 
+  //administration
   let adminBtn = document.querySelectorAll('.administration__btn');
   if (adminBtn) {
     adminBtn.forEach( btn => {
@@ -270,6 +274,7 @@ window.addEventListener("load", function () {
     });
   }
 
+  //popup
   function hidePopup(popup) {
     $(popup).click(function(e) {
       const target = e.target;
@@ -302,10 +307,11 @@ window.addEventListener("load", function () {
       showPopup(popupForm)
     });
   }
+
 });
 
 
-
+//slider resize
 let flag = true;
 
 $(window).on('resize', function(){
