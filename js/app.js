@@ -514,7 +514,7 @@ window.addEventListener("load", function () {
             </defs>
           </svg>                      
           <span>Контактный номер:</span>
-          <a href="tel:${data.teacher.phone}">${data.teacher.phone}</a>
+          <a href="tel:+${data.teacher.phone.replace(/[^0-9]/g,"")}">${data.teacher.phone}</a>
         </div>
         <div class="popup-schedule__cabinet"><span>Кабинет:</span> ${data.teacher.cabinet}</div>
       </div>
