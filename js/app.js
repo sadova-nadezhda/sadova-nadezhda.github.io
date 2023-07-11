@@ -287,12 +287,9 @@ window.addEventListener("load", function () {
 
   //popup
   function hidePopup(popup) {
-    $(popup).click(function(e) {
+    $(popup).click(function (e) {
       const target = e.target;
-      if (
-        $(target).hasClass("popup__close") ||
-        $(target).hasClass("popup")
-      ) {
+      if ($(target).hasClass("popup__close") || $(target).hasClass("popup")) {
         $(this).fadeOut(400);
       }
     });
@@ -301,21 +298,22 @@ window.addEventListener("load", function () {
   function showPopup(popup) {
     $(popup).fadeIn(400);
   }
-
+  
   let popupForm = document.querySelector("#popup-form");
   let popupTeacher = document.querySelector("#popup-teacher");
-  let popupSchedule = document.querySelector('#popup-schedule');
-  let feedback = document.querySelector('#feedback');
-
-  if(popupTeacher || popupSchedule || popupForm ){
-    hidePopup(popupTeacher)
-    hidePopup(popupSchedule)
-    hidePopup(popupForm)
-  }
-
-  if(feedback) {
-    feedback.addEventListener('click', function() {
-      showPopup(popupForm)
+  let popupSchedule = document.querySelector("#popup-schedule");
+  let feedback = document.querySelector("#feedback");
+  
+  const popups = [popupTeacher, popupSchedule, popupForm];
+  popups.forEach((popup) => {
+    if (popup) {
+      hidePopup(popup);
+    }
+  });
+  
+  if (feedback && popupForm) {
+    feedback.addEventListener("click", function () {
+      showPopup(popupForm);
     });
   }
 
