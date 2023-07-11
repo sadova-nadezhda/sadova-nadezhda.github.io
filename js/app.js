@@ -1,7 +1,11 @@
+let token = $('meta[name="csrfToken"]').attr('content');
+
+
+let header = document.querySelector(".header");
+let breadcrumbs = document.querySelector('.breadcrumbs');
 window.addEventListener("load", function () {
   let link = document.querySelector('.header__burger');
   let menu = document.querySelector('.header__nav');
-  let header = document.querySelector(".header");
   if(header) {
     document.addEventListener("scroll", function () {
       let scroll = window.scrollY;
@@ -19,6 +23,12 @@ window.addEventListener("load", function () {
       document.querySelector('.header__result').innerHTML = event.detail.value;
       document.querySelector('.header__result').setAttribute("href", `tel:${event.detail.value}`)
     });
+
+    //breadcrumbs
+    let headerHeight = document.querySelector(".header").clientHeight;
+    if(breadcrumbs) {
+      breadcrumbs.style.marginTop = `${headerHeight}px`;
+    }
   }
   if(menu){
     link.addEventListener('click', function () {
@@ -39,12 +49,7 @@ window.addEventListener("load", function () {
       }
     })
   }
-  //breadcrumbs
-  let headerHeight = document.querySelector(".header").clientHeight;
-  let breadcrumbs = document.querySelector('.breadcrumbs');
-  if(breadcrumbs) {
-    breadcrumbs.style.marginTop = `${headerHeight}px`;
-  }
+
 
   /*menu*/
   const menuItm = document.querySelectorAll('.header__item');
@@ -315,12 +320,158 @@ window.addEventListener("load", function () {
   }
 
   //schedule
-  let data = []
+  let data = {
+    "status": "success",
+    "status_text": "\u0414\u0430\u043d\u043d\u044b\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u044b",
+    "data": [
+      {
+        "id": 4,
+        "mug_id": 2,
+        "teacher_id": 1,
+        "date": "2023-07-10T14:52:56+06:00",
+        "teacher": {
+          "id": 1,
+          "filial_id": 0,
+          "title": "\u0415\u0441\u0435\u043d\u0433\u0430\u043b\u0438 \u0421\u0435\u0439\u0442\u0436\u0430\u043d \u0420\u0430\u043a\u044b\u043c\u0436\u0430\u043d\u0443\u043b\u044b",
+          "img": "c65cbf08aee2a3603a6109dff6d02b97.jpg",
+          "position": "\u0441\u0442\u0430\u0440\u0448\u0438\u0439 \u043f\u0440\u0435\u043f\u043e\u0434\u0430\u0432\u0430\u0442\u0435\u043b\u044c \u043a\u0430\u0444\u0435\u0434\u0440\u044b \u00ab\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u0445\u043d\u0438\u043a\u0430 \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438\u00bb \u0415\u041d\u0423 \u0438\u043c. \u041b.\u041d. \u0413\u0443\u043c\u0438\u043b\u0435\u0432\u0430",
+          "phone": "+7 (333) 333 33 33",
+          "email": "tester@mail.ru",
+          "exp": "28 \u043b\u0435\u0442",
+          "qual": "II \u043a\u0430\u0442.",
+          "cabinet": "45",
+          "created_at": "2023-07-03T14:27:32+06:00",
+          "updated_at": "2023-07-03T14:27:32+06:00",
+          "_locale": "kz"
+        },
+        "schedule": {
+          "id": 5,
+          "mugs_teacher_id": 4,
+          "filial_id": 0,
+          "teacher_id": 0,
+          "filials_mug_id": 0,
+          "lang_name": "I \/ RU",
+          "week_json": [
+            {"day_1":"16:00 - 18:00","day_2":"","day_3":"","day_4":"15:00 - 18:00","day_5":"","day_6":"","day_7":"","group":"II"},
+            {"day_1":"16:00 - 18:00","day_2":"","day_3":"","day_4":"15:00 - 18:00","day_5":"","day_6":"","day_7":"","group":"II"},
+          ],
+          "created_at": "2023-07-10T15:03:02+06:00",
+          "updated_at": "2023-07-10T15:03:02+06:00"
+        }
+      },
+      {
+        "id": 3,
+        "mug_id": 2,
+        "teacher_id": 3,
+        "date": "2023-07-10T14:52:44+06:00",
+        "teacher": {
+          "id": 3,
+          "filial_id": 0,
+          "title": "\u0421\u0443\u043b\u0435\u0439\u043c\u0430\u043d\u043e\u0432 \u0415\u0440\u043b\u0430\u043d \u041c\u044d\u043b\u0441\u0443\u043b\u044b",
+          "img": "40f5bcea6143fa5938e28be4195ee67f.jpg",
+          "position": "\u0417\u0430\u043c\u0435\u0441\u0442\u0438\u0442\u0435\u043b\u044c \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0430",
+          "phone": "",
+          "email": "",
+          "exp": null,
+          "qual": null,
+          "cabinet": "",
+          "created_at": "2023-07-03T14:44:41+06:00",
+          "updated_at": "2023-07-03T14:44:41+06:00",
+          "_locale": "kz"
+        },
+        "schedule": {
+          "id": 6,
+          "mugs_teacher_id": 3,
+          "filial_id": 0,
+          "teacher_id": 0,
+          "filials_mug_id": 0,
+          "lang_name": "II \/ KZ",
+          "week_json": [
+            {"day_1":"16:00 - 18:00","day_2":"","day_3":"","day_4":"15:00 - 18:00","day_5":"","day_6":"","day_7":"","group":"II"},
+            {"day_1":"16:00 - 18:00","day_2":"","day_3":"","day_4":"15:00 - 18:00","day_5":"","day_6":"","day_7":"","group":"II"},
+          ],
+          "created_at": "2023-07-10T15:03:25+06:00",
+          "updated_at": "2023-07-10T15:03:25+06:00"
+        }
+      }
+    ]
+  }
 
-  cardSchedule = ''
+  let cardSchedule = '';
+  let aliasCard = '';
+  let titleCard = '';
+  let idCard ='';
+  let sended = false;
+
+  let cardBox = document.querySelector(".popup-schedule__cards");
+  let planBtn = document.querySelectorAll('.band__plan');
+  if(planBtn) {
+    planBtn.forEach(btn => {
+      btn.addEventListener('click', (e)=> {
+        let target = e.target;
+        getInfoCard(target)
+        if(popupSchedule) {
+          let heading = popupSchedule.querySelector('.popup-schedule__heading')
+          setTitleSchedule(aliasCard, titleCard, heading)
+          showPopup(popupSchedule)
+        }
+        if(!sended ){
+          sended = true;
+          $.ajax({
+            method: "POST",
+            url: '/mug-schedule',
+            data: { mid: idCard},
+            dataType: "json",
+            headers:{
+                'X-CSRF-Token': token,
+            }
+          })
+          .done(function( data ) {
+              console.log(data);
+          })
+          .fail(function( data ){
+              console.log(data);
+          });
+        }
+      })
+    })
+  }
+
+  if(data && cardBox) {
+    data.data.forEach( obj => {
+      createSchedule(obj);
+      cardBox.innerHTML+=cardSchedule
+    })
+  }
+
+  function getInfoCard(target) {
+    let parent = target.closest('.band__card');
+    let caption = parent.querySelector('.band__caption a');
+    idCard = parent.getAttribute('data-id');
+    aliasCard = caption.getAttribute('href');
+    titleCard = caption.textContent;
+  }
+
+  function setTitleSchedule(alias, title, heading) {
+    heading.setAttribute('href', alias)
+    heading.innerHTML = `<h4>${title}</h4>`
+  }
 
   function createSchedule(data) {
-    cardSchedule = `
+    let row = ' '
+    data.schedule.week_json.forEach( item => {
+      row+= `<tr>
+        <td>${item.group}</td>
+        <td>${item.day_1}</td>
+        <td>${item.day_2}</td>
+        <td>${item.day_3}</td>
+        <td>${item.day_4}</td>
+        <td>${item.day_5}</td>
+        <td>${item.day_6}</td>
+        <td>${item.day_7}</td>
+      </tr>`
+    })
+    card = `
     <div class="popup-schedule__card">
     <div class="timetable__box">
       <table class="popup-schedule__table schedule__table">
@@ -338,28 +489,16 @@ window.addEventListener("load", function () {
         </thead>
 
         <tbody>
-        ${ data[schedule][week_json].forEach( item => {
-            `<tr>
-              <td>${item[group]}</td>
-              <td>${item[day-1]}</td>
-              <td>${item[day-2]}</td>
-              <td>${item[day-3]}</td>
-              <td>${item[day-4]}</td>
-              <td>${item[day-5]}</td>
-              <td>${item[day-6]}</td>
-              <td>${item[day-7]}</td>
-            </tr>`
-          })
-        }
+          ${row}
         </tbody>
       </table>
     </div>
     <div class="popup-schedule__bottom">
       <div class="popup-schedule__teacher">
-        <div class="popup-schedule__img"><img src="${data[teacher][img]}" alt=""></div>
+        <div class="popup-schedule__img"><img src="${data.teacher.img}" alt=""></div>
         <div class="popup-schedule__name">
-          <span>${data[teacher][position]}:</span>
-          <h5>${data[teacher][title]}</h5>
+          <span>Преподаватель курса:</span>
+          <h5>${data.teacher.title}</h5>
         </div>
       </div>
       <div class="popup-schedule__info">
@@ -375,13 +514,14 @@ window.addEventListener("load", function () {
             </defs>
           </svg>                      
           <span>Контактный номер:</span>
-          <a href="tel:${data[teacher][phone]}">${data[teacher][phone]}</a>
+          <a href="tel:${data.teacher.phone}">${data.teacher.phone}</a>
         </div>
-        <div class="popup-schedule__cabinet"><span>Кабинет:</span> ${data[teacher][cabinet]}</div>
+        <div class="popup-schedule__cabinet"><span>Кабинет:</span> ${data.teacher.cabinet}</div>
       </div>
     </div>
   </div>
     `
+    cardSchedule = card
   }
 
 });
@@ -407,10 +547,11 @@ $(window).on('resize', function(){
     flag = true;
     $('.js-slick-slider').slick('unslick');
   }
-  let headerHeight = document.querySelector(".header").clientHeight;
-  let breadcrumbs = document.querySelector('.breadcrumbs');
-  if(breadcrumbs) {
-    breadcrumbs.style.marginTop = `${headerHeight}px`;
+  if(header) {
+    let headerHeight = document.querySelector(".header").clientHeight;
+    if(breadcrumbs) {
+      breadcrumbs.style.marginTop = `${headerHeight}px`;
+    }
   }
 }).resize();
 

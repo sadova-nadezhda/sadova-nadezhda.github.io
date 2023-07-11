@@ -344,6 +344,7 @@ textarea:focus {
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
   border-radius: 10px;
   background: #D9D9D9;
 }
@@ -3134,6 +3135,7 @@ h6 {
 }
 
 .band__caption {
+  display: block;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -4253,6 +4255,7 @@ th {
 .popup__close svg {
   width: 20px;
   height: 20px;
+  pointer-events: none;
 }
 .popup__form {
   max-width: 420px;
@@ -4266,6 +4269,8 @@ th {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 60%;
   padding: 30px;
   border-radius: 20px;
   background: #FFF;
@@ -4319,6 +4324,9 @@ th {
 }
 .popup-schedule__table th {
   font-weight: 400;
+}
+.popup-schedule__table td, .popup-schedule__table th {
+  min-width: 120px;
 }
 .popup-schedule__bottom {
   display: flex;
