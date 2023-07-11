@@ -524,6 +524,42 @@ window.addEventListener("load", function () {
     cardSchedule = card
   }
 
+  //teach_view
+  let teachView = document.querySelectorAll('.teach_view');
+  let info = {};
+  if(teachView) {
+    teachView.forEach(btn => {
+      btn.addEventListener('click', (e)=> {
+        console.log(e)
+        let target = e.target;
+        getInfoTeach(target);
+        if(popupTeacher) {
+          let teachCard = document.querySelector('.popup-teacher__card');
+          let boxCard = document.querySelector('.popup-teacher__container');
+          setInfoTeach(teachCard, info);
+          showPopup(popupTeacher);
+          boxCard.style.top = `${e.pageY}px`;
+          boxCard.style.left = `${e.pageX}px`;
+        }
+      })
+    })
+  }
+
+  function getInfoTeach(target) {
+    let parent = target.closest('.td-teach');
+    let caption = parent.querySelector('.teach_caption').textContent;
+    let desc = parent.querySelector('.teach_desc').textContent;
+    let phone = parent.querySelector('.teach_phone').textContent;
+    let alias = parent.querySelector('.teach_img img').getAttribute('src');
+    info = {caption: caption,desc: desc,phone: phone,alias: alias};
+  }
+  function setInfoTeach(card, info) {
+    card.querySelector('.popup-teacher__img img').setAttribute('src',info.alias);
+    card.querySelector('.popup-teacher__caption').textContent = info.caption;
+    card.querySelector('.popup-teacher__txt').textContent = info.desc;
+    card.querySelector('.popup-teacher__tel').setAttribute('href',info.phone);
+    card.querySelector('.popup-teacher__tel span').textContent = info.phone;
+  }
 });
 
 

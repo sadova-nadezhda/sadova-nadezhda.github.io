@@ -4139,7 +4139,7 @@ table {
 
 td,
 th {
-  min-width: 150px;
+  min-width: 110px;
   padding: 10px;
   text-align: center;
   font-size: 14px;
@@ -4157,6 +4157,7 @@ th {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 270px;
   padding: 10px;
   border-radius: 8px;
   background: #F5F5F1;
@@ -4373,12 +4374,17 @@ th {
 }
 
 /*popup teacher*/
-
+.popup-teacher {
+  position: absolute;
+  background: none;
+  backdrop-filter: unset;
+  z-index: 2;
+}
 .popup-teacher__container {
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   max-width: 530px;
   padding: 20px;
   border-radius: 20px;
