@@ -689,6 +689,7 @@ h6 {
   z-index: 2;
   animation: shadow-pulse 2s infinite;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .sticky__icon {
