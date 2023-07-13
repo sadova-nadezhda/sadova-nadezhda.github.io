@@ -715,7 +715,7 @@ h6 {
   }
 
   100% {
-    box-shadow: 0 0 0 35px rgba(183, 152, 121, 0);
+    box-shadow: 0 0 0 25px rgba(183, 152, 121, 0);
   }
 }
 
@@ -1003,7 +1003,6 @@ h6 {
 }
 
 .method__img img {
-  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1012,22 +1011,10 @@ h6 {
      object-position: 0% 100%;
 }
 
-.method__img::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-}
-
 .method__container {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
-  z-index: 1;
 }
 
 .method__caption {
@@ -1036,10 +1023,14 @@ h6 {
 }
 
 .method__title {
+  position: relative;
+  z-index: 1;
   margin-bottom: 50px;
 }
 
 .method__txt {
+  position: relative;
+  z-index: 1;
   max-width: 490px;
   margin-bottom: 50px;
 }
@@ -1074,6 +1065,8 @@ h6 {
 }
 
 .method__btn_dr {
+  position: relative;
+  z-index: 1;
   border: 1px solid var(--grey, #909090);
 }
 
@@ -1655,18 +1648,33 @@ h6 {
        object-position: 0% 50%;
   }
 
-  .method__img::after {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%) 50%/cover no-repeat;
-  }
-
   .method__img {
-    width: 100%;
-    height: 35%;
-    top: unset;
+    position: unset;
+    width: 120%;
+    height: 300px;
+    margin: 0 -16px;
+    margin-bottom: 30px;
   }
 
   .method__container {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .method__title span {
+    color: var(--white, #FFFFFF);
+  }
+
+  .method__title {
+    margin-bottom: 30px;
+  }
+
+  .method__txt_dark {
+    color: var(--white, #FFFFFF);
+  }
+
+  .method__txt {
+    margin-bottom: 30px;
   }
 
   .popup-feedback__container {
@@ -1795,14 +1803,6 @@ h6 {
     margin-bottom: 30px;
   }
 
-  .method__title {
-    margin-bottom: 30px;
-  }
-
-  .method__txt {
-    margin-bottom: 30px;
-  }
-
   .method__list li {
     margin-bottom: 30px;
     padding-left: 30px;
@@ -1886,6 +1886,16 @@ h6 {
     font: 600 1.5em/1 SF;
   }
 
+  .method__img {
+    margin: 0 -16px;
+    margin-bottom: 20px;
+  }
+
+  .method__container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .popup-feedback__container {
     padding: 30px;
     padding-top: 60px;
@@ -1941,6 +1951,20 @@ h6 {
 
   .card {
     padding-top: 20px;
+  }
+
+  .sticky__box {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .sticky__icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sticky__icon {
+    padding: 15px;
   }
 
   .dara__logo {
