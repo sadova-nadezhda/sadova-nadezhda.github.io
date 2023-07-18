@@ -153,6 +153,12 @@ window.addEventListener("load", function () {
     radio.addEventListener("change", () => updateLayout("quad"));
   });
 
+  let data = {
+    type: '',
+    room: '',
+    quad: ''
+  }
+
   // Функция для проверки и обновления состояния радио кнопок
   function updateLayout(radiousRow) {
     // Получаем выбранные значения из каждой группы
@@ -230,6 +236,11 @@ window.addEventListener("load", function () {
         image.classList.remove("active");
       }
     });
+    data = {
+      type: selectedType,
+      room: selectedRoom,
+      quad: selectedQuad
+    }
   }
 
   updateLayout();
@@ -327,11 +338,17 @@ window.addEventListener("load", function () {
     $(popup).fadeIn(400);
   }
 
+  //create input Data
+  const inputData = document.createElement('input');
+  inputData.value = JSON.stringify(data);
+  inputData.hidden = true;
+
   //popup
   let popupFeedback = document.querySelector("#popup-feedback");
   let popupForm = document.querySelector("#popup-form");
   let feedback = document.querySelector(".feedback");
   let formBtn = document.querySelector(".popup-feedback_form");
+  let popupBtn = document.querySelectorAll('.js-popup-btn')
   if (popupFeedback || popupForm) {
     hidePopup(popupFeedback);
     hidePopup(popupForm);
@@ -346,6 +363,16 @@ window.addEventListener("load", function () {
       $(popupFeedback).fadeOut(400);
       showPopup(popupForm);
     });
+    popupBtn.forEach( btn => {
+      btn.addEventListener("click", function () {
+        $(popupFeedback).fadeOut(400);
+        showPopup(popupForm);
+        if(btn.classList.contains('layouts__btn')) {
+          inputData.value = JSON.stringify(data);
+          document.querySelector('#feedbackForm').append(inputData)
+        }
+      });
+    })
   }
 
   //slider resize

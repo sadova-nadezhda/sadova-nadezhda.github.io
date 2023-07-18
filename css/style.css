@@ -1483,6 +1483,10 @@ h6 {
   background: var(--white, #FFFFFF);
 }
 
+.popup-form__title {
+  text-align: center;
+}
+
 .popup-form__desc {
   color: var(--grey, #909090);
   text-align: center;
