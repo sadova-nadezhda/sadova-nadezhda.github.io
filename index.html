@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/fancybox.css" />
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="css/style.css?_v=2" />
+  <link rel="stylesheet" href="css/style.css?_v=2.1" />
 
   </head>
 
@@ -102,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <a class="about__video video" data-fancybox="" data-src="https://youtu.be/oi24F4XbLlk">
+            <a class="about__video video" data-fancybox data-src="https://youtu.be/oi24F4XbLlk">
               <picture class="video__poster">
                 <source srcset="img/video-1.png" media="(max-width: 767px)">
                 <img src="img/video-1.png" alt="">
@@ -534,10 +534,10 @@
               </div>
               <div class="layouts__box_img wrapper__desc">
                 <div class="layouts__images">
-                  <div class="layouts__item active" data-type="residential" data-room="1" data-quad="28"><img src="img/room.png" alt=""></div>
-                  <div class="layouts__item" data-type="residential" data-room="1" data-quad="32"><img src="img/room.png" alt=""></div>
-                  <div class="layouts__item" data-type="residential" data-room="2" data-quad="48"><img src="img/room.png" alt=""></div>
-                  <div class="layouts__item" data-type="commercial" data-room="0" data-quad="50"><img src="img/room.png" alt=""></div>
+                  <div class="layouts__item active" data-type="residential" data-room="1" data-quad="28" ><img src="img/room.png" alt="" data-fancybox data-src="/img/room.png"></div>
+                  <div class="layouts__item" data-type="residential" data-room="1" data-quad="32"><img src="img/room.png" alt="" data-fancybox data-src="/img/room.png"></div>
+                  <div class="layouts__item" data-type="residential" data-room="2" data-quad="48"><img src="img/room.png" alt="" data-fancybox data-src="/img/room.png"></div>
+                  <div class="layouts__item" data-type="commercial" data-room="0" data-quad="50"><img src="img/room.png" alt="" data-fancybox data-src="/img/room.png"></div>
                 </div>
                 <a class="layouts__btn button js-popup-btn">Оставить заявку</a>
               </div>
@@ -642,31 +642,38 @@
                   <div class="swiper wrapper__swiper construction__swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide slide active" data-year="2023" data-queue="2">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img slide__video" data-fancybox data-src="https://youtu.be/oi24F4XbLlk">
+                          <img src="img/img-1.png" alt="">
+                          <div class="video__icon">
+                            <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 0L20 13L0 26V0Z" fill="#1E1E1E"/>
+                            </svg>              
+                          </div> 
+                        </div>
                         <h5 class="slide__caption"> Header 2</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2023" data-queue="1">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 1</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2023" data-queue="1">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 1</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2023" data-queue="1">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 1</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2023" data-queue="1">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 1</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2022" data-queue="2">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 3</h5>
                       </div>
                       <div class="swiper-slide slide" data-year="2022" data-queue="2">
-                        <div class="slide__img"><img src="img/img-1.png" alt=""></div>
+                        <div class="slide__img" data-fancybox data-src="img/img-1.png"><img src="img/img-1.png" alt=""></div>
                         <h5 class="slide__caption"> Header 4</h5>
                       </div>
                     </div>
@@ -788,7 +795,7 @@
   <script src="js/fancybox.umd.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/app.js?_v=2"></script>
+  <script src="js/app.js?_v=2.1"></script>
   </body>
 </html>
 

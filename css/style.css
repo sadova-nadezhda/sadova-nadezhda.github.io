@@ -265,6 +265,9 @@ h6 {
 .header.scroll {
   background-color: var(--dark, #1E1E1E);
 }
+.header_dark {
+  background-color: var(--dark, #1E1E1E);
+}
 
 .header__container {
   display: flex;
@@ -1254,6 +1257,7 @@ h6 {
 .layouts__item {
   display: none;
   height: 450px;
+  cursor: zoom-in;
 }
 
 .layouts__item.active {
@@ -1349,11 +1353,26 @@ h6 {
   margin-bottom: 30px;
 }
 
+.construction .slide__img  {
+  cursor: zoom-in;
+}
+
 .slide__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slide__video {
+  position: relative;
+}
+
+.slide__video .video__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -1571,6 +1590,31 @@ h6 {
   border-color: var(--dark, #1E1E1E);
 }
 
+/*thanks page*/
+.thanks {
+  position: relative;
+  height: 100vh;
+}
+
+.thanks .container {
+  height: 100%;
+}
+
+.thanks__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+.thanks svg, .thanks__txt {
+  margin-bottom: 50px;
+}
+.thanks__title {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1650px) {
   html {
     font: 500 14px/1.8 SF;
@@ -1652,6 +1696,10 @@ h6 {
   }
 
   .apartments__txt {
+    margin-bottom: 40px;
+  }
+
+  .thanks svg, .thanks__txt {
     margin-bottom: 40px;
   }
 
@@ -2016,6 +2064,13 @@ h6 {
   .popup__close {
     top: 20px;
     right: 20px;
+  }
+
+  .thanks svg, .thanks__txt {
+    margin-bottom: 30px;
+  }
+  .thanks__title {
+    margin-bottom: 20px;
   }
 }
 

@@ -194,12 +194,9 @@ window.addEventListener("load", function () {
     if (radiousRow === "room" || radiousRow === "type") {
       let isFirstActive = false;
       quadRadios.forEach((elem, index) => {
-        // elem.removeAttribute("checked");
         elem.checked = false;
-        console.log("🚀 ~ file: app.js:184 ~ quadRadios.forEach ~ elem:", elem)
         if (!isFirstActive && elem.parentElement.classList.contains("active")) {
           isFirstActive = true;
-          // elem.setAttribute("checked", true);
           elem.checked = true;
         }
       });
