@@ -400,3 +400,23 @@ window.addEventListener("load", function () {
     })
     .resize();
 });
+
+
+new WOW().init();
+
+/*insta*/
+// let feed = new Instafeed({
+//   accessToken: 'IGQVJVSjdhSi1lTjJ3aWNIV1RCREdWeG1MLU5WdHJSc29MUFFJTHhTZA0NRandZAZAEFDeUNGQl9CanAwSTlpeDFuSkxELTFGUF95andyOGU3b1RsbmtTMEk3UVRfZAjFwV185YXRoVU1n',
+//   template:'<a class="instagram__card" href="{{link}}" target="_blank"><img src="{{image}}" alt=""></a>',
+//   limit: 6,
+//   debug: false,
+// });
+
+// let instagramSection = document.querySelector('.instagram__cards')
+
+// window.addEventListener('load', () => {
+//   RemoveFancy();
+//   if (instagramSection) {
+//     feed.run();
+//   }
+// });

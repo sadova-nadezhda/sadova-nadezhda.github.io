@@ -638,6 +638,7 @@ h6 {
   display: block;
   width: 30px;
   height: 50px;
+  animation: scroll 2s infinite;
 }
 
 .scroll-icon img {
@@ -646,6 +647,18 @@ h6 {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} 
 
 .cards {
   display: grid;
