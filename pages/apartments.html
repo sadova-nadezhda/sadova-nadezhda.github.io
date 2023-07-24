@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MWC</title>
+  <link rel="stylesheet" href="../css/slick.css">
+  <link rel="stylesheet" href="../css/jquery.fancybox.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link type="image/x-icon" href="../img/favicon.png" rel="icon">
+</head>
+<body>
+  <header class="header header-light">
+    <div class="container">
+      <div class="header__container">
+        <a href="../index.html" class="header__logo">
+          <img src="../img/svg/logo-blue.svg">
+      </a>
+      <nav class="header__nav">
+          <ul class="header__social">
+              <li class="header__social-item"><a href="#" target="_blank"><img src="../img/svg/whatsapp.svg"></a></li>
+              <li class="header__social-item"><a href="#" target="_blank"><img src="../img/svg/insta.svg"></a></li>
+              <li class="header__social-item"><a href="#" target="_blank"><img src="../img/svg/facebook.svg"></a></li>
+          </ul>
+          <a class="header__button button" href="#">Бронировать онлайн</a>
+          <ul class="header__interaction">
+            <li class="header__interaction-item search">
+                  <input type="text" placeholder="Search...">
+                  <button></button>
+            </li>
+            <li class="header__interaction-item like"><a href="#" target="_blank"><img src="../img/svg/like.svg"></a></li>
+            <li class="header__interaction-item user"><a href="#" target="_blank"><img src="../img/svg/user.svg"></a></li>
+          </ul>
+          <div class="header__burger-menu">
+            <ul class="header__lang">
+              <li class="lang-item"><a href="">Рус</a></li>
+              <li class="lang-item"><a href="">Каз</a></li>
+              <li class="lang-item"><a href="">Eng</a></li>
+            </ul>
+            <ul class="header__burger-list">
+              <li class="header__burger-item"><a href="../index.html">Главная</a></li>
+              <li class="header__burger-item burger__dropdown"><a class="dropdown__link">О компании</a>
+                <ul class="dropdown-list">
+                  <li class="dropdown-item"><a href="about.html">О нас</a></li>
+                  <li class="dropdown-item"><a href="history.html">История</a></li>
+                  <li class="dropdown-item"><a href="club.html">Награды</a></li>
+                  <li class="dropdown-item"><a href="teams.html">Команды</a></li>
+                  <li class="dropdown-item"><a href="subsidiaries.html">Дочерние компани</a></li>
+                </ul>
+              </li>
+              <li class="header__burger-item"><a href="buy.html">Купить квартиру</a></li>
+              <li class="header__burger-item"><a href="#">Купить коммерческое помещение</a></li>
+              <li class="header__burger-item"><a href="career.html">Карьера</a></li>
+              <li class="header__burger-item"><a href="methods.html">Способы оплаты</a></li>
+              <li class="header__burger-item"><a href="#">Акции и новости</a></li>
+              <li class="header__burger-item"><a href="questions.html">Вопросы и ответы</a></li>
+              <li class="header__burger-item"><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="header__social-burger">
+              <li class="header__social-item whatsapp"><a href="#" target="_blank"><img src="../img/svg/whatsapp-light.svg"></a></li>
+              <li class="header__social-item insta"><a href="#" target="_blank"><img src="../img/svg/insta-light.svg"></a></li>
+              <li class="header__social-item facebook"><a href="#" target="_blank"><img src="../img/svg/facebook-light.svg"></a></li>
+          </ul>
+          <a class="header__burger-button button">Бронировать онлайн</a>
+          </div>
+      </nav>
+      <div class="header__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="preloader">
+      <div class="preloader__wrapp loader">
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup form_loader" id="form_loader">
+      <div class="form_loader_block">
+          <div class="form_loader_animate"></div>
+          <div class="form_loader_text" style="color: #000;">Пожалуйста, подождите</div>
+      </div>
+    </div>
+    <div class="alert--fixed box-size " hidden="">
+      <div class="alert--content alert--width alert--block box-size">
+          <div class="alert--img">
+              <div class="alert--img__item active box-size">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 329.954 329.954" xml:space="preserve">
+                      <path id="XMLID_89_" d="M99.85,299.045c2.813,2.813,6.629,4.393,10.607,4.393c3.979,0,7.794-1.581,10.606-4.393L325.56,94.548
+                          c2.814-2.813,4.394-6.628,4.394-10.606c0-3.979-1.58-7.794-4.394-10.607l-42.427-42.426c-5.857-5.857-15.355-5.858-21.213,0
+                          L110.461,182.37l-42.428-42.428c-2.813-2.813-6.629-4.394-10.607-4.394s-7.793,1.581-10.606,4.394L4.393,182.369
+                          c-5.857,5.858-5.857,15.355,0,21.213L99.85,299.045z"></path>
+                  </svg>
+              </div>
+              <div class="alert--img__item warning box-size">
+                  <svg height="512pt" viewBox="0 -18 512.00043 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m241 116h30v165h-30zm0 0"></path>
+                      <path d="m256 371c-8.277344 0-15 6.722656-15 15s6.722656 15 15 15 15-6.722656 15-15-6.722656-15-15-15zm0 0"></path>
+                      <path d="m502.53125 364.714844-180.890625-326.011719c-13.40625-24.230469-37.941406-38.703125-65.640625-38.703125s-52.234375 14.472656-65.640625 38.714844l-180.890625 325.988281c-12.976562 23.480469-12.597656 51.28125 1.027344 74.398437 13.621094 23.101563 37.777344 36.898438 64.597656 36.898438h361.8125c26.820312 0 50.976562-13.796875 64.597656-36.898438 13.625-23.117187 14.003906-50.917968 1.027344-74.386718zm-246.53125 66.285156c-24.8125 0-45-20.1875-45-45s20.1875-45 45-45 45 20.1875 45 45-20.1875 45-45 45zm45-120h-90v-225h90zm0 0"></path>
+                  </svg>
+              </div>
+              <div class="alert--img__item error box-size">
+                  <svg class="box-size" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.111 455.111" xml:space="preserve">
+                      <circle style="fill:#E24C4B;" cx="227.556" cy="227.556" r="227.556"></circle>
+                      <path style="fill:#D1403F;" d="M455.111,227.556c0,125.156-102.4,227.556-227.556,227.556c-72.533,0-136.533-32.711-177.778-85.333
+                      c38.4,31.289,88.178,49.778,142.222,49.778c125.156,0,227.556-102.4,227.556-227.556c0-54.044-18.489-103.822-49.778-142.222
+                      C422.4,91.022,455.111,155.022,455.111,227.556z"></path>
+                      <path style="fill:#FFFFFF;" d="M331.378,331.378c-8.533,8.533-22.756,8.533-31.289,0l-72.533-72.533l-72.533,72.533
+                      c-8.533,8.533-22.756,8.533-31.289,0c-8.533-8.533-8.533-22.756,0-31.289l72.533-72.533l-72.533-72.533
+                      c-8.533-8.533-8.533-22.756,0-31.289c8.533-8.533,22.756-8.533,31.289,0l72.533,72.533l72.533-72.533
+                      c8.533-8.533,22.756-8.533,31.289,0c8.533,8.533,8.533,22.756,0,31.289l-72.533,72.533l72.533,72.533
+                      C339.911,308.622,339.911,322.844,331.378,331.378z"></path>
+                  </svg>
+              </div>
+          </div>
+          <div class="alert-text box-size">
+              <div class="alert--title box-size">
+                                    </div>
+              <!-- <div class="alert--subtitle box-size"></div> -->
+          </div>
+          <div class="alert--x alert--close box-size">
+              <svg class="box-size" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.559 284.559" xml:space="preserve">
+                  <path id="XMLID_90_" d="M4.394,237.739l42.427,42.427c2.812,2.813,6.629,4.394,10.606,4.394c3.978,0,7.794-1.581,10.606-4.394
+                      l74.246-74.246l74.246,74.246c2.813,2.813,6.629,4.394,10.606,4.394c3.978,0,7.794-1.581,10.607-4.394l42.427-42.427
+                      c5.858-5.858,5.858-15.355,0-21.213L205.92,142.28l74.245-74.247c2.814-2.813,4.394-6.628,4.394-10.606
+                      c0-3.979-1.58-7.794-4.394-10.607L237.739,4.393c-5.857-5.858-15.356-5.858-21.213,0.001L142.28,78.639L68.033,4.394
+                      c-5.857-5.858-15.356-5.858-21.213,0L4.394,46.82C1.58,49.633,0,53.448,0,57.426c0,3.978,1.58,7.793,4.394,10.606l74.245,74.247
+                      L4.394,216.526C-1.465,222.384-1.465,231.881,4.394,237.739z"></path>
+              </svg>
+          </div>
+      </div>
+      <div class="alert--bg alert--close box-size"></div>
+    </div>
+
+  <section class="apartment-inner">
+      <div class="container">
+      <div class="apartment-inner__container">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="../index.html">Главная</a></li>
+          <li class="navigation__item active"><a href="#">ЖК "Sairam"</a></li>
+        </ul>
+        <div class="apartment-inner__slider">
+          <div class="apartment-inner__slide">
+            <h1 class="apartment-inner__title caption">ЖК "Sairam"</h1>
+            <div class="apartment-inner__text">Жилой комплекс Sairam находится на огороженной закрытой территории, где выполнены все работы по благоустройству</div>
+            <a href="#" class="apartment-inner__link button button-dark">Выбрать квартиру</a>
+            <div class="apartment-inner__img"><img src="../img/background-4.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="apartment-description">
+    <div class="container">
+      <div class="apartment-description__container">
+        <div class="apartment-description__column">
+          <h2 class="apartment-description__title caption">О жк “Qazaq Eli”</h2>
+          <div class="apartment-description__txt">
+            <p>"Qazaq Eli" – это жилой квартал в новом, экологично развивающемся районе нашей столицы. Изюминкой квартала является Аллея Тысячелетия, которая будет проходить вдоль него.</p>
+            <p>Данный квартал - это дань истории, поистине великий проект, который напоминает нам о культовых, исторических временах нашей истории. Здесь, каждая очередь возводится в честь исторических городов, которые сыграли важную роль в культурном развитии всего человечества.</p>
+          </div>
+          <a class="download__btn button button-dark" href="" download>
+            <span>Скачать буклет</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_406_2927)">
+              <path d="M19 20V18H5V20H19ZM19 10H15V4H9V10H5L12 17L19 10Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_406_2927">
+              <rect width="24" height="24" fill="white" transform="translate(24 24) rotate(-180)"/>
+              </clipPath>
+              </defs>
+            </svg>              
+          </a>
+        </div>
+        <div class="apartment-description__column">
+          <div class="apartment-description__cards">
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+            <div class="apartment-description__card">
+              <div class="apartment-card__img"><img src="../img/building 1.png"></div>
+              <div class="apartment-card__txt">
+                <h6>Класс жилья</h6>
+                <p>Комфорт плюс</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  class="hol">
+    <div class="container">
+      <div class="hol__container">
+        <h2 class="hol__title caption">Хол ЖК</h2>
+        <div class="hol__sliders">
+          <div class="hol__slider hol__slider_txt">
+            <div class="hol__slide">Благодаря новейшим технологиям строительства и высоким стандартам ЖК «Qazaq Eli» остается уникальным в своем сегменте. Визуальный образ ЖК «Qazaq Eli» отличается изысканностью цветовых решений и утонченными, геометрически выверенными формами.</div>
+            <div class="hol__slide">Благодаря новейшим технологиям строительства и высоким стандартам ЖК «Qazaq Eli» остается уникальным в своем сегменте. Визуальный образ ЖК «Qazaq Eli» отличается изысканностью цветовых решений и утонченными, геометрически выверенными формами.</div>
+          </div>
+          <div class="hol__slider hol__slider_img">
+            <div class="hol__slide hol__img"><img src="../img/slider-1.png"></div>
+            <div class="hol__slide hol__img"><img src="../img/slider-1.png"></div>
+          </div>
+          <div class="slider__pagination">
+            <div class="slider__arrows">
+              <div class="slider__arrow slide__prev">
+                <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.4697 25.5303C24.1768 25.2374 24.1768 24.7626 24.4697 24.4697L29.2426 19.6967C29.5355 19.4038 30.0104 19.4038 30.3033 19.6967C30.5962 19.9896 30.5962 20.4645 30.3033 20.7574L26.0607 25L30.3033 29.2426C30.5962 29.5355 30.5962 30.0104 30.3033 30.3033C30.0104 30.5962 29.5355 30.5962 29.2426 30.3033L24.4697 25.5303ZM125 25.75H25V24.25H125V25.75Z" fill="#333333"/>
+                  <circle r="24.25" transform="matrix(-1 0 0 1 25 25)" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+                </svg>                  
+              </div>
+              <div class="slider__arrow slide__next">
+                <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100.53 25.5303C100.823 25.2374 100.823 24.7626 100.53 24.4697L95.7574 19.6967C95.4645 19.4038 94.9896 19.4038 94.6967 19.6967C94.4038 19.9896 94.4038 20.4645 94.6967 20.7574L98.9393 25L94.6967 29.2426C94.4038 29.5355 94.4038 30.0104 94.6967 30.3033C94.9896 30.5962 95.4645 30.5962 95.7574 30.3033L100.53 25.5303ZM0 25.75H100V24.25H0V25.75Z" fill="#333333"/>
+                  <circle cx="100" cy="25" r="24.25" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slider__numbers">
+              1/4
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="structure">
+    <div class="container">
+      <div class="container__structure">
+        <h2 class="structure__title caption">Инфраструктура</h2>
+        <div class="structure__img"><img src="../img/apartment-1.png"></div>
+        <div class="structure__txt">Благодаря новейшим технологиям строительства и высоким стандартам ЖК «Qazaq Eli» остается уникальным в своем сегменте. Визуальный образ ЖК «Qazaq Eli» отличается изысканностью цветовых решений и утонченными, геометрически выверенными формами.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location">
+    <div class="container">
+      <div class="location__container">
+        <h2 class="location__title caption">Локация</h2>
+        <div class="location__description">
+            <h4 class="caption">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_742_5644)">
+                <path d="M10.0013 1.66675C6.78047 1.66675 4.16797 4.27925 4.16797 7.50008C4.16797 11.8751 10.0013 18.3334 10.0013 18.3334C10.0013 18.3334 15.8346 11.8751 15.8346 7.50008C15.8346 4.27925 13.2221 1.66675 10.0013 1.66675ZM10.0013 9.58341C8.8513 9.58341 7.91797 8.65008 7.91797 7.50008C7.91797 6.35008 8.8513 5.41675 10.0013 5.41675C11.1513 5.41675 12.0846 6.35008 12.0846 7.50008C12.0846 8.65008 11.1513 9.58341 10.0013 9.58341Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_742_5644">
+                <rect width="20" height="20" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>                
+              г.Нур-Султан, ул. Туран 34
+            </h4>
+            <div class="location__slider">
+              <div class="location__slide">Благодаря новейшим технологиям строительства и высоким стандартам ЖК «Qazaq Eli» остается уникальным в своем сегменте. Визуальный образ ЖК «Qazaq Eli» отличается изысканностью цветовых решений и утонченными, геометрически </div>
+            </div>
+        </div>
+        <div class="location__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.2072244106334!2d71.4092634159301!3d51.14152964520839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586966aff18b3%3A0x502729ab0b55ea35!2z0L_RgNC-0YHQvy4g0KLRg9GA0LDQvSAyMCwg0JDRgdGC0LDQvdCwIDAyMDAwMA!5e0!3m2!1sru!2skz!4v1664862305181!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="slider__pagination">
+        <div class="slider__numbers">
+          1/4
+        </div>
+        <div class="slider__arrows">
+          <div class="slider__arrow slide__prev">
+            <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.4697 25.5303C24.1768 25.2374 24.1768 24.7626 24.4697 24.4697L29.2426 19.6967C29.5355 19.4038 30.0104 19.4038 30.3033 19.6967C30.5962 19.9896 30.5962 20.4645 30.3033 20.7574L26.0607 25L30.3033 29.2426C30.5962 29.5355 30.5962 30.0104 30.3033 30.3033C30.0104 30.5962 29.5355 30.5962 29.2426 30.3033L24.4697 25.5303ZM125 25.75H25V24.25H125V25.75Z" fill="#333333"/>
+              <circle r="24.25" transform="matrix(-1 0 0 1 25 25)" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+            </svg>                  
+          </div>
+          <div class="slider__arrow slide__next">
+            <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100.53 25.5303C100.823 25.2374 100.823 24.7626 100.53 24.4697L95.7574 19.6967C95.4645 19.4038 94.9896 19.4038 94.6967 19.6967C94.4038 19.9896 94.4038 20.4645 94.6967 20.7574L98.9393 25L94.6967 29.2426C94.4038 29.5355 94.4038 30.0104 94.6967 30.3033C94.9896 30.5962 95.4645 30.5962 95.7574 30.3033L100.53 25.5303ZM0 25.75H100V24.25H0V25.75Z" fill="#333333"/>
+              <circle cx="100" cy="25" r="24.25" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layouts">
+    <div class="container">
+      <div class="layouts__container">
+        <h2 class="layouts__title caption">Планировки квартир</h2>
+        <div class="apartments-filter">
+          <form action="" class="filter__form">
+            <div class="filter__row">
+              <div class="form__room">
+                <label class="label__title" for="">Количество комнат</label>
+                <div class="room"><input id="room-1" type="checkbox"><label for="room-1">1</label></div>
+                <div class="room"><input id="room-2" type="checkbox"><label for="room-2">2</label></div>
+                <div class="room"><input id="room-3" type="checkbox"><label for="room-3">3</label></div>
+                <div class="room"><input id="room-4" type="checkbox"><label for="room-4">4+</label></div>
+              </div>
+              <div class="select__type">
+                <label class="label__title" for="">Этаж</label>
+                <div class="custom-select">
+                  <select name="" id="">
+                    <option value="0">5</option>
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__square">
+                <label class="label__title" for="">Общая площадь</label>
+                <div class="range-box">
+                <div><input type="text" id="i1" placeholder="от 30,20">
+                <input type="range" id="square" name="square"
+                min="30.20" max="1252" oninput="fun1()"></div>
+                <div><input type="text" id="i2" placeholder="от 1252">
+                <input type="range" id="square2" name="square"
+                min="1252" max="5000" oninput="fun2()"></div>
+                </div>
+              </div>
+              <button class="form__btn-dark filter-btn">Показать</button>
+            </div>
+          </form>
+        </div>
+        <div class="layouts__cards">
+          <div class="layouts__card">
+            <div class="layouts__img"><img src="../img/layout-1.png"></div>
+            <div class="layouts__txt">
+              <p>1-комнатная</p>
+              <p>102 м2</p>
+            </div>
+          </div>
+          <div class="layouts__card">
+            <div class="layouts__img"><img src="../img/layout-1.png"></div>
+            <div class="layouts__txt">
+              <p>1-комнатная</p>
+              <p>102 м2</p>
+            </div>
+          </div>
+          <div class="layouts__card">
+            <div class="layouts__img"><img src="../img/layout-1.png"></div>
+            <div class="layouts__txt">
+              <p>1-комнатная</p>
+              <p>102 м2</p>
+            </div>
+          </div>
+          <div class="layouts__card">
+            <div class="layouts__img"><img src="../img/layout-1.png"></div>
+            <div class="layouts__txt">
+              <p>1-комнатная</p>
+              <p>102 м2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery__container">
+        <h2 class="gallery__title caption">Галерея</h2>
+        <div class="gallery__slider">
+          <div class="gallery__slide"><img src="../img/apartment-1.png"></div>
+        </div>
+        <div class="slider__pagination">
+          <div class="slider__numbers">
+            1/4
+          </div>
+          <div class="slider__arrows">
+            <div class="slider__arrow slide__prev">
+              <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.4697 25.5303C24.1768 25.2374 24.1768 24.7626 24.4697 24.4697L29.2426 19.6967C29.5355 19.4038 30.0104 19.4038 30.3033 19.6967C30.5962 19.9896 30.5962 20.4645 30.3033 20.7574L26.0607 25L30.3033 29.2426C30.5962 29.5355 30.5962 30.0104 30.3033 30.3033C30.0104 30.5962 29.5355 30.5962 29.2426 30.3033L24.4697 25.5303ZM125 25.75H25V24.25H125V25.75Z" fill="#333333"/>
+                <circle r="24.25" transform="matrix(-1 0 0 1 25 25)" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+              </svg>                  
+            </div>
+            <div class="slider__arrow slide__next">
+              <svg width="125" height="50" viewBox="0 0 125 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100.53 25.5303C100.823 25.2374 100.823 24.7626 100.53 24.4697L95.7574 19.6967C95.4645 19.4038 94.9896 19.4038 94.6967 19.6967C94.4038 19.9896 94.4038 20.4645 94.6967 20.7574L98.9393 25L94.6967 29.2426C94.4038 29.5355 94.4038 30.0104 94.6967 30.3033C94.9896 30.5962 95.4645 30.5962 95.7574 30.3033L100.53 25.5303ZM0 25.75H100V24.25H0V25.75Z" fill="#333333"/>
+                <circle cx="100" cy="25" r="24.25" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proposal">
+    <div class="container">
+      <div class="proposal__container">
+        <div class="proposal__description">
+          <h2 class="proposal__title caption">Отправить заявку</h2>
+          <div class="proposal__text">
+            <p>Наш менеджер свяжется с вами и поможет определиться с выбором</p>
+          </div>
+        </div>
+        <div class="proposal__img"><img src="../img/worth__img.png"></div>
+        <div class="proposal__form">
+          <form action="" class="form__methods" onsubmit="submitForm()">
+            <div class="form__methods__name">
+              <label for="name">Ваше Имя</label>
+              <input type="text" id="name" placeholder="Александр" required>
+            </div>
+            <div class="form__methods__tel">
+              <label for="tel">Ваше Телефон</label>
+              <input id="tel" type="tel" placeholder="+7 (705) 782 22 22" required>
+            </div>
+            <button class="form__methods__btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="#" class="logo">
+            <img src="../img/svg/logo-light.svg">
+          </a>
+          <ul class="footer__social">
+            <li class="footer__social-item"><a href="#" target="_blank"><img src="../img/svg/whatsapp-light.svg"></a></li>
+            <li class="footer__social-item"><a href="#" target="_blank"><img src="../img/svg/insta-light.svg"></a></li>
+            <li class="footer__social-item"><a href="#" target="_blank"><img src="../img/svg/facebook-light.svg"></a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <div class="footer_item">
+            <a href="../index.html">Главная</a>
+            <a href="#">О компании</a>
+            <ul class="footer__menu-company">
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="history.html">История</a></li>
+              <li><a href="club.html">Награды</a></li>
+              <li><a href="teams.html">Команды</a></li>
+              <li><a href="subsidiaries.html">Дочерние компани</a></li>
+            </ul>
+          </div>
+          <ul class="footer__menu">
+            <li><a href="#">Купить квартиру</a></li>
+            <li><a href="#">Купить коммерческое помещение</a></li>
+            <li><a href="career.html">Карьера</a></li>
+            <li><a href="methods.html">Способы оплаты</a></li>
+            <li><a href="#">Акции и новости</a></li>
+            <li><a href="questions.html">Вопросы и ответы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="footer__media">
+            <ul class="footer__media-list">
+              <li class="time">09:00 до 21:00</li>
+              <li class="phone"><a href="tel:+77057828888">+7 705 782 88 88</a></li>
+              <li class="adresse"><a href="https://goo.gl/maps/o7vWsuJpb5H8tvj97" target="_blank">г.Нур - Султан, ул.Туран 20</a></li>
+              <li class="mail"><a href="mailto:mwcsupport@gmail.com">mwcsupport@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__text">
+          <p>Все права на публикуемые на сайте материалы принадлежат компании MWC © 2000-2022</p>
+          <a href="https://astanacreative.kz/" target="_blank"> Разработка сайтов Нур - Султан</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/jquery.maskedinput.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
+</body>
+</html>
