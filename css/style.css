@@ -1259,9 +1259,12 @@ h6 {
   text-transform: uppercase;
 }
 
+.map {
+  height: 31vw;
+}
 .map iframe {
   width: 100%;
-  height: 31vw;
+  height: 100%;
 }
 
 @media (max-width: 1650px) {
