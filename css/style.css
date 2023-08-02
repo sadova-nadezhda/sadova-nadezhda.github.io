@@ -510,6 +510,10 @@ h6 {
   width: 100%;
 }
 
+.header__link svg {
+  min-width: 20px;
+}
+
 .header__nav {
   padding: 1rem 0;
   border-top: 1px solid var(--grey, #E8E8E8);
@@ -722,6 +726,10 @@ h6 {
 
 .footer__link:hover span::after {
   width: 100%;
+}
+
+.footer__link svg {
+  min-width: 20px;
 }
 
 .footer__button {
