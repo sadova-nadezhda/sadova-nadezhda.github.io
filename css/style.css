@@ -1301,8 +1301,11 @@ h6 {
   html {
     font: 400 16px/1.8 FuturaPT;
   }
-  .section {
+  .section, .footer__row {
     padding: 90px 0;
+  }
+  .footer__copy {
+    padding-bottom: 60px;
   }
 }
 
@@ -1315,8 +1318,12 @@ h6 {
     font-size: 1em;
   }
 
-  .section {
+  .section, .footer__row {
     padding: 80px 0;
+  }
+
+  .footer__copy {
+    padding-bottom: 50px;
   }
 }
 
@@ -1325,7 +1332,7 @@ h6 {
     max-width: 1132px;
   }
 
-  .section {
+  .section, .footer__row {
     padding: 70px 0;
   }
 
@@ -1337,6 +1344,10 @@ h6 {
   .accreditation__cards {
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+  }
+
+  .footer__copy {
+    padding-bottom: 40px;
   }
 }
 
@@ -1365,7 +1376,7 @@ h6 {
     max-width: none;
   }
 
-  .section {
+  .section, .footer__row {
     padding: 60px 0;
   }
 
@@ -1414,10 +1425,14 @@ h6 {
   .events__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .footer__copy {
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 800px) {
-  .section {
+  .section, .footer__row {
     padding: 50px 0;
   }
 
@@ -1437,7 +1452,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
-  .section {
+  .section, .footer__row {
     padding: 40px 0;
   }
 
@@ -1481,5 +1496,9 @@ h6 {
   .position__cards {
     grid-template-columns: 1fr;
     gap: 1.4rem;
+  }
+  
+  .footer__copy {
+    padding-bottom: 20px;
   }
 }
