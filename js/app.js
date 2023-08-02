@@ -1,4 +1,5 @@
 let header = document.querySelector(".header");
+let firstSection = document.querySelector('.section_first');
 
 window.addEventListener("load", function () {
 
@@ -15,6 +16,12 @@ window.addEventListener("load", function () {
       document.querySelector("body").style.overflow = "unset";
     });
   }
+
+      //breadcrumbs
+      let headerHeight = document.querySelector(".header").clientHeight;
+      if(firstSection) {
+        firstSection.style.marginTop = `${headerHeight}px`;
+      }
 
   const headerBurger = document.querySelector('.header__burger');
   const headerNav = document.querySelector('.header__nav');
@@ -167,3 +174,13 @@ window.addEventListener("load", function () {
     });
   }
 });
+
+// resize
+$(window).on('resize', function(){
+  if(header) {
+    let headerHeight = document.querySelector(".header").clientHeight;
+    if(firstSection) {
+      firstSection.style.marginTop = `${headerHeight}px`;
+    }
+  }
+}).resize();
