@@ -719,7 +719,6 @@ h6 {
 }
 
 .footer__button:hover {
-  gap: 1rem;
   background-color: var(--green-lg, #CFDFDD);
   color: var(--main, #003D37);
   border: 1px solid var(--green-lg, #CFDFDD);
