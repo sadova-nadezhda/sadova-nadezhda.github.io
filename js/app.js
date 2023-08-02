@@ -63,45 +63,35 @@ window.addEventListener("load", function () {
   }
 
 
-  const menuContainer = document.querySelector('.header__menu');
-  if (menuContainer) {
-    const menuItems = document.querySelectorAll('.header__elem');
-
-    function closeAllMenus() {
-      menuItems.forEach(function(item) {
-        item.parentNode.classList.remove('open');
-        item.classList.remove('active');
-      });
-    }
-
-    menuContainer.addEventListener('click', function(e) {
-      const target = e.target;
-      if (target.classList.contains('header__elem')) {
+  /*menu*/
+  const menuItm = document.querySelectorAll('.header__elem');
+  if (menuItm){
+    menuItm.forEach(function(item, index) {
+      item.addEventListener('click', function(e) {
         e.preventDefault();
-        target.classList.toggle('active');
-        target.parentNode.classList.toggle('open');
-
-        menuItems.forEach(function(item) {
-          if (item !== target) {
-            item.parentNode.classList.remove('open');
-            item.classList.remove('active');
+        this.classList.toggle('active');
+        this.parentNode.classList.toggle('open');
+        menuItm.forEach(function(item2, index2) {
+          if ( index !== index2 ) {
+            item2.parentNode.classList.remove('open');
+            item2.classList.remove('active');
           }
+          document.addEventListener('click', e => {
+            let target = e.target;
+            if (!(target.classList.contains('header__elem')) && !(target.classList.contains('sub__menu')) && !(target.classList.contains('nav__menu'))) {
+              item2.parentNode.classList.remove('open');
+              item2.classList.remove('active');
+            }
+          });
+          window.addEventListener('scroll', () => {
+            if(item2.parentNode.classList.contains('open')){
+              item2.parentNode.classList.remove('open');
+              item2.classList.remove('active');
+            }
+          });
         });
-      } else if (!target.classList.contains('sub__menu') && !target.classList.contains('nav__menu')) {
-        closeAllMenus();
-      }
+      });
     });
-
-    window.addEventListener('scroll', function() {
-      closeAllMenus();
-    });
-
-    // document.addEventListener('click', function(event) {
-    //   const { target } = event;
-    //   if (!target.classList.contains('header__item')) {
-    //     closeAllMenus();
-    //   }
-    // });
   }
 
   //START slider
