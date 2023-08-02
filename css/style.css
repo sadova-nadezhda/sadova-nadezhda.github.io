@@ -1443,6 +1443,14 @@ h6 {
     gap: 1.4rem;
   }
 
+  .analytics__card {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics__img {
+    height: 200px;
+  }
+
   .events__cards {
     grid-template-columns: 1fr;
     gap: 1.4rem;
