@@ -1467,6 +1467,10 @@ h6 {
 }
 
 @media (max-width: 600px) {
+  .header__link svg {
+    min-width: 16px;
+  }
+
   .section, .footer__row {
     padding: 40px 0;
   }
@@ -1511,6 +1515,10 @@ h6 {
   .position__cards {
     grid-template-columns: 1fr;
     gap: 1.4rem;
+  }
+
+  .footer__link svg {
+    min-width: 16px;
   }
 
   .footer__button {
