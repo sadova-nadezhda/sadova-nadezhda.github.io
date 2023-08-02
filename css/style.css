@@ -734,12 +734,12 @@ h6 {
   padding-bottom: 70px;
 }
 
-.footer__copy a {
+.footer__copy a:last-child {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
 
-.footer__copy a::after {
+.footer__copy a:last-child:after {
   position: absolute;
   top: 100%;
   left: 0;
@@ -750,7 +750,7 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 
-.footer__copy a:hover::after {
+.footer__copy a:last-child:hover::after {
   width: 100%;
 }
 
