@@ -159,46 +159,26 @@ window.addEventListener("load", function () {
   slider.controller.control = thumbs;
   thumbs.controller.control = slider;
 
-  // var testSlider = new Swiper('.test__slider', {
-  //   spaceBetween: 10,
-  //   navigation: {
-  //     nextEl: ".test-button-next",
-  //     prevEl: ".test-button-prev",
-  //   },
-  //   thumbs: {
-  //     swiper: testThumbs,
-  //   },
-  // });
-  // var testThumbs = new Swiper('.test__slider_thumbs', {
-  //   spaceBetween: 10,
-  //   // slideToClickedSlide: true,
-  //   slidesPerView: 20,
-  //   navigation: {
-  //     nextEl: ".test-button-next",
-  //     prevEl: ".test-button-prev",
-  //   },
-  // });
+  var testThumbs = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 20,
+    // freeMode: true,
+    // watchSlidesProgress: true,
+  });
+  var testSlider = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".test-button-next",
+      prevEl: ".test-button-prev",
+    },
+    thumbs: {
+      swiper: testThumbs,
+    },
+  });
 
 
 
   // Form
-
-  var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 20,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
 
   function submitForm() {
     $("#form_loader").show();
