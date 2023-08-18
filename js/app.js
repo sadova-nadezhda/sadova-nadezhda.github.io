@@ -162,8 +162,8 @@ window.addEventListener("load", function () {
   var testThumbs = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 20,
-    // freeMode: true,
-    // watchSlidesProgress: true,
+    freeMode: true,
+    watchSlidesProgress: true,
   });
   var testSlider = new Swiper(".mySwiper2", {
     spaceBetween: 10,
@@ -176,6 +176,50 @@ window.addEventListener("load", function () {
     },
   });
 
+  // код счетчика слайдов
+  let testBox = document.querySelector('.mySwiper2');
+  let mySliderAllSlides = document.querySelector('.test__total')
+  let mySliderCurrentSlide = document.querySelector('.test__noted');
+
+  if(testBox) {
+    let checkSlide = testBox.querySelectorAll('input:checked');
+    let inputsTest = testBox.querySelectorAll('input');
+    let mySliderSlides = testSlider.slides;
+    mySliderAllSlides.textContent = mySliderSlides.length;
+    mySliderCurrentSlide.textContent = checkSlide.length;
+    inputsTest.forEach( input => {
+      input.addEventListener('change', function() {
+        checkSlide = testBox.querySelectorAll('input:checked');
+        mySliderCurrentSlide.textContent = checkSlide.length;
+      });
+    })
+  }
+
+
+  let time = document.querySelector('.time');
+  let timeMinut = time.dataset.time;
+  function countdownTimer() {
+    let deadlineTime = new Date( new Date().getTime() + (timeMinut * 60 * 1000) ); //установить таймер на минуты
+    let Timer = setInterval(function() {
+      let nowDate = new Date().getTime();
+      var residue = deadlineTime - nowDate;
+      let hours   = Math.floor( (residue % (1000 * 60 **3)) / (1000 * 60**2) );
+      let minutes = Math.floor( (residue % (1000 * 60**2)) / (1000 * 60) );
+      let seconds = Math.floor( (residue % (1000 * 60)) / 1000 );
+      $hours.textContent = hours < 10 ? '0' + hours : hours;
+      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+      if (residue < 0) {
+        clearInterval(Timer);
+        alert("Время истекло!");
+       }
+    }, 1000);
+  }
+  const $hours = document.querySelector('.hours');
+  const $minutes = document.querySelector('.minutes');
+  const $seconds = document.querySelector('.seconds');
+  // вызываем функцию countdownTimer
+  countdownTimer();
 
 
   // Form

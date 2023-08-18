@@ -776,6 +776,55 @@ h6 {
   padding: 1.5rem 0;
 }
 
+.time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.time_card {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+  padding-bottom: 22px;
+  font-family: Arimo;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.time_card::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: var(--light-text, #4E687A);
+  font-family: OpenSans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.time_card::after {
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  transform: translateY(-50%);
+  display: block;
+  content: ":";
+  font-family: Arimo;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.time_card.seconds::after {
+  content: none;
+}
+
 .breadcrumbs__container {
   display: flex;
   flex-wrap: wrap;
@@ -1185,6 +1234,9 @@ h6 {
 }
 
 .test__count {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
   color: var(--light-text, #4E687A);
   font-size: 14px;
 }
@@ -1205,13 +1257,17 @@ h6 {
 }
 
 .test__caption {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.test__time {
+.test__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px;
   border-bottom: 1px solid #CFE1ED;
+  text-align: center;
 }
 
 .test__process {
