@@ -756,6 +756,12 @@ h6 {
   font-size: 14px;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .section {
   padding-top: 40px;
   padding-bottom: 100px;
@@ -1151,7 +1157,7 @@ h6 {
   background: var(--green, #19AA6E);
 }
 
-.test__slide.swiper-slide-active {
+.test__slide.swiper-slide-thumb-active {
   color: #FFF;
   background: var(--main, #002A45);
 }

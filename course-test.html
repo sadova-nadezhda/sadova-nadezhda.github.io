@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css?_v=20230818121153" />
-	<link rel="stylesheet" href="css/style.css?_v=20230818121153" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css?_v=20230818145409" />
+	<link rel="stylesheet" href="css/style.css?_v=20230818145409" />
 </head>
 
 	<body>
@@ -99,8 +99,8 @@
 						<div class="test__top">
 							<h1 class="test__title">Тест: Безопасность и охрана труда (БиОТ) </h1>
 						</div>
-						<div>
-							<div thumbsSlider="" class="swiper test__slider_thumbs">
+						<div class="test__slider_thumbs">
+							<div thumbsSlider="" class="swiper mySwiper">
 								<div class="swiper-wrapper test__numbers">
 									<div class="swiper-slide test__slide">1</div>
 									<div class="swiper-slide test__slide">2</div>
@@ -108,7 +108,6 @@
 									<div class="swiper-slide test__slide">4</div>
 									<div class="swiper-slide test__slide">5</div>
 								</div>
-								<!-- buttons -->
 								<div class="swiper-button swiper-button-prev test-button-prev">
 									<svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M-3.0598e-07 7L6 13.0622L6 0.937823L-3.0598e-07 7Z" fill="#002A45"/>
@@ -135,125 +134,127 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper test__slider">
-								<div class="test__cards swiper-wrapper">
-									<div class="swiper-slide test__card">
-										<span class="test__num">Вопрос №1</span>
-										<div class="test__content">
-											<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
-											<div class="test__answers">
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы спят всего 2 часа в сутки</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут плавать на длинных ногах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы обитают преимущественно в лесах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут издавать мелодичные песни для общения</span>
-												</label>
+							<div class=" test__slider">
+								<div class="swiper mySwiper2">
+									<div class="swiper-wrapper test__cards">
+										<div class="swiper-slide test__card">
+											<span class="test__num">Вопрос №1</span>
+											<div class="test__content">
+												<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
+												<div class="test__answers">
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы спят всего 2 часа в сутки</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут плавать на длинных ногах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы обитают преимущественно в лесах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут издавать мелодичные песни для общения</span>
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="swiper-slide test__card">
-										<span class="test__num">Вопрос №2</span>
-										<div class="test__content">
-											<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
-											<div class="test__answers">
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы спят всего 2 часа в сутки</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут плавать на длинных ногах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы обитают преимущественно в лесах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут издавать мелодичные песни для общения</span>
-												</label>
+										<div class="swiper-slide test__card">
+											<span class="test__num">Вопрос №2</span>
+											<div class="test__content">
+												<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
+												<div class="test__answers">
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы спят всего 2 часа в сутки</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут плавать на длинных ногах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы обитают преимущественно в лесах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут издавать мелодичные песни для общения</span>
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="swiper-slide test__card">
-										<span class="test__num">Вопрос №3</span>
-										<div class="test__content">
-											<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
-											<div class="test__answers">
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы спят всего 2 часа в сутки</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут плавать на длинных ногах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы обитают преимущественно в лесах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут издавать мелодичные песни для общения</span>
-												</label>
+										<div class="swiper-slide test__card">
+											<span class="test__num">Вопрос №3</span>
+											<div class="test__content">
+												<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
+												<div class="test__answers">
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы спят всего 2 часа в сутки</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут плавать на длинных ногах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы обитают преимущественно в лесах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут издавать мелодичные песни для общения</span>
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="swiper-slide test__card">
-										<span class="test__num">Вопрос №4</span>
-										<div class="test__content">
-											<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
-											<div class="test__answers">
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы спят всего 2 часа в сутки</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут плавать на длинных ногах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы обитают преимущественно в лесах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут издавать мелодичные песни для общения</span>
-												</label>
+										<div class="swiper-slide test__card">
+											<span class="test__num">Вопрос №4</span>
+											<div class="test__content">
+												<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
+												<div class="test__answers">
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы спят всего 2 часа в сутки</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут плавать на длинных ногах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы обитают преимущественно в лесах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут издавать мелодичные песни для общения</span>
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="swiper-slide test__card">
-										<span class="test__num">Вопрос №5</span>
-										<div class="test__content">
-											<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
-											<div class="test__answers">
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы спят всего 2 часа в сутки</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут плавать на длинных ногах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы обитают преимущественно в лесах</span>
-												</label>
-												<label class="test__answer custom-radio">
-													<input type="radio" name="answer" value="">
-													<span>Жирафы могут издавать мелодичные песни для общения</span>
-												</label>
+										<div class="swiper-slide test__card">
+											<span class="test__num">Вопрос №5</span>
+											<div class="test__content">
+												<h3 class="test__question">Какой из следующих фактов о жирафах является верным? Выберите верный вариант.</h3>
+												<div class="test__answers">
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы спят всего 2 часа в сутки</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут плавать на длинных ногах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы обитают преимущественно в лесах</span>
+													</label>
+													<label class="test__answer custom-radio">
+														<input type="radio" name="answer" value="">
+														<span>Жирафы могут издавать мелодичные песни для общения</span>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -326,10 +327,10 @@
 		</div>
 	</div>
 </footer>
-   <script src="js/jquery-3.6.0.min.js?_v=20230818121153"></script>
-  <script src="js/jquery.maskedinput.js?_v=20230818121153"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js?_v=20230818121153"></script>
-  <script src="js/app.js?_v=20230818121153"></script>
+   <script src="js/jquery-3.6.0.min.js?_v=20230818145409"></script>
+  <script src="js/jquery.maskedinput.js?_v=20230818145409"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js?_v=20230818145409"></script>
+  <script src="js/app.js?_v=20230818145409"></script>
   </body>
 </html>
 
