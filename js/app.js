@@ -186,10 +186,10 @@ window.addEventListener("load", function () {
     const checkSlide = testBox.querySelectorAll('input:checked');
     const inputsTest = testBox.querySelectorAll('input');
     const mySliderSlides = testSlider.slides;
-  
+
     mySliderAllSlides.textContent = mySliderSlides.length;
     mySliderCurrentSlide.textContent = checkSlide.length;
-  
+
     const updateSlideInfo = () => {
       document.querySelector('.mySwiper .swiper-slide-thumb-active').classList.add('check-slide');
       const newCheckSlide = testBox.querySelectorAll('input:checked');
@@ -198,15 +198,15 @@ window.addEventListener("load", function () {
         quantity.textContent = mySliderSlides.length - newCheckSlide.length;
       }
     };
-  
+
     inputsTest.forEach(input => {
       input.addEventListener('change', updateSlideInfo);
     });
-  
+
     const toggleTestButtons = () => {
       const endButton = $('.test__end');
-      const nextButton = $('.test-button-next');
-      
+      const nextButton = $('.test__bottom .test-button-next');
+
       if (testSlider.activeIndex === mySliderSlides.length - 1) {
         endButton.fadeIn(400);
         nextButton.fadeOut(0);
@@ -215,7 +215,7 @@ window.addEventListener("load", function () {
         nextButton.fadeIn(400);
       }
     };
-  
+
     testSlider.on('slideChange', toggleTestButtons);
   }
 
@@ -242,7 +242,6 @@ window.addEventListener("load", function () {
       $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
       if (residue < 0) {
         clearInterval(Timer);
-        alert("Время истекло!");
        }
     }, 1000);
   }
@@ -259,7 +258,7 @@ window.addEventListener("load", function () {
       }
     });
   }
-  
+
   function showPopup(popup) {
     $(popup).fadeIn(400);
   }
