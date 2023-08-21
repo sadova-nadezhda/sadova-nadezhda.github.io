@@ -292,6 +292,10 @@ textarea {
   height: 108px;
 }
 
+select {
+  color: var(--main, #002A45);
+}
+
 .button {
   display: flex;
   justify-content: center;
