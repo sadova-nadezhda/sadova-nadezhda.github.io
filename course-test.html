@@ -5,12 +5,48 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css?_v=20230818172200" />
-	<link rel="stylesheet" href="css/style.css?_v=20230818172200" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20230821154349"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css?_v=20230821154349" />
+	<link rel="stylesheet" href="css/style.css?_v=20230821154349" />
 </head>
 
 	<body>
-		<header class="header">
+		<!-- headr for login -->
+<!-- <header class="header">
+	<div class="container container_max">
+		<div class="header__container">
+			<div class="header__top">
+				<div class="header__logo">
+					<a href="" class="logo">
+						<img src="img/logo.svg" alt="" />
+					</a>
+				</div>
+				<div class="header__lang">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_86_3102)">
+						<path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="#002A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M1.5 9H16.5" stroke="#002A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M9 1.5C10.876 3.55376 11.9421 6.21903 12 9C11.9421 11.781 10.876 14.4462 9 16.5C7.12404 14.4462 6.05794 11.781 6 9C6.05794 6.21903 7.12404 3.55376 9 1.5Z" stroke="#002A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_86_3102">
+						<rect width="18" height="18" fill="white"/>
+						</clipPath>
+						</defs>
+					</svg>
+					<select onchange="window.location.href = this.value">
+						<option value="/" selected >Қазақша</option>
+						<option value="/ru/">Русcкий</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</header> -->
+
+
+<!-- header for all pages -->
+<header class="header">
 	<!-- 	<div class="container container_max"> -->
 	<div class="container">
 		<div class="header__container">
@@ -80,6 +116,7 @@
 </header>
 
 
+
 		<main>
 			<div class="top"></div>
 			<section class="breadcrumbs">
@@ -120,6 +157,7 @@
 								</div>
 							</div>
 						</div>
+						<div class="test-swiper-scrollbar swiper-scrollbar"></div>
 						<div class="test__wrap">
 							<div class="test__info">
 								<div class="test__box">
@@ -139,7 +177,7 @@
 									</div>
 								</div>
 							</div>
-							<div class=" test__slider">
+							<form id="form-test" name="formTest" class="test__slider">
 								<div class="swiper mySwiper2">
 									<div class="swiper-wrapper test__cards">
 										<div class="swiper-slide test__card">
@@ -279,20 +317,64 @@
 											<path d="M4.5 12.75L8.25 9L4.5 5.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 									</a>
-									<a class=" test__end button button_gr">Завершить тест</a>
+									<a class="test__end button button_gr">Завершить тест</a>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<footer class="footer">
+		<!-- !!!popup for start testing!!! -->
+		<!-- <div id="popup-test" class="popup popup-test">
+			<div class="popup__container popup-test__container">
+				<h2 class="popup-test__title popup__title">Тестирование</h2>
+				<div class="popup-test__text">Вам необходимо ответить на 150 вопросов в рамках 2 часов. Минимальный порог для успешного прохождения: <span>70 баллов</span>. У вас есть только ОДНА попытка для точной оценки ваших профессиональных навыков</div>
+				<form action="" class="popup-test__form" onsubmit="submitForm()">
+					<div class="popup__check popup-test__check">
+						<input type="checkbox" name="" id="check-test" required>
+						<label for="check">Я ознакомился с правилами</label>
+					</div>
+					<button class="popup-test__btn button button_gr">
+						<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4.25 2.25L14.75 9L4.25 15.75V2.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>					
+						<span>Начать тестирование</span>		
+					</button>
+				</form>
+				<span class="popup-test__back">Вернуться в <a href="">личный кабинет</a></span>
+			</div>
+		</div> -->
+
+		<div id="popup-attention" class="popup popup-attention">
+			<div class="popup__container popup-attention__container">
+				<h2 class="popup-attention__title popup__title">Внимание!</h2>
+				<div class="popup-attention__text">Вы пропустили <span class="quantity">2</span> вопроса. Хотите вернуться к тесту?</div>
+				<div class="popup-attention__buttons">
+					<button class="popup__close popup-attention__back button">Вернуться</button>
+					<button class="form-test__button button button_gr">Завершить тест</button>
+				</div>
+			</div>
+		</div>
+		<!-- footer for login -->
+<!-- <footer class="footer">
+	<div class="container container_max">
+		<div class="footer__container">
+			<div class="footer__copy">
+				<span>© 2023 Alstom. Все права защищены</span>
+				<a href="">Политика конфиденциальности</a>
+			</div>
+		</div>
+	</div>
+</footer> -->
+
+
+<footer class="footer footer_dark">
 	<div class="container">
 		<div class="footer__container">
 			<div class="footer__row">
-				<div class="footer__logo"><img src="img/logo.svg" alt=""></div>
+				<a href="#" class="footer__logo"><img src="img/footer-logo.svg" alt=""></a>
 				<a href="mailto:company@mail.kz" class="footer__link">
 					<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M3.33325 3.5H15.3333C16.1583 3.5 16.8333 4.175 16.8333 5V14C16.8333 14.825 16.1583 15.5 15.3333 15.5H3.33325C2.50825 15.5 1.83325 14.825 1.83325 14V5C1.83325 4.175 2.50825 3.5 3.33325 3.5Z" stroke="#DC3223" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -332,10 +414,11 @@
 		</div>
 	</div>
 </footer>
-   <script src="js/jquery-3.6.0.min.js?_v=20230818172200"></script>
-  <script src="js/jquery.maskedinput.js?_v=20230818172200"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js?_v=20230818172200"></script>
-  <script src="js/app.js?_v=20230818172200"></script>
+   <script src="js/jquery-3.6.0.min.js?_v=20230821154349"></script>
+  <script src="js/jquery.maskedinput.js?_v=20230821154349"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20230821154349"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js?_v=20230821154349"></script>
+  <script src="js/app.js?_v=20230821154349"></script>
   </body>
 </html>
 

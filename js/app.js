@@ -136,34 +136,33 @@ window.addEventListener("load", function () {
 
   }
 
-
-  var slider = new Swiper ('.gallery-slider', {
-    slidesPerView: 1,
-    // centeredSlides: true,
-    // loop: true,
-    // loopedSlides: 7,
+  var swiper = new Swiper(".gallery-thumbs", {
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".gallery-slider", {
+    spaceBetween: 8,
     navigation: {
-        nextEl: '.gallery-button-next',
-        prevEl: '.gallery-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
     },
   });
-
-  var thumbs = new Swiper ('.gallery-thumbs', {
-    slidesPerView: 7,
-    spaceBetween: 8,
-    // centeredSlides: true,
-    // loop: true,
-    slideToClickedSlide: true,
-  });
-
-  slider.controller.control = thumbs;
-  thumbs.controller.control = slider;
 
   var testThumbs = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 20,
     freeMode: true,
     watchSlidesProgress: true,
+    scrollbar: {
+      el: ".test-swiper-scrollbar",
+      draggable: true,
+      // dragSize: 50,
+    },
   });
   var testSlider = new Swiper(".mySwiper2", {
     spaceBetween: 10,
@@ -174,38 +173,70 @@ window.addEventListener("load", function () {
     thumbs: {
       swiper: testThumbs,
     },
+    simulateTouch: false,
   });
 
   // код счетчика слайдов
-  let testBox = document.querySelector('.mySwiper2');
-  let mySliderAllSlides = document.querySelector('.test__total')
-  let mySliderCurrentSlide = document.querySelector('.test__noted');
-
-  if(testBox) {
-    let checkSlide = testBox.querySelectorAll('input:checked');
-    let inputsTest = testBox.querySelectorAll('input');
-    let mySliderSlides = testSlider.slides;
+  const testBox = document.querySelector('.mySwiper2');
+  if (testBox) {
+    const mySliderAllSlides = document.querySelector('.test__total');
+    const mySliderCurrentSlide = document.querySelector('.test__noted');
+    const quantity = document.querySelector('.quantity');
+    const checkSlide = testBox.querySelectorAll('input:checked');
+    const inputsTest = testBox.querySelectorAll('input');
+    const mySliderSlides = testSlider.slides;
+  
     mySliderAllSlides.textContent = mySliderSlides.length;
     mySliderCurrentSlide.textContent = checkSlide.length;
-    inputsTest.forEach( input => {
-      input.addEventListener('change', function() {
-        checkSlide = testBox.querySelectorAll('input:checked');
-        mySliderCurrentSlide.textContent = checkSlide.length;
-      });
-    })
+  
+    const updateSlideInfo = () => {
+      document.querySelector('.mySwiper .swiper-slide-thumb-active').classList.add('check-slide');
+      const newCheckSlide = testBox.querySelectorAll('input:checked');
+      mySliderCurrentSlide.textContent = newCheckSlide.length;
+      if (quantity) {
+        quantity.textContent = mySliderSlides.length - newCheckSlide.length;
+      }
+    };
+  
+    inputsTest.forEach(input => {
+      input.addEventListener('change', updateSlideInfo);
+    });
+  
+    const toggleTestButtons = () => {
+      const endButton = $('.test__end');
+      const nextButton = $('.test-button-next');
+      
+      if (testSlider.activeIndex === mySliderSlides.length - 1) {
+        endButton.fadeIn(400);
+        nextButton.fadeOut(0);
+      } else {
+        endButton.fadeOut(0);
+        nextButton.fadeIn(400);
+      }
+    };
+  
+    testSlider.on('slideChange', toggleTestButtons);
   }
 
 
+
   let time = document.querySelector('.time');
-  let timeMinut = time.dataset.time;
+  if(time) {
+    let timeMinut = time.dataset.time;
+  }
+
+  const $hours = document.querySelector('.hours');
+  const $minutes = document.querySelector('.minutes');
+  const $seconds = document.querySelector('.seconds');
+
   function countdownTimer() {
     let deadlineTime = new Date( new Date().getTime() + (timeMinut * 60 * 1000) ); //установить таймер на минуты
     let Timer = setInterval(function() {
       let nowDate = new Date().getTime();
       var residue = deadlineTime - nowDate;
-      let hours   = Math.floor( (residue % (1000 * 60 **3)) / (1000 * 60**2) );
-      let minutes = Math.floor( (residue % (1000 * 60**2)) / (1000 * 60) );
-      let seconds = Math.floor( (residue % (1000 * 60)) / 1000 );
+      let hours   = Math.floor( (residue % (1000 * 60 ** 3)) / (1000 * 60 ** 2));
+      let minutes = Math.floor( (residue % (1000 * 60 ** 2)) / (1000 * 60));
+      let seconds = Math.floor( (residue % (1000 * 60)) / 1000);
       $hours.textContent = hours < 10 ? '0' + hours : hours;
       $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
       $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
@@ -215,15 +246,56 @@ window.addEventListener("load", function () {
        }
     }, 1000);
   }
-  const $hours = document.querySelector('.hours');
-  const $minutes = document.querySelector('.minutes');
-  const $seconds = document.querySelector('.seconds');
-  // вызываем функцию countdownTimer
-  countdownTimer();
 
+  function hidePopup(popup) {
+    $(popup).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup")
+      ) {
+        $(this).fadeOut(400);
+      }
+    });
+  }
+  
+  function showPopup(popup) {
+    $(popup).fadeIn(400);
+  }
+
+  //popup
+  let popupTest = document.querySelector("#popup-test");
+  let popupAttention = document.querySelector("#popup-attention");
+  let testStart = document.querySelector('.popup-test__form');
+  let closePopupBtn = document.querySelectorAll('.popup__close');
+  let formTest = document.forms.formTest;
+  let testFinish = document.querySelector('.form-test__button');
+  let testBtn = document.querySelector('.test__end');
+  if(testStart) {
+    testStart.addEventListener('submit', function() {
+      showPopup(popupTest);
+      countdownTimer();
+    })
+  }
+  if (popupAttention) {
+    closePopupBtn.forEach(btn => {
+      btn.addEventListener('click', function() {
+        hidePopup(popupAttention)
+      })
+    });
+  }
+  if (formTest && testFinish) {
+    testFinish.addEventListener('click', function() {
+      formTest.submit();
+    })
+  }
+  if(testBtn) {
+    testBtn.addEventListener('click', () => {
+      showPopup(popupAttention);
+    })
+  }
 
   // Form
-
   function submitForm() {
     $("#form_loader").show();
   }
@@ -256,4 +328,9 @@ window.addEventListener("load", function () {
       alertt.classList.remove("alert--error");
     });
   }
+});
+
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
 });
