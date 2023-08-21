@@ -16,86 +16,86 @@ window.addEventListener("load", function () {
     });
   }
 
-  const headerBurger = document.querySelector('.header__burger');
-  const headerNav = document.querySelector('.header__nav');
+  // const headerBurger = document.querySelector('.header__burger');
+  // const headerNav = document.querySelector('.header__nav');
 
-  if (headerNav) {
-    document.addEventListener("scroll", function () {
-      const scroll = window.scrollY;
-      headerNav.classList.toggle("scroll", scroll > 50);
-    });
-  }
+  // if (headerNav) {
+  //   document.addEventListener("scroll", function () {
+  //     const scroll = window.scrollY;
+  //     headerNav.classList.toggle("scroll", scroll > 50);
+  //   });
+  // }
 
-  if (headerBurger) {
-    document.addEventListener('click', handleMenuClick);
-    window.addEventListener('scroll', closeMenuOnScroll);
-    document.addEventListener('click', closeMenuOnClickOutside);
-  }
+  // if (headerBurger) {
+  //   document.addEventListener('click', handleMenuClick);
+  //   window.addEventListener('scroll', closeMenuOnScroll);
+  //   document.addEventListener('click', closeMenuOnClickOutside);
+  // }
 
-  function handleMenuClick(event) {
-    const { target } = event;
-    if (target === headerBurger || target.classList.contains('header__item')) {
-      headerBurger.classList.toggle('active');
-      headerNav.classList.toggle('open');
-    }
-  }
+  // function handleMenuClick(event) {
+  //   const { target } = event;
+  //   if (target === headerBurger || target.classList.contains('header__item')) {
+  //     headerBurger.classList.toggle('active');
+  //     headerNav.classList.toggle('open');
+  //   }
+  // }
 
-  function closeMenuOnScroll() {
-    if (headerNav.classList.contains('open')) {
-      headerBurger.classList.remove('active');
-      headerNav.classList.remove('open');
-    }
-  }
+  // function closeMenuOnScroll() {
+  //   if (headerNav.classList.contains('open')) {
+  //     headerBurger.classList.remove('active');
+  //     headerNav.classList.remove('open');
+  //   }
+  // }
 
-  function closeMenuOnClickOutside(event) {
-    const { target } = event;
-    if (!headerNav.contains(target) && !headerBurger.contains(target) && !target.classList.contains('header__item')) {
-      headerBurger.classList.remove('active');
-      headerNav.classList.remove('open');
-    }
-  }
+  // function closeMenuOnClickOutside(event) {
+  //   const { target } = event;
+  //   if (!headerNav.contains(target) && !headerBurger.contains(target) && !target.classList.contains('header__item')) {
+  //     headerBurger.classList.remove('active');
+  //     headerNav.classList.remove('open');
+  //   }
+  // }
 
 
-  const menuContainer = document.querySelector('.header__menu');
-  if (menuContainer) {
-    const menuItems = document.querySelectorAll('.header__elem');
+  // const menuContainer = document.querySelector('.header__menu');
+  // if (menuContainer) {
+  //   const menuItems = document.querySelectorAll('.header__elem');
 
-    function closeAllMenus() {
-      menuItems.forEach(function(item) {
-        item.parentNode.classList.remove('open');
-        item.classList.remove('active');
-      });
-    }
+  //   function closeAllMenus() {
+  //     menuItems.forEach(function(item) {
+  //       item.parentNode.classList.remove('open');
+  //       item.classList.remove('active');
+  //     });
+  //   }
 
-    menuContainer.addEventListener('click', function(e) {
-      const target = e.target;
-      if (target.classList.contains('header__elem')) {
-        e.preventDefault();
-        target.classList.toggle('active');
-        target.parentNode.classList.toggle('open');
+  //   menuContainer.addEventListener('click', function(e) {
+  //     const target = e.target;
+  //     if (target.classList.contains('header__elem')) {
+  //       e.preventDefault();
+  //       target.classList.toggle('active');
+  //       target.parentNode.classList.toggle('open');
 
-        menuItems.forEach(function(item) {
-          if (item !== target) {
-            item.parentNode.classList.remove('open');
-            item.classList.remove('active');
-          }
-        });
-      } else if (!target.classList.contains('sub__menu') && !target.classList.contains('nav__menu')) {
-        closeAllMenus();
-      }
-    });
+  //       menuItems.forEach(function(item) {
+  //         if (item !== target) {
+  //           item.parentNode.classList.remove('open');
+  //           item.classList.remove('active');
+  //         }
+  //       });
+  //     } else if (!target.classList.contains('sub__menu') && !target.classList.contains('nav__menu')) {
+  //       closeAllMenus();
+  //     }
+  //   });
 
-    window.addEventListener('scroll', function() {
-      closeAllMenus();
-    });
+  //   window.addEventListener('scroll', function() {
+  //     closeAllMenus();
+  //   });
 
-    // document.addEventListener('click', function(event) {
-    //   const { target } = event;
-    //   if (!target.classList.contains('header__item')) {
-    //     closeAllMenus();
-    //   }
-    // });
-  }
+  //   // document.addEventListener('click', function(event) {
+  //   //   const { target } = event;
+  //   //   if (!target.classList.contains('header__item')) {
+  //   //     closeAllMenus();
+  //   //   }
+  //   // });
+  // }
 
   // show/hide password
   let password = document.querySelectorAll('.pass__icons');
@@ -155,7 +155,7 @@ window.addEventListener("load", function () {
 
   var testThumbs = new Swiper(".mySwiper", {
     spaceBetween: 10,
-    slidesPerView: 20,
+    slidesPerView: 'auto',
     freeMode: true,
     watchSlidesProgress: true,
     scrollbar: {
@@ -175,6 +175,7 @@ window.addEventListener("load", function () {
     },
     simulateTouch: false,
   });
+
 
   // код счетчика слайдов
   const testBox = document.querySelector('.mySwiper2');
@@ -218,8 +219,7 @@ window.addEventListener("load", function () {
     testSlider.on('slideChange', toggleTestButtons);
   }
 
-
-
+  // timer
   let time = document.querySelector('.time');
   if(time) {
     let timeMinut = time.dataset.time;
@@ -247,6 +247,7 @@ window.addEventListener("load", function () {
     }, 1000);
   }
 
+  // popups
   function hidePopup(popup) {
     $(popup).click(function(e) {
       const target = e.target;
@@ -263,7 +264,6 @@ window.addEventListener("load", function () {
     $(popup).fadeIn(400);
   }
 
-  //popup
   let popupTest = document.querySelector("#popup-test");
   let popupAttention = document.querySelector("#popup-attention");
   let testStart = document.querySelector('.popup-test__form');
@@ -330,7 +330,5 @@ window.addEventListener("load", function () {
   }
 });
 
-
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
+// Fancybox
+Fancybox.bind("[data-fancybox]");
