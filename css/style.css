@@ -263,6 +263,7 @@ textarea {
   padding: 10px 15px;
   background: var(--light-back, #F2F3F6);
   border: var(--light-back, #F2F3F6);
+  border: 0;
   font-size: 14px;
 }
 
