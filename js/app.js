@@ -76,6 +76,13 @@ window.addEventListener("load", function () {
     });
   })
 
+  $('.way').waypoint({
+    handler: function() {
+    $(this.element).addClass("way--active")
+    },
+    offset: '90%'
+  });
+
   // popup
   function hidePopup(popup) {
     $(popup).click(function(e) {
@@ -164,3 +171,5 @@ $(document).ready(function() {
       e.preventDefault();
   });
 });
+
+new WOW().init();

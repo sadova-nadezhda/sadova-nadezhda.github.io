@@ -288,7 +288,7 @@ textarea {
   width: 100%;
   max-width: 250px;
   padding: 10px 20px;
-  border: 1px solid var(--brand-2, #0D6688);
+  border: 1px solid #0D6688;
   color: #000;
   transition: all 0.2s ease-in-out;
 }
@@ -570,7 +570,7 @@ h6 {
 
 .accordion__title.active {
   pointer-events: none;
-  color: var(--brand-2, #0D6688);
+  color: #0D6688;
 }
 
 .accordion__title.active .line {
@@ -583,6 +583,7 @@ h6 {
   align-items: center;
   min-width: 35px;
   height: 35px;
+  overflow: hidden;
 }
 
 .accordion__title rect {
@@ -711,7 +712,7 @@ h6 {
 .popup-form__title {
   text-align: center;
   text-transform: uppercase;
-  color: var(--brand-2, #0D6688);
+  color: #0D6688;
 }
 
 .form__input {
@@ -821,33 +822,45 @@ h6 {
   line-height: 1.8em;
 }
 
-.mission {
-  padding-top: 100px;
-  background-color: #F9F7F1;
+.investment__img {
+  display: none;
+  margin-top: 50px;
+  margin-right: -16px;
 }
 
-.mission__container {
+.investment__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.about {
+  position: relative;
+  padding-top: 100px;
+  background-color: #F9F7F1;
+  overflow: hidden;
+}
+
+.about .mission__container {
   position: relative;
   display: grid;
   grid-template-columns: 55% 45%;
   gap: 50px;
+  margin-bottom: 300px;
 }
 
-.mission__img {
+.about .mission__img {
   min-height: 450px;
   height: 100%;
   width: 90%;
 }
 
-.mission__img img {
+.about .mission__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.about {
-  background-color: #F9F7F1;
 }
 
 .about__top {
@@ -900,8 +913,32 @@ h6 {
   background-color: #0D6688;
 }
 
+.about::before {
+  position: absolute;
+  top: 50%;
+  left: -70%;
+  transform: translateY(-50%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  opacity: 0.24;
+  background: radial-gradient(50% 50% at 50% 50%, #0D6688 0%, rgba(217, 217, 217, 0) 100%);
+}
+
+.about::after {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  transform: translateY(-50%);
+  content: "";
+  width: 60%;
+  height: 25%;
+  background: url(../img/elem-3.png) no-repeat;
+}
+
 .partners {
-  background-color: #0D1517;
+  background: url(../img/back-2.png) center/cover no-repeat;
 }
 
 .partners__top {
@@ -975,7 +1012,9 @@ h6 {
 }
 
 .projects {
+  position: relative;
   background-color: #F9F7F1;
+  overflow: hidden;
 }
 
 .projects__top {
@@ -983,7 +1022,7 @@ h6 {
 }
 
 .projects__title {
-  color: var(--brand-2, #0D6688);
+  color: #0D6688;
 }
 
 .projects__wrap {
@@ -1043,12 +1082,27 @@ h6 {
      object-fit: cover;
 }
 
+.projects::after {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  content: "";
+  width: 40%;
+  height: 14%;
+  background: url(../img/elem-4.png) no-repeat;
+}
+
+.healthcare {
+  position: relative;
+  overflow: hidden;
+}
+
 .healthcare__top {
   margin-bottom: 3.5rem;
 }
 
 .healthcare__title {
-  color: var(--brand-2, #0D6688);
+  color: #0D6688;
 }
 
 .healthcare__wrap {
@@ -1106,12 +1160,24 @@ h6 {
 }
 
 .healthcare__caption {
-  color: var(--brand-1, #09B6C7);
+  color: #09B6C7;
   text-transform: uppercase;
 }
 
+.healthcare::after {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  content: "";
+  width: 40%;
+  height: 40%;
+  background: url(../img/elem-5.png) no-repeat;
+}
+
 .medicine {
+  position: relative;
   background-color: #F9F7F1;
+  overflow: hidden;
 }
 
 .medicine__top {
@@ -1120,7 +1186,7 @@ h6 {
 
 .medicine__title {
   max-width: 610px;
-  color: var(--brand-2, #0D6688);
+  color: #0D6688;
 }
 
 .medicine__wrap {
@@ -1164,10 +1230,31 @@ h6 {
 }
 
 .medicine__caption {
-  color: var(--brand-1, #09B6C7);
+  color: #09B6C7;
   font-family: IBM Plex Sans;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.medicine::after {
+  position: absolute;
+  top: 3%;
+  right: 0;
+  content: "";
+  width: 43%;
+  height: 60%;
+  background: url(../img/elem-6.png) no-repeat;
+}
+
+.way {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(50px);
+}
+
+.way.way--active {
+  opacity: 1;
+  transform: none;
 }
 
 @keyframes shadow-pulse {
@@ -1248,6 +1335,10 @@ h6 {
   .investment .back .elem2 {
     right: -5%;
   }
+
+  .about .mission__container {
+    margin-bottom: 240px;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -1297,12 +1388,40 @@ h6 {
     right: -10%;
   }
 
+  .about .mission__container {
+    margin-bottom: 200px;
+  }
+
+  .about__top {
+    margin-bottom: 3rem;
+  }
+
+  .partners__top {
+    margin-bottom: 3rem;
+  }
+
+  .projects__top {
+    margin-bottom: 3rem;
+  }
+
+  .projects__icon {
+    margin-bottom: 60px;
+  }
+
   .projects__img {
     height: 400px;
   }
 
+  .healthcare__top {
+    margin-bottom: 3rem;
+  }
+
   .healthcare__img {
     height: 400px;
+  }
+
+  .medicine__top {
+    margin-bottom: 3rem;
   }
 
   .medicine__img {
@@ -1334,6 +1453,10 @@ h6 {
   .partners__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .healthcare__cards {
+    gap: 60px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1347,6 +1470,11 @@ h6 {
 
   .header__container {
     gap: 3rem;
+  }
+
+  .accordion .content {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .sticky__box {
@@ -1392,6 +1520,10 @@ h6 {
   .section {
     padding: 80px 0;
   }
+
+  .about .mission__container {
+    margin-bottom: 160px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -1408,6 +1540,7 @@ h6 {
     max-width: -moz-max-content;
     max-width: max-content;
     padding: 10px;
+    line-height: 1;
   }
 
   h1 {
@@ -1451,14 +1584,14 @@ h6 {
     color: #0D1517;
   }
 
+  .footer__info {
+    padding: 40px 0;
+  }
+
   .footer__links {
     width: 100%;
     justify-content: space-between;
     gap: 40px;
-  }
-
-  .top {
-    align-items: center;
   }
 
   .sticky__box {
@@ -1475,18 +1608,59 @@ h6 {
     max-width: unset;
   }
 
-  .mission__container {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .investment .back_elem {
+    display: none;
   }
 
-  .mission__img {
+  .investment__title {
+    max-width: 80%;
+  }
+
+  .investment__txt {
+    max-width: 60%;
+  }
+
+  .investment__img {
+    display: block;
+  }
+
+  .investment {
+    justify-content: flex-end;
+  }
+
+  .about .mission__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 150px;
+  }
+
+  .about .mission__img {
     min-height: unset;
+  }
+
+  .about__top {
+    margin-bottom: 2.5rem;
   }
 
   .about__cards {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .about__card {
+    padding-left: 20px;
+  }
+
+  .about::before {
+    content: none;
+  }
+
+  .about::after {
+    content: none;
+  }
+
+  .partners__top {
+    margin-bottom: 2.5rem;
   }
 
   .partners__cards {
@@ -1498,8 +1672,17 @@ h6 {
     padding: 20px;
   }
 
+  .projects__top {
+    margin-bottom: 2.5rem;
+  }
+
   .projects__wrap {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .projects__icon {
+    margin-bottom: 40px;
   }
 
   .projects__desc {
@@ -1507,8 +1690,21 @@ h6 {
     max-width: unset;
   }
 
+  .projects__list li {
+    padding-left: 20px;
+    min-height: 40px;
+  }
+
   .projects__img {
     height: 300px;
+  }
+
+  .projects::after {
+    content: none;
+  }
+
+  .healthcare__top {
+    margin-bottom: 2.5rem;
   }
 
   .healthcare__wrap {
@@ -1519,12 +1715,43 @@ h6 {
     height: 300px;
   }
 
+  .healthcare__cards {
+    gap: 40px;
+  }
+
+  .healthcare__card {
+    padding-left: 40px;
+  }
+
+  .healthcare::after {
+    content: none;
+  }
+
+  .medicine__top {
+    margin-bottom: 2.5rem;
+  }
+
   .medicine__wrap {
     grid-template-columns: 1fr;
   }
 
   .medicine__img {
     height: 300px;
+  }
+
+  .medicine__desc {
+    padding-left: 20px;
+  }
+
+  .medicine::after {
+    content: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .accordion .content {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1541,12 +1768,25 @@ h6 {
     padding: 60px 0;
   }
 
+  .about .mission__container {
+    margin-bottom: 120px;
+  }
+
   .about__cards {
     gap: 20px;
   }
 }
 
 @media (max-width: 600px) {
+  .header__container {
+    gap: 1rem;
+  }
+
+  .footer__info {
+    padding: 30px 0;
+    gap: 30px;
+  }
+
   .footer__links {
     justify-content: flex-start;
   }
@@ -1554,6 +1794,51 @@ h6 {
   .footer__col {
     flex: 0 1 auto;
     gap: 10px;
+  }
+
+  .footer__copy {
+    padding-bottom: 30px;
+  }
+
+  .investment__title {
+    max-width: 100%;
+  }
+
+  .investment__txt {
+    max-width: 100%;
+  }
+
+  .about__top {
+    margin-bottom: 30px;
+  }
+
+  .partners__top {
+    margin-bottom: 2rem;
+  }
+
+  .projects__top {
+    margin-bottom: 2rem;
+  }
+
+  .projects__icon {
+    margin-bottom: 30px;
+    height: 40px;
+  }
+
+  .projects__list {
+    gap: 20px;
+  }
+
+  .healthcare__top {
+    margin-bottom: 2rem;
+  }
+
+  .healthcare__cards {
+    gap: 20px;
+  }
+
+  .medicine__top {
+    margin-bottom: 30px;
   }
 }
 
@@ -1567,5 +1852,9 @@ h6 {
 @media (max-width: 520px) {
   .section {
     padding: 40px 0;
+  }
+
+  .about .mission__container {
+    margin-bottom: 80px;
   }
 }

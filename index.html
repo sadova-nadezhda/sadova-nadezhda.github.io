@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="shortcut icon" href="img/facicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css?_v=20230825140030" />
+  <link rel="stylesheet" href="css/animate.css?_v=20230825160229" />
+  <link rel="stylesheet" href="css/style.css?_v=20230825160229" />
 </head>
 
 
@@ -53,12 +54,16 @@
           <h1 class="investment__title title">INVESTING IN <span>THE FUTURE</span></h1>
           <div class="investment__txt">Our main priority is to search for, develop and implement the latest scientific
             developments in medical practice</div>
+          <picture class="investment__img">
+            <source srcset="img/mobile-img.png" media="(min-width: 600px)" />
+            <img src="img/mobile-img.png" alt="" />
+          </picture>
         </div>
       </div>
     </section>
-    <section class="mission section accordion">
+    <section class="about section accordion">
       <div class="container">
-        <div class="mission__container">
+        <div id="mission" class="mission__container">
           <div class="mission__img img__lines img__lines_rg"><img src="img/image-1.png" alt=""></div>
           <div class="accordion__wrap">
             <div class="content">
@@ -117,11 +122,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="about section">
-      <div class="container">
-        <div class="about__container">
+        <div id="about" class="about__container">
           <div class="about__top top">
             <h2 class="about__title title top__elem">Esh <span>investment</span></h2>
             <a href="" class="about__btn button top__elem">
@@ -133,7 +134,7 @@
             </a>
           </div>
           <div class="about__cards">
-            <div class="about__card">
+            <div class="about__card way">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2705 0H21.7287V13.0809H18.2705V0Z"
                   fill="#0D6688" />
@@ -175,7 +176,7 @@
               <div class="about__txt">Ведет активную деятельность в поиске перспективных инвестиционных возможностей
               </div>
             </div>
-            <div class="about__card">
+            <div class="about__card way">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2705 0H21.7287V13.0809H18.2705V0Z"
                   fill="#0D6688" />
@@ -217,7 +218,7 @@
               <div class="about__txt">Ведет активную деятельность в поиске перспективных инвестиционных возможностей
               </div>
             </div>
-            <div class="about__card">
+            <div class="about__card way">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2705 0H21.7287V13.0809H18.2705V0Z"
                   fill="#0D6688" />
@@ -259,7 +260,7 @@
               <div class="about__txt">Ведет активную деятельность в поиске перспективных инвестиционных возможностей
               </div>
             </div>
-            <div class="about__card">
+            <div class="about__card way">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2705 0H21.7287V13.0809H18.2705V0Z"
                   fill="#0D6688" />
@@ -306,7 +307,7 @@
         </div>
       </div>
     </section>
-    <section class="partners section">
+    <section id="partners" class="partners section">
       <div class="container">
         <div class="partners__container">
           <div class="partners__top top">
@@ -345,7 +346,7 @@
         </div>
       </div>
     </section>
-    <section class="projects section">
+    <section id="projects" class="projects section">
       <div class="container">
         <div class="projects__container">
           <div class="projects__top top">
@@ -362,9 +363,10 @@
             <div class="projects__desc">
               <div class="projects__icon"><img src="img/logo-4.png" alt=""></div>
               <ul class="projects__list">
-                <li>Positron emission tomography and computed tomography services</li>
-                <li>Supply of high-performance technologies for screening and prevention of colorectal cancer</li>
-                <li>Supply of radiopharmaceuticals</li>
+                <li class="way">Positron emission tomography and computed tomography services</li>
+                <li class="way">Supply of high-performance technologies for screening and prevention of
+                  colorectal cancer</li>
+                <li class="way">Supply of radiopharmaceuticals</li>
               </ul>
             </div>
             <div class="projects__img img__lines"><img src="img/image-2.png" alt=""></div>
@@ -372,7 +374,7 @@
         </div>
       </div>
     </section>
-    <section class="healthcare section">
+    <section id="healthcare" class="healthcare section">
       <div class="container">
         <div class="healthcare__container">
           <div class="healthcare__top top">
@@ -416,7 +418,7 @@
         </div>
       </div>
     </section>
-    <section class="medicine section">
+    <section id="medicine" class="medicine section">
       <div class="container">
         <div class="medicine__container">
           <div class="medicine__top top">
@@ -432,8 +434,9 @@
           <div class="medicine__wrap">
             <div class="medicine__img img__lines img__lines_rg"><img src="img/image-4.png" alt=""></div>
             <div class="medicine__desc">
-              <h5 class="medicine__caption">ядерная медицина</h5>
-              <div class="medicine__txt">Раздел клинической медицины, который занимается применением радионуклидных
+              <h5 class="medicine__caption way">ядерная медицина</h5>
+              <div class="medicine__txt way">Раздел клинической медицины, который занимается применением
+                радионуклидных
                 фармацевтических лекарственных препаратов (РФЛП) в диагностике и лечении.  Эта отрасль медицины главным
                 образом развивается в направлении исследований в области кардиологии и раковых заболеваний.</div>
             </div>
@@ -518,10 +521,11 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20230825140030"></script>
-<script src="js/jquery.maskedinput.js?_v=20230825140030"></script>
-<script src="js/jquery.waypoints.js?_v=20230825140030"></script>
-<script src="js/app.js?_v=20230825140030"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20230825160229"></script>
+<script src="js/jquery.maskedinput.js?_v=20230825160229"></script>
+<script src="js/jquery.waypoints.js?_v=20230825160229"></script>
+<script src="js/wow.min.js?_v=20230825160229"></script>
+<script src="js/app.js?_v=20230825160229"></script>
 
 </body>
 
