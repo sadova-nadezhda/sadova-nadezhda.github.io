@@ -291,6 +291,7 @@ textarea {
   padding: 10px 20px;
   border: 1px solid #0D6688;
   color: #000;
+  font-size: 14px;
   z-index: 1;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
