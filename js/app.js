@@ -76,6 +76,69 @@ window.addEventListener("load", function () {
     });
   })
 
+  // popup
+  function hidePopup(popup) {
+    $(popup).click(function(e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup")
+      ) {
+        $(this).fadeOut(400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    $(popup).fadeIn(400);
+  }
+
+
+  let popupForm = document.querySelector("#popup-form");
+  let feedback = document.querySelector(".feedback");
+  if(popupForm){
+    hidePopup(popupForm)
+  }
+  if(feedback) {
+    feedback.addEventListener('click', function() {
+      showPopup(popupForm)
+    });
+  }
+
+  // Form
+  function submitForm() {
+    $("#form_loader").show();
+  }
+
+  // input mask tel
+  $.fn.setCursorPosition = function (pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd("character", pos);
+      range.moveStart("character", pos);
+      range.select();
+    }
+  };
+  $('input[type="tel"]')
+    .click(function () {
+      $(this).setCursorPosition(3);
+    })
+    .mask("+7 (999) 999 99 99");
+
+
+  // alert
+  let alertt = document.querySelector(".alert--fixed");
+  let alertClose = document.querySelectorAll(".alert--close");
+  for (let item of alertClose) {
+    item.addEventListener("click", function (event) {
+      alertt.classList.remove("alert--active");
+      alertt.classList.remove("alert--warning");
+      alertt.classList.remove("alert--error");
+    });
+  }
+
 });
 
 $(document).ready(function() {
