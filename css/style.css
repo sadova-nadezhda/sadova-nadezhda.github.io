@@ -810,13 +810,13 @@ h6 {
 }
 
 .investment__title {
-  max-width: 950px;
+  max-width: 60%;
   margin-bottom: 36px;
   color: #F9F7F1;
 }
 
 .investment__txt {
-  max-width: 800px;
+  max-width: 40%;
   color: #A3A7B9;
   line-height: 1.8em;
 }
@@ -1246,7 +1246,7 @@ h6 {
   }
 
   .investment .back .elem2 {
-    width: 45%;
+    right: -5%;
   }
 }
 
@@ -1287,6 +1287,14 @@ h6 {
   .sticky__icon {
     width: 60px;
     height: 60px;
+  }
+
+  .investment .back .elem1 {
+    right: 5%;
+  }
+
+  .investment .back .elem2 {
+    right: -10%;
   }
 
   .projects__img {
