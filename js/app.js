@@ -53,6 +53,29 @@ window.addEventListener("load", function () {
       headerNav.classList.remove('open');
     }
   }
+
+  let imgLines = document.querySelectorAll('.img__lines');
+  imgLines.forEach( img => {
+    $(img).waypoint({
+      handler: function() {
+        $(this.element).addClass('active');
+      },
+      offset: '40%',
+    });
+  })
+
+  let cardsMed  = document.querySelectorAll('.healthcare__card')
+  cardsMed.forEach( card => {
+    $(card).waypoint({
+      handler: function() {
+        $(this.element).addClass('active');
+        $(this.element).next().removeClass('active');
+        $(this.element).prev().removeClass('active');
+      },
+      offset: '30%',
+    });
+  })
+
 });
 
 $(document).ready(function() {
