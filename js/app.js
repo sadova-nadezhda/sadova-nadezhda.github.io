@@ -83,6 +83,18 @@ window.addEventListener("load", function () {
     offset: '90%'
   });
 
+  $('.footer__way').waypoint({
+    handler: function(dir) {
+      if (dir=='up')  {
+        $('.sticky__box').show();
+      }else {
+        $('.sticky__box').hide()
+      }
+    },
+    // enabled: false,
+    offset: '90%'
+  });
+
   // popup
   function hidePopup(popup) {
     $(popup).click(function(e) {
@@ -171,4 +183,3 @@ $(document).ready(function() {
       e.preventDefault();
   });
 });
-
