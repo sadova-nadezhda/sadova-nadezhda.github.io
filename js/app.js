@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
       prevEl: ".teachers-button-prev",
     },
     autoplay: {
-      delay: 3000,
+      delay: 4500,
       disableOnInteraction: false,
     },
     // breakpoints: {
@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
       prevEl: ".results-button-prev",
     },
     autoplay: {
-      delay: 2500,
+      delay: 3500,
       disableOnInteraction: false,
     },
   });
