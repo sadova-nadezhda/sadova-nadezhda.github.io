@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
     if (rangeSlider) {
         let filterMin = document.querySelector('#filter-min');
         let filterMax = document.querySelector('#filter-max');
-        let filterMinPrice = document.querySelector('#filter-max').getAttribute('data-min-price');
+        let filterMinPrice = document.querySelector('#filter-min').getAttribute('data-min-price');
         let filterMaxPrice = document.querySelector('#filter-max').getAttribute('data-max-price');
         $("#rangeSlider").ionRangeSlider({
             type: "double",
