@@ -1675,13 +1675,8 @@ h4 {
 }
 
 .form__input label {
-  display: block;
   color: #51555B;
   transition: all 0.2s ease-in-out;
-}
-
-.form__input input:focus+label {
-  display: none;
 }
 
 .form__input input {
