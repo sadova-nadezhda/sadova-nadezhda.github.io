@@ -1646,6 +1646,7 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
+  width: 100%;
   color: #4E9F07;
   font-size: 20px;
 }
