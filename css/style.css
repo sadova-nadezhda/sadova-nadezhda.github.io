@@ -1348,6 +1348,27 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tickets__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickets__link {
+  border-radius: 10px;
+  border: 1.3px solid #3880F3;
+  color: #3880F3;
+  background: transparent;
+  font-weight: 500;
+  transition: all 0.2s linear;
+}
+
+.tickets__link:hover:not(:disabled) {
+  background: #3880F3;
+  color: #fff;
 }
 
 /* filters */
