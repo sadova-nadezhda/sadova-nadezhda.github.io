@@ -1407,7 +1407,11 @@ h4 {
 .filters__col {
   padding-bottom: 26px;
   margin-bottom: 26px;
-  border-bottom: 1.3px dashed #848F96;
+  /* border-bottom: 1.3px dashed #848F96; */
+  background-image: linear-gradient(to right, #848F96 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 11px 1.3px;
+  background-repeat: repeat-x;
 }
 
 .filters__caption {
