@@ -1675,14 +1675,20 @@ h4 {
 }
 
 .form__input label {
+  display: block;
   color: #51555B;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__input input:focus+label {
+  display: none;
 }
 
 .form__input input {
   width: 100%;
   padding: 0;
   border: 0;
-  color: #292D32;
+  color: #162537;
   font-size: 20px;
   font-weight: 500;
 }

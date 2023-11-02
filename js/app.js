@@ -38,8 +38,24 @@ window.addEventListener("load", function () {
         event.stopPropagation();
     });
 
-    // rangeSlider
+    const inputs = document.querySelectorAll('.form__input input');
+    inputs.forEach( input => {
+        input.addEventListener("focus", (e) => {
+            let target = e.target;
+            let label = target.previousElementSibling;
+            console.log(label)
+            label.style.maxHeight = '0';
+        });
 
+        input.addEventListener("blur", (e) => {
+            let target = e.target;
+            let label = target.previousElementSibling;
+            label.style.maxHeight = label.scrollHeight + 'px';
+        });
+    })
+
+
+    // rangeSlider
     let rangeSlider = document.querySelector('#rangeSlider');
     if (rangeSlider) {
         let filterMin = document.querySelector('#filter-min');
