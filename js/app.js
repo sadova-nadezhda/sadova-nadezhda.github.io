@@ -54,7 +54,6 @@ window.addEventListener("load", function () {
         });
     })
 
-
     // rangeSlider
     let rangeSlider = document.querySelector('#rangeSlider');
     if (rangeSlider) {
