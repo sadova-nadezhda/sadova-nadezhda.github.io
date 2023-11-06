@@ -1,0 +1,124 @@
+.footer {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  color: var(--light, #fff);
+  background: var(--dark, #292D32);
+
+  &__container {
+    display: flex;
+    gap: 4vw;
+
+    @media(max-width: 800px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media(max-width: 520px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__col {
+    &:first-child {
+      @media(max-width: 800px) {
+        grid-column: span 2;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(141, 147, 155, 0.40);
+      }
+
+      @media(max-width: 520px) {
+        grid-column: unset;
+      }
+    }
+
+    &:last-child {
+      @media(max-width: 520px) {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    @media(max-width: 520px) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(141, 147, 155, 0.40);
+    }
+  }
+
+  &__caption {
+    margin-bottom: 26px;
+
+    @media(max-width: 1440px) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__links {
+    a {
+      position: relative;
+      font-size: 20px;
+      transition: all 0.2s linear;
+
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content: '';
+        height: 1px;
+        width: 0;
+        background-color: var(--light, #fff);
+        transition: all 0.2s linear;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      @media(max-width: 1650px) {
+        font-size: 18px;
+      }
+
+      @media(max-width: 1440px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__socials {
+    a {
+      transition: all 0.2s linear;
+
+      &:hover {
+        svg {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    svg {
+      transition: all 0.2s linear;
+    }
+  }
+}
