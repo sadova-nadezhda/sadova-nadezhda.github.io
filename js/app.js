@@ -50,13 +50,13 @@ window.addEventListener("load", function () {
         input.addEventListener("focus", (e) => {
             let target = e.target;
             let label = target.previousElementSibling;
-            label.style.maxHeight = '0';
+            label.style.display = 'none';
         });
 
         input.addEventListener("blur", (e) => {
             let target = e.target;
             let label = target.previousElementSibling;
-            label.style.maxHeight = label.scrollHeight + 'px';
+            label.style.display = 'block';
         });
     })
 

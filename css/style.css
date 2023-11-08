@@ -1361,6 +1361,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 15px;
 }
 
 .card__time {
@@ -1375,6 +1376,7 @@ h4 {
 }
 
 .card__col:first-child {
+  margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(41, 45, 50, 0.08);
 }
@@ -2738,7 +2740,7 @@ h4 {
     top: 100%;
     left: 0;
     right: 0;
-    transform: translateY(-100%);
+    transform: translateY(-100vh);
     transition: all 0.2s ease-in-out;
     z-index: -1;
   }
@@ -2978,6 +2980,10 @@ h4 {
     margin-bottom: 8px;
   }
 
+  .card__mode {
+    margin-bottom: 0;
+  }
+
   .card__time svg {
     width: 18px;
     height: 18px;
@@ -2988,6 +2994,7 @@ h4 {
   }
 
   .card__col:first-child {
+    margin-bottom: 0;
     padding-bottom: 0;
     padding-left: 15px;
     border-bottom: 0;
@@ -3012,6 +3019,11 @@ h4 {
     font-size: 18px;
   }
 
+  .form__wrap {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
   .form__button {
     width: 100%;
   }
@@ -3020,11 +3032,6 @@ h4 {
 @media (max-width: 600px) {
   .main-menu__socials {
     display: none;
-  }
-
-  .form__wrap {
-    padding: 12px;
-    border-radius: 20px;
   }
 }
 
@@ -3035,6 +3042,11 @@ h4 {
 
   .container {
     padding: 0 20px;
+  }
+
+  .header__nav {
+    border-radius: 0px 0px 32px 32px;
+    background: rgb(255, 255, 255);
   }
 
   .logo__txt span:first-child {
