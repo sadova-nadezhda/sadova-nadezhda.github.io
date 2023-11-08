@@ -194,6 +194,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #F8F8F8;
 }
 
 ul,
@@ -242,6 +243,10 @@ select {
   max-width: 100%;
   padding: 0 78px;
   margin: 0 auto;
+}
+
+.container_lg {
+  padding: 0 120px;
 }
 
 input[type=checkbox],
@@ -441,7 +446,7 @@ h3 {
 }
 
 h4 {
-  font: 500 24px/1 GTWalsheimPro;
+  font: 500 23px/1 GTWalsheimPro;
 }
 
 /* preloader */
@@ -669,19 +674,26 @@ h4 {
 
 .header__nav.hidden {
   max-height: 0;
+  border-top: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in;
 }
 
+.header_hidden .secondary-menu {
+  display: none;
+}
+
 .main-menu {
-  background-color: var(--light, #fff);
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(2.6000001431px);
+          backdrop-filter: blur(2.6000001431px);
 }
 
 .main-menu__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 2vw;
   padding-top: 26px;
   padding-bottom: 15px;
 }
@@ -700,7 +712,7 @@ h4 {
 
 .main-menu__burger {
   position: relative;
-  width: 30px;
+  width: 31px;
   height: 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -760,7 +772,7 @@ h4 {
 .main-menu__socials {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 1.25vw;
 }
 
 .main-menu__socials a:hover svg {
@@ -768,8 +780,12 @@ h4 {
 }
 
 .main-menu__socials svg {
-  width: 54px;
-  height: 54px;
+  width: 2.8vw;
+  height: 2.8vw;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 58px;
+  max-height: 58px;
   transition: all 0.2s linear;
 }
 
@@ -777,9 +793,10 @@ h4 {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 13px 15px;
-  border-radius: 16px;
-  border: 1px solid rgba(225, 228, 234, 0.5);
+  padding: 18px 15px;
+  border-radius: 20px;
+  border: 1.3px solid rgba(225, 228, 234, 0.5);
+  background: #FAFAFA;
 }
 
 .main-menu__form svg {
@@ -788,6 +805,7 @@ h4 {
 }
 
 .main-menu__form input {
+  width: 100%;
   padding: 0;
   border: 0;
   background: transparent;
@@ -823,9 +841,11 @@ h4 {
   display: flex;
   align-items: center;
   gap: 26px;
+  max-width: 460px;
 }
 
 .secondary-menu__form input {
+  width: 100%;
   padding: 15px 20px;
   border: 0;
   border-radius: 10px;
@@ -845,9 +865,22 @@ h4 {
   font-weight: 500;
 }
 
+.secondary-menu__form .button {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1.3px solid var(--base-yellow-gradient, #F2A510);
+  background: var(--base-yellow-gradient, linear-gradient(186deg, #F2A510 46.05%, #EFB215 120.94%));
+  font-size: 20px;
+}
+
 .logo {
-  width: 82px;
-  height: 46px;
+  width: 4.2vw;
+  height: 2.3vw;
+  max-width: 82px;
+  max-height: 46px;
+  min-width: 65px;
+  min-height: 35px;
 }
 
 .logo__txt {
@@ -886,6 +919,7 @@ h4 {
 .telephone__txt {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .telephone__txt span {
@@ -964,6 +998,29 @@ h4 {
   height: 100%;
 }
 
+.search-form {
+  min-width: 20vw;
+}
+
+.language {
+  height: auto;
+  padding: 10px 15px;
+  padding-right: 37px;
+  border-radius: 10px;
+  border: 1.3px solid rgba(41, 45, 50, 0.2);
+  color: #51555B;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.language:after {
+  height: 7.5px;
+  width: 7.5px;
+  border-color: #51555B;
+}
+
 .footer {
   padding-top: 25px;
   padding-bottom: 50px;
@@ -1036,6 +1093,20 @@ h4 {
   padding: 50px 0;
 }
 
+.section_top {
+  position: relative;
+  z-index: 1;
+}
+
+.decor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+}
+
 .socials {
   display: flex;
   align-items: center;
@@ -1057,22 +1128,35 @@ h4 {
   font-size: 22px;
 }
 
-.language {
-  height: auto;
-  padding: 8px 12px;
-  padding-right: 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(41, 45, 50, 0.2);
-  color: #51555B;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
+.heading {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 20px 24px;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  border-radius: 28px;
+  background: var(--base-write, #FFF);
+  box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
 }
 
-.language:after {
-  height: 7px;
-  width: 7px;
-  border-color: #51555B;
+.description h1,
+.description h2,
+.description h3,
+.description h4,
+.description h5,
+.description h6 {
+  margin-bottom: 10px;
+}
+
+.description a {
+  color: #2569D7;
+  font-weight: 500;
+}
+
+.description p {
+  margin-bottom: 16px;
 }
 
 .col-flex {
@@ -1103,7 +1187,9 @@ h4 {
 
 .promo {
   width: 100%;
-  height: 290px;
+  height: 15vw;
+  max-height: 290px;
+  min-height: 220px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1283,13 +1369,41 @@ h4 {
   width: 100%;
 }
 
+.back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border-radius: 24px;
+  border: 1.2px solid #2569D7;
+  color: #2569D7;
+  transition: all 0.3s ease-in-out;
+}
+
+.back:hover {
+  gap: 10px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.main_gr {
+  background: #F8F8F8;
+}
+
 /* sections */
 
 .uly-dala {
   position: relative;
-  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  height: 31.5vw;
+  min-height: 605px;
   margin-top: 180px;
-  padding-top: 40px;
   padding-bottom: 40px;
   overflow: hidden;
 }
@@ -1304,8 +1418,15 @@ h4 {
   z-index: -1;
 }
 
+.uly-dala .container {
+  margin: auto 0;
+}
+
 .uly-dala__container {
+  height: 100%;
   max-width: 1000px;
+  min-width: 780px;
+  width: 60vw;
   margin: 0 auto;
 }
 
@@ -1408,6 +1529,22 @@ h4 {
   color: #2569D7;
   font-size: 20px;
   line-height: 1;
+}
+
+.info {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.info__wrapper {
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+}
+
+.info__content {
+  margin-bottom: 40px;
 }
 
 /* filters */
@@ -1543,6 +1680,10 @@ h4 {
 
 /* price */
 
+.price {
+  max-width: 280px;
+}
+
 .price__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1673,13 +1814,13 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
+  gap: 1.25vw;
 }
 
 .form__checkbox {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   width: 100%;
   color: #4E9F07;
@@ -1751,6 +1892,12 @@ h4 {
   border-radius: 42px;
 }
 
+/* feedback */
+
+.feedback__title {
+  margin-bottom: 20px;
+}
+
 /* customs */
 
 .checkbox-txt {
@@ -1782,12 +1929,101 @@ h4 {
 }
 
 @media (max-width: 1650px) {
+  h2 {
+    font: 700 25px/1 GTWalsheimPro;
+  }
+
+  .main-menu__container {
+    padding-top: 24px;
+  }
+
+  .main-menu__form svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .secondary-menu__form input::-moz-placeholder {
+    font-size: 18px;
+  }
+
+  .secondary-menu__form input::placeholder {
+    font-size: 18px;
+  }
+
+  .secondary-menu__form input {
+    font-size: 18px;
+  }
+
+  .secondary-menu__form .button {
+    font-size: 18px;
+  }
+
+  .logo__txt span:first-child {
+    font-size: 18px;
+  }
+
+  .telephone__txt span {
+    font-size: 16px;
+  }
+
+  .telephone__txt a {
+    font-size: 18px;
+  }
+
   .footer__links a {
+    font-size: 18px;
+  }
+
+  .card__sales {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .tickets__filt {
+    font-size: 18px;
+  }
+
+  .filters__item {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .filters {
+    padding: 24px 38px;
+    font-size: 18px;
+  }
+
+  .sorting {
+    font-size: 18px;
+  }
+
+  .price_old {
+    font-size: 18px;
+  }
+
+  .form__checkbox {
+    font-size: 18px;
+    letter-spacing: 0.45px;
+  }
+
+  .form__input input::-moz-placeholder {
+    font-size: 18px;
+  }
+
+  .form__input input::placeholder {
+    font-size: 18px;
+  }
+
+  .form__input input {
     font-size: 18px;
   }
 }
 
 @media (max-width: 1440px) {
+  .container_lg {
+    padding: 0 100px;
+  }
+
   .container {
     padding: 0 60px;
   }
@@ -1826,8 +2062,11 @@ h4 {
     font: 500 22px/1 GTWalsheimPro;
   }
 
+  .header__nav {
+    border-top: 1.3px solid rgba(41, 45, 50, 0.04);
+  }
+
   .main-menu__container {
-    gap: 32px;
     padding-top: 20px;
     padding-bottom: 12px;
   }
@@ -1840,17 +2079,21 @@ h4 {
     gap: 20px;
   }
 
-  .main-menu__socials svg {
-    width: 44px;
-    height: 44px;
-  }
-
   .main-menu__socials {
     gap: 20px;
   }
 
+  .main-menu__form svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .main-menu__form {
-    padding: 10px 12px;
+    padding: 16px 14px;
+  }
+
+  .main-menu__form {
+    padding: 14px 12px;
   }
 
   .secondary-menu__container {
@@ -1868,7 +2111,20 @@ h4 {
     border-width: 5px;
   }
 
+  .secondary-menu__form input::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  .secondary-menu__form input::placeholder {
+    font-size: 16px;
+  }
+
   .secondary-menu__form input {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .secondary-menu__form .button {
     padding: 12px 16px;
     font-size: 16px;
   }
@@ -1879,11 +2135,6 @@ h4 {
 
   .logo__txt span:last-child {
     font-size: 8px;
-  }
-
-  .logo {
-    width: 65px;
-    height: 35px;
   }
 
   .telephone__icon {
@@ -1938,7 +2189,6 @@ h4 {
   }
 
   .promo {
-    height: 220px;
     border-radius: 16px;
   }
 
@@ -2003,8 +2253,15 @@ h4 {
     padding: 16px;
   }
 
-  .uly-dala__container {
-    max-width: 780px;
+  .back:hover {
+    gap: 8px;
+  }
+
+  .back {
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
   }
 
   .uly-dala__title svg {
@@ -2018,8 +2275,6 @@ h4 {
 
   .uly-dala {
     min-height: 400px;
-    margin-top: 145px;
-    padding-top: 30px;
     padding-bottom: 30px;
   }
 
@@ -2125,6 +2380,10 @@ h4 {
     height: 4px;
   }
 
+  .price {
+    max-width: 215px;
+  }
+
   .form__checkbox svg {
     width: 24px;
     height: 24px;
@@ -2173,13 +2432,8 @@ h4 {
 }
 
 @media (max-width: 1300px) {
-  .main-menu__socials svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  .uly-dala {
-    margin-top: 144px;
+  .secondary-menu__container {
+    gap: 26px;
   }
 }
 
@@ -2202,13 +2456,37 @@ h4 {
 }
 
 @media (max-width: 1200px) {
+  .container_lg {
+    padding: 0 80px;
+  }
+
   .container {
     padding: 0 40px;
   }
 
-  .main-menu__socials svg {
-    width: 30px;
-    height: 30px;
+  .main-menu {
+    background: rgb(255, 255, 255);
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+  }
+
+  .secondary-menu__container {
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .secondary-menu__img {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+
+  .secondary-menu__form input {
+    padding: 10px 14px;
+  }
+
+  .secondary-menu__form .button {
+    padding: 10px 14px;
   }
 
   .search-btn {
@@ -2229,10 +2507,6 @@ h4 {
     z-index: -1;
   }
 
-  .uly-dala {
-    margin-top: 140px;
-  }
-
   .tickets__container {
     grid-template-columns: 1fr;
   }
@@ -2251,6 +2525,20 @@ h4 {
     padding: 20px;
   }
 
+  .filters__top {
+    margin-bottom: 20px;
+  }
+
+  .filters__item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .filters__col {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
   .filters {
     position: fixed;
     top: 50%;
@@ -2263,15 +2551,44 @@ h4 {
     opacity: 0;
     overflow: auto;
   }
+
+  .sorting .option {
+    padding: 12px 16px;
+  }
 }
 
 @media (max-width: 980px) {
   h1 {
     font: 700 26px/1 GTWalsheimPro;
   }
+
+  .decor {
+    top: 8%;
+  }
+
+  .heading {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-menu__tel {
+    display: none;
+  }
+
+  .uly-dala__container {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
+  .container_lg {
+    padding: 0 40px;
+  }
+
   .container {
     padding: 0 32px;
   }
@@ -2322,9 +2639,23 @@ h4 {
   .secondary-menu {
     display: none;
   }
+
+  .info {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-menu__socials {
+    display: none;
+  }
 }
 
 @media (max-width: 520px) {
+  .container_lg {
+    padding: 0 20px;
+  }
+
   .container {
     padding: 0 20px;
   }
@@ -2345,6 +2676,11 @@ h4 {
   .footer__col {
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(141, 147, 155, 0.4);
+  }
+
+  .heading {
+    padding: 10px 12px;
+    font-size: 18px;
   }
 
   .col-flex {

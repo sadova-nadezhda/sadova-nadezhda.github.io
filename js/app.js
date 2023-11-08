@@ -1,3 +1,6 @@
+let sectionTop = document.querySelector('.section_top');
+let headerHeight = document.querySelector(".header").clientHeight;
+
 window.addEventListener("load", function () {
     let preloader = document.querySelector("#preloader");
     if(preloader) {
@@ -38,12 +41,15 @@ window.addEventListener("load", function () {
         event.stopPropagation();
     });
 
+    if(sectionTop) {
+        sectionTop.style.marginTop = `${headerHeight}px`;
+    }
+
     const inputs = document.querySelectorAll('.form__input input');
     inputs.forEach( input => {
         input.addEventListener("focus", (e) => {
             let target = e.target;
             let label = target.previousElementSibling;
-            console.log(label)
             label.style.maxHeight = '0';
         });
 
@@ -125,4 +131,10 @@ window.addEventListener("load", function () {
 
 $(document).ready(function() {
     $('select').niceSelect();
+});
+
+window.addEventListener("resize", ()=> {
+    if(sectionTop) {
+        sectionTop.style.marginTop = `${headerHeight}px`;
+    }
 });
