@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231108115858">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231108115858" />
-  <link rel="stylesheet" href="css/style.css?_v=20231108115858" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231108151648">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231108151648" />
+  <link rel="stylesheet" href="css/style.css?_v=20231108151648" />
 </head>
 
 
@@ -29,7 +29,10 @@
             <option value="en">EN</option>
           </select>
           <a href="#" class="main-menu__logo">
-            <img class="logo" src="img/logo.png" alt="">
+            <picture class="logo">
+              <source srcset="img/logo-lg.png" media="(max-width: 520px)" />
+              <img src="img/logo.png" alt="">
+            </picture>
             <div class="logo__txt">
               <span>Uly Dala</span>
               <span>Туристическое агенство</span>
@@ -275,7 +278,10 @@
       </div>
     </div>
     <section class="uly-dala section_top">
-      <img src="img/back-1.png" alt="" class="uly-dala__back">
+      <picture class="uly-dala__back">
+        <source srcset="img/back-2.png" media="(max-width: 520px)" />
+        <img src="img/back-1.png" alt="" />
+      </picture>
       <div class="container">
         <div class="uly-dala__container">
           <div class="uly-dala__title">
@@ -463,7 +469,7 @@
                     stroke="#4E9F07" stroke-width="2.08" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <div class="form__input">
-                  <label for="">Кто?</label>
+                  <label for="">Туристы</label>
                   <input type="text" placeholder="2 взр.">
                 </div>
               </div>
@@ -602,9 +608,10 @@
           </form>
         </aside>
         <div class="tickets__content">
-          <div class="promo margin-down">
+          <picture class="promo margin-down">
+            <source srcset="img/promo-mb.png" media="(max-width: 520px)" />
             <img src="img/promo.png" alt="">
-          </div>
+          </picture>
           <div class="tickets__row">
             <div class="tickets__header">
               <h2 class="tickets__caption">Найдено:</h2>
@@ -759,31 +766,35 @@
                 </div>
               </div>
               <div class="card__description">
-                <div class="card__price">
-                  <span class="price_old">44 000 тг</span>
-                  <div class="price_new">от <span>36 000 тг</span></div>
-                </div>
-                <div class="card__person">На 2 взр. и 2 дет.</div>
-                <div class="card__date">с 27.07 по 30.07</div>
-                <div class="card__mode">
-                  <div class="card__time card__day">
-                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                      <path
-                        d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
-                        stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>5 дней</span>
+                <div class="card__col">
+                  <div class="card__price">
+                    <span class="price_old">44 000 тг</span>
+                    <div class="price_new">от <span>36 000 тг</span></div>
                   </div>
-                  <div class="card__time card__night">
-                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>4 ночи</span>
+                  <div class="card__person">На 2 взр. и 2 дет.</div>
+                </div>
+                <div class="card__col">
+                  <div class="card__date">с 27.07 по 30.07</div>
+                  <div class="card__mode">
+                    <div class="card__time card__day">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
+                          stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>5 дней</span>
+                    </div>
+                    <div class="card__time card__night">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>4 ночи</span>
+                    </div>
                   </div>
                 </div>
                 <a href="" class="card__link button">Подробнее</a>
@@ -909,39 +920,44 @@
                 </div>
               </div>
               <div class="card__description">
-                <div class="card__price">
-                  <span class="price_old">44 000 тг</span>
-                  <div class="price_new">от <span>36 000 тг</span></div>
-                </div>
-                <div class="card__person">На 2 взр. и 2 дет.</div>
-                <div class="card__date">с 27.07 по 30.07</div>
-                <div class="card__mode">
-                  <div class="card__time card__day">
-                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                      <path
-                        d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
-                        stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>5 дней</span>
+                <div class="card__col">
+                  <div class="card__price">
+                    <span class="price_old">44 000 тг</span>
+                    <div class="price_new">от <span>36 000 тг</span></div>
                   </div>
-                  <div class="card__time card__night">
-                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>4 ночи</span>
+                  <div class="card__person">На 2 взр. и 2 дет.</div>
+                </div>
+                <div class="card__col">
+                  <div class="card__date">с 27.07 по 30.07</div>
+                  <div class="card__mode">
+                    <div class="card__time card__day">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
+                          stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>5 дней</span>
+                    </div>
+                    <div class="card__time card__night">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>4 ночи</span>
+                    </div>
                   </div>
                 </div>
                 <a href="" class="card__link button">Подробнее</a>
               </div>
             </div>
-            <div class="promo">
+            <picture class="promo">
+              <source srcset="img/promo-mb.png" media="(max-width: 520px)" />
               <img src="img/promo.png" alt="">
-            </div>
+            </picture>
             <div class="tickets__card card">
               <div class="card__wrap">
                 <div class="card__img">
@@ -1062,31 +1078,35 @@
                 </div>
               </div>
               <div class="card__description">
-                <div class="card__price">
-                  <span class="price_old">44 000 тг</span>
-                  <div class="price_new">от <span>36 000 тг</span></div>
-                </div>
-                <div class="card__person">На 2 взр. и 2 дет.</div>
-                <div class="card__date">с 27.07 по 30.07</div>
-                <div class="card__mode">
-                  <div class="card__time card__day">
-                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                      <path
-                        d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
-                        stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>5 дней</span>
+                <div class="card__col">
+                  <div class="card__price">
+                    <span class="price_old">44 000 тг</span>
+                    <div class="price_new">от <span>36 000 тг</span></div>
                   </div>
-                  <div class="card__time card__night">
-                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
-                        stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>4 ночи</span>
+                  <div class="card__person">На 2 взр. и 2 дет.</div>
+                </div>
+                <div class="card__col">
+                  <div class="card__date">с 27.07 по 30.07</div>
+                  <div class="card__mode">
+                    <div class="card__time card__day">
+                      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.4009 16.2335C13.5121 16.2335 16.0342 13.7113 16.0342 10.6001C16.0342 7.48893 13.5121 4.9668 10.4009 4.9668C7.28971 4.9668 4.76758 7.48893 4.76758 10.6001C4.76758 13.7113 7.28971 16.2335 10.4009 16.2335Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M16.5881 16.7902L16.4754 16.6775M16.4754 4.52688L16.5881 4.41421L16.4754 4.52688ZM4.21207 16.7902L4.32473 16.6775L4.21207 16.7902ZM10.4001 2.00488V1.93555V2.00488ZM10.4001 19.2689V19.1995V19.2689ZM1.80273 10.6022H1.7334H1.80273ZM19.0667 10.6022H18.9974H19.0667ZM4.32473 4.52688L4.21207 4.41421L4.32473 4.52688Z"
+                          stroke="#2569D7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>5 дней</span>
+                    </div>
+                    <div class="card__time card__night">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3585 10.9646C2.6705 15.4279 6.45783 19.0592 10.9905 19.2586C14.1885 19.3972 17.0485 17.9066 18.7645 15.5579C19.4752 14.5959 19.0938 13.9546 17.9065 14.1712C17.3258 14.2752 16.7278 14.3186 16.1038 14.2926C11.8658 14.1192 8.39917 10.5746 8.38183 6.38855C8.37317 5.26189 8.60717 4.19589 9.03183 3.22522C9.49983 2.15055 8.9365 1.63922 7.85317 2.09855C4.42117 3.54589 2.0725 7.00389 2.3585 10.9646Z"
+                          stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>4 ночи</span>
+                    </div>
                   </div>
                 </div>
                 <a href="" class="card__link button">Подробнее</a>
@@ -1204,12 +1224,12 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231108115858"></script>
-<script src="js/jquery.maskedinput.js?_v=20231108115858"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231108115858"></script>
-<script src="js/fancybox.umd.js?_v=20231108115858"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231108115858"></script>
-<script src="js/app.js?_v=20231108115858"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231108151648"></script>
+<script src="js/jquery.maskedinput.js?_v=20231108151648"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231108151648"></script>
+<script src="js/fancybox.umd.js?_v=20231108151648"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231108151648"></script>
+<script src="js/app.js?_v=20231108151648"></script>
 
 </body>
 

@@ -879,8 +879,8 @@ h4 {
   height: 2.3vw;
   max-width: 82px;
   max-height: 46px;
-  min-width: 65px;
-  min-height: 35px;
+  min-width: 52px;
+  min-height: 30px;
 }
 
 .logo__txt {
@@ -957,6 +957,10 @@ h4 {
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
+}
+
+.nav__list {
+  font-size: 16px;
 }
 
 .nav__links {
@@ -1099,7 +1103,7 @@ h4 {
 }
 
 .section_pd {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 
 .decor {
@@ -1190,6 +1194,7 @@ h4 {
 }
 
 .promo {
+  display: block;
   width: 100%;
   height: 15vw;
   max-height: 290px;
@@ -1241,7 +1246,7 @@ h4 {
   width: 26px;
   background-image: linear-gradient(#848F96 33%, rgba(255, 255, 255, 0) 0%);
   background-position: 50%;
-  background-size: 1px 20px;
+  background-size: 1.3px 20px;
   background-repeat: repeat-y;
 }
 
@@ -1342,9 +1347,6 @@ h4 {
 }
 
 .card__person {
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgba(41, 45, 50, 0.08);
   color: #848F96;
   font-size: 14px;
 }
@@ -1357,9 +1359,8 @@ h4 {
 
 .card__mode {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 8px;
 }
 
 .card__time {
@@ -1371,6 +1372,11 @@ h4 {
 
 .card__link {
   width: 100%;
+}
+
+.card__col:first-child {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(41, 45, 50, 0.08);
 }
 
 .back {
@@ -1422,6 +1428,13 @@ h4 {
   z-index: -1;
 }
 
+.uly-dala__back img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .uly-dala .container {
   margin: auto 0;
 }
@@ -1436,6 +1449,7 @@ h4 {
 
 .uly-dala__title {
   position: relative;
+  display: block;
   width: -moz-max-content;
   width: max-content;
   height: 250px;
@@ -1452,6 +1466,10 @@ h4 {
   position: absolute;
   top: -10%;
   left: 69%;
+}
+
+.uly-dala__title span {
+  display: block;
 }
 
 .uly-dala__form {
@@ -1527,6 +1545,7 @@ h4 {
   display: none;
   align-items: center;
   gap: 10px;
+  height: 42px;
   padding: 15px 20px;
   border-radius: 20px;
   border: 1.6px solid #2569D7;
@@ -1636,6 +1655,7 @@ h4 {
   border-radius: 20px;
   border: 1.6px solid #2569D7;
   color: #2569D7;
+  background: transparent;
   font-size: 20px;
   line-height: 1;
   white-space: unset;
@@ -2165,6 +2185,10 @@ h4 {
 }
 
 @media (max-width: 1440px) {
+  html {
+    font: 400 16px/1.1 GTWalsheimPro;
+  }
+
   .container_lg {
     padding: 0 90px;
   }
@@ -2297,8 +2321,23 @@ h4 {
     font-size: 16px;
   }
 
+  .nav__list {
+    font-size: 14px;
+  }
+
   .nav__links {
     gap: 30px;
+  }
+
+  .language:after {
+    height: 6px;
+    width: 6px;
+  }
+
+  .language {
+    padding: 8px 12px;
+    padding-right: 24px;
+    font-size: 14px;
   }
 
   .footer__caption {
@@ -2308,6 +2347,10 @@ h4 {
 
   .footer__links a {
     font-size: 16px;
+  }
+
+  .section_pd {
+    padding-top: 20px;
   }
 
   .socials svg {
@@ -2375,18 +2418,12 @@ h4 {
     font-size: 14px;
   }
 
-  .card__person {
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-  }
-
   .card__date {
     margin-bottom: 12px;
     font-size: 14px;
   }
 
   .card__mode {
-    margin-bottom: 12px;
     font-size: 14px;
   }
 
@@ -2394,8 +2431,13 @@ h4 {
     padding: 12px;
   }
 
+  .card__col:first-child {
+    padding-bottom: 12px;
+  }
+
   .card {
     padding: 16px;
+    border-radius: 16px;
   }
 
   .back:hover {
@@ -2414,7 +2456,7 @@ h4 {
   }
 
   .uly-dala__title {
-    height: 230px;
+    height: 200px;
     font-size: 130px;
   }
 
@@ -2509,6 +2551,10 @@ h4 {
 
   .price_new span {
     font-size: 28px;
+  }
+
+  .price_new {
+    font-size: 20px;
   }
 
   .price__range .irs--flat .irs-handle {
@@ -2649,6 +2695,10 @@ h4 {
     padding: 0 40px;
   }
 
+  .main-menu__box {
+    gap: 20px;
+  }
+
   .main-menu {
     background: rgb(255, 255, 255);
     -webkit-backdrop-filter: unset;
@@ -2690,6 +2740,11 @@ h4 {
     transform: translateY(-100%);
     transition: all 0.2s ease-in-out;
     z-index: -1;
+  }
+
+  .uly-dala__title {
+    height: 180px;
+    font-size: 100px;
   }
 
   .tickets__container {
@@ -2742,6 +2797,12 @@ h4 {
   }
 }
 
+@media (max-width: 1100px) {
+  .nav__links {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 980px) {
   h1 {
     font: 700 26px/1 GTWalsheimPro;
@@ -2754,6 +2815,15 @@ h4 {
   .heading {
     padding: 12px 16px;
     font-size: 20px;
+  }
+
+  .card__wrap {
+    grid-template-columns: 35% 1fr;
+    padding-right: 15px;
+  }
+
+  .card {
+    grid-template-columns: 1fr 26%;
   }
 }
 
@@ -2778,6 +2848,25 @@ h4 {
     padding: 0 32px;
   }
 
+  .main-menu__box {
+    gap: 16px;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px 16px;
+  }
+
+  .nav__box:first-child {
+    border-right: none;
+  }
+
+  .nav__box {
+    flex: none;
+    padding: 0;
+  }
+
   .footer__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2798,13 +2887,27 @@ h4 {
     padding-right: 0;
     border-right: none;
   }
+
+  .card__wrap {
+    padding-right: 20px;
+    margin-right: 10px;
+  }
+
+  .card {
+    grid-template-columns: 1fr 30%;
+  }
+
+  .uly-dala__title {
+    height: 140px;
+    font-size: 80px;
+  }
+
+  .form__box {
+    flex: 1 1 25%;
+  }
 }
 
 @media (max-width: 767px) {
-  html {
-    font: 400 16px/1.1 GTWalsheimPro;
-  }
-
   h1 {
     font: 700 24px/1 GTWalsheimPro;
   }
@@ -2838,9 +2941,89 @@ h4 {
   }
 }
 
+@media (max-width: 700px) {
+  .card__wrap::before {
+    top: unset;
+    bottom: -16.6px;
+    right: 10%;
+    transform: rotate(90deg);
+  }
+
+  .card__wrap::after {
+    top: unset;
+    right: unset;
+    height: 1.3px;
+    width: 100%;
+    background-image: linear-gradient(to right, #848F96 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 20px 1.3px;
+    background-repeat: repeat-x;
+  }
+
+  .card__wrap {
+    padding-bottom: 25px;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .card__description {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+  }
+
+  .card__date {
+    margin-bottom: 8px;
+  }
+
+  .card__time svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card__link {
+    order: 1;
+  }
+
+  .card__col:first-child {
+    padding-bottom: 0;
+    padding-left: 15px;
+    border-bottom: 0;
+    border-left: 1px solid rgba(41, 45, 50, 0.08);
+    order: 1;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .price_old {
+    display: none;
+  }
+
+  .price_new span {
+    font-size: 24px;
+  }
+
+  .price_new {
+    font-size: 18px;
+  }
+
+  .form__button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .main-menu__socials {
     display: none;
+  }
+
+  .form__wrap {
+    padding: 12px;
+    border-radius: 20px;
   }
 }
 
@@ -2851,6 +3034,22 @@ h4 {
 
   .container {
     padding: 0 20px;
+  }
+
+  .logo__txt span:first-child {
+    color: #2569D7;
+    font-family: Pacifico;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .logo__txt span:last-child {
+    display: none;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    gap: 0;
   }
 
   .footer__container {
@@ -2878,5 +3077,116 @@ h4 {
 
   .col-flex {
     grid-template-columns: 1fr;
+  }
+
+  .card__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .card__description {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .card__person {
+    text-align: end;
+  }
+
+  .card__date {
+    font-size: 13px;
+  }
+
+  .card__mode {
+    font-size: 13px;
+  }
+
+  .card__time svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .card__time {
+    gap: 6px;
+  }
+
+  .card__link {
+    grid-column: span 2;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .uly-dala__back {
+    position: relative;
+    height: 250px;
+  }
+
+  .uly-dala .container {
+    padding: 0;
+  }
+
+  .uly-dala__title {
+    display: none;
+  }
+
+  .uly-dala {
+    height: auto;
+    padding-bottom: 0;
+    overflow: unset;
+  }
+
+  .tickets__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price_new {
+    justify-content: flex-end;
+  }
+
+  .form__checkbox {
+    overflow: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .form__wrap {
+    gap: 16px;
+    padding: 0;
+    border-radius: none;
+    background-color: transparent;
+    box-shadow: unset;
+  }
+
+  .form__box {
+    flex: 1 1 auto;
+  }
+
+  .form__button {
+    border-radius: 16px;
+  }
+
+  .form {
+    gap: 16px;
+    padding: 26px 18px;
+    border-radius: 34px;
+    border: 1px solid rgba(41, 45, 50, 0.04);
+    background: #FFF;
+    box-shadow: 0px 4.33333px 39px 0px rgba(99, 120, 154, 0.12), 0px 3.25px 6.5px 0px rgba(68, 82, 106, 0.03), 0px 11.91667px 11.91667px 0px rgba(73, 106, 158, 0.02), 0px 26px 15.16667px 0px rgba(73, 106, 158, 0.01), 0px 0px 8.66667px 0px rgba(160, 167, 178, 0.24) inset;
+  }
+
+  .checkbox-txt {
+    flex-direction: column;
+    white-space: nowrap;
+    border-radius: 17.333px;
+    background: rgba(94, 178, 21, 0.08);
+  }
+}
+
+@media (max-width: 390px) {
+  .price_new span {
+    font-size: 22px;
   }
 }
