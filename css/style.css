@@ -1897,6 +1897,7 @@ h4 {
   color: #292D32;
   font-size: 20px;
   font-weight: 500;
+  background: transparent;
 }
 
 .form__input input::-moz-placeholder {
@@ -3162,6 +3163,26 @@ h4 {
 
   .form__box {
     flex: 1 1 auto;
+    padding: 8px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(225, 228, 234, 0.5);
+    background: #F9F9F9;
+  }
+
+  .form__input label {
+    font-size: 15px;
+  }
+
+  .form__input input::-moz-placeholder {
+    font-size: 17px;
+  }
+
+  .form__input input::placeholder {
+    font-size: 17px;
+  }
+
+  .form__input input {
+    font-size: 17px;
   }
 
   .form__button {
