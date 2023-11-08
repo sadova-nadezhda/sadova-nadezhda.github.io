@@ -350,11 +350,11 @@ input[type=checkbox]:not(.switch) {
 input[type=checkbox]:not(.switch):after {
   width: 5px;
   height: 9px;
-  border: 1.3px solid var(--active-inner);
+  border: 2px solid var(--active-inner);
   border-top: 0;
   border-left: 0;
-  left: 7px;
-  top: 4px;
+  left: 9px;
+  top: 5px;
   transform: rotate(var(--r, 20deg));
 }
 
