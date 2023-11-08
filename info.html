@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Информационная</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231108101255">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231108101255" />
-  <link rel="stylesheet" href="css/style.css?_v=20231108101255" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231108115858">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231108115858" />
+  <link rel="stylesheet" href="css/style.css?_v=20231108115858" />
 </head>
 
 
@@ -207,7 +207,7 @@
     <svg class="decor" xmlns="http://www.w3.org/2000/svg" width="1439" height="136" viewBox="0 0 1439 136" fill="none">
       <path d="M-2 -129H1439V104.648C1040 154.5 394.5 136.5 -2 104.648V-129Z" fill="#2569D7" />
     </svg>
-    <section class="section_top">
+    <section class="section_top section_pd">
       <h1 class="heading">Корпоративное обслуживание</h1>
     </section>
     <section class="info">
@@ -249,9 +249,56 @@
             </div>
             <div class="info__feedback feedback">
               <h2 class="feedback__title title">Оставьте свои данные</h2>
-              <form action="" id="feedback-form" class="feedback__form">
-
-                <button class="form__button button">Отправить заявку</button>
+              <form action="" id="feedback-form" class="feedback-form">
+                <div class="feedback-form__row">
+                  <div class="feedback-form__label">
+                    <label for="name">Ваше имя</label>
+                    <div class="feedback-form__input feedback-form__name">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.95497 9.12513C8.17186 9.12513 6.72634 7.67962 6.72634 5.89651C6.72634 4.1134 8.17186 2.66797 9.95497 2.66797C11.7381 2.66797 13.1836 4.1134 13.1836 5.89651C13.1836 7.67962 11.7381 9.12513 9.95497 9.12513Z"
+                          stroke="#4E9F07" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M4.41468 16.9684C4.41468 14.4742 6.89502 12.4512 9.95734 12.4512C13.0197 12.4512 15.5 14.4742 15.5 16.9684"
+                          stroke="#4E9F07" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <input type="text" name="name" id="name" placeholder="Кайрат Алтынбеков">
+                    </div>
+                  </div>
+                  <div class="feedback-form__label">
+                    <label for="phone">Номер</label>
+                    <div class="feedback-form__phone">
+                      <span>+7</span>
+                      <input type="text" name="code" id="code" placeholder="777">
+                      <input type="text" name="phone" id="phone" placeholder="000-0000">
+                    </div>
+                  </div>
+                  <div class="feedback-form__label feedback-form__email">
+                    <label for="email">Эл. почта <span>(опционально)</span></label>
+                    <div class="feedback-form__input">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.7923 8.31317C17.6352 5.0661 14.5062 2.72639 10.8847 2.75015C6.29402 2.78026 2.58699 6.53309 2.63125 11.1412C2.67516 15.715 6.37035 19.3713 10.9444 19.3691C12.6192 19.3684 14.1781 18.8721 15.4825 18.019"
+                          stroke="#2569D7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M14.25 7.93052L14.25 11.7989C14.25 13.1796 15.3693 14.2988 16.7499 14.2988C18.1306 14.2988 19.2498 13.1796 19.2498 11.7989"
+                          stroke="#2569D7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M7.66602 11.0594C7.66602 9.25098 9.13209 7.78491 10.9406 7.78491C12.749 7.78491 14.2151 9.25098 14.2151 11.0594C14.2151 12.8679 12.749 14.334 10.9406 14.334C9.13209 14.334 7.66602 12.8679 7.66602 11.0594Z"
+                          stroke="#2569D7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                      <input type="email" name="email" id="email" placeholder="Введите адрес эл. почты">
+                    </div>
+                  </div>
+                </div>
+                <div class="feedback-form__message">
+                  <label for="message">Заявка на сотрудничество</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                </div>
+                <button class="feedback-form__button button">Отправить заявку</button>
               </form>
             </div>
           </div>
@@ -362,12 +409,12 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231108101255"></script>
-<script src="js/jquery.maskedinput.js?_v=20231108101255"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231108101255"></script>
-<script src="js/fancybox.umd.js?_v=20231108101255"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231108101255"></script>
-<script src="js/app.js?_v=20231108101255"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231108115858"></script>
+<script src="js/jquery.maskedinput.js?_v=20231108115858"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231108115858"></script>
+<script src="js/fancybox.umd.js?_v=20231108115858"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231108115858"></script>
+<script src="js/app.js?_v=20231108115858"></script>
 
 </body>
 

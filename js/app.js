@@ -117,6 +117,18 @@ window.addEventListener("load", function () {
         })
         .mask("+7(999)-999-99-99");
 
+    $('#code')
+        .click(function () {
+        $(this).setCursorPosition(0);
+        })
+        .mask("999");
+
+    $('#phone')
+        .click(function () {
+        $(this).setCursorPosition(0);
+        })
+        .mask("999-9999");
+
     // alert
     let alertt = document.querySelector(".alert--fixed");
     let alertClose = document.querySelectorAll(".alert--close");
