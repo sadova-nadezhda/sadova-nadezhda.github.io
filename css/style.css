@@ -1482,11 +1482,12 @@ h4 {
 
 .tickets__container {
   display: grid;
-  grid-template-columns: 28% 1fr;
+  grid-template-columns: 30% 1fr;
 }
 
 .tickets__content {
-  padding: 26px 42px;
+  padding: 24px;
+  padding-right: 120px;
 }
 
 .tickets__row {
@@ -1575,13 +1576,14 @@ h4 {
 /* filters */
 
 .filters {
-  padding: 26px 42px;
+  padding: 24px;
+  padding-left: 120px;
   font-size: 20px;
   background: #ECF0F5;
 }
 
 .filters__form {
-  padding: 42px 54px;
+  padding: 24px 32px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 2.6px 20.8px 0px rgba(167, 182, 207, 0.12), 0px 5.2px 10.4px 0px rgba(89, 99, 117, 0.04), 0px 2.6px 20.8px 0px rgba(167, 182, 207, 0.12), 0px 5.2px 10.4px 0px rgba(89, 99, 117, 0.2);
@@ -2157,7 +2159,7 @@ h4 {
   }
 
   .filters {
-    padding: 24px 38px;
+    padding-left: 100px;
     font-size: 18px;
   }
 
@@ -2469,7 +2471,7 @@ h4 {
   }
 
   .tickets__content {
-    padding: 20px 32px;
+    padding-right: 80px;
   }
 
   .tickets__caption {
@@ -2492,8 +2494,7 @@ h4 {
   }
 
   .filters__form {
-    padding: 32px 42px;
-    border-radius: 16px;
+    padding: 24px;
   }
 
   .filters__top {
@@ -2524,7 +2525,8 @@ h4 {
   }
 
   .filters {
-    padding: 20px 32px;
+    padding-left: 80px;
+    border-radius: 16px;
     font-size: 16px;
   }
 
@@ -2668,6 +2670,14 @@ h4 {
 @media (max-width: 1300px) {
   .secondary-menu__container {
     gap: 26px;
+  }
+
+  .tickets__content {
+    padding-right: 50px;
+  }
+
+  .filters {
+    padding-left: 50px;
   }
 }
 
