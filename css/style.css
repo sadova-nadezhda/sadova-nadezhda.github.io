@@ -2144,6 +2144,10 @@ h4 {
     font-size: 18px;
   }
 
+  .card__img {
+    height: 220px;
+  }
+
   .card__sales {
     padding: 12px;
     font-size: 18px;
@@ -2173,6 +2177,10 @@ h4 {
 
   .price_old {
     font-size: 18px;
+  }
+
+  .price_new span {
+    font-size: 32px;
   }
 
   .form__checkbox {
