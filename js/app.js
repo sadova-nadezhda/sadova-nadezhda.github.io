@@ -17,6 +17,8 @@ window.addEventListener("load", function () {
     }
     const button = document.querySelector(".main-menu__burger");
     const menu = document.querySelector(".header__nav");
+    const btnSearch = document.querySelector('.search-btn');
+    const boxSearch = document.querySelector('.search-box');
     // Обработчик события для кнопки
     button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
@@ -30,21 +32,32 @@ window.addEventListener("load", function () {
     });
     // Закрытие меню при клике вне меню
     document.addEventListener('click', (event) => {
-        if (event.target !== button && event.target !== menu) {
+        console.log(event.target)
+        if (event.target !== button && event.target !== menu && event.target !== btnSearch) {
             menu.classList.add('hidden');
             menu.style.maxHeight = '0';
             button.classList.remove('active');
         }
+        if (event.target === btnSearch) {
+            boxSearch.classList.toggle('active');
+        }
+        else if (!event.target.classList.contains('search-input')) {
+            boxSearch.classList.remove('active');
+        }
     });
+
     // Предотвращение закрытия меню при клике на само меню
     menu.addEventListener('click', (event) => {
         event.stopPropagation();
     });
 
+    // Section Top
+
     if(sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
     }
 
+    // form inputs
     const inputs = document.querySelectorAll('.form__input input');
     inputs.forEach( input => {
         input.addEventListener("focus", (e) => {
