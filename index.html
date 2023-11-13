@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231110134910">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231110134910" />
-  <link rel="stylesheet" href="css/style.css?_v=20231110134910" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231113095850">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231113095850" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231113095850">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231113095850" />
+  <link rel="stylesheet" href="css/style.css?_v=20231113095850" />
 </head>
 
 
 <body>
   <header class="header @@class">
   <div class="header__top main-menu">
-    <div class="container container_lg">
+    <div class="container_lg">
       <div class="main-menu__container">
         <div class="main-menu__box">
           <div class="main-menu__burger">
@@ -439,6 +441,37 @@
                   <label for="">Куда?</label>
                   <input type="text" placeholder="Весь Казахстан">
                 </div>
+                <div class="form__select select-popup">
+                  <ul class="select-popup__list">
+                    <li class="select-popup__dis">Выберите город</li>
+                    <li class="select-popup__item">
+                      <span class="select-popup__type">Отели</span>
+                      <ul>
+                        <li>
+                          <span>Отель, Каспий</span>
+                          <span>Алматы, Алматинская область</span>
+                        </li>
+                        <li>
+                          <span>Отель, Каспий</span>
+                          <span>Алматы, Алматинская область</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="select-popup__item">
+                      <span class="select-popup__type">Лагерь</span>
+                      <ul>
+                        <li>
+                          <span>Отель, Каспий</span>
+                          <span>Алматы, Алматинская область</span>
+                        </li>
+                        <li>
+                          <span>Отель, Каспий</span>
+                          <span>Алматы, Алматинская область</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="form__box">
                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +491,7 @@
                 </svg>
                 <div class="form__input">
                   <label for="">Когда?</label>
-                  <input type="text" placeholder="Любые даты">
+                  <input type="text" id="date" placeholder="Любые даты">
                 </div>
               </div>
               <div class="form__box">
@@ -473,6 +506,41 @@
                 <div class="form__input">
                   <label for="">Туристы</label>
                   <input type="text" placeholder="2 взр.">
+                </div>
+                <div class="form__counter tourists">
+                  <h5 class="tourists__caption">Количество туристов</h5>
+                  <div class="tourists__row">
+                    <div class="tourists__gender">Взрослых</div>
+                    <div id="counter" class="tourists__counter counter" data-min="1" data-max="10">
+                      <div class="counter__button decrease">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                      <span>1</span>
+                      <div class="counter__button increase">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M8 12.5V4.5" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tourists__links">
+                    <a class="tourists__link tourists__add">
+                      <span>Добавить ребенка</span>
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66504 8.83301H12.665" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M8.66504 12.833V4.83301" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                    <a class="tourists__link tourists__save">Сохранить</a>
+                  </div>
                 </div>
               </div>
               <button type="submit" class="form__button button">Найти</button>
@@ -1124,7 +1192,7 @@
   </main>
 
   <footer class="footer">
-  <div class="container container_lg">
+  <div class="container_lg">
     <div class="footer__container">
       <div class="footer__col">
         <h4 class="footer__caption">Туристам</h4>
@@ -1226,12 +1294,14 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231110134910"></script>
-<script src="js/jquery.maskedinput.js?_v=20231110134910"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231110134910"></script>
-<script src="js/fancybox.umd.js?_v=20231110134910"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231110134910"></script>
-<script src="js/app.js?_v=20231110134910"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231113095850"></script>
+<script src="js/jquery.maskedinput.js?_v=20231113095850"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231113095850"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231113095850"></script>
+<script src="js/air-datepicker.js?_v=20231113095850"></script>
+<script src="js/fancybox.umd.js?_v=20231113095850"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231113095850"></script>
+<script src="js/app.js?_v=20231113095850"></script>
 
 </body>
 

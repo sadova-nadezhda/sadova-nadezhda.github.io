@@ -32,7 +32,6 @@ window.addEventListener("load", function () {
     });
     // Закрытие меню при клике вне меню
     document.addEventListener('click', (event) => {
-        console.log(event.target)
         if (event.target !== button && event.target !== menu && event.target !== btnSearch) {
             menu.classList.add('hidden');
             menu.style.maxHeight = '0';
@@ -108,6 +107,104 @@ window.addEventListener("load", function () {
         })
     }
 
+    //sliders
+    let swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 16,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+    let swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        thumbs: {
+            swiper: swiper,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    let btnToggle = document.querySelectorAll('.layout__btn');
+    let boxInfo = document.querySelector('.content');
+
+    btnToggle.forEach( btn => {
+        btn.addEventListener('click', (e)=> {
+            let target = e.target;
+            if(target.classList.contains('show')) {
+                console.log('show')
+                target.style.display = 'none'
+                boxInfo.classList.remove('active')
+                target.nextSibling.style.display = 'block'
+            }
+            else if(target.classList.contains('hide')) {
+                console.log('hide')
+                target.style.display = 'none'
+                boxInfo.classList.add('active')
+                target.previousSibling.style.display = 'block'
+            }
+
+        })
+    })
+
+    new AirDatepicker('#date', {
+        range: true,
+        multipleDatesSeparator: ' - ',
+        buttons: [
+            {
+                content(dp) {
+                    return 'Любые даты'
+                },
+                onClick(dp) {
+
+                }
+            }
+        ]
+    });
+
+    let count = 0;
+    let counter = document.querySelector('#counter');
+    if (counter) {
+        const minCount = counter.getAttribute('data-min');
+        const maxCount = counter.getAttribute('data-max');
+    }
+
+
+    function updateCounter() {
+      document.getElementById('counter').innerText = count;
+    }
+
+    function increment() {
+      if (count < maxCount) {
+        count++;
+        updateCounter();
+      }
+    }
+
+    function decrement() {
+      if (count > minCount) {
+        count--;
+        updateCounter();
+      }
+    }
+
+    document.querySelector('body').addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains('decrease')) {
+            decrement()
+        }
+        if (target.classList.contains('increase')) {
+            increment()
+        }
+    });
+
+
     // Form
     function submitForm() {
         $("#form_loader").show();
@@ -130,17 +227,23 @@ window.addEventListener("load", function () {
         })
         .mask("+7(999)-999-99-99");
 
-    $('#code')
+    $('input[name="code"]')
         .click(function () {
         $(this).setCursorPosition(0);
         })
         .mask("999");
 
-    $('#phone')
+    $('input[name="phone"]')
         .click(function () {
         $(this).setCursorPosition(0);
         })
         .mask("999-9999");
+
+    $('input[name="date"]')
+        .click(function () {
+        $(this).setCursorPosition(0);
+        })
+        .mask("99 / 99 / 9999");
 
     // alert
     let alertt = document.querySelector(".alert--fixed");
