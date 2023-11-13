@@ -168,7 +168,9 @@ window.addEventListener("load", function () {
         ]
     });
 
-    new AirDatepicker('#date');
+    new AirDatepicker('#date', {
+        dateFormat: 'dd / MM / yyyy',
+    });
 
     let count = 0;
     let counter = document.querySelector('#counter');
@@ -241,11 +243,11 @@ window.addEventListener("load", function () {
         })
         .mask("999-9999");
 
-    $('input[name="date"]')
-        .click(function () {
-        $(this).setCursorPosition(0);
-        })
-        .mask("99 / 99 / 9999");
+    // $('input[name="date"]')
+    //     .click(function () {
+    //     $(this).setCursorPosition(0);
+    //     })
+    //     .mask("99 / 99 / 9999");
 
     // alert
     let alertt = document.querySelector(".alert--fixed");
