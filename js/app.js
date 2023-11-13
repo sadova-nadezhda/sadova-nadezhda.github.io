@@ -153,7 +153,7 @@ window.addEventListener("load", function () {
         })
     })
 
-    new AirDatepicker('#date', {
+    new AirDatepicker('#index-date', {
         range: true,
         multipleDatesSeparator: ' - ',
         buttons: [
