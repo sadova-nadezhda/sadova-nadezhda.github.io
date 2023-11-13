@@ -168,6 +168,8 @@ window.addEventListener("load", function () {
         ]
     });
 
+    new AirDatepicker('#date');
+
     let count = 0;
     let counter = document.querySelector('#counter');
     if (counter) {
