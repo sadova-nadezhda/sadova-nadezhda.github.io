@@ -3767,6 +3767,7 @@ h6 {
 
   .application__aside {
     padding: 28px 18px;
+    border-radius: 40px;
   }
 
   .application__caption {
@@ -4343,6 +4344,7 @@ h6 {
 
   .application__aside {
     padding: 24px 16px;
+    border-radius: 32px;
   }
 
   .application__caption {
@@ -5388,6 +5390,10 @@ h6 {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+  }
+
+  .application__aside {
+    border-radius: 20px;
   }
 
   .application__caption {
