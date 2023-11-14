@@ -272,6 +272,26 @@ window.addEventListener("load", function () {
         })
         .mask("999-9999");
 
+        let popup = document.querySelector("#popup");
+        if (popup) {
+            let popupBtn = document.querySelectorAll(".popup-btn");
+            $(popupBtn).each( function() {
+                $(this).on('click', () => {
+                $(popup).fadeIn(400);
+                })
+            });
+            $(popup).click(function(e) {
+                const target = e.target;
+                if (
+                $(target).hasClass("popup_close") ||
+                $(target).hasClass("popup")
+                ) {
+                $(popup).fadeOut(400);
+                }
+            });
+        }
+
+
     // $('input[name="date"]')
     //     .click(function () {
     //     $(this).setCursorPosition(0);

@@ -3529,6 +3529,85 @@ h6 {
   color: #fff;
 }
 
+/* popup application */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 12;
+}
+
+.popup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px 16px;
+  padding-top: 60px;
+  width: 40vw;
+  border-radius: 16px;
+  background: #FFF;
+}
+
+.popup_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.popup_close svg {
+  pointer-events: none;
+}
+
+.popup_close:hover {
+  cursor: pointer;
+}
+
+.popup__top {
+  margin-bottom: 20px;
+}
+
+.popup__caption {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.popup__txt {
+  text-align: center;
+}
+
+.popup__form {
+  width: 100%;
+}
+
+.popup input {
+  width: 100%;
+}
+
+.popup .feedback-form__name {
+  max-width: unset;
+}
+
+.popup textarea {
+  height: 80px;
+}
+
 /* customs */
 
 .checkbox-txt {
@@ -5087,6 +5166,12 @@ h6 {
   .booking__cards {
     margin-bottom: 0;
   }
+
+  .popup__container {
+    width: 85vw;
+    padding: 20px;
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -5519,6 +5604,18 @@ h6 {
 
   .feedback-form__date {
     flex: 1 1 auto;
+  }
+
+  .popup__caption {
+    font-size: 20px;
+  }
+
+  .popup__txt {
+    font-size: 16px;
+  }
+
+  .popup textarea {
+    height: 80px;
   }
 }
 
