@@ -212,12 +212,50 @@
 </header>
 
   <main class="main main_gr">
-    <section class="application section_top">
+    <svg class="decor" xmlns="http://www.w3.org/2000/svg" width="1439" height="136" viewBox="0 0 1439 136" fill="none">
+      <path d="M-2 -129H1439V104.648C1040 154.5 394.5 136.5 -2 104.648V-129Z" fill="#2569D7" />
+    </svg>
+    <section class="section_top section_pd">
+      <h1 class="heading">Kids Go Free!</h1>
+    </section>
+    <section class="info">
       <div class="container_lg">
-        <div class="application__container">
-          <div class="application__wrapper">
-            <h1 class="application__title">Оформление заявки</h1>
-            <div class="application__feedback feedback">
+        <div class="info__container">
+          <a href="" class="back">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.54492 9.95906L5.91492 8.32906L4.28492 6.69906C3.5 5.99902 3.58496 5.99902 4.28492 5.29906L7.54492 2.03906"
+                stroke="#2569D7" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span>Назад</span>
+          </a>
+          <div class="info__wrapper">
+            <div class="info__content description">
+              <h3>Путешествуйте Семьей и Экономьте!</h3>
+              <p>У нас есть прекрасные новости для всех семей, мечтающих о приключениях вместе! Программа "Kids Go Free"
+                предоставляет уникальную возможность детям путешествовать бесплатно или существенно сэкономить на
+                стоимости путешествий, при условии сопровождения взрослыми. Мы, в компании Uly Dala, гордимся тем, что
+                мы являемся одним из лицензированных туроператоров, участвующих в этой удивительной программе.</p>
+              <br>
+              <h3>Что такое "Kids Go Free"?</h3>
+              <p>Программа "Kids Go Free" предоставляет семьям возможность сделать свои путешествия еще более доступными
+                и незабываемыми. Это означает, что ваши дети могут отправиться в путешествие вместе с вами, не внося
+                никакой значительной нагрузки на бюджет.</p>
+              <br>
+              <h3>Порядок участия</h3>
+              <p>Оставьте свои контактные данные, количество детей, направление, ког, чтобы мы могли сделать вам
+                рассчет.</p>
+              <ul>
+                <li>Бронирование и продажа авиабилетов;</li>
+                <li>Бронирование гостиниц;</li>
+                <li>Индивидуальные, групповые трансферы;</li>
+                <li>Организация поощрительных поездок для сотрудников и клиентов с возможностью предоставления
+                  «Туристкого подарочного сертификата» любого номинала;</li>
+                <li>Медицинское страхование выезжающих за рубеж;</li>
+              </ul>
+            </div>
+            <div class="info__feedback feedback">
               <h2 class="feedback__title title">Оставьте свои данные</h2>
               <form action="" id="feedback-form" class="feedback-form">
                 <div class="feedback-form__row">
@@ -233,6 +271,14 @@
                           stroke="#4E9F07" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                       <input type="text" name="name" id="name" placeholder="Кайрат Алтынбеков">
+                    </div>
+                  </div>
+                  <div class="feedback-form__label">
+                    <label for="phone">Номер</label>
+                    <div class="feedback-form__phone">
+                      <span>+7</span>
+                      <input type="text" name="code" id="code" placeholder="777">
+                      <input type="text" name="phone" id="phone" placeholder="000-0000">
                     </div>
                   </div>
                   <div class="feedback-form__label feedback-form__email">
@@ -255,240 +301,40 @@
                       <input type="email" name="email" id="email" placeholder="Введите адрес эл. почты">
                     </div>
                   </div>
-                  <div class="feedback-form__label">
-                    <label for="date">Дата рождения</label>
-                    <div class="feedback-form__input feedback-form__date">
-                      <input type="text" name="date" id="date" class="date-pick" placeholder="28 / 01 / 2003">
-                    </div>
-                  </div>
                 </div>
                 <div class="feedback-form__row">
                   <div class="feedback-form__label">
-                    <label for="phone">Номер</label>
-                    <div class="feedback-form__phone">
-                      <span>+7</span>
-                      <input type="text" name="code" id="code1" placeholder="777">
-                      <input type="text" name="phone" id="phone1" placeholder="000-0000">
+                    <label for="amount">Количество детей</label>
+                    <div class="feedback-form__input feedback-form__name">
+                      <input type="text" name="amount" id="amount" placeholder="2">
                     </div>
                   </div>
+                  <div class="feedback-form__label feedback-form__direction">
+                    <label for="direction">Выберите направление</label>
+                    <select name="direction" id="direction" class="feedback-form__select nice-select">
+                      <option value="">Направление 1</option>
+                      <option value="">Направление 2</option>
+                      <option value="">Направление 3</option>
+                    </select>
+                  </div>
                   <div class="feedback-form__label">
-                    <label for="phone">Второй номер <span>(опционально)</span></label>
-                    <div class="feedback-form__phone">
-                      <span>+7</span>
-                      <input type="text" name="code" id="code2" placeholder="777">
-                      <input type="text" name="phone" id="phone2" placeholder="000-0000">
+                    <label for="date">Дата</label>
+                    <div class="feedback-form__inputs">
+                      <div class="feedback-form__input feedback-form__date">
+                        <input type="text" name="date" id="date-start" class="date-pick" placeholder="Начало">
+                      </div>
+                      <div class="feedback-form__input feedback-form__date">
+                        <input type="text" name="date" id="date-end" class="date-pick" placeholder="Конец">
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="feedback-form__message feedback-form__label">
-                  <label for="message">Особые пожелания</label>
-                  <textarea name="message" id="message" cols="30" rows="10"
-                    placeholder="Наш менеджер позвонит вам, чтобы добавить это в ваш заказ"></textarea>
+                  <label for="message">Заявка на сотрудничество</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите текст"></textarea>
                 </div>
-                <div class="feedback-form__booking booking">
-                  <h3 class="booking__title">Про заказ</h3>
-                  <div class="booking__txt">Стоимость и наличие мест показана на момент запроса.</div>
-                  <div class="booking__cards">
-                    <div class="booking__card room">
-                      <div class="room__info">
-                        <div class="room__img"><img src="img/room-1.png" alt=""></div>
-                        <div class="room__desc">
-                          <h5 class="room__title">Люкс 4-х местный</h5>
-                          <div class="room__feature">
-                            <div class="room__inline">
-                              <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M4.11491 9.40137C4.11491 9.00648 3.79479 8.68637 3.39991 8.68637C3.00502 8.68637 2.68491 9.00648 2.6849 9.40137L4.11491 9.40137ZM2.6849 22.8274C2.6849 23.2223 3.00502 23.5424 3.3999 23.5424C3.79479 23.5424 4.1149 23.2223 4.1149 22.8274L2.6849 22.8274ZM3.4 12.056C3.00511 12.056 2.685 12.3761 2.685 12.771C2.685 13.1659 3.00511 13.486 3.4 13.486V12.056ZM9.38925 16.1231C9.38925 16.518 9.70936 16.8381 10.1042 16.8381C10.4991 16.8381 10.8192 16.518 10.8192 16.1231H9.38925ZM3.50667 16.2474V15.5324H2.79167V16.2474H3.50667ZM3.50667 20.0834H2.79167V20.7984H3.50667V20.0834ZM2.6849 9.40137L2.6849 22.8274L4.1149 22.8274L4.11491 9.40137L2.6849 9.40137ZM3.4 13.486H6.75214V12.056H3.4V13.486ZM6.75214 13.486C8.20857 13.486 9.38925 14.6666 9.38925 16.1231H10.8192C10.8192 13.8769 8.99835 12.056 6.75214 12.056V13.486ZM17.1724 15.5324H3.50667V16.9624H17.1724V15.5324ZM2.79167 16.2474V20.0834H4.22167V16.2474H2.79167ZM3.50667 20.7984H21.0084V19.3684H3.50667V20.7984ZM20.2934 20.0834V22.9604H21.7234V20.0834H20.2934ZM17.1724 16.9624C18.8961 16.9624 20.2934 18.3597 20.2934 20.0834H21.7234C21.7234 17.5699 19.6859 15.5324 17.1724 15.5324V16.9624Z"
-                                  fill="#2569D7" />
-                              </svg>
-                              <span>2 кровати</span>
-                            </div>
-                            <div class="room__inline">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M1.79145 19.0837H21.946C21.9475 19.086 21.9492 19.0892 21.9508 19.0933C21.9539 19.1012 21.956 19.111 21.956 19.1221C21.956 19.1332 21.9539 19.1431 21.9508 19.151C21.9492 19.155 21.9475 19.1582 21.946 19.1605H1.79145C1.78996 19.1582 1.78826 19.155 1.78667 19.151C1.78358 19.1431 1.78146 19.1332 1.78146 19.1221C1.78146 19.111 1.78358 19.1012 1.78667 19.0933C1.78826 19.0892 1.78996 19.086 1.79145 19.0837Z"
-                                  stroke="#2569D7" stroke-width="1.56" />
-                                <path
-                                  d="M9.89187 10.5786C9.89055 10.5792 9.88905 10.5797 9.88738 10.5802L9.88281 10.5571L9.89187 10.5786Z"
-                                  stroke="#2569D7" stroke-width="1.56" />
-                                <path
-                                  d="M20.8543 15.6421H20.8834H21.5725H22.5463C22.5478 15.6445 22.5495 15.6476 22.5511 15.6517C22.5542 15.6596 22.5563 15.6695 22.5563 15.6805C22.5563 15.6916 22.5542 15.7015 22.5511 15.7094C22.5495 15.7134 22.5478 15.7166 22.5463 15.7189H1.19038C1.18888 15.7166 1.18719 15.7134 1.18559 15.7094C1.1825 15.7015 1.18039 15.6916 1.18039 15.6805C1.18039 15.6695 1.1825 15.6596 1.18559 15.6517C1.18719 15.6476 1.18888 15.6445 1.19037 15.6421H2.16408H2.85298H2.88222H3.71597H20.0204H20.8543ZM20.0076 11.9671C18.5772 8.96769 15.4585 6.8956 11.8682 6.8956C8.28686 6.8956 5.1748 8.95737 3.73958 11.9447C5.0827 9.0938 7.92601 7.05843 11.2722 6.84061L11.8683 6.80181L12.4643 6.84061C15.8194 7.059 18.6688 9.10432 20.0076 11.9671ZM12.4631 4.46701C12.4654 4.47377 12.4677 4.48058 12.4698 4.48745C12.4761 4.50734 12.4816 4.52769 12.4863 4.54845C12.4999 4.60789 12.5065 4.66838 12.5063 4.72854C12.5063 4.76918 12.5031 4.80967 12.497 4.84958C12.489 4.90129 12.476 4.95203 12.4581 5.00086C12.4298 5.06072 12.3918 5.11724 12.3439 5.16786C12.3405 5.17148 12.337 5.17507 12.3335 5.17861C12.2445 5.26851 12.1281 5.3331 11.9979 5.35926C11.956 5.3677 11.9126 5.37214 11.8682 5.37214C11.7792 5.37214 11.6931 5.35416 11.6144 5.32117C11.5702 5.30267 11.5283 5.27945 11.4896 5.25203C11.4219 5.20423 11.3663 5.14564 11.3233 5.08072C11.3065 5.05531 11.2917 5.02893 11.2788 5.00185C11.2736 4.98781 11.2689 4.97362 11.2645 4.9593C11.242 4.885 11.2304 4.80705 11.2302 4.72854C11.2301 4.69003 11.2328 4.65138 11.2383 4.61296C11.2414 4.59136 11.2454 4.56984 11.2502 4.54845C11.2567 4.52013 11.2646 4.49257 11.2739 4.46588C11.3026 4.40238 11.3422 4.34246 11.3925 4.28921C11.3959 4.28559 11.3994 4.28201 11.4029 4.27846C11.4896 4.1909 11.6031 4.12631 11.7327 4.09904C11.7776 4.08958 11.823 4.08493 11.8682 4.08493C11.959 4.08494 12.0489 4.10375 12.132 4.14015C12.1687 4.15626 12.2032 4.1754 12.2354 4.19709C12.3114 4.24846 12.374 4.31415 12.4205 4.38783C12.4367 4.41345 12.4509 4.43992 12.4631 4.46701ZM11.8682 4.59214C11.8888 4.59214 11.909 4.59736 11.9272 4.60728C11.9316 4.60963 11.9358 4.61225 11.9398 4.61512C11.9576 4.62772 11.9722 4.64477 11.9821 4.66468C11.984 4.66847 11.9858 4.67236 11.9873 4.67634C11.9938 4.69297 11.9971 4.71071 11.9971 4.72854C11.9971 4.73743 11.9963 4.74634 11.9946 4.75515C11.9906 4.77657 11.9818 4.79657 11.969 4.81354C11.966 4.81753 11.9628 4.82135 11.9594 4.82499C11.9413 4.84406 11.9184 4.85705 11.8934 4.86232C11.885 4.86407 11.8766 4.86494 11.8682 4.86494C11.8514 4.86494 11.8346 4.86144 11.8189 4.85456C11.8068 4.84925 11.7956 4.84205 11.7856 4.83326C11.7762 4.82495 11.7679 4.81522 11.761 4.80432C11.7545 4.79392 11.7493 4.78269 11.7457 4.77093C11.7415 4.75732 11.7393 4.74302 11.7393 4.72854C11.7393 4.72143 11.7398 4.71437 11.7408 4.70743C11.7443 4.6841 11.7534 4.66206 11.7674 4.64354C11.7704 4.63955 11.7736 4.63573 11.777 4.63209C11.7938 4.61436 11.8147 4.60202 11.8373 4.59611C11.8474 4.59349 11.8577 4.59214 11.8682 4.59214Z"
-                                  stroke="#2569D7" stroke-width="1.56" />
-                              </svg>
-                              <span>Завтрак включен</span>
-                            </div>
-                          </div>
-                          <ul class="room__tabs">
-                            <li>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.0376 7.80141L6.8771 9.64091L10.5626 5.96191" stroke="#4E9F07"
-                                  stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                              <span>Ванна</span>
-                            </li>
-                            <li>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.0376 7.80141L6.8771 9.64091L10.5626 5.96191" stroke="#4E9F07"
-                                  stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                              <span>Балкон</span>
-                            </li>
-                            <li>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.0376 7.80141L6.8771 9.64091L10.5626 5.96191" stroke="#4E9F07"
-                                  stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                              <span>Мини-бар</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="room__grade">
-                        <div class="room__col">
-                          <div>Цена номера</div>
-                          <span>10 000 тг/ ночь</span>
-                        </div>
-                        <div class="room__col">
-                          <div>Итого (2 взр. и 2 детс.) с 23 дек. по 28 дек.</div>
-                          <div class="room__days">
-                            <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M2.15953 10.9636C2.47153 15.4269 6.25886 19.0582 10.7915 19.2576C13.9895 19.3962 16.8495 17.9056 18.5655 15.5569C19.2762 14.5949 18.8949 13.9536 17.7075 14.1702C17.1269 14.2742 16.5289 14.3176 15.9049 14.2916C11.6669 14.1182 8.20019 10.5736 8.18286 6.38758C8.17419 5.26091 8.40819 4.19491 8.83286 3.22424C9.30086 2.14958 8.73753 1.63824 7.65419 2.09758C4.22219 3.54491 1.87353 7.00291 2.15953 10.9636Z"
-                                stroke="#2569D7" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <span>5 ночей</span>
-                          </div>
-                          <div class="room__price">100 000 тг</div>
-                        </div>
-                      </div>
-                      <div class="room__links">
-                        <a class="room__link" href="">
-                          <span>Подробнее</span>
-                          <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M14.052 10.4982C14.052 12.2142 12.6653 13.6008 10.9493 13.6008C9.23335 13.6008 7.84668 12.2142 7.84668 10.4982C7.84668 8.78217 9.23335 7.39551 10.9493 7.39551C12.6653 7.39551 14.052 8.78217 14.052 10.4982Z"
-                              stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                              d="M10.9491 17.6666C14.0084 17.6666 16.8598 15.8639 18.8444 12.7439C19.6244 11.5219 19.6244 9.46791 18.8444 8.24591C16.8598 5.12591 14.0084 3.32324 10.9491 3.32324C7.88975 3.32324 5.03842 5.12591 3.05375 8.24591C2.27375 9.46791 2.27375 11.5219 3.05375 12.7439C5.03842 15.8639 7.88975 17.6666 10.9491 17.6666Z"
-                              stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                        <a class="room__state active">Выбрано</a>
-                      </div>
-                    </div>
-                    <div class="booking__card tour">
-                      <div class="tour__info">
-                        <div class="tour__img"><img src="img/tour-1.png" alt=""></div>
-                        <div class="tour__desc">
-                          <h5 class="tour__title">Название экскурсии</h5>
-                          <div class="tour__txt">Описание</div>
-                        </div>
-                      </div>
-                      <div class="tour__grade">
-                        <div class="tour__col">
-                          <div>Цена за 1 человека</div>
-                          <span>10 000 </span>
-                        </div>
-                        <div class="tour__col">
-                          <div>Итого</div>
-                          <div class="tour__price">120 000 Т</div>
-                        </div>
-                      </div>
-                      <div class="tour__links">
-                        <a class="tour__link" href="">
-                          <span>Подробнее</span>
-                          <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M14.052 10.4982C14.052 12.2142 12.6653 13.6008 10.9493 13.6008C9.23335 13.6008 7.84668 12.2142 7.84668 10.4982C7.84668 8.78217 9.23335 7.39551 10.9493 7.39551C12.6653 7.39551 14.052 8.78217 14.052 10.4982Z"
-                              stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                              d="M10.9491 17.6666C14.0084 17.6666 16.8598 15.8639 18.8444 12.7439C19.6244 11.5219 19.6244 9.46791 18.8444 8.24591C16.8598 5.12591 14.0084 3.32324 10.9491 3.32324C7.88975 3.32324 5.03842 5.12591 3.05375 8.24591C2.27375 9.46791 2.27375 11.5219 3.05375 12.7439C5.03842 15.8639 7.88975 17.6666 10.9491 17.6666Z"
-                              stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                        <a class="tour__state active">Добавлено!</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="feedback-form__bottom">
-                  <button class="feedback-form__button button">Отправить заявку</button>
-                  <div>Все ваши данные под сохранностью благодаря нашей <a href="">политики обработки персональных
-                      данных</a> и <a href="">пользовательскому соглашению</a></div>
-                </div>
+                <button class="feedback-form__button button">Отправить заявку</button>
               </form>
-            </div>
-          </div>
-          <div class="application__aside">
-            <h2 class="application__caption">Как мне купить тур?</h2>
-            <ul class="application__list">
-              <li>
-                <h5>Заявка</h5>
-                <span>Выберите тур, который вам нравится и оформите заявку</span>
-              </li>
-              <li>
-                <h5>Когда мне ответят?</h5>
-                <span>Вместе с ответом по наличию мест Вы получите анкету для заполнения данных по участникам.</span>
-              </li>
-              <li>
-                <h5>Бронирование</h5>
-                <span>На основании присланной Вами анкеты с данными по участникам осуществляется бронирование мест - вам
-                  высылается подтверждение бронирования, договор и счет.</span>
-              </li>
-              <li>
-                <h5>Кто меня встретит?</h5>
-                <span>На основании присланной Вами</span>
-              </li>
-              <li>
-                <h5>Оплата</h5>
-                <span>В период от 1 до 5 календарных дней после подтверждения заявки внести предоплату. Точные сроки и
-                  условия оплаты сообщит менеджер тура. Внести полную оплату по договору обычно нужно не позднее чем за
-                  2 недели до начала поездки.</span>
-              </li>
-              <li>
-                <h5>Наслаждайтесь отдыхом!</h5>
-                <span>Мы будем с вами на связи и ответим на вопросы</span>
-              </li>
-            </ul>
-            <div class="application__benefits">
-              <div class="application__benefit">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.2002 22C17.7002 22 22.2002 17.5 22.2002 12C22.2002 6.5 17.7002 2 12.2002 2C6.7002 2 2.2002 6.5 2.2002 12C2.2002 17.5 6.7002 22 12.2002 22Z"
-                    stroke="#2569D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M7.9502 11.9999L10.7802 14.8299L16.4502 9.16992" stroke="#2569D7" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>У нас самые выгодные цены!</span>
-              </div>
-              <div class="application__benefit">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.2002 22C17.7002 22 22.2002 17.5 22.2002 12C22.2002 6.5 17.7002 2 12.2002 2C6.7002 2 2.2002 6.5 2.2002 12C2.2002 17.5 6.7002 22 12.2002 22Z"
-                    stroke="#2569D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M7.9502 11.9999L10.7802 14.8299L16.4502 9.16992" stroke="#2569D7" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Официальный турагент</span>
-              </div>
-              <div class="application__benefit">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.2002 22C17.7002 22 22.2002 17.5 22.2002 12C22.2002 6.5 17.7002 2 12.2002 2C6.7002 2 2.2002 6.5 2.2002 12C2.2002 17.5 6.7002 22 12.2002 22Z"
-                    stroke="#2569D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M7.9502 11.9999L10.7802 14.8299L16.4502 9.16992" stroke="#2569D7" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Делаем все с душой!</span>
-              </div>
             </div>
           </div>
         </div>

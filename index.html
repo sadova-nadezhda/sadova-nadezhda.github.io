@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231113103933">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231113103933" />
-  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231113103933">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231113103933" />
-  <link rel="stylesheet" href="css/style.css?_v=20231113103933" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231114134243">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231114134243" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231114134243" rel="stylesheet" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231114134243">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231114134243" />
+  <link rel="stylesheet" href="css/style.css?_v=20231114134243" />
 </head>
 
 
@@ -25,7 +26,7 @@
             <span></span>
             <span></span>
           </div>
-          <!-- <select class="main-menu__lang language">
+          <!-- <select class="main-menu__lang language nice-select">
             <option value="ru">RU</option>
             <option value="kz">KZ</option>
             <option value="en">EN</option>
@@ -439,9 +440,32 @@
                 </svg>
                 <div class="form__input">
                   <label for="">Куда?</label>
-                  <input type="text" placeholder="Весь Казахстан">
+                  <!-- <input type="text" placeholder="Весь Казахстан"> -->
+                  <select class="js-multiple js-input" name="" data-placeholder="Весь Казахстан">
+                    <option></option>
+                    <optgroup label="Отели">
+                      <option>
+                        <span>Отель Каспи</span>
+                        <span>Астана, Акмолинская область</span>
+                      </option>
+                      <option>
+                        <span>Отель Каспи</span>
+                        <span>Астана, Акмолинская область</span>
+                      </option>
+                    </optgroup>
+                    <optgroup label="Лагерь">
+                      <option>
+                        <span>Каспийский</span>
+                        <span>Боровое, Акмолинская область</span>
+                      </option>
+                      <option>
+                        <span>Каспийский</span>
+                        <span>Боровое, Акмолинская область</span>
+                      </option>
+                    </optgroup>
+                  </select>
                 </div>
-                <div class="form__select select-popup">
+                <!-- <div class="form__select select-popup">
                   <ul class="select-popup__list">
                     <li class="select-popup__dis">Выберите город</li>
                     <li class="select-popup__item">
@@ -471,7 +495,7 @@
                       </ul>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <div class="form__box">
                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -491,7 +515,7 @@
                 </svg>
                 <div class="form__input">
                   <label for="">Когда?</label>
-                  <input type="text" id="index-date" placeholder="Любые даты">
+                  <input type="text" id="index-date" placeholder="Любые даты" class="js-input">
                 </div>
               </div>
               <div class="form__box">
@@ -505,7 +529,7 @@
                 </svg>
                 <div class="form__input">
                   <label for="">Туристы</label>
-                  <input type="text" placeholder="2 взр.">
+                  <input type="text" placeholder="1 взр." class="js-input input__tourists">
                 </div>
                 <div class="form__counter tourists">
                   <h5 class="tourists__caption">Количество туристов</h5>
@@ -706,7 +730,7 @@
                 <span>Фильтр</span>
               </a>
               <form action="" class="tickets__sort" id="form-sort">
-                <select name="" id="sort" class="sorting">
+                <select name="" id="sort" class="sorting nice-select">
                   <option value="">Сортировать</option>
                   <option value="">Сначала дорогие</option>
                   <option value="">Сначала дешевые</option>
@@ -1294,14 +1318,15 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231113103933"></script>
-<script src="js/jquery.maskedinput.js?_v=20231113103933"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231113103933"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231113103933"></script>
-<script src="js/air-datepicker.js?_v=20231113103933"></script>
-<script src="js/fancybox.umd.js?_v=20231113103933"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231113103933"></script>
-<script src="js/app.js?_v=20231113103933"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231114134243"></script>
+<script src="js/jquery.maskedinput.js?_v=20231114134243"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231114134243"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231114134243"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231114134243"></script>
+<script src="js/air-datepicker.js?_v=20231114134243"></script>
+<script src="js/fancybox.umd.js?_v=20231114134243"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231114134243"></script>
+<script src="js/app.js?_v=20231114134243"></script>
 
 </body>
 

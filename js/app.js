@@ -56,22 +56,6 @@ window.addEventListener("load", function () {
         sectionTop.style.marginTop = `${headerHeight}px`;
     }
 
-    // form inputs
-    const inputs = document.querySelectorAll('.form__input input');
-    inputs.forEach( input => {
-        input.addEventListener("focus", (e) => {
-            let target = e.target;
-            let label = target.previousElementSibling;
-            label.style.display = 'none';
-        });
-
-        input.addEventListener("blur", (e) => {
-            let target = e.target;
-            let label = target.previousElementSibling;
-            label.style.display = 'block';
-        });
-    })
-
     // rangeSlider
     let rangeSlider = document.querySelector('#rangeSlider');
     if (rangeSlider) {
@@ -171,42 +155,87 @@ window.addEventListener("load", function () {
     new AirDatepicker('#date', {
         dateFormat: 'dd / MM / yyyy',
     });
-
-    let count = 0;
-    let counter = document.querySelector('#counter');
-    if (counter) {
-        const minCount = counter.getAttribute('data-min');
-        const maxCount = counter.getAttribute('data-max');
-    }
-
-
-    function updateCounter() {
-      document.getElementById('counter').innerText = count;
-    }
-
-    function increment() {
-      if (count < maxCount) {
-        count++;
-        updateCounter();
-      }
-    }
-
-    function decrement() {
-      if (count > minCount) {
-        count--;
-        updateCounter();
-      }
-    }
-
-    document.querySelector('body').addEventListener('click', (e) => {
-        const target = e.target;
-        if (target.classList.contains('decrease')) {
-            decrement()
-        }
-        if (target.classList.contains('increase')) {
-            increment()
-        }
+    new AirDatepicker('#date-start', {
+        dateFormat: 'dd / MM / yyyy',
     });
+    new AirDatepicker('#date-end', {
+        dateFormat: 'dd / MM / yyyy',
+    });
+
+    $(document).ready(function() {
+        $('.js-multiple').select2({
+            width: '100%',
+            // dropdownAutoWidth : true,
+            selectionCssClass: "custom-container",
+            dropdownCssClass: "loc-dropdown",
+        });
+    });
+
+
+    const inputs = document.querySelectorAll('.js-input');
+    inputs.forEach( input => {
+        input.addEventListener("focus", (e) => {
+            let target = e.target;
+            let label = target.closest('.form__input').querySelector('label');
+            label.style.display = 'none';
+        });
+
+        input.addEventListener("blur", (e) => {
+            let target = e.target;
+            let label = target.closest('.form__input').querySelector('label');
+            label.style.display = 'block';
+        });
+    })
+
+    $('.js-multiple').on('select2:opening', function (e) {
+        let target = e.target;
+        let label = target.closest('.form__input').querySelector('label');
+        label.style.display = 'none';
+     });
+
+     $('.js-multiple').on('select2:closing', function (e) {
+        let target = e.target;
+        let label = target.closest('.form__input').querySelector('label');
+        label.style.display = 'block';
+     });
+
+
+    let counter = this.document.querySelector('#counter')
+    if (counter) {
+        let displayCout = document.querySelector('#counter span');
+        let min = counter.getAttribute('data-min');
+        let max = counter.getAttribute('data-max');
+        let count= 1;
+
+        let productCounter = {
+            incrementCounter: function(){
+                if(count<max){
+                    return count = count + 1;
+                }else{
+                    return count;
+                }
+            },
+            decrementCounter: function(){
+                  if (count>min){
+                  return count = count - 1;
+                } else {
+                  return count=1;
+                }
+            }
+
+        };
+
+        document.querySelector('.increase').onclick=function(){
+            productCounter.incrementCounter();
+            displayCout.innerHTML=count
+            document.querySelector('.input__tourists').value = count;
+        }
+        document.querySelector('.decrease').onclick=function(){
+            productCounter.decrementCounter()
+            displayCout.innerHTML = count;
+            document.querySelector('.input__tourists').value = count;
+        }
+    }
 
 
     // Form
@@ -262,7 +291,7 @@ window.addEventListener("load", function () {
 });
 
 $(document).ready(function() {
-    $('select').niceSelect();
+    $('.nice-select').niceSelect();
 });
 
 window.addEventListener("resize", ()=> {
