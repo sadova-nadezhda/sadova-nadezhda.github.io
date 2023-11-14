@@ -1752,6 +1752,7 @@ h6 {
 .application__container {
   display: grid;
   grid-template-columns: 1fr 30%;
+  align-items: start;
   gap: 26px;
 }
 
@@ -1856,6 +1857,18 @@ h6 {
   line-height: 1.3em;
   letter-spacing: 1.248px;
   color: #2569D7;
+}
+
+.application__questions {
+  display: none;
+  padding: 24px 16px;
+  border-radius: 32px;
+  background: #FFF;
+  box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+}
+
+.application__btn {
+  width: 100%;
 }
 
 .layout {
@@ -2732,6 +2745,7 @@ h6 {
 
 .room__col:nth-child(even) {
   align-items: flex-end;
+  text-align: end;
 }
 
 .room__feature {
@@ -2806,6 +2820,11 @@ h6 {
   border-radius: 20px;
   border: 1.3px solid rgba(75, 75, 75, 0.24);
   transition: all 0.3s linear;
+}
+
+.room__link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .room__link path {
@@ -2889,6 +2908,7 @@ h6 {
 
 .tour__col:nth-child(even) {
   align-items: flex-end;
+  text-align: end;
 }
 
 .tour__days {
@@ -2928,6 +2948,11 @@ h6 {
   border-radius: 20px;
   border: 1.3px solid rgba(75, 75, 75, 0.24);
   transition: all 0.3s linear;
+}
+
+.tour__link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .tour__link path {
@@ -3292,6 +3317,11 @@ h6 {
 .feedback-form__input input::placeholder {
   color: #292D32;
   font-weight: 400;
+}
+
+.feedback-form__input svg {
+  width: 28px;
+  height: 28px;
 }
 
 .feedback-form__select {
@@ -3904,6 +3934,11 @@ h6 {
     font-size: 24px;
   }
 
+  .room__link svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .tour__info {
     grid-template-columns: 120px 1fr;
   }
@@ -3929,6 +3964,11 @@ h6 {
     font-size: 18px;
   }
 
+  .tour__link svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .services__icon {
     width: 22px;
     height: 22px;
@@ -3945,6 +3985,11 @@ h6 {
 
   .feedback-form__bottom a {
     font-size: 16px;
+  }
+
+  .feedback-form__input svg {
+    width: 24px;
+    height: 24px;
   }
 
   .select2-container--default .select2-selection--single .select2-selection__placeholder {
@@ -4550,6 +4595,11 @@ h6 {
     margin-bottom: 16px;
   }
 
+  .booking__card {
+    border-radius: 16px;
+    box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+  }
+
   .room__info {
     grid-template-columns: 100px 1fr;
   }
@@ -4596,6 +4646,11 @@ h6 {
     padding: 8px 16px;
   }
 
+  .room__link svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .room__link {
     border-radius: 16px;
   }
@@ -4631,6 +4686,11 @@ h6 {
 
   .tour__links a {
     padding: 8px 16px;
+  }
+
+  .tour__link svg {
+    width: 16px;
+    height: 16px;
   }
 
   .tour__link {
@@ -4679,6 +4739,11 @@ h6 {
 
   .feedback-form__input input::placeholder {
     font-size: 16px;
+  }
+
+  .feedback-form__input svg {
+    width: 22px;
+    height: 22px;
   }
 
   .feedback-form__select span {
@@ -4925,6 +4990,11 @@ h6 {
     width: 16px;
     height: 16px;
   }
+
+  .feedback-form__input svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -5163,6 +5233,7 @@ h6 {
   }
 
   .application__title {
+    margin-bottom: 20px;
     font-size: 24px;
   }
 
@@ -5308,11 +5379,40 @@ h6 {
     box-shadow: none;
   }
 
+  .application__feedback textarea {
+    height: 80px;
+  }
+
   .application__feedback {
     padding: 20px;
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+  }
+
+  .application__caption {
+    text-align: start;
+  }
+
+  .application__list li::before {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .application__list li::after {
+    left: -18px;
+  }
+
+  .application__list {
+    padding-left: 28px;
+    margin-left: 0;
+  }
+
+  .application__questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .layout .container_lg {
@@ -5372,6 +5472,11 @@ h6 {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
+  }
+
+  .booking__card {
+    border-radius: 16px;
+    border: 1px solid rgba(41, 45, 50, 0.08);
   }
 
   .tour__info {
@@ -5611,7 +5716,49 @@ h6 {
   }
 }
 
+@media (max-width: 380px) {
+  .room__info {
+    grid-template-columns: 1fr;
+  }
+
+  .room__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .room__col:first-child {
+    border-right: 0;
+    padding-bottom: 10px;
+    border-right: 0;
+    border-bottom: 1.3px solid rgba(41, 45, 50, 0.08);
+  }
+
+  .room__col:nth-child(even) {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .tour__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .tour__col:first-child {
+    padding-bottom: 10px;
+    border-right: 0;
+    border-bottom: 1.3px solid rgba(41, 45, 50, 0.08);
+  }
+
+  .tour__col:nth-child(even) {
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
 @media (max-width: 360px) {
+  .application__feedback {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
   .feedback-form__phone input[name=code] {
     max-width: 24%;
   }
