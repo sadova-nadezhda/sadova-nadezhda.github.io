@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Внутренняя</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231114172841">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231114172841" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231114172841" rel="stylesheet" />
-  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231114172841">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231114172841" />
-  <link rel="stylesheet" href="css/style.css?_v=20231114172841" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231115170406">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231115170406" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231115170406" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231115170406" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231115170406">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231115170406" />
+  <link rel="stylesheet" href="css/style.css?_v=20231115170406" />
 </head>
 
 
@@ -218,19 +219,19 @@
           <div class="layout__wrapper">
             <div class="layout__row layout__info">
               <div class="layout__slider">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper infoSwiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-fancybox="gallery" data-src="img/image-2.png">
                       <img src="img/image-2.png" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-fancybox="gallery" data-src="img/image-1.png">
                       <img src="img/image-1.png" />
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-fancybox="gallery" data-src="img/image-2.png">
                       <img src="img/image-2.png" />
                     </div>
                   </div>
-                  <div class="swiper-button swiper-button-prev">
+                  <div class="info-button-prev swiper-button swiper-button-prev">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.0171 26.6975L15.7791 22.4595L11.5411 18.2215C9.50029 16.4014 9.72119 16.4014 11.5411 14.5815L20.0171 6.10547"
@@ -238,7 +239,7 @@
                         stroke-linejoin="round" />
                     </svg>
                   </div>
-                  <div class="swiper-button swiper-button-next">
+                  <div class="info-button-next swiper-button swiper-button-next">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M11.9832 26.6975L16.2212 22.4595L20.4592 18.2215C22.5 16.4014 22.2791 16.4014 20.4592 14.5815L11.9832 6.10547"
@@ -248,7 +249,7 @@
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
-                <div thumbsSlider="" class="swiper mySwiper">
+                <div thumbsSlider="" class="swiper infoSwiper-sm">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <img src="img/image-2.png" />
@@ -349,6 +350,78 @@
               <div class="prices__text">В зависимости от сезона цена может колебаться. Вы можете листать периоды и
                 наблюдать за тем, как будет меняться цена.</div>
               <div class="prices__cards">
+                <div class="swiper pricesSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card active">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                    <div class="prices__slide swiper-slide">
+                      <div class="prices__card">
+                        <span class="prices__date">12 дек - 20 дек</span>
+                        <div class="prices__num">349 034 ₸</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prices__arrows">
+                  <div class="prices-button-prev swiper-button-prev">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.0903 20.3205L11.8303 17.0605L8.57033 13.8005C7.00049 12.4004 7.17041 12.4004 8.57033 11.0005L15.0903 4.48047"
+                        stroke="#8D939B" stroke-width="2.4" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="prices-button-next swiper-button-next">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.90967 20.3205L12.1697 17.0605L15.4297 13.8005C16.9995 12.4004 16.8296 12.4004 15.4297 11.0005L8.90967 4.48047"
+                        stroke="#8D939B" stroke-width="2.4" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="prices__cards">
                 <div class="prices__card">
                   <span class="prices__date">12 дек - 20 дек</span>
                   <div class="prices__num">349 034 ₸</div>
@@ -365,11 +438,11 @@
                   <span class="prices__date">12 дек - 20 дек</span>
                   <div class="prices__num">349 034 ₸</div>
                 </div>
-              </div>
+              </div> -->
             </div>
-            <div class="layout__row layout__room">
-              <h2>Ваш номер</h2>
-              <div>Тут отображается номер подходящий по вашему запросу.</div>
+            <div class="layout__row layout__room rooms">
+              <h2 class="rooms__title">Ваш номер</h2>
+              <div class="rooms__txt">Тут отображается номер подходящий по вашему запросу.</div>
               <div class="layout__card room active">
                 <div class="room__info">
                   <div class="room__img"><img src="img/room-1.png" alt=""></div>
@@ -1692,15 +1765,15 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231114172841"></script>
-<script src="js/jquery.maskedinput.js?_v=20231114172841"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231114172841"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231114172841"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231114172841"></script>
-<script src="js/air-datepicker.js?_v=20231114172841"></script>
-<script src="js/fancybox.umd.js?_v=20231114172841"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231114172841"></script>
-<script src="js/app.js?_v=20231114172841"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231115170406"></script>
+<script src="js/jquery.maskedinput.js?_v=20231115170406"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231115170406"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231115170406"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231115170406"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231115170406"></script>
+<script src="js/air-datepicker.js?_v=20231115170406"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231115170406"></script>
+<script src="js/app.js?_v=20231115170406"></script>
 
 </body>
 

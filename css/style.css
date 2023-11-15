@@ -1371,6 +1371,7 @@ h6 {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .card__txt {
@@ -1422,6 +1423,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 16px;
 }
 
 .card__link {
@@ -1517,24 +1519,24 @@ h6 {
   overflow: hidden;
 }
 
-.mySwiper2 {
-  height: 32vw;
+.infoSwiper {
+  height: 30vw;
   width: 100%;
 }
 
-.mySwiper {
+.infoSwiper-sm {
   height: 85px;
   box-sizing: border-box;
   padding-top: 10px;
 }
 
-.mySwiper .swiper-slide {
+.infoSwiper-sm .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.infoSwiper-sm .swiper-slide-thumb-active {
   opacity: 1;
 }
 
@@ -1886,6 +1888,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  letter-spacing: 1.3px;
 }
 
 .layout__wrapper::before {
@@ -1922,7 +1925,7 @@ h6 {
 
 .layout__info {
   display: grid;
-  grid-template-columns: 55% 43%;
+  grid-template-columns: 49% 49%;
   gap: 2%;
 }
 
@@ -2576,6 +2579,14 @@ h6 {
   font-weight: 500;
 }
 
+.form-nutrition__button {
+  background: #4E9F07;
+}
+
+.form-nutrition__button:hover:not(:disabled) {
+  background: #5EB215;
+}
+
 .form-amount {
   display: flex;
   flex-direction: column;
@@ -2737,6 +2748,7 @@ h6 {
   flex-direction: column;
   gap: 2px;
   padding: 10px;
+  font-size: 18px;
 }
 
 .room__col:first-child {
@@ -2760,6 +2772,7 @@ h6 {
   align-items: center;
   gap: 10px;
   color: rgba(37, 52, 61, 0.7);
+  font-size: 18px;
 }
 
 .room__inline svg {
@@ -2797,6 +2810,7 @@ h6 {
   padding: 4px;
   border-radius: 8px;
   background: rgba(101, 159, 254, 0.06);
+  font-size: 16px;
 }
 
 .room__links {
@@ -2805,6 +2819,7 @@ h6 {
   align-items: center;
   gap: 13px;
   padding: 10px;
+  font-size: 18px;
 }
 
 .room__links a {
@@ -2856,6 +2871,7 @@ h6 {
 
 .room__state:hover:not(.active) {
   background: #5EB215;
+  cursor: pointer;
 }
 
 .tour__info {
@@ -2984,13 +3000,25 @@ h6 {
 
 .tour__state:hover:not(.active) {
   background: #5EB215;
+  cursor: pointer;
+}
+
+.rooms__title {
+  line-height: 100%;
+}
+
+.rooms__txt {
+  font-weight: 500;
+}
+
+.about__title {
+  line-height: 100%;
 }
 
 .about__location {
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  letter-spacing: 1.3px;
 }
 
 .about__text p {
@@ -3020,7 +3048,6 @@ h6 {
 
 .about__inline span {
   font-weight: 500;
-  letter-spacing: 1.3px;
 }
 
 .about__btn {
@@ -3033,6 +3060,10 @@ h6 {
 
 .about__btn.show {
   display: none;
+}
+
+.services__title {
+  line-height: 100%;
 }
 
 .services__wrap {
@@ -3077,6 +3108,10 @@ h6 {
   letter-spacing: 1.3px;
 }
 
+.prices__caption {
+  line-height: 100%;
+}
+
 .prices__info {
   display: flex;
   align-items: center;
@@ -3101,10 +3136,20 @@ h6 {
 }
 
 .prices__cards {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  padding: 0 30px;
+}
+
+.prices__cards .swiper-button-prev {
+  left: 0;
+}
+
+.prices__cards .swiper-button-next {
+  right: 0;
 }
 
 .prices__date {
@@ -3154,6 +3199,10 @@ h6 {
   gap: 16px;
 }
 
+.nutrition__title {
+  line-height: 100%;
+}
+
 .nutrition__note {
   padding: 10px 16px;
   border-radius: 10px;
@@ -3187,6 +3236,10 @@ h6 {
 .nutrition__price h5 {
   margin-bottom: 6px;
   font-weight: 500;
+}
+
+.options__title {
+  line-height: 100%;
 }
 
 .options__cards {
@@ -3224,6 +3277,7 @@ h6 {
 
 .similar__title {
   margin-bottom: 10px;
+  line-height: 100%;
 }
 
 .similar__text {
@@ -3897,7 +3951,7 @@ h6 {
   }
 
   .layout {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .filters__item {
@@ -4005,6 +4059,10 @@ h6 {
     height: 20px;
   }
 
+  .room__inline {
+    font-size: 16px;
+  }
+
   .room__days svg {
     width: 18px;
     height: 18px;
@@ -4012,6 +4070,10 @@ h6 {
 
   .room__price {
     font-size: 24px;
+  }
+
+  .room__links {
+    font-size: 16px;
   }
 
   .room__link svg {
@@ -4337,6 +4399,10 @@ h6 {
     font-size: 14px;
   }
 
+  .card__time {
+    font-size: 14px;
+  }
+
   .card__link {
     padding: 12px;
   }
@@ -4460,6 +4526,10 @@ h6 {
     font-size: 16px;
   }
 
+  .layout__wrapper {
+    letter-spacing: 1px;
+  }
+
   .layout__row {
     padding: 20px;
   }
@@ -4514,10 +4584,6 @@ h6 {
 
   .layout__tour {
     border-radius: 20px;
-  }
-
-  .layout {
-    font-size: 16px;
   }
 
   .filters__form {
@@ -4708,6 +4774,7 @@ h6 {
 
   .room__inline {
     gap: 8px;
+    font-size: 14px;
   }
 
   .room__days svg {
@@ -4719,12 +4786,20 @@ h6 {
     font-size: 22px;
   }
 
+  .room__tabs li {
+    font-size: 14px;
+  }
+
   .room__tabs {
     gap: 6px;
   }
 
   .room__links a {
     padding: 8px 16px;
+  }
+
+  .room__links {
+    font-size: 14px;
   }
 
   .room__link svg {
@@ -5115,11 +5190,11 @@ h6 {
     grid-template-columns: 1fr 26%;
   }
 
-  .mySwiper2 {
+  .infoSwiper {
     height: 45vw;
   }
 
-  .mySwiper {
+  .infoSwiper-sm {
     height: 65px;
   }
 
@@ -5440,11 +5515,11 @@ h6 {
     border-radius: 0;
   }
 
-  .mySwiper2 {
+  .infoSwiper {
     height: 60vw;
   }
 
-  .mySwiper {
+  .infoSwiper-sm {
     display: none;
   }
 
@@ -5854,15 +5929,15 @@ h6 {
     align-items: flex-start;
     text-align: start;
   }
+
+  .feedback-form__phone input[name=code] {
+    max-width: 24%;
+  }
 }
 
 @media (max-width: 360px) {
   .application__feedback {
     padding: 16px;
     border-radius: 16px;
-  }
-
-  .feedback-form__phone input[name=code] {
-    max-width: 24%;
   }
 }

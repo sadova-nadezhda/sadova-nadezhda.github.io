@@ -92,14 +92,14 @@ window.addEventListener("load", function () {
     }
 
     //sliders
-    let swiper = new Swiper(".mySwiper", {
+    let swiper = new Swiper(".infoSwiper-sm", {
         loop: true,
         spaceBetween: 16,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
-    let swiper2 = new Swiper(".mySwiper2", {
+    let swiper2 = new Swiper(".infoSwiper", {
         loop: true,
         spaceBetween: 10,
         thumbs: {
@@ -110,10 +110,37 @@ window.addEventListener("load", function () {
             clickable: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".info-button-next",
+            prevEl: ".info-button-prev",
         },
     });
+
+    let swiper3 = new Swiper(".pricesSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        navigation: {
+            nextEl: ".prices-button-next",
+            prevEl: ".prices-button-prev",
+        },
+        breakpoints: {
+            360: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+            },
+            700: {
+                slidesPerView: 4,
+                spaceBetween: 8,
+            },
+            800: {
+              slidesPerView: 5,
+              spaceBetween: 8,
+            },
+            1100: {
+                slidesPerView: 6,
+                spaceBetween: 8,
+            },
+        },
+      });
 
     let btnToggle = document.querySelectorAll('.layout__btn');
     let boxInfo = document.querySelector('.content');
@@ -236,6 +263,10 @@ window.addEventListener("load", function () {
             document.querySelector('.input__tourists').value = count;
         }
     }
+
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
 
 
     // Form
