@@ -1,5 +1,7 @@
 let sectionTop = document.querySelector('.section_top');
 let headerHeight = document.querySelector(".header").clientHeight;
+const windowInnerWidth = window.innerWidth;
+let layoutText = $('.layout__desc .layout__text').clone()
 
 window.addEventListener("load", function () {
     let preloader = document.querySelector("#preloader");
@@ -163,20 +165,6 @@ window.addEventListener("load", function () {
         })
     })
 
-    /*hide-show*/
-$(function() {
-    $(".btn-hide").click(function() {
-      $(".active").css("display", "none");
-      $(".btn-hide").css("display", "none");
-      $(".btn-display").css("display", "block");
-    });
-    $(".btn-display").click(function() {
-      $(".hidden").css("display", "block");
-      $(".btn-hide").css("display", "block");
-      $(".btn-display").css("display", "none");
-    });
-  });
-
     new AirDatepicker('#index-date', {
         range: true,
         multipleDatesSeparator: ' - ',
@@ -281,6 +269,20 @@ $(function() {
         // Your custom options
     });
 
+    //unwrap / wrap
+    if(windowInnerWidth <= 600) {
+        $('.layout__row').unwrap()
+        $('.layout__box').unwrap()
+        $('.layout__content').unwrap()
+        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
+    }
+    else {
+        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
+        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
+        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
+        $('.layout__desc .layout__text').replaceWith(layoutText)
+    }
+
 
     // Form
     function submitForm() {
@@ -361,5 +363,17 @@ $(document).ready(function() {
 window.addEventListener("resize", ()=> {
     if(sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
+    }
+    if(windowInnerWidth <= 600) {
+        $('.layout__row').unwrap()
+        $('.layout__box').unwrap()
+        $('.layout__content').unwrap()
+        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
+    }
+    else {
+        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
+        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
+        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
+        $('.layout__desc .layout__text').replaceWith(layoutText)
     }
 });

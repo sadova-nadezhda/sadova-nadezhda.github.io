@@ -1965,6 +1965,21 @@ h6 {
   font-size: 18px;
 }
 
+.layout__inline {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.layout__inline .prices__total {
+  display: none;
+}
+
+.layout__inline .prices__total span {
+  font-weight: 400;
+}
+
 .layout__map {
   display: flex;
   align-items: center;
@@ -2000,6 +2015,10 @@ h6 {
   font-weight: 500;
   letter-spacing: 1.3px;
   text-decoration-line: underline;
+}
+
+.layout__title-tabs {
+  display: none;
 }
 
 .layout__tabs {
@@ -2064,13 +2083,19 @@ h6 {
   text-decoration-line: underline;
 }
 
-.layout__content {
+.layout__contents {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
 .layout__about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.layout__about_top {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -3267,6 +3292,7 @@ h6 {
   padding: 10px 20px;
   border-radius: 20px;
   border: 1.3px solid rgba(75, 75, 75, 0.24);
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s linear;
 }
@@ -5592,21 +5618,22 @@ h6 {
     padding: 0;
   }
 
+  .layout__container {
+    padding-top: 64vw;
+    background: #FCFCFC;
+  }
+
   .layout__wrapper::before {
     content: "";
   }
 
-  .layout__wrapper {
-    margin-top: 60vw;
-    padding: 0 12px;
-    padding-top: 5px;
-    background: #FCFCFC;
-  }
-
   .layout__row {
-    padding: 0;
+    padding: 0 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #A8B2BF;
     background: transparent;
     box-shadow: none;
+    border-radius: 0;
   }
 
   .layout__slider {
@@ -5614,6 +5641,115 @@ h6 {
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  .layout__info {
+    order: -1;
+    padding: 0;
+    padding-bottom: 24px;
+  }
+
+  .layout__top {
+    padding: 0 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #A8B2BF;
+  }
+
+  .layout__inline .prices__total {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 11px;
+    opacity: 0.95;
+    background: #2569D7;
+    font-size: 16px;
+    letter-spacing: -0.64px;
+  }
+
+  .layout__text {
+    padding: 0 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #A8B2BF;
+  }
+
+  .layout__link {
+    display: none;
+    padding: 0 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #A8B2BF;
+  }
+
+  .layout__title-tabs {
+    display: block;
+    padding: 0 12px;
+    font-size: 18px;
+  }
+
+  .layout__tabs {
+    padding: 0 12px;
+  }
+
+  .layout__prices {
+    order: 1;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .layout__about {
+    display: none;
+  }
+
+  .layout__services {
+    order: 3;
+    padding: 24px 12px;
+    border-top: 1px solid #A8B2BF;
+    border-bottom: 1px solid #A8B2BF;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .layout__nutrition {
+    order: 2;
+    padding-top: 24px;
+    border-top: 1px solid #A8B2BF;
+  }
+
+  .layout__options {
+    order: 3;
+  }
+
+  .layout__similar {
+    order: 3;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .layout__box {
+    margin: 0 12px;
+    padding: 12px;
+    box-shadow: none;
+  }
+
+  .layout__tour {
+    order: 2;
+    padding: 12px;
+    border-radius: 20px;
+    background: rgba(237, 174, 20, 0.32);
+    box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+  }
+
+  .layout__offer {
+    order: 1;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(41, 45, 50, 0.04);
+    background: #FFF;
+    box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12), 0px 4px 8px 0px rgba(89, 99, 117, 0.04);
+  }
+
+  .layout__city {
+    display: none;
   }
 
   .layout__reserv .application__benefits {
@@ -5629,6 +5765,10 @@ h6 {
     border-radius: 32px 32px 0px 0px;
     box-shadow: 0px 0px 12px 0px rgba(24, 63, 126, 0.08);
     z-index: 3;
+  }
+
+  .layout__btn {
+    margin: 0;
   }
 
   .layout {
@@ -5664,8 +5804,26 @@ h6 {
     flex: 1 1 auto;
   }
 
+  .prices__total {
+    padding: 10px 16px;
+    border-radius: 11px;
+    opacity: 0.95;
+    background: #2569D7;
+    font-size: 18px;
+  }
+
   .prices__card {
     font-size: 13px;
+  }
+
+  .options__text {
+    display: none;
+  }
+
+  .options__load {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
   }
 
   .feedback-form__label {
