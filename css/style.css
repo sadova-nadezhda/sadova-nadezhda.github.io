@@ -425,7 +425,7 @@ input:-internal-autofill-selected {
 .text-field_floating-2 .text-field__label {
   position: absolute;
   top: auto;
-  bottom: 60%;
+  bottom: 65%;
   left: 15px;
   display: flex;
   transform: translateY(-50%);
@@ -1481,7 +1481,7 @@ h6 {
 
 .content.active {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1977,6 +1977,7 @@ h6 {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
+  line-height: normal;
 }
 
 .layout__map svg {
@@ -2170,8 +2171,12 @@ h6 {
   cursor: pointer;
 }
 
-.layout__btn.show {
+.layout__btn.hide {
   display: none;
+}
+
+.layout__btn.show {
+  color: #2569D7;
 }
 
 /* filters */
@@ -3058,10 +3063,6 @@ h6 {
   text-decoration-line: underline;
 }
 
-.about__btn.show {
-  display: none;
-}
-
 .services__title {
   line-height: 100%;
 }
@@ -3861,6 +3862,12 @@ h6 {
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 16px;
+  }
+
+  .swiper-button {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
   }
 
   .uly-dala__title svg {

@@ -143,26 +143,39 @@ window.addEventListener("load", function () {
       });
 
     let btnToggle = document.querySelectorAll('.layout__btn');
-    let boxInfo = document.querySelector('.content');
 
     btnToggle.forEach( btn => {
         btn.addEventListener('click', (e)=> {
             let target = e.target;
             if(target.classList.contains('show')) {
-                console.log('show')
-                target.style.display = 'none'
+                let boxInfo = target.closest('.layout__previw').querySelector('.content');
                 boxInfo.classList.remove('active')
-                target.nextSibling.style.display = 'block'
+                target.nextElementSibling.style.display = 'block'
+                target.style.display = 'none'
             }
             else if(target.classList.contains('hide')) {
-                console.log('hide')
-                target.style.display = 'none'
+                let boxInfo = target.closest('.layout__previw').querySelector('.content');
                 boxInfo.classList.add('active')
-                target.previousSibling.style.display = 'block'
+                target.previousElementSibling.style.display = 'block'
+                target.style.display = 'none'
             }
 
         })
     })
+
+    /*hide-show*/
+$(function() {
+    $(".btn-hide").click(function() {
+      $(".active").css("display", "none");
+      $(".btn-hide").css("display", "none");
+      $(".btn-display").css("display", "block");
+    });
+    $(".btn-display").click(function() {
+      $(".hidden").css("display", "block");
+      $(".btn-hide").css("display", "block");
+      $(".btn-display").css("display", "none");
+    });
+  });
 
     new AirDatepicker('#index-date', {
         range: true,
