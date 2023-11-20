@@ -5133,6 +5133,7 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
   }
 
   .filters__form {
@@ -5757,6 +5758,11 @@ h6 {
     display: none;
   }
 
+  .layout__reserv .layout__caption {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
   .layout__reserv {
     position: fixed;
     bottom: 0;
@@ -5778,11 +5784,40 @@ h6 {
     background-color: #fff;
   }
 
+  .total-price_old {
+    display: none;
+  }
+
   .form-nutrition__elem {
     flex: 1 1 100%;
   }
 
+  .reserv__cards {
+    flex-direction: row;
+    gap: 4px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-size: 0;
+    background-repeat: repeat-y;
+  }
+
+  .reserv__card {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .reserv__total {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
   .reserv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
