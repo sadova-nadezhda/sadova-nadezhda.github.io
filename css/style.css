@@ -1479,17 +1479,13 @@ h6 {
   color: #E74B30;
 }
 
-.content.active {
-  display: -moz-box;
-  display: -webkit-box;
+.content {
+  height: auto;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -moz-box;
-  display: -webkit-box;
-  line-clamp: 5;
-  box-orient: vertical;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+}
+
+.content.active {
+  height: 69px;
 }
 
 .quantity {
@@ -2194,13 +2190,16 @@ h6 {
   margin-bottom: 10px;
 }
 
+.layout__previw .layout__text {
+  margin-bottom: 16px;
+}
+
 .layout__promo {
   padding: 0;
 }
 
 .layout__btn {
   display: block;
-  margin-top: 16px;
   color: rgba(41, 45, 50, 0.5);
   text-decoration-line: underline;
   cursor: pointer;
@@ -3073,6 +3072,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-top: 16px;
 }
 
 .about__inline {
@@ -5144,6 +5144,10 @@ h6 {
     border-radius: 20px;
   }
 
+  .layout__promo {
+    padding: 0;
+  }
+
   .filters__form {
     width: 80%;
     margin: 0 auto;
@@ -5199,6 +5203,29 @@ h6 {
 @media (max-width: 1100px) {
   .nav__links {
     gap: 20px;
+  }
+
+  .layout__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .layout__aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .layout__tour-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .layout__tour {
+    grid-column: span 2;
   }
 }
 
@@ -5269,13 +5296,6 @@ h6 {
 
   .application__caption {
     font-size: 24px;
-  }
-
-  .layout__container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
   }
 
   .layout__info {
@@ -5515,6 +5535,18 @@ h6 {
   .card {
     grid-template-columns: 1fr;
     gap: 15px;
+  }
+
+  .layout__aside {
+    grid-template-columns: 1fr;
+  }
+
+  .layout__tour-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .layout__tour {
+    grid-column: unset;
   }
 
   .price_old {

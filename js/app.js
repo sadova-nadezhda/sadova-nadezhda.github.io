@@ -339,7 +339,7 @@ $(document).ready(function() {
         $('.layout__row').unwrap()
         $('.layout__box').unwrap()
         $('.layout__content').unwrap()
-        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
+        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top layout__previw'))
     }
     // else {
     //     $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
