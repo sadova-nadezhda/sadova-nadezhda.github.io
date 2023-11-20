@@ -1,6 +1,5 @@
 let sectionTop = document.querySelector('.section_top');
 let headerHeight = document.querySelector(".header").clientHeight;
-const windowInnerWidth = window.innerWidth;
 let layoutText = $('.layout__desc .layout__text').clone()
 
 window.addEventListener("load", function () {
@@ -269,6 +268,7 @@ window.addEventListener("load", function () {
         // Your custom options
     });
 
+    let windowInnerWidth = window.innerWidth;
     //unwrap / wrap
     if(windowInnerWidth <= 600) {
         $('.layout__row').unwrap()
@@ -364,6 +364,8 @@ window.addEventListener("resize", ()=> {
     if(sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
     }
+    let windowInnerWidth = window.innerWidth;
+    //unwrap / wrap
     if(windowInnerWidth <= 600) {
         $('.layout__row').unwrap()
         $('.layout__box').unwrap()
