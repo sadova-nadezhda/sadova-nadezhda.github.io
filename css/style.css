@@ -1480,10 +1480,16 @@ h6 {
 }
 
 .content.active {
+  display: -moz-box;
   display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  line-clamp: 5;
+  box-orient: vertical;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .quantity {
