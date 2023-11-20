@@ -341,34 +341,34 @@ $(document).ready(function() {
         $('.layout__content').unwrap()
         $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
     }
-    else {
-        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
-        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
-        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
-        $('.layout__desc .layout__text').replaceWith(layoutText)
-    }
+    // else {
+    //     $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
+    //     $('.layout__box').wrapAll( "<div class='layout__aside'  />");
+    //     $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
+    //     $('.layout__desc .layout__text').replaceWith(layoutText)
+    // }
 });
 
 window.addEventListener("resize", ()=> {
-    // Section Top
-    let headerHeight = document.querySelector(".header").clientHeight;
-    let sectionTop = document.querySelector('.section_top');
-    if(sectionTop) {
-        sectionTop.style.marginTop = `${headerHeight}px`;
-    }
+    // // Section Top
+    // let headerHeight = document.querySelector(".header").clientHeight;
+    // let sectionTop = document.querySelector('.section_top');
+    // if(sectionTop) {
+    //     sectionTop.style.marginTop = `${headerHeight}px`;
+    // }
 
-    let windowInnerWidth = window.innerWidth;
-    //unwrap / wrap
-    if(windowInnerWidth <= 600) {
-        $('.layout__row').unwrap()
-        $('.layout__box').unwrap()
-        $('.layout__content').unwrap()
-        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
-    }
-    else {
-        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
-        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
-        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
-        $('.layout__desc .layout__text').replaceWith(layoutText)
-    }
+    // let windowInnerWidth = window.innerWidth;
+    // //unwrap / wrap
+    // if(windowInnerWidth <= 600) {
+    //     $('.layout__row').unwrap()
+    //     $('.layout__box').unwrap()
+    //     $('.layout__content').unwrap()
+    //     $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
+    // }
+    // else {
+    //     $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
+    //     $('.layout__box').wrapAll( "<div class='layout__aside'  />");
+    //     $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
+    //     $('.layout__desc .layout__text').replaceWith(layoutText)
+    // }
 });
