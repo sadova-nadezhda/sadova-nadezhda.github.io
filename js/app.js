@@ -1,5 +1,3 @@
-let sectionTop = document.querySelector('.section_top');
-let headerHeight = document.querySelector(".header").clientHeight;
 let layoutText = $('.layout__desc .layout__text').clone()
 
 window.addEventListener("load", function () {
@@ -52,7 +50,8 @@ window.addEventListener("load", function () {
     });
 
     // Section Top
-
+    let headerHeight = document.querySelector(".header").clientHeight;
+    let sectionTop = document.querySelector('.section_top');
     if(sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
     }
@@ -189,16 +188,6 @@ window.addEventListener("load", function () {
         dateFormat: 'dd / MM / yyyy',
     });
 
-    $(document).ready(function() {
-        $('.js-multiple').select2({
-            width: '100%',
-            // dropdownAutoWidth : true,
-            selectionCssClass: "custom-container",
-            dropdownCssClass: "loc-dropdown",
-        });
-    });
-
-
     const inputs = document.querySelectorAll('.js-input');
     inputs.forEach( input => {
         input.addEventListener("focus", (e) => {
@@ -268,22 +257,6 @@ window.addEventListener("load", function () {
         // Your custom options
     });
 
-    let windowInnerWidth = window.innerWidth;
-    //unwrap / wrap
-    if(windowInnerWidth <= 600) {
-        $('.layout__row').unwrap()
-        $('.layout__box').unwrap()
-        $('.layout__content').unwrap()
-        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
-    }
-    else {
-        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
-        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
-        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
-        $('.layout__desc .layout__text').replaceWith(layoutText)
-    }
-
-
     // Form
     function submitForm() {
         $("#form_loader").show();
@@ -318,31 +291,25 @@ window.addEventListener("load", function () {
         })
         .mask("999-9999");
 
-        let popup = document.querySelector("#popup");
-        if (popup) {
-            let popupBtn = document.querySelectorAll(".popup-btn");
-            $(popupBtn).each( function() {
-                $(this).on('click', () => {
-                $(popup).fadeIn(400);
-                })
-            });
-            $(popup).click(function(e) {
-                const target = e.target;
-                if (
-                $(target).hasClass("popup_close") ||
-                $(target).hasClass("popup")
-                ) {
-                $(popup).fadeOut(400);
-                }
-            });
-        }
+    let popup = document.querySelector("#popup");
+    if (popup) {
+        let popupBtn = document.querySelectorAll(".popup-btn");
+        $(popupBtn).each( function() {
+            $(this).on('click', () => {
+            $(popup).fadeIn(400);
+            })
+        });
+        $(popup).click(function(e) {
+            const target = e.target;
+            if (
+            $(target).hasClass("popup_close") ||
+            $(target).hasClass("popup")
+            ) {
+            $(popup).fadeOut(400);
+            }
+        });
+    }
 
-
-    // $('input[name="date"]')
-    //     .click(function () {
-    //     $(this).setCursorPosition(0);
-    //     })
-    //     .mask("99 / 99 / 9999");
 
     // alert
     let alertt = document.querySelector(".alert--fixed");
@@ -358,12 +325,38 @@ window.addEventListener("load", function () {
 
 $(document).ready(function() {
     $('.nice-select').niceSelect();
+
+    $('.js-multiple').select2({
+        width: '100%',
+        // dropdownAutoWidth : true,
+        selectionCssClass: "custom-container",
+        dropdownCssClass: "loc-dropdown",
+    });
+
+    let windowInnerWidth = window.innerWidth;
+    //unwrap / wrap
+    if(windowInnerWidth <= 600) {
+        $('.layout__row').unwrap()
+        $('.layout__box').unwrap()
+        $('.layout__content').unwrap()
+        $('.layout__desc .layout__text').html($('.layout__about').clone().attr('class', 'layout__about_top'))
+    }
+    else {
+        $('.layout__row').wrapAll( "<div class='layout__wrapper' />");
+        $('.layout__box').wrapAll( "<div class='layout__aside'  />");
+        $('.layout__content').wrapAll( "<div class='layout__row layout__contents'  />");
+        $('.layout__desc .layout__text').replaceWith(layoutText)
+    }
 });
 
 window.addEventListener("resize", ()=> {
+    // Section Top
+    let headerHeight = document.querySelector(".header").clientHeight;
+    let sectionTop = document.querySelector('.section_top');
     if(sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
     }
+
     let windowInnerWidth = window.innerWidth;
     //unwrap / wrap
     if(windowInnerWidth <= 600) {
