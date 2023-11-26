@@ -163,6 +163,37 @@ window.addEventListener("load", function () {
         })
     })
 
+
+    let boxTour = document.querySelector('.layout__tour-box');
+    let btnTour = document.querySelector('.layout__tour-btn');
+    if(btnTour) {
+        btnTour.addEventListener('click', (e)=> {
+            boxTour.classList.add('active')
+            e.target.style.display = 'none'
+        })
+    }
+
+
+    const boxes = Array.from(document.querySelectorAll(".accordion__box"));
+
+    boxes.forEach((box) => {
+        box.addEventListener("click", boxHandler);
+    });
+
+    function boxHandler(e) {
+        e.preventDefault();
+        let currentBox = e.target.closest(".accordion__box");
+        let currentContent = e.target.nextElementSibling;
+        currentBox.classList.toggle("active");
+        if (currentBox.classList.contains("active")) {
+            currentContent.style.maxHeight = currentContent.scrollHeight + 25 + "px";
+            currentContent.style.paddingTop = 20 + "px";
+        } else {
+            currentContent.style.maxHeight = 0;
+            currentContent.style.paddingTop = 0;
+        }
+    }
+
     new AirDatepicker('#index-date', {
         range: true,
         multipleDatesSeparator: ' - ',

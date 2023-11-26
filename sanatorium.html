@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Отель/Горячие источники</title>
+  <title>Санатория</title>
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231127000714">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231127000714" />
@@ -318,32 +318,17 @@
                 </div>
                 <div class="layout__t layout__text">
                   <h4>Описание</h4>
-                  <div class="layout__excerpt">Отель «Казахстан Экспресс» расположен в Алматы, в 300 м от Дворца
-                    Республики. К услугам гостей
-                    номера с террасой, бесплатная частная парковка, ресторан и бар. Из каждого номера 3-звездочного
-                    отеля открывается вид на город. Гости могут посещать сауну и хаммам. К услугам гостей круглосуточная
-                    стойка регистрации, трансфер от/до аэропорта, доставка еды и напитков в номер и бесплатный Wi-Fi на
-                    всей территории.</div>
+                  <div class="layout__excerpt">Санаторий «Машук Аква-Терм» находится между Пятигорском и Железноводском,
+                    в посёлке Иноземцево. Поездка в курортные города займёт не более 10 минут.
+
+                    «Машук Аква-Терм» - это современный роскошный санаторий, единственный в Железноводске, имеющий
+                    рейтинг «4 звезды».</div>
                 </div>
                 <a class="layout__t layout__link">Подробнее...</a>
-                <h5 class="layout__t layout__title-tabs">Удобства</h5>
-                <ul class="layout__t layout__tabs">
-                  <li>
-                    <img src="img/icon-1.png" alt="">
-                    <span>Wi-Fi</span>
-                  </li>
-                  <li>
-                    <img src="img/icon-2.png" alt="">
-                    <span>Парковка</span>
-                  </li>
-                  <li>
-                    <img src="img/icon-3.png" alt="">
-                    <span>Ресторан</span>
-                  </li>
-                  <li>
-                    <span>Без иконки</span>
-                  </li>
-                </ul>
+                <div class="layout__t about__tabs">
+                  <div class="about__tab">Основной профиль: ЖКТ</div>
+                  <div class="about__tab">Дополнительно: сердце</div>
+                </div>
               </div>
             </div>
             <div class="layout__row layout__prices prices">
@@ -424,6 +409,34 @@
                     </svg>
                   </div>
                 </div>
+              </div>
+              <div class="layout__accordion">
+                <div class="accordion included">
+                  <div class="accordion__box">
+                    <div class="accordion__label">Включено в стоимость</div>
+                    <div class="accordion__content">
+                      <ul class="accordion__list">
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="accordion unincluded">
+                  <div class="accordion__box">
+                    <div class="accordion__label">НЕ Включено в стоимость</div>
+                    <div class="accordion__content">
+                      <ul class="accordion__list">
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                        <li>Заголовок</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> -->
               </div>
             </div>
             <div class="layout__row layout__room rooms">
@@ -525,8 +538,33 @@
               <div class="layout__more">Вы можете посмотреть другие варианты номеров <a href="">здесь.</a></div>
             </div>
             <div class="layout__row layout__contents">
+              <div class="layout__content layout__about">
+                <h2 class="about__title">Лечение и список процедур</h2>
+                <div class="about__box include">
+                  <h4 class="about__caption">Процедуры которые входят в стоимость путевки</h4>
+                  <ul>
+                    <li>пункт</li>
+                    <li>пункт</li>
+                    <li>пункт</li>
+                  </ul>
+                </div>
+                <div class="about__box uninclude">
+                  <h4 class="about__caption">Платные процедуры</h4>
+                  <ul>
+                    <li>пункт</li>
+                    <li>пункт</li>
+                    <li>пункт</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="layout__row layout__contents">
               <div class="layout__content layout__about layout__previw   about">
-                <h2 class="about__title">Об отеле</h2>
+                <h2 class="about__title">О санатории</h2>
+                <div class="about__tabs">
+                  <div class="about__tab">Основной профиль: ЖКТ</div>
+                  <div class="about__tab">Дополнительно: сердце</div>
+                </div>
                 <div class="about__location">
                   <span>Расположение:</span>
                   <span>г. Анталия • 20 км от центра</span>
@@ -623,6 +661,21 @@
                       <div class="services__bullet">
                         <div class="services__icon"></div>
                         <div class="services__label">
+                          <h5>Питание</h5>
+                          <ul>
+                            <li>главный ресторан</li>
+                            <li>кафе</li>
+                            <li>кафейня</li>
+                            <li>стекй-хаус</li>
+                            <li>паб</li>
+                            <li>бар</li>
+                            <li>бар у бассейна</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="services__bullet">
+                        <div class="services__icon"></div>
+                        <div class="services__label">
                           <h5>Досуг</h5>
                           <ul>
                             <li>амфитеатр</li>
@@ -630,6 +683,17 @@
                             <li>дневная анимация</li>
                             <li>живая музыка</li>
                             <li>ночной клуб</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="services__bullet">
+                        <div class="services__icon"></div>
+                        <div class="services__label">
+                          <h5>Красота и здоровье</h5>
+                          <ul>
+                            <li>массаж</li>
+                            <li>парикмахерская</li>
+                            <li>салон красоты</li>
                           </ul>
                         </div>
                       </div>
@@ -1538,119 +1602,6 @@
             <div class="layout__box layout__offer">
               <h2 class="layout__caption">Лучшая цена в Июле!</h2>
               <div>Lorem ipsum dolor sit amet, id dicant splendide cum. </div>
-            </div>
-            <div class="layout__box layout__tour">
-              <h2 class="layout__caption">Дополните свой отдых яркими впечатлениями!</h2>
-              <div class="layout__tour-text">Просто выберите экскурсию, которую хотели бы добавить с свой тур и мы
-                включим
-                его в стоимость</div>
-              <a class="layout__tour-btn button">Посмотреть варианты</a>
-              <div class="layout__tour-box">
-                <form action="" class="form-amount" id="form-amount">
-                  <h5 class="form-amount__caption">Введите данные</h5>
-                  <div class="form-amount__field text-field_floating-2">
-                    <input class="text-field__input" type="number" id="num1" name="number" value="2">
-                    <label class="text-field__label" for="num1">Кол-во взрослых</label>
-                  </div>
-                  <div class="form-amount__field text-field_floating-2">
-                    <input class="text-field__input" type="number" id="num2" name="number" value="2">
-                    <label class="text-field__label" for="num2">Кол-во детей</label>
-                  </div>
-                  <button class="form-amount__button button">Пересчитать стоимость</button>
-                </form>
-                <h5 class="layout__caption">Варианты экскурсий</h5>
-                <div class="layout__tour-cards">
-                  <div class="layout__tour-card tour">
-                    <div class="tour__info">
-                      <div class="tour__img"><img src="img/tour-1.png" alt=""></div>
-                      <div class="tour__desc">
-                        <h5 class="tour__title">Название экскурсии</h5>
-                      </div>
-                    </div>
-                    <div class="tour__grade">
-                      <div class="tour__col">
-                        <div>Цена за 1 человека</div>
-                        <span>10 000 </span>
-                      </div>
-                      <div class="tour__col">
-                        <div>Итого</div>
-                        <div class="tour__price">120 000 Т</div>
-                      </div>
-                    </div>
-                    <div class="tour__links">
-                      <a class="tour__link" href="">
-                        <span>Подробнее</span>
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M14.052 10.4982C14.052 12.2142 12.6653 13.6008 10.9493 13.6008C9.23335 13.6008 7.84668 12.2142 7.84668 10.4982C7.84668 8.78217 9.23335 7.39551 10.9493 7.39551C12.6653 7.39551 14.052 8.78217 14.052 10.4982Z"
-                            stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                          <path
-                            d="M10.9491 17.6666C14.0084 17.6666 16.8598 15.8639 18.8444 12.7439C19.6244 11.5219 19.6244 9.46791 18.8444 8.24591C16.8598 5.12591 14.0084 3.32324 10.9491 3.32324C7.88975 3.32324 5.03842 5.12591 3.05375 8.24591C2.27375 9.46791 2.27375 11.5219 3.05375 12.7439C5.03842 15.8639 7.88975 17.6666 10.9491 17.6666Z"
-                            stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </a>
-                      <a class="tour__state active">Добавлено!</a>
-                    </div>
-                  </div>
-                  <div class="layout__tour-card tour">
-                    <div class="tour__info">
-                      <div class="tour__img"><img src="img/tour-1.png" alt=""></div>
-                      <div class="tour__desc">
-                        <h5 class="tour__title">Название экскурсии</h5>
-                      </div>
-                    </div>
-                    <div class="tour__grade">
-                      <div class="tour__col">
-                        <div>Цена за 1 человека</div>
-                        <span>10 000 </span>
-                      </div>
-                      <div class="tour__col">
-                        <div>Итого</div>
-                        <div class="tour__price">120 000 Т</div>
-                      </div>
-                    </div>
-                    <div class="tour__links">
-                      <a class="tour__link" href="">
-                        <span>Подробнее</span>
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M14.052 10.4982C14.052 12.2142 12.6653 13.6008 10.9493 13.6008C9.23335 13.6008 7.84668 12.2142 7.84668 10.4982C7.84668 8.78217 9.23335 7.39551 10.9493 7.39551C12.6653 7.39551 14.052 8.78217 14.052 10.4982Z"
-                            stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                          <path
-                            d="M10.9491 17.6666C14.0084 17.6666 16.8598 15.8639 18.8444 12.7439C19.6244 11.5219 19.6244 9.46791 18.8444 8.24591C16.8598 5.12591 14.0084 3.32324 10.9491 3.32324C7.88975 3.32324 5.03842 5.12591 3.05375 8.24591C2.27375 9.46791 2.27375 11.5219 3.05375 12.7439C5.03842 15.8639 7.88975 17.6666 10.9491 17.6666Z"
-                            stroke="#292D32" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </a>
-                      <a class="tour__state">Добавить</a>
-                    </div>
-                  </div>
-                </div>
-                <a class="layout__tour-cancel cancel">Отменить выбор</a>
-              </div>
-            </div>
-            <div class="layout__box layout__previw layout__city">
-              <h4 class="layout__caption">Про Туркестан</h4>
-              <div class="layout__text content active">
-                <p>Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide
-                  cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant
-                  splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id
-                  dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum.</p>
-
-                <p>Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide
-                  cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant
-                  splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id
-                  dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum.</p>
-
-                <p>Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide
-                  cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id dicant
-                  splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum. Lorem ipsum dolor sit amet, id
-                  dicant splendide cum. Lorem ipsum dolor sit amet, id dicant splendide cum.</p>
-              </div>
-              <div>
-                <div class="layout__btn show">Подробнее...</div>
-                <div class="layout__btn hide">Свернуть</div>
-              </div>
-
             </div>
             <picture class="layout__box layout__promo promo promo_lg">
               <source srcset="img/promo-sm.png" media="(max-width: 520px)" />
