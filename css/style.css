@@ -6680,7 +6680,7 @@ h6 {
   }
 
   .form__counter {
-    top: calc(100% + 20px);
+    top: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
   }
@@ -6825,8 +6825,6 @@ h6 {
 
   .dropdown-content {
     top: calc(100% + 20px);
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
