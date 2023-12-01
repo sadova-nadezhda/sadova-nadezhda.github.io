@@ -2387,6 +2387,10 @@ h6 {
   background: #ECF0F5;
 }
 
+.filters__title {
+  display: none;
+}
+
 .filters__form {
   padding: 24px 32px;
   border-radius: 20px;
@@ -2453,6 +2457,10 @@ h6 {
 .filters__button:hover:not(:disabled) {
   background: #3880F3;
   color: #fff;
+}
+
+.filters.active {
+  left: 0;
 }
 
 /* sorting */
@@ -5844,10 +5852,17 @@ h6 {
     padding: 0;
   }
 
+  .filters__title {
+    display: block;
+    margin-bottom: 24px;
+  }
+
   .filters__form {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .filters__top {
@@ -5866,15 +5881,17 @@ h6 {
 
   .filters {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: -100vw;
     width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-    opacity: 0;
+    height: 100dvh;
+    padding: 20px;
+    padding-top: 80px;
+    border-radius: 0;
+    background: #fff;
+    z-index: 1;
     overflow: auto;
+    transition: all 0.3s ease-in-out;
   }
 
   .sorting .option {

@@ -101,6 +101,15 @@ window.addEventListener("load", function () {
         })
     }
 
+    // filters
+    let filterBtn = document.querySelector('.tickets__filt')
+    let filtetBox = document.querySelector('.tickets__filters')
+    if (filterBtn) {
+        filterBtn.addEventListener('click', () => {
+            filtetBox.classList.add('active')
+        })
+    }
+
     //sliders
     let swiper = new Swiper(".infoSwiper-sm", {
         loop: true,
