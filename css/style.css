@@ -2702,7 +2702,6 @@ h6 {
 .form__box {
   position: relative;
   flex: 0 1 24%;
-  max-width: 260px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2821,9 +2820,9 @@ h6 {
 
 .form__counter {
   position: absolute;
-  top: 130%;
+  top: calc(100% + 30px);
   left: 0;
-  min-width: 320px;
+  min-width: 300px;
   padding: 16px;
   border-radius: 20px;
   background: #FFF;
@@ -4082,6 +4081,7 @@ h6 {
   border-radius: 16px;
   background: #4E9F07;
   color: #fff;
+  line-height: 1.4em;
 }
 
 .tourists.show {
@@ -4265,6 +4265,7 @@ h6 {
   display: none;
   position: absolute;
   top: calc(100% + 30px);
+  left: 0;
   min-width: 300px;
   padding: 16px 0;
   border-radius: 20px;
@@ -5880,6 +5881,11 @@ h6 {
     padding: 12px 16px;
   }
 
+  .form__box svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .booking__cards {
     margin-bottom: 10px;
   }
@@ -6104,6 +6110,11 @@ h6 {
     margin: 0 auto;
     padding: 0;
     box-shadow: none;
+  }
+
+  .form__box svg {
+    width: 20px;
+    height: 20px;
   }
 
   .form__box {
@@ -6651,6 +6662,12 @@ h6 {
     order: 1;
   }
 
+  .form__counter {
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .reserv__cards {
     flex-direction: row;
     gap: 4px;
@@ -6787,6 +6804,12 @@ h6 {
 
   .popup textarea {
     height: 80px;
+  }
+
+  .dropdown-content {
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

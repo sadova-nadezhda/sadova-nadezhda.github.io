@@ -362,6 +362,7 @@ window.addEventListener("load", function () {
             } else {
                 document.querySelector('.input__tourists').value = `${count} взр. и ${child} реб.`;
             }
+            hideList(boxTourists);
 
         })
     }
