@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1-3 дневного тура</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231127000714">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231127000714" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231127000714" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231127000714" />
-  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231127000714">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231127000714" />
-  <link rel="stylesheet" href="css/style.css?_v=20231127000714" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231201133436">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231201133436" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231201133436" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231201133436" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231201133436">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231201133436" />
+  <link rel="stylesheet" href="css/style.css?_v=20231201133436" />
 </head>
 
 
@@ -213,11 +213,11 @@
 </header>
 
   <main class="main main_gr">
-    <section class="layout section_top">
+    <section class="layout tour section_top">
       <div class="container_lg">
         <div class="layout__container">
           <div class="layout__wrapper">
-            <div class="layout__row layout__info">
+            <div class="layout__row layout__info info">
               <div class="layout__slider">
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper infoSwiper">
                   <div class="swiper-wrapper">
@@ -453,10 +453,23 @@
               <h3 class="hotel__title">Отель: Жулдыз</h3>
               <div class="hotel__desc">Описание отеля</div>
               <div class="hotel__gallery">
-                <div class="hotel__img"><img src="img/hotel-1.png" alt=""></div>
-                <div class="hotel__img"><img src="img/hotel-1.png" alt=""></div>
-                <div class="hotel__img"><img src="img/hotel-1.png" alt=""></div>
-                <div class="hotel__img"><img src="img/hotel-1.png" alt=""></div>
+                <div class="swiper gallerySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide hotel__img" data-fancybox="hotel" data-src="img/hotel-1.png">
+                      <img src="img/hotel-1.png" alt="">
+                    </div>
+                    <div class="swiper-slide hotel__img" data-fancybox="hotel" data-src="img/hotel-1.png">
+                      <img src="img/hotel-1.png" alt="">
+                    </div>
+                    <div class="swiper-slide hotel__img" data-fancybox="hotel" data-src="img/hotel-1.png">
+                      <img src="img/hotel-1.png" alt="">
+                    </div>
+                    <div class="swiper-slide hotel__img" data-fancybox="hotel" data-src="img/hotel-1.png">
+                      <img src="img/hotel-1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </div>
               <div class="hotel__note">1-3 туры рассчитаны на самый бюджетный отель. Если вы хотите отель уровня выше,
                 <b>отправьте заявку</b> и <b>укажите в комментариях</b> свои пожелания.
@@ -1151,15 +1164,15 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231127000714"></script>
-<script src="js/jquery.maskedinput.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231127000714"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231127000714"></script>
-<script src="js/air-datepicker.js?_v=20231127000714"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231127000714"></script>
-<script src="js/app.js?_v=20231127000714"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231201133436"></script>
+<script src="js/jquery.maskedinput.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231201133436"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231201133436"></script>
+<script src="js/air-datepicker.js?_v=20231201133436"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231201133436"></script>
+<script src="js/app.js?_v=20231201133436"></script>
 
 </body>
 

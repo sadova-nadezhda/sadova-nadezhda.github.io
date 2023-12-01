@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Отель/Горячие источники</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231127000714">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231127000714" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231127000714" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231127000714" />
-  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231127000714">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231127000714" />
-  <link rel="stylesheet" href="css/style.css?_v=20231127000714" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231201133436">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231201133436" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231201133436" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231201133436" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231201133436">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231201133436" />
+  <link rel="stylesheet" href="css/style.css?_v=20231201133436" />
 </head>
 
 
@@ -425,6 +425,50 @@
                   </div>
                 </div>
               </div>
+              <div class="prices__change">
+                <div class="prices__definition">
+                  <p>Вы выбрали 2 периода с разными ценами, каждый день рассчитан в соответствии с его периодом.</p>
+                  <p>Вы можете изменить даты своего тура в блоке, расположенном ниже ⬇️:</p>
+                </div>
+                <form action="" class="prices-form">
+                  <div class="prices-form__row">
+                    <div class="prices-form__label">
+                      <div class="prices-form__input prices-form__date">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3334 1.86523V4.36523" stroke="#4E9F07" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M6.66663 1.86523L6.66663 4.36523" stroke="#4E9F07" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M6.66667 3.11523C3.89167 3.26523 2.5 4.32357 2.5 8.24023V13.3902C2.5 16.8236 3.33333 18.5402 7.5 18.5402H12.5C16.6667 18.5402 17.5 16.8236 17.5 13.3902L17.5 8.24023C17.5 4.32357 16.1083 3.27357 13.3333 3.11523L6.66667 3.11523Z"
+                            stroke="#4E9F07" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M2.70829 14.8652L17.2916 14.8652" stroke="#4E9F07" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M10 7.07422C11.025 7.07422 11.8917 7.63255 11.8917 8.71589C11.8917 9.23255 11.65 9.62422 11.2834 9.87422C11.7917 10.1742 12.0834 10.6576 12.0834 11.2242C12.0834 12.2576 11.2917 12.8992 10 12.8992C8.71671 12.8992 7.91671 12.2576 7.91671 11.2242C7.91671 10.6576 8.20837 10.1659 8.72504 9.87422C8.35004 9.61589 8.11671 9.23255 8.11671 8.71589C8.11671 7.63255 8.97504 7.07422 10 7.07422ZM10 9.44089C10.4334 9.44089 10.75 9.18255 10.75 8.77422C10.75 8.35755 10.4334 8.11589 10 8.11589C9.56671 8.11589 9.25004 8.35755 9.25004 8.77422C9.25004 9.18255 9.56671 9.44089 10 9.44089ZM10 11.8659C10.55 11.8659 10.95 11.5909 10.95 11.0909C10.95 10.5909 10.55 10.3242 10 10.3242C9.45004 10.3242 9.05004 10.5992 9.05004 11.0909C9.05004 11.5909 9.45004 11.8659 10 11.8659Z"
+                            fill="#4E9F07" />
+                        </svg>
+                        <input type="text" name="date" id="date" class="date-pick" placeholder="23.12 - 02.01">
+                      </div>
+                    </div>
+                    <div class="prices-form__label">
+                      <div class="prices-form__input prices-form__amount">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M9.95497 9.12513C8.17186 9.12513 6.72634 7.67962 6.72634 5.89651C6.72634 4.1134 8.17186 2.66797 9.95497 2.66797C11.7381 2.66797 13.1836 4.1134 13.1836 5.89651C13.1836 7.67962 11.7381 9.12513 9.95497 9.12513Z"
+                            stroke="#4E9F07" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M4.41468 16.9684C4.41468 14.4742 6.89502 12.4512 9.95734 12.4512C13.0197 12.4512 15.5 14.4742 15.5 16.9684"
+                            stroke="#4E9F07" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="text" name="amount" id="amount" placeholder="2 взр. и 2 реб.">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="prices-form__button button">Пересчитать стоимость</button>
+                </form>
+              </div>
             </div>
             <div class="layout__row layout__room rooms">
               <h2 class="rooms__title">Ваш номер</h2>
@@ -485,7 +529,7 @@
                 </div>
                 <div class="room__grade">
                   <div class="room__col">
-                    <div>Цена номера</div>
+                    <div class="room__price_sm">Цена номера</div>
                     <span>10 000 тг/ ночь</span>
                   </div>
                   <div class="room__col">
@@ -1768,15 +1812,15 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231127000714"></script>
-<script src="js/jquery.maskedinput.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231127000714"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231127000714"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231127000714"></script>
-<script src="js/air-datepicker.js?_v=20231127000714"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231127000714"></script>
-<script src="js/app.js?_v=20231127000714"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231201133436"></script>
+<script src="js/jquery.maskedinput.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231201133436"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231201133436"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231201133436"></script>
+<script src="js/air-datepicker.js?_v=20231201133436"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231201133436"></script>
+<script src="js/app.js?_v=20231201133436"></script>
 
 </body>
 

@@ -142,6 +142,15 @@ window.addEventListener("load", function () {
         },
       });
 
+      var swiper4 = new Swiper(".gallerySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 6,
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+      });
+
     let btnToggle = document.querySelectorAll('.layout__btn');
 
     btnToggle.forEach( btn => {
@@ -196,6 +205,7 @@ window.addEventListener("load", function () {
 
     new AirDatepicker('#index-date', {
         range: true,
+        // visible: true,
         multipleDatesSeparator: ' - ',
         buttons: [
             {
@@ -359,7 +369,7 @@ $(document).ready(function() {
 
     $('.js-multiple').select2({
         width: '100%',
-        // dropdownAutoWidth : true,
+        dropdownAutoWidth : true,
         selectionCssClass: "custom-container",
         dropdownCssClass: "loc-dropdown",
     });
