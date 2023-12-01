@@ -6930,7 +6930,7 @@ h6 {
   }
 
   .form__box {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     padding: 8px 12px;
     border-radius: 16px;
     border: 1px solid rgba(225, 228, 234, 0.5);
