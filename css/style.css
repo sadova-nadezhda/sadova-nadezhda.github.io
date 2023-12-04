@@ -263,7 +263,7 @@ input[type=radio] {
   --disabled-inner: #E1E6F9;
   -webkit-appearance: none;
   -moz-appearance: none;
-  height: 24px;
+  height: 18px;
   outline: none;
   display: inline-block;
   vertical-align: middle;
@@ -324,7 +324,7 @@ input[type=radio]:focus {
 
 input[type=checkbox]:not(.switch),
 input[type=radio]:not(.switch) {
-  width: 24px;
+  width: 18px;
 }
 
 input[type=checkbox]:not(.switch):after,
@@ -355,8 +355,8 @@ input[type=checkbox]:not(.switch):after {
   border: 2px solid var(--active-inner);
   border-top: 0;
   border-left: 0;
-  left: 9px;
-  top: 5px;
+  left: 5px;
+  top: 2px;
   transform: rotate(var(--r, 20deg));
 }
 
@@ -443,7 +443,7 @@ input:-internal-autofill-selected {
   gap: 10px;
   width: -moz-max-content;
   width: max-content;
-  padding: 15px 20px;
+  padding: 12px 16px;
   font-weight: 500;
   border: 0;
   border-radius: 10px;
@@ -1299,8 +1299,8 @@ h6 {
   display: block;
   width: 100%;
   height: 15vw;
-  max-height: 290px;
-  min-height: 220px;
+  max-height: 280px;
+  min-height: 200px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1359,7 +1359,7 @@ h6 {
 
 .card__img {
   position: relative;
-  height: 250px;
+  height: 230px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -2444,7 +2444,6 @@ h6 {
 .filters {
   padding: 24px;
   padding-left: 120px;
-  font-size: 20px;
   background: #ECF0F5;
 }
 
@@ -2453,22 +2452,21 @@ h6 {
 }
 
 .filters__form {
-  padding: 24px 32px;
-  border-radius: 20px;
+  padding: 20px 32px;
+  border-radius: 16px;
   background: #FFF;
   box-shadow: 0px 2.6px 20.8px 0px rgba(167, 182, 207, 0.12), 0px 5.2px 10.4px 0px rgba(89, 99, 117, 0.04), 0px 2.6px 20.8px 0px rgba(167, 182, 207, 0.12), 0px 5.2px 10.4px 0px rgba(89, 99, 117, 0.2);
 }
 
 .filters__top {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .filters__item {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 32px;
-  font-size: 20px;
+  margin-bottom: 24px;
   font-weight: 500;
 }
 
@@ -2478,8 +2476,8 @@ h6 {
 }
 
 .filters__col {
-  padding-bottom: 26px;
-  margin-bottom: 26px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
   background-image: linear-gradient(to right, #848F96 33%, rgba(255, 255, 255, 0) 0%);
   background-position: bottom;
   background-size: 20px 1.3px;
@@ -2489,11 +2487,13 @@ h6 {
 .filters__caption {
   width: -moz-max-content;
   width: max-content;
-  margin-bottom: 30px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  margin-bottom: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
   color: #fff;
   background: #3880F3;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .filters__field {
@@ -2583,7 +2583,7 @@ h6 {
 /* price */
 
 .price {
-  max-width: 280px;
+  max-width: 220px;
 }
 
 .price__container {
@@ -2640,9 +2640,19 @@ h6 {
   width: 100%;
   padding: 0;
   border: 0;
+  font-size: 16px;
+}
+
+.price__wrap input::-moz-placeholder {
+  font-size: 16px;
+}
+
+.price__wrap input::placeholder {
+  font-size: 16px;
 }
 
 .price__wrap label {
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.24);
 }
 
@@ -2650,7 +2660,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: 1px solid rgba(0, 0, 0, 0.24);
 }
 
@@ -2679,29 +2689,36 @@ h6 {
 }
 
 .price_new span {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .price__range {
   grid-column: 2 span;
 }
 
+.price__range .irs--flat {
+  height: 20px;
+}
+
 .price__range .irs--flat .irs-handle {
-  width: 13px;
-  height: 13px;
+  top: 0;
+  width: 12px;
+  height: 12px;
   background: #fff;
-  outline: 5px solid #4E9F07;
+  outline: 4px solid #4E9F07;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .price__range .irs--flat .irs-line {
+  top: 3px;
   height: 6px;
   background: rgba(93, 171, 34, 0.2);
   border-radius: 5px;
 }
 
 .price__range .irs--flat .irs-bar {
+  top: 3px;
   height: 6px;
   background: #4E9F07;
 }
@@ -4563,6 +4580,10 @@ h6 {
     font: 700 25px/1 GTWalsheimPro;
   }
 
+  h3 {
+    font: 700 22px/1 GTWalsheimPro;
+  }
+
   .main-menu__container {
     padding-top: 10px;
   }
@@ -4776,14 +4797,8 @@ h6 {
     font-size: 20px;
   }
 
-  .filters__item {
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-
   .filters {
     padding-left: 100px;
-    font-size: 18px;
   }
 
   .sorting .option {
@@ -4799,7 +4814,7 @@ h6 {
   }
 
   .price_new span {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .price_new {
@@ -5007,7 +5022,7 @@ h6 {
   }
 
   .button {
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 
   h1 {
@@ -5015,10 +5030,6 @@ h6 {
   }
 
   h2 {
-    font: 700 22px/1 GTWalsheimPro;
-  }
-
-  h3 {
     font: 700 22px/1 GTWalsheimPro;
   }
 
@@ -5419,11 +5430,7 @@ h6 {
   }
 
   .filters__form {
-    padding: 24px;
-  }
-
-  .filters__top {
-    margin-bottom: 24px;
+    padding: 20px;
   }
 
   .filters__item svg {
@@ -5432,21 +5439,7 @@ h6 {
   }
 
   .filters__item {
-    margin-bottom: 24px;
     font-size: 16px;
-  }
-
-  .filters__col {
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
-
-  .filters__caption {
-    margin-bottom: 24px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 500;
   }
 
   .filters {
@@ -5471,16 +5464,12 @@ h6 {
     font-size: 16px;
   }
 
-  .price__input {
-    padding: 8px 16px;
-  }
-
   .price_old {
     font-size: 16px;
   }
 
   .price_new span {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .price_new {
@@ -6391,10 +6380,6 @@ h6 {
     display: none;
   }
 
-  .price_new span {
-    font-size: 24px;
-  }
-
   .price_new {
     font-size: 18px;
   }
@@ -6763,6 +6748,10 @@ h6 {
 
   .accordion {
     flex: 1 1 100%;
+  }
+
+  .price_new span {
+    font-size: 22px;
   }
 
   .total-price_old {
@@ -7141,12 +7130,6 @@ h6 {
 
   .layout__container {
     padding-top: 250px;
-  }
-}
-
-@media (max-width: 390px) {
-  .price_new span {
-    font-size: 22px;
   }
 }
 
