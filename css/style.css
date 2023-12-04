@@ -720,6 +720,10 @@ h6 {
   display: none;
 }
 
+.header_inner .inner-menu {
+  display: block;
+}
+
 .main-menu {
   background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(2.6000001431px);
@@ -909,6 +913,61 @@ h6 {
   border: 1.3px solid var(--base-yellow-gradient, #F2A510);
   background: var(--base-yellow-gradient, linear-gradient(186deg, #F2A510 46.05%, #EFB215 120.94%));
   font-size: 20px;
+}
+
+.inner-menu {
+  display: none;
+  background-color: var(--main, #2569D7);
+}
+
+.inner-menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.inner-menu__form {
+  position: relative;
+  max-width: 750px;
+}
+
+.inner-menu .form__box svg {
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.inner-menu .form__wrap {
+  padding: 6px;
+  padding-left: 20px;
+}
+
+.inner-menu .form__box {
+  flex: 0 0 200px;
+  border-right: 1px solid rgba(41, 45, 50, 0.04);
+}
+
+.inner-menu .form__box_last {
+  border-right: 0;
+}
+
+.inner-menu .form__button {
+  min-width: unset;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 32px;
+  background: #2569D7;
+}
+
+.inner-menu .form__input label {
+  font-size: 16px;
+}
+
+.inner-menu .form__input input {
+  font-size: 18px;
 }
 
 .logo {
@@ -1529,19 +1588,28 @@ h6 {
   width: 100%;
 }
 
-.infoSwiper-sm {
+.popup-hotelSwiper {
+  height: 30vw;
+  max-height: 320px;
+  width: 100%;
+}
+
+.infoSwiper-sm,
+.popup-hotelSwiper-sm {
   height: 85px;
   box-sizing: border-box;
   padding-top: 10px;
 }
 
-.infoSwiper-sm .swiper-slide {
+.infoSwiper-sm .swiper-slide,
+.popup-hotelSwiper-sm .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
 
-.infoSwiper-sm .swiper-slide-thumb-active {
+.infoSwiper-sm .swiper-slide-thumb-active,
+.popup-hotelSwiper-sm .swiper-slide-thumb-active {
   opacity: 1;
 }
 
@@ -4123,7 +4191,7 @@ h6 {
   background: #FFF;
 }
 
-.popup_close {
+.popup__close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -4138,11 +4206,11 @@ h6 {
   background-color: transparent;
 }
 
-.popup_close svg {
+.popup__close svg {
   pointer-events: none;
 }
 
-.popup_close:hover {
+.popup__close:hover {
   cursor: pointer;
 }
 
@@ -4173,6 +4241,69 @@ h6 {
 
 .popup textarea {
   height: 80px;
+}
+
+.popup-hotel {
+  background: rgba(41, 45, 50, 0.4);
+}
+
+.popup-hotel__container {
+  height: 90vh;
+  padding: 0;
+  padding-right: 20px;
+  overflow: auto;
+  background-color: transparent;
+}
+
+.popup-hotel__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 16px;
+  padding-top: 60px;
+  border-radius: 16px;
+  background: #FFF;
+}
+
+.popup-hotel__slider {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(41, 45, 50, 0.08);
+}
+
+.popup-hotel__caption {
+  margin-bottom: 12px;
+}
+
+.popup-hotel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px;
+  border-left: 4px solid #4E9F07;
+}
+
+.popup-hotel__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-hotel__item span {
+  font-weight: 500;
+}
+
+.popup-hotel__text {
+  padding-left: 20px;
+  border-left: 4px solid #4E9F07;
+}
+
+.popup-hotel__btn {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(41, 45, 50, 0.08);
+  color: #292D32;
 }
 
 /* customs */
@@ -4986,6 +5117,11 @@ h6 {
     font-size: 16px;
   }
 
+  .inner-menu__container {
+    gap: 32px;
+    padding: 12px 0;
+  }
+
   .logo__txt span:first-child {
     font-size: 16px;
   }
@@ -5706,6 +5842,10 @@ h6 {
     gap: 26px;
   }
 
+  .inner-menu__container {
+    gap: 26px;
+  }
+
   .tickets__content {
     padding-right: 50px;
   }
@@ -5734,6 +5874,12 @@ h6 {
     padding-right: 0;
     margin-right: 0;
     border-right: none;
+  }
+}
+
+@media (max-width: 1260px) {
+  .inner-menu .form__box {
+    flex: 0 0 22%;
   }
 }
 
@@ -5773,6 +5919,11 @@ h6 {
 
   .secondary-menu__form .button {
     padding: 10px 14px;
+  }
+
+  .inner-menu__container {
+    gap: 20px;
+    padding: 10px 0;
   }
 
   .telephone__icon {
@@ -5964,6 +6115,10 @@ h6 {
     font: 700 18px/1 GTWalsheimPro;
   }
 
+  .header_inner .inner-menu {
+    display: none;
+  }
+
   .decor {
     top: 3%;
   }
@@ -5986,7 +6141,12 @@ h6 {
     height: 45vw;
   }
 
-  .infoSwiper-sm {
+  .popup-hotelSwiper {
+    height: 45vw;
+  }
+
+  .infoSwiper-sm,
+  .popup-hotelSwiper-sm {
     height: 65px;
   }
 
@@ -6342,7 +6502,14 @@ h6 {
     min-height: 250px;
   }
 
-  .infoSwiper-sm {
+  .popup-hotelSwiper {
+    height: 300px;
+    max-height: 300px;
+    min-height: 250px;
+  }
+
+  .infoSwiper-sm,
+  .popup-hotelSwiper-sm {
     display: none;
   }
 
@@ -6461,6 +6628,7 @@ h6 {
   }
 
   .layout__text {
+    gap: 24px;
     padding: 0 12px;
     padding-bottom: 24px;
     border-bottom: 1px solid #A8B2BF;
@@ -6491,9 +6659,6 @@ h6 {
 
   .layout__about_top:first-child {
     order: 1;
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid #A8B2BF;
   }
 
   .layout__about {
@@ -7024,6 +7189,10 @@ h6 {
 
 @media (max-width: 400px) {
   .infoSwiper {
+    height: 250px;
+  }
+
+  .popup-hotelSwiper {
     height: 250px;
   }
 

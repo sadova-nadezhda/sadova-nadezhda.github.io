@@ -22,6 +22,9 @@ window.addEventListener("load", function () {
     const btnSearch = document.querySelector('.search-btn');
     const boxSearch = document.querySelector('.search-box');
 
+    let inpCity = document.querySelector('#form-city');
+    let boxCity = document.getElementById("form-list");
+
     // Обработчик события для кнопки
     button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
@@ -43,11 +46,13 @@ window.addEventListener("load", function () {
         if (event.target === btnSearch) {
             boxSearch.classList.toggle('active');
         }
-        if (!boxCity.contains(event.target) && event.target !== inpCity) {
-            hideList(boxCity);
-        }
-        if (!boxTourists.contains(event.target) && event.target !== inpTourists) {
-            hideList(boxTourists);
+        if (boxCity) {
+            if (!boxCity.contains(event.target) && event.target !== inpCity) {
+                hideList(boxCity);
+            }
+            if (!boxTourists.contains(event.target) && event.target !== inpTourists) {
+                hideList(boxTourists);
+            }
         }
         else if (!event.target.classList.contains('search-input')) {
             boxSearch.classList.remove('active');
@@ -170,6 +175,29 @@ window.addEventListener("load", function () {
         // },
     });
 
+    let swiper5 = new Swiper(".popup-hotelSwiper-sm", {
+        loop: true,
+        spaceBetween: 16,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    let swiper6 = new Swiper(".popup-hotelSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        thumbs: {
+            swiper: swiper5,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".popup-hotel-button-next",
+            prevEl: ".popup-hotel-button-prev",
+        },
+    });
+
     // Read More layout__previw
 
     let btnToggle = document.querySelectorAll('.layout__btn');
@@ -202,6 +230,27 @@ window.addEventListener("load", function () {
         })
     }
 
+    // room button
+    let popupHotel = document.querySelector("#popup-hotel");
+    if (popupHotel) {
+        let roomLinks = document.querySelectorAll('.room__link');
+        $(roomLinks).each(function () {
+            $(this).on('click', () => {
+                $(popupHotel).fadeIn(400);
+            })
+        });
+        $(popupHotel).click(function (e) {
+            const target = e.target;
+            if (
+                $(target).hasClass("popup_close") ||
+                $(target).hasClass("popup-hotel")
+            ) {
+                $(popupHotel).fadeOut(400);
+            }
+        });
+    }
+
+
     // accordion
 
     const boxes = Array.from(document.querySelectorAll(".accordion__box"));
@@ -233,6 +282,7 @@ window.addEventListener("load", function () {
         multipleDatesSeparator: " - ",
         position: 'bottom left',
         offset: 20,
+        dateFormat: 'dd MMM.',
         buttons: [
             {
                 content(dp) {
@@ -247,6 +297,17 @@ window.addEventListener("load", function () {
     // application 1
     new AirDatepicker('#date', {
         dateFormat: 'dd / MM / yyyy',
+    });
+    // application 3
+    new AirDatepicker('#date-pick', {
+        range: true,
+        // visible: true,
+        minDate: new Date(),
+        multipleDates: true,
+        multipleDatesSeparator: " - ",
+        position: 'bottom left',
+        offset: 20,
+        dateFormat: 'dd MMM.'
     });
     // application 2
     new AirDatepicker('#date-start', {
@@ -285,11 +346,6 @@ window.addEventListener("load", function () {
 
     // form-city
 
-    let inpCity = document.querySelector('#form-city');
-    let boxCity = document.getElementById("form-list");
-    let links = Array.from(boxCity.querySelectorAll("a"));
-
-
     function filterList() {
         const filter = inpCity.value.toUpperCase();
 
@@ -300,6 +356,7 @@ window.addEventListener("load", function () {
     }
 
     if (inpCity) {
+        let links = Array.from(boxCity.querySelectorAll("a"));
         inpCity.addEventListener('click', () => {
             showList(boxCity);
             links.forEach(link => {
