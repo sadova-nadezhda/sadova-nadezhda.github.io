@@ -735,8 +735,8 @@ h6 {
   justify-content: space-between;
   align-items: center;
   gap: 2vw;
-  padding-top: 26px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 10px;
 }
 
 .main-menu__box {
@@ -807,7 +807,7 @@ h6 {
 .main-menu__tel {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
 }
 
 .main-menu__socials {
@@ -821,12 +821,10 @@ h6 {
 }
 
 .main-menu__socials svg {
-  width: 2.8vw;
-  height: 2.8vw;
+  width: 36px;
+  height: 36px;
   min-width: 25px;
   min-height: 25px;
-  max-width: 58px;
-  max-height: 58px;
   transition: all 0.2s linear;
 }
 
@@ -834,8 +832,8 @@ h6 {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 18px 15px;
-  border-radius: 20px;
+  padding: 10px 12px;
+  border-radius: 16px;
   border: 1.3px solid rgba(225, 228, 234, 0.5);
   background: #FAFAFA;
 }
@@ -861,7 +859,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .secondary-menu__box {
@@ -869,6 +867,10 @@ h6 {
   align-items: center;
   gap: 30px;
   color: var(--light, #fff);
+}
+
+.secondary-menu__title {
+  font-size: 24px;
 }
 
 .secondary-menu__img {
@@ -887,10 +889,9 @@ h6 {
 
 .secondary-menu__form input {
   width: 100%;
-  padding: 15px 20px;
+  padding: 10px 16px;
   border: 0;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 8px;
   font-weight: 500;
 }
 
@@ -908,11 +909,10 @@ h6 {
 
 .secondary-menu__form .button {
   width: 100%;
-  padding: 15px 20px;
-  border-radius: 10px;
-  border: 1.3px solid var(--base-yellow-gradient, #F2A510);
-  background: var(--base-yellow-gradient, linear-gradient(186deg, #F2A510 46.05%, #EFB215 120.94%));
-  font-size: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #F2A510;
+  background: linear-gradient(186deg, #F2A510 46.05%, #EFB215 120.94%);
 }
 
 .inner-menu {
@@ -971,12 +971,8 @@ h6 {
 }
 
 .logo {
-  width: 4.2vw;
-  height: 2.3vw;
-  max-width: 82px;
-  max-height: 46px;
-  min-width: 52px;
-  min-height: 30px;
+  width: 63px;
+  height: 35px;
 }
 
 .logo img {
@@ -997,21 +993,20 @@ h6 {
 
 .logo__txt span:first-child {
   font-family: AvertaStd;
-  font-size: 20px;
 }
 
 .logo__txt span:last-child {
   opacity: 0.6;
-  letter-spacing: 0.681px;
-  font-size: 10px;
+  letter-spacing: 0.84px;
+  font-size: 12px;
 }
 
 .telephone__icon {
-  width: 50px;
-  height: 50px;
-  padding: 13px;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
   border-radius: 100%;
-  border: 2px solid var(--main, #2569D7);
+  border: 1.5px solid var(--main, #2569D7);
 }
 
 .telephone__icon svg {
@@ -1022,7 +1017,7 @@ h6 {
 .telephone__txt {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 
 .telephone__txt span {
@@ -1032,7 +1027,6 @@ h6 {
 .telephone__txt a {
   color: var(--main, #2569D7);
   font-weight: 700;
-  font-size: 20px;
   letter-spacing: 1.3px;
 }
 
@@ -1107,7 +1101,7 @@ h6 {
 }
 
 .search-form {
-  min-width: 20vw;
+  min-width: 18vw;
 }
 
 .language {
@@ -1661,9 +1655,8 @@ h6 {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 31.5vw;
-  min-height: 605px;
-  margin-top: 180px;
+  height: 20vw;
+  min-height: 400px;
   padding-bottom: 40px;
 }
 
@@ -1701,10 +1694,10 @@ h6 {
   display: block;
   width: -moz-max-content;
   width: max-content;
-  height: 250px;
+  height: 200px;
   margin: 0 auto;
   font-family: Pacifico;
-  font-size: 170px;
+  font-size: 140px;
   background: linear-gradient(180deg, #FFF 37.93%, rgba(255, 255, 255, 0.56) 99.77%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -4311,9 +4304,9 @@ h6 {
 .checkbox-txt {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 10px 20px;
-  border-radius: 20px;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 17px;
   background: var(--light, #FFF);
   cursor: pointer;
 }
@@ -4571,20 +4564,21 @@ h6 {
   }
 
   .main-menu__container {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .main-menu__tel {
-    gap: 16px;
+    gap: 6px;
+  }
+
+  .main-menu__socials {
+    width: 32px;
+    height: 32px;
   }
 
   .main-menu__form svg {
     width: 18px;
     height: 18px;
-  }
-
-  .main-menu__form {
-    padding: 16px 14px;
   }
 
   .secondary-menu__img {
@@ -4601,25 +4595,11 @@ h6 {
     font-size: 18px;
   }
 
-  .secondary-menu__form input {
-    padding: 13px 18px;
-    font-size: 18px;
-  }
-
-  .secondary-menu__form .button {
-    padding: 13px 18px;
-    font-size: 18px;
-  }
-
-  .logo__txt span:first-child {
-    font-size: 18px;
-  }
-
   .telephone__icon {
-    width: 45px;
-    height: 45px;
-    padding: 12px;
-    border-width: 1.5px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-width: 1px;
   }
 
   .telephone__txt span {
@@ -4627,11 +4607,7 @@ h6 {
   }
 
   .telephone__txt a {
-    font-size: 18px;
-  }
-
-  .telephone__txt {
-    gap: 8px;
+    font-size: 16px;
   }
 
   .footer__links a {
@@ -5054,11 +5030,6 @@ h6 {
     border-top: 1.3px solid rgba(41, 45, 50, 0.04);
   }
 
-  .main-menu__container {
-    padding-top: 15px;
-    padding-bottom: 12px;
-  }
-
   .main-menu__box {
     gap: 32px;
   }
@@ -5068,11 +5039,13 @@ h6 {
   }
 
   .main-menu__tel {
-    gap: 12px;
+    gap: 4px;
   }
 
   .main-menu__socials {
     gap: 20px;
+    width: 28px;
+    height: 28px;
   }
 
   .main-menu__form svg {
@@ -5080,13 +5053,8 @@ h6 {
     height: 16px;
   }
 
-  .main-menu__form {
-    padding: 14px 12px;
-  }
-
   .secondary-menu__container {
     gap: 32px;
-    padding: 12px 0;
   }
 
   .secondary-menu__box {
@@ -5108,12 +5076,10 @@ h6 {
   }
 
   .secondary-menu__form input {
-    padding: 12px 16px;
     font-size: 16px;
   }
 
   .secondary-menu__form .button {
-    padding: 12px 16px;
     font-size: 16px;
   }
 
@@ -5127,14 +5093,13 @@ h6 {
   }
 
   .logo__txt span:last-child {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .telephone__icon {
-    width: 38px;
-    height: 38px;
-    padding: 10px;
-    border-width: 1.5px;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
   }
 
   .telephone__txt span {
@@ -5142,11 +5107,7 @@ h6 {
   }
 
   .telephone__txt a {
-    font-size: 16px;
-  }
-
-  .telephone__txt {
-    gap: 6px;
+    font-size: 14px;
   }
 
   .nav__list {
@@ -5818,12 +5779,6 @@ h6 {
     font-size: 16px;
   }
 
-  .checkbox-txt {
-    gap: 4px;
-    padding: 8px 16px;
-    border-radius: 16px;
-  }
-
   .select2-container--default .select2-selection--single .select2-selection__placeholder {
     font-size: 16px;
   }
@@ -5904,7 +5859,6 @@ h6 {
 
   .secondary-menu__container {
     gap: 20px;
-    padding: 10px 0;
   }
 
   .secondary-menu__img {
@@ -5913,24 +5867,9 @@ h6 {
     border-width: 4px;
   }
 
-  .secondary-menu__form input {
-    padding: 10px 14px;
-  }
-
-  .secondary-menu__form .button {
-    padding: 10px 14px;
-  }
-
   .inner-menu__container {
     gap: 20px;
     padding: 10px 0;
-  }
-
-  .telephone__icon {
-    width: 35px;
-    height: 35px;
-    padding: 8px;
-    border-width: 1px;
   }
 
   .search-btn {
