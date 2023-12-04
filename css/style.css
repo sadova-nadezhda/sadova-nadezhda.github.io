@@ -823,8 +823,6 @@ h6 {
 .main-menu__socials svg {
   width: 36px;
   height: 36px;
-  min-width: 25px;
-  min-height: 25px;
   transition: all 0.2s linear;
 }
 
@@ -4592,7 +4590,7 @@ h6 {
     gap: 6px;
   }
 
-  .main-menu__socials {
+  .main-menu__socials svg {
     width: 32px;
     height: 32px;
   }
@@ -5053,10 +5051,13 @@ h6 {
     gap: 4px;
   }
 
-  .main-menu__socials {
-    gap: 20px;
+  .main-menu__socials svg {
     width: 28px;
     height: 28px;
+  }
+
+  .main-menu__socials {
+    gap: 20px;
   }
 
   .main-menu__form svg {
