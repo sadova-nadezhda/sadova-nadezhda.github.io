@@ -1837,7 +1837,7 @@ h6 {
 
 .application__title {
   margin-bottom: 46px;
-  font-size: 41px;
+  font-size: 35px;
 }
 
 .application__aside {
@@ -1849,7 +1849,7 @@ h6 {
 
 .application__caption {
   margin-bottom: 20px;
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
 }
 
@@ -4736,7 +4736,7 @@ h6 {
 
   .application__title {
     margin-bottom: 40px;
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .application__aside {
@@ -4745,7 +4745,7 @@ h6 {
   }
 
   .application__caption {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .application__list li:last-child {
@@ -4754,6 +4754,10 @@ h6 {
 
   .application__list li {
     padding-bottom: 32px;
+  }
+
+  .application__list h5 {
+    font-size: 20px;
   }
 
   .application__benefit svg {
@@ -4874,6 +4878,10 @@ h6 {
 
   .room__info {
     grid-template-columns: 120px 1fr;
+  }
+
+  .room__title {
+    font-size: 20px;
   }
 
   .room__img {
@@ -5158,6 +5166,10 @@ h6 {
     gap: 24px;
   }
 
+  .title {
+    font-size: 20px;
+  }
+
   .heading {
     padding: 12px 16px;
     font-size: 20px;
@@ -5330,7 +5342,7 @@ h6 {
 
   .application__title {
     margin-bottom: 36px;
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .application__aside {
@@ -5339,7 +5351,7 @@ h6 {
   }
 
   .application__caption {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .application__list li:last-child {
@@ -5348,6 +5360,10 @@ h6 {
 
   .application__list li {
     padding-bottom: 24px;
+  }
+
+  .application__list h5 {
+    font-size: 18px;
   }
 
   .application__list span {
@@ -5551,6 +5567,10 @@ h6 {
     font-size: 16px;
   }
 
+  .booking__title {
+    font-size: 20px;
+  }
+
   .booking__cards {
     margin-bottom: 16px;
   }
@@ -5562,6 +5582,10 @@ h6 {
 
   .room__info {
     grid-template-columns: 100px 1fr;
+  }
+
+  .room__title {
+    font-size: 18px;
   }
 
   .room__img {
@@ -5769,6 +5793,12 @@ h6 {
   }
 }
 
+@media (max-width: 1360px) {
+  .decor {
+    top: -3%;
+  }
+}
+
 @media (max-width: 1300px) {
   .container_lg {
     padding: 0 60px;
@@ -5880,7 +5910,7 @@ h6 {
   }
 
   .decor {
-    top: 0;
+    top: -1%;
   }
 
   .uly-dala__title svg {
@@ -5915,11 +5945,11 @@ h6 {
 
   .application__title {
     margin-bottom: 30px;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .application__caption {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .layout__box {
@@ -5990,6 +6020,10 @@ h6 {
 @media (max-width: 1100px) {
   .nav__links {
     gap: 20px;
+  }
+
+  .decor {
+    top: 0;
   }
 
   .layout__container {
@@ -6083,14 +6117,6 @@ h6 {
 
   .application__wrapper {
     padding: 16px;
-  }
-
-  .application__title {
-    font-size: 26px;
-  }
-
-  .application__caption {
-    font-size: 24px;
   }
 
   .layout__info {
@@ -7109,23 +7135,8 @@ h6 {
 }
 
 @media (max-width: 380px) {
-  .room__info {
-    grid-template-columns: 1fr;
-  }
-
   .room__img {
     height: 120px;
-  }
-
-  .room__grade {
-    grid-template-columns: 1fr;
-  }
-
-  .room__col:first-child {
-    border-right: 0;
-    padding-bottom: 10px;
-    border-right: 0;
-    border-bottom: 1.3px solid rgba(41, 45, 50, 0.08);
   }
 
   .room__col:nth-child(even) {
