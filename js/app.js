@@ -24,9 +24,12 @@ window.addEventListener("load", function () {
 
     let boxCity = document.querySelector("#form-list");
     let boxTourists = document.querySelector('#tourists-popup');
-    let links = Array.from(boxCity.querySelectorAll("a"));
-    let inpCity = document.querySelector('#form-city');
-    let inpTourists = document.querySelector('#form-tourists');
+    if (boxCity) {
+        let links = Array.from(boxCity.querySelectorAll("a"));
+        let inpCity = document.querySelector('#form-city');
+        let inpTourists = document.querySelector('#form-tourists');
+    }
+
 
     // Обработчик события для кнопки
     button.addEventListener('click', () => {
