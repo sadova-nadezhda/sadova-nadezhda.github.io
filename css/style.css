@@ -229,6 +229,7 @@ button,
 textarea,
 select {
   font: inherit;
+  line-height: 1;
 }
 
 :root {
@@ -1374,7 +1375,6 @@ h6 {
   border-radius: 5px;
   color: #FFF;
   background: #E74B30;
-  font-size: 20px;
 }
 
 .card__header {
@@ -1576,13 +1576,13 @@ h6 {
 }
 
 .infoSwiper {
-  height: 30vw;
+  height: 28vw;
   max-height: 600px;
   width: 100%;
 }
 
 .popup-hotelSwiper {
-  height: 30vw;
+  height: 28vw;
   max-height: 320px;
   width: 100%;
 }
@@ -1903,7 +1903,6 @@ h6 {
 
 .application__list span {
   color: #51555B;
-  font-size: 20px;
 }
 
 .application__benefits {
@@ -1924,7 +1923,6 @@ h6 {
 }
 
 .application__benefit span {
-  font-size: 20px;
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: 1.248px;
@@ -1945,7 +1943,6 @@ h6 {
 
 .layout {
   padding: 30px 0;
-  font-size: 20px;
 }
 
 .layout__container {
@@ -2863,9 +2860,8 @@ h6 {
 
 .form-nutrition__select {
   height: auto;
-  padding: 15px;
+  padding: 10px 16px;
   color: #8D939B;
-  font-size: 20px;
   line-height: 1;
   border-radius: 10px;
   border: 1.3px solid rgba(225, 228, 234, 0.5);
@@ -4667,7 +4663,6 @@ h6 {
 
   .card__sales {
     padding: 12px;
-    font-size: 18px;
   }
 
   .card__title {
@@ -4755,10 +4750,6 @@ h6 {
 
   .application__list li {
     padding-bottom: 32px;
-  }
-
-  .application__list span {
-    font-size: 18px;
   }
 
   .application__benefit svg {
@@ -4859,10 +4850,6 @@ h6 {
 
   .form-nutrition__elem {
     flex: 1 1 20%;
-  }
-
-  .form-nutrition__select {
-    font-size: 18px;
   }
 
   .reserv__text_sm {
@@ -5191,7 +5178,6 @@ h6 {
   .card__sales {
     padding: 10px;
     border-radius: 4px;
-    font-size: 16px;
   }
 
   .card__title {
@@ -5533,11 +5519,6 @@ h6 {
   }
 
   .form-nutrition__check label {
-    font-size: 16px;
-  }
-
-  .form-nutrition__select {
-    padding: 12px 16px;
     font-size: 16px;
   }
 

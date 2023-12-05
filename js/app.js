@@ -68,7 +68,7 @@ window.addEventListener("load", function () {
     });
 
     // Section Top
-    let headerHeight = document.querySelector(".header").clientHeight;
+    let headerHeight = document.querySelector(".header").offsetHeight;
     let sectionTop = document.querySelector('.section_top');
     if (sectionTop) {
         sectionTop.style.marginTop = `${headerHeight}px`;
