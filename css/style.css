@@ -2015,6 +2015,10 @@ h6 {
   gap: 20px;
 }
 
+.layout__title {
+  font-size: 32px;
+}
+
 .layout__top {
   display: flex;
   flex-direction: column;
@@ -2296,6 +2300,7 @@ h6 {
 
 .layout__caption {
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
 .layout__previw .layout__text {
@@ -4774,6 +4779,10 @@ h6 {
     border-radius: 32px;
   }
 
+  .layout__title {
+    font-size: 28px;
+  }
+
   .layout__rating {
     font-size: 16px;
   }
@@ -4791,8 +4800,20 @@ h6 {
     font-size: 20px;
   }
 
-  .layout {
-    font-size: 16px;
+  .layout__aside {
+    gap: 26px;
+  }
+
+  .layout__box {
+    padding: 20px;
+  }
+
+  .layout__tour-card .tour__price {
+    font-size: 18px;
+  }
+
+  .layout__caption {
+    font-size: 24px;
   }
 
   .accordion__label {
@@ -5396,6 +5417,10 @@ h6 {
     padding: 20px;
   }
 
+  .layout__title {
+    font-size: 24px;
+  }
+
   .layout__rating {
     font-size: 14px;
   }
@@ -5431,6 +5456,14 @@ h6 {
     font-size: 14px;
   }
 
+  .layout__aside {
+    gap: 24px;
+  }
+
+  .layout__box {
+    padding: 16px 20px;
+  }
+
   .layout__tour-text {
     margin-bottom: 20px;
   }
@@ -5440,12 +5473,24 @@ h6 {
     margin-bottom: 20px;
   }
 
+  .layout__tour-card .tour__col {
+    font-size: 14px;
+  }
+
+  .layout__tour-card .tour__price {
+    font-size: 16px;
+  }
+
   .layout__tour-card {
     border-radius: 12px;
   }
 
   .layout__tour {
     border-radius: 20px;
+  }
+
+  .layout__caption {
+    font-size: 22px;
   }
 
   .accordion__label {
@@ -5957,6 +6002,10 @@ h6 {
     border-radius: 20px;
   }
 
+  .layout__caption {
+    font-size: 20px;
+  }
+
   .layout__promo {
     padding: 0;
   }
@@ -6036,7 +6085,7 @@ h6 {
   .layout__aside {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
   }
 
   .layout__tour-cards {
@@ -6122,6 +6171,10 @@ h6 {
   .layout__info {
     grid-template-columns: 100%;
     gap: 24px;
+  }
+
+  .layout__caption {
+    font-size: 18px;
   }
 
   .form-nutrition__check {
