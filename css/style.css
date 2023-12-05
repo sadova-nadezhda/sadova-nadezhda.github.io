@@ -7135,29 +7135,24 @@ h6 {
 }
 
 @media (max-width: 380px) {
+  .room__info {
+    grid-template-columns: 120px 1fr;
+  }
+
   .room__img {
     height: 120px;
   }
 
+  .room__grade {
+    grid-template-columns: repeat(2, auto);
+  }
+
   .room__col:nth-child(even) {
     padding-left: 8px;
-    align-items: flex-start;
-    text-align: start;
   }
 
   .tour__grade {
-    grid-template-columns: 1fr;
-  }
-
-  .tour__col:first-child {
-    padding-bottom: 10px;
-    border-right: 0;
-    border-bottom: 1.3px solid rgba(41, 45, 50, 0.08);
-  }
-
-  .tour__col:nth-child(even) {
-    align-items: flex-start;
-    text-align: start;
+    grid-template-columns: repeat(2, auto);
   }
 
   .feedback-form__phone input[name=code] {
