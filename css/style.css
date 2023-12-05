@@ -1156,7 +1156,6 @@ h6 {
 
 .footer__links a {
   position: relative;
-  font-size: 20px;
   transition: all 0.2s linear;
 }
 
@@ -4632,8 +4631,12 @@ h6 {
     font-size: 16px;
   }
 
+  .footer__caption {
+    font-size: 20px;
+  }
+
   .footer__links a {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .section_pd {
@@ -5149,10 +5152,6 @@ h6 {
   .footer__caption {
     margin-bottom: 20px;
     font-size: 18px;
-  }
-
-  .footer__links a {
-    font-size: 16px;
   }
 
   .section_pd {
