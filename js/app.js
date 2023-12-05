@@ -22,8 +22,11 @@ window.addEventListener("load", function () {
     const btnSearch = document.querySelector('.search-btn');
     const boxSearch = document.querySelector('.search-box');
 
+    let boxCity = document.querySelector("#form-list");
+    let boxTourists = document.querySelector('#tourists-popup');
+    let links = Array.from(boxCity.querySelectorAll("a"));
     let inpCity = document.querySelector('#form-city');
-    let boxCity = document.getElementById("form-list");
+    let inpTourists = document.querySelector('#form-tourists');
 
     // Обработчик события для кнопки
     button.addEventListener('click', () => {
@@ -298,6 +301,13 @@ window.addEventListener("load", function () {
     new AirDatepicker('#date', {
         dateFormat: 'dd / MM / yyyy',
     });
+    // application 2
+    new AirDatepicker('#date-start', {
+        dateFormat: 'dd / MM / yyyy',
+    });
+    new AirDatepicker('#date-end', {
+        dateFormat: 'dd / MM / yyyy',
+    });
     // application 3
     new AirDatepicker('#date-pick', {
         range: true,
@@ -308,13 +318,6 @@ window.addEventListener("load", function () {
         position: 'bottom left',
         offset: 20,
         dateFormat: 'dd MMM.'
-    });
-    // application 2
-    new AirDatepicker('#date-start', {
-        dateFormat: 'dd / MM / yyyy',
-    });
-    new AirDatepicker('#date-end', {
-        dateFormat: 'dd / MM / yyyy',
     });
 
     // Show/Hide label
@@ -341,13 +344,16 @@ window.addEventListener("load", function () {
     }
 
     function hideList(box) {
-        box.classList.remove("show");
+        if (box.classList.contains('show')) {
+            box.classList.remove("show");
+            console.log(box)
+        }
     }
 
     // form-city
 
-    function filterList() {
-        const filter = inpCity.value.toUpperCase();
+    function filterList(input) {
+        const filter = input.value.toUpperCase();
 
         links.forEach(link => {
             const txtValue = link.textContent || link.innerText;
@@ -355,31 +361,48 @@ window.addEventListener("load", function () {
         });
     }
 
-    if (inpCity) {
-        let links = Array.from(boxCity.querySelectorAll("a"));
-        inpCity.addEventListener('click', () => {
-            showList(boxCity);
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    inpCity.value = e.target.getAttribute('data-value');
-                    hideList(boxCity);
+    let formInputs = document.querySelectorAll('.form__input')
+
+    if (formInputs) {
+        formInputs.forEach(item => {
+            let input = item.querySelector('input')
+            item.addEventListener('click', (e) => {
+                let target = e.target;
+                if (item.classList.contains('type')) {
+                    showList(boxCity);
+                }
+                if (item.classList.contains('tour')) {
+                    showList(boxTourists);
+                }
+
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        if (target.classList.contains('input-city')) {
+                            console.log(target)
+                            target.value = e.target.getAttribute('data-value');
+                        }
+                    });
                 });
+            });
+            input.addEventListener('input', () => {
+                filterList(input)
+            });
+        })
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                hideList(boxCity);
             });
         });
 
-        inpCity.addEventListener('input', filterList);
     }
 
     //form-tourists
-
-    let inpTourists = document.querySelector('#form-tourists');
-    let boxTourists = document.querySelector('#tourists-popup');
-
-    if (inpTourists) {
-        inpTourists.addEventListener('click', () => {
-            showList(boxTourists);
-        });
-    }
+    // if (inpTourists) {
+    //     inpTourists.addEventListener('click', () => {
+    //         showList(boxTourists);
+    //     });
+    // }
 
     let counter = document.querySelector('#counter');
     let addChild = document.querySelector('.tourists__add');
@@ -419,8 +442,7 @@ window.addEventListener("load", function () {
             displayCout.innerHTML = count;
         }
         addChild.addEventListener('click', () => {
-            child++
-            console.log(child)
+            child++;
         })
         saveTour.addEventListener('click', () => {
             if (!child) {
