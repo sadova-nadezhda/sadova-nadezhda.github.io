@@ -5455,7 +5455,12 @@ h6 {
   }
 
   .filters__item {
-    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .filters__col {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .filters {
@@ -5948,11 +5953,6 @@ h6 {
   .filters__item svg {
     width: 20px;
     height: 20px;
-  }
-
-  .filters__col {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
   }
 
   .filters {
