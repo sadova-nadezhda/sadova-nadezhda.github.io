@@ -1202,7 +1202,7 @@ h6 {
 
 .decor {
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -1234,7 +1234,7 @@ h6 {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 16px 24px;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 1.1px;
@@ -4726,6 +4726,10 @@ h6 {
     font-size: 16px;
   }
 
+  .info__content h3 {
+    font-size: 22px;
+  }
+
   .application__wrapper {
     padding: 24px;
   }
@@ -5154,6 +5158,11 @@ h6 {
     gap: 24px;
   }
 
+  .heading {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+
   .col-item:nth-child(odd) {
     padding-right: 20px;
   }
@@ -5308,6 +5317,10 @@ h6 {
     padding: 12px 16px;
     border-radius: 16px;
     font-size: 14px;
+  }
+
+  .info__content h3 {
+    font-size: 20px;
   }
 
   .application__wrapper {
@@ -5866,6 +5879,10 @@ h6 {
     z-index: -1;
   }
 
+  .decor {
+    top: 0;
+  }
+
   .uly-dala__title svg {
     top: -30%;
     width: 350px;
@@ -6022,11 +6039,6 @@ h6 {
 
   .decor {
     top: 3%;
-  }
-
-  .heading {
-    padding: 12px 16px;
-    font-size: 20px;
   }
 
   .card__wrap {
