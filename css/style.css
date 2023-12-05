@@ -1325,7 +1325,7 @@ h6 {
 .card__wrap {
   position: relative;
   display: grid;
-  grid-template-columns: 32% 1fr;
+  grid-template-columns: 280px 1fr;
   gap: 15px;
   padding-right: 40px;
   margin-right: 15px;
@@ -4658,7 +4658,7 @@ h6 {
   }
 
   .card__wrap {
-    grid-template-columns: 34% 1fr;
+    grid-template-columns: 250px 1fr;
   }
 
   .card__img {
@@ -5178,6 +5178,10 @@ h6 {
 
   .promo {
     border-radius: 16px;
+  }
+
+  .card__wrap {
+    grid-template-columns: 222px 1fr;
   }
 
   .card__img {
