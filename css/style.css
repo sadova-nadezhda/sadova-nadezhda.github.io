@@ -4840,6 +4840,10 @@ h6 {
     font-size: 16px;
   }
 
+  .layout__inline .prices__total {
+    font-size: 20px;
+  }
+
   .layout__map svg {
     width: 20px;
     height: 20px;
@@ -5524,6 +5528,10 @@ h6 {
     font-size: 14px;
   }
 
+  .layout__inline .prices__total {
+    font-size: 18px;
+  }
+
   .layout__map svg {
     width: 16px;
     height: 16px;
@@ -5687,10 +5695,6 @@ h6 {
 
   .price {
     max-width: 215px;
-  }
-
-  .total-price {
-    font-size: 20px;
   }
 
   .form__checkbox svg {
