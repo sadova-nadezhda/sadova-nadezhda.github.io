@@ -4840,10 +4840,6 @@ h6 {
     font-size: 16px;
   }
 
-  .layout__inline .prices__total {
-    font-size: 20px;
-  }
-
   .layout__map svg {
     width: 20px;
     height: 20px;
@@ -5056,6 +5052,10 @@ h6 {
   .services__label h5 {
     height: 32px;
     font-size: 18px;
+  }
+
+  .prices__total {
+    font-size: 20px;
   }
 
   .feedback-form__row {
@@ -5528,10 +5528,6 @@ h6 {
     font-size: 14px;
   }
 
-  .layout__inline .prices__total {
-    font-size: 18px;
-  }
-
   .layout__map svg {
     width: 16px;
     height: 16px;
@@ -5884,6 +5880,10 @@ h6 {
   .prices__info {
     justify-content: space-between;
     gap: 20px;
+  }
+
+  .prices__total {
+    font-size: 18px;
   }
 
   .prices__card {
