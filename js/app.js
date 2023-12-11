@@ -24,10 +24,9 @@ window.addEventListener("load", function () {
 
     let boxCity = document.querySelector("#form-list");
     let boxTourists = document.querySelector('#tourists-popup');
-    let links = Array.from(document.querySelectorAll('.dropdown-link'));
+    let links = Array.from(document.querySelectorAll(".dropdown-link"));
     let inpCity = document.querySelector('#form-city');
     let inpTourists = document.querySelector('#form-tourists');
-
 
     // Обработчик события для кнопки
     button.addEventListener('click', () => {
@@ -345,10 +344,9 @@ window.addEventListener("load", function () {
     }
 
     function hideList(box) {
-        if (box.classList.contains('show')) {
-            box.classList.remove("show");
-            console.log(box)
-        }
+        console.log(box)
+        box.classList.remove("show");
+
     }
 
     // form-city
@@ -379,23 +377,18 @@ window.addEventListener("load", function () {
                 links.forEach(link => {
                     link.addEventListener('click', (e) => {
                         if (target.classList.contains('input-city')) {
-                            console.log(target)
                             target.value = e.target.getAttribute('data-value');
+                            hideList(boxCity);
                         }
+
                     });
                 });
-            });
-            input.addEventListener('input', () => {
-                filterList(input)
-            });
+                input.addEventListener('input', () => {
+                    filterList(input)
+                });
+            })
+
         })
-
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                hideList(boxCity);
-            });
-        });
-
     }
 
     //form-tourists
@@ -482,7 +475,7 @@ window.addEventListener("load", function () {
         .click(function () {
             $(this).setCursorPosition(3);
         })
-        .mask("+7(999)-999-99-99");
+        .mask("+7(999)999-99-99");
 
     $('input[name="code"]')
         .click(function () {

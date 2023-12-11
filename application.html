@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Информационная</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231205110327">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231205110327" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231205110327" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231205110327" />
-  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231205110327">
-  <link rel="stylesheet" href="css/nice-select.css?_v=20231205110327" />
-  <link rel="stylesheet" href="css/style.css?_v=20231205110327" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231211060047">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231211060047" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?_v=20231211060047" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20231211060047" />
+  <link rel="stylesheet" href="css/air-datepicker.css?_v=20231211060047">
+  <link rel="stylesheet" href="css/nice-select.css?_v=20231211060047" />
+  <link rel="stylesheet" href="css/style.css?_v=20231211060047" />
 </head>
 
 
@@ -197,7 +197,7 @@
     </div>
   </nav>
   <div class="header__bottom secondary-menu">
-    <div class="container container_lg">
+    <div class="container_lg">
       <div class="secondary-menu__container">
         <div class="secondary-menu__box">
           <div class="secondary-menu__img"><img src="img/person-1.png" alt=""></div>
@@ -210,7 +210,7 @@
       </div>
     </div>
   </div>
-  <!-- <div class="header__bottom inner-menu">
+  <div class="header__bottom inner-menu">
     <div class="container container_lg">
       <div class="inner-menu__container">
         <form action="" class="inner-menu__form form" id="ticket-search-form">
@@ -231,9 +231,9 @@
                   fill="#4E9F07" mask="url(#path-1-outside-1_4279_58890)" />
               </svg>
 
-              <div class="form__input dropdown">
+              <div class="form__input type dropdown">
                 <label for="form-city">Куда?</label>
-                <input type="text" placeholder="Весь Казахстан" id="form-city" class="js-input">
+                <input type="text" placeholder="Весь Казахстан" id="form-city" class="js-input input-city" />
                 <div id="form-list" class="dropdown-content">
                   <div class="dropdown-group">
                     <div class="dropdown-caption">Отель</div>
@@ -261,7 +261,6 @@
                       </a>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -281,7 +280,7 @@
                   d="M17.8428 14.9366C18.1105 14.726 18.2747 14.428 18.2747 14.0228C18.2747 13.5115 18.0792 13.1669 17.7895 12.9358C17.4824 12.6909 17.0217 12.5387 16.4655 12.5387C15.9094 12.5387 15.4522 12.6908 15.1484 12.9346C14.8617 13.1647 14.6672 13.5092 14.6672 14.0228C14.6672 14.4169 14.814 14.7016 15.0753 14.917C14.9225 14.6809 14.8405 14.4007 14.8405 14.0987C14.8405 13.6491 15.0184 13.2486 15.3476 12.9708C15.6642 12.7037 16.0684 12.5928 16.4655 12.5928C16.8626 12.5928 17.2667 12.7037 17.5834 12.9708C17.9126 13.2486 18.0905 13.6491 18.0905 14.0987C18.0905 14.409 18.0039 14.6965 17.8428 14.9366ZM14.5805 17.1103C14.5805 16.8537 14.6348 16.6156 14.7364 16.4049C14.5181 16.6492 14.4072 16.9518 14.4072 17.2837C14.4072 17.7717 14.5879 18.1245 14.8928 18.3695C15.2138 18.6274 15.7321 18.8112 16.4655 18.8112C17.2052 18.8112 17.7227 18.627 18.0415 18.37C18.3441 18.1262 18.5238 17.7739 18.5238 17.2837C18.5238 16.9565 18.4155 16.6583 18.2003 16.4122C18.2985 16.6212 18.3505 16.8567 18.3505 17.1103C18.3505 17.6285 18.1336 18.0727 17.7502 18.3709C17.3857 18.6544 16.9226 18.7678 16.4655 18.7678C16.0083 18.7678 15.5453 18.6544 15.1808 18.3709C14.7973 18.0727 14.5805 17.6285 14.5805 17.1103Z"
                   stroke="#4E9F07" stroke-width="1.3" />
               </svg>
-              <div class="form__input">
+              <div class="form__input date">
                 <label for="index-date">Когда?</label>
                 <input type="text" id="index-date" placeholder="Любые даты" class="js-input">
               </div>
@@ -295,43 +294,43 @@
                   d="M7.7717 24.0071C7.7717 20.7647 10.9961 18.1348 14.9772 18.1348C18.9582 18.1348 22.1826 20.7647 22.1826 24.0071"
                   stroke="#4E9F07" stroke-width="2.08" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <div class="form__input">
+              <div class="form__input tour">
                 <label for="form-tourists">Туристы</label>
                 <input type="text" placeholder="1 взр." class="js-input input__tourists" id="form-tourists">
-              </div>
-              <div class="form__counter tourists" id="tourists-popup">
-                <h5 class="tourists__caption">Количество туристов</h5>
-                <div class="tourists__row">
-                  <div class="tourists__gender">Взрослых</div>
-                  <div id="counter" class="tourists__counter counter" data-min="1" data-max="10">
-                    <div class="counter__button decrease">
-                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                    <span>1</span>
-                    <div class="counter__button increase">
-                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M8 12.5V4.5" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
+                <div class="form__counter tourists" id="tourists-popup">
+                  <h5 class="tourists__caption">Количество туристов</h5>
+                  <div class="tourists__row">
+                    <div class="tourists__gender">Взрослых</div>
+                    <div id="counter" class="tourists__counter counter" data-min="1" data-max="10">
+                      <div class="counter__button decrease">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                      <span>1</span>
+                      <div class="counter__button increase">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 8.5H12" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M8 12.5V4.5" stroke="#2569D7" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tourists__links">
-                  <a class="tourists__link tourists__add">
-                    <span>Добавить ребенка</span>
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.66504 8.83301H12.665" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M8.66504 12.833V4.83301" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </a>
-                  <a class="tourists__link tourists__save">Сохранить</a>
+                  <div class="tourists__links">
+                    <a class="tourists__link tourists__add">
+                      <span>Добавить ребенка</span>
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66504 8.83301H12.665" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M8.66504 12.833V4.83301" stroke="#4E9F07" stroke-width="1.4" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                    <a class="tourists__link tourists__save">Сохранить</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -344,7 +343,7 @@
         </form>
       </div>
     </div>
-  </div> -->
+  </div>
 </header>
 
   <main class="main main_gr">
@@ -863,15 +862,15 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20231205110327"></script>
-<script src="js/jquery.maskedinput.js?_v=20231205110327"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231205110327"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231205110327"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231205110327"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231205110327"></script>
-<script src="js/air-datepicker.js?_v=20231205110327"></script>
-<script src="js/jquery.nice-select.min.js?_v=20231205110327"></script>
-<script src="js/app.js?_v=20231205110327"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20231211060047"></script>
+<script src="js/jquery.maskedinput.js?_v=20231211060047"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231211060047"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231211060047"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?_v=20231211060047"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20231211060047"></script>
+<script src="js/air-datepicker.js?_v=20231211060047"></script>
+<script src="js/jquery.nice-select.min.js?_v=20231211060047"></script>
+<script src="js/app.js?_v=20231211060047"></script>
 
 </body>
 
