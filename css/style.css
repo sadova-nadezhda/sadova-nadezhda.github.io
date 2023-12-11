@@ -2382,6 +2382,10 @@ h6 {
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   right: 0;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  text-align: center;
   transition: 0.3s;
 }
 
@@ -2444,7 +2448,7 @@ h6 {
 
 .accordion__time {
   color: #4E9F07;
-  font-size: 16.9px;
+  font-size: 16px;
 }
 
 .accordion__caption {
@@ -4338,6 +4342,11 @@ h6 {
   color: #292D32;
 }
 
+.popup-hotel .accordion {
+  border: 1px solid rgba(41, 45, 50, 0.2);
+  background: #FFF;
+}
+
 .popup-hotel__container::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #f4f4f4;
@@ -4860,8 +4869,17 @@ h6 {
     padding: 0;
   }
 
+  .accordion__label::before {
+    height: 18px;
+    width: 18px;
+  }
+
   .accordion__label {
     font-size: 20px;
+  }
+
+  .accordion__text {
+    font-size: 16px;
   }
 
   .filters__form {
@@ -5574,8 +5592,25 @@ h6 {
     padding: 0;
   }
 
+  .accordion__label::before {
+    height: 16px;
+    width: 16px;
+  }
+
   .accordion__label {
     font-size: 18px;
+  }
+
+  .accordion__time {
+    font-size: 14px;
+  }
+
+  .accordion__caption {
+    font-size: 16px;
+  }
+
+  .accordion__text {
+    font-size: 14px;
   }
 
   .accordion {
@@ -5977,6 +6012,15 @@ h6 {
 
   .layout__caption {
     font-size: 20px;
+  }
+
+  .accordion__label {
+    font-size: 16px;
+  }
+
+  .accordion {
+    padding: 12px;
+    border-radius: 12px;
   }
 
   .filters__form {
