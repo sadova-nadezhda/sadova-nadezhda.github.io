@@ -51,9 +51,11 @@ window.addEventListener("load", function () {
         }
         if (boxCity) {
             if (!boxCity.contains(event.target) && event.target !== inpCity) {
+                console.log('boxCity')
                 hideList(boxCity);
             }
             if (!boxTourists.contains(event.target) && event.target !== inpTourists) {
+                console.log('boxTourists')
                 hideList(boxTourists);
             }
         }
@@ -344,7 +346,6 @@ window.addEventListener("load", function () {
     }
 
     function hideList(box) {
-        console.log(box)
         box.classList.remove("show");
 
     }
@@ -378,6 +379,7 @@ window.addEventListener("load", function () {
                     link.addEventListener('click', (e) => {
                         if (target.classList.contains('input-city')) {
                             target.value = e.target.getAttribute('data-value');
+                            console.log('formInputs')
                             hideList(boxCity);
                         }
 
@@ -444,6 +446,7 @@ window.addEventListener("load", function () {
             } else {
                 document.querySelector('.input__tourists').value = `${count} взр. и ${child} реб.`;
             }
+            console.log('saveTour')
             hideList(boxTourists);
 
         })
