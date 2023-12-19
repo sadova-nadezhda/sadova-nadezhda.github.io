@@ -1,5 +1,6 @@
 // clone layout description
-let layoutText = $('.layout__desc .layout__text').clone()
+let layoutText = $('.layout__desc .layout__text').clone();
+let header = document.querySelector('.header');
 
 window.addEventListener("load", function () {
     // preloader
@@ -48,6 +49,7 @@ window.addEventListener("load", function () {
         }
         if (event.target === btnSearch) {
             boxSearch.classList.toggle('active');
+            header.classList.toggle('active');
         }
         if (boxCity) {
             if (!boxCity.contains(event.target) && event.target !== inpCity) {
