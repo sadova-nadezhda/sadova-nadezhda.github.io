@@ -6209,7 +6209,7 @@ h6 {
   }
 
   .search-box.active {
-    transform: translateY(50px);
+    transform: translateY(20px);
   }
 
   .search-box.active::before {
