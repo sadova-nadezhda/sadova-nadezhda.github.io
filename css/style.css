@@ -161,29 +161,29 @@ input:focus-visible {
 /* ---------- Heading ---------- */
 
 h1 {
-  font: 700 5.25em/1 CeraPro;
+  font: 700 84px/1 CeraPro;
   text-transform: uppercase;
 }
 
 h2 {
-  font: 700 2.25em/1 CeraPro;
+  font: 700 36px/1 CeraPro;
   text-transform: uppercase;
 }
 
 h3 {
-  font: 700 1.5em/1 CeraPro;
+  font: 700 24px/1 CeraPro;
 }
 
 h4 {
-  font: 700 1.25em/1 CeraPro;
+  font: 700 20px/1 CeraPro;
 }
 
 h5 {
-  font: 700 1.1em/1 CeraPro;
+  font: 700 18px/1 CeraPro;
 }
 
 h6 {
-  font: 700 1em/1 CeraPro;
+  font: 700 16px/1 CeraPro;
 }
 
 /* ---------- Container ---------- */
@@ -542,6 +542,23 @@ textarea::placeholder {
   gap: 30px;
 }
 
+/* popup */
+
+.popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.popup__close svg {
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
 /* Trans Section*/
 
 .trans {
@@ -566,7 +583,7 @@ textarea::placeholder {
 }
 
 .trans__partner {
-  font: 700 2em/1.2 CeraPro;
+  font: 700 32px/1.2 CeraPro;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -619,8 +636,16 @@ textarea::placeholder {
 
 .trans__btn {
   width: 100%;
+  min-width: unset;
   color: var(--white, #FFFFFF);
   background-color: var(--primary-green, #16676B);
+}
+
+.trans__btn_mb {
+  display: none;
+  width: 100%;
+  color: var(--primary-green, #16676B);
+  background-color: var(--white, #FFFFFF);
 }
 
 .trans__img {
@@ -890,7 +915,6 @@ textarea::placeholder {
 
 .projects__img {
   height: 300px;
-  margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -908,6 +932,7 @@ textarea::placeholder {
 .contacts {
   position: relative;
   padding-top: 125px;
+  overflow: hidden;
 }
 
 .contacts__back {
@@ -945,7 +970,7 @@ textarea::placeholder {
 }
 
 .contacts__tel {
-  font: 500 2.25em/1 CeraPro;
+  font: 500 36px/1 CeraPro;
   text-transform: uppercase;
 }
 
@@ -989,14 +1014,34 @@ textarea::placeholder {
 }
 
 @media (max-width: 1400px) {
+  h1 {
+    font: 700 64px/1 CeraPro;
+  }
+
   .container {
     max-width: 1352px;
+  }
+
+  .section {
+    padding: 150px 0;
   }
 }
 
 @media (max-width: 1200px) {
+  h1 {
+    font: 700 54px/1 CeraPro;
+  }
+
   .container {
     max-width: 1172px;
+  }
+
+  .section {
+    padding: 120px 0;
+  }
+
+  .trans__partner {
+    font-size: 28px;
   }
 
   .services__title {
@@ -1035,16 +1080,44 @@ textarea::placeholder {
   .contacts__box {
     gap: 40px;
   }
+
+  .contacts__tel {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 980px) {
+  h1 {
+    font: 700 44px/1 CeraPro;
+  }
+
+  h2 {
+    font: 700 32px/1 CeraPro;
+  }
+
   .container {
     width: 100%;
     max-width: none;
   }
 
+  .section {
+    padding: 80px 0;
+  }
+
+  .trans__partner {
+    font-size: 24px;
+  }
+
   .trans__wrap {
     gap: 30px;
+  }
+
+  .trans__application {
+    width: 35%;
+  }
+
+  .trans__img {
+    width: calc(65% - 30px);
   }
 
   .services__title {
@@ -1055,6 +1128,14 @@ textarea::placeholder {
     margin-bottom: 40px;
   }
 
+  .partners__row {
+    gap: 20px;
+  }
+
+  .partners__marquees {
+    gap: 20px;
+  }
+
   .about__title {
     margin-bottom: 40px;
   }
@@ -1063,8 +1144,17 @@ textarea::placeholder {
     margin-bottom: 30px;
   }
 
+  .about__list {
+    font-size: 18px;
+  }
+
   .projects__top {
     margin-bottom: 40px;
+  }
+
+  .projects__arrow {
+    width: 30px;
+    height: 30px;
   }
 
   .contacts__title {
@@ -1078,11 +1168,27 @@ textarea::placeholder {
   .contacts__box {
     gap: 32px;
   }
+
+  .contacts__tel {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 768px) {
   html {
     font: 400 14px/1.5 CeraPro;
+  }
+
+  h1 {
+    font: 700 32px/1 CeraPro;
+  }
+
+  h2 {
+    font: 700 28px/1 CeraPro;
+  }
+
+  h3 {
+    font: 700 22px/1 CeraPro;
   }
 
   .header__nav.open {
@@ -1115,12 +1221,25 @@ textarea::placeholder {
     display: block;
   }
 
+  .section_top {
+    margin-top: 70px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .swiper-slide {
+    gap: 20px;
+  }
+
   .trans__title {
     width: 100%;
   }
 
   .trans__partner {
     margin: 0 auto;
+    font-size: 16px;
   }
 
   .trans__wrap {
@@ -1131,8 +1250,13 @@ textarea::placeholder {
     width: 100%;
   }
 
+  .trans__img img {
+    height: 100vw;
+  }
+
   .trans__img {
     width: 100%;
+    margin: 0;
   }
 
   .services__title {
@@ -1144,8 +1268,35 @@ textarea::placeholder {
     gap: 16px;
   }
 
+  .services__card {
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .services__caption {
+    font-size: 16px;
+  }
+
   .partners__title {
     margin-bottom: 30px;
+  }
+
+  .partners__row {
+    gap: 16px;
+  }
+
+  .partners__marquees {
+    gap: 16px;
+  }
+
+  .partners__card {
+    padding: 20px;
+  }
+
+  .partners__img {
+    height: 180px;
+    width: 90vw;
+    max-width: 380px;
   }
 
   .about__title {
@@ -1156,8 +1307,18 @@ textarea::placeholder {
     margin-bottom: 20px;
   }
 
+  .about__list li::before {
+    margin-bottom: 20px;
+  }
+
   .about__list li {
     flex: 1 1 300px;
+    padding: 20px;
+  }
+
+  .about__list {
+    margin-bottom: 30px;
+    font-size: 16px;
   }
 
   .about__btn {
@@ -1166,6 +1327,15 @@ textarea::placeholder {
 
   .projects__top {
     margin-bottom: 30px;
+  }
+
+  .projects__arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contacts__back svg {
+    width: 150vw;
   }
 
   .contacts__title {
@@ -1182,6 +1352,10 @@ textarea::placeholder {
     gap: 24px;
     max-width: 50%;
     margin-left: auto;
+  }
+
+  .contacts__tel {
+    font-size: 24px;
   }
 }
 
@@ -1212,6 +1386,28 @@ textarea::placeholder {
 
   .footer__logo {
     margin-right: auto;
+  }
+
+  .trans__application {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 90vw;
+    z-index: 3;
+  }
+
+  .trans__btn_mb {
+    display: flex;
+  }
+
+  .trans__img img {
+    height: 150vw;
+  }
+
+  .contacts__tel {
+    font-size: 20px;
   }
 }
 

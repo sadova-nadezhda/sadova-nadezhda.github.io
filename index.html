@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240329201748" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240329201748" />
-  <link rel="stylesheet" href="css/style.css?_v=20240329201748" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240401045700" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240401045700" />
+  <link rel="stylesheet" href="css/style.css?_v=20240401045700" />
 </head>
 
 
@@ -61,7 +61,14 @@
             <div class="trans__partner" data-aos="fade-left" data-aos-delay="300">Ваш <br> надежный партнер!</div>
           </div>
           <div class="trans__wrap">
-            <div class="trans__application">
+            <div class="trans__application popup__feedback">
+              <button class="popup__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.99992 8.17868L11.714 12.8927C12.0394 13.2182 12.567 13.2182 12.8925 12.8927C13.2179 12.5673 13.2179 12.0396 12.8925 11.7142L8.17843 7.00016L12.8925 2.28612C13.2179 1.96069 13.2179 1.43305 12.8925 1.10761C12.567 0.782176 12.0394 0.782177 11.714 1.10761L6.99992 5.82165L2.28587 1.1076C1.96043 0.782166 1.4328 0.782166 1.10736 1.1076C0.781922 1.43304 0.781922 1.96068 1.10736 2.28611L5.82141 7.00016L1.10736 11.7142C0.781922 12.0397 0.781922 12.5673 1.10736 12.8927C1.4328 13.2182 1.96043 13.2182 2.28587 12.8927L6.99992 8.17868Z"
+                    fill="#222222" />
+                </svg>
+              </button>
               <h4 class="trans__caption">Оставить заявку</h4>
               <form action="" method="post" class="trans__form" id="formTrans" name="formTrans">
                 <input type="text" name="name" id="trans-name" placeholder="Имя*" required>
@@ -75,6 +82,7 @@
                 <button class="trans__btn button">Отправить</button>
               </form>
             </div>
+            <div class="trans__btn_mb popup__btn button">Оставить заявку</div>
             <div class="trans__img"><img src="img/containers.png" alt=""></div>
           </div>
         </div>
@@ -259,35 +267,30 @@
           </div>
           <div class="swiper projectSwiper">
             <div class="swiper-wrapper projects__cards">
-              <div class="swiper-slide projects__card" data-aos="fade-down" data-aos-offset="500"
-                data-aos-duration="500">
+              <div class="swiper-slide projects__card">
                 <div class="projects__img"><img src="img/projects-1.png" alt=""></div>
                 <div class="projects__txt">Перевозка фосфоритный концентрат
                   по маршруту: Запад Казахстана -Киргизия
                   объем перевозок более 1 000 т</div>
               </div>
-              <div class="swiper-slide projects__card" data-aos="fade-down" data-aos-offset="500"
-                data-aos-duration="800">
+              <div class="swiper-slide projects__card">
                 <div class="projects__img"><img src="img/projects-2.png" alt=""></div>
                 <div class="projects__txt">Перевозка товаров народного потребление
                   по маршруту: Иран- Казахстан
                   *более 5 000 т в месяц</div>
               </div>
-              <div class="swiper-slide projects__card" data-aos="fade-down" data-aos-offset="500"
-                data-aos-duration="1000">
+              <div class="swiper-slide projects__card">
                 <div class="projects__img"><img src="img/projects-3.png" alt=""></div>
                 <div class="projects__txt">Перевозка минеральной воды
                   Маршрут : Грузия - Казахстан</div>
               </div>
-              <div class="swiper-slide projects__card" data-aos="fade-down" data-aos-offset="500"
-                data-aos-duration="1000">
+              <div class="swiper-slide projects__card">
                 <div class="projects__img"><img src="img/projects-1.png" alt=""></div>
                 <div class="projects__txt">Перевозка фосфоритный концентрат
                   по маршруту: Запад Казахстана -Киргизия
                   объем перевозок более 1 000 т</div>
               </div>
-              <div class="swiper-slide projects__card" data-aos="fade-down" data-aos-offset="500"
-                data-aos-duration="1000">
+              <div class="swiper-slide projects__card">
                 <div class="projects__img"><img src="img/projects-2.png" alt=""></div>
                 <div class="projects__txt">Перевозка товаров народного потребление
                   по маршруту: Иран- Казахстан
@@ -401,11 +404,11 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20240329201748"></script>
-<script src="js/jquery.maskedinput.js?_v=20240329201748"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240329201748"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240329201748"></script>
-<script src="js/app.js?_v=20240329201748"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20240401045700"></script>
+<script src="js/jquery.maskedinput.js?_v=20240401045700"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240401045700"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240401045700"></script>
+<script src="js/app.js?_v=20240401045700"></script>
 </body>
 
 </html>

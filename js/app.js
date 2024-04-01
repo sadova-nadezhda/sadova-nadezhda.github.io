@@ -67,6 +67,41 @@ window.addEventListener("load", function () {
     duration: 1200,
   });
 
+  // popup
+  function hidePopup(popup) {
+    $(popup).click(function (e) {
+      const target = e.target;
+      if (
+        $(target).hasClass("popup__close") ||
+        $(target).hasClass("popup")
+      ) {
+        $(this).fadeOut(400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    $(popup).fadeIn(400);
+  }
+
+
+  let popupForm = document.querySelector(".popup__feedback");
+  let popupCall = document.querySelector(".popup__btn");
+  let popupClose = document.querySelectorAll('.popup__close');
+  if (popupForm) {
+    hidePopup(popupForm)
+  }
+  if (popupCall) {
+    popupCall.addEventListener('click', function () {
+      showPopup(popupForm)
+    });
+    popupClose.forEach(btn => {
+      btn.addEventListener('click', function () {
+        hidePopup(popupForm)
+      })
+    });
+  }
+
+
 
   // Form
   function submitForm() {
@@ -91,14 +126,4 @@ window.addEventListener("load", function () {
     })
     .mask("+7 (999) 999 99 99");
 
-  // alert
-  let alertt = document.querySelector(".alert--fixed");
-  let alertClose = document.querySelectorAll(".alert--close");
-  for (let item of alertClose) {
-    item.addEventListener("click", function (event) {
-      alertt.classList.remove("alert--active");
-      alertt.classList.remove("alert--warning");
-      alertt.classList.remove("alert--error");
-    });
-  }
 });
