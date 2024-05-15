@@ -296,6 +296,10 @@ h6 {
   transition: all 0.2s ease-in-out;
 }
 
+.header.scroll {
+  background-color: var(--light, #FFFFFF);
+}
+
 .header__container {
   position: relative;
   display: flex;
@@ -536,6 +540,11 @@ h6 {
 
 .section {
   padding-bottom: 14rem;
+  overflow: hidden;
+}
+
+.section-top {
+  padding-top: 5.2rem;
 }
 
 .title strong {
@@ -583,6 +592,45 @@ h6 {
   grid-column: 2;
 }
 
+.page__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  min-height: 50vh;
+  margin: 0 auto;
+}
+
+.page__img {
+  height: 80px;
+  width: 16vw;
+  min-width: 245px;
+  max-width: 300px;
+}
+
+.page__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.page__title,
+.page__desc {
+  text-align: center;
+}
+
+.page__desc {
+  max-width: 16vw;
+  min-width: 240px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--text-3, #DCDCDC);
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -598,7 +646,6 @@ h6 {
 }
 
 .swiper-slide-active {
-  transform: scale(1.1);
   opacity: 1;
 }
 
@@ -665,6 +712,38 @@ h6 {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+
+.tabs__item:not(.active) {
+  display: none;
+}
+
+.tabs__caption {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.tabs__caption li {
+  padding: 1.2rem 2.4rem;
+  border-radius: 4rem;
+  border: 1px solid var(--primary, #1B58A3);
+  color: var(--primary, #1B58A3);
+  cursor: pointer;
+}
+
+.tabs__caption li.active {
+  color: var(--light, #FFFFFF);
+  background-color: var(--primary, #1B58A3);
+  pointer-events: none;
+}
+
+.tabs__content {
+  padding: 3.6rem;
+  border-radius: 2rem;
+  background-color: var(--light, #FFFFFF);
 }
 
 .hero {
@@ -871,6 +950,35 @@ h6 {
   right: 3.4rem;
 }
 
+.about__text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  margin-top: 24px;
+}
+
+.brands__cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6.8rem 0;
+  background-color: var(--light, #FFFFFF);
+}
+
+.brands__card {
+  width: 186px;
+  min-width: 186px;
+  height: 44px;
+  margin-left: 7.2rem;
+}
+
+.brands__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .seminar {
   overflow: hidden;
 }
@@ -929,6 +1037,105 @@ h6 {
   border-radius: 100%;
   background-color: var(--light, #FFFFFF);
   cursor: pointer;
+}
+
+.seminar-page__box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.seminar-page__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seminar-page__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--text-3, #DCDCDC);
+}
+
+.seminar-page__card:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.seminar-page__blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 7.2rem;
+       column-gap: 7.2rem;
+  row-gap: 3.6rem;
+  padding: 3.6rem;
+  border-radius: 2rem;
+  background-color: var(--light, #FFFFFF);
+}
+
+.seminar-page__blocks .line {
+  grid-column: span 2;
+}
+
+.seminar-page__block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  align-items: flex-start;
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+  row-gap: 0.4rem;
+}
+
+.seminar-page__block .number {
+  grid-row: span 3;
+}
+
+.seminar-page__block .seminar-page__date {
+  margin-left: unset;
+}
+
+.seminar-page__block .seminar-page__btn {
+  grid-column: span 2;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.seminar-page__block:nth-of-type(odd)::after {
+  content: "";
+  position: absolute;
+  right: -3.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90%;
+  width: 1px;
+  background-color: var(--text-3, #DCDCDC);
+}
+
+.seminar-page__number {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary, #1B58A3);
+  opacity: 0.2;
+}
+
+.seminar-page__caption {
+  min-width: 450px;
+  font-weight: 400;
+}
+
+.seminar-page__author {
+  color: var(--text-4, #AAAAAA);
+  font-size: 1.4rem;
+}
+
+.seminar-page__date {
+  margin-left: auto;
+  color: var(--primary-light, #1195D1);
 }
 
 .faq__accordion {
@@ -1005,7 +1212,30 @@ h6 {
 }
 
 .news__date {
-  color: var(--primary, #1B58A3);
+  color: var(--primary-light, #1195D1);
+}
+
+.news-inner__wrapper {
+  grid-template-columns: 30% 1fr;
+  gap: 2.8rem;
+}
+
+.news-inner__desc {
+  -moz-columns: 2;
+       columns: 2;
+}
+
+.news-inner__img {
+  height: 300px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.news-inner__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .reviews__cards {
@@ -1055,6 +1285,12 @@ h6 {
 
 .reviews__link {
   margin: 0 auto;
+}
+
+.reviews-page__top {
+  display: grid;
+  grid-template-columns: 24% 1fr 20%;
+  gap: 1.6rem;
 }
 
 .contacts {
@@ -1165,6 +1401,14 @@ h6 {
 }
 
 @media (max-width: 1440px) {
+  h5 {
+    font: 700 1.6rem/1 Arimo;
+  }
+
+  h6 {
+    font: 700 1.4rem/1 Arimo;
+  }
+
   .programm__box svg {
     min-width: 318px;
   }
@@ -1183,6 +1427,10 @@ h6 {
 
   .programm__card:first-child {
     margin-left: 74px;
+  }
+
+  .seminar-page__caption {
+    min-width: 400px;
   }
 }
 
@@ -1267,6 +1515,10 @@ h6 {
          column-gap: 4rem;
   }
 
+  .section-top {
+    padding-top: 3.2rem;
+  }
+
   .section {
     padding-bottom: 12rem;
   }
@@ -1298,6 +1550,10 @@ h6 {
     font: 700 3rem/1 Arimo;
   }
 
+  .section-top {
+    padding-top: 2.4rem;
+  }
+
   .section {
     padding-bottom: 10rem;
   }
@@ -1311,8 +1567,57 @@ h6 {
     padding-right: 3.2rem;
   }
 
+  .tabs__content {
+    padding: 2rem;
+  }
+
   .hero__title {
     font-size: 4.2rem;
+  }
+
+  .seminar-page__card {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    align-items: flex-start;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+    row-gap: 0.4rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .seminar-page__blocks .line {
+    display: none;
+  }
+
+  .seminar-page__blocks {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .seminar-page__block:nth-of-type(odd)::after {
+    content: none;
+  }
+
+  .seminar-page__block:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .seminar-page__block {
+    padding-bottom: 3.6rem;
+    border-bottom: 1px solid var(--text-3, #DCDCDC);
+  }
+
+  .seminar-page__number {
+    font-size: 4rem;
+  }
+
+  .seminar-page__caption {
+    min-width: unset;
+  }
+
+  .seminar-page__date {
+    margin-left: unset;
   }
 
   .faq__accordion {
@@ -1371,8 +1676,16 @@ h6 {
     height: 4rem;
   }
 
+  .section-top {
+    padding-top: 1.6rem;
+  }
+
   .section {
     padding-bottom: 8rem;
+  }
+
+  .heading {
+    margin-bottom: 1.6rem;
   }
 
   .col-2 {
@@ -1407,6 +1720,15 @@ h6 {
 
   .accordion__label {
     padding-right: 2.8rem;
+  }
+
+  .tabs__caption li {
+    border-radius: 3rem;
+  }
+
+  .tabs__content {
+    padding: 1.6rem;
+    border-radius: 1.6rem;
   }
 
   .hero__row {
@@ -1473,9 +1795,46 @@ h6 {
     padding: 1.8rem 3.2rem;
   }
 
+  .about__text {
+    grid-template-columns: 1fr;
+  }
+
+  .brands__cards {
+    padding: 3.2rem 0;
+  }
+
+  .brands__card {
+    min-width: 100px;
+    height: 22px;
+    margin-left: 4rem;
+  }
+
   .seminar__desc {
     grid-column-start: unset;
     grid-template-columns: 1fr;
+  }
+
+  .seminar-page__cards {
+    gap: 1.6rem;
+  }
+
+  .seminar-page__blocks {
+    row-gap: 1.6rem;
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+  }
+
+  .seminar-page__block .seminar-page__btn {
+    margin-top: 0.8rem;
+  }
+
+  .seminar-page__block {
+    padding-bottom: 1.6rem;
+  }
+
+  .seminar-page__number {
+    grid-row: span 3;
+    font-size: 3.2rem;
   }
 
   .faq__accordion {
@@ -1515,6 +1874,20 @@ h6 {
     border-radius: 1.6rem;
   }
 
+  .news-inner__wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .news-inner__desc {
+    -moz-columns: unset;
+         columns: unset;
+  }
+
+  .news-inner__img {
+    border-radius: 1.6rem;
+  }
+
   .reviews__cards {
     margin-bottom: 1.6rem;
   }
@@ -1522,6 +1895,10 @@ h6 {
   .reviews__card {
     padding: 1.6rem;
     border-radius: 1.6rem;
+  }
+
+  .reviews-page__top {
+    grid-template-columns: 1fr;
   }
 
   .contacts__container {
@@ -1564,14 +1941,6 @@ h6 {
 
   h4 {
     font: 700 2rem/1 Arimo;
-  }
-
-  h5 {
-    font: 700 1.6rem/1 Arimo;
-  }
-
-  h6 {
-    font: 700 1.4rem/1 Arimo;
   }
 
   .contacts__link span {
