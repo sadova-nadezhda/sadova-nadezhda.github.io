@@ -825,6 +825,18 @@ form .form__item {
   grid-row-end: 4;
 }
 
+.modal-grid-lg {
+  max-width: 900px;
+}
+
+.modal-grid-lg .questionary__form form {
+  padding: 0;
+}
+
+.modal-grid-lg .questionary__form input[type=submit] {
+  margin-top: auto;
+}
+
 .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -930,15 +942,24 @@ form .form__item {
   height: -webkit-fill-available;
   padding: 2.4rem;
   border-radius: 2rem 0 2rem 2rem;
+  background-color: var(--light, #FFFFFF);
+  transition: all 0.2s ease-in-out;
 }
 
 .hero__card:first-child {
-  background-color: var(--light, #FFFFFF);
+  color: var(--light, #FFFFFF);
+  background-color: var(--primary, #1B58A3);
 }
 
 .hero__card:last-child {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6rem;
+  max-height: 85px;
+  width: 100%;
+  border-radius: 2rem;
   color: var(--light, #FFFFFF);
-  background-color: var(--primary, #1B58A3);
+  background-color: var(--primary-light, #1195D1);
 }
 
 .hero__card svg {
@@ -952,6 +973,23 @@ form .form__item {
 
 .hero__card:hover svg {
   transform: scale(1.2);
+}
+
+.hero__caption {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero__icon {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.hero__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .programm__box {
@@ -1051,6 +1089,7 @@ form .form__item {
   position: absolute;
   bottom: 3.4rem;
   right: 3.4rem;
+  background-color: var(--primary-light, #1195D1);
 }
 
 .about__text {
@@ -1086,6 +1125,16 @@ form .form__item {
   overflow: hidden;
 }
 
+.seminar__top {
+  display: grid;
+  grid-template-columns: 24% 1fr 20%;
+  gap: 1.6rem;
+}
+
+.seminar__link {
+  margin-left: auto;
+}
+
 .seminar__desc {
   grid-column-start: 2;
   display: grid;
@@ -1097,14 +1146,15 @@ form .form__item {
   margin-top: 3.2rem;
 }
 
-.seminar .swiper-wrapper {
-  align-items: center;
-}
-
 .seminar__swiper {
   height: 22.5vw;
   min-height: 200px;
   max-height: 400px;
+}
+
+.seminar .swiper-wrapper {
+  align-items: center;
+  margin-left: 30%;
 }
 
 .seminar .swiper-slide {
@@ -1547,6 +1597,10 @@ form .form__item {
     margin-left: 74px;
   }
 
+  .seminar .swiper-wrapper {
+    margin-left: 31%;
+  }
+
   .seminar-page__caption {
     min-width: 400px;
   }
@@ -1691,6 +1745,10 @@ form .form__item {
 
   .hero__title {
     font-size: 4.2rem;
+  }
+
+  .hero__caption {
+    font-size: 1.8rem;
   }
 
   .seminar-page__card {
@@ -1896,6 +1954,24 @@ form .form__item {
     border-radius: 1.6rem;
   }
 
+  .hero__card svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .hero__card {
+    padding: 1.6rem;
+  }
+
+  .hero__caption {
+    font-size: 1.6rem;
+  }
+
+  .hero__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
   .programm__card {
     height: 98px;
     padding: 1.6rem;
@@ -1948,9 +2024,17 @@ form .form__item {
     margin-left: 4rem;
   }
 
+  .seminar__top {
+    grid-template-columns: 1fr;
+  }
+
   .seminar__desc {
     grid-column-start: unset;
     grid-template-columns: 1fr;
+  }
+
+  .seminar .swiper-wrapper {
+    margin-left: 0;
   }
 
   .seminar-page__cards {

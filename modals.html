@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240516131556" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240516131556" />
-  <link rel="stylesheet" href="css/style.css?_v=20240516131556" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240516172024" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240516172024" />
+  <link rel="stylesheet" href="css/style.css?_v=20240516172024" />
 </head>
 
   <body>
@@ -59,7 +59,7 @@
           <div class="modals__container">
             <div class="modal modal-feedback" id="popupFeedback">
               <div class="modal__top">
-                <h4 class="modal__title title">Оставить заявку <strong>KZ/KG</strong></h4>
+                <h4 class="modal__title title">Оставить заявку</h4>
                 <button class="modal__close">
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
@@ -73,31 +73,8 @@
                     <input type="text" name="" id="" placeholder="Имя Фамилия">
                   </div>
                   <div class="form__item">
-                    <label for="">Возраст</label>
-                    <input type="text" name="" id="" class="number" placeholder="Ваш возраст">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Город</label>
-                    <input type="text" name="" id="" placeholder="Ваш город">
-                  </div>
-                  <input type="submit" value="Отправить">
-                </form>
-              </div>
-            </div>
-            <div class="modal modal-education" id="popupEducation">
-              <div class="modal__top">
-                <h4 class="modal__title title">Заявка на <strong>Обучение</strong></h4>
-                <button class="modal__close">
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-                  </svg>                  
-                </button>
-              </div>
-              <div class="modal__form">
-                <form action="">
-                  <div class="form__item">
-                    <label for="">ФИО</label>
-                    <input type="text" name="" id="" placeholder="Имя Фамилия">
+                    <label for="">Телефон</label>
+                    <input type="tel" name="" id="" placeholder="Ваш телефон">
                   </div>
                   <div class="form__item">
                     <label for="">Возраст</label>
@@ -202,6 +179,57 @@
                 </form>
               </div>
             </div>
+            <div class="modal modal-grid-lg  modal-questionary">
+              <div class="modal__top">
+                <h4 class="modal__title title">Анкетные <strong>данные</strong></h4>
+                <button class="modal__close">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+                  </svg>                  
+                </button>
+              </div>
+              <div class="modal__form questionary__form">
+                <form action="">
+                  <div class="form__item">
+                    <label for="">ФИО</label>
+                    <input type="text" name="" id="" placeholder="Имя Фамилия">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Дата рождения</label>
+                    <input type="date" name="" id="" placeholder="День рождения">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Телефон</label>
+                    <input type="tel" name="" id="" placeholder="Ваш телефон">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Высшее Медицинское Учереждение</label>
+                    <input type="text" name="" id="" placeholder="Высшее Медицинское Учереждение">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Год окончания</label>
+                    <input type="text" name="" id="" class="number" placeholder="Год окончания">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Специальность</label>
+                    <input type="text" name="" id="" placeholder="Специальность">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Место работы</label>
+                    <input type="text" name="" id="" placeholder="Место работы">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Город проживания</label>
+                    <input type="text" name="" id="" placeholder="Город проживания">
+                  </div>
+                  <div class="form__item">
+                    <label for="">Откуда узнали о нас</label>
+                    <input type="text" name="" id="">
+                  </div>
+                  <input type="submit" value="Отправить">
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -265,13 +293,13 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20240516131556"></script>
-<script src="js/jquery.maskedinput.js?_v=20240516131556"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240516131556"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js?_v=20240516131556"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240516131556"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240516131556"></script>
-<script src="js/app.js?_v=20240516131556"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20240516172024"></script>
+<script src="js/jquery.maskedinput.js?_v=20240516172024"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240516172024"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js?_v=20240516172024"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240516172024"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240516172024"></script>
+<script src="js/app.js?_v=20240516172024"></script>
 </body>
 </html>
   </body>

@@ -258,10 +258,10 @@ window.addEventListener("load", function () {
     },
 
     // Enabled autoplay mode
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
 
     // navigation
     navigation: {
@@ -272,7 +272,8 @@ window.addEventListener("load", function () {
     // Responsive breakpoints
     breakpoints: {
       640: {
-        spaceBetween: 16
+        spaceBetween: 16,
+        centeredSlides: false
       }
     }
   });
