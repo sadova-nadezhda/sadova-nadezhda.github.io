@@ -1241,6 +1241,10 @@ form .form__item {
   color: var(--primary-light, #1195D1);
 }
 
+.seminar-diplom .seminar-page__caption {
+  min-width: unset;
+}
+
 .faq__accordion {
   grid-column-start: 2;
   padding: 3.6rem;
