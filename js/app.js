@@ -281,7 +281,7 @@ window.addEventListener("load", function () {
   const wrapper = document.querySelector(".brands__cards");
   if(wrapper) {
     const boxes = gsap.utils.toArray(".brands__card");
-    gsap.registerPlugin(Draggable, InertiaPlugin);
+    gsap.registerPlugin(Draggable);
     const loop = horizontalLoop(boxes, { repeat: -1, draggable: true });
     wrapper.addEventListener("mouseenter", () => loop.pause());
     wrapper.addEventListener("mouseleave", () =>
