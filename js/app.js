@@ -317,12 +317,33 @@ window.addEventListener("load", function () {
   }
 
   // form
-  let yearInputs = document.querySelectorAll('#year')
-  yearInputs.forEach( input => {
+  let numInputs = document.querySelectorAll('.number')
+  numInputs.forEach( input => {
     input.addEventListener('input', (e) => {
       input.value = input.value.replace(/\D/g, '');
     })
   })
+
+  // file
+  const inputs = document.querySelectorAll(".inputfile");
+  if(inputs) {
+    inputs.forEach((input) => {
+      const label = input.nextElementSibling,
+            labelVal = label.querySelector("span").innerHTML;
+  
+      input.addEventListener("change", function (e) {
+        const fileName =
+          this.files && this.files.length > 1
+            ? (this.getAttribute("data-multiple-caption") || "").replace(
+                "{count}",
+                this.files.length
+              )
+            : e.target.value.split("\\").pop();
+  
+        label.querySelector("span").innerHTML = fileName ? fileName : labelVal;
+      });
+    });
+  }
 
   // mask phone
   $.fn.setCursorPosition = function (pos) {
