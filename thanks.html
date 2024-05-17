@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Спасибо за заявку</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240517112948" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240517112948" />
-  <link rel="stylesheet" href="css/style.css?_v=20240517112948" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240517171157" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240517171157" />
+  <link rel="stylesheet" href="css/style.css?_v=20240517171157" />
 </head>
 
   <body>
@@ -39,7 +39,7 @@
           </span>
           <span>+7 700 700 70 70</span>
         </a>
-        <a class="button popup-btn">
+        <a class="button popup-btn" data-type="popupCall">
           <span>Заказать звонок</span>
         </a>
       </div>
@@ -51,6 +51,182 @@
     </div>
   </div>
 </header>
+
+<div class="modals">
+  <div class="modal modal-feedback" data-type="popupFeedback">
+    <div class="modal__top">
+      <h4 class="modal__title title">Оставить заявку</h4>
+      <button class="modal__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+        </svg>                  
+      </button>
+    </div>
+    <div class="modal__form">
+      <form action="">
+        <div class="form__item">
+          <label for="">ФИО</label>
+          <input type="text" name="" id="" placeholder="Имя Фамилия">
+        </div>
+        <div class="form__item">
+          <label for="">Телефон</label>
+          <input type="tel" name="" id="" placeholder="Ваш телефон">
+        </div>
+        <div class="form__item">
+          <label for="">Возраст</label>
+          <input type="text" name="" id="" class="number" placeholder="Ваш возраст">
+        </div>
+        <div class="form__item">
+          <label for="">Город</label>
+          <input type="text" name="" id="" placeholder="Ваш город">
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-call" data-type="popupCall">
+    <div class="modal__top">
+      <h4 class="modal__title title">Заказать <strong>Звонок</strong></h4>
+      <button class="modal__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+        </svg>                  
+      </button>
+    </div>
+    <div class="modal__form">
+      <form action="">
+        <div class="form__item">
+          <label for="">ФИО</label>
+          <input type="text" name="" id="" placeholder="Имя Фамилия">
+        </div>
+        <div class="form__item">
+          <label for="">Телефон</label>
+          <input type="tel" name="" id="" placeholder="Ваш телефон">
+        </div>
+        <input type="submit" value="Хочу на обучение">
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-grid modal-treatment" data-type="popupTreatment">
+    <div class="modal__top">
+      <h4 class="modal__title title">Заявка на <strong>Лечение</strong></h4>
+      <button class="modal__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+        </svg>                  
+      </button>
+    </div>
+    <div class="modal__form">
+      <form action="">
+        <div class="form__item">
+          <label for="">ФИО</label>
+          <input type="text" name="" id="" placeholder="Имя Фамилия">
+        </div>
+        <div class="form__item">
+          <label for="">Возраст</label>
+          <input type="text" name="" id="" class="number" placeholder="Ваш возраст">
+        </div>
+        <div class="form__item">
+          <label for="">Город</label>
+          <input type="text" name="" id="" placeholder="Ваш город">
+        </div>
+        <div class="form__item">
+          <label for="">Жалоба</label>
+          <textarea name="" id="" placeholder="Опишите что вас беспокоит"></textarea>
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-grid modal-reviews" data-type="popupReviews">
+    <div class="modal__top">
+      <h4 class="modal__title title">Оставить <strong>Отзыв</strong></h4>
+      <button class="modal__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+        </svg>                  
+      </button>
+    </div>
+    <div class="modal__form">
+      <form action="">
+        <div class="form__item">
+          <label for="">ФИО</label>
+          <input type="text" name="" id="" placeholder="Имя Фамилия">
+        </div>
+        <div class="form__item">
+          <label for="">Город</label>
+          <input type="text" name="" id="" placeholder="Ваш город">
+        </div>
+        <div class="form__item">
+          <div class="label">Фотография</div>
+          <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="Выбрано файлов: {count} " multiple />
+          <label for="file" class="labelfile">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.85352 9.96873C2.8533 10.0925 2.88983 10.2136 2.95849 10.3165C3.02715 10.4195 3.12485 10.4998 3.23919 10.5472C3.35353 10.5946 3.47937 10.607 3.60076 10.5828C3.72214 10.5586 3.8336 10.4989 3.92102 10.4112L9.66477 4.66498C10.2509 4.07885 11.0459 3.74957 11.8748 3.74957C12.2852 3.74957 12.6916 3.83041 13.0708 3.98747C13.45 4.14454 13.7945 4.37476 14.0848 4.66498C14.375 4.9552 14.6052 5.29974 14.7623 5.67894C14.9193 6.05813 15.0002 6.46454 15.0002 6.87498C15.0002 7.28541 14.9193 7.69183 14.7623 8.07102C14.6052 8.45021 14.375 8.79476 14.0848 9.08498L7.45602 15.7137C7.22026 15.9414 6.90451 16.0674 6.57677 16.0646C6.24902 16.0617 5.9355 15.9303 5.70374 15.6985C5.47198 15.4667 5.34052 15.1532 5.33767 14.8255C5.33483 14.4977 5.46082 14.182 5.68852 13.9462L12.3173 7.31748C12.3754 7.25937 12.4215 7.19038 12.4529 7.11446C12.4844 7.03853 12.5006 6.95716 12.5006 6.87498C12.5006 6.7928 12.4844 6.71142 12.4529 6.6355C12.4215 6.55958 12.3754 6.49059 12.3173 6.43248C12.2592 6.37437 12.1902 6.32827 12.1142 6.29682C12.0383 6.26538 11.9569 6.24919 11.8748 6.24919C11.7926 6.24919 11.7112 6.26538 11.6353 6.29682C11.5594 6.32827 11.4904 6.37437 11.4323 6.43248L4.80352 13.0625C4.56474 13.2931 4.37429 13.569 4.24326 13.874C4.11224 14.179 4.04328 14.507 4.04039 14.839C4.03751 15.1709 4.10076 15.5001 4.22646 15.8074C4.35216 16.1146 4.5378 16.3937 4.77253 16.6285C5.00726 16.8632 5.28639 17.0488 5.59363 17.1745C5.90087 17.3002 6.23007 17.3635 6.56202 17.3606C6.89397 17.3577 7.22202 17.2888 7.52703 17.1577C7.83204 17.0267 8.1079 16.8363 8.33852 16.5975L14.9673 9.96873C15.7878 9.14822 16.2487 8.03536 16.2487 6.87498C16.2487 5.7146 15.7878 4.60174 14.9673 3.78123C14.1468 2.96072 13.0339 2.49976 11.8735 2.49976C10.7131 2.49976 9.60028 2.96072 8.77977 3.78123L3.03727 9.52623C2.97926 9.58438 2.93329 9.65339 2.90198 9.72932C2.87066 9.80524 2.85337 9.8866 2.85352 9.96873Z" fill="#1195D1"/>
+            </svg>                        
+            <span class="namefile">Прикрепить файл</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label for="">Отзыв</label>
+          <textarea name="" id="" placeholder="Напишите свой отзыв"></textarea>
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-grid-lg modal-questionary" data-type="popupQuestionary">
+    <div class="modal__top">
+      <h4 class="modal__title title">Анкетные <strong>данные</strong></h4>
+      <button class="modal__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
+        </svg>                  
+      </button>
+    </div>
+    <div class="modal__form questionary__form">
+      <form action="">
+        <div class="form__item">
+          <label for="">ФИО</label>
+          <input type="text" name="" id="" placeholder="Имя Фамилия">
+        </div>
+        <div class="form__item">
+          <label for="">Дата рождения</label>
+          <input type="date" name="" id="" placeholder="День рождения">
+        </div>
+        <div class="form__item">
+          <label for="">Телефон</label>
+          <input type="tel" name="" id="" placeholder="Ваш телефон">
+        </div>
+        <div class="form__item">
+          <label for="">Высшее Медицинское Учереждение</label>
+          <input type="text" name="" id="" placeholder="Высшее Медицинское Учереждение">
+        </div>
+        <div class="form__item">
+          <label for="">Год окончания</label>
+          <input type="text" name="" id="" class="number" placeholder="Год окончания">
+        </div>
+        <div class="form__item">
+          <label for="">Специальность</label>
+          <input type="text" name="" id="" placeholder="Специальность">
+        </div>
+        <div class="form__item">
+          <label for="">Место работы</label>
+          <input type="text" name="" id="" placeholder="Место работы">
+        </div>
+        <div class="form__item">
+          <label for="">Город проживания</label>
+          <input type="text" name="" id="" placeholder="Город проживания">
+        </div>
+        <div class="form__item">
+          <label for="">Откуда узнали о нас</label>
+          <input type="text" name="" id="">
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
+</div>
 
 
     <main>
@@ -124,13 +300,13 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20240517112948"></script>
-<script src="js/jquery.maskedinput.js?_v=20240517112948"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240517112948"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js?_v=20240517112948"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240517112948"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240517112948"></script>
-<script src="js/app.js?_v=20240517112948"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20240517171157"></script>
+<script src="js/jquery.maskedinput.js?_v=20240517171157"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240517171157"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js?_v=20240517171157"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240517171157"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240517171157"></script>
+<script src="js/app.js?_v=20240517171157"></script>
 </body>
 </html>
   </body>

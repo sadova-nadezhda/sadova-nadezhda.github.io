@@ -1,4 +1,5 @@
 // Global VARS
+let body = document.querySelector('body');
 var link = document.querySelector(".header__burger");
 var menu = document.querySelector(".header__menu");
 var header = document.querySelector("header");
@@ -363,6 +364,51 @@ window.addEventListener("load", function () {
       $(this).setCursorPosition(3);
     })
     .mask("+7 (999) 999 99 99");
+
+  // Modals
+  function hidePopup(popup) {
+    popup.addEventListener('click', function(e) {
+      const target = e.target;
+      if (
+        target.classList.contains("modal__close") ||
+        target.classList.contains("modals")
+      ) {
+        popup.style.transition = "opacity 0.4s";
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    popup.style.display = "flex";
+    setTimeout(() => {
+      popup.style.transition = "opacity 0.4s";
+      popup.style.opacity = "1";
+    }, 10);
+  } 
+
+  //popup
+  let modals = document.querySelector('.modals')
+  let modalAll = document.querySelectorAll('.modal')
+  let popupBtns = document.querySelectorAll(".popup-btn");
+  if(modals && popupBtns){
+    hidePopup(modals);
+    popupBtns.forEach( btn => {
+      btn.addEventListener('click', () => {
+        showPopup(modals)
+        let typeBtn = btn.dataset.type;
+        modalAll.forEach( modal => {
+          let typeModal = modal.dataset.type;
+          modal.style.display = 'none'
+          if(typeBtn == typeModal) {
+            modal.style.display = 'block'
+          }
+        });
+      })
+    })
+  }
 });
 
 window.addEventListener("resize", () => {
