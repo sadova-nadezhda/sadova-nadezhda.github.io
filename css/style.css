@@ -1982,6 +1982,12 @@ form .form__item {
     height: 3.2rem;
   }
 
+  .programm__card:first-child,
+  .programm__card:nth-child(4) {
+    order: -1;
+    flex: 1 1 calc(50% - 1.6rem);
+  }
+
   .programm__card {
     height: 98px;
     padding: 1.6rem;
