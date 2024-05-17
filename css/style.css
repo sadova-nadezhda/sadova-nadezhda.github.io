@@ -1125,6 +1125,10 @@ form .form__item {
   overflow: hidden;
 }
 
+.seminar__container {
+  position: relative;
+}
+
 .seminar__top {
   display: grid;
   grid-template-columns: 24% 1fr 20%;
@@ -1954,12 +1958,18 @@ form .form__item {
     border-radius: 1.6rem;
   }
 
+  .hero__card:last-child {
+    min-height: unset;
+  }
+
   .hero__card svg {
     width: 4rem;
     height: 4rem;
   }
 
   .hero__card {
+    min-height: 10rem;
+    height: auto;
     padding: 1.6rem;
   }
 
@@ -2024,8 +2034,20 @@ form .form__item {
     margin-left: 4rem;
   }
 
+  .seminar__container {
+    padding-bottom: 7.6rem;
+  }
+
   .seminar__top {
     grid-template-columns: 1fr;
+  }
+
+  .seminar__link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: unset;
   }
 
   .seminar__desc {
@@ -2067,7 +2089,6 @@ form .form__item {
   }
 
   .questionary__form form {
-    grid-column-start: unset;
     grid-auto-flow: unset;
     grid-template-columns: 1fr;
     padding: 1.6rem;
@@ -2080,6 +2101,10 @@ form .form__item {
 
   .questionary__form .form__item:nth-child(n+6) {
     grid-column: unset;
+  }
+
+  .questionary__form {
+    grid-column-start: unset;
   }
 
   .news__container {
@@ -2095,6 +2120,7 @@ form .form__item {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: unset;
   }
 
   .news__cards {
@@ -2121,6 +2147,10 @@ form .form__item {
 
   .reviews__cards {
     margin-bottom: 1.6rem;
+  }
+
+  .reviews__column {
+    flex: 1 1 100%;
   }
 
   .reviews__card {
