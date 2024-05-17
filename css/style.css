@@ -1898,6 +1898,10 @@ form .form__item {
     border-radius: 3rem;
   }
 
+  .tabs__caption {
+    gap: 0.8rem;
+  }
+
   .tabs__content {
     padding: 1.6rem;
     border-radius: 1.6rem;
@@ -1985,7 +1989,7 @@ form .form__item {
   .programm__card:first-child,
   .programm__card:nth-child(4) {
     order: -1;
-    flex: 1 1 calc(50% - 1.6rem);
+    flex: 1 1 auto;
   }
 
   .programm__card {
