@@ -5,742 +5,445 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240517171939" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240517171939" />
-  <link rel="stylesheet" href="css/style.css?_v=20240517171939" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240607170229" />
+  <link rel="stylesheet" href="css/style.css?_v=20240607170229" />
 </head>
 
   <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
   <div class="container">
     <div class="header__container">
       <div class="header__logo">
-        <a href="/" class="logo">
-          <img src="img/logo.svg" alt="logo" />
+        <a class="logo">
+          <img class="icon" src="img/logo-icon.png" alt="logo icon" />
+          <img src="img/logo.svg" alt="logo text" />
         </a>
       </div>
-      <div class="header__menu">
-        <nav class="header__nav">
-          <ul>
-            <li><a href="">Последипломные</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Вопрос и ответы</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Отзывы</a></li>
-            <li><a href="">Партнеры</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-        <a href="tel:+77007007070" class="link">
-          <span class="icon">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.82 10.1733L11.1267 9.98C10.9276 9.95662 10.7258 9.97866 10.5364 10.0445C10.347 10.1103 10.175 10.2182 10.0334 10.36L8.80669 11.5867C6.91415 10.6241 5.37588 9.08588 4.41336 7.19334L5.64669 5.96C5.93336 5.67334 6.07336 5.27334 6.02669 4.86667L5.83336 3.18667C5.79556 2.86145 5.63949 2.56149 5.39485 2.3439C5.15021 2.12631 4.8341 2.00628 4.50669 2.00667H3.35336C2.60003 2.00667 1.97336 2.63334 2.02003 3.38667C2.37336 9.08 6.92669 13.6267 12.6134 13.98C13.3667 14.0267 13.9934 13.4 13.9934 12.6467V11.4933C14 10.82 13.4934 10.2533 12.82 10.1733Z" fill="white"/>
-            </svg>              
-          </span>
-          <span>+7 700 700 70 70</span>
+      <div class="header__buttons">
+        <a href="https://www.instagram.com/ozim.center/ " class="instagram button button_light" target="_blank" rel="nofollow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10Z" fill="#F12670"/>
+            <path d="M16.5 8.5C17.0523 8.5 17.5 8.05228 17.5 7.5C17.5 6.94772 17.0523 6.5 16.5 6.5C15.9477 6.5 15.5 6.94772 15.5 7.5C15.5 8.05228 15.9477 8.5 16.5 8.5Z" fill="#F12670"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8ZM8 5C6.34315 5 5 6.34315 5 8V16C5 17.6569 6.34315 19 8 19H16C17.6569 19 19 17.6569 19 16V8C19 6.34315 17.6569 5 16 5H8Z" fill="#F12670"/>
+          </svg>            
+          <span>Instagram</span>
         </a>
-        <a class="button popup-btn" data-type="popupCall">
-          <span>Заказать звонок</span>
-        </a>
-      </div>
-      <div class="header__burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <a class="button">Помочь детям</a>
       </div>
     </div>
   </div>
 </header>
 
-<div class="modals">
-  <div class="modal modal-feedback" data-type="popupFeedback">
-    <div class="modal__top">
-      <h4 class="modal__title title">Оставить заявку</h4>
-      <button class="modal__close">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-        </svg>                  
-      </button>
-    </div>
-    <div class="modal__form">
-      <form action="">
-        <div class="form__item">
-          <label for="">ФИО</label>
-          <input type="text" name="" id="" placeholder="Имя Фамилия">
-        </div>
-        <div class="form__item">
-          <label for="">Телефон</label>
-          <input type="tel" name="" id="" placeholder="Ваш телефон">
-        </div>
-        <div class="form__item">
-          <label for="">Возраст</label>
-          <input type="text" name="" id="" class="number" placeholder="Ваш возраст">
-        </div>
-        <div class="form__item">
-          <label for="">Город</label>
-          <input type="text" name="" id="" placeholder="Ваш город">
-        </div>
-        <input type="submit" value="Отправить">
-      </form>
-    </div>
-  </div>
-  <div class="modal modal-call" data-type="popupCall">
-    <div class="modal__top">
-      <h4 class="modal__title title">Заказать <strong>Звонок</strong></h4>
-      <button class="modal__close">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-        </svg>                  
-      </button>
-    </div>
-    <div class="modal__form">
-      <form action="">
-        <div class="form__item">
-          <label for="">ФИО</label>
-          <input type="text" name="" id="" placeholder="Имя Фамилия">
-        </div>
-        <div class="form__item">
-          <label for="">Телефон</label>
-          <input type="tel" name="" id="" placeholder="Ваш телефон">
-        </div>
-        <input type="submit" value="Хочу на обучение">
-      </form>
-    </div>
-  </div>
-  <div class="modal modal-grid modal-treatment" data-type="popupTreatment">
-    <div class="modal__top">
-      <h4 class="modal__title title">Заявка на <strong>Лечение</strong></h4>
-      <button class="modal__close">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-        </svg>                  
-      </button>
-    </div>
-    <div class="modal__form">
-      <form action="">
-        <div class="form__item">
-          <label for="">ФИО</label>
-          <input type="text" name="" id="" placeholder="Имя Фамилия">
-        </div>
-        <div class="form__item">
-          <label for="">Возраст</label>
-          <input type="text" name="" id="" class="number" placeholder="Ваш возраст">
-        </div>
-        <div class="form__item">
-          <label for="">Город</label>
-          <input type="text" name="" id="" placeholder="Ваш город">
-        </div>
-        <div class="form__item">
-          <label for="">Жалоба</label>
-          <textarea name="" id="" placeholder="Опишите что вас беспокоит"></textarea>
-        </div>
-        <input type="submit" value="Отправить">
-      </form>
-    </div>
-  </div>
-  <div class="modal modal-grid modal-reviews" data-type="popupReviews">
-    <div class="modal__top">
-      <h4 class="modal__title title">Оставить <strong>Отзыв</strong></h4>
-      <button class="modal__close">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-        </svg>                  
-      </button>
-    </div>
-    <div class="modal__form">
-      <form action="">
-        <div class="form__item">
-          <label for="">ФИО</label>
-          <input type="text" name="" id="" placeholder="Имя Фамилия">
-        </div>
-        <div class="form__item">
-          <label for="">Город</label>
-          <input type="text" name="" id="" placeholder="Ваш город">
-        </div>
-        <div class="form__item">
-          <div class="label">Фотография</div>
-          <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="Выбрано файлов: {count} " multiple />
-          <label for="file" class="labelfile">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.85352 9.96873C2.8533 10.0925 2.88983 10.2136 2.95849 10.3165C3.02715 10.4195 3.12485 10.4998 3.23919 10.5472C3.35353 10.5946 3.47937 10.607 3.60076 10.5828C3.72214 10.5586 3.8336 10.4989 3.92102 10.4112L9.66477 4.66498C10.2509 4.07885 11.0459 3.74957 11.8748 3.74957C12.2852 3.74957 12.6916 3.83041 13.0708 3.98747C13.45 4.14454 13.7945 4.37476 14.0848 4.66498C14.375 4.9552 14.6052 5.29974 14.7623 5.67894C14.9193 6.05813 15.0002 6.46454 15.0002 6.87498C15.0002 7.28541 14.9193 7.69183 14.7623 8.07102C14.6052 8.45021 14.375 8.79476 14.0848 9.08498L7.45602 15.7137C7.22026 15.9414 6.90451 16.0674 6.57677 16.0646C6.24902 16.0617 5.9355 15.9303 5.70374 15.6985C5.47198 15.4667 5.34052 15.1532 5.33767 14.8255C5.33483 14.4977 5.46082 14.182 5.68852 13.9462L12.3173 7.31748C12.3754 7.25937 12.4215 7.19038 12.4529 7.11446C12.4844 7.03853 12.5006 6.95716 12.5006 6.87498C12.5006 6.7928 12.4844 6.71142 12.4529 6.6355C12.4215 6.55958 12.3754 6.49059 12.3173 6.43248C12.2592 6.37437 12.1902 6.32827 12.1142 6.29682C12.0383 6.26538 11.9569 6.24919 11.8748 6.24919C11.7926 6.24919 11.7112 6.26538 11.6353 6.29682C11.5594 6.32827 11.4904 6.37437 11.4323 6.43248L4.80352 13.0625C4.56474 13.2931 4.37429 13.569 4.24326 13.874C4.11224 14.179 4.04328 14.507 4.04039 14.839C4.03751 15.1709 4.10076 15.5001 4.22646 15.8074C4.35216 16.1146 4.5378 16.3937 4.77253 16.6285C5.00726 16.8632 5.28639 17.0488 5.59363 17.1745C5.90087 17.3002 6.23007 17.3635 6.56202 17.3606C6.89397 17.3577 7.22202 17.2888 7.52703 17.1577C7.83204 17.0267 8.1079 16.8363 8.33852 16.5975L14.9673 9.96873C15.7878 9.14822 16.2487 8.03536 16.2487 6.87498C16.2487 5.7146 15.7878 4.60174 14.9673 3.78123C14.1468 2.96072 13.0339 2.49976 11.8735 2.49976C10.7131 2.49976 9.60028 2.96072 8.77977 3.78123L3.03727 9.52623C2.97926 9.58438 2.93329 9.65339 2.90198 9.72932C2.87066 9.80524 2.85337 9.8866 2.85352 9.96873Z" fill="#1195D1"/>
-            </svg>                        
-            <span class="namefile">Прикрепить файл</span>
-          </label>
-        </div>
-        <div class="form__item">
-          <label for="">Отзыв</label>
-          <textarea name="" id="" placeholder="Напишите свой отзыв"></textarea>
-        </div>
-        <input type="submit" value="Отправить">
-      </form>
-    </div>
-  </div>
-  <div class="modal modal-grid-lg modal-questionary" data-type="popupQuestionary">
-    <div class="modal__top">
-      <h4 class="modal__title title">Анкетные <strong>данные</strong></h4>
-      <button class="modal__close">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 9L1 1M1 9L9 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-        </svg>                  
-      </button>
-    </div>
-    <div class="modal__form questionary__form">
-      <form action="">
-        <div class="form__item">
-          <label for="">ФИО</label>
-          <input type="text" name="" id="" placeholder="Имя Фамилия">
-        </div>
-        <div class="form__item">
-          <label for="">Дата рождения</label>
-          <input type="date" name="" id="" placeholder="День рождения">
-        </div>
-        <div class="form__item">
-          <label for="">Телефон</label>
-          <input type="tel" name="" id="" placeholder="Ваш телефон">
-        </div>
-        <div class="form__item">
-          <label for="">Высшее Медицинское Учереждение</label>
-          <input type="text" name="" id="" placeholder="Высшее Медицинское Учереждение">
-        </div>
-        <div class="form__item">
-          <label for="">Год окончания</label>
-          <input type="text" name="" id="" class="number" placeholder="Год окончания">
-        </div>
-        <div class="form__item">
-          <label for="">Специальность</label>
-          <input type="text" name="" id="" placeholder="Специальность">
-        </div>
-        <div class="form__item">
-          <label for="">Место работы</label>
-          <input type="text" name="" id="" placeholder="Место работы">
-        </div>
-        <div class="form__item">
-          <label for="">Город проживания</label>
-          <input type="text" name="" id="" placeholder="Город проживания">
-        </div>
-        <div class="form__item">
-          <label for="">Откуда узнали о нас</label>
-          <input type="text" name="" id="">
-        </div>
-        <input type="submit" value="Отправить">
-      </form>
-    </div>
-  </div>
-</div>
-
 
     <main>
-      <section class="hero section-top section">
+      <section class="hero">
         <div class="container">
           <div class="hero__container">
-            <div class="hero__row">
-              <div class="hero__box" data-aos="fade-right" data-aos-delay="100">
-                <h1 class="hero__title title">Начни обучение остеопатии вместе с <strong>КИОМ!</strong></h1>
-                <ul class="hero__benefits">
-                  <li>+100 учеников</li>
-                  <li>+5 лет опыта</li>
-                </ul>
-              </div>
-              <div class="hero__desc" data-aos="flip-right" data-aos-delay="150">
-                Остеопатия — система лечения альтернативной медицины, не имеющая научного обоснования. В основе остеопатии лежит представление о том, что решающее значение имеют связи между работой тех или иных органов и мышечно-скелетной структурой. Она создана Эндрю Тейлором Стиллом 22 июня 1874 года.
-              </div>
+            <h1 class="hero__title">
+              <span data-aos="fade-right">Каждый день</span>
+              <span data-aos="fade-left">мы видим как дети с ДЦП </span>
+              <span data-aos="fade-right">преодолевают трудности</span>
+              <span data-aos="fade-left">на пути к полноценной жизни</span>
+            </h1>
+            <div class="hero__desc text_pink" data-aos="fade-right">
+              В <span>OZIM</span> мы <span>верим</span>,<br>
+              что <span>возможности</span> всех <span>безграничны</span>.
             </div>
-            <div class="hero__row">
-              <div class="hero__img" data-aos="fade-right" data-aos-delay="200">
-                <img src="img/image-1.png" alt="">
+            <div class="hero__down">
+              <span class="line"></span>
+              <a href="" class="hero__link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 7.76855V5L12.2783 7.5752L15.5566 5V7.76855L12.2783 10.3438L9 7.76855Z" fill="#F12670">
+                    <animate attributeName="opacity" from="1" to="0" dur="0.5s" repeatCount="indefinite" />
+                  </path>
+                  <path d="M9 15.8545V13.0859L12.2783 15.6611L15.5566 13.0859V15.8545L12.2783 18.4297L9 15.8545Z" fill="#F12670">
+                    <animate attributeName="opacity" from="0" to="1" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
+                  </path>
+                </svg>               
+                <span>Листайте вниз</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 7.76855V5L12.2783 7.5752L15.5566 5V7.76855L12.2783 10.3438L9 7.76855Z" fill="#F12670">
+                    <animate attributeName="opacity" from="1" to="0" dur="0.5s" repeatCount="indefinite" />
+                  </path>
+                  <path d="M9 15.8545V13.0859L12.2783 15.6611L15.5566 13.0859V15.8545L12.2783 18.4297L9 15.8545Z" fill="#F12670">
+                    <animate attributeName="opacity" from="0" to="1" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
+                  </path>
+                </svg>
+              </a>
+              <span class="line"></span>
+            </div>
+            <img class="hero__back hero__back-2" src="img/cloud2.png" alt="" data-aos="fade-right"  data-aos-delay="200">
+            <img class="hero__back hero__back-3" src="img/cloud.png" alt="" data-aos="fade-left">
+          </div>
+        </div>
+        <img class="hero__back hero__back-1" src="img/cloud.png" alt="" data-aos="fade-down">
+        <img class="hero__back hero__back-4" src="img/sun.png" alt="" data-aos="fade-down-left">
+      </section>
+      <section class="education panel">
+        <div class="container">
+          <div class="education__container">
+            <h2 class="education__title text_blue up"><span>Ozim</span> инклюзивный образовательный центр в Караганде которому <span>2 года</span></h2>
+            <div class="education__cards">
+              <div class="education__card">
+                <div class="education__img"><img src="img/image-1.png" alt=""></div>
               </div>
-              <div class="hero__cards" data-aos="fade-left" data-aos-delay="200">
-                <a class="hero__card" href="#questionary">
-                  <div class="hero__icon"><img src="img/icon-1.svg" alt=""></div>
-                  <h5 class="hero__caption">Хочу на обучение</h5>
-                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="20" r="26" fill="white" stroke="#F2F2F2" stroke-width="12"/>
-                    <path d="M28 16H36M36 16V24M36 16L28 24" stroke="#1B58A3" stroke-width="2"/>
-                  </svg>                  
-                </a>
-                <a class="hero__card popup-btn" data-type="popupTreatment">
-                  <div class="hero__icon"><img src="img/icon-2.svg" alt=""></div>
-                  <h5 class="hero__caption">Хочу на лечение</h5>
-                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="20" r="26" fill="#1B58A3" stroke="#F2F2F2" stroke-width="12"/>
-                    <path d="M28 16H36M36 16V24M36 16L28 24" stroke="white" stroke-width="2"/>
-                  </svg> 
-                </a>
-                <a class="hero__card button" href="#">
-                  <h5 class="hero__caption">Посдипломные семинары</h5>
-                  <div class="hero__icon"><img src="img/icon-3.svg" alt=""></div>
-                </a>
+              <div class="education__card">
+                <div class="education__img"><img src="img/image-2.png" alt=""></div>
+              </div>
+              <div class="education__card">
+                <div class="education__img"><img src="img/image-3.png" alt=""></div>
+              </div>
+              <div class="education__card">
+                <div class="education__img"><img src="img/image-4.png" alt=""></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="programm section">
+      <section class="learned panel">
+        <img class="learned__back" src="img/rainbow-1.png" alt="" data-aos="fade-down-right"  data-aos-delay="300">
         <div class="container">
-          <div class="programm__container">
-            <div class="programm__top heading col col-2">
-              <span></span>
-              <h2 class="programm__title title">Программа <strong>Обучения</strong></h2>
-            </div>
-            <div class="programm__box">
-              <svg class="programm-lg" width="395" height="336" viewBox="0 0 395 336" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="svgmask1">
-                  <path d="M0 20C0 8.95431 8.9543 0 20 0H375C386.046 0 395 8.95431 395 20V140C395 151.046 386.046 160 375 160H331.082C315.618 160 303.082 172.536 303.082 188V316C303.082 327.046 294.127 336 283.082 336H20C8.95428 336 0 327.046 0 316V20Z" fill="#D9D9D9"/>
-                </mask>
-                <image xlink:href="img/image-2.1.png" mask="url(#svgmask1)"></image>
-              </svg>                
-              <svg class="programm-md" width="318" height="336" viewBox="0 0 318 336" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="svgmask2">
-                  <path d="M0 20C0 8.95431 8.95431 0 20 0H298C309.046 0 318 8.95431 318 20V140C318 151.046 309.046 160 298 160H272C256.536 160 244 172.536 244 188V316C244 327.046 235.046 336 224 336H20C8.95431 336 0 327.046 0 316V20Z" fill="#D9D9D9"/>
-                </mask>
-                <image xlink:href="img/image-2.png" mask="url(#svgmask2)"></image>
-              </svg>          
-              <div class="programm__cards">
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="100">
-                  <h3>Очная</h3>
-                  <div>программа</div>
+          <div class="learned__container">
+            <h2 class="learned__title text_pink up">За это время с нами стали самостоятельнее <span>+40 детей</span></h2>
+            <div class="learned__list">
+              <div class="learned__box">
+                <img src="img/sun.png" alt="">
+                <h4>Они научились:</h4>
+              </div>
+              <div class="learned__items">
+                <div class="learned__item" data-aos="fade-right"  data-aos-delay="100">
+                  <img src="img/cloud.png" alt="">
+                  <h4>читать</h4>
                 </div>
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="110">
-                  <h3>6 семинаров</h3>
-                  <div>в год</div>
+                <div class="learned__item" data-aos="fade-right"  data-aos-delay="200">
+                  <img src="img/cloud.png" alt="">
+                  <h4>обрели друзей</h4>
                 </div>
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="120">
-                  <h3>6 дней</h3>
-                  <div>один семинар</div>
+                <div class="learned__item" data-aos="fade-up" data-aos-delay="100">
+                  <img src="img/cloud.png" alt="">
+                  <h4>сидеть</h4>
                 </div>
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="130">
-                  <h3>3504 часов</h3>
-                  <div>обучения</div>
+                <div class="learned__item" data-aos="fade-left"  data-aos-delay="100">
+                  <img src="img/cloud.png" alt="">
+                  <h4>стоять и ходить</h4>
                 </div>
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="140">
-                  <h3>24 семинара</h3>
-                  <div>программа</div>
+                <div class="learned__item" data-aos="fade-left"  data-aos-delay="200">
+                  <img src="img/cloud.png" alt="">
+                  <h4>идут на контакт</h4>
                 </div>
-                <div class="programm__card" data-aos="fade-left" data-aos-delay="150">
-                  <h3>Раз в неделю</h3>
-                  <div>Практичекая Самопродготовка Слушателей</div>
-                </div>
+              </div>
+              <div class="learned__images">
+                <div class="learned__img"><img src="img/flower-1.png" alt=""></div>
+                <div class="learned__img"><img src="img/flower-2.png" alt=""></div>
+                <div class="learned__img"><img src="img/flower-3.png" alt=""></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="about section">
+      <section class="expert panel">
+        <img class="expert__back-1" src="img/tree.png" alt="" data-aos="fade-up-right"  data-aos-delay="200">
+        <img class="expert__back-2" src="img/rainbow-2.png" alt="" data-aos="fade-down-left"  data-aos-delay="300"> 
         <div class="container">
-          <div class="about__container">
-            <div class="about__top heading col col-3">
-              <span>О Компании</span>
-              <h2 class="about__title title">О <strong>Компании</strong></h2>
-              <div class="about__desc">
-                Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. Мы убеждены, что передача знаний в этой области должна быть осуществлена с максимальной тщательностью и в своем самом совершенном виде, сохраняя их ценность и эффективность.
-              </div>
+          <div class="expert__container count-start">
+            <div class="expert__top" >
+              <span class="number number_md count" data-num="9">9</span>
+              <div class="expert__text">неравнодушных <br>
+                специалистов работают в Ozim</div>
             </div>
-            <div class="about__wrap col col-3">
-              <div class="about__desc">
-                Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане.
-              </div>
-              <ul class="about__benefits">
-                <li class="about__item" data-aos="fade-right" data-aos-duration="1000">
-                  <div class="about__icon"><img src="img/Star-1.png" alt=""></div>
-                  <h5 class="about__caption">Преимущество 1</h5>
-                  <div class="about__txt">Мы стремимся распространить доступное и актуальное профессиональное образование</div>
-                </li>
-                <li class="about__item" data-aos="fade-right" data-aos-duration="1400">
-                  <div class="about__icon"><img src="img/Star-2.png" alt=""></div>
-                  <h5 class="about__caption">Преимущество 2</h5>
-                  <div class="about__txt">Мы стремимся распространить доступное и актуальное профессиональное образование</div>
-                </li>
-                <li class="about__item" data-aos="fade-right" data-aos-duration="1600">
-                  <div class="about__icon"><img src="img/Star-3.png" alt=""></div>
-                  <h5 class="about__caption">Преимущество 3</h5>
-                  <div class="about__txt">Мы стремимся распространить доступное и актуальное профессиональное образование</div>
-                </li>
+            <div class="expert__bottom">
+              <ul class="expert__list">
+                <li>логопед</li>
+                <li>дефектолог</li>
+                <li>сенсорный терапевт</li>
+                <li>психолог</li>
+                <li>арт терапевт</li>
+                <li>музыкальный терапевт</li>
+                <li>2 тютора и</li>
+                <li>2 куратора</li>
               </ul>
-              <div class="about__img" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/image-3.png" alt="">
-                <a href="" class="about__link button">Подробнее</a>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="seminar section">
+      <section class="benefits panel">
         <div class="container">
-          <div class="seminar__container">
-            <div class="seminar__top heading col col-2">
-              <span>Семинаре</span>
-              <h2 class="seminar__title title">О <strong>Семинаре</strong></h2>
-              <a href="" class="seminar__link button">Подробнее о семинаре</a>
-            </div>
-            <div class="seminar__box col col-2">
-              <div class="seminar__desc">
-                <p>Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. Мы убеждены, что передача знаний в этой области должна быть осуществлена с максимальной тщательностью и в своем самом совершенном виде, сохраняя их ценность и эффективность.</p>
-                <p>Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. Мы убеждены, что передача знаний в этой области должна быть осуществлена с максимальной тщательностью и в своем самом совершенном виде, сохраняя их ценность и эффективность.</p>
+          <div class="benefits__container count-start">
+            <div class="benefits__row">
+              <div class="benefits__caption"><span class="number number_md"><span class="count" data-num="200">200</span>+</span></div>
+              <div class="benefits__text" data-aos="fade-left"  data-aos-delay="200">
+                обучений за свой счет <br>
+                мы прошли за 2023 год
               </div>
             </div>
-          </div>
-        </div>
-        <div class="seminar__slider">
-          <div class="swiper seminar__swiper" id="seminarSwiper">
-            <div class="swiper-wrapper">
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
-              </div>
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
-              </div>
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="seminar-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
+            <div class="benefits__row">
+              <div class="benefits__caption"><span class="number number_md count" data-num="250">250</span> кв.м</div>
+              <div class="benefits__text" data-aos="fade-left"  data-aos-delay="300">
+                помещение которое мы нашли <br>
+                в начале этого года, чтобы помочь <br>
+                еще больше детям.
               </div>
             </div>
-          </div>
-          <div class="seminar-navigation">
-            <div class="seminar-button seminar-button-prev">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 1L2 6L7 11" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-              </svg>                
-            </div>
-            <div class="seminar-button seminar-button-next">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.999999 11L6 6L1 1" stroke="#1B58A3" stroke-width="2" stroke-linecap="round"/>
-              </svg>                
+            <div class="benefits__row">
+              <div class="benefits__caption benefits__cap" data-aos="fade-up"  data-aos-delay="100">однако...</div>
             </div>
           </div>
         </div>
       </section>
-      <section class="faq section">
+
+      <section class="complex panel">
         <div class="container">
-          <div class="faq__container">
-            <div class="faq__top heading col col-2">
-              <span>Вопросы-ответы</span>
-              <h2 class="faq__title title">Часто Задаваемые <strong>Вопросы</strong></h2>
+          <div class="complex__container">
+            <div class="complex__box">
+              <img src="img/sun-2.png" alt="">
+              <div class="complex__number"><span class="number number_lg">67%</span></div>
+              <h5 class="complex__text">жильцов были против, чтобы OZIM находился в их жк</h5>
             </div>
-            <div class="faq__wrap col col-2">
-              <div class="faq__accordion accordion">
-                <div class="accordion__item">
-                  <h5 class="accordion__label">Кто может обучаться в КИОМ?</h5>
-                  <div class="accordion__content">
-                    <ul>
-                      <li>Врачи с высшим медицинским образованием по специальностям "Лечебное дело", "Педиатрия" и "Стоматология"
-                      </li>
-                      <li>Студенты выпускных курсов медицинских ВУЗов по тем же специальностям</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <h5 class="accordion__label">Кто не может обучаться в КИОМ?</h5>
-                  <div class="accordion__content">
-                    <ul>
-                      <li>Врачи с высшим медицинским образованием по специальностям "Лечебное дело", "Педиатрия" и "Стоматология"
-                      </li>
-                      <li>Студенты выпускных курсов медицинских ВУЗов по тем же специальностям</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <h5 class="accordion__label">Как проходит обучение?</h5>
-                  <div class="accordion__content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias beatae minus aliquam amet pariatur sit, cum quisquam molestiae ea! Quia, iusto totam. Molestiae delectus recusandae labore magnam natus maiores qui.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="waves"></div>
           </div>
         </div>
       </section>
-      <section id="questionary" class="questionary section">
+      <section class="room panel">
+        <div class="circle"></div>
         <div class="container">
-          <div class="questionary__container">
-            <div class="questionary__top heading col col-2">
-              <span></span>
-              <h2 class="questionary__title title">Анкетные  <strong>Данные</strong></h2>
-            </div>
-            <div class="questionary__wrap col col-2">
-              <div class="questionary__form">
-                <form action="">
-                  <div class="form__item">
-                    <label for="">ФИО</label>
-                    <input type="text" name="" id="" placeholder="Имя Фамилия">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Дата рождения</label>
-                    <input type="date" name="" id="" placeholder="День рождения">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Телефон</label>
-                    <input type="tel" name="" id="" placeholder="Ваш телефон">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Высшее Медицинское Учереждение</label>
-                    <input type="text" name="" id="" placeholder="Высшее Медицинское Учереждение">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Год окончания</label>
-                    <input type="text" name="" id="" class="number" placeholder="Год окончания">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Специальность</label>
-                    <input type="text" name="" id="" placeholder="Специальность">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Место работы</label>
-                    <input type="text" name="" id="" placeholder="Место работы">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Город проживания</label>
-                    <input type="text" name="" id="" placeholder="Город проживания">
-                  </div>
-                  <div class="form__item">
-                    <label for="">Откуда узнали о нас</label>
-                    <input type="text" name="" id="">
-                  </div>
-                  <input type="submit" value="Отправить">
-                </form>
-              </div>
+          <div class="room__container">
+            <div class="room__box">
+              <img src="img/home.png" alt="">
+              <h5 class="room__text">и мы были вынуждены переехать в помещение</h5>
+              <div class="room__number"><span class="number number_lg">>2</span></div>
+              <h5 class="room__text">раза меньше</h5>
             </div>
           </div>
         </div>
+        <!-- <div class="waves"></div> -->
       </section>
-      <section class="reviews section">
+
+      <section class="problems panel">
         <div class="container">
-          <div class="reviews__container">
-            <div class="reviews__top heading col col-2">
-              <span>Отзывы</span>
-              <h2 class="reviews__title title">Клиенты и <strong>Отзывы</strong></h2>
-            </div>
-            <div class="reviews__cards">
-              <div class="reviews__column" data-aos="fade-down" data-aos-delay="100">
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане.
-                  </div>
-                </div>
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. 
-                  </div>
-                </div>
-              </div>
-              <div class="reviews__column" data-aos="fade-down" data-aos-delay="300">
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. 
-                  </div>
-                </div>
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. Мы убеждены, что передача знаний в этой области должна быть осуществлена с максимальной тщательностью и в своем самом совершенном виде, сохраняя их ценность и эффективность.
-                  </div>
-                </div>
-              </div>
-              <div class="reviews__column" data-aos="fade-down" data-aos-delay="200">
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане. Наша цель не только обучать техникам и методам, но и помогать студентам по-новому взглянуть на искусство лечения и восстановления здоровья. Мы убеждены, что передача знаний в этой области должна быть осуществлена с максимальной тщательностью и в своем самом совершенном виде, сохраняя их ценность и эффективность.
-                  </div>
-                </div>
-                <div class="reviews__card">
-                  <div class="reviews__person">
-                    <div class="reviews__img"><img src="img/person-1.png" alt=""></div>
-                    <h5 class="reviews__caption">Имя Фамилия</h5>
-                  </div>
-                  <div class="reviews__desc">
-                    Мы стремимся распространить доступное и актуальное профессиональное образование в области мануальной терапии и реабилитации на международном уровне в Казахстане.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="" class="reviews__link button">Читать все отзывы</a>
+          <div class="problems__container">
+            <h2 class="problems__title up">О проблеме центров</h2>
+          </div>
+        </div>
+        <div class="problems__wrap  count-start">
+          <img class="problems__back" src="img/balance.png" alt="">
+          <div class="problems__box">
+            <div class="problems__number">И всего<span class="number count" data-num="58">58</span></div>
+            <div class="problems__text">региональных центров для <br>
+              реабилитации и развития</div>
+          </div>
+          <div class="problems__box">
+            <div class="problems__number">Около<span class="number count" data-num="18992">18 992</span></div>
+            <div class="problems__text">детей  Казахстане <br>
+              с диагнозом ДЦП</div>
           </div>
         </div>
       </section>
-      <section class="news section">
+      <section class="isolation panel">
         <div class="container">
-          <div class="news__container">
-            <div class="news__top heading col col-2">
-              <span>Новости</span>
-              <h2 class="news__title title">Последние <strong>Новости</strong></h2>
-              <a href="" class="news__link button">Все новости</a>
-            </div>
-            <div class="news__cards">
-              <a class="news__card" href="" data-aos="fade-down" data-aos-delay="100">
-                <div class="news__img"><img src="img/image-3.png" alt=""></div>
-                <h5 class="news__caption">Название новости</h5>
-                <div class="news__txt">
-                  Описание новости кратное для пользователей, что конкретно говориться в новости. Описание новости кратное для пользователей, что конкретно говориться в новости. 
-                </div>
-                <div class="news__date">09.04.2024</div>
-              </a>
-              <a class="news__card" href="" data-aos="fade-down" data-aos-delay="150">
-                <div class="news__img"><img src="img/slide-1.png" alt=""></div>
-                <h5 class="news__caption">Название новости</h5>
-                <div class="news__txt">
-                  Описание новости кратное для пользователей, что конкретно говориться в новости. Описание новости кратное для пользователей, что конкретно говориться в новости. 
-                </div>
-                <div class="news__date">09.04.2024</div>
-              </a>
-              <a class="news__card" href="" data-aos="fade-down" data-aos-delay="200">
-                <div class="news__img"><img src="img/image-3.png" alt=""></div>
-                <h5 class="news__caption">Название новости</h5>
-                <div class="news__txt">
-                  Описание новости кратное для пользователей, что конкретно говориться в новости. Описание новости кратное для пользователей, что конкретно говориться в новости. 
-                </div>
-                <div class="news__date">09.04.2024</div>
-              </a>
-              <a class="news__card" href="" data-aos="fade-down" data-aos-delay="250">
-                <div class="news__img"><img src="img/slide-1.png" alt=""></div>
-                <h5 class="news__caption">Название новости</h5>
-                <div class="news__txt">
-                  Описание новости кратное для пользователей, что конкретно говориться в новости. Описание новости кратное для пользователей, что конкретно говориться в новости. 
-                </div>
-                <div class="news__date">09.04.2024</div>
-              </a>
+          <div class="isolation__container">
+            <div class="isolation__box">
+              <div class="clip">
+                <img class="isolation__sun" src="img/sun.png" alt="">
+              </div>
+              <img class="isolation__cloud" src="img/cloud3.png" alt="">
+              <h4 class="isolation__caption" data-aos="fade-up" data-aos-delay="100">из-за этого многие дети  с ДЦП изолированы от общества</h4>
+              <div class="clip">
+                <img class="isolation__cloud_sm isolation__cloud-1" src="img/cloud3.png" alt="">
+                <img class="isolation__cloud_sm isolation__cloud-2" src="img/cloud3.png" alt="">
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="contacts section">
+      <section class="catalog panel">
+        <div class="clip">
+          <img class="catalog__moon" src="img/moon.png" alt="">
+          <img class="catalog__back" src="img/stars.png" alt="">
+        </div>
         <div class="container">
-          <div class="contacts__container">
-            <div class="contacts__wrap">
-              <h2 class="contacts__title title"><strong>Контакты</strong></h2>
-              <div class="contacts__links">
-                <div class="contacts__link">
-                  <span>Телефон</span>
-                  <a href="tel:+7 700 293 69 13">+7 700 293 69 13</a>
-                </div>
-                <div class="contacts__link">
-                  <span>Адрес</span>
-                  <a href="" target="_blank">г.Астана, ул.Кенесары 4, офис 123</a>
-                </div>
-                <div class="contacts__link">
-                  <span>Почта</span>
-                  <a href="mailto:info@email.com">info@email.com</a>
-                </div>
-                <div class="contacts__link">
-                  <span>Соц. сети</span>
-                  <div class="contacts__socials">
-                    <a href="" class="contacts__social" target="_blank" rel="nofollow">
-                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25.6667 14.0002C25.6667 7.56016 20.44 2.3335 14 2.3335C7.56001 2.3335 2.33334 7.56016 2.33334 14.0002C2.33334 19.6468 6.34668 24.3485 11.6667 25.4335V17.5002H9.33334V14.0002H11.6667V11.0835C11.6667 8.83183 13.4983 7.00016 15.75 7.00016H18.6667V10.5002H16.3333C15.6917 10.5002 15.1667 11.0252 15.1667 11.6668V14.0002H18.6667V17.5002H15.1667V25.6085C21.0583 25.0252 25.6667 20.0552 25.6667 14.0002Z" fill="#505050"/>
-                      </svg>                      
-                    </a>
-                    <a href="" class="contacts__social" target="_blank" rel="nofollow">
-                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.1993 2.3335C16.5118 2.337 17.178 2.344 17.7532 2.36033L17.9795 2.3685C18.2408 2.37783 18.4987 2.3895 18.8102 2.4035C20.0515 2.46183 20.8985 2.65783 21.6417 2.946C22.4117 3.24233 23.0603 3.64366 23.709 4.29116C24.3023 4.87437 24.7613 5.57985 25.0542 6.3585C25.3423 7.10166 25.5383 7.94866 25.5967 9.19116C25.6107 9.5015 25.6223 9.75933 25.6317 10.0218L25.6387 10.2482C25.6562 10.8222 25.6632 11.4883 25.6655 12.8008L25.6667 13.6712V15.1995C25.6695 16.0505 25.6606 16.9014 25.6398 17.7522L25.6328 17.9785C25.6235 18.241 25.6118 18.4988 25.5978 18.8092C25.5395 20.0517 25.3412 20.8975 25.0542 21.6418C24.7621 22.4209 24.303 23.1266 23.709 23.7092C23.1256 24.3022 22.4202 24.7612 21.6417 25.0543C20.8985 25.3425 20.0515 25.5385 18.8102 25.5968C18.5333 25.6099 18.2565 25.6215 17.9795 25.6318L17.7532 25.6388C17.178 25.6552 16.5118 25.6633 15.1993 25.6657L14.329 25.6668H12.8018C11.9505 25.6698 11.0991 25.6608 10.248 25.64L10.0217 25.633C9.74472 25.6225 9.46783 25.6105 9.19101 25.5968C7.94968 25.5385 7.10268 25.3425 6.35835 25.0543C5.57979 24.7619 4.8746 24.3028 4.29218 23.7092C3.6984 23.1262 3.23894 22.4207 2.94585 21.6418C2.65768 20.8987 2.46168 20.0517 2.40335 18.8092C2.39035 18.5323 2.37868 18.2554 2.36835 17.9785L2.36251 17.7522C2.34101 16.9015 2.33129 16.0505 2.33335 15.1995V12.8008C2.33009 11.9499 2.33865 11.0989 2.35901 10.2482L2.36718 10.0218C2.37651 9.75933 2.38818 9.5015 2.40218 9.19116C2.46051 7.94866 2.65651 7.10283 2.94468 6.3585C3.23764 5.57905 3.69802 4.87336 4.29335 4.29116C4.87562 3.69788 5.58035 3.23881 6.35835 2.946C7.10268 2.65783 7.94851 2.46183 9.19101 2.4035C9.50134 2.3895 9.76034 2.37783 10.0217 2.3685L10.248 2.3615C11.0987 2.34077 11.9497 2.33182 12.8007 2.33466L15.1993 2.3335ZM14 8.16683C12.4529 8.16683 10.9692 8.78141 9.87522 9.87537C8.78126 10.9693 8.16668 12.4531 8.16668 14.0002C8.16668 15.5473 8.78126 17.031 9.87522 18.125C10.9692 19.2189 12.4529 19.8335 14 19.8335C15.5471 19.8335 17.0308 19.2189 18.1248 18.125C19.2188 17.031 19.8333 15.5473 19.8333 14.0002C19.8333 12.4531 19.2188 10.9693 18.1248 9.87537C17.0308 8.78141 15.5471 8.16683 14 8.16683ZM14 10.5002C14.4596 10.5001 14.9148 10.5905 15.3394 10.7664C15.7641 10.9422 16.15 11.1999 16.4751 11.5249C16.8001 11.8498 17.058 12.2356 17.2339 12.6602C17.4099 13.0848 17.5005 13.54 17.5006 13.9996C17.5007 14.4592 17.4102 14.9143 17.2344 15.339C17.0586 15.7637 16.8008 16.1496 16.4759 16.4746C16.1509 16.7997 15.7651 17.0576 15.3405 17.2335C14.9159 17.4095 14.4608 17.5001 14.0012 17.5002C13.0729 17.5002 12.1827 17.1314 11.5263 16.475C10.8699 15.8187 10.5012 14.9284 10.5012 14.0002C10.5012 13.0719 10.8699 12.1817 11.5263 11.5253C12.1827 10.8689 13.0729 10.5002 14.0012 10.5002M20.1262 6.41683C19.7394 6.41683 19.3685 6.57048 19.095 6.84397C18.8215 7.11746 18.6678 7.48839 18.6678 7.87516C18.6678 8.26194 18.8215 8.63287 19.095 8.90636C19.3685 9.17985 19.7394 9.3335 20.1262 9.3335C20.513 9.3335 20.8839 9.17985 21.1574 8.90636C21.4309 8.63287 21.5845 8.26194 21.5845 7.87516C21.5845 7.48839 21.4309 7.11746 21.1574 6.84397C20.8839 6.57048 20.513 6.41683 20.1262 6.41683Z" fill="#505050"/>
-                      </svg>                      
-                    </a>
-                    <a href="" class="contacts__social" target="_blank" rel="nofollow">
-                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.0012 2.3335C20.4447 2.3335 25.6678 7.55666 25.6678 14.0002C25.6678 20.4437 20.4447 25.6668 14.0012 25.6668C11.9394 25.6702 9.91392 25.1245 8.13282 24.086L2.33916 25.6668L3.91649 19.8708C2.8771 18.0892 2.33104 16.0628 2.33449 14.0002C2.33449 7.55666 7.55766 2.3335 14.0012 2.3335ZM10.0252 8.51683L9.79182 8.52616C9.64076 8.53536 9.49313 8.57505 9.35782 8.64283C9.23126 8.7145 9.11573 8.80409 9.01482 8.90883C8.87482 9.04066 8.79549 9.155 8.71032 9.26583C8.2788 9.82688 8.04646 10.5157 8.04999 11.2235C8.05232 11.7952 8.20166 12.3517 8.43499 12.872C8.91216 13.9243 9.69732 15.0385 10.7333 16.071C10.983 16.3195 11.228 16.5692 11.4917 16.8013C12.7789 17.9347 14.313 18.752 15.9717 19.1883L16.6343 19.2898C16.8502 19.3015 17.066 19.2852 17.283 19.2747C17.6228 19.2571 17.9545 19.1651 18.2548 19.0052C18.4076 18.9265 18.5567 18.8408 18.7017 18.7485C18.7017 18.7485 18.7518 18.7158 18.8475 18.6435C19.005 18.5268 19.1018 18.444 19.2325 18.3075C19.3293 18.2072 19.4133 18.0893 19.4775 17.9552C19.5685 17.765 19.6595 17.4022 19.6968 17.1C19.7248 16.869 19.7167 16.743 19.7132 16.6648C19.7085 16.54 19.6047 16.4105 19.4915 16.3557L18.8125 16.0512C18.8125 16.0512 17.7975 15.609 17.1768 15.3267C17.1119 15.2983 17.0423 15.2821 16.9715 15.2788C16.8917 15.2706 16.811 15.2796 16.7349 15.3052C16.6589 15.3307 16.5892 15.3723 16.5305 15.427C16.5247 15.4247 16.4465 15.4912 15.603 16.5132C15.5546 16.5782 15.4879 16.6274 15.4114 16.6544C15.335 16.6814 15.2522 16.685 15.1737 16.6648C15.0977 16.6445 15.0232 16.6187 14.9508 16.5878C14.8062 16.5272 14.756 16.5038 14.6568 16.4618C13.9872 16.1696 13.3673 15.7748 12.8193 15.2917C12.6723 15.1633 12.5358 15.0233 12.3958 14.888C11.9368 14.4484 11.5368 13.9512 11.2058 13.4087L11.137 13.2978C11.0875 13.2234 11.0476 13.143 11.018 13.0587C10.9737 12.8872 11.0892 12.7495 11.0892 12.7495C11.0892 12.7495 11.3727 12.4392 11.5045 12.2712C11.6328 12.1078 11.7413 11.9492 11.8113 11.836C11.949 11.6143 11.9922 11.3868 11.9198 11.2107C11.5932 10.4127 11.2548 9.61816 10.9072 8.8295C10.8383 8.67316 10.6342 8.56116 10.4487 8.539C10.3857 8.532 10.3227 8.525 10.2597 8.52033C10.103 8.51255 9.94598 8.5141 9.78949 8.525L10.0252 8.51683Z" fill="#505050"/>
-                      </svg>                      
-                    </a>
-                  </div>
+          <div class="catalog__container">
+            <div class="catalog__top">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.2308 0H30.9066V19.4521H50V30.5479H30.9066V50H19.2308V30.5479H0V19.4521H19.2308V0Z" fill="#F12670"/>
+              </svg> 
+              <h4 class="catalog__caption up">существуют проблемы, как:</h4>                 
+            </div>
+            <ul class="catalog__list">
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Очереди на реабилитацию.</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Нехватка квалифицированных специалистов в регионах.</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Недостаток необходимых услуг.</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Несогласованность работы разных гос. органов.</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Спорные методы лечения</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Плохое состояние центров</li>
+              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Общество все еще не принимает детей с ДЦП</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="project panel">
+        <div class="container">
+          <div class="project__container count-start">
+            <h2 class="project__title up">Проект “По - Кирпичику”</h2>
+            <div class="project__img clip">
+              <img src="img/home-2.png" alt="">
+              <img class="sun" src="img/sun.png" alt="">
+              <img class="cloud" src="img/cloud4.png" alt="">
+            </div>
+            <div class="project__box">
+              <h2 class="project__caption"><span class="count" data-num="1000">1000</span> кв.м</h2>
+              <div class="project__text up">Дом Ozim,<br> который мы хотим построить, чтобы </div>
+            </div>
+            <div class="clip">
+              <img class="project__flower-1" src="img/flower-4.png" alt="">
+              <img class="project__flower-2" src="img/flower-4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="power panel">
+        <img class="power__back-1" src="img/rainbow-3.png" alt="" data-aos="fade-down-right"  data-aos-delay="200">
+        <div class="container">
+          <div class="power__container">
+            <div class="power__box">
+              <div class="power__number">
+                x<span class="number number_md">4</span>
+              </div>
+              <div class="power__text up">особенных детей в Караганде смогли стать сильнее</div>
+            </div>
+            <div class="power__images">
+              <div class="power__img"><img src="img/flower-1.png" alt=""></div>
+              <div class="power__img"><img src="img/flower-2.png" alt=""></div>
+              <div class="power__img"><img src="img/flower-3.png" alt=""></div>
+            </div>
+            <img class="power__back-2" src="img/tree.png" alt="" data-aos="fade-up-left"  data-aos-delay="300">
+          </div>
+        </div>
+      </section>
+      <section class="building panel">
+        <div class="container">
+          <div class="building__container count-start">
+            <div class="building__box">
+              <div class="building__number"><span class="number numbe_md count" data-num="74175">74 175</span></div>
+              <div class="building__text up">кирпичей,<br>
+                нужно для его строительства</div>
+            </div>
+            <div class="building__bricks bricks">
+              <div class="bricks__col" data-amount="4"></div>
+              <div class="bricks__col" data-amount="3"></div>
+              <div class="bricks__col" data-amount="2"></div>
+              <div class="bricks__col" data-amount="2"></div>
+              <div class="bricks__col" data-amount="2"></div>
+              <div class="bricks__col" data-amount="2"></div>
+              <div class="bricks__col" data-amount="2"></div>
+              <div class="bricks__col" data-amount="4"></div>
+              <div class="bricks__col" data-amount="5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dream panel">
+        <img class="dream__back-1" src="img/cloud5.png" alt="">
+        <div class="container">
+          <div class="dream__container">
+            <h3 class="dream__title text_pink">
+              <div class="text-line">Давай вспомним, <span>что Мир полон</span></div>
+              <div class="text-line"><span>возможностей</span> и каждый день</div>
+              <div class="text-line">дети с ДЦП делают шаги</div>
+              <div class="text-line"><span>к полноценной жизни</span></div>
+            </h3>
+            <div class="dream__desc up">Мы можем сделать их путь к мечте короче, подарив им Дом Ozim где будут:</div>
+          </div>
+        </div>
+        <img class="dream__back-2" src="img/cloud5.png" alt="">
+      </section>
+      <section class="transfer panel">
+        <div class="transfer__container">
+          <div class="transfer__list">
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">Актовый зал</h4>
+                  <img src="img/acc-1.png" alt="">
                 </div>
               </div>
             </div>
-            <div class="contacts__map" data-aos="zoom-in">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b65e39ea6b5d0bb81f6fed570ba08ce5966c736cfc06497a993a79b421b1b5a&amp;source=constructor" width="900" height="400" frameborder="0"></iframe>
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">Бассейн</h4>
+                  <img src="img/acc-2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">Спортивный зал и комната для ЛФК</h4>
+                  <img src="img/acc-3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">Придворовой сад (с огородом)</h4>
+                  <img src="img/acc-4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">Зал для сенсорной интеграции для арт терапии</h4>
+                  <img src="img/acc-5.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="transfer__box">
+              <div class="container">
+                <div class="transfer__item">
+                  <h4 class="transfer__caption">и многое другое</h4>
+                  <img src="img/acc-6.png" alt="">
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <section class="feedback">
+        <img class="feedback__back-1" src="img/rainbow-3.png" alt="" data-aos="fade-down-right"  data-aos-delay="200">
+        <div class="container">
+          <div class="feedback__container">
+            <h2 class="feedback__title text_pink up">Давайте построим вместе, <br>
+            <span>по-кирпичику!</span></h2>
+            <div class="feedback__img clip"><img src="img/home-3.png" alt=""></div>
+            <button class="feedback__btn button pulse">Построить</button>
+          </div>
+        </div>
+        <img class="feedback__back-2" src="img/spiral.png" alt="" data-aos="fade-up-left"  data-aos-delay="300">
+      </section>
+
     </main>
+
 
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <div class="footer__row">
-        <a href="/" class="footer__logo">
-          <img src="img/footer-logo.svg" alt="footer-logo">
-        </a>
-        <div class="footer__wrap">
-          <ul class="footer__menu">
-            <li><a href="">Последипломные</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Вопрос и ответы</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Отзывы</a></li>
-            <li><a href="">Партнеры</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-          <div class="footer__link">
-            <span>Телефон</span>
-            <a href="tel:+7 700 293 69 13">+7 700 293 69 13</a>
-          </div>
-          <div class="footer__link">
-            <span>Адрес</span>
-            <a href="" target="_blank">г.Астана, ул.Кенесары 4, офис 123</a>
-          </div>
-          <div class="footer__link">
-            <span>Почта</span>
-            <a href="mailto:info@email.com">info@email.com</a>
-          </div>
-          <div class="footer__link">
-            <span>Соц. сети</span>
-            <div class="footer__socials">
-              <a href="" class="footer__social" target="_blank" rel="nofollow">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M25.6666 14.0002C25.6666 7.56016 20.44 2.3335 14 2.3335C7.55998 2.3335 2.33331 7.56016 2.33331 14.0002C2.33331 19.6468 6.34665 24.3485 11.6666 25.4335V17.5002H9.33331V14.0002H11.6666V11.0835C11.6666 8.83183 13.4983 7.00016 15.75 7.00016H18.6666V10.5002H16.3333C15.6916 10.5002 15.1666 11.0252 15.1666 11.6668V14.0002H18.6666V17.5002H15.1666V25.6085C21.0583 25.0252 25.6666 20.0552 25.6666 14.0002Z" fill="white"/>
-                </svg>                
-              </a>
-              <a href="" class="footer__social" target="_blank" rel="nofollow">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.1993 2.3335C16.5118 2.337 17.178 2.344 17.7531 2.36033L17.9795 2.3685C18.2408 2.37783 18.4986 2.3895 18.8101 2.4035C20.0515 2.46183 20.8985 2.65783 21.6416 2.946C22.4116 3.24233 23.0603 3.64366 23.709 4.29116C24.3022 4.87437 24.7613 5.57985 25.0541 6.3585C25.3423 7.10166 25.5383 7.94866 25.5966 9.19116C25.6106 9.5015 25.6223 9.75933 25.6316 10.0218L25.6386 10.2482C25.6561 10.8222 25.6631 11.4883 25.6655 12.8008L25.6666 13.6712V15.1995C25.6695 16.0505 25.6606 16.9014 25.6398 17.7522L25.6328 17.9785C25.6235 18.241 25.6118 18.4988 25.5978 18.8092C25.5395 20.0517 25.3411 20.8975 25.0541 21.6418C24.7621 22.4209 24.303 23.1266 23.709 23.7092C23.1256 24.3022 22.4202 24.7612 21.6416 25.0543C20.8985 25.3425 20.0515 25.5385 18.8101 25.5968C18.5333 25.6099 18.2564 25.6215 17.9795 25.6318L17.7531 25.6388C17.178 25.6552 16.5118 25.6633 15.1993 25.6657L14.329 25.6668H12.8018C11.9505 25.6698 11.0991 25.6608 10.248 25.64L10.0216 25.633C9.74469 25.6225 9.4678 25.6105 9.19098 25.5968C7.94965 25.5385 7.10265 25.3425 6.35831 25.0543C5.57976 24.7619 4.87457 24.3028 4.29215 23.7092C3.69837 23.1262 3.23891 22.4207 2.94581 21.6418C2.65765 20.8987 2.46165 20.0517 2.40331 18.8092C2.39032 18.5323 2.37865 18.2554 2.36831 17.9785L2.36248 17.7522C2.34098 16.9015 2.33126 16.0505 2.33331 15.1995V12.8008C2.33006 11.9499 2.33862 11.0989 2.35898 10.2482L2.36715 10.0218C2.37648 9.75933 2.38815 9.5015 2.40215 9.19116C2.46048 7.94866 2.65648 7.10283 2.94465 6.3585C3.23761 5.57905 3.69799 4.87336 4.29331 4.29116C4.87559 3.69788 5.58032 3.23881 6.35831 2.946C7.10265 2.65783 7.94848 2.46183 9.19098 2.4035C9.50131 2.3895 9.76031 2.37783 10.0216 2.3685L10.248 2.3615C11.0987 2.34077 11.9497 2.33182 12.8006 2.33466L15.1993 2.3335ZM14 8.16683C12.4529 8.16683 10.9692 8.78141 9.87519 9.87537C8.78123 10.9693 8.16665 12.4531 8.16665 14.0002C8.16665 15.5473 8.78123 17.031 9.87519 18.125C10.9692 19.2189 12.4529 19.8335 14 19.8335C15.5471 19.8335 17.0308 19.2189 18.1248 18.125C19.2187 17.031 19.8333 15.5473 19.8333 14.0002C19.8333 12.4531 19.2187 10.9693 18.1248 9.87537C17.0308 8.78141 15.5471 8.16683 14 8.16683ZM14 10.5002C14.4596 10.5001 14.9147 10.5905 15.3394 10.7664C15.7641 10.9422 16.15 11.1999 16.475 11.5249C16.8001 11.8498 17.058 12.2356 17.2339 12.6602C17.4099 13.0848 17.5005 13.54 17.5006 13.9996C17.5006 14.4592 17.4102 14.9143 17.2344 15.339C17.0585 15.7637 16.8008 16.1496 16.4759 16.4746C16.1509 16.7997 15.7651 17.0576 15.3405 17.2335C14.9159 17.4095 14.4608 17.5001 14.0011 17.5002C13.0729 17.5002 12.1827 17.1314 11.5263 16.475C10.8699 15.8187 10.5011 14.9284 10.5011 14.0002C10.5011 13.0719 10.8699 12.1817 11.5263 11.5253C12.1827 10.8689 13.0729 10.5002 14.0011 10.5002M20.1261 6.41683C19.7394 6.41683 19.3684 6.57048 19.0949 6.84397C18.8215 7.11746 18.6678 7.48839 18.6678 7.87516C18.6678 8.26194 18.8215 8.63287 19.0949 8.90636C19.3684 9.17985 19.7394 9.3335 20.1261 9.3335C20.5129 9.3335 20.8839 9.17985 21.1573 8.90636C21.4308 8.63287 21.5845 8.26194 21.5845 7.87516C21.5845 7.48839 21.4308 7.11746 21.1573 6.84397C20.8839 6.57048 20.5129 6.41683 20.1261 6.41683Z" fill="white"/>
-                </svg>                
-              </a>
-              <a href="" class="footer__social" target="_blank" rel="nofollow">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.0012 2.3335C20.4447 2.3335 25.6678 7.55666 25.6678 14.0002C25.6678 20.4437 20.4447 25.6668 14.0012 25.6668C11.9394 25.6702 9.91392 25.1245 8.13282 24.086L2.33916 25.6668L3.91649 19.8708C2.8771 18.0892 2.33104 16.0628 2.33449 14.0002C2.33449 7.55666 7.55766 2.3335 14.0012 2.3335ZM10.0252 8.51683L9.79182 8.52616C9.64076 8.53536 9.49313 8.57505 9.35782 8.64283C9.23126 8.7145 9.11573 8.80409 9.01482 8.90883C8.87482 9.04066 8.79549 9.155 8.71032 9.26583C8.2788 9.82688 8.04646 10.5157 8.04999 11.2235C8.05232 11.7952 8.20166 12.3517 8.43499 12.872C8.91216 13.9243 9.69732 15.0385 10.7333 16.071C10.983 16.3195 11.228 16.5692 11.4917 16.8013C12.7789 17.9347 14.313 18.752 15.9717 19.1883L16.6343 19.2898C16.8502 19.3015 17.066 19.2852 17.283 19.2747C17.6228 19.2571 17.9545 19.1651 18.2548 19.0052C18.4076 18.9265 18.5567 18.8408 18.7017 18.7485C18.7017 18.7485 18.7518 18.7158 18.8475 18.6435C19.005 18.5268 19.1018 18.444 19.2325 18.3075C19.3293 18.2072 19.4133 18.0893 19.4775 17.9552C19.5685 17.765 19.6595 17.4022 19.6968 17.1C19.7248 16.869 19.7167 16.743 19.7132 16.6648C19.7085 16.54 19.6047 16.4105 19.4915 16.3557L18.8125 16.0512C18.8125 16.0512 17.7975 15.609 17.1768 15.3267C17.1119 15.2983 17.0423 15.2821 16.9715 15.2788C16.8917 15.2706 16.811 15.2796 16.7349 15.3052C16.6589 15.3307 16.5892 15.3723 16.5305 15.427C16.5247 15.4247 16.4465 15.4912 15.603 16.5132C15.5546 16.5782 15.4879 16.6274 15.4114 16.6544C15.335 16.6814 15.2522 16.685 15.1737 16.6648C15.0977 16.6445 15.0232 16.6187 14.9508 16.5878C14.8062 16.5272 14.756 16.5038 14.6568 16.4618C13.9872 16.1696 13.3673 15.7748 12.8193 15.2917C12.6723 15.1633 12.5358 15.0233 12.3958 14.888C11.9368 14.4484 11.5368 13.9512 11.2058 13.4087L11.137 13.2978C11.0875 13.2234 11.0476 13.143 11.018 13.0587C10.9737 12.8872 11.0892 12.7495 11.0892 12.7495C11.0892 12.7495 11.3727 12.4392 11.5045 12.2712C11.6328 12.1078 11.7413 11.9492 11.8113 11.836C11.949 11.6143 11.9922 11.3868 11.9198 11.2107C11.5932 10.4127 11.2548 9.61816 10.9072 8.8295C10.8383 8.67316 10.6342 8.56116 10.4487 8.539C10.3857 8.532 10.3227 8.525 10.2597 8.52033C10.103 8.51255 9.94598 8.5141 9.78949 8.525L10.0252 8.51683Z" fill="white"/>
-                </svg>                
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__copy">
-        <div>Все права защищены © 2024 - Казахстанский институт остеопатической медицины</div>
-        <a href="" target="_blank">Сделано в FACTUM</a>
-      </div>
+      <a href="" class="footer__link">Политика конфиденциальности</a>
+      <a href="" class="footer__link">Договор оферты</a>
+      <a href="" class="footer__link">Информация об онлайн оплате</a>
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20240517171939"></script>
-<script src="js/jquery.maskedinput.js?_v=20240517171939"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240517171939"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js?_v=20240517171939"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240517171939"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240517171939"></script>
-<script src="js/app.js?_v=20240517171939"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20240607170229"></script>
+<script src="js/waypoint.js?_v=20240607170229"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240607170229"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js?_v=20240607170229"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js?_v=20240607170229"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js?_v=20240607170229"></script>
+<script src="js/app.js?_v=20240607170229"></script>
 </body>
 </html>
   </body>
