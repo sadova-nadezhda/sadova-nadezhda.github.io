@@ -244,6 +244,7 @@ body {
   justify-content: space-between;
   background-color: var(--bg, #F1F7FF);
   overflow-x: hidden;
+  cursor: url(../img/brush.svg), pointer;
 }
 
 ul,
@@ -449,6 +450,18 @@ h6 {
 section {
   position: relative;
   overflow: hidden;
+}
+
+main {
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
 }
 
 .hero {
