@@ -906,7 +906,7 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 150px;
+  gap: 100px;
 }
 
 .benefits__row {
