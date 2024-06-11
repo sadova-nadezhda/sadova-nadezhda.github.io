@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
   .fromTo(textLines, {
     x: 0
   }, {
-    x: (index, target) => index % 2 ? (-window.innerWidth / 2) : (window.innerWidth / 2)
+    x: (index, target) => index % 2 ? (-window.innerWidth / 2.5) : (window.innerWidth / 2.5)
   }, 0)
   .fromTo(textLines, {
-    x: (index, target) => index % 2 ? (window.innerWidth / 2) : (-window.innerWidth / 2)
+    x: (index, target) => index % 2 ? (window.innerWidth / 2.5) : (-window.innerWidth / 2.5)
   }, {
     x: 0,
     immediateRender: false
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
   scrollTrigger: {
       trigger: element,
-      start: "top 100%",
+      start: "top bottom",
       end: "bottom top",
       scrub: 0.5,
       // markers: true
