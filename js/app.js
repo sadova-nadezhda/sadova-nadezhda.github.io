@@ -169,15 +169,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
           column.appendChild(fragment);
 
-          // bricks animation
+          // bricks animation with random rotation
           gsap.fromTo(images, 
-              { y: -100, opacity: 0 }, 
+              { y: -100, opacity: 0, rotate: 0 }, 
               { 
                   y: 0, 
                   opacity: 1, 
                   duration: 0.5, 
                   delay: (index) => index * 0.1, 
                   ease: 'bounce.out',
+                  rotate: (index) => Math.random() > 0.5 ? 180 : 0, // 50% chance to rotate 180 degrees
                   scrollTrigger: {
                       trigger: '.building',
                       start: "top center",
@@ -187,13 +188,28 @@ document.addEventListener('DOMContentLoaded', () => {
           );
       });
   }
+
+  // titles
+  let heroTitle = document.querySelector('.hero__title');
+  if (window.innerWidth < 768) {
+    if(heroTitle) {
+      heroTitle.innerHTML = `
+        <span data-aos="fade-right">Каждый день мы видим </span>
+        <span data-aos="fade-left">как дети с ДЦП </span>
+        <span data-aos="fade-right">преодолевают </span>
+        <span data-aos="fade-left">трудности на пути </span>
+        <span data-aos="fade-right">к полноценной жизни </span>
+      `
+    }
+  }
   
 });
+
+// canvas
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext('2d');
 
-// for intro motion
 let mouseMoved = false;
 
 const pointer = {
@@ -239,8 +255,10 @@ setupCanvas();
 update(0);
 window.addEventListener("resize", setupCanvas);
 
-
 function update(t) {
+    if (window.innerWidth < 768) {
+        return; // Skip the animation update on mobile screens
+    }
 
     // for intro motion
     if (!mouseMoved) {
@@ -261,7 +279,7 @@ function update(t) {
     });
 
     ctx.lineCap = "round";
-	  ctx.beginPath();
+    ctx.beginPath();
     ctx.moveTo(trail[0].x, trail[0].y);
 
     ctx.strokeStyle = '#F12670';
@@ -275,11 +293,41 @@ function update(t) {
     }
     ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
     ctx.stroke();
-    
+
     window.requestAnimationFrame(update);
 }
 
 function setupCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    if (window.innerWidth < 768) {
+        canvas.width = 0;
+        canvas.height = 0;
+        return; // Skip canvas setup on mobile screens
+    }
+
+    let hero = document.querySelector('.hero');
+    if (hero) {
+        canvas.width = window.innerWidth;
+        canvas.height = hero.offsetHeight;
+    }
 }
+
+
+let flag = true;
+
+$(window).on('resize', function(){
+  if ($(this).width() < 768 && flag) {
+    flag = false;
+    $('.js-slick-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+      variableWidth: true,
+      dots: false
+    });
+  }
+  else if ($(this).width() >= 768 && !flag) {
+    flag = true;
+  }
+}).resize();

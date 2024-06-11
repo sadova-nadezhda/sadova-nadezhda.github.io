@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240611110911" />
-  <link rel="stylesheet" href="css/style.css?_v=20240611110911" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240611160426" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css?_v=20240611160426"/>
+  <link rel="stylesheet" href="css/style.css?_v=20240611160426" />
 </head>
 
   <body>
@@ -46,10 +47,10 @@
               <span data-aos="fade-right">преодолевают трудности</span>
               <span data-aos="fade-left">на пути к полноценной жизни</span>
             </h1>
-            <div class="hero__desc text_pink" data-aos="fade-right">
+            <h4 class="hero__desc text_pink" data-aos="fade-right">
               В <span>OZIM</span> мы <span>верим</span>,<br>
               что <span>возможности</span> всех <span>безграничны</span>.
-            </div>
+            </h4>
             <div class="hero__down">
               <span class="line"></span>
               <a href="" class="hero__link">
@@ -84,7 +85,7 @@
         <div class="container">
           <div class="education__container">
             <h2 class="education__title text_blue up"><span>Ozim</span> инклюзивный образовательный центр в Караганде которому <span>2 года</span></h2>
-            <div class="education__cards">
+            <div class="education__cards js-slick-slider">
               <div class="education__card">
                 <div class="education__img"><img src="img/image-1.png" alt=""></div>
               </div>
@@ -226,7 +227,10 @@
           </div>
         </div>
         <div class="problems__wrap  count-start">
-          <img class="problems__back" src="img/balance.png" alt="">
+          <picture>
+            <source srcset="img/balance-2.png" media="(max-width: 768px)" />
+            <img class="problems__back" src="img/balance.png" alt="">
+          </picture>
           <div class="problems__box">
             <div class="problems__number">И всего<span class="number count" data-num="58">58</span></div>
             <div class="problems__text">региональных центров для <br>
@@ -438,13 +442,14 @@
     </div>
   </div>
 </footer>
- <script src="js/jquery-3.6.0.min.js?_v=20240611110911"></script>
-<script src="js/waypoint.js?_v=20240611110911"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240611110911"></script>
-<script src="https://unpkg.co/gsap@3/dist/gsap.min.js?_v=20240611110911"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js?_v=20240611110911"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js?_v=20240611110911"></script>
-<script src="js/app.js?_v=20240611110911"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240611160426"></script>
+<script src="js/waypoint.js?_v=20240611160426"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240611160426"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js?_v=20240611160426"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js?_v=20240611160426"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js?_v=20240611160426"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20240611160426"></script>
+<script src="js/app.js?_v=20240611160426"></script>
 </body>
 </html>
   </body>
