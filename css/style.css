@@ -936,7 +936,6 @@ canvas {
 
 .complex {
   padding: 100px 0;
-  background-color: var(--light, #FFFFFF);
 }
 
 .complex__container {
