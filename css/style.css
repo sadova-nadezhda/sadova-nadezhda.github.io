@@ -419,7 +419,9 @@ h6 {
 }
 
 .footer {
+  position: relative;
   background-color: var(--bg, #F1F7FF);
+  z-index: 2;
 }
 
 .footer__container {
@@ -428,15 +430,17 @@ h6 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .footer__link {
+  display: block;
   text-decoration: underline;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 16px;
   text-align: center;
+  cursor: pointer;
 }
 
 .text_pink span {
@@ -1486,6 +1490,7 @@ canvas {
 
 .dream {
   position: relative;
+  padding: 100px 0;
   background-color: var(--light, #FFFFFF);
 }
 
@@ -1493,6 +1498,10 @@ canvas {
   position: absolute;
   top: 0;
   left: 65px;
+  width: 240px;
+  height: 240px;
+  -o-object-fit: contain;
+     object-fit: contain;
   mix-blend-mode: multiply;
 }
 
@@ -1500,20 +1509,24 @@ canvas {
   position: absolute;
   bottom: 11px;
   right: 55px;
+  width: 240px;
+  height: 240px;
+  -o-object-fit: contain;
+     object-fit: contain;
   mix-blend-mode: multiply;
 }
 
 .dream .container {
   max-width: 1404px;
-  width: 1404px;
+  width: 98%;
 }
 
 .dream__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  padding: 100px 0;
+  padding-top: 140px;
+  padding-bottom: 112px;
 }
 
 .dream__title {
@@ -1526,14 +1539,14 @@ canvas {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   background-color: var(--bg, #F1F7FF);
   text-transform: uppercase;
 }
 
 .dream__title div:nth-child(2) {
-  margin-left: 21%;
+  margin-left: auto;
 }
 
 .dream__title div:nth-child(4) {
@@ -1543,8 +1556,6 @@ canvas {
 .dream__desc {
   max-width: 650px;
   margin: 0 auto;
-  font-size: 32px;
-  font-weight: 900;
   text-align: center;
 }
 
@@ -1873,6 +1884,12 @@ canvas {
   .benefits__caption {
     font-size: 30px;
   }
+
+  .benefits__text {
+    font-size: 20px;
+    max-width: unset;
+    min-width: unset;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2138,15 +2155,9 @@ canvas {
   }
 
   .benefits__text {
-    font-size: 20px;
-    max-width: unset;
-    min-width: unset;
-  }
-
-  .benefits__text {
     font-size: 16px;
-    max-width: unset;
-    min-width: unset;
+    max-width: 178px;
+    min-width: 178px;
   }
 
   .benefits {
@@ -2184,11 +2195,13 @@ canvas {
 
   .problems__box:first-of-type {
     top: 0;
+    left: 50%;
     right: 16px;
   }
 
   .problems__box:last-of-type {
-    left: 16px;
+    left: auto;
+    right: 50%;
   }
 
   .problems__box {
@@ -2335,6 +2348,41 @@ canvas {
   .bricks img {
     width: 45px;
     height: 45px;
+  }
+
+  .dream__back-1 {
+    top: -10%;
+    left: -70px;
+  }
+
+  .dream__back-2 {
+    right: -90px;
+    bottom: 60px;
+    z-index: -1;
+  }
+
+  .dream .container {
+    width: 100%;
+  }
+
+  .dream__container {
+    padding: 0;
+  }
+
+  .dream__title div:nth-child(even) {
+    margin-left: 13.5%;
+  }
+
+  .dream__title {
+    font-size: 22px;
+  }
+
+  .dream__desc {
+    font-size: 20px;
+  }
+
+  .dream {
+    padding: 64px 0;
   }
 
   .transfer__box:hover .transfer__caption {

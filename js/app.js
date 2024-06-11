@@ -1,27 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-  // AOS animate
-  AOS.init({
-    duration: 1200,
-  });
 
-  // GSAP
+  // Initialize AOS
+  AOS.init({ duration: 1200 });
 
+  // Register GSAP plugins
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-  // section animation
-
-  gsap.utils.toArray(".panel").forEach((panel, i) => {
-    let trigger = ScrollTrigger.create({
+  // Section animation
+  gsap.utils.toArray(".panel").forEach(panel => {
+    ScrollTrigger.create({
       trigger: panel,
-      start: "top top", 
-      pin: true, 
-      pinSpacing: false 
+      start: "top top",
+      pin: true,
+      pinSpacing: false
     });
   });
 
-  // circle animation
-
+  // Circle animation
   gsap.to(".circle", {
     width: "600vmax",
     height: "600vmax",
@@ -36,286 +31,229 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Обновление ScrollTrigger после настройки анимации
+  // Refresh ScrollTrigger after setting animations
   ScrollTrigger.refresh();
 
-  // text animation
+  // Text animation
+  // const textLines = document.querySelectorAll(".text-line");
 
-  const textLines = document.querySelectorAll(".text-line");
+  // const textLineAnim = gsap.timeline({
+  //   defaults: { duration: 1, ease: 'none' },
+  //   scrollTrigger: {
+  //     start: '-5%',
+  //     end: 'max',
+  //     scrub: 1
+  //   }
+  // });
 
-  const textLineAnim = gsap.timeline({
-    defaults: {
-      duration: 1,
-      ease: 'none'
-    },  
-    scrollTrigger: {    
-      start: '-5%',
-      end: 'max',
-      scrub: 1
-    }
-  });
+  // textLineAnim
+  //   .fromTo(textLines, { x: 0 }, { x: (index) => index % 2 ? -window.innerWidth / 2.5 : window.innerWidth / 2.5 }, 0)
+  //   .fromTo(textLines, { x: (index) => index % 2 ? window.innerWidth / 2.5 : -window.innerWidth / 2.5 }, { x: 0, immediateRender: false }, 0.5);
 
-  textLineAnim
-  .fromTo(textLines, {
-    x: 0
-  }, {
-    x: (index, target) => index % 2 ? (-window.innerWidth / 2.5) : (window.innerWidth / 2.5)
-  }, 0)
-  .fromTo(textLines, {
-    x: (index, target) => index % 2 ? (window.innerWidth / 2.5) : (-window.innerWidth / 2.5)
-  }, {
-    x: 0,
-    immediateRender: false
-  }, 0.5); 
-
-  // up animation
-
+  // Up animation
   gsap.utils.toArray(".up").forEach(element => {
-  gsap.fromTo(element, 
-    {
-    yPercent: 80,
-    opacity: .2,
-      },         
-    {
-    duration: 0.8,
-    delay: 1,
-    opacity: 1,
-    yPercent: 0,
-    ease: "power",
-    stagger: 0.02,
-    
-  scrollTrigger: {
-      trigger: element,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 0.5,
-      // markers: true
+    gsap.fromTo(element,
+      { yPercent: 80, opacity: .2 },
+      {
+        duration: 1.2,
+        delay: 1,
+        opacity: 1,
+        yPercent: 0,
+        ease: "power",
+        stagger: 0.01,
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end: "bottom top+=200",
+          scrub: 1
+        }
       }
-    });
+    );
   });
 
-  // photos animation
-
-  const photos = gsap.utils.toArray('.clip img');
-  photos.forEach(photo => {
-    const tl = gsap.timeline({
+  // Photos animation
+  gsap.utils.toArray('.clip img').forEach(photo => {
+    gsap.timeline({
       scrollTrigger: {
         trigger: photo,
         start: 'top bottom',
         end: 'bottom top',
         scrub: 0.75,
         toggleActions: 'play none none none',
-      },
+      }
+    }).fromTo(photo, { y: '-20%' }, { y: '0%' });
+  });
+
+  // Counter animation
+  gsap.utils.toArray('.count-start').forEach(el => {
+    el.querySelectorAll('.count').forEach(target => {
+      const num = $(target).data('num');
+      if (num !== undefined) {
+        const count = { num: 0 };
+        $(target).text(0);
+        const anim = gsap.to(count, {
+          duration: 2,
+          num: Number(num),
+          ease: 'none',
+          onUpdate: () => $(target).text(Math.floor(count.num).toLocaleString())
+        });
+
+        ScrollTrigger.create({
+          animation: anim,
+          trigger: el,
+          start: 'top 90%',
+        });
+      } else {
+        console.error('No data-num attribute found on', target);
+      }
     });
-    tl.fromTo(
-      photo,
-      { y: '-20%' },
-      { y: '0%' }
+  });
+
+  // Bricks render
+  const container = document.querySelector('.bricks');
+  container?.querySelectorAll('.bricks__col').forEach(column => {
+    const amount = parseInt(column.getAttribute('data-amount'), 10);
+    const fragment = document.createDocumentFragment();
+    const images = [];
+
+    for (let i = 0; i < amount; i++) {
+      const img = document.createElement('img');
+      img.src = '../img/brick.png';
+      img.alt = `Image ${i + 1}`;
+      img.style.opacity = 0;
+      images.push(img);
+      fragment.appendChild(img);
+    }
+
+    column.appendChild(fragment);
+
+    gsap.fromTo(images,
+      { y: -100, opacity: 0, rotate: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: (index) => index * 0.1,
+        ease: 'bounce.out',
+        rotate: () => Math.random() > 0.5 ? 180 : 0,
+        scrollTrigger: {
+          trigger: '.building',
+          start: "top center",
+          toggleActions: "play none none reverse"
+        }
+      }
     );
   });
 
-  // counter animation
-
-  gsap.utils.toArray('.count-start').forEach(el => {
-    let targetArr = el.querySelectorAll('.count');
-    
-    targetArr.forEach(target => {
-      let num = $(target).data('num');
-      if (num === undefined) {
-        console.error('No data-num attribute found on', target);
-        return;
+  // Titles
+  const updateTitles = () => {
+    const heroTitle = document.querySelector('.hero__title');
+    const dreamTitle = document.querySelector('.dream__title');
+    if (window.innerWidth < 768) {
+      if (heroTitle) {
+        heroTitle.innerHTML = `
+          <span data-aos="fade-right">Каждый день мы видим </span>
+          <span data-aos="fade-left">как дети с ДЦП </span>
+          <span data-aos="fade-right">преодолевают </span>
+          <span data-aos="fade-left">трудности на пути </span>
+          <span data-aos="fade-right">к полноценной жизни </span>
+        `;
       }
-      
-      let count = { num: 0 }; 
-      $(target).text(0);
-
-      let anim = gsap.to(count, {
-        duration: 2,
-        num: Number(num),
-        ease: 'none',
-        onUpdate: () => {
-          $(target).text(Math.floor(count.num).toLocaleString());
-        }
-      });
-
-      ScrollTrigger.create({
-        animation: anim,
-        trigger: el,
-        start: 'top 90%',
-        // markers: true 
-      });
-    });
-  });
-
-  // bricks render
-
-  const container = document.querySelector('.bricks');
-  const columns = container.querySelectorAll('.bricks__col');
-
-  if (columns) {
-      columns.forEach(column => {
-          const amount = parseInt(column.getAttribute('data-amount'), 10);
-          const fragment = document.createDocumentFragment();
-          const images = [];
-
-          for (let i = 0; i < amount; i++) {
-              const img = document.createElement('img');
-              img.src = '../img/brick.png';
-              img.alt = 'Image ' + (i + 1);
-              img.style.opacity = 0;
-              images.push(img);
-              fragment.appendChild(img);
-          }
-
-          column.appendChild(fragment);
-
-          // bricks animation with random rotation
-          gsap.fromTo(images, 
-              { y: -100, opacity: 0, rotate: 0 }, 
-              { 
-                  y: 0, 
-                  opacity: 1, 
-                  duration: 0.5, 
-                  delay: (index) => index * 0.1, 
-                  ease: 'bounce.out',
-                  rotate: (index) => Math.random() > 0.5 ? 180 : 0, // 50% chance to rotate 180 degrees
-                  scrollTrigger: {
-                      trigger: '.building',
-                      start: "top center",
-                      toggleActions: "play none none reverse"
-                  }
-              }
-          );
-      });
-  }
-
-  // titles
-  let heroTitle = document.querySelector('.hero__title');
-  if (window.innerWidth < 768) {
-    if(heroTitle) {
-      heroTitle.innerHTML = `
-        <span data-aos="fade-right">Каждый день мы видим </span>
-        <span data-aos="fade-left">как дети с ДЦП </span>
-        <span data-aos="fade-right">преодолевают </span>
-        <span data-aos="fade-left">трудности на пути </span>
-        <span data-aos="fade-right">к полноценной жизни </span>
-      `
+      if (dreamTitle) {
+        dreamTitle.innerHTML = `
+          <div data-aos="fade-right">Давай вспомним, <span>что Мир</span> </div>
+          <div data-aos="fade-left"><span>полон возможностей</span> </div>
+          <div data-aos="fade-right">и каждый день дети</div>
+          <div data-aos="fade-left">с ДЦП делают шаги</div>
+          <div data-aos="fade-right"><span>к полноценной жизни</span></div>
+        `;
+      }
     }
-  }
-  
+  };
+  updateTitles();
+
 });
 
-// canvas
-
+// Canvas animation
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext('2d');
-
 let mouseMoved = false;
+const pointer = { x: .5 * window.innerWidth, y: .5 * window.innerHeight };
+const params = { pointsNumber: 40, widthFactor: .3, mouseThreshold: .6, spring: .4, friction: .5 };
+const trail = Array.from({ length: params.pointsNumber }, () => ({ x: pointer.x, y: pointer.y, dx: 0, dy: 0 }));
 
-const pointer = {
-    x: .5 * window.innerWidth,
-    y: .5 * window.innerHeight,
-}
-const params = {
-    pointsNumber: 40,
-    widthFactor: .3,
-    mouseThreshold: .6,
-    spring: .4,
-    friction: .5
+const updateMousePosition = (x, y) => {
+  pointer.x = x;
+  pointer.y = y;
 };
 
-const trail = new Array(params.pointsNumber);
-for (let i = 0; i < params.pointsNumber; i++) {
-    trail[i] = {
-        x: pointer.x,
-        y: pointer.y,
-        dx: 0,
-        dy: 0,
-    }
-}
-
-window.addEventListener("click", e => {
-    updateMousePosition(e.pageX, e.pageY);
-});
-window.addEventListener("mousemove", e => {
+['click', 'mousemove', 'touchmove'].forEach(event => {
+  window.addEventListener(event, e => {
     mouseMoved = true;
-    updateMousePosition(e.pageX, e.pageY);
-});
-window.addEventListener("touchmove", e => {
-    mouseMoved = true;
-    updateMousePosition(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+    updateMousePosition(e.pageX || e.targetTouches[0].pageX, e.pageY || e.targetTouches[0].pageY);
+  });
 });
 
-function updateMousePosition(eX, eY) {
-    pointer.x = eX;
-    pointer.y = eY;
-}
+const setupCanvas = () => {
+  if (window.innerWidth < 768) {
+    canvas.width = 0;
+    canvas.height = 0;
+    return;
+  }
+
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    canvas.width = window.innerWidth;
+    canvas.height = hero.offsetHeight;
+  }
+};
+
+const update = (t) => {
+  if (window.innerWidth < 768) return;
+
+  if (!mouseMoved) {
+    pointer.x = (.5 + .3 * Math.cos(.002 * t) * Math.sin(.005 * t)) * window.innerWidth;
+    pointer.y = (.5 + .2 * Math.cos(.005 * t) + .1 * Math.cos(.01 * t)) * window.innerHeight;
+  }
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  trail.forEach((p, i) => {
+    const prev = i === 0 ? pointer : trail[i - 1];
+    const spring = i === 0 ? .4 * params.spring : params.spring;
+    p.dx += (prev.x - p.x) * spring;
+    p.dy += (prev.y - p.y) * spring;
+    p.dx *= params.friction;
+    p.dy *= params.friction;
+    p.x += p.dx;
+    p.y += p.dy;
+  });
+
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(trail[0].x, trail[0].y);
+  ctx.strokeStyle = '#F12670';
+
+  for (let i = 1; i < trail.length - 1; i++) {
+    const xc = .5 * (trail[i].x + trail[i + 1].x);
+    const yc = .5 * (trail[i].y + trail[i + 1].y);
+    ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
+    ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
+    ctx.stroke();
+  }
+  ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
+  ctx.stroke();
+
+  window.requestAnimationFrame(update);
+};
 
 setupCanvas();
 update(0);
 window.addEventListener("resize", setupCanvas);
 
-function update(t) {
-    if (window.innerWidth < 768) {
-        return; // Skip the animation update on mobile screens
-    }
-
-    // for intro motion
-    if (!mouseMoved) {
-        pointer.x = (.5 + .3 * Math.cos(.002 * t) * (Math.sin(.005 * t))) * window.innerWidth;
-        pointer.y = (.5 + .2 * (Math.cos(.005 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
-    }
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    trail.forEach((p, pIdx) => {
-        const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
-        const spring = pIdx === 0 ? .4 * params.spring : params.spring;
-        p.dx += (prev.x - p.x) * spring;
-        p.dy += (prev.y - p.y) * spring;
-        p.dx *= params.friction;
-        p.dy *= params.friction;
-        p.x += p.dx;
-        p.y += p.dy;
-    });
-
-    ctx.lineCap = "round";
-    ctx.beginPath();
-    ctx.moveTo(trail[0].x, trail[0].y);
-
-    ctx.strokeStyle = '#F12670';
-
-    for (let i = 1; i < trail.length - 1; i++) {
-        const xc = .5 * (trail[i].x + trail[i + 1].x);
-        const yc = .5 * (trail[i].y + trail[i + 1].y);
-        ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
-        ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
-        ctx.stroke();
-    }
-    ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
-    ctx.stroke();
-
-    window.requestAnimationFrame(update);
-}
-
-function setupCanvas() {
-    if (window.innerWidth < 768) {
-        canvas.width = 0;
-        canvas.height = 0;
-        return; // Skip canvas setup on mobile screens
-    }
-
-    let hero = document.querySelector('.hero');
-    if (hero) {
-        canvas.width = window.innerWidth;
-        canvas.height = hero.offsetHeight;
-    }
-}
-
-
 let flag = true;
-
-$(window).on('resize', function(){
-  if ($(this).width() < 768 && flag) {
+$(window).on('resize', function () {
+  const width = $(this).width();
+  if (width < 768 && flag) {
     flag = false;
     $('.js-slick-slider').slick({
       slidesToShow: 1,
@@ -326,8 +264,7 @@ $(window).on('resize', function(){
       variableWidth: true,
       dots: false
     });
-  }
-  else if ($(this).width() >= 768 && !flag) {
+  } else if (width >= 768 && !flag) {
     flag = true;
   }
 }).resize();
