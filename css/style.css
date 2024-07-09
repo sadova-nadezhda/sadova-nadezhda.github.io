@@ -770,6 +770,7 @@ h6 {
   flex: 1 1 auto;
   height: 147px;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .competencies img:nth-child(2) {
@@ -1214,6 +1215,7 @@ h6 {
 
   .competencies img:nth-child(2) {
     display: block;
+    width: 100%;
   }
 
   .competencies img {
