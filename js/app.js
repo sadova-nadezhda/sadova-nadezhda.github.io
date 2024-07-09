@@ -85,8 +85,9 @@ window.addEventListener("load", function () {
     centeredSlides: true,
     roundLengths: true,
     loop: true,
-    keyboard: {
-      enabled: true
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
     navigation: {
       nextEl: ".about-button-next",
