@@ -103,6 +103,7 @@ html {
   scroll-behavior: smooth;
   font: 400 16px/1.5 RG;
   color: #252525;
+  overflow-x: hidden;
 }
 
 *,
@@ -199,6 +200,7 @@ input:not([type=submit]) {
   width: 100%;
   padding-bottom: 8px;
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid var(--dark, #252525);
   color: var(--dark, #252525);
   background-color: transparent;
@@ -299,7 +301,7 @@ h6 {
 .header__nav {
   position: absolute;
   top: 0;
-  left: 100%;
+  right: -100%;
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
@@ -312,7 +314,6 @@ h6 {
 }
 
 .header__nav.open {
-  left: unset;
   right: 0;
 }
 
@@ -1103,6 +1104,7 @@ h6 {
   }
 
   .header__nav {
+    width: 100vw;
     min-width: unset;
     padding: 40px;
     padding-top: 60px;
@@ -1207,6 +1209,7 @@ h6 {
 
   .competencies__wrap {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .competencies img:nth-child(2) {
