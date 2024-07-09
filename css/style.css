@@ -1040,6 +1040,12 @@ h6 {
   }
 }
 
+@media (max-width: 1440px) {
+  .about__title_sm {
+    width: calc(35% - 30px);
+  }
+}
+
 @media (max-width: 980px) {
   .container {
     width: 100%;
