@@ -1127,6 +1127,10 @@ h6 {
     font-size: 16px;
   }
 
+  .footer {
+    padding-top: 60px;
+  }
+
   .footer__logo {
     padding-bottom: 40px;
   }
@@ -1175,7 +1179,11 @@ h6 {
   }
 
   .about .swiper-slide {
-    width: 80%;
+    height: 90%;
+  }
+
+  .about .swiper-slide-active {
+    height: 100%;
   }
 
   .about-navigation {

@@ -84,7 +84,7 @@ window.addEventListener("load", function () {
 
   // sliders
   var swiperAbout = new Swiper("#aboutSwiper", {
-    slidesPerView: 3.3,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     centeredSlides: true,
     loop: true,
@@ -100,6 +100,7 @@ window.addEventListener("load", function () {
     breakpoints: {
       1024: {
         spaceBetween: 40,
+        slidesPerView: 3.3,
       },
     }
   });
