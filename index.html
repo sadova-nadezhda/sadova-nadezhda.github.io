@@ -1,456 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240611181012" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css?_v=20240611181012"/>
-  <link rel="stylesheet" href="css/style.css?_v=20240611181012" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240709112033" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240709112033" />
+  <link rel="stylesheet" href="css/style.css?_v=20240709112033" />
 </head>
 
+
   <body>
-    <header class="header" data-aos="fade-down">
+    <header class="header" data-aos="fade-down" data-aos-duration="1000">
   <div class="container">
     <div class="header__container">
+      <div class="header__info">
+        <a href="tel:+7 705 568 99 99" class="link">+7 705 568 99 99</a>
+        <a href="mailto:info@netstyle.kz" class="link">info@netstyle.kz </a>
+      </div>
       <div class="header__logo">
-        <a class="logo">
-          <img class="icon" src="img/logo-icon.png" alt="logo icon" />
-          <img src="img/logo.svg" alt="logo text" />
+        <a href="" class="logo">
+          <img src="img/logo.svg" alt="" />
         </a>
       </div>
-      <div class="header__buttons">
-        <a href="https://www.instagram.com/ozim.center/ " class="instagram button button_light" target="_blank" rel="nofollow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10Z" fill="#F12670"/>
-            <path d="M16.5 8.5C17.0523 8.5 17.5 8.05228 17.5 7.5C17.5 6.94772 17.0523 6.5 16.5 6.5C15.9477 6.5 15.5 6.94772 15.5 7.5C15.5 8.05228 15.9477 8.5 16.5 8.5Z" fill="#F12670"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8ZM8 5C6.34315 5 5 6.34315 5 8V16C5 17.6569 6.34315 19 8 19H16C17.6569 19 19 17.6569 19 16V8C19 6.34315 17.6569 5 16 5H8Z" fill="#F12670"/>
-          </svg>            
-          <span>Instagram</span>
-        </a>
-        <a class="button">Помочь детям</a>
+      <div class="header__burger burger">
+        <div class="burger__txt">МЕНЮ</div>
+        <div class="burger__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </div>
+  <nav class="header__nav">
+    <div class="header__close">
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.79286 23.2075C1.86541 23.2801 1.95158 23.3377 2.04642 23.377C2.14126 23.4164 2.24292 23.4366 2.34559 23.4366C2.44826 23.4366 2.54992 23.4164 2.64476 23.377C2.7396 23.3377 2.82577 23.2801 2.89832 23.2075L12.4999 13.6059L22.1054 23.2075C22.2519 23.3541 22.4508 23.4364 22.6581 23.4364C22.8654 23.4364 23.0642 23.3541 23.2108 23.2075C23.3574 23.0609 23.4398 22.862 23.4398 22.6547C23.4398 22.4474 23.3574 22.2486 23.2108 22.102L13.6054 12.5004L23.2069 2.89497C23.3535 2.74837 23.4359 2.54955 23.4359 2.34223C23.4359 2.13492 23.3535 1.93609 23.2069 1.7895C23.0603 1.6429 22.8615 1.56055 22.6542 1.56055C22.4469 1.56055 22.248 1.6429 22.1014 1.7895L12.4999 11.395L2.89442 1.7934C2.74496 1.66541 2.55272 1.59853 2.3561 1.60613C2.15947 1.61372 1.97296 1.69523 1.83382 1.83437C1.69469 1.97351 1.61318 2.16002 1.60558 2.35664C1.59799 2.55326 1.66487 2.74551 1.79286 2.89497L11.3944 12.5004L1.79286 22.1059C1.64735 22.2523 1.56567 22.4503 1.56567 22.6567C1.56567 22.8631 1.64735 23.0611 1.79286 23.2075Z" fill="white"/>
+      </svg>        
+    </div>
+    <ul class="header__menu">
+      <li><a href="#about">О компании</a></li>
+      <li><a href="#competencies">Ключевые компетенции</a></li>
+      <li><a href="#activity">Виды деятельности</a></li>
+      <li><a href="#partners">Наши партнеры</a></li>
+      <li><a href="#contacts">Ответы на вопросы</a></li>
+    </ul>
+
+    <div class="header__address">г. Астана, улица Б.Майлина дом 37</div>
+    <div class="header__info header__info_mb">
+      <a href="tel:+7 705 568 99 99">+7 705 568 99 99</a>
+      <a href="mailto:info@netstyle.kz ">info@netstyle.kz </a>
+    </div>
+  </nav>
 </header>
 
+    <div id="popup-form" class="popup popup-form">
+  <div class="popup__container">
+    <button class="popup__close popup-form__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 11.1784L14.714 15.8925C15.0394 16.2179 15.567 16.2179 15.8925 15.8925C16.2179 15.567 16.2179 15.0394 15.8925 14.714L11.1784 9.99992L15.8925 5.28588C16.2179 4.96044 16.2179 4.43281 15.8925 4.10737C15.567 3.78193 15.0394 3.78193 14.714 4.10737L9.99992 8.82141L5.28587 4.10736C4.96043 3.78192 4.4328 3.78192 4.10736 4.10736C3.78192 4.4328 3.78192 4.96043 4.10736 5.28587L8.82141 9.99992L4.10736 14.714C3.78192 15.0394 3.78192 15.567 4.10736 15.8925C4.4328 16.2179 4.96043 16.2179 5.28587 15.8925L9.99992 11.1784Z" fill="#222222"/>
+      </svg>                   
+    </button>
+    <h4 class="popup__caption">Оставьте заявку</h4>
+    <form action="" class="popup__form form">
+      <input type="text" name="" id="" placeholder="Имя">
+      <input type="tel" name="" id="" placeholder="Телефон">
+      <input type="email" name="" id="" placeholder="Почта">
+      <input class="form__btn button" type="submit" value="Отправить">
+    </form>
+  </div>
+</div>
 
-    <main id="main">
-      <canvas></canvas>
+    <main>
       <section class="hero">
+        <video
+          class="hero__video"
+          autoplay="autoplay"
+          loop="true"
+          muted="true"
+          playsinline="true"
+        >
+          <source
+            src="https://netstyle.kz/wp-content/uploads/2024/03/net-style.mp4"
+            type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+          />
+          <source
+            src="https://netstyle.kz/wp-content/uploads/2024/03/net-style.webm"
+            type='video/webm; codecs="vp8, vorbis"'
+          />
+        </video>
         <div class="container">
           <div class="hero__container">
-            <h1 class="hero__title">
-              <span data-aos="fade-right">Каждый день</span>
-              <span data-aos="fade-left">мы видим как дети с ДЦП </span>
-              <span data-aos="fade-right">преодолевают трудности</span>
-              <span data-aos="fade-left">на пути к полноценной жизни</span>
-            </h1>
-            <h4 class="hero__desc text_pink" data-aos="fade-right">
-              В <span>OZIM</span> мы <span>верим</span>,<br>
-              что <span>возможности</span> всех <span>безграничны</span>.
-            </h4>
-            <div class="hero__down">
-              <span class="line"></span>
-              <a href="" class="hero__link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 7.76855V5L12.2783 7.5752L15.5566 5V7.76855L12.2783 10.3438L9 7.76855Z" fill="#F12670">
-                    <animate attributeName="opacity" from="1" to="0" dur="0.5s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M9 15.8545V13.0859L12.2783 15.6611L15.5566 13.0859V15.8545L12.2783 18.4297L9 15.8545Z" fill="#F12670">
-                    <animate attributeName="opacity" from="0" to="1" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
-                  </path>
-                </svg>               
-                <span>Листайте вниз</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 7.76855V5L12.2783 7.5752L15.5566 5V7.76855L12.2783 10.3438L9 7.76855Z" fill="#F12670">
-                    <animate attributeName="opacity" from="1" to="0" dur="0.5s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M9 15.8545V13.0859L12.2783 15.6611L15.5566 13.0859V15.8545L12.2783 18.4297L9 15.8545Z" fill="#F12670">
-                    <animate attributeName="opacity" from="0" to="1" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
-                  </path>
-                </svg>
-              </a>
-              <span class="line"></span>
+            <div class="hero__box">
+              <div class="hero__subtitle" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">Казахстанская IT компания</div>
+              <h1 class="hero__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                Инновационные решения для Вашего бизнеса
+              </h1>
             </div>
-            <img class="hero__back hero__back-2" src="img/cloud2.png" alt="" data-aos="fade-right"  data-aos-delay="200">
-            <img class="hero__back hero__back-3" src="img/cloud.png" alt="" data-aos="fade-left">
+            <span class="line-vr" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150"></span>
+            <div class="hero__desc" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">
+              NET Style - казахстанская IT компания, специализирующаяся на
+              консалтинге и инжиниринге в сфере информационных технологий,
+              автоматизации и связи.
+            </div>
+            <span class="line-vr" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150"></span>
+            <button id="feedback" class="hero__btn button" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">Обратный звонок</button>
           </div>
         </div>
-        <img class="hero__back hero__back-1" src="img/cloud.png" alt="" data-aos="fade-down">
-        <img class="hero__back hero__back-4" src="img/sun.png" alt="" data-aos="fade-down-left">
       </section>
-      <section class="education">
+      <section id="about" class="about">
         <div class="container">
-          <div class="education__container">
-            <h2 class="education__title text_blue up"><span>Ozim</span> инклюзивный образовательный центр в Караганде которому <span>2 года</span></h2>
-            <div class="education__cards js-slick-slider">
-              <div class="education__card">
-                <div class="education__img"><img src="img/image-1.png" alt=""></div>
-              </div>
-              <div class="education__card">
-                <div class="education__img"><img src="img/image-2.png" alt=""></div>
-              </div>
-              <div class="education__card">
-                <div class="education__img"><img src="img/image-3.png" alt=""></div>
-              </div>
-              <div class="education__card">
-                <div class="education__img"><img src="img/image-4.png" alt=""></div>
+          <div class="about__container">
+            <h2 class="about__title_sm title_sm" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">О компании</h2>
+            <div class="about__box">
+              <h3 class="about__title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+                ТОО "NET Style" - казахстанская ИТ компания, специализирующаяся
+                на консалтинге и инжиниринге в сфере информационных технологий,
+                автоматизации и связи.
+              </h3>
+              <div class="about__desc" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <p>
+                  Мы помогаем нашим заказчикам эффективно использовать
+                  управленческий, производственный и коммерческий потенциал за
+                  счет цифровой трансформации и оптимизации бизнес и
+                  производственных процессов с использованием современных
+                  средств ИТ и автоматизации.
+                </p>
+                <p>
+                  Cотрудники и консультанты компании обладают практическим
+                  инженерным и управленческим опытом работы в национальных и
+                  частных компаниях, государственных организациях от 15 до 30
+                  лет.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="learned">
-        <img class="learned__back" src="img/rainbow-1.png" alt="" data-aos="fade-down-right"  data-aos-delay="300">
-        <div class="container">
-          <div class="learned__container">
-            <h2 class="learned__title text_pink up">За это время с нами стали самостоятельнее <span>+40 детей</span></h2>
-            <div class="learned__list">
-              <div class="learned__box">
-                <img src="img/sun.png" alt="">
-                <h4>Они научились:</h4>
+        <div class="about__slider">
+          <div class="swiper about__swiper" id="aboutSwiper">
+            <div class="swiper-wrapper">
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-1.png" alt="">
               </div>
-              <div class="learned__items">
-                <div class="learned__item" data-aos="fade-right"  data-aos-delay="100">
-                  <img src="img/cloud.png" alt="">
-                  <h4>читать</h4>
-                </div>
-                <div class="learned__item" data-aos="fade-right"  data-aos-delay="200">
-                  <img src="img/cloud.png" alt="">
-                  <h4>обрели друзей</h4>
-                </div>
-                <div class="learned__item" data-aos="fade-up" data-aos-delay="100">
-                  <img src="img/cloud.png" alt="">
-                  <h4>сидеть</h4>
-                </div>
-                <div class="learned__item" data-aos="fade-left"  data-aos-delay="100">
-                  <img src="img/cloud.png" alt="">
-                  <h4>стоять и ходить</h4>
-                </div>
-                <div class="learned__item" data-aos="fade-left"  data-aos-delay="200">
-                  <img src="img/cloud.png" alt="">
-                  <h4>идут на контакт</h4>
-                </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-2.png" alt="">
               </div>
-              <div class="learned__images">
-                <div class="learned__img"><img src="img/flower-1.png" alt=""></div>
-                <div class="learned__img"><img src="img/flower-2.png" alt=""></div>
-                <div class="learned__img"><img src="img/flower-3.png" alt=""></div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-3.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-1.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-2.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-3.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-1.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-2.png" alt="">
+              </div>
+              <div class="about-slide swiper-slide">
+                <img src="img/slide-3.png" alt="">
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="expert panel">
-        <img class="expert__back-1" src="img/tree.png" alt="" data-aos="fade-up-right"  data-aos-delay="200">
-        <img class="expert__back-2" src="img/rainbow-2.png" alt="" data-aos="fade-down-left"  data-aos-delay="300"> 
-        <div class="container">
-          <div class="expert__container count-start">
-            <div class="expert__top" >
-              <span class="number number_md count" data-num="9">9</span>
-              <div class="expert__text">неравнодушных <br>
-                специалистов работают в Ozim</div>
+          <div class="about-navigation">
+            <div class="about-button about-button-prev">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_270_21)">
+                <path d="M13.8107 29.2786C13.9572 29.4251 14.1559 29.5074 14.3631 29.5074C14.5703 29.5074 14.769 29.4251 14.9155 29.2786C15.062 29.1321 15.1444 28.9334 15.1444 28.7262C15.1444 28.519 15.062 28.3203 14.9155 28.1738L5.20055 18.4588L32.0408 18.4588C32.4722 18.4587 32.8219 18.109 32.822 17.6776C32.8219 17.2462 32.4722 16.8965 32.0408 16.8964H5.20055L14.9155 7.18142C15.062 7.03491 15.1444 6.8362 15.1444 6.629C15.1444 6.4218 15.0621 6.22308 14.9155 6.07657C14.769 5.93006 14.5703 5.84775 14.3631 5.84775C14.1559 5.84775 13.9572 5.93006 13.8107 6.07657L2.76214 17.1251C2.61565 17.2716 2.53335 17.4703 2.53335 17.6775C2.53335 17.8847 2.61565 18.0834 2.76214 18.23L13.8107 29.2786Z" fill="#252525"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_270_21">
+                <rect width="25" height="25" fill="white" transform="translate(17.6777 35.3555) rotate(-135)"/>
+                </clipPath>
+                </defs>
+              </svg>                               
             </div>
-            <div class="expert__bottom">
-              <ul class="expert__list">
-                <li>логопед</li>
-                <li>дефектолог</li>
-                <li>сенсорный терапевт</li>
-                <li>психолог</li>
-                <li>арт терапевт</li>
-                <li>музыкальный терапевт</li>
-                <li>2 тютора и</li>
-                <li>2 куратора</li>
-              </ul>
+            <div class="about-button about-button-next">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_270_23)">
+                <path d="M21.9 6.07685C21.7535 5.93034 21.5548 5.84803 21.3476 5.84803C21.1404 5.84803 20.9417 5.93034 20.7952 6.07685C20.6486 6.22336 20.5663 6.42208 20.5663 6.62928C20.5663 6.83648 20.6486 7.03519 20.7952 7.1817L30.5101 16.8967L3.66992 16.8967C3.23851 16.8967 2.88878 17.2465 2.88873 17.6779C2.88878 18.1093 3.23852 18.459 3.66992 18.4591H30.5101L20.7952 28.174C20.6486 28.3206 20.5663 28.5193 20.5663 28.7265C20.5663 28.9337 20.6486 29.1324 20.7952 29.2789C20.9417 29.4254 21.1404 29.5077 21.3476 29.5077C21.5548 29.5077 21.7535 29.4254 21.9 29.2789L32.9486 18.2304C33.0951 18.0838 33.1773 17.8851 33.1773 17.6779C33.1773 17.4707 33.0951 17.272 32.9486 17.1255L21.9 6.07685Z" fill="#252525"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_270_23">
+                <rect width="25" height="25" fill="white" transform="translate(18.033) rotate(45)"/>
+                </clipPath>
+                </defs>
+              </svg>                               
             </div>
           </div>
         </div>
       </section>
-      <section class="benefits panel">
-        <div class="container">
-          <div class="benefits__container count-start">
-            <div class="benefits__row">
-              <div class="benefits__caption"><span class="number number_md"><span class="count" data-num="200">200</span>+</span></div>
-              <div class="benefits__text" data-aos="fade-left"  data-aos-delay="200">
-                обучений за свой счет <br>
-                мы прошли за 2023 год
+      <section id="competencies" class="competencies">
+        <h2 class="competencies__title_sm title_sm" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Ключевые компетенции</h2>
+        <div class="competencies__wrap">
+          <img src="img/image-3.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
+          <img src="img/image-1.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
+          <div class="competencies__accordion accordion-container">
+            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+              <h3 class="accordion-header">
+                Экспертиза
+              </h3>
+              <div class="accordion-content">
+                <p>
+                  Разработка стратегий и программ развития, формирование и реализация технической политики
+                </p>
               </div>
             </div>
-            <div class="benefits__row">
-              <div class="benefits__caption"><span class="number number_md count" data-num="250">250</span> кв.м</div>
-              <div class="benefits__text" data-aos="fade-left"  data-aos-delay="300">
-                помещение которое мы нашли <br>
-                в начале этого года, чтобы помочь <br>
-                еще больше детям.
+            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+              <h3 class="accordion-header">
+                Управление
+              </h3>
+              <div class="accordion-content">
+                <p>
+                  Разработка стратегий и программ развития, формирование и реализация технической политики
+                </p>
               </div>
             </div>
-            <div class="benefits__row">
-              <div class="benefits__caption benefits__cap" data-aos="fade-up"  data-aos-delay="100">однако...</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="complex panel">
-        <div class="container">
-          <div class="complex__container">
-            <div class="complex__box">
-              <img src="img/sun-2.png" alt="">
-              <div class="complex__number"><span class="number number_lg">67%</span></div>
-              <h5 class="complex__text">жильцов были против, чтобы OZIM находился в их жк</h5>
-            </div>
-            <div class="waves"></div>
-          </div>
-        </div>
-      </section>
-      <section class="room panel">
-        <div class="circle"></div>
-        <div class="container">
-          <div class="room__container">
-            <div class="room__box">
-              <img src="img/home.png" alt="">
-              <h5 class="room__text">и мы были вынуждены переехать в помещение</h5>
-              <div class="room__number"><span class="number number_lg">>2</span></div>
-              <h5 class="room__text">раза меньше</h5>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="waves"></div> -->
-      </section>
-
-      <section class="problems">
-        <div class="container">
-          <div class="problems__container">
-            <h2 class="problems__title up">О проблеме центров</h2>
-          </div>
-        </div>
-        <div class="problems__wrap  count-start">
-          <picture>
-            <source srcset="img/balance-2.png" media="(max-width: 768px)" />
-            <img class="problems__back" src="img/balance.png" alt="">
-          </picture>
-          <div class="problems__box">
-            <div class="problems__number">И всего<span class="number count" data-num="58">58</span></div>
-            <div class="problems__text">региональных центров для <br>
-              реабилитации и развития</div>
-          </div>
-          <div class="problems__box">
-            <div class="problems__number">Около<span class="number count" data-num="18992">18 992</span></div>
-            <div class="problems__text">детей  Казахстане <br>
-              с диагнозом ДЦП</div>
-          </div>
-        </div>
-      </section>
-      <section class="isolation panel">
-        <div class="container">
-          <div class="isolation__container">
-            <div class="isolation__box">
-              <div class="clip">
-                <img class="isolation__sun" src="img/sun.png" alt="">
-              </div>
-              <img class="isolation__cloud" src="img/cloud3.png" alt="">
-              <h4 class="isolation__caption" data-aos="fade-up" data-aos-delay="100">из-за этого многие дети  с ДЦП изолированы от общества</h4>
-              <div class="clip">
-                <img class="isolation__cloud_sm isolation__cloud-1" src="img/cloud3.png" alt="">
-                <img class="isolation__cloud_sm isolation__cloud-2" src="img/cloud3.png" alt="">
+            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+              <h3 class="accordion-header">
+                Стратегия
+              </h3>
+              <div class="accordion-content">
+                <p>
+                  Разработка стратегий и программ развития, формирование и реализация технической политики
+                </p>
               </div>
             </div>
           </div>
+          <img src="img/image-2.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+          <img src="img/image-3.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="250">
         </div>
       </section>
-      <section class="catalog">
-        <div class="clip">
-          <img class="catalog__moon" src="img/moon.png" alt="">
-          <img class="catalog__back" src="img/stars.png" alt="">
-        </div>
+      <section id="activity" class="activity">
         <div class="container">
-          <div class="catalog__container">
-            <div class="catalog__top">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.2308 0H30.9066V19.4521H50V30.5479H30.9066V50H19.2308V30.5479H0V19.4521H19.2308V0Z" fill="#F12670"/>
-              </svg> 
-              <h4 class="catalog__caption up">существуют проблемы, как:</h4>                 
-            </div>
-            <ul class="catalog__list">
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Очереди на реабилитацию.</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Нехватка квалифицированных специалистов в регионах.</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Недостаток необходимых услуг.</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Несогласованность работы разных гос. органов.</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Спорные методы лечения</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Плохое состояние центров</li>
-              <li data-aos="fade-down" data-aos-anchor-placement="center-bottom">Общество все еще не принимает детей с ДЦП</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="project">
-        <div class="container">
-          <div class="project__container count-start">
-            <h2 class="project__title up">Проект “По - Кирпичику”</h2>
-            <div class="project__img clip">
-              <img src="img/home-2.png" alt="">
-              <img class="sun" src="img/sun.png" alt="">
-              <img class="cloud" src="img/cloud4.png" alt="">
-            </div>
-            <div class="project__box">
-              <h2 class="project__caption"><span class="count" data-num="1000">1000</span> кв.м</h2>
-              <div class="project__text" data-aos="fade-up">Дом Ozim,<br> который мы хотим построить, чтобы </div>
-            </div>
-            <div class="clip">
-              <img class="project__flower-1" src="img/flower-4.png" alt="">
-              <img class="project__flower-2" src="img/flower-4.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="power panel">
-        <img class="power__back-1" src="img/rainbow-3.png" alt="" data-aos="fade-down-right"  data-aos-delay="200">
-        <div class="container">
-          <div class="power__container">
-            <div class="power__box">
-              <div class="power__number">
-                x<span class="number number_md">4</span>
-              </div>
-              <div class="power__text up">особенных детей в Караганде смогли стать сильнее</div>
-            </div>
-            <div class="power__images">
-              <div class="power__img"><img src="img/flower-1.png" alt=""></div>
-              <div class="power__img"><img src="img/flower-2.png" alt=""></div>
-              <div class="power__img"><img src="img/flower-3.png" alt=""></div>
-            </div>
-            <img class="power__back-2" src="img/tree.png" alt="" data-aos="fade-up-left"  data-aos-delay="300">
-          </div>
-        </div>
-      </section>
-      <section class="building panel">
-        <div class="container">
-          <div class="building__container count-start">
-            <div class="building__box">
-              <div class="building__number"><span class="number numbe_md count" data-num="74175">74 175</span></div>
-              <div class="building__text up">кирпичей,<br>
-                нужно для его строительства</div>
-            </div>
-            <div class="building__bricks bricks">
-              <div class="bricks__col" data-amount="4"></div>
-              <div class="bricks__col" data-amount="3"></div>
-              <div class="bricks__col" data-amount="2"></div>
-              <div class="bricks__col" data-amount="2"></div>
-              <div class="bricks__col" data-amount="2"></div>
-              <div class="bricks__col" data-amount="2"></div>
-              <div class="bricks__col" data-amount="2"></div>
-              <div class="bricks__col" data-amount="4"></div>
-              <div class="bricks__col" data-amount="5"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="dream panel">
-        <img class="dream__back-1" src="img/cloud5.png" alt="">
-        <div class="container">
-          <div class="dream__container">
-            <h3 class="dream__title text_pink">
-              <div data-aos="fade-right">Давай вспомним, <span>что Мир полон</span></div>
-              <div data-aos="fade-left"><span>возможностей</span> и каждый день</div>
-              <div data-aos="fade-right">дети с ДЦП делают шаги</div>
-              <div data-aos="fade-left"><span>к полноценной жизни</span></div>
-            </h3>
-            <h4 class="dream__desc" data-aos="fade-up">Мы можем сделать их путь к мечте короче, подарив им Дом Ozim где будут:</h4>
-          </div>
-        </div>
-        <img class="dream__back-2" src="img/cloud5.png" alt="">
-      </section>
-      <section class="transfer">
-        <div class="transfer__container">
-          <div class="transfer__list">
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">Актовый зал</h4>
-                  <img src="img/acc-1.png" alt="">
+          <div class="activity__container">
+            <h2 class="activity__title_sm title_sm" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">Виды деятельности</h2>
+            <div class="activity__accordion accordion-container">
+              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                <h3 class="accordion-header">
+                  Эффективное управление зданиями и сооружениями
+                  <span class="icon">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </h3>
+                <div class="accordion-content">
+                  <p>
+                    Услуги по созданию «цифровых двойников» зданий, промышленных
+                    и инфраструктурных объектов по технологии информационного
+                    моделирования - BIM; Внедрение информационных систем учета и
+                    управления активами, технического обслуживания и ремонтов -
+                    ТОиР Поставку и внедрение систем управления зданиями - BMS
+                  </p>
+                  <a href="">ПОДРОБНЕЕ</a>
                 </div>
               </div>
-            </div>
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">Бассейн</h4>
-                  <img src="img/acc-2.png" alt="">
+              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  Консалтинг и комплексные решения
+                  <span class="icon">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </h3>
+                <div class="accordion-content">
+                  <p>
+                    Услуги по созданию «цифровых двойников» зданий, промышленных
+                    и инфраструктурных объектов по технологии информационного
+                    моделирования - BIM; Внедрение информационных систем учета и
+                    управления активами, технического обслуживания и ремонтов -
+                    ТОиР Поставку и внедрение систем управления зданиями - BMS
+                  </p>
+                  <a href="">ПОДРОБНЕЕ</a>
                 </div>
               </div>
-            </div>
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">Спортивный зал и комната для ЛФК</h4>
-                  <img src="img/acc-3.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">Придворовой сад (с огородом)</h4>
-                  <img src="img/acc-4.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">Зал для сенсорной интеграции для арт терапии</h4>
-                  <img src="img/acc-5.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="transfer__box">
-              <div class="container">
-                <div class="transfer__item">
-                  <h4 class="transfer__caption">и многое другое</h4>
-                  <img src="img/acc-6.png" alt="">
+              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                <h3 class="accordion-header">
+                  Инжиниринг и поставка
+                  <span class="icon">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </h3>
+                <div class="accordion-content">
+                  <p>
+                    Услуги по созданию «цифровых двойников» зданий, промышленных
+                    и инфраструктурных объектов по технологии информационного
+                    моделирования - BIM; Внедрение информационных систем учета и
+                    управления активами, технического обслуживания и ремонтов -
+                    ТОиР Поставку и внедрение систем управления зданиями - BMS
+                  </p>
+                  <a href="">ПОДРОБНЕЕ</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="feedback">
-        <img class="feedback__back-1" src="img/rainbow-3.png" alt="" data-aos="fade-down-right"  data-aos-delay="200">
+      <section id="partners" class="partners">
         <div class="container">
-          <div class="feedback__container">
-            <h2 class="feedback__title text_pink up">Давайте построим вместе, <br>
-            <span>по-кирпичику!</span></h2>
-            <div class="feedback__img clip"><img src="img/home-3.png" alt=""></div>
-            <button class="feedback__btn button pulse">Построить</button>
+          <div class="partners__container">
+            <h2 class="partners__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">Наши Партнеры</h2>
           </div>
         </div>
-        <img class="feedback__back-2" src="img/spiral.png" alt="" data-aos="fade-up-left"  data-aos-delay="300">
+        <div class="partners__slider">
+          <div class="partners__marquee marquee_lf" data-duplicated = 'true' data-direction = 'left'>
+            <div class="partners__cards">
+              <div class="partners__card"><img src="img/partner1.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner2.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner3.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner4.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner5.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner6.png" alt=""></div>
+            </div>
+          </div>
+          <div class="partners__marquee marquee_rg" data-duplicated = 'true' data-direction = 'right'>
+            <div class="partners__cards">
+              <div class="partners__card"><img src="img/partner1.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner2.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner3.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner4.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner5.png" alt=""></div>
+              <div class="partners__card"><img src="img/partner6.png" alt=""></div>
+            </div>
+          </div>
+        </div>
       </section>
-
+      <section id="contacts" class="contacts">
+        <div class="container">
+          <div class="contacts__container">
+            <h2 class="contacts__title">Мы готовы ответить на ваши вопросы</h2>
+            <div class="contacts__desc">У вас есть вопросы к нам? <br>
+              Заполните форму, и мы с вами свяжемся с вами!</div>
+            <form action="" class="contacts__form form">
+              <input type="text" name="" id="" placeholder="Имя">
+              <input type="tel" name="" id="" placeholder="Телефон">
+              <input type="email" name="" id="" placeholder="Почта">
+              <input type="text" name="" id="" placeholder="Сообщение">
+              <input class="form__btn button" type="submit" value="Написать нам">
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <a class="footer__link">Политика конфиденциальности</a>
-      <a class="footer__link">Договор оферты</a>
-      <a class="footer__link">Информация об онлайн оплате</a>
+      <div class="footer__logo">
+        <a href=""><img src="img/logo-foot.svg" alt=""></a>
+      </div>
+      <div class="footer__box">
+        <div class="footer__contacts">
+          <div class="footer__contact">
+            <span>Телефон</span>
+            <a class="link" href="tel:+7 705 568 99 99">+7 705 568 99 99</a>
+          </div>
+          <div class="footer__contact">
+            <span>E-mail</span>
+            <a class="link" href="mailto:info@netstyle.kz">info@netstyle.kz</a>
+          </div>
+          <div class="footer__contact">
+            <span>Адрес</span>
+            <a class="link" href="#" target="_blank">г.Астана, ул.Туран 22</a>
+          </div>
+          <div class="footer__contact">
+            <span>Соц.Сети</span>
+            <div class="footer__socials">
+              <a href="" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 10C6.66667 8.15905 8.15905 6.66667 10 6.66667C11.8409 6.66667 13.3333 8.15905 13.3333 10C13.3333 11.8409 11.8409 13.3333 10 13.3333C8.15905 13.3333 6.66667 11.8409 6.66667 10ZM10 8.33333C9.07953 8.33333 8.33333 9.07953 8.33333 10C8.33333 10.9205 9.07953 11.6667 10 11.6667C10.9205 11.6667 11.6667 10.9205 11.6667 10C11.6667 9.07953 10.9205 8.33333 10 8.33333Z" fill="white"/>
+                  <path d="M13.75 7.08333C14.2102 7.08333 14.5833 6.71024 14.5833 6.25C14.5833 5.78976 14.2102 5.41667 13.75 5.41667C13.2898 5.41667 12.9167 5.78976 12.9167 6.25C12.9167 6.71024 13.2898 7.08333 13.75 7.08333Z" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 6.66667C2.5 4.36548 4.36548 2.5 6.66667 2.5H13.3333C15.6345 2.5 17.5 4.36548 17.5 6.66667V13.3333C17.5 15.6345 15.6345 17.5 13.3333 17.5H6.66667C4.36548 17.5 2.5 15.6345 2.5 13.3333V6.66667ZM6.66667 4.16667C5.28595 4.16667 4.16667 5.28595 4.16667 6.66667V13.3333C4.16667 14.714 5.28595 15.8333 6.66667 15.8333H13.3333C14.714 15.8333 15.8333 14.714 15.8333 13.3333V6.66667C15.8333 5.28595 14.714 4.16667 13.3333 4.16667H6.66667Z" fill="white"/>
+                </svg>                  
+              </a>
+              <a href="" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1998 5.04728C18.3599 4.0767 17.388 3.31009 16.4814 3.69182L2.23118 9.69191C1.2375 10.1103 1.18658 11.5468 2.23189 11.9801C3.0053 12.3007 4.18894 12.7708 5.37603 13.1622C6.34976 13.4832 7.41124 13.7812 8.2616 13.8655C8.49437 14.144 8.78744 14.4116 9.08505 14.6563C9.54092 15.0312 10.0898 15.418 10.6564 15.7882C11.7911 16.5296 13.0501 17.239 13.8986 17.6999C14.9127 18.2508 16.1267 17.6166 16.3091 16.5112L18.1998 5.04728ZM3.82937 10.8274L16.4325 5.52078L14.6677 16.221C13.8357 15.7686 12.6361 15.0909 11.5681 14.393C11.0277 14.0399 10.5343 13.6902 10.1437 13.369C10.0046 13.2546 9.88681 13.1504 9.78871 13.0572L13.0897 9.75621C13.4151 9.43077 13.4151 8.90314 13.0897 8.5777C12.7642 8.25226 12.2366 8.25226 11.9112 8.5777L8.29596 12.1929C7.68476 12.1147 6.83272 11.8876 5.8979 11.5793C5.17847 11.3422 4.45511 11.0727 3.82937 10.8274Z" fill="white"/>
+                </svg>                  
+              </a>
+              <a href="" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.11555 11.8859C9.80096 13.5713 11.4104 13.7935 11.9787 13.8144C12.8474 13.8464 13.6826 13.1905 14.0126 12.4205C14.093 12.233 14.073 12.0074 13.9383 11.8349C13.4822 11.2508 12.8648 10.8323 12.2615 10.4157C12.0009 10.2353 11.6424 10.2911 11.4505 10.5466L10.9499 11.3091C10.8943 11.3937 10.7838 11.4228 10.696 11.3726C10.3573 11.1789 9.86341 10.8487 9.50808 10.4934C9.15314 10.1384 8.84296 9.66679 8.66885 9.34987C8.62311 9.26661 8.64847 9.16365 8.72474 9.107L9.49426 8.53551C9.72378 8.33685 9.76415 7.99939 9.5952 7.75222C9.22118 7.20507 8.78552 6.50966 8.15496 6.04971C7.98273 5.92408 7.76488 5.90997 7.58501 5.98706C6.81439 6.31732 6.15501 7.15277 6.18703 8.02278C6.20794 8.59109 6.43014 10.2005 8.11555 11.8859Z" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 11.575 2.10453 13.0498 2.86496 14.3072L2.12183 16.8339C1.93385 17.473 2.52769 18.0668 3.16679 17.8788L5.69341 17.1357C6.95081 17.8961 8.42565 18.3337 10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699ZM3.33366 10.0003C3.33366 6.31843 6.31843 3.33366 10.0003 3.33366C13.6822 3.33366 16.667 6.31843 16.667 10.0003C16.667 13.6822 13.6822 16.667 10.0003 16.667C8.68627 16.667 7.46336 16.2877 6.43213 15.6328C6.13461 15.4439 5.75928 15.3791 5.39888 15.4851L4.14755 15.8531L4.51559 14.6018C4.62159 14.2414 4.55674 13.866 4.36781 13.5685C3.71299 12.5373 3.33366 11.3144 3.33366 10.0003Z" fill="white"/>
+                </svg>                  
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+            <li><a href="">О нас</a></li>
+            <li><a href="">Продукция</a></li>
+            <li><a href="">Партнеры</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__desc">Мы помогаем нашим заказчикам эффективно использовать управленческий, производственный и коммерческий потенциал за счет цифровой трансформации и оптимизации бизнес и производственных процессов с использованием современных средств ИТ и автоматизации.</div>
+    </div>
+    <div class="footer__copy">
+      <div>NetStyle 2024</div>
+      <a href="https://factum.agency/" target="_blank" class="link">Сделано Factum</a>
     </div>
   </div>
 </footer>
- <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240611181012"></script>
-<script src="js/waypoint.js?_v=20240611181012"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240611181012"></script>
-<script src="https://unpkg.co/gsap@3/dist/gsap.min.js?_v=20240611181012"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js?_v=20240611181012"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js?_v=20240611181012"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20240611181012"></script>
-<script src="js/app.js?_v=20240611181012"></script>
+ <script src="js/jquery-3.6.0.min.js?_v=20240709112033"></script>
+<script src="js/jquery.marquee.min.js?_v=20240709112033"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240709112033"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240709112033"></script>
+<script src="js/app.js?_v=20240709112033"></script>
 </body>
+
 </html>
+
   </body>
 </html>
