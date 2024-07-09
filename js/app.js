@@ -84,23 +84,23 @@ window.addEventListener("load", function () {
 
   // sliders
   var swiperAbout = new Swiper("#aboutSwiper", {
-    slidesPerView: 'auto',
+    slidesPerView: 3.3,
     spaceBetween: 16,
-    // centeredSlides: true,
+    centeredSlides: true,
     loop: true,
-    speed: 900,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    loopFillGroupWithBlank: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".about-button-next",
       prevEl: ".about-button-prev",
     },
     breakpoints: {
-      1200: {
+      1024: {
         spaceBetween: 40,
-      }
+      },
     }
   });
 

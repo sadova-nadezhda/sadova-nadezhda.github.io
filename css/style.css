@@ -695,11 +695,11 @@ h6 {
 }
 
 .about__title_sm {
-  width: calc(32% - 40px);
+  width: calc(30% - 55px);
 }
 
 .about__box {
-  width: 68%;
+  width: 70%;
 }
 
 .about__desc {
@@ -708,7 +708,7 @@ h6 {
 }
 
 .about__swiper {
-  position: relative;
+  height: 294px;
 }
 
 .about .swiper-wrapper {
@@ -717,14 +717,12 @@ h6 {
 
 .about .swiper-slide {
   position: relative;
-  height: 294px;
-  width: 25%;
+  height: 80%;
   transition: all 200ms linear;
-  transform: scale(0.8);
 }
 
 .about .swiper-slide-active {
-  transform: scale(1);
+  height: 100%;
 }
 
 .about-navigation {
