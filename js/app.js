@@ -69,33 +69,37 @@ window.addEventListener("load", function () {
     speed: 80,
     duplicated: true,
     startVisible: true,
-  })
+  });
 
   $('.marquee_rg').marquee({
     direction: 'right',
     speed: 80,
     duplicated: true,
     startVisible: true,
-  })
+  });
+
+  var $swiper = $(".swiper-container");
+  var $bottomSlide = null;
+  var $bottomSlideContent = null;
 
   // sliders
-  var swiperSeminar = new Swiper("#aboutSwiper", {
+  var swiperAbout = new Swiper("#aboutSwiper", {
     slidesPerView: 'auto',
     spaceBetween: 16,
-    centeredSlides: true,
-    roundLengths: true,
+    // centeredSlides: true,
     loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    speed: 900,
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     navigation: {
       nextEl: ".about-button-next",
       prevEl: ".about-button-prev",
     },
     breakpoints: {
       1200: {
-        spaceBetween: 40
+        spaceBetween: 40,
       }
     }
   });
