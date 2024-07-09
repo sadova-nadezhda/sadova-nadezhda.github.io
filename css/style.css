@@ -1038,9 +1038,6 @@ h6 {
   .container {
     max-width: 90%;
   }
-}
-
-@media (max-width: 1440px) {
   .about__title_sm {
     width: calc(35% - 30px);
   }
