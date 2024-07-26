@@ -1,452 +1,1352 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?_v=1.3" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240726183325">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240726183325"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240726183325" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240726183325" />
+  <link rel="stylesheet" href="css/style.css?_v=20240726183325" />
 </head>
+
   <body>
-    <header class="header" data-aos="fade-down" data-aos-duration="1000">
-      <div class="container">
-        <div class="header__container">
-          <div class="header__info">
-            <a href="tel:+7 705 568 99 99" class="link">+7 705 568 99 99</a>
-            <a href="mailto:info@netstyle.kz" class="link">info@netstyle.kz </a>
-          </div>
-          <div class="header__logo">
-            <a href="" class="logo">
-              <img src="img/logo.svg" alt="" />
-            </a>
-          </div>
-          <div class="header__burger burger">
-            <div class="burger__txt">МЕНЮ</div>
-            <div class="burger__icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
+    <header class="header @@class">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__burger header__open">
+        <span></span>
+        <span></span>
       </div>
       <nav class="header__nav">
-        <div class="header__close">
-          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.79286 23.2075C1.86541 23.2801 1.95158 23.3377 2.04642 23.377C2.14126 23.4164 2.24292 23.4366 2.34559 23.4366C2.44826 23.4366 2.54992 23.4164 2.64476 23.377C2.7396 23.3377 2.82577 23.2801 2.89832 23.2075L12.4999 13.6059L22.1054 23.2075C22.2519 23.3541 22.4508 23.4364 22.6581 23.4364C22.8654 23.4364 23.0642 23.3541 23.2108 23.2075C23.3574 23.0609 23.4398 22.862 23.4398 22.6547C23.4398 22.4474 23.3574 22.2486 23.2108 22.102L13.6054 12.5004L23.2069 2.89497C23.3535 2.74837 23.4359 2.54955 23.4359 2.34223C23.4359 2.13492 23.3535 1.93609 23.2069 1.7895C23.0603 1.6429 22.8615 1.56055 22.6542 1.56055C22.4469 1.56055 22.248 1.6429 22.1014 1.7895L12.4999 11.395L2.89442 1.7934C2.74496 1.66541 2.55272 1.59853 2.3561 1.60613C2.15947 1.61372 1.97296 1.69523 1.83382 1.83437C1.69469 1.97351 1.61318 2.16002 1.60558 2.35664C1.59799 2.55326 1.66487 2.74551 1.79286 2.89497L11.3944 12.5004L1.79286 22.1059C1.64735 22.2523 1.56567 22.4503 1.56567 22.6567C1.56567 22.8631 1.64735 23.0611 1.79286 23.2075Z" fill="white"/>
-          </svg>        
-        </div>
-        <ul class="header__menu">
-          <li><a href="#about">О компании</a></li>
-          <li><a href="#competencies">Ключевые компетенции</a></li>
-          <li><a href="#activity">Виды деятельности</a></li>
-          <li><a href="#partners">Наши партнеры</a></li>
-          <li><a href="#contacts">Ответы на вопросы</a></li>
+        <ul class="header__menu dropdown">
+          <li class="drop">
+            <a href="">Общественная баня</a>
+            <ul class="sub_menu">
+              <li><a href="">Мужской зал</a></li>
+              <li><a href="">Женский зал</a></li>
+            </ul>
+          </li>
+          <li class="drop">
+            <a href="">Банные дома</a>
+            <ul class="sub_menu">
+              <li><a href="">Усадьба</a></li>
+              <li><a href="">Шале</a></li>
+              <li><a href="">Изба</a></li>
+              <li><a href="">Хата</a></li>
+              <li><a href="">По черному</a></li>
+              <li><a href="">Юрта</a></li>
+            </ul>
+          </li>
+          <li><a href="">Меню</a></li>
         </ul>
-
-        <div class="header__address">г. Астана, улица Б.Майлина дом 37</div>
-        <div class="header__info header__info_mb">
-          <a href="tel:+7 705 568 99 99">+7 705 568 99 99</a>
-          <a href="mailto:info@netstyle.kz ">info@netstyle.kz </a>
-        </div>
       </nav>
-    </header>
-
-    <div id="popup-form" class="popup popup-form">
-      <div class="popup__container">
-        <button class="popup__close popup-form__close">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 11.1784L14.714 15.8925C15.0394 16.2179 15.567 16.2179 15.8925 15.8925C16.2179 15.567 16.2179 15.0394 15.8925 14.714L11.1784 9.99992L15.8925 5.28588C16.2179 4.96044 16.2179 4.43281 15.8925 4.10737C15.567 3.78193 15.0394 3.78193 14.714 4.10737L9.99992 8.82141L5.28587 4.10736C4.96043 3.78192 4.4328 3.78192 4.10736 4.10736C3.78192 4.4328 3.78192 4.96043 4.10736 5.28587L8.82141 9.99992L4.10736 14.714C3.78192 15.0394 3.78192 15.567 4.10736 15.8925C4.4328 16.2179 4.96043 16.2179 5.28587 15.8925L9.99992 11.1784Z" fill="#222222"/>
-          </svg>                   
-        </button>
-        <h4 class="popup__caption">Оставьте заявку</h4>
-        <form action="" class="popup__form form">
-          <input type="text" name="" id="" placeholder="Имя">
-          <input type="tel" name="" id="" placeholder="Телефон">
-          <input type="email" name="" id="" placeholder="Почта">
-          <input class="form__btn button" type="submit" value="Отправить">
-        </form>
+      <a class="header__logo" href="/">
+        <img class="logo-lg" src="img/logo.svg" alt="" />
+        <img class="logo-dr" src="img/logo-dr.svg" alt="" />
+      </a>
+      <div class="header__info">
+        <a href="tel:+7 700 716 66 66">+7 700 716 66 66</a>
+        <a class="header__btn header__booking button button_light">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.7128 13.5062L15.9144 4.1355C15.6676 3.95483 15.3324 3.95483 15.0857 4.1355L2.28717 13.5062C1.97456 13.7351 1.90664 14.1741 2.13556 14.4867C2.36448 14.7993 2.80349 14.8671 3.11605 14.6383L15.5 5.57098L27.884 14.6383C28.0088 14.7298 28.154 14.7738 28.2978 14.7738C28.5138 14.7738 28.727 14.6744 28.8644 14.4867C29.0934 14.1741 29.0255 13.7351 28.7128 13.5062Z" fill="#F0EFE5"/>
+            <path d="M25.3215 14.7971C24.9341 14.7971 24.62 15.1112 24.62 15.4986V26.6651H19.0079V20.5697C19.0079 18.6354 17.4342 17.0618 15.5 17.0618C13.5658 17.0618 11.9921 18.6355 11.9921 20.5697V26.6651H6.37998V15.4987C6.37998 15.1113 6.06584 14.7972 5.67845 14.7972C5.29107 14.7972 4.97693 15.1113 4.97693 15.4987V27.3667C4.97693 27.7541 5.29107 28.0682 5.67845 28.0682H12.6936C13.0626 28.0682 13.3645 27.7832 13.3924 27.4213C13.3941 27.4049 13.3952 27.387 13.3952 27.3667V20.5698C13.3952 19.4092 14.3394 18.4649 15.5 18.4649C16.6606 18.4649 17.6048 19.4092 17.6048 20.5698V27.3667C17.6048 27.3869 17.6059 27.4045 17.6076 27.4207C17.6352 27.7828 17.9372 28.0682 18.3064 28.0682H25.3216C25.709 28.0682 26.0231 27.7541 26.0231 27.3667V15.4987C26.023 15.1112 25.7089 14.7971 25.3215 14.7971Z" fill="#F0EFE5"/>
+          </svg>            
+          <span>Забронировать</span>
+        </a>
       </div>
     </div>
+  </div>
+  <div class="header__wrap">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__burger header__close">
+          <span></span>
+          <span></span>
+        </div>
+        <a class="header__logo" href="/">
+          <img src="img/logo.svg" alt="" />
+        </a>
+        <a class="header__btn header__btn_lg button button_light">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.7128 13.5062L15.9144 4.1355C15.6676 3.95483 15.3324 3.95483 15.0857 4.1355L2.28717 13.5062C1.97456 13.7351 1.90664 14.1741 2.13556 14.4867C2.36448 14.7993 2.80349 14.8671 3.11605 14.6383L15.5 5.57098L27.884 14.6383C28.0088 14.7298 28.154 14.7738 28.2978 14.7738C28.5138 14.7738 28.727 14.6744 28.8644 14.4867C29.0934 14.1741 29.0255 13.7351 28.7128 13.5062Z" fill="#F0EFE5"/>
+            <path d="M25.3215 14.7971C24.9341 14.7971 24.62 15.1112 24.62 15.4986V26.6651H19.0079V20.5697C19.0079 18.6354 17.4342 17.0618 15.5 17.0618C13.5658 17.0618 11.9921 18.6355 11.9921 20.5697V26.6651H6.37998V15.4987C6.37998 15.1113 6.06584 14.7972 5.67845 14.7972C5.29107 14.7972 4.97693 15.1113 4.97693 15.4987V27.3667C4.97693 27.7541 5.29107 28.0682 5.67845 28.0682H12.6936C13.0626 28.0682 13.3645 27.7832 13.3924 27.4213C13.3941 27.4049 13.3952 27.387 13.3952 27.3667V20.5698C13.3952 19.4092 14.3394 18.4649 15.5 18.4649C16.6606 18.4649 17.6048 19.4092 17.6048 20.5698V27.3667C17.6048 27.3869 17.6059 27.4045 17.6076 27.4207C17.6352 27.7828 17.9372 28.0682 18.3064 28.0682H25.3216C25.709 28.0682 26.0231 27.7541 26.0231 27.3667V15.4987C26.023 15.1112 25.7089 14.7971 25.3215 14.7971Z" fill="#F0EFE5"/>
+          </svg>            
+          <span>Забронировать</span>
+        </a>
+      </div>
+      <div class="header__content">
+        <div class="header__nav-box">
+          <nav class="header__nav_lg">
+            <ul class="header__menu_lg menu_lg">
+              <li><a href="">О комплексе</a></li>
+              <li class="drop_btn">
+                <a>Общественная баня</a>
+                <ul class="sub_menu">
+                  <li><a href="">Мужской зал</a></li>
+                  <li><a href="">Женский зал</a></li>
+                </ul>
+              </li>
+              <li class="drop_btn">
+                <a>Банные дома</a>
+                <ul class="sub_menu">
+                  <li><a href="">Усадьба</a></li>
+                  <li><a href="">Шале</a></li>
+                  <li><a href="">Изба</a></li>
+                  <li><a href="">Хата</a></li>
+                  <li><a href="">По черному</a></li>
+                  <li><a href="">Юрта</a></li>
+                </ul>
+              </li>
+              <li><a href="">Меню</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Награды</a></li>
+              <li><a href="">Цены</a></li>
+              <li><a href="">Кухня</a></li>
+              <li><a href="">Процедуры</a></li>
+              <li><a href="">Товары</a></li>
+              <li><a href="">Программа лояльности</a></li>
+              <li><a href="">Подарочные сертификаты</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__block">
+          <a class="header__phone phone" href="tel:+7 (700) 716-66-66">+7 (700) 716-66-66</a>
+          <div class="header__contacts contacts__block">
+            <div class="header__contact contact">
+              <span>E-mail</span>
+              <a href="mailto:info@orlovbani.kz">info@orlovbani.kz</a>
+            </div>
+            <div class="header__contact contact">
+              <span>Адрес</span>
+              <span>г. Астана, проспект Тұран, 99</span>
+            </div>
+            <div class="header__contact contact">
+              <span>График</span>
+              <span>Ежедневно c 08:00 до 23:00</span>
+            </div>
+          </div>
+          <div class="header__lang">
+            <span>Язык:</span>
+            <div class="custom-select">
+              <select class="select" name="" id="">
+                <option lang="ru" value="russian" selected>Рус</option>
+                <option lang="en" value="english">Eng</option>
+              </select>
+            </div>
+          </div>
+          <div class="header__socials socials">
+            <a class="header__social social" href="" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9C5 6.79086 6.79086 5 9 5C11.2091 5 13 6.79086 13 9C13 11.2091 11.2091 13 9 13C6.79086 13 5 11.2091 5 9ZM9 7C7.89543 7 7 7.89543 7 9C7 10.1046 7.89543 11 9 11C10.1046 11 11 10.1046 11 9C11 7.89543 10.1046 7 9 7Z" fill="#F0EFE5"/>
+                <path d="M13.5 5.5C14.0523 5.5 14.5 5.05228 14.5 4.5C14.5 3.94772 14.0523 3.5 13.5 3.5C12.9477 3.5 12.5 3.94772 12.5 4.5C12.5 5.05228 12.9477 5.5 13.5 5.5Z" fill="#F0EFE5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H13C15.7614 0 18 2.23858 18 5V13C18 15.7614 15.7614 18 13 18H5C2.23858 18 0 15.7614 0 13V5ZM5 2C3.34315 2 2 3.34315 2 5V13C2 14.6569 3.34315 16 5 16H13C14.6569 16 16 14.6569 16 13V5C16 3.34315 14.6569 2 13 2H5Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+            <a class="header__social social" href="" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8394 6.05639C22.0315 4.8917 20.8652 3.97177 19.7773 4.42984L2.67703 11.63C1.48461 12.132 1.42351 13.8558 2.67788 14.3758C3.60596 14.7605 5.02633 15.3246 6.45085 15.7943C7.61932 16.1795 8.8931 16.5371 9.91353 16.6383C10.1929 16.9725 10.5445 17.2935 10.9017 17.5872C11.4487 18.0371 12.1074 18.5012 12.7873 18.9455C14.1489 19.8352 15.6597 20.6865 16.678 21.2396C17.8949 21.9006 19.3517 21.1395 19.5705 19.8131L21.8394 6.05639ZM4.59485 12.9925L19.7186 6.62459L17.6009 19.4649C16.6024 18.9219 15.163 18.1087 13.8813 17.2713C13.2329 16.8475 12.6407 16.4279 12.172 16.0425C12.0051 15.9052 11.8638 15.7802 11.7461 15.6683L15.7072 11.7071C16.0977 11.3166 16.0977 10.6834 15.7072 10.2929C15.3167 9.90237 14.6835 9.90237 14.293 10.2929L9.95476 14.6311C9.22132 14.5373 8.19888 14.2647 7.07709 13.8949C6.21377 13.6102 5.34574 13.2869 4.59485 12.9925Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+            <a class="header__social social" href="" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.73827 14.2627C11.7608 16.2852 13.692 16.5518 14.374 16.5769C15.4165 16.6153 16.4188 15.8283 16.8148 14.9042C16.9112 14.6792 16.8872 14.4085 16.7255 14.2014C16.1782 13.5005 15.4374 12.9983 14.7134 12.4984C14.4007 12.282 13.9705 12.349 13.7402 12.6555L13.1394 13.5706C13.0728 13.6721 12.9402 13.707 12.8348 13.6467C12.4284 13.4143 11.8357 13.018 11.4093 12.5916C10.9834 12.1657 10.6112 11.5998 10.4022 11.2195C10.3473 11.1195 10.3778 10.996 10.4693 10.928L11.3927 10.2422C11.6681 10.0038 11.7166 9.59887 11.5138 9.30228C11.065 8.64569 10.5422 7.8112 9.78556 7.25926C9.57889 7.1085 9.31746 7.09158 9.10162 7.18408C8.17688 7.5804 7.38562 8.58294 7.42404 9.62695C7.44914 10.3089 7.71578 12.2402 9.73827 14.2627Z" fill="#F0EFE5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 13.8896 2.52505 15.6594 3.43756 17.1683L2.54581 20.2002C2.32023 20.9672 3.03284 21.6798 3.79975 21.4542L6.83171 20.5624C8.34058 21.475 10.1104 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C10.4231 20 8.95564 19.5448 7.71817 18.759C7.36114 18.5323 6.91075 18.4545 6.47827 18.5817L4.97667 19.0233L5.41832 17.5217C5.54552 17.0892 5.46769 16.6389 5.24098 16.2818C4.4552 15.0444 4 13.5769 4 12Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
     <main>
       <section class="hero">
-        <video
-          class="hero__video"
-          autoplay="autoplay"
-          loop="true"
-          muted="true"
-          playsinline="true"
-        >
-          <source
-            src="https://netstyle.kz/wp-content/uploads/2024/03/net-style.mp4"
-            type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
-          />
-          <source
-            src="https://netstyle.kz/wp-content/uploads/2024/03/net-style.webm"
-            type='video/webm; codecs="vp8, vorbis"'
-          />
-        </video>
-        <div class="container">
-          <div class="hero__container">
-            <div class="hero__box">
-              <div class="hero__subtitle" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">Казахстанская IT компания</div>
-              <h1 class="hero__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
-                Инновационные решения для Вашего бизнеса
-              </h1>
+        <div class="hero__slider">
+          <div class="swiper heroSwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero__slide">
+                <img src="img/slide-1.png" class="hero__img" />
+                <a class="hero__video" href="https://youtu.be/krDWc30PAGg?si=pioUARONV5vhihoR" data-fancybox ><img src="img/slide-1.png" alt=""></a>
+                <div class="container">
+                  <div class="hero__content">
+                    <h2 class="hero__title">Общественные бани</h2>
+                    <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
+                      и богатство вековых банных традиций</div>
+                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <img src="img/slide-2.jpg" class="hero__img" />
+                <a class="hero__video" href="https://youtu.be/krDWc30PAGg?si=pioUARONV5vhihoR" data-fancybox><img src="img/slide-2.png" alt=""></a>
+                <div class="container">
+                  <div class="hero__content">
+                    <h2 class="hero__title">Общественные бани</h2>
+                    <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
+                      и богатство вековых банных традиций</div>
+                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <img src="img/slide-3.jpg" class="hero__img" />
+                <a class="hero__video" href="https://youtu.be/krDWc30PAGg?si=pioUARONV5vhihoR" data-fancybox><img src="img/slide-3.png" alt=""></a>
+                <div class="container">
+                  <div class="hero__content">
+                    <h2 class="hero__title">Общественные бани</h2>
+                    <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
+                      и богатство вековых банных традиций</div>
+                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__slide">
+                <img src="img/slide-4.jpg" class="hero__img" />
+                <a class="hero__video" href="https://youtu.be/krDWc30PAGg?si=pioUARONV5vhihoR" data-fancybox><img src="img/slide-4.png" alt=""></a>
+                <div class="container">
+                  <div class="hero__content">
+                    <h2 class="hero__title">Общественные бани</h2>
+                    <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
+                      и богатство вековых банных традиций</div>
+                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="line-vr" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150"></span>
-            <div class="hero__desc" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">
-              NET Style - казахстанская IT компания, специализирующаяся на
-              консалтинге и инжиниринге в сфере информационных технологий,
-              автоматизации и связи.
+          </div>
+          <div thumbsSlider="" class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/slide-1.png" />
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle"
+                    stroke-dasharray="100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide-2.jpg" />
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle"
+                    stroke-dasharray="100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide-3.jpg" />
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle"
+                    stroke-dasharray="100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide-4.jpg" />
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle"
+                    stroke-dasharray="100"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                </svg>
+              </div>
             </div>
-            <span class="line-vr" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150"></span>
-            <button id="feedback" class="hero__btn button" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">Обратный звонок</button>
           </div>
         </div>
       </section>
-      <section id="about" class="about">
+      <section class="about section-pad">
         <div class="container">
           <div class="about__container">
-            <h2 class="about__title_sm title_sm" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">О компании</h2>
-            <div class="about__box">
-              <h3 class="about__title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
-                ТОО "NET Style" - казахстанская ИТ компания, специализирующаяся
-                на консалтинге и инжиниринге в сфере информационных технологий,
-                автоматизации и связи.
-              </h3>
-              <div class="about__desc" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                <p>
-                  Мы помогаем нашим заказчикам эффективно использовать
-                  управленческий, производственный и коммерческий потенциал за
-                  счет цифровой трансформации и оптимизации бизнес и
-                  производственных процессов с использованием современных
-                  средств ИТ и автоматизации.
-                </p>
-                <p>
-                  Cотрудники и консультанты компании обладают практическим
-                  инженерным и управленческим опытом работы в национальных и
-                  частных компаниях, государственных организациях от 15 до 30
-                  лет.
-                </p>
+            <img class="about_back" src="img/image-2.png" alt="">
+            <h2 class="about__title_sm title_sm title_limb">О комплексе</h2>
+            <h2 class="about__title title_indent title_up">
+              <p>Забудьте о повседневных дел</p>
+              <p>и насладитесь заботой</p>
+              <p>о своем здоровье в приятной атмосфере</p>
+              <p>наших бань</p>
+            </h2>
+            <div class="about__wrap">
+              <div class="about__img border-8"><img class="img-cover" src="img/image-1.png" alt=""></div>
+              <div class="about__box">
+                <div class="about__desc">
+                  Орловские бани – это 4 000 м² банного пространства,
+                  где впечатляет каждая деталь: современный дизайн, просторные парные и огромные пятидесятитонные печи.</div>
+                <a href="" class="about__btn button button_brown">Подробнее</a>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="about__slider">
-          <div class="swiper about__swiper" id="aboutSwiper">
-            <div class="swiper-wrapper">
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-3.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-3.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-1.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-2.png" alt="">
-              </div>
-              <div class="about-slide swiper-slide">
-                <img src="img/slide-3.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="about-navigation">
-            <div class="about-button about-button-prev">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_270_21)">
-                <path d="M13.8107 29.2786C13.9572 29.4251 14.1559 29.5074 14.3631 29.5074C14.5703 29.5074 14.769 29.4251 14.9155 29.2786C15.062 29.1321 15.1444 28.9334 15.1444 28.7262C15.1444 28.519 15.062 28.3203 14.9155 28.1738L5.20055 18.4588L32.0408 18.4588C32.4722 18.4587 32.8219 18.109 32.822 17.6776C32.8219 17.2462 32.4722 16.8965 32.0408 16.8964H5.20055L14.9155 7.18142C15.062 7.03491 15.1444 6.8362 15.1444 6.629C15.1444 6.4218 15.0621 6.22308 14.9155 6.07657C14.769 5.93006 14.5703 5.84775 14.3631 5.84775C14.1559 5.84775 13.9572 5.93006 13.8107 6.07657L2.76214 17.1251C2.61565 17.2716 2.53335 17.4703 2.53335 17.6775C2.53335 17.8847 2.61565 18.0834 2.76214 18.23L13.8107 29.2786Z" fill="#252525"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_270_21">
-                <rect width="25" height="25" fill="white" transform="translate(17.6777 35.3555) rotate(-135)"/>
-                </clipPath>
-                </defs>
-              </svg>                               
-            </div>
-            <div class="about-button about-button-next">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_270_23)">
-                <path d="M21.9 6.07685C21.7535 5.93034 21.5548 5.84803 21.3476 5.84803C21.1404 5.84803 20.9417 5.93034 20.7952 6.07685C20.6486 6.22336 20.5663 6.42208 20.5663 6.62928C20.5663 6.83648 20.6486 7.03519 20.7952 7.1817L30.5101 16.8967L3.66992 16.8967C3.23851 16.8967 2.88878 17.2465 2.88873 17.6779C2.88878 18.1093 3.23852 18.459 3.66992 18.4591H30.5101L20.7952 28.174C20.6486 28.3206 20.5663 28.5193 20.5663 28.7265C20.5663 28.9337 20.6486 29.1324 20.7952 29.2789C20.9417 29.4254 21.1404 29.5077 21.3476 29.5077C21.5548 29.5077 21.7535 29.4254 21.9 29.2789L32.9486 18.2304C33.0951 18.0838 33.1773 17.8851 33.1773 17.6779C33.1773 17.4707 33.0951 17.272 32.9486 17.1255L21.9 6.07685Z" fill="#252525"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_270_23">
-                <rect width="25" height="25" fill="white" transform="translate(18.033) rotate(45)"/>
-                </clipPath>
-                </defs>
-              </svg>                               
             </div>
           </div>
         </div>
       </section>
-      <section id="competencies" class="competencies">
-        <h2 class="competencies__title_sm title_sm" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Ключевые компетенции</h2>
-        <div class="competencies__wrap">
-          <img src="img/image-3.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
-          <img src="img/image-1.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
-          <div class="competencies__accordion accordion-container">
-            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
-              <h3 class="accordion-header">
-                Экспертиза
-              </h3>
-              <div class="accordion-content">
-                <p>
-                  Разработка стратегий и программ развития, формирование и реализация технической политики
-                </p>
-              </div>
-            </div>
-            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-              <h3 class="accordion-header">
-                Управление
-              </h3>
-              <div class="accordion-content">
-                <p>
-                  Разработка стратегий и программ развития, формирование и реализация технической политики
-                </p>
-              </div>
-            </div>
-            <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-              <h3 class="accordion-header">
-                Стратегия
-              </h3>
-              <div class="accordion-content">
-                <p>
-                  Разработка стратегий и программ развития, формирование и реализация технической политики
-                </p>
-              </div>
-            </div>
-          </div>
-          <img src="img/image-2.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
-          <img src="img/image-3.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="250">
-        </div>
-      </section>
-      <section id="activity" class="activity">
+      <section class="bath section-pad-bottom">
         <div class="container">
-          <div class="activity__container">
-            <h2 class="activity__title_sm title_sm" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">Виды деятельности</h2>
-            <div class="activity__accordion accordion-container">
-              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
-                <h3 class="accordion-header">
-                  Эффективное управление зданиями и сооружениями
-                  <span class="icon">
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </h3>
-                <div class="accordion-content">
-                  <p>
-                    Услуги по созданию «цифровых двойников» зданий, промышленных
-                    и инфраструктурных объектов по технологии информационного
-                    моделирования - BIM; Внедрение информационных систем учета и
-                    управления активами, технического обслуживания и ремонтов -
-                    ТОиР Поставку и внедрение систем управления зданиями - BMS
-                  </p>
-                  <a href="">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                <h3 class="accordion-header">
-                  Консалтинг и комплексные решения
-                  <span class="icon">
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </h3>
-                <div class="accordion-content">
-                  <p>
-                    Услуги по созданию «цифровых двойников» зданий, промышленных
-                    и инфраструктурных объектов по технологии информационного
-                    моделирования - BIM; Внедрение информационных систем учета и
-                    управления активами, технического обслуживания и ремонтов -
-                    ТОиР Поставку и внедрение систем управления зданиями - BMS
-                  </p>
-                  <a href="">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-              <div class="accordion-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                <h3 class="accordion-header">
-                  Инжиниринг и поставка
-                  <span class="icon">
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.43733 1.875C8.18869 1.875 7.95023 1.97377 7.77441 2.14959C7.5986 2.3254 7.49983 2.56386 7.49983 2.8125C7.49983 3.06114 7.5986 3.2996 7.77441 3.47541C7.95023 3.65123 8.18869 3.75 8.43733 3.75L24.9242 3.75L2.14951 26.5247C1.7835 26.8908 1.7835 27.4843 2.14951 27.8504C2.51562 28.2164 3.10914 28.2164 3.47523 27.8504L26.2499 5.07572V21.5626C26.2499 21.8112 26.3487 22.0497 26.5245 22.2255C26.7003 22.4013 26.9388 22.5001 27.1874 22.5001C27.4361 22.5001 27.6745 22.4013 27.8503 22.2255C28.0261 22.0497 28.1249 21.8112 28.1249 21.5626V2.81259C28.1249 2.56396 28.0261 2.32552 27.8503 2.14971C27.6745 1.9739 27.4361 1.87512 27.1874 1.87509L8.43733 1.875Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </h3>
-                <div class="accordion-content">
-                  <p>
-                    Услуги по созданию «цифровых двойников» зданий, промышленных
-                    и инфраструктурных объектов по технологии информационного
-                    моделирования - BIM; Внедрение информационных систем учета и
-                    управления активами, технического обслуживания и ремонтов -
-                    ТОиР Поставку и внедрение систем управления зданиями - BMS
-                  </p>
-                  <a href="">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-            </div>
+          <div class="bath__container">
+            <h2 class="bath__title_sm title_sm title_limb">Общественная баня</h2>
+            <div class="bath__cards col-2">
+  <div class="bath__card">
+    <div class="bath__top">
+      <h2 class="bath__title title_up">Мужской зал</h2>
+      <div class="swiper bathSwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/bath-1.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/bath-2.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/bath-3.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/bath-4.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/bath-2.png" />
           </div>
         </div>
-      </section>
-      <section id="partners" class="partners">
-        <div class="container">
-          <div class="partners__container">
-            <h2 class="partners__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">Наши Партнеры</h2>
-          </div>
+        <div class="swiper-button-next swiper-button-light bath-button-next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2009_7180)">
+            <path d="M8.585 7.415L10 6L16 12L10 18L8.585 16.585L13.17 12L8.585 7.415Z" fill="#F0EFE5"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2009_7180">
+            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+            </clipPath>
+            </defs>
+          </svg>                        
         </div>
-        <div class="partners__slider">
-          <div class="partners__marquee marquee_lf" data-duplicated = 'true' data-direction = 'left'>
-            <div class="partners__cards">
-              <div class="partners__card"><img src="img/partner1.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner2.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner3.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner4.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner5.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner6.png" alt=""></div>
-            </div>
-          </div>
-          <div class="partners__marquee marquee_rg" data-duplicated = 'true' data-direction = 'right'>
-            <div class="partners__cards">
-              <div class="partners__card"><img src="img/partner1.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner2.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner3.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner4.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner5.png" alt=""></div>
-              <div class="partners__card"><img src="img/partner6.png" alt=""></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contacts" class="contacts">
-        <div class="container">
-          <div class="contacts__container">
-            <h2 class="contacts__title">Мы готовы ответить на ваши вопросы</h2>
-            <div class="contacts__desc">У вас есть вопросы к нам? <br>
-              Заполните форму, и мы с вами свяжемся с вами!</div>
-            <form action="" class="contacts__form form">
-              <input type="text" name="" id="" placeholder="Имя">
-              <input type="tel" name="" id="" placeholder="Телефон">
-              <input type="email" name="" id="" placeholder="Почта">
-              <input type="text" name="" id="" placeholder="Сообщение">
-              <input class="form__btn button" type="submit" value="Написать нам">
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__container">
-          <div class="footer__logo">
-            <a href=""><img src="img/logo-foot.svg" alt=""></a>
-          </div>
-          <div class="footer__box">
-            <div class="footer__contacts">
-              <div class="footer__contact">
-                <span>Телефон</span>
-                <a class="link" href="tel:+7 705 568 99 99">+7 705 568 99 99</a>
-              </div>
-              <div class="footer__contact">
-                <span>E-mail</span>
-                <a class="link" href="mailto:info@netstyle.kz">info@netstyle.kz</a>
-              </div>
-              <div class="footer__contact">
-                <span>Адрес</span>
-                <a class="link" href="#" target="_blank">г.Астана, ул.Туран 22</a>
-              </div>
-              <div class="footer__contact">
-                <span>Соц.Сети</span>
-                <div class="footer__socials">
-                  <a href="" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 10C6.66667 8.15905 8.15905 6.66667 10 6.66667C11.8409 6.66667 13.3333 8.15905 13.3333 10C13.3333 11.8409 11.8409 13.3333 10 13.3333C8.15905 13.3333 6.66667 11.8409 6.66667 10ZM10 8.33333C9.07953 8.33333 8.33333 9.07953 8.33333 10C8.33333 10.9205 9.07953 11.6667 10 11.6667C10.9205 11.6667 11.6667 10.9205 11.6667 10C11.6667 9.07953 10.9205 8.33333 10 8.33333Z" fill="white"/>
-                      <path d="M13.75 7.08333C14.2102 7.08333 14.5833 6.71024 14.5833 6.25C14.5833 5.78976 14.2102 5.41667 13.75 5.41667C13.2898 5.41667 12.9167 5.78976 12.9167 6.25C12.9167 6.71024 13.2898 7.08333 13.75 7.08333Z" fill="white"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 6.66667C2.5 4.36548 4.36548 2.5 6.66667 2.5H13.3333C15.6345 2.5 17.5 4.36548 17.5 6.66667V13.3333C17.5 15.6345 15.6345 17.5 13.3333 17.5H6.66667C4.36548 17.5 2.5 15.6345 2.5 13.3333V6.66667ZM6.66667 4.16667C5.28595 4.16667 4.16667 5.28595 4.16667 6.66667V13.3333C4.16667 14.714 5.28595 15.8333 6.66667 15.8333H13.3333C14.714 15.8333 15.8333 14.714 15.8333 13.3333V6.66667C15.8333 5.28595 14.714 4.16667 13.3333 4.16667H6.66667Z" fill="white"/>
-                    </svg>                  
-                  </a>
-                  <a href="" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1998 5.04728C18.3599 4.0767 17.388 3.31009 16.4814 3.69182L2.23118 9.69191C1.2375 10.1103 1.18658 11.5468 2.23189 11.9801C3.0053 12.3007 4.18894 12.7708 5.37603 13.1622C6.34976 13.4832 7.41124 13.7812 8.2616 13.8655C8.49437 14.144 8.78744 14.4116 9.08505 14.6563C9.54092 15.0312 10.0898 15.418 10.6564 15.7882C11.7911 16.5296 13.0501 17.239 13.8986 17.6999C14.9127 18.2508 16.1267 17.6166 16.3091 16.5112L18.1998 5.04728ZM3.82937 10.8274L16.4325 5.52078L14.6677 16.221C13.8357 15.7686 12.6361 15.0909 11.5681 14.393C11.0277 14.0399 10.5343 13.6902 10.1437 13.369C10.0046 13.2546 9.88681 13.1504 9.78871 13.0572L13.0897 9.75621C13.4151 9.43077 13.4151 8.90314 13.0897 8.5777C12.7642 8.25226 12.2366 8.25226 11.9112 8.5777L8.29596 12.1929C7.68476 12.1147 6.83272 11.8876 5.8979 11.5793C5.17847 11.3422 4.45511 11.0727 3.82937 10.8274Z" fill="white"/>
-                    </svg>                  
-                  </a>
-                  <a href="" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.11555 11.8859C9.80096 13.5713 11.4104 13.7935 11.9787 13.8144C12.8474 13.8464 13.6826 13.1905 14.0126 12.4205C14.093 12.233 14.073 12.0074 13.9383 11.8349C13.4822 11.2508 12.8648 10.8323 12.2615 10.4157C12.0009 10.2353 11.6424 10.2911 11.4505 10.5466L10.9499 11.3091C10.8943 11.3937 10.7838 11.4228 10.696 11.3726C10.3573 11.1789 9.86341 10.8487 9.50808 10.4934C9.15314 10.1384 8.84296 9.66679 8.66885 9.34987C8.62311 9.26661 8.64847 9.16365 8.72474 9.107L9.49426 8.53551C9.72378 8.33685 9.76415 7.99939 9.5952 7.75222C9.22118 7.20507 8.78552 6.50966 8.15496 6.04971C7.98273 5.92408 7.76488 5.90997 7.58501 5.98706C6.81439 6.31732 6.15501 7.15277 6.18703 8.02278C6.20794 8.59109 6.43014 10.2005 8.11555 11.8859Z" fill="white"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 11.575 2.10453 13.0498 2.86496 14.3072L2.12183 16.8339C1.93385 17.473 2.52769 18.0668 3.16679 17.8788L5.69341 17.1357C6.95081 17.8961 8.42565 18.3337 10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699ZM3.33366 10.0003C3.33366 6.31843 6.31843 3.33366 10.0003 3.33366C13.6822 3.33366 16.667 6.31843 16.667 10.0003C16.667 13.6822 13.6822 16.667 10.0003 16.667C8.68627 16.667 7.46336 16.2877 6.43213 15.6328C6.13461 15.4439 5.75928 15.3791 5.39888 15.4851L4.14755 15.8531L4.51559 14.6018C4.62159 14.2414 4.55674 13.866 4.36781 13.5685C3.71299 12.5373 3.33366 11.3144 3.33366 10.0003Z" fill="white"/>
-                    </svg>                  
-                  </a>
-                </div>
-              </div>
-            </div>
-            <nav class="footer__nav">
-              <ul class="footer__menu">
-                <li><a href="">О нас</a></li>
-                <li><a href="">Продукция</a></li>
-                <li><a href="">Партнеры</a></li>
-                <li><a href="">Контакты</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer__desc">Мы помогаем нашим заказчикам эффективно использовать управленческий, производственный и коммерческий потенциал за счет цифровой трансформации и оптимизации бизнес и производственных процессов с использованием современных средств ИТ и автоматизации.</div>
-        </div>
-        <div class="footer__copy">
-          <div>NetStyle 2024</div>
-          <a href="https://factum.agency/" target="_blank" class="link">Сделано Factum</a>
+        <div class="swiper-button-prev swiper-button-light bath-button-prev">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2009_7178)">
+            <path d="M15.415 7.415L14 6L8 12L14 18L15.415 16.585L10.83 12L15.415 7.415Z" fill="#F0EFE5"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2009_7178">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>                        
         </div>
       </div>
-    </footer>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.marquee.min.js"></script>
-    <script src="js/jquery.maskedinput.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/app.js?_v=1.3"></script>
+      <div thumbsSlider="" class="swiper bathSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bath__tab"> 100 мест</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bath__tab">3 кабинета</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bath__tab">соляная комната</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bath__tab">3 купели</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bath__tab">соляная комната</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bath__bottom">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_dark">Забронировать</a>
+    </div>
+  </div>
+  <div class="bath__card">
+    <div class="bath__top">
+      <h2 class="bath__title title_up">Женский зал</h2>
+      <div class="bath__img"><img class="img-cover" src="img/bath-5.png" alt=""></div>
+      <div class="bath__open">Скоро открытие</div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="benefits__slider">
+          <div class="swiper benefitsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-1.png" alt="">
+                <h3 class="benefits__title">Авторские программы <br> парений</h3>
+                <span class="benefits__number">01</span>
+              </div>
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-2.png" alt="">
+                <h3 class="benefits__title">Музыкальные <br> медитативные парения</h3>
+                <span class="benefits__number">02</span>
+              </div>
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-3.png" alt="">
+                <h3 class="benefits__title">Гастрономические <br> впечатления</h3>
+                <span class="benefits__number">03</span>
+              </div>
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-1.png" alt="">
+                <h3 class="benefits__title">Авторские программы <br> парений</h3>
+                <span class="benefits__number">04</span>
+              </div>
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-2.png" alt="">
+                <h3 class="benefits__title">Музыкальные <br> медитативные парения</h3>
+                <span class="benefits__number">05</span>
+              </div>
+              <div class="swiper-slide benefits__slide">
+                <img src="img/benefits-3.png" alt="">
+                <h3 class="benefits__title">Гастрономические <br> впечатления</h3>
+                <span class="benefits__number">06</span>
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-button-light benefits-button-next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2009_7180)">
+                <path d="M8.585 7.415L10 6L16 12L10 18L8.585 16.585L13.17 12L8.585 7.415Z" fill="#F0EFE5"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_2009_7180">
+                <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                </clipPath>
+                </defs>
+              </svg>                        
+            </div>
+            <div class="swiper-button-prev swiper-button-light benefits-button-prev">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2009_7178)">
+                <path d="M15.415 7.415L14 6L8 12L14 18L15.415 16.585L10.83 12L15.415 7.415Z" fill="#F0EFE5"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_2009_7178">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>                        
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home section-pad-top">
+        <div class="container">
+          <div class="home__container">
+            <h2 class="home__title_sm title_sm title_limb">Банные дома</h2>
+            <div class="home__tabs tabs">
+              <div class="home__nav tabs__nav">
+                <div class="trigger-spec"></div>
+                <div class="trigger" data-target="#home-target-1"><span>Усадьба</span></div>
+                <div class="trigger" data-target="#home-target-2"><span>Шале</span></div>
+                <div class="trigger" data-target="#home-target-3"><span>Изба</span></div>
+                <div class="trigger" data-target="#home-target-4"><span>Хата</span></div>
+                <div class="trigger" data-target="#home-target-5"><span>По черному</span></div>
+                <div class="trigger" data-target="#home-target-6"><span>Юрта</span></div>
+              </div>
+              <div class="home__content tabs__content">
+                <div class="targets">
+                  <div class="target" id="home-target-1">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                  <div class="target" id="home-target-2">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                  <div class="target" id="home-target-3">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                  <div class="target" id="home-target-4">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                  <div class="target" id="home-target-5">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                  <div class="target" id="home-target-6">
+                    <div class="home__wrap col-2 ">
+  <div class="home__slider">
+    <div class="swiper homeSwiper basicSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+        <div class="swiper-slide border-8">
+          <img src="img/image-4.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-dark basic-button-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10340)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10340">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+      <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10342)">
+          <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10342">
+          <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+          </clipPath>
+          </defs>
+        </svg>                            
+      </div>
+    </div>
+  </div>
+  <div class="home__box">
+    <div class="home__benefits">
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/people.svg" alt=""></div>
+        <div class="home__caption">Вместительность:</div>
+        <div class="home__txt">от 8-12 человек</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/time.svg" alt=""></div>
+        <div class="home__caption">Время аренды:</div>
+        <div class="home__txt">от 3-х часов</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Стоимость:</div>
+        <div class="home__txt">38 000 тнг/час</div>
+      </div>
+      <div class="home__benefit">
+        <div class="home__icon"><img class="img-contain" src="img/cash.svg" alt=""></div>
+        <div class="home__caption">Площадь дома:</div>
+        <div class="home__txt">100 м2</div>
+      </div>
+    </div>
+    <div class="home__desc">
+      <p>Роскошный дом с дворянской атмосферой и шикарным интерьером, в котором можно смело забыть о житейских заботах.</p>
+      <p>Печь в бане «Мироновская» - одна из самых технологичных каменок в мире. При подаче воды происходит мини-взрыв, что позволяет получить уникальный мелкодисперсный пар, смешанный с воздухом на молекулярном уровне.</p>
+    </div>
+    <div class="home__buttons">
+      <a href="" class="button button_brown">Подробнее</a>
+      <a href="" class="button button_primary">Забронировать</a>
+    </div>
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="kitchen section-pad-top">
+  <div class="container">
+    <div class="kitchen__container">
+      <h2 class="kitchen__title_sm title_sm title_limb">Кухня</h2>
+      <h4 class="kitchen__title title_up title_center title_indent">вас ожидает изысканная кухня в меню которой представлены блюда русской и европейской кухни, приготовленные из свежих и натуральных продуктов</h4>
+    </div>
+  </div>
+  <div class="kitchen__slider">
+    <div class="swiper kitchenSwiper">
+      <div class="swiper-wrapper">
+        <div class="kitchen__slide swiper-slide">
+          <img src="img/food-1.png" alt="">
+          <div class="kitchen__dishes">Хрустящие баклажаны с авокадо</div>
+        </div>
+        <div class="kitchen__slide swiper-slide">
+          <img src="img/food-2.png" alt="">
+          <div class="kitchen__dishes">Хрустящие баклажаны с авокадо</div>
+        </div>
+        <div class="kitchen__slide swiper-slide">
+          <img src="img/food-3.png" alt="">
+          <div class="kitchen__dishes">Хрустящие баклажаны с авокадо</div>
+        </div>
+        <div class="kitchen__slide swiper-slide">
+          <img src="img/food-4.png" alt="">
+          <div class="kitchen__dishes">Хрустящие баклажаны с авокадо</div>
+        </div>
+        <div class="kitchen__slide swiper-slide">
+          <img src="img/food-5.png" alt="">
+          <div class="kitchen__dishes">Хрустящие баклажаны с авокадо</div>
+        </div>
+      </div>
+      <div class="swiper-button-prev kitchen-button kitchen-button-prev">
+        <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 12H59M1 12L11 1M1 12L11 23" stroke="url(#paint0_linear_778_10388)" stroke-linecap="round"/>
+          <defs>
+          <linearGradient id="paint0_linear_778_10388" x1="1" y1="13" x2="59" y2="13" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#3B2720"/>
+          <stop offset="1" stop-color="#F0EFE5"/>
+          </linearGradient>
+          </defs>
+        </svg>                                       
+      </div>
+      <div class="swiper-button-next kitchen-button kitchen-button-next">
+        <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M59 12H1M59 12L49 1M59 12L49 23" stroke="url(#paint0_linear_778_10387)" stroke-linecap="round"/>
+          <defs>
+          <linearGradient id="paint0_linear_778_10387" x1="59" y1="13" x2="1" y2="13" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#3B2720"/>
+          <stop offset="1" stop-color="#F0EFE5"/>
+          </linearGradient>
+          </defs>
+        </svg>                                          
+      </div>
+    </div>
+  </div>
+  <div class="kitchen__buttons">
+    <a href="" class="button button_primary">
+      <span>Меню кухни</span>
+      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.20595 10.2831H5.948C5.79002 10.2831 5.63851 10.346 5.52695 10.4579C5.41538 10.5697 5.353 10.7214 5.35352 10.8795L5.36228 15.3953C5.36228 15.7236 5.62844 15.9898 5.95675 15.9898C6.28507 15.9898 6.55123 15.7236 6.55123 15.3953V14.0242C6.79429 14.0229 7.05396 14.0219 7.20595 14.0219C8.25049 14.0219 9.10031 13.1833 9.10031 12.1525C9.10031 11.1217 8.25049 10.2831 7.20595 10.2831ZM7.20595 12.8329C7.05261 12.8329 6.792 12.834 6.54798 12.8353C6.54671 12.5822 6.5456 12.3096 6.5456 12.1525C6.5456 12.018 6.54493 11.7366 6.54422 11.472H7.20591C7.58828 11.472 7.91132 11.7836 7.91132 12.1525C7.91132 12.5213 7.58832 12.8329 7.20595 12.8329Z" fill="black"/>
+        <path d="M12.2624 10.2831H11.0207C10.8629 10.2831 10.7115 10.3459 10.6 10.4576C10.4885 10.5693 10.426 10.7208 10.4263 10.8787C10.4263 10.8787 10.4351 15.2479 10.4351 15.2638C10.4357 15.4215 10.4989 15.5725 10.6108 15.6836C10.7222 15.7941 10.8728 15.8561 11.0296 15.8561H11.0319C11.0694 15.856 11.9551 15.8526 12.3091 15.8464C13.6524 15.8229 14.6274 14.6551 14.6274 13.0696C14.6273 11.4029 13.677 10.2831 12.2624 10.2831ZM12.2884 14.6576C12.1344 14.6603 11.8695 14.6625 11.6221 14.6641C11.6205 14.1477 11.6172 12.0087 11.6163 11.472H12.2624C13.3536 11.472 13.4384 12.6948 13.4384 13.0696C13.4384 13.8501 13.0828 14.6438 12.2884 14.6576Z" fill="black"/>
+        <path d="M18.5454 11.4261C18.8737 11.4261 19.1399 11.16 19.1399 10.8317C19.1399 10.5033 18.8737 10.2372 18.5454 10.2372H16.7278C16.3995 10.2372 16.1333 10.5033 16.1333 10.8317V15.3163C16.1333 15.6446 16.3995 15.9108 16.7278 15.9108C17.0561 15.9108 17.3223 15.6446 17.3223 15.3163V13.626H18.401C18.7293 13.626 18.9955 13.3599 18.9955 13.0315C18.9955 12.7032 18.7293 12.4371 18.401 12.4371H17.3223V11.4261H18.5454Z" fill="black"/>
+        <path d="M20.2947 7.74662H19.8587V7.57703C19.8587 6.81285 19.5692 6.0866 19.0434 5.53199L16.5742 2.92735C16.0154 2.33802 15.2292 2 14.4171 2H6.50282C5.51943 2 4.71938 2.80005 4.71938 3.78343V7.74662H4.28343C3.30005 7.74662 2.5 8.54666 2.5 9.53005V16.6638C2.5 17.6472 3.30005 18.4472 4.28343 18.4472H4.71938V20.5081C4.71938 21.4915 5.51943 22.2915 6.50282 22.2915H18.0753C19.0587 22.2915 19.8587 21.4915 19.8587 20.5081V18.4472H20.2947C21.2781 18.4472 22.0781 17.6472 22.0781 16.6638V9.53005C22.0781 8.54666 21.2781 7.74662 20.2947 7.74662ZM5.90834 3.78343C5.90834 3.45564 6.17502 3.18895 6.50282 3.18895H14.4171C14.9044 3.18895 15.3761 3.39175 15.7114 3.74539L18.1806 6.35003C18.4961 6.68278 18.6698 7.11853 18.6698 7.57703V7.74662H5.90834V3.78343ZM18.6698 20.5081C18.6698 20.8359 18.4031 21.1025 18.0753 21.1025H6.50282C6.17502 21.1025 5.90834 20.8359 5.90834 20.5081V18.4472H18.6698V20.5081ZM20.8892 16.6638C20.8892 16.9916 20.6225 17.2583 20.2947 17.2583H4.28343C3.95564 17.2583 3.68895 16.9916 3.68895 16.6638V9.53005C3.68895 9.20225 3.95564 8.93557 4.28343 8.93557H20.2947C20.6225 8.93557 20.8892 9.20225 20.8892 9.53005V16.6638Z" fill="black"/>
+      </svg>              
+    </a>
+    <a href="" class="button button_brown">Подробнее</a>
+  </div>
+</section>
+      <section class="procedures section-pad-top">
+        <div class="container">
+          <div class="procedures__container">
+            <h2 class="procedures__title_sm title_sm title_limb">Процедуры</h2>
+            <div class="procedures__wrap col-2">
+              <div class="procedures__box">
+                <h4 class="procedures__title title_up">Насладитесь традиционным парением с использованием ароматных веников, в прохладной купели, а также разнообразными массажами</h4>
+                <div class="procedures__desc">Все процедуры проводятся опытными мастерами, обеспечивающими максимальный комфорт и эффективность. Погрузитесь в атмосферу спокойствия и заботы о своем здоровье в наших банях.</div>
+                <div class="procedures__buttons">
+                  <a href="" class="button button_primary">
+                    <span>Меню услуг</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.70595 10.2831H5.448C5.29002 10.2831 5.13851 10.346 5.02695 10.4579C4.91538 10.5697 4.853 10.7214 4.85352 10.8795L4.86228 15.3953C4.86228 15.7236 5.12844 15.9898 5.45675 15.9898C5.78507 15.9898 6.05123 15.7236 6.05123 15.3953V14.0242C6.29429 14.0229 6.55396 14.0219 6.70595 14.0219C7.75049 14.0219 8.60031 13.1833 8.60031 12.1525C8.60031 11.1217 7.75049 10.2831 6.70595 10.2831ZM6.70595 12.8329C6.55261 12.8329 6.292 12.834 6.04798 12.8353C6.04671 12.5822 6.0456 12.3096 6.0456 12.1525C6.0456 12.018 6.04493 11.7366 6.04422 11.472H6.70591C7.08828 11.472 7.41132 11.7836 7.41132 12.1525C7.41132 12.5213 7.08832 12.8329 6.70595 12.8329Z" fill="black"/>
+                      <path d="M11.7624 10.2831H10.5207C10.3629 10.2831 10.2115 10.3459 10.1 10.4576C9.98845 10.5693 9.92595 10.7208 9.92627 10.8787C9.92627 10.8787 9.93511 15.2479 9.93515 15.2638C9.93574 15.4215 9.99892 15.5725 10.1108 15.6836C10.2222 15.7941 10.3728 15.8561 10.5296 15.8561H10.5319C10.5694 15.856 11.4551 15.8526 11.8091 15.8464C13.1524 15.8229 14.1274 14.6551 14.1274 13.0696C14.1273 11.4029 13.177 10.2831 11.7624 10.2831ZM11.7884 14.6576C11.6344 14.6603 11.3695 14.6625 11.1221 14.6641C11.1205 14.1477 11.1172 12.0087 11.1163 11.472H11.7624C12.8536 11.472 12.9384 12.6948 12.9384 13.0696C12.9384 13.8501 12.5828 14.6438 11.7884 14.6576Z" fill="black"/>
+                      <path d="M18.0454 11.4261C18.3737 11.4261 18.6399 11.16 18.6399 10.8317C18.6399 10.5033 18.3737 10.2372 18.0454 10.2372H16.2278C15.8995 10.2372 15.6333 10.5033 15.6333 10.8317V15.3163C15.6333 15.6446 15.8995 15.9108 16.2278 15.9108C16.5561 15.9108 16.8223 15.6446 16.8223 15.3163V13.626H17.901C18.2293 13.626 18.4955 13.3599 18.4955 13.0315C18.4955 12.7032 18.2293 12.4371 17.901 12.4371H16.8223V11.4261H18.0454Z" fill="black"/>
+                      <path d="M19.7947 7.74662H19.3587V7.57703C19.3587 6.81285 19.0692 6.0866 18.5434 5.53199L16.0742 2.92735C15.5154 2.33802 14.7292 2 13.9171 2H6.00282C5.01943 2 4.21938 2.80005 4.21938 3.78343V7.74662H3.78343C2.80005 7.74662 2 8.54666 2 9.53005V16.6638C2 17.6472 2.80005 18.4472 3.78343 18.4472H4.21938V20.5081C4.21938 21.4915 5.01943 22.2915 6.00282 22.2915H17.5753C18.5587 22.2915 19.3587 21.4915 19.3587 20.5081V18.4472H19.7947C20.7781 18.4472 21.5781 17.6472 21.5781 16.6638V9.53005C21.5781 8.54666 20.7781 7.74662 19.7947 7.74662ZM5.40834 3.78343C5.40834 3.45564 5.67502 3.18895 6.00282 3.18895H13.9171C14.4044 3.18895 14.8761 3.39175 15.2114 3.74539L17.6806 6.35003C17.9961 6.68278 18.1698 7.11853 18.1698 7.57703V7.74662H5.40834V3.78343ZM18.1698 20.5081C18.1698 20.8359 17.9031 21.1025 17.5753 21.1025H6.00282C5.67502 21.1025 5.40834 20.8359 5.40834 20.5081V18.4472H18.1698V20.5081ZM20.3892 16.6638C20.3892 16.9916 20.1225 17.2583 19.7947 17.2583H3.78343C3.45564 17.2583 3.18895 16.9916 3.18895 16.6638V9.53005C3.18895 9.20225 3.45564 8.93557 3.78343 8.93557H19.7947C20.1225 8.93557 20.3892 9.20225 20.3892 9.53005V16.6638Z" fill="black"/>
+                    </svg>                      
+                  </a>
+                  <a href="" class="button button_brown">Подробнее</a>
+                </div>
+              </div>
+              <div class="procedures__slider">
+                <div class="swiper proceduresSwiper basicSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide procedures__slide border-8">
+                      <img class="img-cover" src="img/image-3.png" alt="">
+                    </div>
+                    <div class="swiper-slide procedures__slide border-8">
+                      <img class="img-cover" src="img/image-3.png" alt="">
+                    </div>
+                    <div class="swiper-slide procedures__slide border-8">
+                      <img class="img-cover" src="img/image-3.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next swiper-button-dark basic-button-next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_778_10294)">
+                      <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#F0EFE5"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_778_10294">
+                      <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>                      
+                  </div>
+                  <div class="swiper-button-prev swiper-button-dark basic-button-prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_778_10296)">
+                      <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#F0EFE5"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_778_10296">
+                      <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>                                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="post section-pad">
+  <div class="container">
+    <div class="post__container">
+      <h2 class="post__title_sm title_sm title_limb">Новости</h2>
+      <div class="swiper postSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-1.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-2.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-1.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-2.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-1.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="post__card ">
+  <a class="post__img border-4" href="#"><img class="img-cover" src="img/news-2.png" alt=""></a>
+  <div class="post__box">
+    <a href="#">
+      <h5 class="post__title">Чем баня полезна для здоровья?</h5>
+    </a>
+    <!-- ограничить в 3 строки -->
+    <div class="post__desc">Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную...</div>
+    <div class="post__meta">
+      <div class="post__date">12.02.2024</div>
+      <a class="post__btn button" href="#">
+        <span>Подробнее</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_778_10180)">
+          <path d="M9.99996 6L8.58496 7.415L13.17 12L8.58496 16.585L9.99996 18L16 12L9.99996 6Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_778_10180">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                        
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="post__pagin">
+        <div class="swiper-button-prev post-button post-button-prev">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_778_10211)">
+            <path d="M14 6L15.415 7.415L10.83 12L15.415 16.585L14 18L8.00004 12L14 6Z" fill="#3B2720"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_778_10211">
+            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+            </clipPath>
+            </defs>
+          </svg>                  
+        </div>
+        <div class="swiper-button-next post-button post-button-next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_778_10213)">
+            <path d="M8.585 7.415L10 6L16 12L10 18L8.585 16.585L13.17 12L8.585 7.415Z" fill="#3B2720"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_778_10213">
+            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+            </clipPath>
+            </defs>
+          </svg>                  
+        </div>
+      </div>
+      <a href="" class="post__button button button_brown">Все новости</a>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__wrap">
+        <a class="footer__logo" href="/">
+          <img src="img/logo.svg" alt="">
+        </a>
+        <div class="footer__box">
+          <nav class="footer__nav">
+            <span>Услуги</span>
+            <ul class="footer__menu">
+              <li><a href="">Общественная баня</a></li>
+              <li><a href="">Меню</a></li>
+              <li><a href="">Процедуры</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__nav">
+            <span>Банные дома</span>
+            <ul class="footer__menu">
+              <li><a href="">Усадьба</a></li>
+              <li><a href="">Изба</a></li>
+              <li><a href="">По черному</a></li>
+              <li><a href="">Шале</a></li>
+              <li><a href="">Хата</a></li>
+              <li><a href="">Юрта</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__nav">
+            <span>О комплексе</span>
+            <ul class="footer__menu">
+              <li><a href="">О нас</a></li>
+              <li><a href="">Акции</a></li>
+              <li><a href="">Отзывы</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__block">
+          <a class="footer__phone phone" href="tel:+7 (700) 716-66-66">+7 (700) 716-66-66</a>
+          <div class="footer__contacts contacts__block">
+            <div class="footer__contact contact">
+              <span>E-mail</span>
+              <a href="mailto:info@orlovbani.kz">info@orlovbani.kz</a>
+            </div>
+            <div class="footer__contact contact">
+              <span>Адрес</span>
+              <span>г. Астана, проспект Тұран, 99</span>
+            </div>
+            <div class="footer__contact contact">
+              <span>График</span>
+              <span>Ежедневно c 08:00 до 23:00</span>
+            </div>
+          </div>
+          <div class="footer__socials socials">
+            <a class="footer__social social" href="" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9C5 6.79086 6.79086 5 9 5C11.2091 5 13 6.79086 13 9C13 11.2091 11.2091 13 9 13C6.79086 13 5 11.2091 5 9ZM9 7C7.89543 7 7 7.89543 7 9C7 10.1046 7.89543 11 9 11C10.1046 11 11 10.1046 11 9C11 7.89543 10.1046 7 9 7Z" fill="#F0EFE5"/>
+                <path d="M13.5 5.5C14.0523 5.5 14.5 5.05228 14.5 4.5C14.5 3.94772 14.0523 3.5 13.5 3.5C12.9477 3.5 12.5 3.94772 12.5 4.5C12.5 5.05228 12.9477 5.5 13.5 5.5Z" fill="#F0EFE5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H13C15.7614 0 18 2.23858 18 5V13C18 15.7614 15.7614 18 13 18H5C2.23858 18 0 15.7614 0 13V5ZM5 2C3.34315 2 2 3.34315 2 5V13C2 14.6569 3.34315 16 5 16H13C14.6569 16 16 14.6569 16 13V5C16 3.34315 14.6569 2 13 2H5Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+            <a class="footer__social social" href="" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8394 6.05639C22.0315 4.8917 20.8652 3.97177 19.7773 4.42984L2.67703 11.63C1.48461 12.132 1.42351 13.8558 2.67788 14.3758C3.60596 14.7605 5.02633 15.3246 6.45085 15.7943C7.61932 16.1795 8.8931 16.5371 9.91353 16.6383C10.1929 16.9725 10.5445 17.2935 10.9017 17.5872C11.4487 18.0371 12.1074 18.5012 12.7873 18.9455C14.1489 19.8352 15.6597 20.6865 16.678 21.2396C17.8949 21.9006 19.3517 21.1395 19.5705 19.8131L21.8394 6.05639ZM4.59485 12.9925L19.7186 6.62459L17.6009 19.4649C16.6024 18.9219 15.163 18.1087 13.8813 17.2713C13.2329 16.8475 12.6407 16.4279 12.172 16.0425C12.0051 15.9052 11.8638 15.7802 11.7461 15.6683L15.7072 11.7071C16.0977 11.3166 16.0977 10.6834 15.7072 10.2929C15.3167 9.90237 14.6835 9.90237 14.293 10.2929L9.95476 14.6311C9.22132 14.5373 8.19888 14.2647 7.07709 13.8949C6.21377 13.6102 5.34574 13.2869 4.59485 12.9925Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+            <a class="footer__social social" href="" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.73827 14.2627C11.7608 16.2852 13.692 16.5518 14.374 16.5769C15.4165 16.6153 16.4188 15.8283 16.8148 14.9042C16.9112 14.6792 16.8872 14.4085 16.7255 14.2014C16.1782 13.5005 15.4374 12.9983 14.7134 12.4984C14.4007 12.282 13.9705 12.349 13.7402 12.6555L13.1394 13.5706C13.0728 13.6721 12.9402 13.707 12.8348 13.6467C12.4284 13.4143 11.8357 13.018 11.4093 12.5916C10.9834 12.1657 10.6112 11.5998 10.4022 11.2195C10.3473 11.1195 10.3778 10.996 10.4693 10.928L11.3927 10.2422C11.6681 10.0038 11.7166 9.59887 11.5138 9.30228C11.065 8.64569 10.5422 7.8112 9.78556 7.25926C9.57889 7.1085 9.31746 7.09158 9.10162 7.18408C8.17688 7.5804 7.38562 8.58294 7.42404 9.62695C7.44914 10.3089 7.71578 12.2402 9.73827 14.2627Z" fill="#F0EFE5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 13.8896 2.52505 15.6594 3.43756 17.1683L2.54581 20.2002C2.32023 20.9672 3.03284 21.6798 3.79975 21.4542L6.83171 20.5624C8.34058 21.475 10.1104 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C10.4231 20 8.95564 19.5448 7.71817 18.759C7.36114 18.5323 6.91075 18.4545 6.47827 18.5817L4.97667 19.0233L5.41832 17.5217C5.54552 17.0892 5.46769 16.6389 5.24098 16.2818C4.4552 15.0444 4 13.5769 4 12Z" fill="#F0EFE5"/>
+              </svg>                
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="footer__company">Компания «Орловские бани» © Все права защищены</div>
+        <a href="" class="footer__offer">Публичная оферта</a>
+        <a href="" class="footer__visits">Правила посещения</a>
+        <a href="" target="_blank">Сделано Factum</a>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+        <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240726183325"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240726183325"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240726183325"></script>
+    <script src="js/datepicker-en-GB.js?_v=20240726183325"></script>
+    <script src="js/datepicker-kk.js?_v=20240726183325"></script>
+    <script src="js/datepicker-ru.js?_v=20240726183325"></script>
+    <script src="js/jquery.maskedinput.js?_v=20240726183325"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240726183325"></script>
+    <script src="js/swiper.min.js?_v=20240726183325"></script>
+    <script type="module" src="js/app.js?_v=20240726183325"></script>
+
   </body>
 </html>
-

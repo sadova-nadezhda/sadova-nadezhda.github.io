@@ -1,156 +1,94 @@
-window.addEventListener("load", function () {
-  let link = document.querySelector(".header__burger");
-  let menu = document.querySelector(".header__nav");
-  let close = document.querySelector(".header__close");
-  if (menu) {
-    link.addEventListener(
-      "click",
-      function () {
-        link.classList.toggle("active");
-        menu.classList.toggle("open");
-      },
-      false
-    );
-    window.addEventListener("scroll", () => {
-      if (menu.classList.contains("open")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-      }
-    });
-    document.addEventListener("click", (e) => {
-      let target = e.target;
-      if (
-        !target.classList.contains("header__nav") &&
-        !target.classList.contains("header__burger") 
-      ) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-      }
-    });
+// main.js
+import { addPadTop, toggleMenu, menuLg } from './header.js';
+import { initializeSwipers } from './swiperSetup.js';
+import { initializeTabs } from './tabs.js';
+import { initializeAccordion } from './accordion.js';
+import { initializeDropdowns } from './dropdown.js';
+import { validateForm } from './formValidation.js';
+import { initializeDatepicker, initializeTime } from './datetime.js';
+import { calcCheckPrice, calcBookPrice } from './checkPrice.js';
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  const sectionTop = document.querySelector('.section-top');
+  let langBody = document.querySelector('body').getAttribute('data-lang');
+
+  if (sectionTop && header) {
+    addPadTop(header, sectionTop);
   }
 
-  document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-
-        button.classList.toggle('active');
-
-        if (button.classList.contains('active')) {
-            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-        } else {
-            accordionContent.style.maxHeight = 0;
-        }
-
-        // Close other open accordion items
-        document.querySelectorAll('.accordion-header').forEach(otherButton => {
-            if (otherButton !== button) {
-                otherButton.classList.remove('active');
-                otherButton.nextElementSibling.style.maxHeight = 0;
-            }
-        });
-    });
-  });
-
-  /*duplicated logo clients*/
-  let widthPage = $(window).width();
-  let countCrd = $(".partners__cards").first().children().length;
-  let fullCountCrd = Math.round(widthPage / 100);
-  let crdClients = $(".partners__cards").html();
-  if (countCrd < fullCountCrd) {
-    $(".partners__cards").append(crdClients);
+  const link = document.querySelector(".header__open");
+  const menu = document.querySelector(".header__wrap");
+  if (menu && link) {
+    toggleMenu(menu, link);
   }
 
-  /* AOS */
   AOS.init();
 
-  /*marquee*/
-  $('.marquee_lf').marquee({
-    direction: "left",
-    speed: 80,
-    duplicated: true,
-    startVisible: true,
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
   });
 
-  $('.marquee_rg').marquee({
-    direction: 'right',
-    speed: 80,
-    duplicated: true,
-    startVisible: true,
-  });
+  menuLg();
+  initializeDropdowns();
+  initializeSwipers();
+  initializeTabs();
+  initializeAccordion();
+  initializeDatepicker(langBody);
+  initializeTime();
+  validateForm();
+  calcCheckPrice();
+  calcBookPrice();
 
-  var $swiper = $(".swiper-container");
-  var $bottomSlide = null;
-  var $bottomSlideContent = null;
+  const proceduresPageLinks = document.querySelectorAll(
+    ".procedures-page__link"
+  );
 
-  // sliders
-  var swiperAbout = new Swiper("#aboutSwiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    centeredSlides: true,
-    loop: true,
-    loopFillGroupWithBlank: false,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".about-button-next",
-      prevEl: ".about-button-prev",
-    },
-    breakpoints: {
-      1024: {
-        spaceBetween: 40,
-        slidesPerView: 3.3,
-      },
-    }
-  });
+  proceduresPageLinks.forEach((link) => {
+    link.addEventListener("click", function (a) {
+      // Убираем класс active со всех ссылок
+      proceduresPageLinks.forEach((link) => link.classList.remove("active"));
 
-  //popup
-  function hidePopup(popup) {
-    $(popup).click(function (e) {
-      const target = e.target;
-      if ($(target).hasClass("popup__close") || $(target).hasClass("popup")) {
-        $(this).fadeOut(400);
-      }
+      // Добавляем класс active на кликнутую ссылку
+      a.target.classList.add("active");
     });
-  }
-  
-  function showPopup(popup) {
-    $(popup).fadeIn(400);
-  }
+  });
 
-  let popupForm = document.querySelector("#popup-form");
-  let feedback = document.querySelector("#feedback");
+  const certificatesRegistrationCount = document.querySelectorAll(
+    ".certificates-registration-card__count-box"
+  );
 
-  const popups = [popupForm];
-  popups.forEach((popup) => {
-    if (popup) {
-      hidePopup(popup);
+  certificatesRegistrationCount.forEach((box) => {
+    let input = box.querySelector(
+      ".certificates-registration-card__count-input"
+    );
+    let minBtn = box.querySelector(
+      ".certificates-registration-card__count-btn_minus"
+    );
+    let plusBtn = box.querySelector(
+      ".certificates-registration-card__count-btn_plus"
+    );
+
+    if (input && minBtn && plusBtn) {
+      console.log(input.value);
+
+      minBtn.addEventListener("click", function (e) {
+        if (input.value <= 1) {
+          e.preventDefault();
+        } else {
+          input.value--;
+        }
+      });
+
+      plusBtn.addEventListener("click", function (e) {
+        input.value++;
+      });
     }
   });
 
-  if (feedback && popupForm) {
-    feedback.addEventListener("click", function () {
-      showPopup(popupForm);
-    });
-  }
-
-  // input mask tel
-  $.fn.setCursorPosition = function (pos) {
-    if ($(this).get(0).setSelectionRange) {
-      $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-      var range = $(this).get(0).createTextRange();
-      range.collapse(true);
-      range.moveEnd("character", pos);
-      range.moveStart("character", pos);
-      range.select();
+  window.addEventListener("resize", () => {
+    if (sectionTop && header) {
+      addPadTop(header, sectionTop);
     }
-  };
-  $('input[type="tel"]')
-    .click(function () {
-      $(this).setCursorPosition(3);
-    })
-    .mask("+7 (999) 999 99 99");
-
+  });
 });
