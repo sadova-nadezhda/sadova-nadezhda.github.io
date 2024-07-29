@@ -17,10 +17,10 @@ export function initializeSwipers() {
     spaceBetween: 0,
     effect: "fade",
     watchSlidesVisibility: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     thumbs: {
       swiper: heroSwiper,
     }
@@ -42,10 +42,10 @@ export function initializeSwipers() {
 
   var benefitsSwiper = new Swiper(".benefitsSwiper", {
     slidesPerView: 2,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".benefits-button-next",
       prevEl: ".benefits-button-prev",
@@ -63,10 +63,10 @@ export function initializeSwipers() {
     slidesPerView: 'auto',
     loop: true,
     loopFillGroupWithBlank: false,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".post-button-next",
       prevEl: ".post-button-prev",
@@ -80,10 +80,10 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     watchSlidesVisibility: true,
     speed: 500,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".offices-pagination",
       type: "progressbar",
@@ -96,10 +96,10 @@ export function initializeSwipers() {
     centeredSlides: true,
     loop: true,
     loopFillGroupWithBlank: false,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".kitchen-button-next",
       prevEl: ".kitchen-button-prev",
@@ -119,10 +119,10 @@ export function initializeSwipers() {
     watchSlidesVisibility: true,
     loop: true,
     loopFillGroupWithBlank: false,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".hall-pagination",
       type: "fraction",
@@ -135,6 +135,10 @@ export function initializeSwipers() {
 
   var swiper = new Swiper(".basicSwiper", {
     slidesPerView: 1,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".basic-button-next",
       prevEl: ".basic-button-prev"

@@ -151,6 +151,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -4562,6 +4563,12 @@ ul.loyalty-program__ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .checkout__card {
+    grid-template-columns: 136px 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
   .checkout__bottom {
     gap: 80px;
   }
@@ -4668,6 +4675,24 @@ ul.loyalty-program__ul {
   .certificate-card__btn {
     padding: 12px;
     font-size: 16px;
+  }
+
+  .certificates-registration-card__info {
+    height: unset;
+    gap: 12px;
+  }
+
+  .certificates-registration-card__price-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .certificates-registration-card__select {
+    order: 1;
   }
 
   .kitchen-page__heading {
@@ -5463,9 +5488,7 @@ ul.loyalty-program__ul {
   }
 
   .checkout__card {
-    grid-template-columns: 136px 1fr;
-    gap: 12px;
-    padding: 12px;
+    grid-template-columns: 1fr;
   }
 
   .checkout__img {
@@ -5473,7 +5496,9 @@ ul.loyalty-program__ul {
   }
 
   .checkout__box {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .checkout__caption {
@@ -5491,7 +5516,7 @@ ul.loyalty-program__ul {
   }
 
   .checkout__delete {
-    top: 12px;
+    top: 168px;
     right: 12px;
     width: 32px;
     height: 32px;
