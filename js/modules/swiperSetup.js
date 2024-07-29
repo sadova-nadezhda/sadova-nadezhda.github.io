@@ -80,10 +80,10 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     watchSlidesVisibility: true,
     speed: 500,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: true,
+    // },
     pagination: {
       el: ".offices-pagination",
       type: "progressbar",
