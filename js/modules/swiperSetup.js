@@ -19,7 +19,7 @@ export function initializeSwipers() {
     watchSlidesVisibility: true,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     thumbs: {
       swiper: heroSwiper,
@@ -44,7 +44,7 @@ export function initializeSwipers() {
     slidesPerView: 2,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: ".benefits-button-next",
@@ -65,7 +65,7 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: ".post-button-next",
@@ -82,7 +82,7 @@ export function initializeSwipers() {
     speed: 500,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: {
       el: ".offices-pagination",
@@ -98,7 +98,7 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: ".kitchen-button-next",
@@ -121,7 +121,7 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: {
       el: ".hall-pagination",
@@ -137,7 +137,7 @@ export function initializeSwipers() {
     slidesPerView: 1,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: ".basic-button-next",
