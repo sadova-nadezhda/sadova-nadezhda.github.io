@@ -1,12 +1,12 @@
 // main.js
-import { addPadTop, toggleMenu, menuLg } from './header.js';
-import { initializeSwipers } from './swiperSetup.js';
-import { initializeTabs } from './tabs.js';
-import { initializeAccordion } from './accordion.js';
-import { initializeDropdowns } from './dropdown.js';
-import { validateForm } from './formValidation.js';
-import { initializeDatepicker, initializeTime } from './datetime.js';
-import { calcCheckPrice, calcBookPrice } from './checkPrice.js';
+import { addPadTop, toggleMenu, menuLg } from './modules/header.js';
+import { initializeSwipers } from './modules/swiperSetup.js';
+import { initializeTabs } from './modules/tabs.js';
+import { initializeAccordion } from './modules/accordion.js';
+import { initializeDropdowns } from './modules/dropdown.js';
+import { validateForm } from './modules/formValidation.js';
+import { initializeDatepicker, initializeTime } from './modules/datetime.js';
+import { calcCheckPrice, calcBookPrice } from './modules/checkPrice.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   let preloader = document.querySelector("#preloader");
