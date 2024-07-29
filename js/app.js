@@ -1,14 +1,31 @@
 // main.js
-import { addPadTop, toggleMenu, menuLg } from './modules/header.js';
-import { initializeSwipers } from './modules/swiperSetup.js';
-import { initializeTabs } from './modules/tabs.js';
-import { initializeAccordion } from './modules/accordion.js';
-import { initializeDropdowns } from './modules/dropdown.js';
-import { validateForm } from './modules/formValidation.js';
-import { initializeDatepicker, initializeTime } from './modules/datetime.js';
-import { calcCheckPrice, calcBookPrice } from './modules/checkPrice.js';
+import { addPadTop, toggleMenu, menuLg } from './header.js';
+import { initializeSwipers } from './swiperSetup.js';
+import { initializeTabs } from './tabs.js';
+import { initializeAccordion } from './accordion.js';
+import { initializeDropdowns } from './dropdown.js';
+import { validateForm } from './formValidation.js';
+import { initializeDatepicker, initializeTime } from './datetime.js';
+import { calcCheckPrice, calcBookPrice } from './checkPrice.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+  let preloader = document.querySelector("#preloader");
+  if (preloader) {
+    document.querySelector("body").style.overflow = "hidden";
+    let preloaderAnim = preloader.animate(
+      [{ opacity: "1" }, { opacity: "0" }],
+      {
+        duration: 300,
+        fill: "forwards",
+        easing: "ease-in",
+      }
+    );
+    preloaderAnim.addEventListener("finish", () => {
+      preloader.style.display = "none";
+      document.querySelector("body").style.overflow = "unset";
+    });
+  }
+
   const header = document.querySelector("header");
   const sectionTop = document.querySelector('.section-top');
   let langBody = document.querySelector('body').getAttribute('data-lang');
