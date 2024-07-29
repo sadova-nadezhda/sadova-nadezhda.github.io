@@ -175,6 +175,7 @@ export function initializeSwipers() {
 
   var officeSwiper = new Swiper(".officeSwiper", {
     slidesPerView: 1,
+    autoplay: false,
     navigation: {
       nextEl: ".office-button-next",
       prevEl: ".office-button-prev",
