@@ -135,10 +135,10 @@ export function initializeSwipers() {
 
   var swiper = new Swiper(".basicSwiper", {
     slidesPerView: 1,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: true,
+    // },
     navigation: {
       nextEl: ".basic-button-next",
       prevEl: ".basic-button-prev"
