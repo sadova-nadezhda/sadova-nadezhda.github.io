@@ -3,9 +3,6 @@ export function initializeSwipers() {
   var heroSwiper = new Swiper(".heroSwiper", {
     spaceBetween: 4,
     slidesPerView: 5.7,
-    freeMode: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
     breakpoints: {
       1024: {
         spaceBetween: 16,
@@ -14,12 +11,11 @@ export function initializeSwipers() {
     }
   });
   var heroSwiper2 = new Swiper(".heroSwiper2", {
-    spaceBetween: 0,
     effect: "fade",
-    watchSlidesVisibility: true,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     thumbs: {
       swiper: heroSwiper,
@@ -44,7 +40,8 @@ export function initializeSwipers() {
     slidesPerView: 2,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".benefits-button-next",
@@ -52,8 +49,7 @@ export function initializeSwipers() {
     },
     breakpoints: {
       1024: {
-        spaceBetween: 40,
-        slidesPerView: 3.3,
+        slidesPerView: 3.3
       },
     }
   });
@@ -61,11 +57,10 @@ export function initializeSwipers() {
   var PostSwiper = new Swiper(".postSwiper", {
     spaceBetween: 20,
     slidesPerView: 'auto',
-    loop: true,
-    loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".post-button-next",
@@ -80,10 +75,11 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     watchSlidesVisibility: true,
     speed: 500,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     pagination: {
       el: ".offices-pagination",
       type: "progressbar",
@@ -91,6 +87,39 @@ export function initializeSwipers() {
   });
 
   var kitchenSwiper = new Swiper(".kitchenSwiper", {
+    slidesPerView: 1,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    // allowTouchMove: false,
+  });
+
+  var kitchenSwiper2 = new Swiper(".kitchenSwiper2", {
+    slidesPerView: 1.3,
+    spaceBetween: 16,
+    centeredSlides: true,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    navigation: {
+      nextEl: ".kitchen-button-next",
+      prevEl: ".kitchen-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      1024: {
+        spaceBetween: 20,
+        slidesPerView: 3.3,
+      },
+    },
+    thumbs: {
+      swiper: kitchenSwiper,
+    },
+  });
+
+  var kitchenPageSwiper = new Swiper(".kitchenPageSwiper", {
     slidesPerView: 1.3,
     spaceBetween: 16,
     centeredSlides: true,
@@ -98,7 +127,8 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".kitchen-button-next",
@@ -111,7 +141,7 @@ export function initializeSwipers() {
       },
     }
   });
-
+  
   var hallSwiper = new Swiper(".hallSwiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
@@ -121,7 +151,8 @@ export function initializeSwipers() {
     loopFillGroupWithBlank: false,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: ".hall-pagination",
@@ -137,7 +168,8 @@ export function initializeSwipers() {
     slidesPerView: 1,
     // autoplay: {
     //   delay: 3000,
-    //   disableOnInteraction: true,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
     // },
     navigation: {
       nextEl: ".basic-button-next",
@@ -173,12 +205,10 @@ export function initializeSwipers() {
   //   },
   // });
 
-  var officeSwiper = new Swiper(".officeSwiper", {
-    slidesPerView: 1,
-    autoplay: false,
-    navigation: {
-      nextEl: ".office-button-next",
-      prevEl: ".office-button-prev",
-    },
-  });
+  // var officeSwiper = new Swiper(".officeSwiper", {
+  //   navigation: {
+  //     nextEl: ".office-button-next",
+  //     prevEl: ".office-button-prev",
+  //   },
+  // });
 }

@@ -1,12 +1,12 @@
 // main.js
-import { addPadTop, toggleMenu, menuLg } from './modules/header.js';
-import { initializeSwipers } from './modules/swiperSetup.js';
-import { initializeTabs } from './modules/tabs.js';
-import { initializeAccordion } from './modules/accordion.js';
-import { initializeDropdowns } from './modules/dropdown.js';
-import { validateForm } from './modules/formValidation.js';
-import { initializeDatepicker, initializeTime } from './modules/datetime.js';
-import { calcCheckPrice, calcBookPrice } from './modules/checkPrice.js';
+import { addPadTop, toggleMenu, menuLg } from './header.js';
+import { initializeSwipers } from './swiperSetup.js';
+import { initializeTabs } from './tabs.js';
+import { initializeAccordion } from './accordion.js';
+import { initializeDropdowns } from './dropdown.js';
+import { validateForm } from './formValidation.js';
+import { initializeDatepicker, initializeTime } from './datetime.js';
+import { calcCheckPrice, calcBookPrice } from './checkPrice.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   let preloader = document.querySelector("#preloader");
@@ -30,6 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionTop = document.querySelector('.section-top');
   let langBody = document.querySelector('body').getAttribute('data-lang');
 
+  let scroll = window.scrollY;
+  if (scroll > 50 ) {
+    header.classList.add("scroll");
+  } else {
+    header.classList.remove("scroll");
+  }
+
+  window.addEventListener("scroll", function () {
+    if(header) {
+      let scroll = window.scrollY;
+      if (scroll > 50 ) {
+        header.classList.add("scroll");
+      } else {
+        header.classList.remove("scroll");
+      }
+    }
+  });
+
   if (sectionTop && header) {
     addPadTop(header, sectionTop);
   }
@@ -41,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   AOS.init();
+  $('select').niceSelect();
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
