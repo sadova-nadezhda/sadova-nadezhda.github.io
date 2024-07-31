@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   AOS.init();
-  $('select').niceSelect();
+  $('select:not(.mobile-select)').niceSelect();
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options

@@ -1856,8 +1856,6 @@ ul.dropdown a:hover {
   margin: 0 auto;
   margin-bottom: 50px;
   border-bottom: 1px solid var(--brown, #3B2720);
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 .tabs__nav .trigger-spec {
@@ -1960,6 +1958,10 @@ ul.dropdown a:hover {
 .tabs__content .targets .target.active {
   transform: translateY(0rem);
   opacity: 1;
+}
+
+.tabs .list {
+  width: 100%;
 }
 
 .accordion-item {
@@ -3579,13 +3581,13 @@ ul.dropdown a:hover {
 .kitchenSwiper2 .swiper-slide {
   flex-direction: column;
   justify-content: space-between;
-  height: 280px;
+  height: 100%;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.kitchenSwiper2 .swiper-slide-active {
-  height: 100%;
+.kitchenSwiper2 .swiper-slide:not(.swiper-slide-active) {
+  height: 280px;
 }
 
 .kitchenSwiper {
@@ -3617,6 +3619,10 @@ ul.dropdown a:hover {
 .kitchen-button svg {
   width: 100%;
   height: 100%;
+}
+
+.kitchen-button path {
+  transition: stroke 0.3s ease-out;
 }
 
 .kitchen-button-prev,
@@ -5602,6 +5608,17 @@ ul.loyalty-program__ul {
     width: 100%;
   }
 
+  .post .tabs__nav {
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .post .tabs__nav .trigger {
+    display: block;
+  }
+
   .hero__video::before {
     width: 13px;
     height: 18px;
@@ -6077,12 +6094,30 @@ ul.loyalty-program__ul {
     font-size: 14px;
   }
 
+  .kitchen__slider {
+    margin-bottom: 32px;
+  }
+
+  .kitchenSwiper2 .swiper-slide:not(.swiper-slide-active) {
+    height: 200px;
+  }
+
   .kitchenSwiper2 {
     height: 270px;
+    margin-bottom: 16px;
+  }
+
+  .kitchenSwiper {
+    width: 320px;
+  }
+
+  .kitchen__desc {
+    max-width: 256px;
   }
 
   .kitchen-button {
     width: 32px;
+    height: 100%;
   }
 
   .procedures__box {

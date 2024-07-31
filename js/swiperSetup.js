@@ -86,38 +86,45 @@ export function initializeSwipers() {
     },
   });
 
-  var kitchenSwiper = new Swiper(".kitchenSwiper", {
-    slidesPerView: 1,
-    loop: true,
-    loopFillGroupWithBlank: false,
-    // allowTouchMove: false,
-  });
+  let kitchen = document.querySelector('.kitchenSwiper');
+  if(kitchen) {
 
-  var kitchenSwiper2 = new Swiper(".kitchenSwiper2", {
-    slidesPerView: 1.3,
-    spaceBetween: 16,
-    centeredSlides: true,
-    loop: true,
-    loopFillGroupWithBlank: false,
-    navigation: {
-      nextEl: ".kitchen-button-next",
-      prevEl: ".kitchen-button-prev",
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-      1024: {
-        spaceBetween: 20,
-        slidesPerView: 3.3,
+    var kitchenSwiper = new Swiper(".kitchenSwiper", {
+      slidesPerView: 1,
+      allowTouchMove: false,
+      initialSlide: 2,
+    });
+  
+    var kitchenSwiper2 = new Swiper(".kitchenSwiper2", {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+      centeredSlides: true,
+      // loop: true,
+      initialSlide: 2,
+      navigation: {
+        nextEl: ".kitchen-button-next",
+        prevEl: ".kitchen-button-prev",
       },
-    },
-    thumbs: {
-      swiper: kitchenSwiper,
-    },
-  });
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      //   // pauseOnMouseEnter: true,
+      // },
+      breakpoints: {
+        1024: {
+          spaceBetween: 20,
+          slidesPerView: 3.3,
+        },
+      },
+      // thumbs: {
+      //   swiper: kitchenSwiper,
+      // },
+    
+    });
+  
+    kitchenSwiper.controller.control = kitchenSwiper2;
+    kitchenSwiper2.controller.control = kitchenSwiper;
+  }
 
   var kitchenPageSwiper = new Swiper(".kitchenPageSwiper", {
     slidesPerView: 1.3,
