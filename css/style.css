@@ -4208,6 +4208,100 @@ ul.dropdown a:hover {
   background: var(--brown, #3B2720);
 }
 
+form .form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  padding: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.modals__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--bg, #F0EFE5);
+}
+
+.modal__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__close svg {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.modal__title {
+  margin-left: auto;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.modal__form input {
+  margin-bottom: 0;
+  color: var(--brown, #3B2720);
+}
+
+.modal__form input::-moz-placeholder {
+  color: var(--brown, #3B2720);
+}
+
+.modal__form input::placeholder {
+  color: var(--brown, #3B2720);
+}
+
+.modal__form input[type=submit] {
+  width: 100%;
+  border-radius: 10px;
+}
+
 a.booking__card {
   cursor: pointer;
 }
@@ -5060,6 +5154,13 @@ ul.loyalty-program__ul {
 
   .schedule__slider .swiper-wrapper {
     margin-left: -15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 16px;
+    border-radius: 16px;
   }
 }
 

@@ -122,6 +122,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Modals
+  function hidePopup(popup) {
+    popup.addEventListener('click', function(e) {
+      const target = e.target;
+      if (
+        target.classList.contains("modal__close") ||
+        target.classList.contains("modals")
+      ) {
+        popup.style.transition = "opacity 0.4s";
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    popup.style.display = "flex";
+    setTimeout(() => {
+      popup.style.transition = "opacity 0.4s";
+      popup.style.opacity = "1";
+    }, 10);
+  } 
+
+  //popup
+  let modals = document.querySelector('.modals')
+  let modalAll = document.querySelectorAll('.modal')
+  let popupBtns = document.querySelectorAll(".popup-btn");
+  if(modals && popupBtns){
+    hidePopup(modals);
+    popupBtns.forEach( btn => {
+      btn.addEventListener('click', () => {
+        showPopup(modals)
+        let typeBtn = btn.dataset.type;
+        modalAll.forEach( modal => {
+          let typeModal = modal.dataset.type;
+          modal.style.display = 'none'
+          if(typeBtn == typeModal) {
+            modal.style.display = 'block'
+          }
+        });
+      })
+    })
+  }
+
   window.addEventListener("resize", () => {
     if (sectionTop && header) {
       addPadTop(header, sectionTop);
