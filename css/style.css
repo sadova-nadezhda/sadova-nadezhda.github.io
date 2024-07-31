@@ -4237,6 +4237,7 @@ form .form__item {
 }
 
 .modal {
+  position: relative;
   display: none;
   width: 100%;
   max-width: 500px;
@@ -4248,12 +4249,15 @@ form .form__item {
 
 .modal__top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 25px;
   margin-bottom: 32px;
 }
 
 .modal__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4273,7 +4277,6 @@ form .form__item {
 }
 
 .modal__title {
-  margin-left: auto;
   text-transform: uppercase;
   text-align: center;
 }

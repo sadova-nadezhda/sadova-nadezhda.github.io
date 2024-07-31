@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240731144645">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240731144645"/>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240731144645" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240731144645">
-  <link rel="stylesheet" href="css/style.css?_v=20240731144645" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240731154008">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240731154008"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20240731154008" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240731154008">
+  <link rel="stylesheet" href="css/style.css?_v=20240731154008" />
 </head>
 
   <body>
@@ -71,7 +71,7 @@
       </a>
       <div class="header__info">
         <a href="tel:+7 700 716 66 66">+7 700 716 66 66</a>
-        <a class="header__btn header__booking button button_light">
+        <a class="header__btn header__booking button button_light popup-btn" data-type="popupBook">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.7128 13.5062L15.9144 4.1355C15.6676 3.95483 15.3324 3.95483 15.0857 4.1355L2.28717 13.5062C1.97456 13.7351 1.90664 14.1741 2.13556 14.4867C2.36448 14.7993 2.80349 14.8671 3.11605 14.6383L15.5 5.57098L27.884 14.6383C28.0088 14.7298 28.154 14.7738 28.2978 14.7738C28.5138 14.7738 28.727 14.6744 28.8644 14.4867C29.0934 14.1741 29.0255 13.7351 28.7128 13.5062Z" fill="#F0EFE5"/>
             <path d="M25.3215 14.7971C24.9341 14.7971 24.62 15.1112 24.62 15.4986V26.6651H19.0079V20.5697C19.0079 18.6354 17.4342 17.0618 15.5 17.0618C13.5658 17.0618 11.9921 18.6355 11.9921 20.5697V26.6651H6.37998V15.4987C6.37998 15.1113 6.06584 14.7972 5.67845 14.7972C5.29107 14.7972 4.97693 15.1113 4.97693 15.4987V27.3667C4.97693 27.7541 5.29107 28.0682 5.67845 28.0682H12.6936C13.0626 28.0682 13.3645 27.7832 13.3924 27.4213C13.3941 27.4049 13.3952 27.387 13.3952 27.3667V20.5698C13.3952 19.4092 14.3394 18.4649 15.5 18.4649C16.6606 18.4649 17.6048 19.4092 17.6048 20.5698V27.3667C17.6048 27.3869 17.6059 27.4045 17.6076 27.4207C17.6352 27.7828 17.9372 28.0682 18.3064 28.0682H25.3216C25.709 28.0682 26.0231 27.7541 26.0231 27.3667V15.4987C26.023 15.1112 25.7089 14.7971 25.3215 14.7971Z" fill="#F0EFE5"/>
@@ -91,7 +91,7 @@
         <a class="header__logo" href="/">
           <img src="img/logo.svg" alt="" />
         </a>
-        <a class="header__btn header__btn_lg button button_light">
+        <a class="header__btn header__btn_lg button button_light popup-btn" data-type="popupBook">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.7128 13.5062L15.9144 4.1355C15.6676 3.95483 15.3324 3.95483 15.0857 4.1355L2.28717 13.5062C1.97456 13.7351 1.90664 14.1741 2.13556 14.4867C2.36448 14.7993 2.80349 14.8671 3.11605 14.6383L15.5 5.57098L27.884 14.6383C28.0088 14.7298 28.154 14.7738 28.2978 14.7738C28.5138 14.7738 28.727 14.6744 28.8644 14.4867C29.0934 14.1741 29.0255 13.7351 28.7128 13.5062Z" fill="#F0EFE5"/>
             <path d="M25.3215 14.7971C24.9341 14.7971 24.62 15.1112 24.62 15.4986V26.6651H19.0079V20.5697C19.0079 18.6354 17.4342 17.0618 15.5 17.0618C13.5658 17.0618 11.9921 18.6355 11.9921 20.5697V26.6651H6.37998V15.4987C6.37998 15.1113 6.06584 14.7972 5.67845 14.7972C5.29107 14.7972 4.97693 15.1113 4.97693 15.4987V27.3667C4.97693 27.7541 5.29107 28.0682 5.67845 28.0682H12.6936C13.0626 28.0682 13.3645 27.7832 13.3924 27.4213C13.3941 27.4049 13.3952 27.387 13.3952 27.3667V20.5698C13.3952 19.4092 14.3394 18.4649 15.5 18.4649C16.6606 18.4649 17.6048 19.4092 17.6048 20.5698V27.3667C17.6048 27.3869 17.6059 27.4045 17.6076 27.4207C17.6352 27.7828 17.9372 28.0682 18.3064 28.0682H25.3216C25.709 28.0682 26.0231 27.7541 26.0231 27.3667V15.4987C26.023 15.1112 25.7089 14.7971 25.3215 14.7971Z" fill="#F0EFE5"/>
@@ -199,7 +199,7 @@
                     <h2 class="hero__title">Общественные бани</h2>
                     <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
                       и богатство вековых банных традиций</div>
-                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                    <a class="hero__btn button button_primary popup-btn" data-type="popupBook">Забронировать баню</a>
                   </div>
                 </div>
               </div>
@@ -211,7 +211,7 @@
                     <h2 class="hero__title">Общественные бани</h2>
                     <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
                       и богатство вековых банных традиций</div>
-                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                    <a class="hero__btn button button_primary popup-btn" data-type="popupBook">Забронировать баню</a>
                   </div>
                 </div>
               </div>
@@ -223,7 +223,7 @@
                     <h2 class="hero__title">Общественные бани</h2>
                     <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
                       и богатство вековых банных традиций</div>
-                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                    <a class="hero__btn button button_primary popup-btn" data-type="popupBook">Забронировать баню</a>
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@
                     <h2 class="hero__title">Общественные бани</h2>
                     <div class="hero__desc">Разнообразие парных, VIP кабинеты, внимание к деталям, выдающийся сервис <br> 
                       и богатство вековых банных традиций</div>
-                    <a href="" class="hero__btn button button_primary">Забронировать баню</a>
+                    <a class="hero__btn button button_primary popup-btn" data-type="popupBook">Забронировать баню</a>
                   </div>
                 </div>
               </div>
@@ -387,7 +387,7 @@
     </div>
     <div class="bath__bottom">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_dark">Забронировать</a>
+      <a class="button button_dark popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
   <div class="bath__card">
@@ -557,7 +557,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -632,7 +632,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -707,7 +707,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -782,7 +782,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -857,7 +857,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -932,7 +932,7 @@
     </div>
     <div class="home__buttons">
       <a href="" class="button button_brown">Подробнее</a>
-      <a href="" class="button button_primary">Забронировать</a>
+      <a class="button button_primary popup-btn" data-type="popupBook">Забронировать</a>
     </div>
   </div>
 </div>
@@ -1447,20 +1447,48 @@
       </form>
     </div>
   </div>
+  <div class="modal modal-book" data-type="popupBook">
+    <div class="modal__top">
+      <h4 class="modal__title title">Бронирование</h4>
+      <button class="modal__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1671_9907)">
+          <path d="M19 6.415L17.585 5L12 10.585L6.415 5L5 6.415L10.585 12L5 17.585L6.415 19L12 13.415L17.585 19L19 17.585L13.415 12L19 6.415Z" fill="#3B2720"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1671_9907">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>                           
+      </button>
+    </div>
+    <div class="modal__form">
+      <form action="">
+        <div class="form__item">
+          <input type="text" name="" id="" placeholder="Имя" required>
+        </div>
+        <div class="form__item">
+          <input type="tel" name="" id="" placeholder="+7 (7__)___ __ __" required>
+        </div>
+        <input class="button button_brown submitButton" type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
 </div> 
-        <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240731144645"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240731144645"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240731144645"></script>
-    <script src="js/jquery.nice-select.js?_v=20240731144645"></script>
-    <script src="js/datepicker-en-GB.js?_v=20240731144645"></script>
-    <script src="js/datepicker-kk.js?_v=20240731144645"></script>
-    <script src="js/datepicker-ru.js?_v=20240731144645"></script>
-    <script src="js/jquery.maskedinput.js?_v=20240731144645"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240731144645"></script>
-    <script src="js/swiper.min.js?_v=20240731144645"></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240731144645"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240731144645"></script> -->
-    <script type="module" src="js/app.js?_v=20240731144645"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240731154008"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240731154008"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240731154008"></script>
+    <script src="js/jquery.nice-select.js?_v=20240731154008"></script>
+    <script src="js/datepicker-en-GB.js?_v=20240731154008"></script>
+    <script src="js/datepicker-kk.js?_v=20240731154008"></script>
+    <script src="js/datepicker-ru.js?_v=20240731154008"></script>
+    <script src="js/jquery.maskedinput.js?_v=20240731154008"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js?_v=20240731154008"></script>
+    <script src="js/swiper.min.js?_v=20240731154008"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240731154008"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240731154008"></script> -->
+    <script type="module" src="js/app.js?_v=20240731154008"></script>
 
   </body>
 </html>
