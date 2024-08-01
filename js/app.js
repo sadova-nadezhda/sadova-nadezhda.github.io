@@ -198,3 +198,30 @@ function checkPageStatus(path) {
 
 // Проверяем текущий путь
 checkPageStatus(currentPath);
+
+// Обработчик отправки формы
+const forms = document.querySelectorAll('form');
+forms.forEach( form => {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Останавливаем стандартное поведение формы
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Перенаправляем на страницу thx.html при успешной отправке формы
+            window.location.href = '/thx.html';
+        } else {
+            console.error('Form submission failed:', response.statusText);
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+    });
+  });
+})
+
