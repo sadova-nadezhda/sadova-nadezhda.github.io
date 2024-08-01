@@ -104,17 +104,14 @@ export function initializeSwipers() {
     var kitchenSwiper = new Swiper(".kitchenSwiper", {
       slidesPerView: 1,
       allowTouchMove: false,
-      breakpoints: {
-        1024: {
-          initialSlide: 2,
-        },
-      },
+      initialSlide: 2,
     });
   
     var kitchenSwiper2 = new Swiper(".kitchenSwiper2", {
       slidesPerView: 1.3,
       spaceBetween: 16,
-      centeredSlides: false,
+      centeredSlides: true,
+      initialSlide: 2,
       // loop: true,
       navigation: {
         nextEl: ".kitchen-button-next",
@@ -129,8 +126,6 @@ export function initializeSwipers() {
         1024: {
           spaceBetween: 20,
           slidesPerView: 3.3,
-          centeredSlides: true,
-          initialSlide: 2,
         },
       },
       // thumbs: {

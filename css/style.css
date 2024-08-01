@@ -5522,9 +5522,27 @@ ul.loyalty-program__ul {
     border: 0;
   }
 
+  .header__btn:hover {
+    background: transparent;
+  }
+
   .header__socials {
     justify-content: space-between;
     margin-top: 32px;
+  }
+
+  .menu_lg .drop_btn::after {
+    top: 0;
+    transform: unset;
+  }
+
+  .menu_lg .drop_btn {
+    width: 55%;
+  }
+
+  .menu_lg .sub_menu {
+    font-size: 16px;
+    gap: 10px;
   }
 
   .dark .header__btn:not(.header__btn_lg) {
@@ -5644,6 +5662,7 @@ ul.loyalty-program__ul {
     appearance: none;
     display: block;
     width: calc(100% - 8px);
+    padding: 4px;
     padding-bottom: 12px;
     border: 0;
     font-size: 16px;
@@ -6209,7 +6228,7 @@ ul.loyalty-program__ul {
   }
 
   .kitchenSwiper2 .swiper-slide:not(.swiper-slide-active) {
-    height: 200px;
+    height: 240px;
   }
 
   .kitchenSwiper2 {
