@@ -173,3 +173,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Получаем текущий путь URL
+const currentPath = window.location.pathname;
+
+// Функция для перенаправления на страницу 404
+function redirectTo404() {
+    window.location.href = '/404.html';
+}
+
+// Функция для проверки статуса страницы
+function checkPageStatus(path) {
+    fetch(path, { method: 'HEAD' })
+        .then(response => {
+            if (response.status === 404) {
+                redirectTo404();
+            }
+        })
+        .catch(error => {
+            console.error('Error checking page status:', error);
+            redirectTo404();
+        });
+}
+
+// Проверяем текущий путь
+checkPageStatus(currentPath);

@@ -37,7 +37,11 @@ export function initializeTabs() {
           STATE.currentTab = activateTab(ind);
         });
       });
-      STATE.currentTab = activateTab(0);
+
+      // Активируем вкладку на основе текущего URL хеша
+      const currentHash = window.location.hash;
+      const initialIndex = currentHash ? triggers.findIndex(trigger => trigger.getAttribute('href') === currentHash) : 0;
+      STATE.currentTab = activateTab(initialIndex !== -1 ? initialIndex : 0);
 
       // Добавляем обработчик для мобильного селекта
       select.addEventListener("change", (event) => {
@@ -52,3 +56,4 @@ export function initializeTabs() {
     }
   });
 }
+
