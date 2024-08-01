@@ -980,7 +980,7 @@ h5 {
 
 .header__wrap {
   position: absolute;
-  top: -100vh;
+  top: -150vh;
   left: 0;
   right: 0;
   z-index: 9;
@@ -5639,11 +5639,17 @@ ul.loyalty-program__ul {
   }
 
   .tabs__nav .mobile-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     display: block;
-    width: 100%;
+    width: calc(100% - 8px);
     padding-bottom: 12px;
-    background-color: transparent;
     border: 0;
+    font-size: 16px;
+    line-height: 1;
+    background: url(../img/arrow.svg) transparent no-repeat top 50% right 4px;
+    cursor: pointer;
   }
 
   .tabs__nav .mobile-select:focus {

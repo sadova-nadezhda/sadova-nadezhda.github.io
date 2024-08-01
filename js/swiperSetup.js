@@ -97,8 +97,8 @@ export function initializeSwipers() {
   
     var kitchenSwiper2 = new Swiper(".kitchenSwiper2", {
       slidesPerView: 1.3,
-      spaceBetween: 20,
-      centeredSlides: true,
+      spaceBetween: 16,
+      centeredSlides: false,
       // loop: true,
       initialSlide: 2,
       navigation: {
@@ -114,6 +114,7 @@ export function initializeSwipers() {
         1024: {
           spaceBetween: 20,
           slidesPerView: 3.3,
+          centeredSlides: true,
         },
       },
       // thumbs: {
@@ -129,7 +130,7 @@ export function initializeSwipers() {
   var kitchenPageSwiper = new Swiper(".kitchenPageSwiper", {
     slidesPerView: 1.3,
     spaceBetween: 16,
-    centeredSlides: true,
+    centeredSlides: false,
     loop: true,
     loopFillGroupWithBlank: false,
     autoplay: {
@@ -145,6 +146,7 @@ export function initializeSwipers() {
       1024: {
         spaceBetween: 40,
         slidesPerView: 3.3,
+        centeredSlides: true,
       },
     }
   });
@@ -152,7 +154,7 @@ export function initializeSwipers() {
   var hallSwiper = new Swiper(".hallSwiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
-    centeredSlides: true,
+    centeredSlides: false,
     watchSlidesVisibility: true,
     loop: true,
     loopFillGroupWithBlank: false,
@@ -169,6 +171,11 @@ export function initializeSwipers() {
       nextEl: ".hall-button-next",
       prevEl: ".hall-button-prev",
     },
+    breakpoints: {
+      1024: {
+        centeredSlides: true,
+      },
+    }
   });
 
   var swiper = new Swiper(".basicSwiper", {
