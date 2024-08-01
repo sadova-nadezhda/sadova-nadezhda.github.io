@@ -5667,8 +5667,14 @@ ul.loyalty-program__ul {
     border: 0;
     font-size: 16px;
     line-height: 1;
+    color: var(--brown, #3B2720);
     background: url(../img/arrow.svg) transparent no-repeat top 50% right 4px;
     cursor: pointer;
+  }
+
+  .tabs__nav .mobile-select option {
+    width: 100%;
+    color: var(--brown, #3B2720);
   }
 
   .tabs__nav .mobile-select:focus {
@@ -5948,6 +5954,12 @@ ul.loyalty-program__ul {
     height: 260px;
   }
 
+  .hall__btn {
+    width: 100%;
+    max-width: unset;
+    margin: 0 16px;
+  }
+
   .hall__price span {
     font-size: 24px;
   }
@@ -6223,6 +6235,10 @@ ul.loyalty-program__ul {
     font-size: 14px;
   }
 
+  .kitchen__buttons {
+    margin: 0 16px;
+  }
+
   .kitchen__slider {
     margin-bottom: 32px;
   }
@@ -6353,6 +6369,7 @@ ul.loyalty-program__ul {
     align-items: center;
     -moz-column-gap: 12px;
          column-gap: 12px;
+    padding-bottom: 10px;
     overflow-x: auto;
     overflow-y: hidden;
   }
@@ -6426,6 +6443,10 @@ ul.loyalty-program__ul {
   .ui-widget.ui-widget-content {
     width: calc(100% - 32px);
     margin-left: -16px;
+  }
+
+  .kitchenPageSwiper .swiper-slide {
+    height: 240px;
   }
 
   .kitchenPageSwiper {
