@@ -760,26 +760,6 @@ p.medium {
   overflow: hidden;
 }
 
-.section-intro__container {
-  padding-top: 60px;
-}
-
-.section-intro__title {
-  margin-bottom: 140px;
-}
-
-.section-intro__wrap {
-  display: grid;
-  grid-template-columns: 1fr 35.67vw;
-  gap: 40px;
-}
-
-.section-intro__box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .section__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -959,6 +939,26 @@ p.medium {
   z-index: -1;
 }
 
+.hero__container {
+  padding-top: 60px;
+}
+
+.hero__title {
+  margin-bottom: 140px;
+}
+
+.hero__wrap {
+  display: grid;
+  grid-template-columns: 1fr 35.67vw;
+  gap: 40px;
+}
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .check__img {
   max-height: 750px;
 }
@@ -1089,12 +1089,12 @@ p.medium {
     font-size: 300px;
   }
 
-  .section-intro__title {
-    margin-bottom: 100px;
-  }
-
   .section-down {
     padding: 100px 0;
+  }
+
+  .hero__title {
+    margin-bottom: 100px;
   }
 }
 
@@ -1188,10 +1188,6 @@ p.medium {
     line-height: 70px;
   }
 
-  .section-intro__title {
-    margin-bottom: 70px;
-  }
-
   .section-down {
     padding: 70px 0;
     background: linear-gradient(99deg, #FFDC00 0%, #FFE438 46%, #EFD858 96.97%);
@@ -1201,6 +1197,10 @@ p.medium {
     padding: 0;
     border-radius: 0;
     background: unset;
+  }
+
+  .hero__title {
+    margin-bottom: 70px;
   }
 }
 
@@ -1240,22 +1240,6 @@ p.medium {
   .number {
     font-size: 100px;
     line-height: 30px;
-  }
-
-  .section-intro__container {
-    padding-top: 12px;
-  }
-
-  .section-intro__title {
-    margin-bottom: 40px;
-  }
-
-  .section-intro__wrap {
-    grid-template-columns: 100%;
-  }
-
-  .section-intro__box {
-    order: 1;
   }
 
   .section__container.left {
@@ -1302,6 +1286,22 @@ p.medium {
     gap: 30px;
   }
 
+  .hero__container {
+    padding-top: 12px;
+  }
+
+  .hero__title {
+    margin-bottom: 40px;
+  }
+
+  .hero__wrap {
+    grid-template-columns: 100%;
+  }
+
+  .hero__box {
+    order: 1;
+  }
+
   .work-2 .work__img::before {
     content: "";
     width: 200%;
@@ -1320,12 +1320,6 @@ p.medium {
 
   .feedback {
     padding-bottom: 70px;
-  }
-
-  .feedback-2 .feedback__img::before {
-    width: 200%;
-    height: 200%;
-    background: url(../img/blue.png) center/cover no-repeat;
   }
 
   .additional__img::before {
