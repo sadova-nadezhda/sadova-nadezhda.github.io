@@ -1,0 +1,28 @@
+<svg width="233" height="258" viewBox="0 0 233 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2022_5376)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2632 154.595V258H29.636V245.714H203.364V258H219.715V154.595H12.2632ZM29.636 191.452V167.905H105.259V191.452H29.636ZM105.259 231.381H29.636V204.762H105.259V231.381ZM121.61 204.762V231.381H203.364V204.762H121.61ZM203.364 167.905H121.61V191.452H203.364V167.905Z" fill="white"/>
+</g>
+<g clip-path="url(#clip1_2022_5376)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35.7676 87.0239H196.211V135.143H35.7676V87.0239ZM178.838 100.333H52.1185V123.881H178.838V100.333Z" fill="white"/>
+</g>
+<g clip-path="url(#clip2_2022_5376)">
+<path d="M203.364 69.619H29.6357V53.238H203.364V69.619Z" fill="white"/>
+</g>
+<g clip-path="url(#clip3_2022_5376)">
+<path d="M0 72.6905H18.3947V37.881H215.627V72.6905H233V21.5H122.632V0H104.237V21.5H0V72.6905Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_2022_5376">
+<rect width="207.452" height="103.405" fill="white" transform="translate(12.2632 154.595)"/>
+</clipPath>
+<clipPath id="clip1_2022_5376">
+<rect width="160.443" height="48.1191" fill="white" transform="translate(35.7676 87.0239)"/>
+</clipPath>
+<clipPath id="clip2_2022_5376">
+<rect width="173.728" height="16.381" fill="white" transform="translate(29.6357 53.238)"/>
+</clipPath>
+<clipPath id="clip3_2022_5376">
+<rect width="233" height="72.6905" fill="white"/>
+</clipPath>
+</defs>
+</svg>
