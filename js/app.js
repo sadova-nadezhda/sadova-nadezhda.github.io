@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
   // Инициализация основного слайдера
   const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
-    // autoHeight: true,
+    autoHeight: true,
     effect: "fade",
     allowTouchMove: false,
     thumbs: {
@@ -78,8 +78,13 @@ window.addEventListener("load", function () {
     },
     pagination: {
       el: ".card__pagin",
-      clickable: true,
+      clickable: false,
     },
+    breakpoints: {
+        768: {
+          autoHeight: false,
+        },
+      },
   });
   
 });
