@@ -259,6 +259,7 @@ input {
   width: -moz-max-content;
   width: max-content;
   border: none;
+  color: var(--dark, #221E1F);
   background: transparent;
   transition: all 0.3s ease-out;
 }
@@ -448,6 +449,12 @@ h6.bold {
 .header__col-menu span,
 .header__col-catalog span {
   pointer-events: none;
+  transition: margin-left 0.3s ease-out;
+}
+
+.header__col-menu:hover span,
+.header__col-catalog:hover span {
+  margin-left: 8px;
 }
 
 .header__col-menu.active .header__burger span:nth-child(1) {
@@ -797,8 +804,6 @@ h6.bold {
   padding: 50px 80px;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
-  padding: 32px 0;
-  margin-bottom: 32px;
 }
 
 .footer__col {
@@ -894,7 +899,11 @@ h6.bold {
   display: flex;
   flex-wrap: wrap;
   gap: 195px;
-  min-height: 100dvh;
+  height: 100vh;
+}
+
+.hero__thumbs {
+  height: 100vh;
 }
 
 .hero__left {
@@ -913,9 +922,7 @@ h6.bold {
 
 .hero__img {
   position: relative;
-  max-height: 100dvh;
-  height: 54vw;
-  min-height: 565px;
+  height: 100%;
 }
 
 .hero__img img {
@@ -965,6 +972,10 @@ h6.bold {
   width: 48px;
 }
 
+.hero__title {
+  overflow: hidden;
+}
+
 .hero__arrows {
   position: absolute;
   top: 0;
@@ -977,10 +988,67 @@ h6.bold {
 
 .hero__card > * {
   opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.hero__card .card__top_left,
+.hero__card .card__navig,
+.hero__card .card__btn {
+  opacity: 0;
   transition: opacity 0.5s ease-out;
 }
 
+.hero__card.swiper-slide-prev {
+  opacity: 1;
+}
+
+.hero__card.swiper-slide-prev .card__img img {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.hero__card.swiper-slide-prev .card__feature,
+.hero__card.swiper-slide-prev .card__desc div,
+.hero__card.swiper-slide-prev .card__title {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.hero__card.swiper-slide-next {
+  opacity: 1;
+}
+
+.hero__card.swiper-slide-next .card__img img {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.hero__card.swiper-slide-next .card__feature,
+.hero__card.swiper-slide-next .card__desc div,
+.hero__card.swiper-slide-next .card__title {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
 .hero__card.swiper-slide-active > * {
+  opacity: 1;
+}
+
+.hero__card.swiper-slide-active .card__top_left,
+.hero__card.swiper-slide-active .card__navig,
+.hero__card.swiper-slide-active .card__btn {
+  opacity: 1;
+}
+
+.hero__card.swiper-slide-active .card__img img {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hero__card.swiper-slide-active .card__feature,
+.hero__card.swiper-slide-active .card__desc div,
+.hero__card.swiper-slide-active .card__title {
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -1067,6 +1135,7 @@ h6.bold {
   font-family: "Gotham Pro";
   font-size: 36px;
   line-height: 64px;
+  transition: opacity 0.3s ease-out, transform 0.5s ease-out !important;
 }
 
 .card__navig {
@@ -1149,7 +1218,7 @@ h6.bold {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
+  gap: 90px;
   padding-bottom: 40px;
 }
 
@@ -1157,6 +1226,7 @@ h6.bold {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  overflow: hidden;
 }
 
 .card__feature {
@@ -1164,6 +1234,7 @@ h6.bold {
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
+  transition: opacity 0.3s ease-out, transform 0.5s ease-out;
 }
 
 .card__term {
@@ -1178,14 +1249,19 @@ h6.bold {
 }
 
 .card__desc {
-  max-width: 317px;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+.card__desc div {
+  transition: opacity 0.3s ease-out, transform 0.5s ease-out !important;
 }
 
 .card__img {
   height: 470px;
+  overflow: hidden;
 }
 
 .card__img img {
@@ -1193,6 +1269,7 @@ h6.bold {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  transition: opacity 0.3s ease-out, transform 0.5s ease-out;
 }
 
 .card__btn {
@@ -1647,6 +1724,13 @@ h6.bold {
   height: 140px;
 }
 
+@media (max-width: 1640px) {
+  .card__title {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
+
 @media (max-width: 1400px) {
   h1,
   h2 {
@@ -1697,6 +1781,10 @@ h6.bold {
   }
 
   .card {
+    gap: 60px;
+  }
+
+  .card__info {
     gap: 60px;
   }
 
@@ -1788,6 +1876,10 @@ h6.bold {
   }
 
   .card {
+    gap: 40px;
+  }
+
+  .card__info {
     gap: 40px;
   }
 
@@ -1970,6 +2062,11 @@ h6.bold {
     margin-bottom: 32px;
   }
 
+  .footer__wrap {
+    padding: 32px 0;
+    margin-bottom: 32px;
+  }
+
   .footer__col {
     gap: 1rem;
   }
@@ -1989,6 +2086,11 @@ h6.bold {
   .hero__container {
     gap: 24px;
     min-height: unset;
+    height: unset;
+  }
+
+  .hero__thumbs {
+    height: 600px;
   }
 
   .hero__left {
@@ -2032,18 +2134,21 @@ h6.bold {
   }
 
   .card__title {
+    padding-bottom: 12px;
+    border-width: 1.5px;
     font-size: 24px;
     line-height: 1em;
   }
 
   .card__pagin.swiper-pagination-bullets {
-    top: 17.5%;
+    top: 14.5%;
     right: unset;
     left: 16px;
   }
 
   .card__info {
     order: 1;
+    gap: 32px;
   }
 
   .card__img {
@@ -2216,6 +2321,12 @@ h6.bold {
   .view__cards .products__card:nth-child(6n-5),
   .view__cards .products__card:nth-child(4n) {
     height: 250px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__col {
+    flex: 0 1 calc(50% - 1rem);
   }
 }
 

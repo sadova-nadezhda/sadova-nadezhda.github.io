@@ -58,14 +58,17 @@ window.addEventListener("load", function () {
   // Инициализация миниатюрного слайдера
   const thumbsSlider = new Swiper('.thumbs-slider', {
     slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
+    grabCursor: false,
+    freeMode: false,
+    allowTouchMove: false,
   });
 
   // Инициализация основного слайдера
   const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
+    // autoHeight: true,
     effect: "fade",
+    allowTouchMove: false,
     thumbs: {
         swiper: thumbsSlider,
     },
