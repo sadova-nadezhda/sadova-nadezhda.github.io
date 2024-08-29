@@ -920,9 +920,16 @@ h6.bold {
   overflow: hidden;
 }
 
+.hero__slide {
+  width: 100%;
+  overflow: hidden;
+}
+
 .hero__img {
   position: relative;
   height: 100%;
+  width: 779px;
+  animation: move 5s ease-out infinite;
 }
 
 .hero__img img {
@@ -1050,6 +1057,16 @@ h6.bold {
 .hero__card.swiper-slide-active .card__title {
   transform: translateY(0);
   opacity: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
 }
 
 .card {
