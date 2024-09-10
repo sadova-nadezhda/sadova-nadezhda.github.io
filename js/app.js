@@ -123,9 +123,11 @@ window.addEventListener("load", function () {
     breakpoints: {
       0: { // при 0px и выше
         direction: 'horizontal', // горизонтальная прокрутка
+        mousewheel: false,
       },
       768: { // при 768px и выше
         direction: 'vertical', // вертикальная прокрутка
+        mousewheel: true,
       }
     }
   });

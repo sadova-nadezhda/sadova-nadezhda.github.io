@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240910134525">
-  <link rel="stylesheet" href="css/style.css?_v=20240910134525" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240910160813">
+  <link rel="stylesheet" href="css/style.css?_v=20240910160813" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
@@ -314,6 +314,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Default -->
               <div class="basket__amount amount">
                 <div class="amount__top">Сумма заказа</div>
                 <div class="amount__box">
@@ -321,11 +322,11 @@
                     Цена
                     <span>550 990 ₸</span>
                   </div>
-                  <form action="" class="form-promo">
+                  <form action="" class="form-promo default">
                     <input type="text" name="" id="" class="form-promo__field" placeholder="Промокод">
                     <button class="form-promo__btn button">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.6085 6.26399L19.7346 11.3627C20.0885 11.7147 20.0885 12.2853 19.7346 12.6373L14.6085 17.736C14.2547 18.088 13.6809 18.088 13.327 17.736C12.9732 17.384 12.9732 16.8133 13.327 16.4613L16.9062 12.9013H4.90616C4.4057 12.9013 4 12.4978 4 12C4 11.5022 4.4057 11.0987 4.90616 11.0987H16.9062L13.327 7.53866C12.9732 7.18667 12.9732 6.61598 13.327 6.26399C13.6809 5.912 14.2547 5.912 14.6085 6.26399Z" fill="#3C3C43" fill-opacity="0.6"/>
+                        <path d="M14.6085 6.26399L19.7346 11.3627C20.0885 11.7147 20.0885 12.2853 19.7346 12.6373L14.6085 17.736C14.2547 18.088 13.6809 18.088 13.327 17.736C12.9732 17.384 12.9732 16.8133 13.327 16.4613L16.9062 12.9013H4.90616C4.4057 12.9013 4 12.4978 4 12C4 11.5022 4.4057 11.0987 4.90616 11.0987H16.9062L13.327 7.53866C12.9732 7.18667 12.9732 6.61598 13.327 6.26399C13.6809 5.912 14.2547 5.912 14.6085 6.26399Z" fill="#221E1F"/>
                       </svg>                      
                     </button>
                   </form>
@@ -345,6 +346,78 @@
                 </div>
                 <button class="amount__btn button button_light">Перейти к оформлению</button>
               </div>
+              <!-- accepted -->
+              <!-- <div class="basket__amount amount">
+                <div class="amount__top">Сумма заказа</div>
+                <div class="amount__box">
+                  <div class="amount__price price">
+                    Цена
+                    <span>550 990 ₸</span>
+                  </div>
+                  <form action="" class="form-promo accepted">
+                    <input type="text" name="" id="" class="form-promo__field" value="omoikiri2024" placeholder="Промокод">
+                    <button class="form-promo__btn button">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_722_1529)">
+                        <path d="M9.00004 16.17L4.83004 12L3.41504 13.415L9.00004 19L21 6.99996L19.585 5.58496L9.00004 16.17Z" fill="#14AE5C"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_722_1529">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>                                              
+                    </button>
+                  </form>
+                </div>
+                <div class="amount__box">
+                  <div class="amount__sale">
+                    Скидка
+                    <span>20%</span>
+                  </div>
+                  <div class="amount__total price">
+                    Итог
+                    <div class="amount__price">
+                      550 990 ₸
+                      <span class="old-price">650 990 ₸</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="amount__btn button button_light">Перейти к оформлению</button>
+              </div> -->
+              <!-- error -->
+              <!-- <div class="basket__amount amount">
+                <div class="amount__top">Сумма заказа</div>
+                <div class="amount__box">
+                  <div class="amount__price price">
+                    Цена
+                    <span>550 990 ₸</span>
+                  </div>
+                  <form action="" class="form-promo error">
+                    <input type="text" name="" id="" class="form-promo__field" value="omoikiri2020" placeholder="Промокод">
+                    <span>Ошибка! Промокод не действителен</span>
+                    <button class="form-promo__btn button">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 13.1523L16.6091 17.7613C16.9273 18.0795 17.4432 18.0795 17.7614 17.7613C18.0795 17.4432 18.0795 16.9273 17.7614 16.6091L13.1523 12L17.7614 7.39092C18.0795 7.07273 18.0795 6.55684 17.7614 6.23865C17.4432 5.92046 16.9273 5.92046 16.6091 6.23865L12 10.8477L7.39091 6.23864C7.07272 5.92045 6.55683 5.92045 6.23864 6.23864C5.92045 6.55683 5.92045 7.07272 6.23864 7.39091L10.8477 12L6.23864 16.6091C5.92045 16.9273 5.92045 17.4432 6.23864 17.7614C6.55683 18.0795 7.07272 18.0795 7.39091 17.7614L12 13.1523Z" fill="#EE2628"/>
+                      </svg>                                             
+                    </button>
+                  </form>
+                </div>
+                <div class="amount__box">
+                  <div class="amount__sale">
+                    Скидка
+                    <span>20%</span>
+                  </div>
+                  <div class="amount__total price">
+                    Итог
+                    <div class="amount__price">
+                      550 990 ₸
+                      <span class="old-price">650 990 ₸</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="amount__btn button button_light">Перейти к оформлению</button>
+              </div> -->
             </div>
           </div>
         </div>
@@ -390,8 +463,8 @@
   </div>
 </footer>
  
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240910134525" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240910134525"></script>
-<script src="js/app.js?_v=20240910134525"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240910160813" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240910160813"></script>
+<script src="js/app.js?_v=20240910160813"></script>
   </body>
 </html>
