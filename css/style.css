@@ -1664,10 +1664,11 @@ h6.bold {
 }
 
 .card__pagin.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+.card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.card__pagin.swiper-pagination-bullets {
   position: absolute;
   top: 100px;
-  right: 26.5vw;
+  right: 28.5vw;
   left: unset;
   bottom: unset;
   width: -moz-max-content;
@@ -3963,7 +3964,8 @@ h6.bold {
 
 @media (max-width: 1540px) {
   .card__pagin.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .card__pagin.swiper-pagination-bullets {
     right: 25.8vw;
     top: 80px;
   }
@@ -3992,8 +3994,9 @@ h6.bold {
   }
 
   .card__pagin.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    right: 28vw;
+  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .card__pagin.swiper-pagination-bullets {
+    right: 27.8vw;
   }
 
   .search__amount {
@@ -4583,8 +4586,9 @@ h6.bold {
   }
 
   .card__pagin.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    top: 13.5%;
+  .card__pagin.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .card__pagin.swiper-pagination-bullets {
+    top: 135px;
     right: unset;
     left: 16px;
   }
@@ -4842,12 +4846,18 @@ h6.bold {
     padding: 10px;
   }
 
-  .benefits__card:hover .benefits__txt {
-    display: block;
+  .benefits__card::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .benefits__caption {
+    color: var(--light, #FFFFFF);
   }
 
   .benefits__txt {
-    display: none;
+    color: var(--light, #FFFFFF);
   }
 
   .manner__cards {

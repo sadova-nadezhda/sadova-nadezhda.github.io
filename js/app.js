@@ -85,7 +85,7 @@ window.addEventListener("load", function () {
     pagination: {
       el: ".card__pagin",
       clickable: false,
-      dynamicBullets: true,
+      // dynamicBullets: true,
     },
     breakpoints: {
       768: {
