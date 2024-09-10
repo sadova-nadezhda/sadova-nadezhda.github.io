@@ -2006,6 +2006,7 @@ h6.bold {
 .products-page__title {
   font-family: gothamPro;
   font-size: 36px;
+  line-height: 64px;
 }
 
 .products-page__article {
@@ -4681,6 +4682,7 @@ h6.bold {
 
   .products-page__title {
     order: 1;
+    line-height: 1;
   }
 
   .products-page__article {

@@ -23,6 +23,9 @@ window.addEventListener("load", function () {
       const closeMenu = () => {
         link.classList.remove("active");
         menu.classList.remove("open");
+        if (menu.classList.contains('header__box-menu')) {
+          header.classList.remove("active");
+        }
       };
 
       link.addEventListener("click", function () {
