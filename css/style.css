@@ -4733,6 +4733,11 @@ h6.bold {
     display: none;
   }
 
+  .products-page__list {
+    max-width: 250px;
+    text-align: end;
+  }
+
   .products-page__colors {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -5055,6 +5060,10 @@ h6.bold {
 
   .checkout__desc {
     flex-direction: column;
+  }
+
+  .favorites .products__card-bottom {
+    position: absolute;
   }
 
   .about__hero {
