@@ -3127,6 +3127,8 @@ h6.bold {
 .basket__like {
   width: 32px;
   height: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .table {
@@ -4768,9 +4770,18 @@ h6.bold {
     font-size: 14px;
   }
 
+  .button_like svg {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    min-height: 14px;
+  }
+
   .button_delete {
     width: 28px;
     height: 28px;
+    min-width: 28px;
+    min-height: 28px;
   }
 
   h1,
@@ -5443,6 +5454,8 @@ h6.bold {
   .basket__like {
     width: 28px;
     height: 28px;
+    min-width: 28px;
+    min-height: 28px;
   }
 
   .basket__amount {
