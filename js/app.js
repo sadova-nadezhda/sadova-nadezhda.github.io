@@ -288,48 +288,51 @@ window.addEventListener("load", function () {
   if (parameters) {
     let parametersItem = parameters.querySelectorAll('.parameters__item');
     let parametersContent = parameters.querySelectorAll('.parameters__content');
-  
-    const resetAll = () => {
-      parameters.classList.remove('active');
-      parametersItem.forEach(item => item.classList.remove('active'));
-      parametersContent.forEach(content => {
-        content.classList.remove('open');
-        content.style.maxHeight = 0;
-        content.style.opacity = 0;
+
+    const closeAllExcept = (currentItem) => {
+      parametersItem.forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove('active');
+          let content = item.querySelector('.parameters__content');
+          content.classList.remove('open');
+          content.style.maxHeight = 0;
+          content.style.opacity = 0;
+        }
       });
     };
-  
+
     const toggleContent = (item) => {
       let content = item.querySelector('.parameters__content');
-      item.classList.toggle('active');
-      content.classList.toggle('open');
-  
-      if (content.classList.contains('open')) {
+      let isOpen = content.classList.contains('open');
+      
+      // Закрываем все элементы, кроме текущего
+      closeAllExcept(item);
+
+      // Переключаем состояние текущего элемента
+      item.classList.toggle('active', !isOpen);
+      content.classList.toggle('open', !isOpen);
+
+      if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + 24 + "px";
         content.style.opacity = 1;
       } else {
         content.style.maxHeight = 0;
         content.style.opacity = 0;
       }
-      parameters.classList.toggle('active');
+      
+      // Управляем классом 'active' для всего контейнера
+      if (Array.from(parametersItem).some(item => item.classList.contains('active'))) {
+        parameters.classList.add('active');
+      } else {
+        parameters.classList.remove('active');
+      }
     };
-  
-    // Сбросить все по умолчанию
-    resetAll();
-  
+
     // Обработчик клика по элементам внутри parameters
     parameters.addEventListener('click', (e) => {
       let target = e.target.closest('.parameters__item');
       if (target && parameters.contains(target)) {
-        resetAll(); // Сбрасываем все перед открытием нового
         toggleContent(target); // Открываем или закрываем выбранный элемент
-      }
-    });
-  
-    // Обработчик клика по всему документу для сброса при клике вне parameters
-    document.addEventListener('click', (e) => {
-      if (!parameters.contains(e.target)) {
-        resetAll();
       }
     });
   }
