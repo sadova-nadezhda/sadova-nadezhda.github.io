@@ -212,13 +212,52 @@ window.addEventListener("load", function () {
   }
 
   // tabs
-  $(function () {
-    $('ul.tabs__nav').on('click', 'li:not(.active)', function () {
-      $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+  // $(function () {
+  //   $('ul.tabs__nav').on('click', 'li:not(.active)', function () {
+  //     $(this)
+  //       .addClass('active').siblings().removeClass('active')
+  //       .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+  //   });
+  // });
+
+  const tabs = document.querySelectorAll('.tab label');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const currentInput = tab.previousElementSibling;
+
+      if (window.innerWidth <= 600) {
+        const isAccordionActive = currentInput.checked;
+
+        contents.forEach(content => {
+          content.style.maxHeight = '0'; // Скрыть все контенты
+        });
+
+        if (!isAccordionActive) {
+          const content = tab.nextElementSibling;
+          content.style.maxHeight = content.scrollHeight + 'px'; // Задать высоту для раскрытия контента
+        }
+      }
     });
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) {
+      contents.forEach(content => {
+        content.style.opacity = '0'; // Скрыть все контенты при переключении обратно в табы
+        content.style.visibility = 'hidden';
+      });
+
+      const activeInput = document.querySelector('input[type="radio"]:checked');
+      if (activeInput) {
+        const activeContent = activeInput.nextElementSibling.nextElementSibling;
+        activeContent.style.opacity = '1';
+        activeContent.style.visibility = 'visible';
+      }
+    }
+  });
+
 
   // accordion
   document.querySelectorAll(".accordion-header").forEach((button) => {

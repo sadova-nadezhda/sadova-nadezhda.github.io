@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240910163144">
-  <link rel="stylesheet" href="css/style.css?_v=20240910163144" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240911105936">
+  <link rel="stylesheet" href="css/style.css?_v=20240911105936" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
@@ -146,7 +146,6 @@
           </div>
         </div>
       </section>
-      <!-- Desktop Section -->
       <section class="products-page section-pad-bottom">
         <div class="products-page__heading title_line  title_indent_lg">
           <h1 class="products-page__title">AKITA GB</h1>
@@ -306,29 +305,29 @@
             </div>
           </div>
         </div>
-        <div class="products-page__tabs tabs">
-          <ul class="tabs__nav ">
-            <li class="active">
+        <!-- <div class="products-page__tabs tabs">
+          <ul class="tabs__nav tabs-container">
+            <li class="tab active" data-target="content1">
               <span>Описание</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 11.2929C16.0975 11.6834 16.0975 12.3166 15.707 12.7071L10.0501 18.364C9.65958 18.7545 9.02641 18.7545 8.63589 18.364C8.24536 17.9734 8.24536 17.3403 8.63589 16.9497L13.5856 12L8.63589 7.05025C8.24536 6.65973 8.24536 6.02656 8.63589 5.63604C9.02641 5.24551 9.65958 5.24551 10.0501 5.63604L15.707 11.2929Z" fill="#111111"/>
               </svg>                
             </li>
-            <li>
+            <li class="tab" data-target="content2">
               <span>Инструкция по установке</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 11.2929C16.0975 11.6834 16.0975 12.3166 15.707 12.7071L10.0501 18.364C9.65958 18.7545 9.02641 18.7545 8.63589 18.364C8.24536 17.9734 8.24536 17.3403 8.63589 16.9497L13.5856 12L8.63589 7.05025C8.24536 6.65973 8.24536 6.02656 8.63589 5.63604C9.02641 5.24551 9.65958 5.24551 10.0501 5.63604L15.707 11.2929Z" fill="#111111"/>
               </svg>                
             </li>
-            <li>
+            <li class="tab" data-target="content3">
               <span>Контроль качества</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 11.2929C16.0975 11.6834 16.0975 12.3166 15.707 12.7071L10.0501 18.364C9.65958 18.7545 9.02641 18.7545 8.63589 18.364C8.24536 17.9734 8.24536 17.3403 8.63589 16.9497L13.5856 12L8.63589 7.05025C8.24536 6.65973 8.24536 6.02656 8.63589 5.63604C9.02641 5.24551 9.65958 5.24551 10.0501 5.63604L15.707 11.2929Z" fill="#111111"/>
               </svg>                
             </li>
           </ul>
-          <div class="tabs__contents">
-            <div class="tabs__content active">
+          <div class="tabs__contents content-container">
+            <div id="content1" class="tabs__content content active">
               <ul>
                 <li>Практичный однорычажный смеситель выполнен в современном стиле и снабжен высоким поворотным изливом.</li>
                 <li>Полный комплект соединений для подключения, инструкция, гарантийный талон.</li>
@@ -341,7 +340,7 @@
                 <li>Высококачественная латунь без содержания свинца сохранит воду чистой и здоровой.</li>
               </ul>
             </div>
-            <div class="tabs__content tabs__btn">
+            <div id="content2" class="tabs__content content tabs__btn">
               <a href="#" download class="button button_light">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.26702 14.6802C8.08302 14.6802 7.95902 14.6982 7.89502 14.7162V15.8942C7.97102 15.9122 8.06602 15.9172 8.19702 15.9172C8.67602 15.9172 8.97102 15.6752 8.97102 15.2662C8.97102 14.9002 8.71702 14.6802 8.26702 14.6802ZM11.754 14.6922C11.554 14.6922 11.424 14.7102 11.347 14.7282V17.3382C11.424 17.3562 11.548 17.3562 11.66 17.3562C12.477 17.3622 13.009 16.9122 13.009 15.9602C13.015 15.1302 12.53 14.6922 11.754 14.6922Z" fill="#221E1F"/>
@@ -350,7 +349,7 @@
                 <span>Akita gb. pdf</span>
               </a>
             </div>
-            <div class="tabs__content">
+            <div id="content3" class="tabs__content content">
               <p>Смесители OMOIKIRI проходят через систему тестов, включающую в себя:</p>
               <ul>
                 <li>Тестирование комплектующих смесителя согласно европейскому стандарту EN 817;</li>
@@ -366,9 +365,62 @@
               </ul>
             </div>
           </div>
+        </div> -->
+        <div class="products-page__tabs">
+          <div class="tabs">
+            <div class="tab">
+              <input type="radio" id="tab1" name="tab-group" checked>
+              <label for="tab1">Описание</label>
+              <div class="tab-content">
+                <ul>
+                  <li>Практичный однорычажный смеситель выполнен в современном стиле и снабжен высоким поворотным изливом.</li>
+                  <li>Полный комплект соединений для подключения, инструкция, гарантийный талон.</li>
+                  <li>Высококачественная латунь без содержания свинца сохранит воду чистой и здоровой.</li>
+                  <li>Практичный однорычажный смеситель выполнен в современном стиле и снабжен высоким поворотным изливом.</li>
+                  <li>Высококачественная латунь без содержания свинца сохранит воду чистой и здоровой.</li>
+                  <li>Полный комплект соединений для подключения, инструкция, гарантийный талон.</li>
+                  <li>Практичный однорычажный смеситель выполнен в современном стиле и снабжен высоким поворотным изливом.</li>
+                  <li>Полный комплект соединений для подключения, инструкция, гарантийный талон.</li>
+                  <li>Высококачественная латунь без содержания свинца сохранит воду чистой и здоровой.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="tab2" name="tab-group">
+              <label for="tab2">Инструкция по установке</label>
+              <div class="tab-content tabs__btn">
+                <a href="#" download class="button button_light">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.26702 14.6802C8.08302 14.6802 7.95902 14.6982 7.89502 14.7162V15.8942C7.97102 15.9122 8.06602 15.9172 8.19702 15.9172C8.67602 15.9172 8.97102 15.6752 8.97102 15.2662C8.97102 14.9002 8.71702 14.6802 8.26702 14.6802ZM11.754 14.6922C11.554 14.6922 11.424 14.7102 11.347 14.7282V17.3382C11.424 17.3562 11.548 17.3562 11.66 17.3562C12.477 17.3622 13.009 16.9122 13.009 15.9602C13.015 15.1302 12.53 14.6922 11.754 14.6922Z" fill="#221E1F"/>
+                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2ZM9.498 16.19C9.189 16.48 8.733 16.61 8.202 16.61C8.09904 16.6111 7.99613 16.6051 7.894 16.592V18.018H7V14.082C7.40345 14.0218 7.81112 13.9944 8.219 14C8.776 14 9.172 14.106 9.439 14.319C9.693 14.521 9.865 14.852 9.865 15.242C9.864 15.634 9.734 15.965 9.498 16.19ZM13.305 17.545C12.885 17.894 12.246 18.06 11.465 18.06C10.997 18.06 10.666 18.03 10.441 18V14.083C10.8446 14.0241 11.2521 13.9963 11.66 14C12.417 14 12.909 14.136 13.293 14.426C13.708 14.734 13.968 15.225 13.968 15.93C13.968 16.693 13.689 17.22 13.305 17.545ZM17 14.77H15.468V15.681H16.9V16.415H15.468V18.019H14.562V14.03H17V14.77ZM14 9H13V4L18 9H14Z" fill="#221E1F"/>
+                  </svg>                      
+                  <span>Akita gb. pdf</span>
+                </a>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="tab3" name="tab-group">
+              <label for="tab3">Контроль качества</label>
+              <div class="tab-content">
+                <p>Смесители OMOIKIRI проходят через систему тестов, включающую в себя:</p>
+              <ul>
+                <li>Тестирование комплектующих смесителя согласно европейскому стандарту EN 817;</li>
+                <li>Тест в кислотно-щелочных средах (NeutralSaltSystemTest);</li>
+                <li>Тест CASS4 на сквозную коррозию гальванического покрытия смесителей;</li>
+                <li>Прожигание гальванического покрытия и замер слоев нанесенных металлов;</li>
+                <li>Результаты замеров гальванического покрытия смесителей OMOIKIRI соответствуют мировым стандартам;</li>
+                <li>Тестирование комплектующих смесителя согласно европейскому стандарту EN 817;</li>
+                <li>Тест в кислотно-щелочных средах (NeutralSaltSystemTest);</li>
+                <li>Тест CASS4 на сквозную коррозию гальванического покрытия смесителей;</li>
+                <li>Прожигание гальванического покрытия и замер слоев нанесенных металлов;</li>
+                <li>Результаты замеров гальванического покрытия смесителей OMOIKIRI соответствуют мировым стандартам;</li>
+              </ul>
+              </div>
+            </div>
+          </div>
         </div>
+
       </section>
-      <!-- Mobile Section -->
 
       <!-- other sections -->
       <section class="view view-product section-pad-bottom">
@@ -808,8 +860,8 @@
   </div>
 </footer>
  
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240910163144" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240910163144"></script>
-<script src="js/app.js?_v=20240910163144"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240911105936" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240911105936"></script>
+<script src="js/app.js?_v=20240911105936"></script>
   </body>
 </html>
