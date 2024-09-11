@@ -4693,6 +4693,18 @@ h6.bold {
     gap: 1rem;
   }
 
+  .parameters__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parameters__card {
+    padding: 16px;
+  }
+
+  .parameters__empty {
+    display: none;
+  }
+
   .manner__cards {
     gap: 1rem;
   }
@@ -5208,6 +5220,10 @@ h6.bold {
     margin-bottom: 32px;
   }
 
+  .parameters::before {
+    left: -4.8%;
+  }
+
   .parameters__item {
     flex: 1 1 calc(50% - 16px);
     padding-bottom: 8px;
@@ -5215,6 +5231,10 @@ h6.bold {
 
   .parameters__filter {
     flex-grow: unset;
+  }
+
+  .parameters__sorting .parameters__content {
+    left: -100%;
   }
 
   .parameters__sorting {
@@ -5226,17 +5246,9 @@ h6.bold {
   }
 
   .parameters__content {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 60vh;
+    width: 100vw !important;
     padding: 16px !important;
-    margin: 0 !important;
-    border-radius: 15px 15px 0 0;
-    overflow: auto;
+    margin: 0 -16px !important;
   }
 
   .parameters__box {
@@ -5245,10 +5257,7 @@ h6.bold {
 
   .parameters__card {
     border-left: 0;
-  }
-
-  .parameters__empty {
-    display: none;
+    padding: 16px 0;
   }
 
   .tabs label {
