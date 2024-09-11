@@ -509,9 +509,7 @@ input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=radio]
 
 .button_buy {
   position: relative;
-  outline: 1px solid var(--dark, #221E1F);
-  outline-offset: -1px;
-  border: 0;
+  border: 1px solid var(--dark, #221E1F);
   border-radius: 128px;
   color: var(--dark, #221E1F);
   background: var(--bg, #E5E5E5);
@@ -593,6 +591,8 @@ input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=radio]
 .button_like svg {
   width: 16px;
   height: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .button_like path {
@@ -637,6 +637,8 @@ input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=radio]
 .button_delete svg {
   width: 10px;
   height: 10px;
+  min-width: 10px;
+  min-height: 10px;
 }
 
 .button_delete path {
@@ -1631,12 +1633,13 @@ h6.bold {
   flex-wrap: wrap;
   gap: 195px;
   height: 100vh;
+  min-height: 800px;
 }
 
 .hero__left {
   position: relative;
   width: 25.4%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -1644,13 +1647,13 @@ h6.bold {
   position: relative;
   flex-grow: 1;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   margin-top: 113px;
   overflow: hidden;
 }
 
 .hero__right .swiper-container {
-  height: calc(100vh - 113px);
+  height: calc(100% - 113px);
 }
 
 .hero__slide {
@@ -4928,6 +4931,7 @@ h6.bold {
     gap: 24px;
     min-height: unset;
     height: unset;
+    min-height: unset;
   }
 
   .hero__left {
