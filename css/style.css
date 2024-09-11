@@ -1895,6 +1895,17 @@ h6.bold {
   transition: opacity 0.3s ease-out, transform 0.5s ease-out !important;
 }
 
+.card__desc div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
+}
+
 .card__navig {
   display: flex;
   align-items: center;
@@ -4363,6 +4374,16 @@ h6.bold {
   .view__cards .products__card:nth-child(4n) {
     height: 280px;
   }
+
+  .catalog__card-img {
+    height: 225px;
+  }
+
+  .catalog__card-img img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -4683,6 +4704,14 @@ h6.bold {
   .basket__wrap {
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .amount {
+    gap: 24px;
+  }
+
+  .amount__top {
+    padding-bottom: 24px;
   }
 
   .checkout__form {
@@ -5421,7 +5450,7 @@ h6.bold {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px 16px;
+    padding: 16px;
     margin: 0 -16px;
     border-radius: 15px 15px 0 0;
     background: var(--light, #FFFFFF);
@@ -5478,19 +5507,25 @@ h6.bold {
   }
 
   .amount {
-    gap: 24px;
+    gap: 16px;
   }
 
   .amount__top {
     padding-bottom: 16px;
   }
 
+  .amount__price {
+    font-size: 14px;
+  }
+
   .amount__delivery {
     margin-bottom: 16px;
+    font-size: 14px;
   }
 
   .amount__sale {
     margin-bottom: 16px;
+    font-size: 14px;
   }
 
   .amount__total .amount__price {
@@ -5499,6 +5534,10 @@ h6.bold {
 
   .amount__btn {
     padding: 12px 10px;
+  }
+
+  .form-promo input:not([type=radio]):not([type=checkbox]) {
+    font-size: 14px;
   }
 
   .checkout__heading {
@@ -5528,6 +5567,10 @@ h6.bold {
 
   .checkout__desc {
     flex-direction: column;
+  }
+
+  .checkout__total {
+    padding-bottom: 16px;
   }
 
   .checkout__amount {
