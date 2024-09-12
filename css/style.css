@@ -2634,6 +2634,82 @@ h6.bold {
   gap: 12px;
 }
 
+.range-container * {
+  outline: none;
+}
+
+.range-container:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.range-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.range-group input:not([type=radio]):not([type=checkbox]) {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.range-container .ui-slider {
+  position: relative;
+  background: #fff;
+  height: 2px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.range-container .ui-slider .ui-slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 0;
+  border: 0;
+  background: rgb(34, 30, 31);
+  z-index: 2;
+  box-shadow: none;
+  transition: transform 0.2s, border 0.4s;
+}
+
+.range-container .ui-slider .ui-slider-handle:hover,
+.range-container .ui-slider .ui-slider-handle:focus {
+  transform: scale(1.1) translateY(-50%);
+}
+
+.range-input-left {
+  float: left;
+  text-align: start;
+}
+
+.range-input-right {
+  float: right;
+  text-align: end;
+}
+
+.range-container .ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  height: 2px;
+  border: 0;
+  background: rgb(29, 29, 31);
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .tabs {
   display: flex;
   flex-direction: column;

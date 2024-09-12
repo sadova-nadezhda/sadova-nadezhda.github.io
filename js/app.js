@@ -288,7 +288,7 @@ window.addEventListener("load", function () {
   if (parameters) {
     let parametersItem = parameters.querySelectorAll('.parameters__item');
     let parametersContent = parameters.querySelectorAll('.parameters__content');
-
+  
     const closeAllExcept = (currentItem) => {
       parametersItem.forEach(item => {
         if (item !== currentItem) {
@@ -300,18 +300,18 @@ window.addEventListener("load", function () {
         }
       });
     };
-
+  
     const toggleContent = (item) => {
       let content = item.querySelector('.parameters__content');
       let isOpen = content.classList.contains('open');
       
       // Закрываем все элементы, кроме текущего
       closeAllExcept(item);
-
+  
       // Переключаем состояние текущего элемента
       item.classList.toggle('active', !isOpen);
       content.classList.toggle('open', !isOpen);
-
+  
       if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + 24 + "px";
         content.style.opacity = 1;
@@ -319,7 +319,7 @@ window.addEventListener("load", function () {
         content.style.maxHeight = 0;
         content.style.opacity = 0;
       }
-      
+  
       // Управляем классом 'active' для всего контейнера
       if (Array.from(parametersItem).some(item => item.classList.contains('active'))) {
         parameters.classList.add('active');
@@ -327,14 +327,84 @@ window.addEventListener("load", function () {
         parameters.classList.remove('active');
       }
     };
-
+  
     // Обработчик клика по элементам внутри parameters
     parameters.addEventListener('click', (e) => {
+      // Если клик был на контенте, не обрабатываем его
+      if (e.target.closest('.parameters__content')) {
+        return;
+      }
+  
       let target = e.target.closest('.parameters__item');
       if (target && parameters.contains(target)) {
         toggleContent(target); // Открываем или закрываем выбранный элемент
       }
     });
   }
+
+
+  const $range = $(".range");
+  const $rangeInputLeft = $(".range-input-left");
+  const $rangeInputRight = $(".range-input-right");
+  
+  function formatCurrency(value) {
+      return value.toLocaleString('ru-RU') + ' ₸';
+  }
+  
+  function cleanInput(value) {
+      return parseInt(value.replace(/\D/g, ''), 10) || 0;
+  }
+  
+  const range = $(".range");
+  const rangeInputLeft = $(".range-input-left");
+  const rangeInputRight = $(".range-input-right");
+  
+  // Получаем min и max из data-атрибутов
+  const minVal = parseInt(rangeInputLeft.data('min'), 10) || 0;
+  const maxVal = parseInt(rangeInputRight.data('max'), 10) || 500000;
+  
+  function formatCurrency(value) {
+      return value.toLocaleString('ru-RU') + ' ₸';
+  }
+  
+  function cleanInput(value) {
+      return parseInt(value.replace(/\D/g, ''), 10) || 0;
+  }
+  
+  range.slider({
+      min: minVal,
+      max: maxVal,
+      values: [minVal, maxVal],
+      range: true,
+      animate: "fast",
+      slide: function(event, ui) {
+          rangeInputLeft.val(formatCurrency(ui.values[0]));
+          rangeInputRight.val(formatCurrency(ui.values[1]));
+      }
+  });
+  
+  rangeInputLeft.val(formatCurrency($range.slider("values", 0)));
+  rangeInputRight.val(formatCurrency($range.slider("values", 1)));
+  
+  $(".range-container input").on("change", function() {
+      let inputLeft = cleanInput(rangeInputLeft.val());
+      let inputRight = cleanInput(rangeInputRight.val());
+  
+      const currentLeft = range.slider("values", 0);
+      const currentRight = range.slider("values", 1);
+  
+      inputLeft = Math.max(minVal, Math.min(inputLeft, currentRight));
+      inputRight = Math.min(maxVal, Math.max(inputRight, currentLeft));
+  
+      rangeInputLeft.val(formatCurrency(inputLeft));
+      rangeInputRight.val(formatCurrency(inputRight));
+  
+      if (inputLeft !== currentLeft) {
+          range.slider("values", 0, inputLeft);
+      }
+      if (inputRight !== currentRight) {
+          range.slider("values", 1, inputRight);
+      }
+  });
   
 });
