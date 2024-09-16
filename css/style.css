@@ -4968,6 +4968,11 @@ h6.bold {
     display: flex;
   }
 
+  .loader-icons {
+    width: 65px;
+    height: 50px;
+  }
+
   .footer__container {
     padding: 32px 0;
     font-size: 14px;
