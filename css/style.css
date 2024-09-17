@@ -306,6 +306,7 @@ select:focus {
 }
 
 .button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,6 +316,7 @@ select:focus {
   padding: 0;
   border: 0;
   font-weight: 500;
+  background: transparent;
   transition: all 0.3s ease-out;
 }
 
@@ -325,7 +327,34 @@ select:focus {
 .button-primary {
   padding: 18px;
   color: var(--light, #FFFFFF);
+  border: 1px solid var(--primary, #79A382);
+  transition: color 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.button-primary span {
+  position: relative;
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  transform: skew(30deg);
   background: var(--primary, #79A382);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button-primary:hover {
+  color: var(--primary, #79A382);
+}
+
+.button-primary:hover::before {
+  transform: translate3d(100%, 0, 0);
 }
 
 .button-form {
@@ -1634,6 +1663,10 @@ section {
   transition: transform 1s ease-in-out;
 }
 
+.services__card svg {
+  transition: transform 0.3s ease-out;
+}
+
 .services__card path {
   transition: fill 0.3s ease-out;
 }
@@ -1664,6 +1697,10 @@ section {
 
 .services__card:hover path {
   fill: var(--primary, #79A382);
+}
+
+.services__card:hover svg {
+  transform: scale(-1);
 }
 
 .services__img {
@@ -2040,6 +2077,11 @@ section {
   opacity: 1;
 }
 
+.branches__btn {
+  width: calc(100% - 12px);
+  margin-left: 12px;
+}
+
 .map-point {
   position: absolute;
   width: 20px;
@@ -2360,6 +2402,69 @@ section {
   justify-content: space-between;
   gap: 32px;
   padding: 0 12px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  padding: 32px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  transition: all 0.3s ease-out;
+}
+
+.popup__container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 32px;
+  background-color: var(--light, #FFFFFF);
+}
+
+.popup__top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.popup__close svg {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.popup__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.popup__form input[type=submit] {
+  padding: 18px;
+  color: var(--light, #FFFFFF);
+  background: var(--primary, #79A382);
+  transition: background 0.3s ease-out;
+}
+
+.popup__form input[type=submit]:hover {
+  background: #466A4E;
 }
 
 @media (max-width: 1440px) {
@@ -2973,7 +3078,24 @@ section {
   }
 
   .branches__content {
+    gap: 16px;
+  }
+
+  .branches__subdivision {
+    font-size: 16px;
+  }
+
+  .branches__info {
     gap: 8px;
+  }
+
+  .branches__col {
+    gap: 32px;
+  }
+
+  .branches__btn {
+    width: 100%;
+    margin: 0;
   }
 
   .map-point {
@@ -3099,6 +3221,18 @@ section {
     gap: 16px;
     padding: 0;
     text-align: center;
+  }
+
+  .popup__container {
+    padding: 16px;
+  }
+
+  .popup__top {
+    margin-bottom: 16px;
+  }
+
+  .popup__form form {
+    gap: 16px;
   }
 }
 

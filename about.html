@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240917165636" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css?_v=20240917165636" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917165636" />
-  <link rel="stylesheet" href="css/style.css?_v=20240917165636" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240917174924" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css?_v=20240917174924" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917174924" />
+  <link rel="stylesheet" href="css/style.css?_v=20240917174924" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
@@ -34,7 +34,7 @@
         <a href="mail:geoplatinum@gmail.com" class="header__mail">geoplatinum@gmail.com</a>
       </div>
       <div class="header__box header__item">
-        <a class="header__feedback">Заказать звонок</a>
+        <a class="header__feedback popup-btn">Заказать звонок</a>
         <div class="header__burger">
           <span></span>
           <span></span>
@@ -137,7 +137,9 @@
                       <div class="about__txt">лет<br> опыта</div>
                     </div>
                   </div>
-                  <a class="about__btn button button-lg button-primary">Оставить заявку</a>
+                  <a class="about__btn button button-lg button-primary popup-btn">
+                    <span>Оставить заявку</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -317,7 +319,34 @@
       </section>
     </main>
     
-    <footer class="footer">
+    <div class="popup">
+  <div class="popup__container">
+    <div class="popup__top">
+      <h2 class="popup__title title-up">Оставить заявку</h2>
+      <button class="popup__close button">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99971 9.41429L13.6566 15.0711C14.0471 15.4617 14.6802 15.4617 15.0708 15.0711C15.4613 14.6806 15.4613 14.0474 15.0708 13.6569L9.41392 8.00008L15.0708 2.34323C15.4613 1.9527 15.4613 1.31954 15.0708 0.929014C14.6802 0.538489 14.0471 0.53849 13.6566 0.929014L7.99971 6.58586L2.34285 0.929002C1.95232 0.538477 1.31916 0.538477 0.928636 0.929002C0.538111 1.31953 0.538111 1.95269 0.928635 2.34322L6.5855 8.00008L0.928636 13.6569C0.538111 14.0475 0.538111 14.6806 0.928636 15.0711C1.31916 15.4617 1.95232 15.4617 2.34285 15.0711L7.99971 9.41429Z" fill="#111111"/>
+        </svg>          
+      </button>
+    </div>
+    <div class="popup__form">
+      <form action="">
+        <input type="text" name="" id="" placeholder="Имя">
+        <input type="tel" name="" id="" placeholder="Телефон">
+        <input type="text" name="" id="" placeholder="Название компании">
+        <select name="" id="">
+          <option value="">Услуга</option>
+          <option value="">Инженерно-геодезические</option>
+          <option value="">Инженерно-геологические</option>
+          <option value="">Гидрогеологические изыскания</option>
+        </select>
+        <input type="submit" class="button button-lg" value="Оставить заявку">
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__row">
@@ -384,10 +413,11 @@
   </div>
 </footer>
  
-    <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240917165636" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240917165636"></script>
-<script src="js/slick.min.js?_v=20240917165636"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917165636"></script>
-<script src="js/app.js?_v=20240917165636"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240917174924" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="js/jquery.maskedinput.js?_v=20240917174924"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240917174924"></script>
+<script src="js/slick.min.js?_v=20240917174924"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917174924"></script>
+<script src="js/app.js?_v=20240917174924"></script>
   </body>
 </html>
