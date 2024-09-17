@@ -5,281 +5,389 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240916110215">
-  <link rel="stylesheet" href="css/style.css?_v=20240916110215" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240917165636" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css?_v=20240917165636" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917165636" />
+  <link rel="stylesheet" href="css/style.css?_v=20240917165636" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
   <body>
+    <div class="lines">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div> 
     <header class="header dark">
   <div class="container">
     <div class="header__container">
-      <div class="header__col header__col-logo">
+      <div class="header__item">
         <a href="/" class="header__logo">
-          <!-- <picture>
-            <source srcset="img/logo-dark.svg" media="(max-width: 767px)">
-            <img src="img/logo.svg" alt="logo">
-          </picture> -->
-          <svg width="148" height="27" viewBox="0 0 148 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_241_2477)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M98.85 18.719H102.548V8.28126H98.85V18.719ZM78.4276 8.28126H73.0362L71.3467 10.9231L68.5682 14.8744L65.7897 10.9231L64.1002 8.28126H58.7089V18.719H62.4064V11.8895L66.982 18.675H70.1522L74.7279 11.8895V18.719H78.4254L78.4276 8.28126ZM97.2617 13.3265C97.2617 12.5672 97.1433 11.923 96.9432 11.3707C96.0306 8.48207 93.3769 8.14111 91.9694 8.14111C90.9449 8.14111 89.5782 8.14111 88.642 8.14111H88.6399C87.7015 8.14111 86.337 8.14111 85.3125 8.14111C83.905 8.14111 81.2513 8.48207 80.3387 11.3707C80.1386 11.923 80.0202 12.5672 80.0202 13.3265C80.0202 13.3851 80.0224 13.4415 80.0245 13.5001C80.0245 13.5587 80.0202 13.6131 80.0202 13.6716C80.0202 14.4309 80.1386 15.0752 80.3387 15.6274C81.2513 18.5161 83.905 18.857 85.3125 18.857C86.337 18.857 87.7037 18.857 88.6399 18.857H88.642C89.5804 18.857 90.9449 18.857 91.9694 18.857C93.3769 18.857 96.0306 18.5161 96.9432 15.6274C97.1433 15.0752 97.2617 14.4309 97.2617 13.6716C97.2617 13.6131 97.2595 13.5566 97.2574 13.5001C97.2574 13.4415 97.2617 13.3851 97.2617 13.3265ZM93.1122 15.2634C92.8044 15.6295 92.417 15.8512 92.0662 15.9328C92.0016 15.9433 91.9371 15.96 91.8747 15.96C91.3452 15.96 90.2002 15.9955 89.264 16.0102C89.2597 16.0102 89.2576 16.0123 89.2533 16.0123C89.1155 16.0186 88.9003 16.0186 88.642 16.0186C88.642 16.0186 88.642 16.0186 88.6399 16.0186C88.6399 16.0186 88.6399 16.0186 88.6377 16.0186C88.3816 16.0206 88.1642 16.0186 88.0265 16.0123C88.0222 16.0123 88.0179 16.0102 88.0157 16.0102C87.0795 15.9935 85.9345 15.96 85.4051 15.96C85.3427 15.96 85.2781 15.9433 85.2135 15.9328C84.8606 15.8512 84.4753 15.6295 84.1654 15.2634C83.8253 14.8346 83.5886 14.2322 83.5843 13.5001C83.5864 12.768 83.8253 12.1635 84.1654 11.7368C84.4753 11.3686 84.8606 11.149 85.2135 11.0674C85.2781 11.057 85.3427 11.0402 85.4051 11.0402C85.9345 11.0402 87.0795 11.0047 88.0157 10.99C88.02 10.99 88.0222 10.988 88.0265 10.988C88.1642 10.9817 88.3795 10.9796 88.6377 10.9817C88.6377 10.9817 88.6377 10.9817 88.6399 10.9817C88.6399 10.9817 88.6399 10.9817 88.642 10.9817C88.8981 10.9796 89.1155 10.9817 89.2533 10.988C89.2576 10.988 89.2619 10.99 89.264 10.99C90.2002 11.0068 91.3452 11.0402 91.8747 11.0402C91.9371 11.0402 92.0038 11.057 92.0662 11.0674C92.4192 11.149 92.8044 11.3707 93.1122 11.7368C93.4523 12.1635 93.6911 12.768 93.6933 13.5001C93.689 14.2301 93.4523 14.8346 93.1122 15.2634ZM56.7202 13.3265C56.7202 12.5672 56.6018 11.923 56.4017 11.3707C55.4891 8.48207 52.8354 8.14111 51.4279 8.14111C50.4034 8.14111 49.0368 8.14111 48.0984 8.14111H48.0962C47.1579 8.14111 45.7933 8.14111 44.7689 8.14111C43.3613 8.14111 40.7076 8.48207 39.7951 11.3707C39.5949 11.923 39.4766 12.5672 39.4766 13.3265C39.4766 13.3851 39.4787 13.4415 39.4809 13.5001C39.4809 13.5587 39.4766 13.6131 39.4766 13.6716C39.4766 14.4309 39.5949 15.0752 39.7951 15.6274C40.7076 18.5161 43.3613 18.857 44.7689 18.857C45.7933 18.857 47.1579 18.857 48.0962 18.857H48.0984C49.0368 18.857 50.4034 18.857 51.4279 18.857C52.8354 18.857 55.4891 18.5161 56.4017 15.6274C56.6018 15.0752 56.7202 14.4309 56.7202 13.6716C56.7202 13.6131 56.718 13.5566 56.7159 13.5001C56.7159 13.4415 56.7202 13.3851 56.7202 13.3265ZM52.5707 15.2634C52.2629 15.6295 51.8755 15.8512 51.5247 15.9328C51.4602 15.9433 51.3956 15.96 51.3332 15.96C50.8037 15.96 49.6587 15.9955 48.7225 16.0102C48.7182 16.0102 48.7161 16.0123 48.7118 16.0123C48.574 16.0186 48.3588 16.0186 48.1005 16.0186C48.1005 16.0186 48.1005 16.0186 48.0984 16.0186C48.0984 16.0186 48.0984 16.0186 48.0962 16.0186C47.8401 16.0206 47.6227 16.0186 47.485 16.0123C47.4807 16.0123 47.4764 16.0102 47.4742 16.0102C46.538 15.9935 45.393 15.96 44.8636 15.96C44.8012 15.96 44.7366 15.9433 44.672 15.9328C44.3191 15.8512 43.9338 15.6295 43.6261 15.2634C43.286 14.8346 43.0471 14.2322 43.045 13.5001C43.0471 12.768 43.286 12.1635 43.6261 11.7368C43.9338 11.3686 44.3212 11.149 44.672 11.0674C44.7366 11.057 44.8012 11.0402 44.8636 11.0402C45.393 11.0402 46.538 11.0047 47.4742 10.99C47.4785 10.99 47.4807 10.988 47.485 10.988C47.6227 10.9817 47.838 10.9796 48.0962 10.9817C48.0962 10.9817 48.0962 10.9817 48.0984 10.9817C48.0984 10.9817 48.0984 10.9817 48.1005 10.9817C48.3567 10.9796 48.574 10.9817 48.7118 10.988C48.7161 10.988 48.7204 10.99 48.7225 10.99C49.6587 11.0068 50.8037 11.0402 51.3332 11.0402C51.3956 11.0402 51.4602 11.057 51.5247 11.0674C51.8777 11.149 52.2629 11.3707 52.5707 11.7368C52.9108 12.1635 53.1497 12.768 53.1518 13.5001C53.1497 14.2301 52.9108 14.8346 52.5707 15.2634ZM120.045 8.27917H114.137L108.387 11.764V8.28335H104.689V18.7211H108.387V14.5167L114.77 18.6165H120.786L112.372 13.0023L120.045 8.27917ZM142.594 17.5643C142.542 16.8636 142.891 14.774 140.715 13.7239C140.715 13.7239 142.273 13.5106 142.273 10.921C142.273 8.33146 139.415 8.28126 138.733 8.28126C138.132 8.28126 132.328 8.28126 130.953 8.28126V8.27917H127.255V18.7169H130.953V15.5019H137.586C137.586 15.5019 138.718 15.3262 138.899 16.4285C139.079 17.5288 139.028 18.3801 139.529 18.7043H143.25C143.25 18.7043 142.646 18.2651 142.594 17.5643ZM137.663 12.9123C137.117 12.9123 132.601 12.9123 130.953 12.9123V11.0361C132.362 11.0382 137.229 11.0465 137.625 11.0465C138.087 11.0465 138.679 11.2348 138.679 11.8853C138.681 12.5358 138.333 12.9123 137.663 12.9123ZM144.305 8.28126V18.719H148.003V8.28126C148 8.28126 144.305 8.28126 144.305 8.28126ZM121.416 18.719H125.114V8.28126H121.416V18.719Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6941 16.2234C25.7858 14.0878 25.2671 12.7742 24.318 10.6134C23.3926 12.7177 22.8545 13.9769 21.9312 16.2234C21.2188 17.9575 22.4305 19.7668 24.318 19.7668C26.1517 19.7668 27.4517 18.0056 26.6941 16.2234ZM24.318 22.7517C20.3299 22.7517 17.39 18.7335 19.1957 14.9266C21.0811 10.9502 22.2497 8.4673 24.318 4.24829C26.3885 8.4673 27.5571 10.9502 29.4403 14.9266C31.246 18.7335 28.3061 22.7517 24.318 22.7517Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5662 22.7517C7.57809 22.7517 4.63814 18.7335 6.44171 14.9266C8.32706 10.9502 9.49572 8.4673 11.5662 4.24829C13.6366 8.4673 14.8053 10.9502 16.6885 14.9266C18.4942 18.7335 15.5542 22.7517 11.5662 22.7517Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25164 27H27.6346C32.1844 27 35.8862 23.4022 35.8862 18.9803V8.01968C35.8841 3.59777 32.1822 0 27.6324 0H8.25164C3.70183 0 0 3.59777 0 8.01968V18.9824C0 23.4022 3.70183 27 8.25164 27ZM27.6324 1.68802C31.2245 1.68802 34.1472 4.52859 34.1472 8.01968V18.9824C34.1472 22.4735 31.2245 25.3141 27.6324 25.3141H8.25164C4.65957 25.3141 1.73685 22.4735 1.73685 18.9824V8.01968C1.73685 4.52859 4.65957 1.68802 8.25164 1.68802H27.6324Z" fill="white"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_241_2477">
-            <rect width="148" height="27" fill="white"/>
-            </clipPath>
-            </defs>
-          </svg>            
+          <img src="img/logo.svg" alt="Main Logo" />
         </a>
       </div>
-      <div class="header__col header__col-menu menu-burger">
+      <div class="header__item link link-dark">
+        <a href="tel:+7 705 785 95 88" class="header__phone">+7 705 785 95 88</a>
+      </div>
+      <div class="header__item link link-dark">
+        <a href="mail:geoplatinum@gmail.com" class="header__mail">geoplatinum@gmail.com</a>
+      </div>
+      <div class="header__box header__item">
+        <a class="header__feedback">Заказать звонок</a>
         <div class="header__burger">
           <span></span>
           <span></span>
         </div>
-        <span>Menu</span>
-      </div>
-      <div class="header__col header__col-catalog catalog-burger">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 1V4M7 13V10M7 7H4M7 7V4M7 7H10M7 7V10M13 7H10M1 7H4M4 7C5.5 7 7 5.5 7 4M4 7C5.5 7 7 8.5 7 10M7 4C7 5.5 8.5 7 10 7M10 7C8.5 7 7 8.5 7 10" stroke="#221E1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>         
-        <span>Каталог</span>
-      </div>
-      <div class="header__col header__col-items">
-        <div class="header__search">
-          <input id="search" name="search" type="text" placeholder="Поиск...">
-          <input id="search_submit" value="Rechercher" type="submit">
-        </div>
-        <a href="#" class="header__item header__like">
-          <span>0</span>
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.7145 1.30492C12.9744 -0.434738 10.1436 -0.434738 8.40393 1.30492L7.99986 1.70875L7.59603 1.30492C5.85637 -0.434973 3.02531 -0.434973 1.28565 1.30492C-0.418689 3.00926 -0.429756 5.71081 1.25998 7.58916C2.80114 9.30174 7.34643 13.0017 7.53928 13.1583C7.6702 13.2647 7.82773 13.3165 7.98432 13.3165C7.9895 13.3165 7.99468 13.3165 7.99963 13.3163C8.16163 13.3238 8.32481 13.2682 8.45997 13.1583C8.65282 13.0017 13.1986 9.30174 14.7402 7.58893C16.4297 5.71081 16.4186 3.00926 14.7145 1.30492ZM13.69 6.64398C12.4884 7.97887 9.18546 10.732 7.99963 11.709C6.8138 10.7322 3.51155 7.97934 2.31018 6.64422C1.13142 5.33406 1.12035 3.46819 2.28452 2.30402C2.87908 1.70969 3.6599 1.41229 4.44072 1.41229C5.22154 1.41229 6.00236 1.70946 6.59693 2.30402L7.48512 3.19222C7.59085 3.29794 7.72412 3.36105 7.86399 3.38318C8.09099 3.43193 8.33729 3.36859 8.51389 3.19245L9.40256 2.30402C10.5919 1.11513 12.5266 1.11537 13.7152 2.30402C14.8794 3.46819 14.8683 5.33406 13.69 6.64398Z" fill="#111111"/>
-          </svg>            
-        </a>
-        <a href="#" class="header__item header__basket">
-          <span>0</span>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.8201 4.80952H5.17991M12.8201 4.80952H13.82C15.4135 4.80952 16.2102 4.80952 16.6658 5.31707C17.1213 5.82462 17.0333 6.61431 16.8573 8.1937L16.6313 10.2223C16.2721 13.4462 16.0925 15.0581 15.0047 16.0291C13.9169 17 12.2779 17 9 17C5.72206 17 4.08309 17 2.99529 16.0291C1.90748 15.0581 1.72788 13.4462 1.36868 10.2223L1.14265 8.1937C0.966681 6.61431 0.878694 5.82462 1.33423 5.31707C1.78977 4.80952 2.58652 4.80952 4.18003 4.80952H5.17991M12.8201 4.80952C12.8201 2.70558 11.1098 1 9 1C6.94232 1 5.26463 2.62239 5.18302 4.65441C5.18096 4.70586 5.17991 4.75757 5.17991 4.80952" stroke="#111111" stroke-width="1.5"/>
-          </svg>            
-        </a>
-      </div>
-      <div class="header__box header__box-menu">
-        <nav class="header__nav header__nav-menu">
-          <div class="header__contacts">
-            <a href="tel:+7 705 876 66 75" class="header__phone">+7 705 876 66 75</a>
-            <div class="header__city">Астана</div>
-            <div class="header__address">Туран 22</div>
-            <a href="mailto:info@omoikiri" class="header__mail">info@omoikiri</a>
-          </div>
-          <ul class="header__menu">
-            <li><a href="">О компании</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Контакты</a></li>
-            <li><a href="">Акции</a></li>
-            <li><a href="">Служба поддержки клиентов</a></li>
-            <li><a href="">Помощь покупателя</a></li>
-            <li><a href="">Клиенты и отзывы</a></li>
-            <li><a href="">Партнеры</a></li>
-            <li><a href="">Как купить</a></li>
-            <li><a href="">Оплата, Доставка</a></li>
-            <li><a href="">Гарантии</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__box header__box-catalog">
-        <nav class="header__nav header__nav-catalog">
-          <ul class="header__catalog">
-            <li>
-              <a href="">Смесители</a>
-              <span></span>
-              <img src="img/category-1.png" alt="">
-            </li>
-            <li>
-              <a href="">Мойки</a>
-              <span></span>
-              <img src="img/category-2.png" alt="">
-            </li>
-            <li>
-              <a href="">Фильтры</a>
-              <span></span>
-              <img src="img/category-3.png" alt="">
-            </li>
-            <li>
-              <a href="">Аксессуары</a>
-              <span></span>
-              <img src="img/category-4.png" alt="">
-            </li>
-            <li>
-              <a href="">Измельчители</a>
-              <span></span>
-              <img src="img/category-5.png" alt="">
-            </li>
-            <li>
-              <a href="">OMOIKIRI HOME</a>
-              <span></span>
-              <img src="img/category-6.png" alt="">
-            </li>
-            <li>
-              <a href="">Популярные товары</a>
-              <span></span>
-              <img src="img/category-5.png" alt="">
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   </div>
+  <nav class="header__nav header-nav">
+    <div class="container">
+      <div class="header-nav__container">
+        <div class="header__row">
+          <div class="header__socials link link-grey col">
+            <a href="#" class="header__social" target="_blank">Instagram</a>
+            <a href="#" class="header__social" target="_blank">Facebook</a>
+            <a href="#" class="header__social" target="_blank">Whatsapp</a>
+          </div>
+          <ul class="header__menu link link-grey col">
+            <li><a href="#" class="active">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Филиалы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="header__row">
+          <div class="header__address col">
+            <span>г. Астана</span>
+            <span>ул. Бухар Жырау 40</span>
+          </div>
+          <div class="header__contacts col link link-grey">
+            <a href="tel:+7(707) 107 2577">+7(707) 107 2577</a>
+            <a href="mailto:info@geoplatinum.kz">info@geoplatinum.kz</a>
+          </div>
+          <div class="header__lang">
+            <a href="#">Kz</a>
+            <a href="#" class="active">Ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lines">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div> 
+  </nav>
 </header>
 
 
     <main>
-      <section class="about section-pad-bottom">
+      <section class="about-hero">
+        <div class="about-hero__wrap">
+          <div class="container">
+            <div class="about-hero__container">
+              <div class="about-hero__top">
+                <h1 class="about-hero__title title-up">
+                  <span>GEO</span>
+                  <span>Platinum</span>
+                </h1>
+              </div>
+              <div class="about-hero__desc">
+                <p>Мы специализируемся на обеспечении точных и надежных данных, необходимых для успешной реализации различных проектов в области строительства, инфраструктуры и промышленности.</p>
+              </div>
+            </div>
+          </div>
+          <img class="about-hero__img tool" src="img/about-hero-3.png" alt="">
+          <img class="about-hero__img stone-2" src="img/about-hero-2.png" alt="">
+          <img class="about-hero__img stone-1" src="img/about-hero-1.png" alt="">
+        </div>
+      </section>
+      <section class="about section-pad-top">
         <div class="container">
           <div class="about__container">
-            <div class="about__hero">
-              <img class="about__img about__img-cloud about__img-cloud-1" src="img/cloud-1.svg" alt="">
-              <img class="about__img about__img-cloud about__img-cloud-2" src="img/cloud-2.svg" alt="">
-
-              <img class="about__img about__img-flower about__img-flower-1" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-2" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-3" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-4" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-5" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-6" src="img/flower.png" alt="">
-              <img class="about__img about__img-flower about__img-flower-7" src="img/flower.png" alt="">
-
-              <img class="about__img about__img-symbol" src="img/symbol-2.png" alt="">
-              <img class="about__img about__img-build" src="img/build.png" alt="">
-              <img class="about__img about__img-logo" src="img/logo2.svg" alt="">
-            </div>
-            <div class="about__wrap">
-              <h1 class="about__title">Компания OMOIKIRI работает <br> по полному циклу от дизайна продукта до промышленного выпуска и продаж на рынке.</h1>
-              <div class="about__desc">
-                <p>Производство OMOIKIRI размещено на ведущих мировых площадках в Китае, Турции, Италии, России и Японии.</p>
-                <p>OMOIKIRI - это люди! Мы гордимся своей атмосферой, стабильностью и отличными рабочими условиями.</p>
-                <p>Специалисты компании OMOIKIRI постоянно отслеживают новые тенденции в мире кухонных принадлежностей и непрерывно претворяют в жизнь самые технологичные и стильные из них.</p>
+            <div class="about__row">
+              <div class="about__top">
+                <h2 class="about__title title-up">О компании</h2>
+              </div>
+              <div class="about__box">
+                <h2 class="about__subtitle title-up"><span>Изыскание Платинум</span> - это богатый опыт 
+                  и квалифицированный персонал, готовый реализовать ваши проекты на самом высоком уровне.</h2>
+                <div class="about__desc">
+                  <p>С момента нашего основания в 2012 году, мы стали ведущими поставщиками высококачественных инженерных услуг в Казахстане. Наш офис находится в красивом городе Усть-Каменогорск, и мы гордимся возможностью обслуживать клиентов по всей территории страны.</p>
+                  <p>Наш опыт и профессионализм являются ключевыми факторами, которые делают нашу компанию непревзойденным выбором для вашего следующего проекта.</p>
+                </div>
               </div>
             </div>
-            <div class="about__cards">
-              <div class="about__card">
-                <h4 class="about__caption">1 500 000 +</h4>
-                <div class="about__txt">Единиц проданной <br> продукции</div>
-              </div>
-              <div class="about__card">
-                <h4 class="about__caption">30 000 +</h4>
-                <div class="about__txt">Единиц проданной <br> продукции</div>
-              </div>
-              <div class="about__card">
-                <h4 class="about__caption">9 000 +</h4>
-                <div class="about__txt">Единиц проданной <br> продукции</div>
-              </div>
-              <div class="about__card">
-                <h4 class="about__caption">2 500 +</h4>
-                <div class="about__txt">Единиц проданной <br> продукции</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="about__line"></span>
-        <div class="about__slider">
-          <div class="swiper aboutSwiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <span class="year">2015</span>
-              </div>
-              <div class="swiper-slide">
-                <span class="year">2017</span>
-              </div>
-              <div class="swiper-slide">
-                <span class="year">2019</span>
-              </div>
-              <div class="swiper-slide">
-                <span class="year">2020</span>
-              </div>
-              <div class="swiper-slide">
-                <span class="year">2021<span class="degree">1</span></span>
-              </div>
-            </div>
-            <div class="swiper-button-next about-button about-button-next">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.6085 6.26399L19.7346 11.3627C20.0885 11.7147 20.0885 12.2853 19.7346 12.6373L14.6085 17.736C14.2547 18.088 13.6809 18.088 13.327 17.736C12.9732 17.384 12.9732 16.8133 13.327 16.4613L16.9062 12.9013H4.90616C4.4057 12.9013 4 12.4978 4 12C4 11.5022 4.4057 11.0987 4.90616 11.0987H16.9062L13.327 7.53866C12.9732 7.18667 12.9732 6.61598 13.327 6.26399C13.6809 5.912 14.2547 5.912 14.6085 6.26399Z" fill="#111111"/>
-              </svg>                
-            </div>
-            <div class="swiper-button-prev about-button about-button-prev">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.26541 11.3627C3.91153 11.7147 3.91153 12.2853 4.26541 12.6373L9.39145 17.736C9.74533 18.088 10.3191 18.088 10.673 17.736C11.0268 17.384 11.0268 16.8133 10.673 16.4613L7.09384 12.9013H19.0938C19.5943 12.9013 20 12.4978 20 12C20 11.5022 19.5943 11.0987 19.0938 11.0987H7.09384L10.673 7.53866C11.0268 7.18667 11.0268 6.61598 10.673 6.26399C10.3191 5.912 9.74533 5.912 9.39145 6.26399L4.26541 11.3627Z" fill="#111111"/>
-              </svg>                
-            </div>
-          </div>
-          <div thumbsSlider="" class="swiper aboutSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                В 2015 году команда дизайнеров OMOIKIRI разработала новую визуальную концепцию Форума PUSHKA и одержала победу в премии Red Dot Design Award в номинации: «Brands&Communication Design» с проектом фирменного стиля;
-              </div>
-              <div class="swiper-slide">
-                В 2017 году команда дизайнеров OMOIKIRI разработала новую визуальную концепцию Форума PUSHKA и одержала победу в премии Red Dot Design Award в номинации: «Brands&Communication Design» с проектом фирменного стиля;
-              </div>
-              <div class="swiper-slide">
-                В 2019 году команда дизайнеров OMOIKIRI разработала новую визуальную концепцию Форума PUSHKA и одержала победу в премии Red Dot Design Award в номинации: «Brands&Communication Design» с проектом фирменного стиля;
-              </div>
-              <div class="swiper-slide">
-                В 2020 году команда дизайнеров OMOIKIRI разработала новую визуальную концепцию Форума PUSHKA и одержала победу в премии Red Dot Design Award в номинации: «Brands&Communication Design» с проектом фирменного стиля;
-              </div>
-              <div class="swiper-slide">
-                В 2021 году команда дизайнеров OMOIKIRI разработала новую визуальную концепцию Форума PUSHKA и одержала победу в премии Red Dot Design Award в номинации: «Brands&Communication Design» с проектом фирменного стиля;
+            <div class="about__row">
+              <div class="about__img_sm"><img src="img/about-1.png" alt=""></div>
+              <div class="about__wrap">
+                <div class="about__img"><img src="img/about-2.png" alt=""></div>
+                <div class="about__box">
+                  <div class="about__cards">
+                    <div class="about__card">
+                      <div class="about__num"><span>200</span> +</div>
+                      <div class="about__txt">реализованных<br> проектов ежегодно</div>
+                    </div>
+                    <div class="about__card">
+                      <div class="about__num"><span>12</span> +</div>
+                      <div class="about__txt">лет<br> опыта</div>
+                    </div>
+                  </div>
+                  <a class="about__btn button button-lg button-primary">Оставить заявку</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section class="benefits section-pad-top">
+        <div class="container">
+          <div class="benefits__container">
+            <div class="benefits__top">
+              <h2 class="benefits__title title-up">Преимущества</h2>
+            </div>
+            <div class="benefits__rows">
+              <div class="benefits__row">
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Профессиональная<br> экспертиза</h6>
+                  <div class="benefits__txt">Благодаря опыту и глубоким знаниям, мы гарантируем высший уровень экспертизы для успешной реализации ваших проектов.Благодаря опыту и глубоким знаниям, мы гарантируем высший уровень экспертизы для успешной реализации ваших проектов.</div>
+                </div>
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Современное<br> оборудование</h6>
+                  <div class="benefits__txt">Для обеспечения точности и надежности наших услуг мы используем передовое техническое оборудование и современные методы.</div>
+                </div>
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Индивидуальный<br> подход</h6>
+                  <div class="benefits__txt">Наша команда работает над тем, чтобы предоставить вам наилучшее решение, учитывая специфику ваших задач и требований.</div>
+                </div>
+              </div>
+              <div class="benefits__row">
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Соблюдение<br> сроков</h6>
+                  <div class="benefits__txt">Мы ценим ваше время и понимаем, что соблюдение сроков - важная часть успешной реализации проекта.</div>
+                </div>
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Качество<br> и надежность</h6>
+                  <div class="benefits__txt">Мы уделяем внимание каждой детали, чтобы обеспечить высокий стандарт выполнения работ и точность предоставляемой информации.</div>
+                </div>
+                <div class="benefits__card">
+                  <h6 class="benefits__caption">Партнерств<br> и доверие</h6>
+                  <div class="benefits__txt">Мы строим долгосрочные партнерские отношения на основе взаимного доверия и профессионализма.</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="benefits__cards">
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Профессиональная<br> экспертиза</h6>
+                <div class="benefits__txt">Благодаря опыту и глубоким знаниям, мы гарантируем высший уровень экспертизы для успешной реализации ваших проектов.</div>
+              </div>
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Современное<br> оборудование</h6>
+                <div class="benefits__txt">Для обеспечения точности и надежности наших услуг мы используем передовое техническое оборудование и современные методы.</div>
+              </div>
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Индивидуальный<br> подход</h6>
+                <div class="benefits__txt">Наша команда работает над тем, чтобы предоставить вам наилучшее решение, учитывая специфику ваших задач и требований.</div>
+              </div>
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Соблюдение<br> сроков</h6>
+                <div class="benefits__txt">Мы ценим ваше время и понимаем, что соблюдение сроков - важная часть успешной реализации проекта.</div>
+              </div>
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Качество<br> и надежность</h6>
+                <div class="benefits__txt">Мы уделяем внимание каждой детали, чтобы обеспечить высокий стандарт выполнения работ и точность предоставляемой информации.</div>
+              </div>
+              <div class="benefits__card">
+                <h6 class="benefits__caption">Партнерств<br> и доверие</h6>
+                <div class="benefits__txt">Мы строим долгосрочные партнерские отношения на основе взаимного доверия и профессионализма.</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="teams section-pad-top">
+        <div class="container">
+          <div class="teams__container">
+            <div class="teams__top">
+              <h2 class="teams__title title-up">Наша команда</h2>
+              <h2 class="teams__subtitle">— это сплочённый коллектив профессионалов, которые с полной отдачей и вниманием работают над каждым проектом. </h2>
+            </div>
+            <div class="teams__cards js-slick-slider">
+              <div class="teams__card">
+                <h6 class="teams__person">Адиль Садуакас</h6>
+                <div class="teams__position">CEO</div>
+                <div class="teams__img"><img src="img/person-1.png" alt=""></div>
+              </div>
+              <div class="teams__card">
+                <h6 class="teams__person">Айсултан Жаксылыков</h6>
+                <div class="teams__position">CFO</div>
+                <div class="teams__img"><img src="img/person-2.png" alt=""></div>
+              </div>
+              <div class="teams__card">
+                <h6 class="teams__person">Гульмира Асылбекова</h6>
+                <div class="teams__position">CFO</div>
+                <div class="teams__img"><img src="img/person-3.png" alt=""></div>
+              </div>
+              <div class="teams__card">
+                <h6 class="teams__person">Аяжан Кайратова</h6>
+                <div class="teams__position">CFO</div>
+                <div class="teams__img"><img src="img/person-4.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-video section-pad-top">
+        <div class="container">
+          <div class="about-video__container">
+            <a class="about-video__box" href="https://youtu.be/krDWc30PAGg?si=YK4bzSF5TVfuNcVd" data-fancybox><img src="img/video.png" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <section class="materials section-pad-top">
+        <div class="container">
+          <div class="materials__container">
+            <div class="materials__top">
+              <h2 class="materials__title title-up">Материалы</h2>
+            </div>
+            <div class="materials__rows">
+              <div class="materials__row">
+                <div class="materials__caption">Сертификат</div>
+                <div class="materials__name">Сертификат повышения квалификации в области геодезии и картографии.</div>
+                <div class="materials__img"><img src="img/materials-1.png" alt=""></div>
+                <a href="img/materials-1.png" class="materials__btn button" data-fancybox>
+                  <span>Смотреть</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12H7.46593e-07L12 -1.90735e-06V12Z" fill="#251915"/>
+                  </svg>                    
+                </a>
+              </div>
+              <div class="materials__row">
+                <div class="materials__caption">Награда</div>
+                <div class="materials__name">Награда за вклад в развитие геодезических технологий</div>
+                <div class="materials__img"><img src="img/materials-2.png" alt=""></div>
+                <a href="img/materials-2.png" class="materials__btn button" data-fancybox>
+                  <span>Смотреть</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12H7.46593e-07L12 -1.90735e-06V12Z" fill="#251915"/>
+                  </svg>                    
+                </a>
+              </div>
+              <div class="materials__row">
+                <div class="materials__caption">Презентация</div>
+                <div class="materials__name">Премия за лидерство в геодезической деятельности 2023</div>
+                <div class="materials__img"><img src="img/materials-3.png" alt=""></div>
+                <a href="img/materials-3.png" class="materials__btn button" data-fancybox>
+                  <span>Смотреть</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12H7.46593e-07L12 -1.90735e-06V12Z" fill="#251915"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners section-pad">
+        <div class="container">
+          <div class="partners__container">
+            <div class="partners__top">
+              <h2 class="partners__title title-up">Компании <br> которые нам доверяют</h2>
+            </div>
+          </div>
+        </div>
+        <div class="partners__wrap">
+          <div class="partners__cards marquee">
+            <div class="partners__card"><img src="img/partners-1.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-2.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-3.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-4.png" alt=""></div>
+          </div>
+          <div aria-hidden="true" class="partners__cards marquee">
+            <div class="partners__card"><img src="img/partners-1.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-2.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-3.png" alt=""></div>
+            <div class="partners__card"><img src="img/partners-4.png" alt=""></div>
+          </div>
+        </div>
+      </section>
     </main>
-
+    
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <a href="/" class="footer__logo">
-        <img src="img/logo-footer.svg" alt="Footer logo">
-      </a>
-      <div class="footer__wrap">
-        <ul class="footer__col footer__menu">
-          <li><a href="">О компании</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Служба поддержки</a></li>
-          <li><a href="">Помощь покупателя</a></li>
-          <li><a href="">Клиенты и отзывы</a></li>
-        </ul>
-        <ul class="footer__col footer__menu">
-          <li><a href="">Партнеры</a></li>
-          <li><a href="">Как купить</a></li>
-          <li><a href="">Оплата, Доставка</a></li>
-          <li><a href="">Гарантии</a></li>
-        </ul>
-        <div class="footer__col footer__socials">
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">WhatsApp</a>
-          <a href="#" target="_blank">FaceBook</a>
+      <div class="footer__row">
+        <div class="footer__col">
+          <div class="footer__socials">
+            <a href="" class="footer__social" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10Z" fill="white"/>
+                <path d="M16.5 8.5C17.0523 8.5 17.5 8.05228 17.5 7.5C17.5 6.94772 17.0523 6.5 16.5 6.5C15.9477 6.5 15.5 6.94772 15.5 7.5C15.5 8.05228 15.9477 8.5 16.5 8.5Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8ZM8 5C6.34315 5 5 6.34315 5 8V16C5 17.6569 6.34315 19 8 19H16C17.6569 19 19 17.6569 19 16V8C19 6.34315 17.6569 5 16 5H8Z" fill="white"/>
+              </svg>                
+            </a>
+            <a href="" class="footer__social" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.0796 16.9463 19.446 13 19.9381V14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H13V10C13 9.44772 13.4477 9 14 9H14.5C15.0523 9 15.5 8.55228 15.5 8C15.5 7.44772 15.0523 7 14.5 7H14C12.3431 7 11 8.34315 11 10V12H9C8.44772 12 8 12.4477 8 13C8 13.5523 8.44772 14 9 14H11V19.9381C7.05369 19.446 4 16.0796 4 12ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="white"/>
+              </svg>                
+            </a>
+            <a href="" class="footer__social" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8394 6.05639C22.0315 4.8917 20.8652 3.97177 19.7773 4.42984L2.67703 11.63C1.48461 12.132 1.42351 13.8558 2.67788 14.3758C3.60596 14.7605 5.02633 15.3246 6.45085 15.7943C7.61932 16.1795 8.8931 16.5371 9.91353 16.6383C10.1929 16.9725 10.5445 17.2935 10.9017 17.5872C11.4487 18.0371 12.1074 18.5012 12.7873 18.9455C14.1489 19.8352 15.6597 20.6865 16.678 21.2396C17.8949 21.9006 19.3517 21.1395 19.5705 19.8131L21.8394 6.05639ZM4.59485 12.9925L19.7186 6.62459L17.6009 19.4649C16.6024 18.9219 15.163 18.1087 13.8813 17.2713C13.2329 16.8475 12.6407 16.4279 12.172 16.0425C12.0051 15.9052 11.8638 15.7802 11.7461 15.6683L15.7072 11.7071C16.0977 11.3166 16.0977 10.6834 15.7072 10.2929C15.3167 9.90237 14.6835 9.90237 14.293 10.2929L9.95476 14.6311C9.22132 14.5373 8.19888 14.2647 7.07709 13.8949C6.21377 13.6102 5.34574 13.2869 4.59485 12.9925Z" fill="white"/>
+              </svg>                
+            </a>
+            <a href="" class="footer__social" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.73827 14.2627C11.7608 16.2852 13.692 16.5518 14.374 16.5769C15.4165 16.6153 16.4188 15.8283 16.8148 14.9042C16.9112 14.6792 16.8872 14.4085 16.7255 14.2014C16.1782 13.5005 15.4374 12.9983 14.7134 12.4984C14.4007 12.282 13.9705 12.349 13.7402 12.6555L13.1394 13.5706C13.0728 13.6721 12.9402 13.707 12.8348 13.6467C12.4284 13.4143 11.8357 13.018 11.4093 12.5916C10.9834 12.1657 10.6112 11.5998 10.4022 11.2195C10.3473 11.1195 10.3778 10.996 10.4693 10.928L11.3927 10.2422C11.6681 10.0038 11.7166 9.59887 11.5138 9.30228C11.065 8.64569 10.5422 7.8112 9.78556 7.25926C9.57889 7.1085 9.31746 7.09158 9.10162 7.18408C8.17688 7.5804 7.38562 8.58294 7.42404 9.62695C7.44914 10.3089 7.71578 12.2402 9.73827 14.2627Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 13.8896 2.52505 15.6594 3.43756 17.1683L2.54581 20.2002C2.32023 20.9672 3.03284 21.6798 3.79975 21.4542L6.83171 20.5624C8.34058 21.475 10.1104 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C10.4231 20 8.95564 19.5448 7.71817 18.759C7.36114 18.5323 6.91075 18.4545 6.47827 18.5817L4.97667 19.0233L5.41832 17.5217C5.54552 17.0892 5.46769 16.6389 5.24098 16.2818C4.4552 15.0444 4 13.5769 4 12Z" fill="white"/>
+              </svg>                
+            </a>
+          </div>
         </div>
-        <div class="footer__col footer__contacts">
-          <a href="tel:+7 705 526 69 99">+7 705 526 69 99</a>
-          <a href="tel:+7 705 526 66 66">+7 705 526 66 66</a>
-          <a href="mailto:info@omoikiri">info@omoikiri</a>
+        <div class="footer__col col-2">
+          <ul class="footer__menu col link link-light">
+            <li><a href="">О компании</a></li>
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Карта выполненных работ</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+          <div class="footer__contacts col link link-light">
+            <a href="tel:+7(707) 107 2577">+7(707) 107 2577</a>
+            <div class="footer__address">г. Астана, ул. Бухар Жырау 40</div>
+            <a href="mailto:info@geoplatinum.kz">info@geoplatinum.kz</a>
+          </div>
         </div>
       </div>
-      <div class="footer__copy">
-        <div class="footer__txt">Copyright © 2024 omoikiri</div>
-        <a href="https://factum.agency/" target="_blank">Сделано Factum</a>
+      <div class="footer__row">
+        <div class="footer__col">
+          <a href="/" class="footer__logo">
+            <img src="img/footer-logo.svg" alt="Footer Logo">
+          </a>
+        </div>
+        <div class="footer__col footer__form">
+          <form action="">
+            <input type="text" name="" id="" placeholder="Имя">
+            <input type="tel" name="" id="" placeholder="Телефон">
+            <input class="button button-form button-form-light" type="submit" value="Отправить">
+          </form>
+        </div>
+      </div>
+      <div class="footer__copy link link-light">
+        <div>© 2024 GeoPlatinum</div>
+        <a href="https://factum.agency/" target="_blank">Сделано FACTUM</a>
       </div>
     </div>
   </div>
 </footer>
  
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20240916110215" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240916110215"></script>
-<script src="js/jquery-ui.min.js?_v=20240916110215"></script>
-<script src="js/jquery.ui.touch-punch.min.js?_v=20240916110215"></script>
-<script src="js/app.js?_v=20240916110215"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240917165636" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240917165636"></script>
+<script src="js/slick.min.js?_v=20240917165636"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917165636"></script>
+<script src="js/app.js?_v=20240917165636"></script>
   </body>
 </html>
