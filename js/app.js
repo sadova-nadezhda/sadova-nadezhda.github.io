@@ -1,187 +1,176 @@
-window.addEventListener("load", function () {
-  let header = document.querySelector('.header');
-  let link = document.querySelector(".header__burger");
-  let menu = document.querySelector(".header__nav");
-  if (menu) {
-    link.addEventListener(
-      "click",
-      function () {
-        link.classList.toggle("active");
-        menu.classList.toggle("open");
-        header.classList.toggle("active");
-      },
-      false
+// main.js
+import { addPadTop, toggleMenu, menuLg } from './modules/header.js';
+import { initializeSwipers } from './modules/swiperSetup.js';
+import { initializeTabs } from './modules/tabs.js';
+import { initializeAccordion } from './modules/accordion.js';
+import { initializeDropdowns } from './modules/dropdown.js';
+import { validateForm } from './modules/formValidation.js';
+import { initializeDatepicker, initializeDatepicker2, initializeTimepicker,  initializeTime } from './modules/datetime.js';
+import { calcCheckPrice, calcBookPrice } from './modules/checkPrice.js';
+
+var langBody = document.querySelector('body').getAttribute('data-lang');
+
+document.addEventListener("DOMContentLoaded", function () {
+  let preloader = document.querySelector("#preloader");
+  if (preloader) {
+    document.querySelector("body").style.overflow = "hidden";
+    let preloaderAnim = preloader.animate(
+      [{ opacity: "1" }, { opacity: "0" }],
+      {
+        duration: 300,
+        fill: "forwards",
+        easing: "ease-in",
+      }
     );
-    window.addEventListener("scroll", () => {
-      if (menu.classList.contains("open")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-        header.classList.remove("active");
-      }
-    });
-    document.addEventListener("click", (e) => {
-      let target = e.target;
-      if (
-        !target.classList.contains("header__nav") &&
-        !target.classList.contains("header__burger")
-      ) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-        header.classList.remove("active");
-      }
+    preloaderAnim.addEventListener("finish", () => {
+      preloader.style.display = "none";
+      document.querySelector("body").style.overflow = "unset";
     });
   }
 
-  function handleScroll() {
-    let scroll = window.scrollY;
-    if (scroll > 50) {
-      header.classList.add("scroll");
-    } else {
-      header.classList.remove("scroll");
+  const header = document.querySelector("header");
+  const sectionTop = document.querySelector('.section-top');
+
+
+  let scroll = window.scrollY;
+  if (scroll > 50 ) {
+    header.classList.add("scroll");
+  } else {
+    header.classList.remove("scroll");
+  }
+
+  window.addEventListener("scroll", function () {
+    if(header) {
+      let scroll = window.scrollY;
+      if (scroll > 50 ) {
+        header.classList.add("scroll");
+      } else {
+        header.classList.remove("scroll");
+      }
     }
-  }
-
-  handleScroll();
-  
-  // hero slider
-  const heroSwiper = new Swiper(".heroSwiper", {
-    effect: "fade",
-    speed: 1000,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".hero-pagination",
-      clickable: true,
-    },
-    on: {
-      slideChange: function () {
-        this.slides.forEach((slide) => {
-          let background = slide.querySelector(".background");
-          if (background) {
-            background.classList.remove("animation");
-          }
-        });
-        let activeSlide = this.slides[this.activeIndex];
-        let background = activeSlide.querySelector(".background");
-        if (background) {
-          background.classList.add("animation");
-        }
-      },
-    },
+    initializeDropdowns();
   });
 
-  // tabs faq
-  const tabs = document.querySelectorAll('.tab label');
-  const contents = document.querySelectorAll('.tab-content');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const currentInput = tab.previousElementSibling;
-
-      if (window.innerWidth <= 600) {
-        const isAccordionActive = currentInput.checked;
-
-        contents.forEach(content => {
-          content.style.maxHeight = '0'; // Скрыть все контенты
-        });
-
-        if (!isAccordionActive) {
-          const content = tab.nextElementSibling;
-          content.style.maxHeight = content.scrollHeight + 'px'; // Задать высоту для раскрытия контента
-        }
-      }
-    });
-  });
-
-  function setTabContentHeight() {
-    const tabs = document.querySelector('.tabs');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    const isDesktop = window.innerWidth > 768;
-    tabContents.forEach(tabContent => {
-      tabContent.style.height = isDesktop ? `${tabs.offsetHeight - 30}px` : 'auto';
-    });
+  if (sectionTop && header) {
+    addPadTop(header, sectionTop);
   }
 
-  setTabContentHeight()
-
-  // tabs service
-  $(function () {
-    $('ul.tabs__nav').on('click', 'li:not(.active)', function () {
-      $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('div.services-page__tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-  });
-
-  // Филиалы
-  const branchItems = document.querySelectorAll('.branches__item');
-  const branchContents = document.querySelectorAll('.branches__content');
-  const svgPaths = document.querySelectorAll('.map path');
-  const mapPoint = document.querySelector('.map-point');
-  
-  function removeActiveClass() {
-    branchItems.forEach(item => item.classList.remove('active'));
-    branchContents.forEach(content => content.classList.remove('active'));
-    svgPaths.forEach(path => path.classList.remove('active'));
-    mapPoint.style.opacity = 0; // Скрыть иконку
+  const link = document.querySelector(".header__open");
+  const menu = document.querySelector(".header__wrap");
+  if (menu && link) {
+    toggleMenu(menu, link);
   }
-  
-  function setActiveElement(index) {
-    const item = branchItems[index];
-    const branchId = item.getAttribute('data-branch'); // Получаем значение data-атрибута
-  
-    removeActiveClass(); // Убираем активные классы со всех элементов
-  
-    // Добавляем активный класс к текущему элементу и контенту
-    item.classList.add('active');
-    branchContents[index].classList.add('active');
-  
-    // Поиск соответствующего пути на карте SVG
-    svgPaths.forEach(path => {
-      const pathId = path.getAttribute('data-branch'); // Получаем значение data-атрибута у пути
-      if (pathId === branchId) {
-        path.classList.add('active'); // Добавляем класс active к пути
-  
-        // Получаем координаты пути и устанавливаем положение иконки
-        const pathRect = path.getBoundingClientRect();
-        const containerRect = document.querySelector('.map').getBoundingClientRect();
-  
-        // Позиционируем иконку на середине пути
-        mapPoint.style.left = `${pathRect.left + pathRect.width / 2 - containerRect.left}px`;
-        mapPoint.style.top = `${pathRect.top + pathRect.height / 2 - containerRect.top}px`;
-        mapPoint.style.opacity = 1; // Показываем иконку
-      }
-    });
-  }
-  
-  if (branchItems.length > 0) {
-    setActiveElement(0);
-  }
-  
-  branchItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      setActiveElement(index);
-    });
-  });
 
-  // Fancybox
+  AOS.init();
+  $('select:not(.mobile-select)').niceSelect();
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
 
-  // Popup
 
+    document.querySelectorAll('.plan__item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+  
+      const parent = e.currentTarget;
+      const planPopup = parent.querySelector('.plan__popup');
+  
+      // Закрываем другие открытые всплывающие окна
+      document.querySelectorAll('.plan__popup.active').forEach(popup => {
+        if (popup !== planPopup) {
+          popup.classList.remove('active');
+        }
+      });
+  
+      // Переключаем активность текущего всплывающего окна
+      planPopup.classList.toggle('active');
+  
+      // Обработчик для кнопки закрытия
+      planPopup.querySelector('.plan__close').addEventListener('click', (e) => {
+        e.stopPropagation();
+        planPopup.classList.remove('active');
+      }, { once: true });
+    });
+  });
+  
+  // Закрытие всплывающих окон при клике вне их области
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.plan__popup.active').forEach(popup => {
+      popup.classList.remove('active');
+    });
+  });
+
+
+  menuLg();
+  initializeDropdowns();
+  initializeSwipers();
+  initializeTabs();
+  initializeAccordion();
+  initializeTime();
+  validateForm();
+  // calcCheckPrice();
+  // calcBookPrice();
+
+  const descSeo = document.querySelector('.seo__desc');
+  const showBtn = document.querySelector('.seo__show');
+  const hideBtn = document.querySelector('.seo__hide');
+
+  if(descSeo) {
+    showBtn.addEventListener('click', function() {
+      descSeo.classList.add("open");
+      showBtn.style.display = 'none';
+      hideBtn.style.display = 'inline-block';
+    });
+  
+    hideBtn.addEventListener('click', function() {
+      descSeo.classList.remove("open");
+      showBtn.style.display = 'inline-block';
+      hideBtn.style.display = 'none';
+    });
+  }
+
+  
+
+  const certificatesRegistrationCount = document.querySelectorAll(
+    ".certificates-registration-card__count-box"
+  );
+
+  certificatesRegistrationCount.forEach((box) => {
+    let input = box.querySelector(
+      ".certificates-registration-card__count-input"
+    );
+    let minBtn = box.querySelector(
+      ".certificates-registration-card__count-btn_minus"
+    );
+    let plusBtn = box.querySelector(
+      ".certificates-registration-card__count-btn_plus"
+    );
+
+    if (input && minBtn && plusBtn) {
+      console.log(input.value);
+
+      minBtn.addEventListener("click", function (e) {
+        if (input.value <= 1) {
+          e.pbronentDefault();
+        } else {
+          input.value--;
+        }
+      });
+
+      plusBtn.addEventListener("click", function (e) {
+        input.value++;
+      });
+    }
+  });
+
+  // Modals
   function hidePopup(popup) {
     popup.addEventListener('click', function(e) {
       const target = e.target;
       if (
-        target.classList.contains("popup__close") ||
-        target.classList.contains("popup")
+        target.classList.contains("modal__close") ||
+        target.classList.contains("modals")
       ) {
         popup.style.transition = "opacity 0.4s";
         popup.style.opacity = "0";
@@ -191,7 +180,6 @@ window.addEventListener("load", function () {
       }
     });
   }
-
   function showPopup(popup) {
     popup.style.display = "flex";
     setTimeout(() => {
@@ -201,83 +189,346 @@ window.addEventListener("load", function () {
   } 
 
   //popup
-  let popup = document.querySelector('.popup')
+  let modals = document.querySelector('.modals')
+  let modalAll = document.querySelectorAll('.modal')
   let popupBtns = document.querySelectorAll(".popup-btn");
-  if(popup && popupBtns){
-    hidePopup(popup);
+  if(modals && popupBtns){
+    hidePopup(modals);
     popupBtns.forEach( btn => {
       btn.addEventListener('click', () => {
-        showPopup(popup);
+        showPopup(modals)
+        let typeBtn = btn.dataset.type;
+        modalAll.forEach( modal => {
+          let typeModal = modal.dataset.type;
+          modal.style.display = 'none'
+          if(typeBtn == typeModal) {
+            modal.style.display = 'block'
+          }
+        });
       })
     })
   }
 
-  // mask phone
-  $.fn.setCursorPosition = function (pos) {
-    if ($(this).get(0).setSelectionRange) {
-      $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-      var range = $(this).get(0).createTextRange();
-      range.collapse(true);
-      range.moveEnd("character", pos);
-      range.moveStart("character", pos);
-      range.select();
-    }
-  };
-  $('input[type="tel"]')
-    .click(function () {
-      $(this).setCursorPosition(3);
-    })
-    .mask("+7 (999) 999 99 99");
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 600) {
-      contents.forEach(content => {
-        content.style.opacity = '0'; // Скрыть все контенты при переключении обратно в табы
-        content.style.visibility = 'hidden';
-      });
-  
-      const activeInput = document.querySelector('input[type="radio"]:checked');
-      if (activeInput) {
-        const activeContent = activeInput.nextElementSibling.nextElementSibling;
-        activeContent.style.opacity = '1';
-        activeContent.style.visibility = 'visible';
-      }
-    }
-    handleScroll();
-    setTabContentHeight();
-  });
-
-  window.addEventListener('scroll', function() {
-    handleScroll();
-    if (window.innerWidth > 768) { // Условие для устройств с шириной экрана более 768px
-      var services = document.querySelector('.services');
-      var offsetTop = services.getBoundingClientRect().top + window.scrollY;
-  
-      if (window.scrollY > offsetTop - 76) {
-        services.classList.add('active');
-      }
+  window.addEventListener("resize", () => {
+    if (sectionTop && header) {
+      addPadTop(header, sectionTop);
     }
   });
-  
+
+  var heroSwiper = document.querySelector('.heroSwiper');
+  if (heroSwiper) {
+      var slides = heroSwiper.querySelectorAll('.swiper-slide');
+      if (slides.length === 1) {
+          heroSwiper.style.display = 'none';
+      }
+  }
 });
 
-let flag = true;
+window.onkeydown = evt => {
+  if (evt.key == 'Tab') {
+      evt.pbronentDefault();
+  }
+}
 
-$(window).on('resize', function(){
-  if ($(this).width() < 768 && flag) {
-    flag = false;
-    $('.js-slick-slider').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: false,
-      dots: false
+let bronForm =  document.querySelector('.modal-book-form');
+if(bronForm){
+bronForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let bronrequest = new XMLHttpRequest();
+    bronrequest.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+            const bronsuccess = bronForm.querySelector('.success');
+            /*const formBlock = callBannerForm.querySelector('.call-modal-form');
+            const callBannerModalTitle = callBannerModal.querySelector('.call-modal-title');*/
+            const bronfields = bronForm.querySelectorAll('input');
+
+            for(let i=0;bronfields.length > i;i++){
+              bronfields[i].value = "";
+            }
+
+           /* success.style.visibility="visible";
+            formBlock.style.visibility = "hidden";
+            callBannerModalTitle.style.visibility = "hidden";*/
+      location.href = "/stranitsa-blagodarnosti";
+        }
+    }
+
+    bronrequest.open('POST', '/local/templates/orlov/ajax/forms/bron_form.php', true);
+    bronrequest.setRequestHeader('accept', 'application/json');
+
+    let brondata = new FormData(bronForm);
+    bronrequest.send(brondata);
+})
+};
+
+
+let cabForm =  document.querySelector('.modal-cab-form');
+if(cabForm){
+cabForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let cabrequest = new XMLHttpRequest();
+    cabrequest.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+            const cabsuccess = cabForm.querySelector('.success');
+            /*const formBlock = callBannerForm.querySelector('.call-modal-form');
+            const callBannerModalTitle = callBannerModal.querySelector('.call-modal-title');*/
+            const cabfields = cabForm.querySelectorAll('input');
+
+            for(let i=0;cabfields.length > i;i++){
+              cabfields[i].value = "";
+            }
+
+           /* success.style.visibility="visible";
+            formBlock.style.visibility = "hidden";
+            callBannerModalTitle.style.visibility = "hidden";*/
+      location.href = "/stranitsa-blagodarnosti";
+        }
+    }
+
+    cabrequest.open('POST', '/local/templates/orlov/ajax/forms/cab_form.php', true);
+    cabrequest.setRequestHeader('accept', 'application/json');
+
+    let cabdata = new FormData(cabForm);
+    cabrequest.send(cabdata);
+})
+};
+
+let callForm =  document.querySelector('.modal-call-form');
+if(callForm){
+callForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let callrequest = new XMLHttpRequest();
+    callrequest.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+            const callsuccess = callForm.querySelector('.success');
+            /*const formBlock = callBannerForm.querySelector('.call-modal-form');
+            const callBannerModalTitle = callBannerModal.querySelector('.call-modal-title');*/
+            const callfields = callForm.querySelectorAll('input');
+
+            for(let i=0;callfields.length > i;i++){
+              callfields[i].value = "";
+            }
+
+           /* success.style.visibility="visible";
+            formBlock.style.visibility = "hidden";
+            callBannerModalTitle.style.visibility = "hidden";*/
+      location.href = "/stranitsa-blagodarnosti";
+        }
+    }
+
+    callrequest.open('POST', '/local/templates/orlov/ajax/forms/callback_form.php', true);
+    callrequest.setRequestHeader('accept', 'application/json');
+
+    let calldata = new FormData(callForm);
+    callrequest.send(calldata);
+})
+};
+
+let openForm =  document.querySelector('.modal-open-form');
+if(openForm){
+openForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let openrequest = new XMLHttpRequest();
+    openrequest.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+            const opensuccess = openForm.querySelector('.success');
+            /*const formBlock = callBannerForm.querySelector('.call-modal-form');
+            const callBannerModalTitle = callBannerModal.querySelector('.call-modal-title');*/
+            const openfields = openForm.querySelectorAll('input');
+
+            for(let i=0;openfields.length > i;i++){
+              openfields[i].value = "";
+            }
+
+           /* success.style.visibility="visible";
+            formBlock.style.visibility = "hidden";
+            callBannerModalTitle.style.visibility = "hidden";*/
+      location.href = "/stranitsa-blagodarnosti";
+        }
+    }
+
+    openrequest.open('POST', '/local/templates/orlov/ajax/forms/open_form.php', true);
+    openrequest.setRequestHeader('accept', 'application/json');
+
+    let opendata = new FormData(openForm);
+    openrequest.send(opendata);
+})
+};
+
+
+(function toggleTabItem() {
+  const tabBtns = document.querySelectorAll(".tab-nav [data-tab-target]");
+
+  if (tabBtns.length > 0) {
+    tabBtns.forEach((tabBtn) => {
+      tabBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        activateTab(e.target.dataset.tabTarget, tabBtn);
+      });
     });
+
+    // Активируем вкладку на основе текущего URL хеша
+    const currentHash = window.location.hash.slice(1);
+    if (currentHash) {
+      const tabBtn = document.querySelector(`.main-tab-nav [data-tab-target="${currentHash}"]`);
+      if (tabBtn) activateTab(currentHash, tabBtn);
+    }
   }
-  else if ($(this).width() > 768 && !flag) {
-    flag = true;
-    $('.js-slick-slider').slick('unslick');
+
+  function activateTab(targetID, tabBtn) {
+    const closestNav = tabBtn.closest(".tab-nav");
+    const closestContent = closestNav.nextElementSibling;
+
+    closestNav.querySelectorAll("[data-tab-target]").forEach((btn) => {
+      btn.classList.remove("is-active");
+    });
+
+    [...closestContent.children].forEach((content) => {
+      content.classList.remove("is-active");
+    });
+
+    tabBtn.classList.add("is-active");
+    document.getElementById(targetID).classList.add("is-active");
   }
-}).resize();
+})();
+
+
+
+$(document).ready(function() {
+    if($("#current-element").length > 0) {
+    // Инициализация NiceSelect
+    $('#element-select').niceSelect();
+
+    // Получаем ID текущего элемента из data-атрибута
+    var currentElementId = $('#current-element').data('id');
+
+    // Устанавливаем значение в select
+    $('#element-select').val(currentElementId);
+
+    // Обновляем интерфейс NiceSelect, чтобы изменения были видны
+    $('#element-select').niceSelect('update');
+     function updateHiddenInput() {
+            var selectedText = currentElementId;
+            $(".hous-from-select").val(currentElementId);
+        }
+
+        // Сразу обновляем текст в скрытом поле
+        updateHiddenInput();
+
+        // Обновляем текст при изменении выбора в select
+        $('#element-select').on('change', function() {
+            updateHiddenInput();
+        });
+        console.log(currentElementId);
+    }
+else{
+  console.log("Not element page");
+}
+});
+
+$(document).ready(function() {
+    if($("#current-element1").length > 0) {
+    // Инициализация NiceSelect
+    $('#element-select').niceSelect();
+
+    // Получаем ID текущего элемента из data-атрибута
+    var currentElementId = $('#current-element1').data('id');
+
+    // Устанавливаем значение в select
+    $('#element-select').val(currentElementId);
+
+    // Обновляем интерфейс NiceSelect, чтобы изменения были видны
+    $('#element-select').niceSelect('update');
+    function updateHiddenInput2() {
+            var selectedText = currentElementId;
+            $(".hous-from-select").val(currentElementId);
+        }
+
+        // Сразу обновляем текст в скрытом поле
+        updateHiddenInput2();
+
+        // Обновляем текст при изменении выбора в select
+        $('#element-select').on('change', function() {
+            updateHiddenInput2();
+        });
+        console.log(currentElementId);
+    }
+else{
+  console.log("Not element page");
+}
+$('.cab-btn').on('click', function() {
+        // Получаем data-id из нажатого слайда
+        var slideId = $(this).data('id');
+
+        // Проверяем наличие элемента #current-element перед выполнением действий
+        if ($('.officesSwiper').length > 0) {
+            // Инициализация NiceSelect, если требуется
+            $('#element-select3').niceSelect();
+
+            // Устанавливаем значение в select
+            $('#element-select3').val(slideId);
+
+            // Обновляем интерфейс NiceSelect
+            $('#element-select3').niceSelect('update');
+        }
+        function updateHiddenInput3() {
+            var selectedText = slideId;
+            $(".hous-from-select1").val(slideId);
+        }
+
+        // Сразу обновляем текст в скрытом поле
+        updateHiddenInput3();
+
+        // Обновляем текст при изменении выбора в select
+        $('#element-select3').on('change', function() {
+            updateHiddenInput3();
+        });
+        console.log(slideId);
+    });
+$('.houstab-btn').on('click', function() {
+        // Получаем data-id из нажатого слайда
+        var housId = $(this).data('id');
+
+        // Проверяем наличие элемента #current-element перед выполнением действий
+        if ($('.houstab-btn').length > 0) {
+            // Инициализация NiceSelect, если требуется
+            $('#element-select').niceSelect();
+
+            // Устанавливаем значение в select
+            $('#element-select').val(housId);
+
+            // Обновляем интерфейс NiceSelect
+            $('#element-select').niceSelect('update');
+        }
+        function updateHiddenInput1() {
+            var selectedText = housId;
+            $(".hous-from-select").val(housId);
+        }
+
+        // Сразу обновляем текст в скрытом поле
+        updateHiddenInput1();
+
+        // Обновляем текст при изменении выбора в select
+        $('#element-select').on('change', function() {
+            updateHiddenInput1();
+        });
+        console.log(housId);
+    });
+});
+
+
+
+
+$(document).ready( function() {
+  initializeDatepicker(langBody);
+  initializeDatepicker2(langBody);
+  initializeTimepicker();
+});
