@@ -532,3 +532,27 @@ $(document).ready( function() {
   initializeDatepicker2(langBody);
   initializeTimepicker();
 });
+
+const blocks = document.querySelectorAll(".quantity");
+
+blocks.forEach(block => {
+  const plus = block.querySelector(".plus"),
+        minus = block.querySelector(".minus"),
+        num = block.querySelector(".num");
+
+  if (num) {
+    let a = parseInt(num.innerText, 10); // Преобразуем текстовое значение в число
+    
+    plus.addEventListener("click", () => {
+      a++;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", () => {
+      if (a > 1) {
+        a--;
+        num.innerText = a;
+      }
+    });
+  }
+});

@@ -5,15 +5,11 @@ export function initializeDatepicker(lg) {
   Array.from(document.querySelectorAll(".js-datepicker")).forEach(e => {
     $(e).datepicker({
       startDate: "+1d",
-      minDate: 0,
+      minDate: 1,
       format: "dd.mm.yyyy",
       container: e.hasAttribute("data-picker-container") ? e.getAttribute("data-picker-container") : "#picker-container",
       language: "ru",
       autoclose: !0,
-      templates: {
-        leftArrow: '<svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.8313H59M1 11.8313L11 0.831299M1 11.8313L11 22.8313" stroke="url(#paint0_linear_996_11138)" stroke-linecap="round"/><defs><linearGradient id="paint0_linear_996_11138" x1="1" y1="12.8313" x2="59" y2="12.8313" gradientUnits="userSpaceOnUse"><stop stop-color="#3B2720"/><stop offset="1" stop-color="#F0EFE5"/></linearGradient></defs></svg>',
-        rightArrow: '<svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59 11.8313H1M59 11.8313L49 0.831299M59 11.8313L49 22.8313" stroke="url(#paint0_linear_996_11140)" stroke-linecap="round"/><defs><linearGradient id="paint0_linear_996_11140" x1="59" y1="12.8313" x2="1" y2="12.8313" gradientUnits="userSpaceOnUse"><stop stop-color="#3B2720"/><stop offset="1" stop-color="#F0EFE5"/></linearGradient></defs></svg>'
-      },
       beforeShow: function(input, inst) {
         let coords = input.getBoundingClientRect();
         inst.dpDiv.css({

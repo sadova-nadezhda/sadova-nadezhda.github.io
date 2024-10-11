@@ -269,16 +269,16 @@ max-width: 400px;
 
 .ui-datepicker .ui-datepicker-prev span {
   background-image: url(../img/prev.svg);
-  background-size: 8px 12px;
+  /* background-size: 8px 12px; */
   background-position: 50% 50%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 .ui-datepicker .ui-datepicker-next span {
   background-image: url(../img/next.svg);
-  background-size: 8px 12px;
+  /* background-size: 8px 12px; */
   background-position: 50% 50%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 .public__title {
   display: flex;
@@ -497,6 +497,10 @@ max-width: 400px;
 
 .booking__common-search-input--time {
   background-image: url(../img/new-time.svg);
+}
+
+.booking-datepicker.ui-widget.ui-widget-content {
+  margin-left: -65px;
 }
 
 /* appeal */
