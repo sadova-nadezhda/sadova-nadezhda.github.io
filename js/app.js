@@ -130,7 +130,147 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  let isValid = true;
+const cabinetEdit = document.querySelector('.cabinet__edit');
+const cabinetSave = document.querySelector('.cabinet__save');
+const cabinetCancel = document.querySelector('.cabinet__cancel');
+const cabinetFields = document.querySelectorAll('.cabinet__field input');
+const fieldPass = document.querySelector('.field__pass input');
+const cabinetFieldPass = document.querySelector('.field__pass');
+const cabinetFieldPassEdit = document.querySelector('.field__pass_edit');
+const password = document.querySelector('.password');
+const passwordConfirm = document.querySelector('.password_confirm');
+const cabinetForm = document.forms.cabinetForm;
+const errorPass = document.querySelectorAll('.error_pass');
+
+errorPass.forEach(err => $(err).fadeOut(400));
+
+const toggleEditState = (editing) => {
+  cabinetFields.forEach(field => {
+    field.toggleAttribute('readonly', !editing);
+    field.classList.toggle('edit', editing);
+  });
+  cabinetEdit.classList.toggle('hidden', editing);
+  cabinetSave.classList.toggle('hidden', !editing);
+  cabinetFieldPassEdit.classList.toggle('hidden', !editing);
+  cabinetFieldPass.classList.toggle('hidden', editing);
+};
+
+const showError = (className) => {
+  errorPass.forEach(err => {
+    if ($(err).hasClass(className)) {
+      $(err).fadeIn(400);
+    } else {
+      $(err).fadeOut(400);
+    }
+  });
+};
+
+const validate = () => {
+  isValid = true;
+  if (password.value && (password.value.length < 6 || password.value.length > 16)) {
+    showError('error_passLeng');
+    isValid = false;
+  } else if (password.value !== passwordConfirm.value) {
+    showError('error_passMatch');
+    isValid = false;
+  } else {
+    errorPass.forEach(err => $(err).fadeOut(400));
+  }
+  return isValid;
+};
+
+if (cabinetEdit) {
+  cabinetEdit.addEventListener('click', () => toggleEditState(true));
+}
+
+if (cabinetSave) {
+  cabinetSave.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (validate()) {
+      fieldPass.value = password.value;
+      password.style.border = "";
+      passwordConfirm.style.border = "";
+      toggleEditState(false);
+      cabinetForm.submit();
+    } else {
+      password.style.border = "1px solid #e74c3c";
+      passwordConfirm.style.border = "1px solid #e74c3c";
+      password.focus();
+    }
+  });
+}
   
+// AJAX для отправки формы, если успех то отобразиться попап с кодом, если ошибка то попап с сообщением об ошибке 
+  $("#formRegistry").submit(function (e) { 
+    e.preventDefault();
+    let form_data = $(this).serialize(); 
+    $.ajax({
+        type: "POST", 
+        // нужен url куда отправить данные формы
+        url: "/", 
+        data: form_data,
+        success: function () {
+          showPopup(modals)
+          let typeBtn = 'popupCode';
+          modalAll.forEach( modal => {
+            let typeModal = modal.dataset.type;
+            modal.style.display = 'none'
+            if(typeBtn == typeModal) {
+              modal.style.display = 'block'
+            }
+          });
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          showPopup(modals)
+          let typeBtn = 'popupError';
+          modalAll.forEach( modal => {
+            let typeModal = modal.dataset.type;
+            modal.style.display = 'none'
+            if(typeBtn == typeModal) {
+              modal.style.display = 'block'
+            }
+          });
+      }
+    });
+  });
+
+
+  function checkInputs(form) {
+    const requiredInputs = form.querySelectorAll('[required]');
+    const resendButton = form.querySelector('.resendButton');
+    
+    const allFilled = Array.from(requiredInputs).every(input => {
+      if (input.type === 'tel') {
+        // Проверяем, что поле телефона заполнено корректно
+        return input.value.replace(/\D/g, '').length === 11; // Для формата +7 (XXX) XXX XX XX
+      }
+      return input.value.trim() !== '';
+    });
+  
+    resendButton.disabled = !allFilled;
+  }
+
+  function initForms() {
+    const forms = document.querySelectorAll('.modal-check form');
+  
+    forms.forEach(form => {
+      const requiredInputs = form.querySelectorAll('[required]');
+      
+      requiredInputs.forEach((input, index) => {
+        input.addEventListener('input', () => {
+          if (input.maxLength === 1 && input.value.length === 1 && index < requiredInputs.length - 1) {
+            requiredInputs[index + 1].focus();
+          }
+          checkInputs(form);
+        });
+      });
+    
+      checkInputs(form);
+    });
+  }
+
+  initForms()
 
   const certificatesRegistrationCount = document.querySelectorAll(
     ".certificates-registration-card__count-box"
@@ -536,8 +676,10 @@ const ticketAdult = document.querySelector(".booking__adult .quantity .num");
 const ticketChildren = document.querySelector(".booking__children");
 
 const toggleChildrenActive = () => {
-  const adultCount = parseInt(ticketAdult.innerText, 10);
-  ticketChildren.classList.toggle('active', adultCount > 0);
+  if(ticketAdult) {
+    const adultCount = parseInt(ticketAdult.innerText, 10);
+    ticketChildren.classList.toggle('active', adultCount > 0);
+  }
 };
 
 toggleChildrenActive();
