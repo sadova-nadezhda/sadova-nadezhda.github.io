@@ -717,12 +717,13 @@ max-width: 400px;
     margin-bottom: 32px;
   }
   .booking-category .booking__card {
+    align-items: stretch;
     padding: 12px;
   }
   .booking-category .booking__img {
-    height: 104px;
-    min-width: 136px;
-    width: 136px;
+    height: auto;
+    min-width: 130px;
+    width: 130px;
     border-radius: 4px;
   }
   .booking-category .booking__box {
@@ -738,18 +739,26 @@ max-width: 400px;
     font-size: 12px;
   }
   .booking-category .booking__price {
+    flex-wrap: wrap;
     width: 100%;
     font-size: 12px;
   }
   .booking-category .price {
+    order: -1;
     font-size: 14px;
+  }
+  .booking-category .old-price {
+    font-size: 12px;
   }
   .booking-category .booking__link {
     font-size: 12px;
   }
   .booking-category .booking__quantity span {
-    min-width: 30px;
-    height: 30px;
+    min-width: 28px;
+    height: 28px;
+  }
+  .booking-category .booking__quantity svg {
+    width: 16px;
   }
   .booking-category .booking__buttons a {
     min-width: unset;
