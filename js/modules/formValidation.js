@@ -19,42 +19,63 @@ export function validateForm() {
     .mask("+7 (999) 999 99 99");
 
 
-  const formCheckout = document.getElementById('formCheckout');
-  const formCall = document.querySelector('.modal-call form');
-
-  function checkForm(form) {
-    const fields = form.querySelectorAll('[required]');
-    const submitButton = form.querySelector('.submitButton');
-    let allFilled = true;
-
-    fields.forEach(field => {
-      if (field.type === 'checkbox') {
-        if (!field.checked) {
+    const formCheckout = document.getElementById('formCheckout');
+    const formCall = document.querySelector('.modal-call form');
+    
+    function checkForm(form) {
+      const fields = form.querySelectorAll('[required]');
+      const errorField = form.querySelector('.form-error');
+      const submitButton = form.querySelector('.submitButton');
+      let allFilled = true;
+    
+      fields.forEach(field => {
+        if (field.type === 'checkbox') {
+          if (!field.checked) {
+            allFilled = false;
+          }
+        } else if (!field.value.trim()) {
           allFilled = false;
         }
-      } else if (!field.value.trim()) {
-        allFilled = false;
+      });
+    
+      if (errorField) {
+        // Скрыть ошибку, если все поля заполнены, иначе показать
+        errorField.style.display = allFilled ? 'none' : 'block';
       }
-    });
-
-    submitButton.disabled = !allFilled;
-  }
-
-  function attachListeners(form) {
-    const fields = form.querySelectorAll('[required]');
-    fields.forEach(field => {
-      field.addEventListener('change', () => {
+    
+      if (submitButton) {
+        submitButton.disabled = !allFilled; // Заблокировать или разблокировать кнопку
+      }
+    }
+    
+    function attachListeners(form) {
+      const fields = form.querySelectorAll('[required]');
+      const errorField = form.querySelector('.form-error');
+      const submitButton = form.querySelector('.submitButton');
+    
+      if (errorField && submitButton) {
+        // Изначально скрыть ошибку и разблокировать кнопку
+        errorField.style.display = 'none';
+        submitButton.disabled = false;
+      }
+    
+      fields.forEach(field => {
+        const eventType = field.type === 'checkbox' ? 'change' : 'input';
+        field.addEventListener(eventType, () => {
+          checkForm(form);
+        });
+      });
+    
+      submitButton?.addEventListener('click', () => {
         checkForm(form);
       });
-    });
-    checkForm(form);
-  }
-
-  if (formCheckout) {
-    attachListeners(formCheckout);
-  }
-
-  // if (formCall) {
-  //   attachListeners(formCall);
-  // }
+    }
+    
+    if (formCheckout) {
+      attachListeners(formCheckout);
+    }
+    
+    if (formCall) {
+      attachListeners(formCall);
+    }  
 }

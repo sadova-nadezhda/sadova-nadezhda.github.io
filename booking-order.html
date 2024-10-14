@@ -222,7 +222,7 @@
             <div class="checkout__wrap">
               <div class="checkout__left">
                 <div class="checkout__cards">
-                  <div class="checkout__card">
+                  <div class="checkout__card checkout__adult">
                     <div class="checkout__img border-8"><img class="img-cover" src="img/booking-1.png" alt=""></div>
                     <div class="checkout__box">
                       <div class="checkout__block">
@@ -234,17 +234,17 @@
                       <div class="checkout__block checkout__block_2">
                         <div class="checkout__slot">
                           <span>Слот 9:00 - 13:00 </span>
-                          за гостя
+                          <!-- за гостя -->
                         </div>
-                        <div class="checkout__ticket">Выбрано 2 билета</div>
+                        <div class="checkout__ticket">6 билетов</div>
                       </div>
                       <div class="checkout__price">
-                        <div class="old-price">15 000 тг</div> 
-                        <span class="price">10 500 тг</span>
+                        <div class="old-price">90 000 тг</div> 
+                        <span class="price">63 000 тг</span>
                       </div>
                     </div>
                   </div>
-                  <div class="checkout__card">
+                  <div class="checkout__card checkout__children">
                     <div class="checkout__img border-8"><img class="img-cover" src="img/booking-1.png" alt=""></div>
                     <div class="checkout__box">
                       <div class="checkout__block">
@@ -294,13 +294,14 @@
                   <form action="" id="formCheckout">
                     <input type="text" name="" id="" placeholder="ФИО" required>
                     <input type="tel" name="" id="" placeholder="+7 (7__)___ __ __" required>
-                    <input type="email" name="" id="" placeholder="E-mail" required>
+                    <input type="email" name="" id="" placeholder="E-mail">
                     <input type="text" name="" id="" placeholder="Промокод" >
                     <div class="group-check">
                       <input type="checkbox" name="checkbox1" id="checkbox1" required>
                       <label for="checkbox1">Нажимая кнопку “Оплатить” вы соглашаетесь с условиями <a href="" target="_blank">Публичной оферты</a></label>
                     </div>
                     <input class="submitButton button button_brown" type="submit" value="Забронировать">
+                    <span class="form-error">поля не заполнены</span>
                   </form>
                 </div>
               </div>

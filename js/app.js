@@ -524,16 +524,23 @@ $('.houstab-btn').on('click', function() {
     });
 });
 
-
-
-
 $(document).ready( function() {
   initializeDatepicker(langBody);
   initializeDatepicker2(langBody);
   initializeTimepicker();
 });
 
+
 const blocks = document.querySelectorAll(".quantity");
+const ticketAdult = document.querySelector(".booking__adult .quantity .num");
+const ticketChildren = document.querySelector(".booking__children");
+
+const toggleChildrenActive = () => {
+  const adultCount = parseInt(ticketAdult.innerText, 10);
+  ticketChildren.classList.toggle('active', adultCount > 0);
+};
+
+toggleChildrenActive();
 
 blocks.forEach(block => {
   const plus = block.querySelector(".plus"),
@@ -541,17 +548,28 @@ blocks.forEach(block => {
         num = block.querySelector(".num");
 
   if (num) {
-    let a = parseInt(num.innerText, 10); // Преобразуем текстовое значение в число
+    let count = parseInt(num.innerText, 10);
     
+    const updateMinusState = () => {
+      minus.style.pointerEvents = count > 0 ? 'all' : 'none';
+      minus.style.opacity = count > 0 ? '1' : '0.5';
+    };
+
+    updateMinusState();
+
     plus.addEventListener("click", () => {
-      a++;
-      num.innerText = a;
+      count++;
+      num.innerText = count;
+      updateMinusState();
+      toggleChildrenActive();
     });
 
     minus.addEventListener("click", () => {
-      if (a > 1) {
-        a--;
-        num.innerText = a;
+      if (count > 0) {
+        count--;
+        num.innerText = count;
+        updateMinusState();
+        toggleChildrenActive();
       }
     });
   }
