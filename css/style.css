@@ -718,6 +718,7 @@ max-width: 400px;
   }
   .booking-category .booking__card {
     align-items: stretch;
+    gap: 8px;
     padding: 12px;
   }
   .booking-category .booking__img {
