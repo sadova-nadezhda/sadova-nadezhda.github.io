@@ -667,7 +667,7 @@ max-width: 400px;
     font-size: 18px;
   }
   .appeal__desc {
-    padding: 16px;
+    padding: 16px 0;
   }
   .checkout__box {
     flex-direction: column;
@@ -711,7 +711,7 @@ max-width: 400px;
     padding: 70px 0;
   }
   .booking-category .booking__underside {
-    margin: 70px -16px 0;
+    margin: 0 -16px 0;
   }
   .booking-category .booking__cards {
     margin-bottom: 32px;
@@ -754,9 +754,16 @@ max-width: 400px;
   .booking-category .booking__buttons a {
     min-width: unset;
   }
+  .booking__appeal {
+    margin-bottom: 32px;
+  }
   h2.appeal__title {
     font-size: 16px;
     line-height: 20px;
+  }
+  .appeal__desc {
+    padding: 0;
+    padding-top: 16px;
   }
   .booking__total, .total-price {
     font-size: 20px;
