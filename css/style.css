@@ -448,7 +448,6 @@ max-width: 400px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-width: 120px;
 }
 
 .booking-category .booking__quantity span {
@@ -714,13 +713,16 @@ max-width: 400px;
   .booking-category .booking__underside {
     margin: 70px -16px 0;
   }
+  .booking-category .booking__cards {
+    margin-bottom: 32px;
+  }
   .booking-category .booking__card {
-    display: grid;
-    grid-template-columns: 136px 1fr;
     padding: 12px;
   }
   .booking-category .booking__img {
-    width: 100%;
+    height: 104px;
+    min-width: 136px;
+    width: 136px;
     border-radius: 4px;
   }
   .booking-category .booking__box {
