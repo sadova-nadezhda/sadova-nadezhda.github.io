@@ -21,6 +21,7 @@ export function validateForm() {
 
     const formCheckout = document.getElementById('formCheckout');
     const formCall = document.querySelector('.modal-call form');
+    const preloaderForm = document.querySelector('.preloader-form');
     
     function checkForm(form) {
       const fields = form.querySelectorAll('[required]');
@@ -66,8 +67,26 @@ export function validateForm() {
         });
       });
     
-      submitButton?.addEventListener('click', () => {
+      submitButton?.addEventListener('click', (event) => {
         checkForm(form);
+    
+        // Если все поля заполнены
+        if (!submitButton.disabled) {
+          // Добавить класс active на preloaderForm
+          preloaderForm?.classList.add('active');
+    
+          // Имитация отправки данных (можно заменить на реальный процесс отправки)
+          setTimeout(() => {
+            // Удалить класс active после успешной отправки данных
+            preloaderForm?.classList.remove('active');
+            
+            // Можно добавить логику для очищения формы, если нужно
+            form.reset(); 
+          }, 2000); // Задержка для имитации отправки данных (2 секунды)
+        }
+    
+        // Предотвращаем отправку формы по умолчанию (если это не требуется)
+        event.preventDefault();
       });
     }
     
@@ -77,5 +96,6 @@ export function validateForm() {
     
     if (formCall) {
       attachListeners(formCall);
-    }  
+    }
+    
 }
